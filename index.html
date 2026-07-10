@@ -1,0 +1,2831 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carnet de bord</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+  :root{
+    --bg:#F2F3F5;
+    --panel:#FFFFFF;
+    --panel-2:#F7F8FA;
+    --ink:#16181D;
+    --ink-soft:#6B7280;
+    --ink-faint:#9CA3AF;
+    --accent:#F2994A;
+    --accent-ink:#B45309;
+    --teal:#16A34A;
+    --teal-soft:#E9F7EF;
+    --line:#E5E7EB;
+    --danger:#DC2626;
+    --radius:12px;
+    --font-display:'Inter', -apple-system, sans-serif;
+    --font-body:'Inter', -apple-system, sans-serif;
+    --font-mono:'Inter', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:14px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  button{font-family:inherit;cursor:pointer;}
+  input,textarea,select{font-family:inherit;font-size:inherit;}
+  ::selection{background:var(--accent);color:#fff;}
+
+  .app{
+    display:flex;
+    min-height:100vh;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    width:220px;
+    flex-shrink:0;
+    background:var(--panel);
+    border-right:1px solid var(--line);
+    padding:24px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .brand{
+    font-family:var(--font-display);
+    font-size:20px;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 8px 28px 8px;
+    letter-spacing:0.2px;
+  }
+  .brand small{
+    display:block;
+    font-family:var(--font-mono);
+    font-size:10px;
+    font-weight:400;
+    color:var(--ink-faint);
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    margin-top:2px;
+  }
+  .nav-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:9px 10px;
+    border-radius:var(--radius);
+    border:none;
+    background:transparent;
+    color:var(--ink-soft);
+    font-size:13.5px;
+    font-weight:500;
+    text-align:left;
+    transition:background .12s ease, color .12s ease;
+  }
+  .nav-item svg{flex-shrink:0;opacity:0.75;}
+  .nav-item:hover{background:var(--panel-2);color:var(--ink);}
+  .nav-item.active{background:#EEF1F4;color:var(--ink);font-weight:600;}
+  .nav-item.active svg{opacity:1;}
+  .sidebar-foot{
+    margin-top:auto;
+    padding:10px 8px 0 8px;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--ink-faint);
+    border-top:1px solid var(--line);
+    padding-top:14px;
+  }
+
+  .settings-corner-btn{
+    position:fixed;
+    top:16px;
+    right:20px;
+    z-index:60;
+    width:36px;
+    height:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid var(--line);
+    border-radius:50%;
+    background:var(--panel);
+    color:var(--ink-soft);
+    box-shadow:0 1px 3px rgba(16,24,40,0.06);
+  }
+  .settings-corner-btn:hover{color:var(--ink);background:var(--panel-2);}
+  .settings-corner-btn.active{color:var(--accent);border-color:var(--accent);}
+  @media (max-width:820px){
+    .settings-corner-btn{top:10px;right:10px;width:32px;height:32px;}
+  }
+
+  /* ---------- Main ---------- */
+  .main{
+    flex:1;
+    min-width:0;
+    padding:32px 40px 100px 40px;
+  }
+  .panel{display:none;}
+  .panel.active{display:block;}
+
+  .hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    border-bottom:1px solid var(--line);
+    padding-bottom:18px;
+    margin-bottom:24px;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .hero-date{
+    font-family:var(--font-mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--accent-ink);
+    margin:0 0 4px 0;
+  }
+  .hero-title{
+    font-family:var(--font-display);
+    font-size:32px;
+    font-weight:600;
+    margin:0;
+    color:var(--ink);
+  }
+  .hero-stats{
+    display:flex;
+    gap:22px;
+  }
+  .stat{
+    text-align:right;
+  }
+  .stat-num{
+    font-family:var(--font-display);
+    font-size:24px;
+    font-weight:600;
+    color:var(--teal);
+    display:block;
+    line-height:1;
+  }
+  .stat-label{
+    font-family:var(--font-mono);
+    font-size:10px;
+    color:var(--ink-faint);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+  }
+
+  h2.section-title{
+    font-family:var(--font-display);
+    font-size:17px;
+    font-weight:600;
+    margin:0 0 14px 0;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  h2.section-title .count{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--ink-faint);
+    font-weight:400;
+  }
+
+  /* ---------- Log timeline (signature element) ---------- */
+  .log{
+    position:relative;
+    padding-left:26px;
+    margin-bottom:36px;
+  }
+  .log::before{
+    content:'';
+    position:absolute;
+    left:6px;
+    top:6px;
+    bottom:6px;
+    width:1px;
+    background:repeating-linear-gradient(to bottom, var(--line) 0 4px, transparent 4px 8px);
+  }
+  .log-entry{
+    position:relative;
+    padding:0 0 18px 18px;
+  }
+  .log-entry::before{
+    content:'';
+    position:absolute;
+    left:-1px;
+    top:5px;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--accent);
+    border:2px solid var(--bg);
+  }
+  .log-entry.type-event::before{background:var(--teal);}
+  .log-entry.type-task.done::before{background:var(--ink-faint);}
+  .log-time{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--ink-faint);
+    display:block;
+    margin-bottom:2px;
+  }
+  .log-body{
+    font-size:14px;
+    color:var(--ink);
+  }
+  .log-entry.done .log-body{color:var(--ink-faint);text-decoration:line-through;}
+  .log-tag{
+    font-family:var(--font-mono);
+    font-size:9.5px;
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+    padding:1px 6px;
+    border-radius:3px;
+    margin-right:6px;
+    background:var(--teal-soft);
+    color:var(--teal);
+  }
+  .log-empty{
+    color:var(--ink-faint);
+    font-style:italic;
+    padding-left:18px;
+    font-size:13px;
+  }
+
+  /* ---------- Cards / grids ---------- */
+  .grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:18px;
+    box-shadow:0 1px 3px rgba(16,24,40,0.04);
+  }
+
+  /* ---------- Dashboard widgets (coup d'oeil) ---------- */
+  .dash-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  .widget{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 1px 3px rgba(16,24,40,0.04);
+    padding:16px 18px 14px 18px;
+    display:flex;
+    flex-direction:column;
+    min-height:180px;
+  }
+  .widget-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+    gap:8px;
+  }
+  .widget-title{
+    font-family:var(--font-display);
+    font-size:15px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .widget-title .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+  .widget-actions{display:flex;gap:10px;align-items:center;}
+  .widget-link, .widget-refresh{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    background:none;
+    border:none;
+    color:var(--ink-faint);
+    padding:0;
+  }
+  .widget-link{color:var(--teal);text-decoration:underline;text-underline-offset:2px;}
+  .widget-refresh:hover{color:var(--teal);}
+  .widget-body{flex:1;}
+  .mini-row{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    padding:6px 0;
+    border-bottom:1px solid var(--line);
+    font-size:12.5px;
+  }
+  .mini-row:last-child{border-bottom:none;}
+  .mini-row .task-check{margin-top:1px;}
+  .mini-text{flex:1;min-width:0;}
+  .mini-title{font-size:13px;color:var(--ink);}
+  .mini-sub{font-size:11.5px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .mini-meta{
+    font-family:var(--font-mono);
+    font-size:10px;
+    color:var(--ink-faint);
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .mini-empty{color:var(--ink-faint);font-style:italic;font-size:12px;padding:10px 0;}
+
+  /* ---------- Voyages ---------- */
+  #travel-map{
+    height:420px;
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+    margin-bottom:22px;
+    background:#8FB4D9;
+    position:relative;
+    z-index:0;
+  }
+  .leaflet-popup-content{
+    font-family:var(--font-body);
+    font-size:12.5px;
+  }
+  .leaflet-popup-content b{font-family:var(--font-display);font-size:14px;}
+  .travel-flag-icon{display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.35));}
+  .travel-flag-icon img{border:1.5px solid #fff;border-radius:3px;}
+  .country-combobox{position:relative;}
+  .country-combobox-input{
+    width:100%;
+    padding:9px 12px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--panel);
+    color:var(--ink);
+  }
+  .country-combobox-dropdown{
+    display:none;
+    position:absolute;
+    top:calc(100% + 4px);
+    left:0;
+    right:0;
+    max-height:260px;
+    overflow-y:auto;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 8px 20px rgba(16,24,40,0.08);
+    z-index:2000;
+  }
+  .country-combobox-option{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 12px;
+    font-size:13px;
+    cursor:pointer;
+  }
+  .country-combobox-option:hover, .country-combobox-option.highlighted{background:var(--panel-2);}
+  .country-combobox-flag{font-size:16px;line-height:1;flex-shrink:0;}
+  .country-combobox-empty{padding:10px 12px;font-size:12.5px;color:var(--ink-faint);font-style:italic;}
+  .leaflet-tooltip.country-tooltip{
+    font-family:var(--font-body);
+    font-size:12px;
+    font-weight:500;
+    color:var(--ink);
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:3px 8px;
+    box-shadow:none;
+  }
+  .leaflet-tooltip.country-tooltip::before{display:none;}
+  #travel-map .leaflet-interactive{cursor:pointer;}
+  #travel-map .leaflet-interactive:focus{outline:none;}
+  .travel-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:9px 4px;
+    border-bottom:1px solid var(--line);
+  }
+  .travel-row:last-child{border-bottom:none;}
+  .travel-flag{font-size:20px;flex-shrink:0;}
+
+  /* ---------- Budget ---------- */
+  .budget-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin-bottom:24px;
+  }
+  .budget-stat{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 1px 3px rgba(16,24,40,0.04);
+    padding:14px 16px;
+  }
+  .budget-stat-label{
+    font-family:var(--font-mono);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:var(--ink-faint);
+    margin-bottom:4px;
+  }
+  .budget-stat-value{
+    font-family:var(--font-display);
+    font-size:21px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .budget-stat-value.positive{color:var(--teal);}
+  .budget-stat-value.negative{color:var(--danger);}
+
+  .sign-toggle{
+    display:flex;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    flex-shrink:0;
+  }
+  .sign-btn{
+    padding:9px 15px;
+    background:var(--panel);
+    border:none;
+    color:var(--ink-faint);
+    font-weight:700;
+    font-size:15px;
+    line-height:1;
+  }
+  .sign-btn.plus.active{background:var(--teal);color:#fff;}
+  .sign-btn.minus.active{background:var(--danger);color:#fff;}
+
+  .txn-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:9px 4px;
+    border-bottom:1px solid var(--line);
+  }
+  .txn-row:last-child{border-bottom:none;}
+  .txn-cat{
+    font-family:var(--font-mono);
+    font-size:9.5px;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    padding:2px 6px;
+    border-radius:3px;
+    background:var(--panel-2);
+    color:var(--ink-soft);
+    flex-shrink:0;
+    white-space:nowrap;
+  }
+  .txn-label{flex:1;font-size:13.5px;min-width:0;}
+  .txn-date{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--ink-faint);
+    white-space:nowrap;
+  }
+  .txn-amount{
+    font-family:var(--font-mono);
+    font-weight:600;
+    font-size:13.5px;
+    white-space:nowrap;
+  }
+  .txn-amount.positive{color:var(--teal);}
+  .txn-amount.negative{color:var(--danger);}
+  .txn-account{
+    font-family:var(--font-mono);
+    font-size:9.5px;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    padding:2px 6px;
+    border-radius:3px;
+    flex-shrink:0;
+    white-space:nowrap;
+    color:#fff;
+  }
+
+  .account-filter{
+    display:flex;
+    gap:6px;
+    margin-bottom:12px;
+  }
+  .account-filter button{
+    padding:6px 12px;
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+    background:var(--panel);
+    color:var(--ink-soft);
+    font-size:12px;
+    font-weight:500;
+  }
+  .account-filter button.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+  /* ---------- Camemberts ---------- */
+  .pie-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-bottom:24px;
+  }
+  .pie-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 1px 3px rgba(16,24,40,0.04);
+    padding:18px;
+  }
+  .pie-card-title{
+    font-family:var(--font-display);
+    font-size:14.5px;
+    font-weight:600;
+    margin:0 0 14px 0;
+  }
+  .pie-body{
+    display:flex;
+    gap:18px;
+    align-items:center;
+  }
+  .pie{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    flex-shrink:0;
+    position:relative;
+  }
+  .pie::after{
+    content:'';
+    position:absolute;
+    inset:20%;
+    background:var(--panel);
+    border-radius:50%;
+  }
+  .pie-legend{flex:1;min-width:0;}
+  .pie-legend-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:12.5px;
+    padding:4px 0;
+  }
+  .pie-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+  .pie-legend-row .pie-pct{
+    margin-left:auto;
+    font-family:var(--font-mono);
+    color:var(--ink-faint);
+    font-size:11px;
+  }
+  .pie-legend-row .pie-amount{
+    font-family:var(--font-mono);
+    font-size:11px;
+    width:66px;
+    text-align:right;
+  }
+  .pie-empty{color:var(--ink-faint);font-style:italic;font-size:12.5px;}
+
+  /* ---------- Import relevé ---------- */
+  .import-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 4px;
+    border-bottom:1px solid var(--line);
+    flex-wrap:wrap;
+  }
+  .import-row:last-child{border-bottom:none;}
+  .import-row input[type=text], .import-row input[type=date], .import-row input[type=number], .import-row select{
+    padding:6px 8px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:var(--panel);
+    color:var(--ink);
+    font-size:12.5px;
+  }
+  .import-row .import-label{flex:1;min-width:140px;}
+  .import-row .import-amount{width:90px;}
+  .import-row .import-date{width:135px;}
+
+  @media (max-width:820px){
+    .budget-stats{grid-template-columns:repeat(2,1fr);}
+    .pie-section{grid-template-columns:1fr;}
+  }
+
+  .footer-credit{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--ink-faint);
+    text-align:center;
+    letter-spacing:0.4px;
+    padding:24px 0 4px 0;
+  }
+
+  /* ---------- Quick add ---------- */
+  .quick-add{
+    display:flex;
+    gap:8px;
+    margin-bottom:24px;
+  }
+  .quick-add input, .quick-add select{
+    padding:9px 12px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--panel);
+    color:var(--ink);
+  }
+  .quick-add input[type=text]{flex:1;}
+  .btn{
+    padding:9px 18px;
+    border-radius:999px;
+    border:1px solid var(--accent);
+    background:var(--accent);
+    color:#fff;
+    font-weight:600;
+    font-size:13px;
+    white-space:nowrap;
+  }
+  .btn:hover{opacity:0.9;}
+  .btn.ghost{
+    background:transparent;
+    color:var(--ink);
+    border-color:var(--line);
+  }
+  .btn.ghost:hover{background:var(--panel-2);}
+  .btn.small{padding:5px 12px;font-size:12px;}
+  .btn:disabled{opacity:0.5;cursor:default;}
+
+  /* ---------- Task list ---------- */
+  .project-group{margin-bottom:22px;}
+  .project-head{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:8px;
+  }
+  .project-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+  .project-name{font-weight:600;font-size:13.5px;}
+  .task-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:8px 4px;
+    border-bottom:1px solid var(--line);
+  }
+  .task-row:last-child{border-bottom:none;}
+  .task-row.overdue{background:#FEF2F2;}
+  .task-row.overdue .task-due{color:var(--danger);font-weight:600;}
+  .task-check{
+    width:16px;height:16px;
+    border:1.5px solid var(--ink-faint);
+    border-radius:4px;
+    flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--panel);
+  }
+  .task-check.checked{background:var(--teal);border-color:var(--teal);}
+  .task-check.checked::after{content:'✓';color:#fff;font-size:11px;line-height:1;}
+  .task-text{flex:1;font-size:13.5px;}
+  .task-row.done .task-text{color:var(--ink-faint);text-decoration:line-through;}
+  .task-due{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--ink-faint);
+  }
+  .task-del{
+    background:none;border:none;color:var(--ink-faint);
+    font-size:15px;padding:2px 4px;
+  }
+  .task-del:hover{color:var(--danger);}
+  .task-edit-text, .project-edit-name{
+    flex:1;
+    padding:6px 8px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    background:var(--panel);
+    color:var(--ink);
+    font-size:13.5px;
+  }
+  .task-edit-due{
+    padding:6px 8px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    background:var(--panel);
+    color:var(--ink);
+    font-size:12.5px;
+  }
+
+  /* ---------- Notes ---------- */
+  .note-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    border-radius:var(--radius);
+    padding:14px 16px;
+    margin-bottom:12px;
+  }
+  .note-meta{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--ink-faint);
+    margin-bottom:6px;
+  }
+  .note-text{white-space:pre-wrap;font-size:13.5px;}
+  .note-del{
+    float:right;background:none;border:none;color:var(--ink-faint);font-size:13px;
+  }
+  .note-del:hover{color:var(--danger);}
+
+  textarea.note-input{
+    width:100%;
+    min-height:70px;
+    padding:10px 12px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--panel);
+    color:var(--ink);
+    resize:vertical;
+    margin-bottom:8px;
+  }
+
+  /* ---------- Emails / Agenda ---------- */
+  .fetch-bar{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+  }
+  .fetch-status{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--ink-faint);
+  }
+  .mail-card, .event-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:13px 16px;
+    margin-bottom:10px;
+  }
+  .mail-top, .event-top{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:4px;
+  }
+  .mail-sender{font-weight:600;font-size:13.5px;}
+  .mail-date, .event-time{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--ink-faint);
+    white-space:nowrap;
+  }
+  .mail-subject{font-size:13.5px;margin-bottom:3px;}
+  .mail-snippet{font-size:12.5px;color:var(--ink-soft);}
+  .event-title{font-weight:600;font-size:13.5px;}
+  .event-loc{font-size:12px;color:var(--ink-soft);}
+  .day-label{
+    font-family:var(--font-mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+    color:var(--accent-ink);
+    margin:18px 0 8px 0;
+  }
+  .day-label:first-child{margin-top:0;}
+  .empty-state{
+    color:var(--ink-faint);
+    font-style:italic;
+    font-size:13px;
+    padding:20px 0;
+  }
+  .error-state{
+    background:#FEF2F2;
+    border:1px solid #FCA5A5;
+    color:var(--danger);
+    border-radius:var(--radius);
+    padding:12px 14px;
+    font-size:13px;
+    margin-bottom:14px;
+  }
+  .spinner{
+    width:13px;height:13px;
+    border:2px solid var(--line);
+    border-top-color:var(--teal);
+    border-radius:50%;
+    animation:spin .7s linear infinite;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  /* ---------- Mobile ---------- */
+  .bottom-nav{display:none;}
+  @media (max-width:820px){
+    .sidebar{display:none;}
+    .main{padding:20px 16px 90px 16px;}
+    .grid-2{grid-template-columns:1fr;}
+    .dash-grid{grid-template-columns:1fr;}
+    .hero{flex-direction:column;align-items:flex-start;}
+    .bottom-nav{
+      display:flex;
+      position:fixed;
+      bottom:0;left:0;right:0;
+      background:var(--panel);
+      border-top:1px solid var(--line);
+      padding:8px 4px calc(8px + env(safe-area-inset-bottom));
+      z-index:50;
+    }
+    .bottom-nav .nav-item{
+      flex:1;
+      flex-direction:column;
+      gap:3px;
+      font-size:10px;
+      text-align:center;
+      padding:6px 2px;
+    }
+    .bottom-nav .nav-item.active{background:transparent;color:var(--teal);}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="sidebar" id="sidebar">
+    <div class="brand">Carnet de bord<small>Poste de pilotage perso</small></div>
+    <button class="nav-item active" data-tab="today">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/></svg>
+      Aujourd'hui
+    </button>
+    <button class="nav-item" data-tab="tasks">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 11 3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      Tâches &amp; projets
+    </button>
+    <button class="nav-item" data-tab="notes">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+      Mémos
+    </button>
+    <button class="nav-item" data-tab="emails">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+      Emails
+    </button>
+    <button class="nav-item" data-tab="agenda">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+      Agenda
+    </button>
+    <button class="nav-item" data-tab="travels">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c2.8 3 4 6.5 4 10s-1.2 7-4 10c-2.8-3-4-6.5-4-10s1.2-7 4-10Z"/></svg>
+      Voyages
+    </button>
+    <button class="nav-item" data-tab="budget">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 5a8 8 0 1 0 0 14M5 10h9M5 14h7"/></svg>
+      Budget
+    </button>
+    <div class="sidebar-foot" id="clock">—</div>
+  </nav>
+
+  <button class="settings-corner-btn" data-tab="settings" title="Réglages">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+  </button>
+
+  <main class="main">
+
+    <!-- AUJOURD'HUI -->
+    <section class="panel active" id="panel-today">
+      <div class="hero">
+        <div>
+          <p class="hero-date" id="today-date">—</p>
+          <h1 class="hero-title">Vue d'ensemble</h1>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" id="stat-tasks">0</span><span class="stat-label">Tâches ouvertes</span></div>
+          <div class="stat"><span class="stat-num" id="stat-events">–</span><span class="stat-label">Prochain évt</span></div>
+          <div class="stat"><span class="stat-num" id="stat-mails">–</span><span class="stat-label">Emails</span></div>
+          <div class="stat"><span class="stat-num" id="stat-countries">0</span><span class="stat-label">Pays visités</span></div>
+          <div class="stat"><span class="stat-num" id="stat-solde">–</span><span class="stat-label">Solde</span></div>
+        </div>
+      </div>
+
+      <div class="quick-add">
+        <input type="text" id="today-quick-input" placeholder="Ajouter une tâche pour aujourd'hui…">
+        <button class="btn" id="today-quick-add">Ajouter</button>
+      </div>
+
+      <div class="dash-grid">
+        <div class="widget">
+          <div class="widget-head">
+            <span class="widget-title"><span class="dot" style="background:var(--accent)"></span>Tâches</span>
+            <div class="widget-actions">
+              <button class="widget-link" data-goto="tasks">Voir tout →</button>
+            </div>
+          </div>
+          <div class="widget-body" id="widget-tasks"></div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head">
+            <span class="widget-title"><span class="dot" style="background:var(--teal)"></span>Agenda</span>
+            <div class="widget-actions">
+              <button class="widget-refresh" id="widget-agenda-refresh">actualiser</button>
+              <button class="widget-link" data-goto="agenda">Voir tout →</button>
+            </div>
+          </div>
+          <div class="widget-body" id="widget-agenda"></div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head">
+            <span class="widget-title"><span class="dot" style="background:#6366F1"></span>Emails</span>
+            <div class="widget-actions">
+              <button class="widget-refresh" id="widget-emails-refresh">actualiser</button>
+              <button class="widget-link" data-goto="emails">Voir tout →</button>
+            </div>
+          </div>
+          <div class="widget-body" id="widget-emails"></div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head">
+            <span class="widget-title"><span class="dot" style="background:#A78BFA"></span>Mémos</span>
+            <div class="widget-actions">
+              <button class="widget-link" data-goto="notes">Voir tout →</button>
+            </div>
+          </div>
+          <div class="widget-body" id="widget-notes"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TACHES & PROJETS -->
+    <section class="panel" id="panel-tasks">
+      <div class="hero">
+        <div>
+          <p class="hero-date">Suivi</p>
+          <h1 class="hero-title">Tâches &amp; projets</h1>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:24px;">
+        <h2 class="section-title" style="margin-bottom:10px;">Nouveau projet</h2>
+        <div class="quick-add" style="margin-bottom:0;">
+          <input type="text" id="project-name-input" placeholder="Nom du projet (ex: Maison, Boulot, Perso…)">
+          <button class="btn" id="project-add-btn">Créer</button>
+        </div>
+      </div>
+
+      <div class="quick-add">
+        <input type="text" id="task-text-input" placeholder="Nouvelle tâche…">
+        <input type="date" id="task-due-input">
+        <button class="btn" id="task-add-btn">Ajouter</button>
+      </div>
+
+      <div class="quick-add" style="margin-bottom:14px;">
+        <input type="text" id="task-search-input" placeholder="Rechercher une tâche…" style="flex:1;">
+      </div>
+
+      <div id="tasks-container"></div>
+    </section>
+
+    <!-- MEMOS -->
+    <section class="panel" id="panel-notes">
+      <div class="hero">
+        <div>
+          <p class="hero-date">Pense-bête</p>
+          <h1 class="hero-title">Mémos</h1>
+        </div>
+      </div>
+      <textarea class="note-input" id="note-input" placeholder="Une idée, un truc à ne pas oublier…"></textarea>
+      <button class="btn" id="note-add-btn" style="margin-bottom:22px;">Enregistrer le mémo</button>
+      <div id="notes-container"></div>
+    </section>
+
+    <!-- EMAILS -->
+    <section class="panel" id="panel-emails">
+      <div class="hero">
+        <div>
+          <p class="hero-date">Gmail</p>
+          <h1 class="hero-title">Emails</h1>
+        </div>
+      </div>
+      <div class="fetch-bar">
+        <button class="btn" id="emails-refresh-btn">Actualiser depuis Gmail</button>
+        <span class="fetch-status" id="emails-status">jamais actualisé</span>
+      </div>
+      <div id="emails-container"></div>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="panel" id="panel-agenda">
+      <div class="hero">
+        <div>
+          <p class="hero-date">Google Calendar</p>
+          <h1 class="hero-title">Agenda</h1>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:22px;">
+        <h2 class="section-title" style="margin-bottom:10px;">Nouvel événement <span class="count">— créé directement dans Google Calendar</span></h2>
+        <div class="quick-add" style="margin-bottom:0;flex-wrap:wrap;">
+          <input type="text" id="event-title-input" placeholder="Titre de l'événement…" style="flex:1;min-width:160px;">
+          <input type="date" id="event-date-input">
+          <input type="time" id="event-time-input">
+          <input type="text" id="event-location-input" placeholder="Lieu (optionnel)" style="max-width:150px;">
+          <button class="btn" id="event-add-btn">Ajouter</button>
+        </div>
+      </div>
+
+      <div class="fetch-bar">
+        <button class="btn" id="agenda-refresh-btn">Actualiser depuis Google Calendar</button>
+        <span class="fetch-status" id="agenda-status">jamais actualisé</span>
+      </div>
+      <div id="agenda-container"></div>
+    </section>
+
+    <!-- VOYAGES -->
+    <section class="panel" id="panel-travels">
+      <div class="hero">
+        <div>
+          <p class="hero-date">Carnet de voyage</p>
+          <h1 class="hero-title">Voyages</h1>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:22px;">
+        <h2 class="section-title" style="margin-bottom:10px;">Ajouter un pays visité</h2>
+        <div class="quick-add" style="margin-bottom:0;flex-wrap:wrap;">
+          <div class="country-combobox" style="flex:1;min-width:180px;">
+            <input type="text" id="travel-country-input" class="country-combobox-input" placeholder="Rechercher un pays…" autocomplete="off">
+            <div id="travel-country-dropdown" class="country-combobox-dropdown"></div>
+          </div>
+          <input type="text" id="travel-city-input" placeholder="Ville (optionnel)">
+          <input type="date" id="travel-date-input" title="Date de départ">
+          <button class="btn" id="travel-add-btn">Ajouter</button>
+        </div>
+      </div>
+
+      <div id="travel-map"></div>
+
+      <h2 class="section-title">Historique <span class="count" id="travel-count"></span></h2>
+      <div id="travels-container"></div>
+    </section>
+
+    <!-- BUDGET -->
+    <section class="panel" id="panel-budget">
+      <div class="hero">
+        <div>
+          <p class="hero-date">Finances</p>
+          <h1 class="hero-title">Budget</h1>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:22px;">
+        <h2 class="section-title" style="margin-bottom:10px;">Soldes de départ <span class="count">le solde réel de chaque compte avant tes premières opérations enregistrées ici</span></h2>
+        <div class="quick-add" style="margin-bottom:0;flex-wrap:wrap;">
+          <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);">LCL
+            <input type="text" inputmode="decimal" id="opening-lcl-input" style="width:110px;" placeholder="0,00">
+          </label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);">Revolut
+            <input type="text" inputmode="decimal" id="opening-revolut-input" style="width:110px;" placeholder="0,00">
+          </label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);">Livret A
+            <input type="text" inputmode="decimal" id="opening-livreta-input" style="width:110px;" placeholder="0,00">
+          </label>
+          <button class="btn ghost" id="opening-save-btn">Enregistrer</button>
+        </div>
+      </div>
+
+      <div class="budget-stats">
+        <div class="budget-stat">
+          <div class="budget-stat-label">Solde</div>
+          <div class="budget-stat-value" id="budget-solde">0 €</div>
+        </div>
+        <div class="budget-stat">
+          <div class="budget-stat-label">Épargne</div>
+          <div class="budget-stat-value" id="budget-epargne">0 €</div>
+        </div>
+        <div class="budget-stat">
+          <div class="budget-stat-label">Entrées</div>
+          <div class="budget-stat-value positive" id="budget-entrees">0 €</div>
+        </div>
+        <div class="budget-stat">
+          <div class="budget-stat-label">Sorties</div>
+          <div class="budget-stat-value negative" id="budget-sorties">0 €</div>
+        </div>
+      </div>
+
+      <div class="budget-stats" style="grid-template-columns:repeat(3,1fr);">
+        <div class="budget-stat">
+          <div class="budget-stat-label">Solde LCL</div>
+          <div class="budget-stat-value" id="budget-solde-lcl">0 €</div>
+        </div>
+        <div class="budget-stat">
+          <div class="budget-stat-label">Solde Revolut</div>
+          <div class="budget-stat-value" id="budget-solde-revolut">0 €</div>
+        </div>
+        <div class="budget-stat">
+          <div class="budget-stat-label">Solde Livret A</div>
+          <div class="budget-stat-value" id="budget-solde-livreta">0 €</div>
+        </div>
+      </div>
+
+      <div class="pie-section">
+        <div class="pie-card">
+          <h2 class="pie-card-title">Dépenses par catégorie</h2>
+          <div class="pie-body" id="pie-category"></div>
+        </div>
+        <div class="pie-card">
+          <h2 class="pie-card-title">Dépenses par compte</h2>
+          <div class="pie-body" id="pie-account"></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:22px;">
+        <h2 class="section-title" style="margin-bottom:10px;">Nouvelle opération</h2>
+        <div class="quick-add" style="margin-bottom:0;flex-wrap:wrap;">
+          <div class="sign-toggle">
+            <button type="button" class="sign-btn plus active" id="sign-plus-btn">+</button>
+            <button type="button" class="sign-btn minus" id="sign-minus-btn">−</button>
+          </div>
+          <input type="number" id="txn-amount-input" placeholder="Montant (€)" min="0" step="0.01" style="max-width:130px;">
+          <input type="text" id="txn-label-input" placeholder="Description (ex: Salaire juillet)" style="flex:1;min-width:160px;">
+          <select id="txn-category-input">
+            <option value="Salaire">Salaire</option>
+            <option value="Loyer">Loyer</option>
+            <option value="Prélèvements">Prélèvements</option>
+            <option value="Épargne">Épargne</option>
+            <option value="Virement interne">Virement interne</option>
+            <option value="Dépense">Dépense</option>
+            <option value="Autre">Autre</option>
+          </select>
+          <select id="txn-account-input">
+            <option value="LCL">LCL</option>
+            <option value="Revolut">Revolut</option>
+            <option value="Livret A">Livret A</option>
+          </select>
+          <input type="date" id="txn-date-input">
+          <button class="btn" id="txn-add-btn">Ajouter</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:22px;">
+        <h2 class="section-title" style="margin-bottom:10px;">Importer un relevé de compte <span class="count">PDF de la banque, ou lignes collées à la main</span></h2>
+        <div class="quick-add" style="margin-bottom:6px;flex-wrap:wrap;">
+          <select id="import-account-input">
+            <option value="LCL">LCL</option>
+            <option value="Revolut">Revolut</option>
+            <option value="Livret A">Livret A</option>
+          </select>
+          <input type="file" id="import-pdf-input" accept="application/pdf" style="flex:1;min-width:180px;">
+          <button class="btn ghost" id="import-parse-btn">Analyser le texte</button>
+        </div>
+        <p class="fetch-status" id="import-pdf-status" style="margin:0 0 10px 0;min-height:14px;"></p>
+        <textarea class="note-input" id="import-textarea" style="min-height:110px;" placeholder="Dépose un PDF ci-dessus, ou colle ici les lignes de ton relevé :
+01/07/2026&#9;Virement HIGH COM&#9;1850,00
+03/07/2026&#9;Loyer appartement&#9;-750,00
+05/07/2026&#9;CB Carrefour&#9;-42,30"></textarea>
+        <div id="import-preview"></div>
+      </div>
+
+      <h2 class="section-title">Historique <span class="count" id="txn-count"></span></h2>
+      <div class="account-filter" id="txn-account-filter">
+        <button type="button" data-account="Tous" class="active">Tous</button>
+        <button type="button" data-account="LCL">LCL</button>
+        <button type="button" data-account="Revolut">Revolut</button>
+        <button type="button" data-account="Livret A">Livret A</button>
+      </div>
+      <div id="txns-container"></div>
+    </section>
+
+    <!-- REGLAGES -->
+    <section class="panel" id="panel-settings">
+      <div class="hero">
+        <div>
+          <p class="hero-date">Configuration</p>
+          <h1 class="hero-title">Réglages</h1>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:22px;">
+        <h2 class="section-title" style="margin-bottom:10px;">Comptes bancaires <span class="count">connexion directe via Powens (Open Banking) — nécessite le serveur local bank-sync-server</span></h2>
+        <div class="quick-add" style="margin-bottom:10px;">
+          <button class="btn small" data-connect="LCL">Connecter LCL</button>
+          <button class="btn small" data-connect="Revolut">Connecter Revolut</button>
+          <button class="btn ghost small" id="bank-refresh-accounts-btn">Actualiser la liste des comptes</button>
+        </div>
+        <p class="fetch-status" id="bank-sync-status" style="margin-bottom:10px;"></p>
+        <div id="bank-accounts-list"></div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title" style="margin-bottom:10px;">Compte de l'application</h2>
+        <p class="fetch-status" style="margin-bottom:12px;">Connecté(e) en tant que <strong id="settings-username">—</strong>.</p>
+        <button class="btn ghost" id="logout-btn">Se déconnecter</button>
+      </div>
+    </section>
+
+    <p class="footer-credit">Développé par YANISSE pour YANISSE — V1</p>
+  </main>
+</div>
+
+<nav class="bottom-nav">
+  <button class="nav-item active" data-tab="today">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/></svg>
+    Jour
+  </button>
+  <button class="nav-item" data-tab="tasks">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 11 3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    Tâches
+  </button>
+  <button class="nav-item" data-tab="notes">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+    Mémos
+  </button>
+  <button class="nav-item" data-tab="emails">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+    Mails
+  </button>
+  <button class="nav-item" data-tab="agenda">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+    Agenda
+  </button>
+  <button class="nav-item" data-tab="travels">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c2.8 3 4 6.5 4 10s-1.2 7-4 10c-2.8-3-4-6.5-4-10s1.2-7 4-10Z"/></svg>
+    Voyages
+  </button>
+  <button class="nav-item" data-tab="budget">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 5a8 8 0 1 0 0 14M5 10h9M5 14h7"/></svg>
+    Budget
+  </button>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------------- Storage helpers (localStorage, persistant dans ce navigateur) ----------------
+  const STORAGE_PREFIX = 'carnetdebord_';
+  async function load(key, fallback){
+    try{
+      const raw = localStorage.getItem(STORAGE_PREFIX + key);
+      return raw !== null ? JSON.parse(raw) : fallback;
+    }catch(e){ return fallback; }
+  }
+  async function save(key, value){
+    try{ localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(value)); }
+    catch(e){ console.error('storage save failed', key, e); }
+  }
+
+  let state = {
+    projects: [],
+    tasks: [],
+    notes: [],
+    travels: [],
+    transactions: [],
+    openingBalances: {LCL:0, Revolut:0, 'Livret A':0},
+    bankAccountMapping: {}, // {powensAccountId: 'LCL'|'Revolut'|'Livret A'}
+    emailsCache: null,   // {emails:[...], fetchedAt}
+    agendaCache: null    // {events:[...], fetchedAt}
+  };
+
+  const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+
+  // ---------------- Navigation ----------------
+  function showTab(tab){
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + tab).classList.add('active');
+    document.querySelectorAll('.nav-item').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+    const settingsBtn = document.querySelector('.settings-corner-btn');
+    if(settingsBtn) settingsBtn.classList.toggle('active', tab === 'settings');
+    if(tab === 'travels') initTravelMap();
+    if(tab === 'settings') refreshAuthAccount();
+  }
+  document.querySelectorAll('.nav-item').forEach(btn=>{
+    btn.addEventListener('click', ()=> showTab(btn.dataset.tab));
+  });
+  document.querySelector('.settings-corner-btn').addEventListener('click', ()=> showTab('settings'));
+
+  // ---------------- Clock / date ----------------
+  function updateClock(){
+    const now = new Date();
+    document.getElementById('clock').textContent = now.toLocaleTimeString('fr-FR', {hour:'2-digit', minute:'2-digit'});
+    document.getElementById('today-date').textContent = now.toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
+
+  // ---------------- Rendering: Today / Dashboard widgets ----------------
+  document.querySelectorAll('[data-goto]').forEach(btn=>{
+    btn.addEventListener('click', ()=> showTab(btn.dataset.goto));
+  });
+
+  function renderToday(){
+    const todayStr = new Date().toISOString().slice(0,10);
+    const openTasks = state.tasks.filter(t=>!t.done);
+    document.getElementById('stat-tasks').textContent = openTasks.length;
+
+    let nextEventLabel = '–';
+    if(state.agendaCache && state.agendaCache.events && state.agendaCache.events.length){
+      const ev = state.agendaCache.events[0];
+      nextEventLabel = ev.time ? ev.time : (ev.date || '–');
+    }
+    document.getElementById('stat-events').textContent = nextEventLabel;
+
+    let mailsLabel = '–';
+    if(state.emailsCache && state.emailsCache.emails){
+      mailsLabel = state.emailsCache.emails.length;
+    }
+    document.getElementById('stat-mails').textContent = mailsLabel;
+
+    const distinctCountries = new Set(state.travels.map(t=>t.country));
+    document.getElementById('stat-countries').textContent = distinctCountries.size;
+
+    const totals = computeBudgetTotals();
+    document.getElementById('stat-solde').textContent = formatEUR(totals.solde);
+
+    // Widget: Tâches
+    const wTasks = document.getElementById('widget-tasks');
+    const sortedOpen = [...openTasks].sort((a,b)=> (a.due||'9999').localeCompare(b.due||'9999'));
+    if(!sortedOpen.length){
+      wTasks.innerHTML = '<p class="mini-empty">Rien en cours — tout est fait ✓</p>';
+    } else {
+      wTasks.innerHTML = sortedOpen.slice(0,5).map(t=>{
+        const proj = state.projects.find(p=>p.id===t.projectId);
+        return `<div class="mini-row">
+          <span class="task-check" data-action="toggle" data-id="${t.id}" style="cursor:pointer;"></span>
+          <div class="mini-text">
+            <div class="mini-title">${escapeHtml(t.text)}</div>
+            ${proj?`<div class="mini-sub">${escapeHtml(proj.name)}</div>`:''}
+          </div>
+          ${t.due?`<span class="mini-meta">${t.due===todayStr?"aujourd'hui":formatDateShort(t.due)}</span>`:''}
+        </div>`;
+      }).join('');
+    }
+
+    // Widget: Agenda
+    const wAgenda = document.getElementById('widget-agenda');
+    if(!state.agendaCache){
+      wAgenda.innerHTML = '<p class="mini-empty">Pas encore actualisé — clique sur "actualiser".</p>';
+    } else if(!state.agendaCache.events.length){
+      wAgenda.innerHTML = '<p class="mini-empty">Rien de prévu sur les prochains jours.</p>';
+    } else {
+      wAgenda.innerHTML = state.agendaCache.events.slice(0,5).map(ev=>`
+        <div class="mini-row">
+          <div class="mini-text">
+            <div class="mini-title">${escapeHtml(ev.title||'Événement')}</div>
+            ${ev.location?`<div class="mini-sub">${escapeHtml(ev.location)}</div>`:''}
+          </div>
+          <span class="mini-meta">${ev.date===todayStr?"auj.":formatDateShort(ev.date)}${ev.time?' · '+escapeHtml(ev.time):''}</span>
+        </div>
+      `).join('');
+    }
+
+    // Widget: Emails
+    const wEmails = document.getElementById('widget-emails');
+    if(!state.emailsCache){
+      wEmails.innerHTML = '<p class="mini-empty">Pas encore actualisé — clique sur "actualiser".</p>';
+    } else if(!state.emailsCache.emails.length){
+      wEmails.innerHTML = '<p class="mini-empty">Boîte à jour, rien de non lu.</p>';
+    } else {
+      wEmails.innerHTML = state.emailsCache.emails.slice(0,5).map(m=>`
+        <div class="mini-row">
+          <div class="mini-text">
+            <div class="mini-title">${escapeHtml(m.sender||'Expéditeur inconnu')}</div>
+            <div class="mini-sub">${escapeHtml(m.subject||'(sans objet)')}</div>
+          </div>
+          <span class="mini-meta">${escapeHtml(m.date||'')}</span>
+        </div>
+      `).join('');
+    }
+
+    // Widget: Mémos
+    const wNotes = document.getElementById('widget-notes');
+    if(!state.notes.length){
+      wNotes.innerHTML = '<p class="mini-empty">Aucun mémo pour le moment.</p>';
+    } else {
+      const sortedNotes = [...state.notes].sort((a,b)=> b.createdAt.localeCompare(a.createdAt));
+      wNotes.innerHTML = sortedNotes.slice(0,3).map(n=>`
+        <div class="mini-row">
+          <div class="mini-text">
+            <div class="mini-title">${escapeHtml(n.text.length>80? n.text.slice(0,80)+'…' : n.text)}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+
+  // Widget tasks: allow toggling completion directly from the dashboard
+  document.getElementById('widget-tasks').addEventListener('click', async (e)=>{
+    const el = e.target.closest('[data-action="toggle"]');
+    if(!el) return;
+    const t = state.tasks.find(x=>x.id===el.dataset.id);
+    if(t){ t.done = !t.done; await save('tasks', state.tasks); renderTasks(); renderToday(); }
+  });
+
+  function formatDateShort(iso){
+    if(!iso) return '';
+    const d = new Date(iso + 'T00:00:00');
+    if(isNaN(d)) return iso;
+    return d.toLocaleDateString('fr-FR', {day:'2-digit', month:'2-digit'});
+  }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  document.getElementById('today-quick-add').addEventListener('click', addQuickTask);
+  document.getElementById('today-quick-input').addEventListener('keydown', e=>{ if(e.key==='Enter') addQuickTask(); });
+  async function addQuickTask(){
+    const input = document.getElementById('today-quick-input');
+    const text = input.value.trim();
+    if(!text) return;
+    const today = new Date().toISOString().slice(0,10);
+    state.tasks.push({id:uid(), text, projectId: state.projects[0]? state.projects[0].id : null, due: today, done:false});
+    input.value = '';
+    await save('tasks', state.tasks);
+    renderToday(); renderTasks();
+  }
+
+  // ---------------- Rendering: Tasks & Projects ----------------
+  let editingTaskId = null;
+  let editingProjectId = null;
+  let taskSearchQuery = '';
+
+  function sortTasks(tasks){
+    return [...tasks].sort((a,b)=>{
+      if(a.done !== b.done) return a.done ? 1 : -1;
+      const ad = a.due || '9999-99-99';
+      const bd = b.due || '9999-99-99';
+      return ad.localeCompare(bd);
+    });
+  }
+
+  function renderTaskRow(t, todayStr){
+    if(t.id === editingTaskId){
+      return `
+        <div class="task-row" data-id="${t.id}">
+          <input type="text" class="task-edit-text" data-id="${t.id}" value="${escapeHtml(t.text)}">
+          <input type="date" class="task-edit-due" data-id="${t.id}" value="${t.due||''}">
+          <button class="task-del" data-action="save-edit" data-id="${t.id}" title="Enregistrer">✓</button>
+          <button class="task-del" data-action="cancel-edit" data-id="${t.id}" title="Annuler">✕</button>
+        </div>
+      `;
+    }
+    const overdue = !t.done && t.due && t.due < todayStr;
+    return `
+      <div class="task-row ${t.done?'done':''} ${overdue?'overdue':''}" data-id="${t.id}">
+        <span class="task-check ${t.done?'checked':''}" data-action="toggle" data-id="${t.id}"></span>
+        <span class="task-text">${escapeHtml(t.text)}</span>
+        ${t.due?`<span class="task-due">${formatDateShort(t.due)}</span>`:''}
+        <button class="task-del" data-action="edit" data-id="${t.id}" title="Modifier">✎</button>
+        <button class="task-del" data-action="del" data-id="${t.id}">✕</button>
+      </div>
+    `;
+  }
+
+  function renderProjectHead(p, openCount){
+    if(p.id && p.id === editingProjectId){
+      return `
+        <input type="text" class="project-edit-name" data-id="${p.id}" value="${escapeHtml(p.name)}">
+        <button class="task-del" data-action="save-project" data-id="${p.id}" title="Enregistrer">✓</button>
+        <button class="task-del" data-action="cancel-project" data-id="${p.id}" title="Annuler">✕</button>
+      `;
+    }
+    return `
+      <span class="project-dot" style="background:${p.color}"></span>
+      <span class="project-name">${escapeHtml(p.name)}</span>
+      <span class="fetch-status">${openCount} ouverte(s)</span>
+      ${p.id?`
+        <button class="task-del" data-action="edit-project" data-id="${p.id}" title="Renommer">✎</button>
+        <button class="task-del" data-action="del-project" data-id="${p.id}" title="Supprimer">✕</button>
+      `:''}
+    `;
+  }
+
+  function renderTasks(){
+    const container = document.getElementById('tasks-container');
+    if(!state.projects.length && !state.tasks.length){
+      container.innerHTML = '<p class="empty-state">Crée un premier projet pour organiser tes tâches.</p>';
+      return;
+    }
+    const todayStr = new Date().toISOString().slice(0,10);
+    const q = taskSearchQuery.trim().toLowerCase();
+    const visibleTasks = q ? state.tasks.filter(t=> t.text.toLowerCase().includes(q)) : state.tasks;
+
+    const groups = state.projects.map(p=>({project:p, tasks: visibleTasks.filter(t=>t.projectId===p.id)}));
+    const orphan = visibleTasks.filter(t=>!state.projects.find(p=>p.id===t.projectId));
+    if(orphan.length) groups.push({project:{id:null,name:'Sans projet',color:'#9CA3AF'}, tasks:orphan});
+
+    if(q && !groups.some(g=>g.tasks.length)){
+      container.innerHTML = '<p class="empty-state">Aucune tâche ne correspond à ta recherche.</p>';
+      return;
+    }
+
+    container.innerHTML = groups.map(g=>`
+      <div class="project-group">
+        <div class="project-head">
+          ${renderProjectHead(g.project, g.tasks.filter(t=>!t.done).length)}
+        </div>
+        ${g.tasks.length ? sortTasks(g.tasks).map(t=>renderTaskRow(t, todayStr)).join('') : '<p class="empty-state" style="padding:8px 0;">Aucune tâche ici.</p>'}
+      </div>
+    `).join('');
+
+    const editInput = container.querySelector('.task-edit-text, .project-edit-name');
+    if(editInput){ editInput.focus(); editInput.select(); }
+  }
+
+  document.getElementById('task-search-input').addEventListener('input', (e)=>{
+    taskSearchQuery = e.target.value;
+    renderTasks();
+  });
+
+  document.getElementById('tasks-container').addEventListener('click', async (e)=>{
+    const el = e.target.closest('[data-action]');
+    if(!el) return;
+    const id = el.dataset.id;
+    const action = el.dataset.action;
+    if(action==='toggle'){
+      const t = state.tasks.find(x=>x.id===id);
+      if(t){ t.done = !t.done; await save('tasks', state.tasks); renderTasks(); renderToday(); }
+    } else if(action==='del'){
+      state.tasks = state.tasks.filter(x=>x.id!==id);
+      await save('tasks', state.tasks); renderTasks(); renderToday();
+    } else if(action==='edit'){
+      editingTaskId = id;
+      renderTasks();
+    } else if(action==='cancel-edit'){
+      editingTaskId = null;
+      renderTasks();
+    } else if(action==='save-edit'){
+      const row = el.closest('.task-row');
+      const text = row.querySelector('.task-edit-text').value.trim();
+      const due = row.querySelector('.task-edit-due').value || null;
+      const t = state.tasks.find(x=>x.id===id);
+      if(t && text){ t.text = text; t.due = due; await save('tasks', state.tasks); }
+      editingTaskId = null;
+      renderTasks(); renderToday();
+    } else if(action==='edit-project'){
+      editingProjectId = id;
+      renderTasks();
+    } else if(action==='cancel-project'){
+      editingProjectId = null;
+      renderTasks();
+    } else if(action==='save-project'){
+      const nameInput = el.closest('.project-head').querySelector('.project-edit-name');
+      const name = nameInput.value.trim();
+      const p = state.projects.find(x=>x.id===id);
+      if(p && name){ p.name = name; await save('projects', state.projects); }
+      editingProjectId = null;
+      renderTasks();
+    } else if(action==='del-project'){
+      state.projects = state.projects.filter(x=>x.id!==id);
+      await save('projects', state.projects);
+      renderTasks();
+    }
+  });
+
+  document.getElementById('tasks-container').addEventListener('keydown', async (e)=>{
+    if(e.target.classList.contains('task-edit-text') || e.target.classList.contains('task-edit-due')){
+      if(e.key==='Enter') e.target.closest('.task-row').querySelector('[data-action="save-edit"]').click();
+      else if(e.key==='Escape') e.target.closest('.task-row').querySelector('[data-action="cancel-edit"]').click();
+    } else if(e.target.classList.contains('project-edit-name')){
+      if(e.key==='Enter') e.target.closest('.project-head').querySelector('[data-action="save-project"]').click();
+      else if(e.key==='Escape') e.target.closest('.project-head').querySelector('[data-action="cancel-project"]').click();
+    }
+  });
+
+  document.getElementById('project-add-btn').addEventListener('click', async ()=>{
+    const nameInput = document.getElementById('project-name-input');
+    const name = nameInput.value.trim();
+    if(!name) return;
+    const palette = ['#F2994A','#16A34A','#DC2626','#6366F1','#A78BFA'];
+    const color = palette[state.projects.length % palette.length];
+    state.projects.push({id:uid(), name, color});
+    nameInput.value = '';
+    await save('projects', state.projects);
+    renderTasks();
+  });
+
+  document.getElementById('task-add-btn').addEventListener('click', async ()=>{
+    const textInput = document.getElementById('task-text-input');
+    const text = textInput.value.trim();
+    if(!text) return;
+    const projectId = state.projects[0] ? state.projects[0].id : null;
+    const due = document.getElementById('task-due-input').value || null;
+    state.tasks.push({id:uid(), text, projectId, due, done:false});
+    textInput.value = '';
+    document.getElementById('task-due-input').value = '';
+    await save('tasks', state.tasks);
+    renderTasks(); renderToday();
+  });
+
+  // ---------------- Rendering: Notes ----------------
+  function renderNotes(){
+    const container = document.getElementById('notes-container');
+    if(!state.notes.length){
+      container.innerHTML = '<p class="empty-state">Aucun mémo pour le moment.</p>';
+      return;
+    }
+    const sorted = [...state.notes].sort((a,b)=> b.createdAt.localeCompare(a.createdAt));
+    container.innerHTML = sorted.map(n=>`
+      <div class="note-card">
+        <button class="note-del" data-id="${n.id}">✕</button>
+        <div class="note-meta">${new Date(n.createdAt).toLocaleString('fr-FR', {day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})}</div>
+        <div class="note-text">${escapeHtml(n.text)}</div>
+      </div>
+    `).join('');
+  }
+  document.getElementById('note-add-btn').addEventListener('click', async ()=>{
+    const input = document.getElementById('note-input');
+    const text = input.value.trim();
+    if(!text) return;
+    state.notes.push({id:uid(), text, createdAt: new Date().toISOString()});
+    input.value = '';
+    await save('notes', state.notes);
+    renderNotes();
+  });
+  document.getElementById('notes-container').addEventListener('click', async (e)=>{
+    const btn = e.target.closest('.note-del');
+    if(!btn) return;
+    state.notes = state.notes.filter(n=>n.id!==btn.dataset.id);
+    await save('notes', state.notes);
+    renderNotes();
+  });
+
+  // ---------------- Claude API (MCP) helper ----------------
+  async function callClaude(prompt, mcpServer){
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        model: "claude-sonnet-4-6",
+        max_tokens: 1000,
+        messages: [{role:"user", content: prompt}],
+        mcp_servers: [mcpServer]
+      })
+    });
+    if(!res.ok){
+      throw new Error("Erreur API (" + res.status + ")");
+    }
+    const data = await res.json();
+    const textBlocks = (data.content||[]).filter(b=>b.type==="text").map(b=>b.text);
+    return textBlocks.join("\n").trim();
+  }
+  function extractJson(text){
+    const cleaned = text.replace(/```json|```/g, "").trim();
+    const start = cleaned.indexOf('{');
+    const end = cleaned.lastIndexOf('}');
+    if(start===-1||end===-1) throw new Error("Réponse illisible");
+    return JSON.parse(cleaned.slice(start, end+1));
+  }
+
+  // ---------------- Emails ----------------
+  function renderEmails(){
+    const container = document.getElementById('emails-container');
+    const status = document.getElementById('emails-status');
+    if(!state.emailsCache){
+      container.innerHTML = '<p class="empty-state">Clique sur "Actualiser depuis Gmail" pour charger tes derniers emails.</p>';
+      status.textContent = 'jamais actualisé';
+      return;
+    }
+    status.textContent = 'actualisé à ' + new Date(state.emailsCache.fetchedAt).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+    if(!state.emailsCache.emails.length){
+      container.innerHTML = '<p class="empty-state">Boîte de réception à jour — rien de non lu.</p>';
+      return;
+    }
+    container.innerHTML = state.emailsCache.emails.map(m=>`
+      <div class="mail-card">
+        <div class="mail-top">
+          <span class="mail-sender">${escapeHtml(m.sender||'Expéditeur inconnu')}</span>
+          <span class="mail-date">${escapeHtml(m.date||'')}</span>
+        </div>
+        <div class="mail-subject">${escapeHtml(m.subject||'(sans objet)')}</div>
+        <div class="mail-snippet">${escapeHtml(m.snippet||'')}</div>
+      </div>
+    `).join('');
+  }
+
+  const GMAIL_SERVER = {type:"url", url:"https://gmailmcp.googleapis.com/mcp/v1", name:"gmail-mcp"};
+
+  async function refreshEmails(){
+    const btn = document.getElementById('emails-refresh-btn');
+    const widgetBtn = document.getElementById('widget-emails-refresh');
+    const status = document.getElementById('emails-status');
+    const container = document.getElementById('emails-container');
+    btn.disabled = true; if(widgetBtn) widgetBtn.disabled = true;
+    status.innerHTML = '<span class="spinner"></span> lecture de la boîte Gmail…';
+    try{
+      const raw = await callClaude(
+        "Consulte ma boîte Gmail et liste mes 8 emails non lus les plus récents. Pour chacun donne: sender (nom de l'expéditeur), subject, snippet (résumé en 12 mots maximum, en français), date (format court, ex '08/07 14:30'). Réponds UNIQUEMENT avec ce JSON, sans markdown ni texte autour: {\"emails\":[{\"sender\":\"\",\"subject\":\"\",\"snippet\":\"\",\"date\":\"\"}]}",
+        GMAIL_SERVER
+      );
+      const parsed = extractJson(raw);
+      state.emailsCache = {emails: parsed.emails || [], fetchedAt: new Date().toISOString()};
+      await save('cache_emails', state.emailsCache);
+      renderEmails(); renderToday();
+    }catch(err){
+      container.innerHTML = '<div class="error-state">Impossible de charger Gmail (' + escapeHtml(err.message) + '). Vérifie que le connecteur Gmail est bien actif.</div>';
+    }finally{
+      btn.disabled = false; if(widgetBtn) widgetBtn.disabled = false;
+      if(state.emailsCache) status.textContent = 'actualisé à ' + new Date(state.emailsCache.fetchedAt).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+    }
+  }
+  document.getElementById('emails-refresh-btn').addEventListener('click', refreshEmails);
+  document.getElementById('widget-emails-refresh').addEventListener('click', refreshEmails);
+
+  // ---------------- Agenda ----------------
+  function renderAgenda(){
+    const container = document.getElementById('agenda-container');
+    const status = document.getElementById('agenda-status');
+    if(!state.agendaCache){
+      container.innerHTML = '<p class="empty-state">Clique sur "Actualiser depuis Google Calendar" pour charger ton agenda.</p>';
+      status.textContent = 'jamais actualisé';
+      return;
+    }
+    status.textContent = 'actualisé à ' + new Date(state.agendaCache.fetchedAt).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+    const events = state.agendaCache.events || [];
+    if(!events.length){
+      container.innerHTML = '<p class="empty-state">Rien de prévu sur les prochains jours.</p>';
+      return;
+    }
+    const byDay = {};
+    events.forEach(ev=>{
+      const d = ev.date || 'Sans date';
+      byDay[d] = byDay[d] || [];
+      byDay[d].push(ev);
+    });
+    container.innerHTML = Object.keys(byDay).sort().map(day=>`
+      <div class="day-label">${formatDateLong(day)}</div>
+      ${byDay[day].map(ev=>`
+        <div class="event-card">
+          <div class="event-top">
+            <span class="event-title">${escapeHtml(ev.title||'Événement')}</span>
+            <span class="event-time">${escapeHtml(ev.time||'')}</span>
+          </div>
+          ${ev.location?`<div class="event-loc">${escapeHtml(ev.location)}</div>`:''}
+        </div>
+      `).join('')}
+    `).join('');
+  }
+  function formatDateLong(iso){
+    const d = new Date(iso + 'T00:00:00');
+    if(isNaN(d)) return iso;
+    return d.toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long'});
+  }
+
+  const GCAL_SERVER = {type:"url", url:"https://calendarmcp.googleapis.com/mcp/v1", name:"google-calendar-mcp"};
+
+  async function refreshAgenda(){
+    const btn = document.getElementById('agenda-refresh-btn');
+    const widgetBtn = document.getElementById('widget-agenda-refresh');
+    const status = document.getElementById('agenda-status');
+    const container = document.getElementById('agenda-container');
+    btn.disabled = true; if(widgetBtn) widgetBtn.disabled = true;
+    status.innerHTML = '<span class="spinner"></span> lecture de Google Calendar…';
+    try{
+      const todayStr = new Date().toISOString().slice(0,10);
+      const raw = await callClaude(
+        "Consulte mon Google Calendar principal et liste mes événements entre aujourd'hui (" + todayStr + ") et les 6 prochains jours. Pour chacun donne: date (format YYYY-MM-DD), time (format HH:MM, vide si journée entière), title, location (vide si aucun). Réponds UNIQUEMENT avec ce JSON, sans markdown ni texte autour: {\"events\":[{\"date\":\"\",\"time\":\"\",\"title\":\"\",\"location\":\"\"}]}",
+        GCAL_SERVER
+      );
+      const parsed = extractJson(raw);
+      const events = (parsed.events || []).sort((a,b)=> (a.date+(a.time||'')).localeCompare(b.date+(b.time||'')));
+      state.agendaCache = {events, fetchedAt: new Date().toISOString()};
+      await save('cache_agenda', state.agendaCache);
+      renderAgenda(); renderToday();
+    }catch(err){
+      container.innerHTML = '<div class="error-state">Impossible de charger l\'agenda (' + escapeHtml(err.message) + '). Vérifie que le connecteur Google Calendar est bien actif.</div>';
+    }finally{
+      btn.disabled = false; if(widgetBtn) widgetBtn.disabled = false;
+      if(state.agendaCache) status.textContent = 'actualisé à ' + new Date(state.agendaCache.fetchedAt).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+    }
+  }
+  document.getElementById('agenda-refresh-btn').addEventListener('click', refreshAgenda);
+  document.getElementById('widget-agenda-refresh').addEventListener('click', refreshAgenda);
+
+  // ---------------- Agenda: création d'événement (synchro écriture) ----------------
+  document.getElementById('event-add-btn').addEventListener('click', async ()=>{
+    const btn = document.getElementById('event-add-btn');
+    const titleInput = document.getElementById('event-title-input');
+    const dateInput = document.getElementById('event-date-input');
+    const timeInput = document.getElementById('event-time-input');
+    const locInput = document.getElementById('event-location-input');
+    const container = document.getElementById('agenda-container');
+
+    const title = titleInput.value.trim();
+    const date = dateInput.value;
+    const time = timeInput.value;
+    const location = locInput.value.trim();
+    if(!title || !date){ alert('Indique au moins un titre et une date.'); return; }
+
+    btn.disabled = true;
+    const originalLabel = btn.textContent;
+    btn.textContent = 'Ajout…';
+    try{
+      const prompt = `Crée un événement dans mon Google Calendar principal. Titre: "${title}". Date: ${date}.` +
+        (time ? ` Heure: ${time}.` : ' Événement sur la journée entière.') +
+        (location ? ` Lieu: ${location}.` : '') +
+        ` Réponds UNIQUEMENT avec ce JSON, sans markdown ni texte autour: {"success":true} ou {"success":false,"error":"raison"}`;
+      const raw = await callClaude(prompt, GCAL_SERVER);
+      const parsed = extractJson(raw);
+      if(parsed.success){
+        titleInput.value = ''; dateInput.value = ''; timeInput.value = ''; locInput.value = '';
+        await refreshAgenda(); // relit Google Calendar pour refléter le nouvel événement (double sens)
+      } else {
+        container.insertAdjacentHTML('afterbegin', '<div class="error-state">Google Calendar a refusé l\'ajout (' + escapeHtml(parsed.error || 'raison inconnue') + ').</div>');
+      }
+    }catch(err){
+      container.insertAdjacentHTML('afterbegin', '<div class="error-state">Impossible de créer l\'événement (' + escapeHtml(err.message) + ').</div>');
+    }finally{
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+    }
+  });
+
+  // ---------------- Voyages ----------------
+  const COUNTRIES = [
+    {name:"Afghanistan",code:"AF",lat:34.5553,lng:69.2075},{name:"Afrique du Sud",code:"ZA",lat:-25.7461,lng:28.1881},
+    {name:"Albanie",code:"AL",lat:41.3275,lng:19.8187},{name:"Algérie",code:"DZ",lat:36.7538,lng:3.0588},
+    {name:"Allemagne",code:"DE",lat:52.5200,lng:13.4050},{name:"Andorre",code:"AD",lat:42.5063,lng:1.5218},
+    {name:"Angola",code:"AO",lat:-8.8390,lng:13.2894},{name:"Antigua-et-Barbuda",code:"AG",lat:17.1274,lng:-61.8468},
+    {name:"Arabie Saoudite",code:"SA",lat:24.7136,lng:46.6753},{name:"Argentine",code:"AR",lat:-34.6037,lng:-58.3816},
+    {name:"Arménie",code:"AM",lat:40.1792,lng:44.4991},{name:"Australie",code:"AU",lat:-35.2809,lng:149.1300},
+    {name:"Autriche",code:"AT",lat:48.2082,lng:16.3738},{name:"Azerbaïdjan",code:"AZ",lat:40.4093,lng:49.8671},
+    {name:"Bahamas",code:"BS",lat:25.0343,lng:-77.3963},{name:"Bahreïn",code:"BH",lat:26.2285,lng:50.5860},
+    {name:"Bangladesh",code:"BD",lat:23.8103,lng:90.4125},{name:"Barbade",code:"BB",lat:13.1132,lng:-59.5988},
+    {name:"Belgique",code:"BE",lat:50.8503,lng:4.3517},{name:"Belize",code:"BZ",lat:17.1899,lng:-88.4976},
+    {name:"Bénin",code:"BJ",lat:6.4969,lng:2.6289},{name:"Bhoutan",code:"BT",lat:27.4728,lng:89.6390},
+    {name:"Biélorussie",code:"BY",lat:53.9006,lng:27.5590},{name:"Birmanie (Myanmar)",code:"MM",lat:19.7633,lng:96.0785},
+    {name:"Bolivie",code:"BO",lat:-16.4897,lng:-68.1193},{name:"Bosnie-Herzégovine",code:"BA",lat:43.8563,lng:18.4131},
+    {name:"Botswana",code:"BW",lat:-24.6282,lng:25.9231},{name:"Brésil",code:"BR",lat:-15.7939,lng:-47.8828},
+    {name:"Brunei",code:"BN",lat:4.9031,lng:114.9398},{name:"Bulgarie",code:"BG",lat:42.6977,lng:23.3219},
+    {name:"Burkina Faso",code:"BF",lat:12.3714,lng:-1.5197},{name:"Burundi",code:"BI",lat:-3.3822,lng:29.3644},
+    {name:"Cambodge",code:"KH",lat:11.5564,lng:104.9282},{name:"Cameroun",code:"CM",lat:3.8480,lng:11.5021},
+    {name:"Canada",code:"CA",lat:45.4215,lng:-75.6972},{name:"Cap-Vert",code:"CV",lat:14.9330,lng:-23.5133},
+    {name:"Chili",code:"CL",lat:-33.4489,lng:-70.6693},{name:"Chine",code:"CN",lat:39.9042,lng:116.4074},
+    {name:"Chypre",code:"CY",lat:35.1856,lng:33.3823},{name:"Colombie",code:"CO",lat:4.7110,lng:-74.0721},
+    {name:"Comores",code:"KM",lat:-11.7172,lng:43.2473},{name:"Congo-Brazzaville",code:"CG",lat:-4.2634,lng:15.2429},
+    {name:"Congo-Kinshasa (RDC)",code:"CD",lat:-4.4419,lng:15.2663},{name:"Corée du Nord",code:"KP",lat:39.0392,lng:125.7625},
+    {name:"Corée du Sud",code:"KR",lat:37.5665,lng:126.9780},{name:"Costa Rica",code:"CR",lat:9.9281,lng:-84.0907},
+    {name:"Côte d'Ivoire",code:"CI",lat:6.8276,lng:-5.2893},{name:"Croatie",code:"HR",lat:45.8150,lng:15.9819},
+    {name:"Cuba",code:"CU",lat:23.1136,lng:-82.3666},{name:"Danemark",code:"DK",lat:55.6761,lng:12.5683},
+    {name:"Djibouti",code:"DJ",lat:11.8251,lng:42.5903},{name:"Dominique",code:"DM",lat:15.4150,lng:-61.3710},
+    {name:"Égypte",code:"EG",lat:30.0444,lng:31.2357},{name:"Émirats arabes unis",code:"AE",lat:24.4539,lng:54.3773},
+    {name:"Équateur",code:"EC",lat:-0.1807,lng:-78.4678},{name:"Érythrée",code:"ER",lat:15.3229,lng:38.9251},
+    {name:"Espagne",code:"ES",lat:40.4168,lng:-3.7038},{name:"Estonie",code:"EE",lat:59.4370,lng:24.7536},
+    {name:"Eswatini",code:"SZ",lat:-26.3054,lng:31.1367},{name:"États-Unis",code:"US",lat:38.9072,lng:-77.0369},
+    {name:"Éthiopie",code:"ET",lat:9.0300,lng:38.7400},{name:"Fidji",code:"FJ",lat:-18.1416,lng:178.4419},
+    {name:"Finlande",code:"FI",lat:60.1699,lng:24.9384},{name:"France",code:"FR",lat:48.8566,lng:2.3522},
+    {name:"Gabon",code:"GA",lat:0.4162,lng:9.4673},{name:"Gambie",code:"GM",lat:13.4549,lng:-16.5790},
+    {name:"Géorgie",code:"GE",lat:41.7151,lng:44.8271},{name:"Ghana",code:"GH",lat:5.6037,lng:-0.1870},
+    {name:"Grèce",code:"GR",lat:37.9838,lng:23.7275},{name:"Grenade",code:"GD",lat:12.0561,lng:-61.7488},
+    {name:"Guatemala",code:"GT",lat:14.6349,lng:-90.5069},{name:"Guinée",code:"GN",lat:9.6412,lng:-13.5784},
+    {name:"Guinée-Bissau",code:"GW",lat:11.8636,lng:-15.5977},{name:"Guinée équatoriale",code:"GQ",lat:3.7504,lng:8.7371},
+    {name:"Guyana",code:"GY",lat:6.8013,lng:-58.1551},{name:"Haïti",code:"HT",lat:18.5944,lng:-72.3074},
+    {name:"Honduras",code:"HN",lat:14.0723,lng:-87.1921},{name:"Hongrie",code:"HU",lat:47.4979,lng:19.0402},
+    {name:"Inde",code:"IN",lat:28.6139,lng:77.2090},{name:"Indonésie",code:"ID",lat:-6.2088,lng:106.8456},
+    {name:"Irak",code:"IQ",lat:33.3152,lng:44.3661},{name:"Iran",code:"IR",lat:35.6892,lng:51.3890},
+    {name:"Irlande",code:"IE",lat:53.3498,lng:-6.2603},{name:"Islande",code:"IS",lat:64.1466,lng:-21.9426},
+    {name:"Israël",code:"IL",lat:31.7683,lng:35.2137},{name:"Italie",code:"IT",lat:41.9028,lng:12.4964},
+    {name:"Jamaïque",code:"JM",lat:18.0179,lng:-76.8099},{name:"Japon",code:"JP",lat:35.6762,lng:139.6503},
+    {name:"Jordanie",code:"JO",lat:31.9454,lng:35.9284},{name:"Kazakhstan",code:"KZ",lat:51.1694,lng:71.4491},
+    {name:"Kenya",code:"KE",lat:-1.2921,lng:36.8219},{name:"Kirghizistan",code:"KG",lat:42.8746,lng:74.5698},
+    {name:"Kiribati",code:"KI",lat:1.3382,lng:173.0176},{name:"Kosovo",code:"XK",lat:42.6629,lng:21.1655},
+    {name:"Koweït",code:"KW",lat:29.3759,lng:47.9774},{name:"Laos",code:"LA",lat:17.9757,lng:102.6331},
+    {name:"Lesotho",code:"LS",lat:-29.3151,lng:27.4869},{name:"Lettonie",code:"LV",lat:56.9496,lng:24.1052},
+    {name:"Liban",code:"LB",lat:33.8938,lng:35.5018},{name:"Liberia",code:"LR",lat:6.2907,lng:-10.7605},
+    {name:"Libye",code:"LY",lat:32.8872,lng:13.1913},{name:"Liechtenstein",code:"LI",lat:47.1410,lng:9.5209},
+    {name:"Lituanie",code:"LT",lat:54.6872,lng:25.2797},{name:"Luxembourg",code:"LU",lat:49.6116,lng:6.1319},
+    {name:"Macédoine du Nord",code:"MK",lat:41.9981,lng:21.4254},{name:"Madagascar",code:"MG",lat:-18.8792,lng:47.5079},
+    {name:"Malaisie",code:"MY",lat:3.1390,lng:101.6869},{name:"Malawi",code:"MW",lat:-13.9626,lng:33.7741},
+    {name:"Maldives",code:"MV",lat:4.1755,lng:73.5093},{name:"Mali",code:"ML",lat:12.6392,lng:-8.0029},
+    {name:"Malte",code:"MT",lat:35.8989,lng:14.5146},{name:"Maroc",code:"MA",lat:34.0209,lng:-6.8416},
+    {name:"Îles Marshall",code:"MH",lat:7.0897,lng:171.3803},{name:"Maurice",code:"MU",lat:-20.1609,lng:57.5012},
+    {name:"Mauritanie",code:"MR",lat:18.0735,lng:-15.9582},{name:"Mexique",code:"MX",lat:19.4326,lng:-99.1332},
+    {name:"Micronésie",code:"FM",lat:6.9147,lng:158.1610},{name:"Moldavie",code:"MD",lat:47.0105,lng:28.8638},
+    {name:"Monaco",code:"MC",lat:43.7384,lng:7.4246},{name:"Mongolie",code:"MN",lat:47.8864,lng:106.9057},
+    {name:"Monténégro",code:"ME",lat:42.4304,lng:19.2594},{name:"Mozambique",code:"MZ",lat:-25.9692,lng:32.5732},
+    {name:"Namibie",code:"NA",lat:-22.5609,lng:17.0658},{name:"Nauru",code:"NR",lat:-0.5228,lng:166.9315},
+    {name:"Népal",code:"NP",lat:27.7172,lng:85.3240},{name:"Nicaragua",code:"NI",lat:12.1150,lng:-86.2362},
+    {name:"Niger",code:"NE",lat:13.5127,lng:2.1128},{name:"Nigeria",code:"NG",lat:9.0765,lng:7.3986},
+    {name:"Norvège",code:"NO",lat:59.9139,lng:10.7522},{name:"Nouvelle-Zélande",code:"NZ",lat:-41.2865,lng:174.7762},
+    {name:"Oman",code:"OM",lat:23.5859,lng:58.4059},{name:"Ouganda",code:"UG",lat:0.3476,lng:32.5825},
+    {name:"Ouzbékistan",code:"UZ",lat:41.2995,lng:69.2401},{name:"Pakistan",code:"PK",lat:33.6844,lng:73.0479},
+    {name:"Palaos",code:"PW",lat:7.5150,lng:134.5825},{name:"Palestine",code:"PS",lat:31.9038,lng:35.2034},
+    {name:"Panama",code:"PA",lat:8.9824,lng:-79.5199},{name:"Papouasie-Nouvelle-Guinée",code:"PG",lat:-9.4438,lng:147.1803},
+    {name:"Paraguay",code:"PY",lat:-25.2637,lng:-57.5759},{name:"Pays-Bas",code:"NL",lat:52.3676,lng:4.9041},
+    {name:"Pérou",code:"PE",lat:-12.0464,lng:-77.0428},{name:"Philippines",code:"PH",lat:14.5995,lng:120.9842},
+    {name:"Pologne",code:"PL",lat:52.2297,lng:21.0122},{name:"Portugal",code:"PT",lat:38.7223,lng:-9.1393},
+    {name:"Qatar",code:"QA",lat:25.2854,lng:51.5310},{name:"République centrafricaine",code:"CF",lat:4.3947,lng:18.5582},
+    {name:"République dominicaine",code:"DO",lat:18.4861,lng:-69.9312},{name:"République tchèque",code:"CZ",lat:50.0755,lng:14.4378},
+    {name:"Roumanie",code:"RO",lat:44.4268,lng:26.1025},{name:"Royaume-Uni",code:"GB",lat:51.5074,lng:-0.1278},
+    {name:"Russie",code:"RU",lat:55.7558,lng:37.6173},{name:"Rwanda",code:"RW",lat:-1.9403,lng:29.8739},
+    {name:"Saint-Kitts-et-Nevis",code:"KN",lat:17.3026,lng:-62.7177},{name:"Sainte-Lucie",code:"LC",lat:14.0101,lng:-60.9875},
+    {name:"Saint-Marin",code:"SM",lat:43.9424,lng:12.4578},{name:"Saint-Vincent-et-les-Grenadines",code:"VC",lat:13.1587,lng:-61.2248},
+    {name:"Îles Salomon",code:"SB",lat:-9.4456,lng:159.9729},{name:"Salvador",code:"SV",lat:13.6929,lng:-89.2182},
+    {name:"Samoa",code:"WS",lat:-13.8506,lng:-171.7513},{name:"Sao Tomé-et-Principe",code:"ST",lat:0.3365,lng:6.7273},
+    {name:"Sénégal",code:"SN",lat:14.7167,lng:-17.4677},{name:"Serbie",code:"RS",lat:44.7866,lng:20.4489},
+    {name:"Seychelles",code:"SC",lat:-4.6796,lng:55.4920},{name:"Sierra Leone",code:"SL",lat:8.4657,lng:-13.2317},
+    {name:"Singapour",code:"SG",lat:1.3521,lng:103.8198},{name:"Slovaquie",code:"SK",lat:48.1486,lng:17.1077},
+    {name:"Slovénie",code:"SI",lat:46.0569,lng:14.5058},{name:"Somalie",code:"SO",lat:2.0469,lng:45.3182},
+    {name:"Soudan",code:"SD",lat:15.5007,lng:32.5599},{name:"Soudan du Sud",code:"SS",lat:4.8594,lng:31.5713},
+    {name:"Sri Lanka",code:"LK",lat:6.9271,lng:79.8612},{name:"Suède",code:"SE",lat:59.3293,lng:18.0686},
+    {name:"Suisse",code:"CH",lat:46.9480,lng:7.4474},{name:"Suriname",code:"SR",lat:5.8520,lng:-55.2038},
+    {name:"Syrie",code:"SY",lat:33.5138,lng:36.2765},{name:"Tadjikistan",code:"TJ",lat:38.5598,lng:68.7870},
+    {name:"Taïwan",code:"TW",lat:25.0330,lng:121.5654},{name:"Tanzanie",code:"TZ",lat:-6.1630,lng:35.7516},
+    {name:"Tchad",code:"TD",lat:12.1348,lng:15.0557},{name:"Thaïlande",code:"TH",lat:13.7563,lng:100.5018},
+    {name:"Timor oriental",code:"TL",lat:-8.5569,lng:125.5603},{name:"Togo",code:"TG",lat:6.1725,lng:1.2314},
+    {name:"Tonga",code:"TO",lat:-21.1789,lng:-175.1982},{name:"Trinité-et-Tobago",code:"TT",lat:10.6549,lng:-61.5019},
+    {name:"Tunisie",code:"TN",lat:36.8065,lng:10.1815},{name:"Turkménistan",code:"TM",lat:37.9601,lng:58.3261},
+    {name:"Turquie",code:"TR",lat:39.9334,lng:32.8597},{name:"Tuvalu",code:"TV",lat:-8.5211,lng:179.1983},
+    {name:"Ukraine",code:"UA",lat:50.4501,lng:30.5234},{name:"Uruguay",code:"UY",lat:-34.9011,lng:-56.1645},
+    {name:"Vanuatu",code:"VU",lat:-17.7333,lng:168.3273},{name:"Vatican",code:"VA",lat:41.9029,lng:12.4534},
+    {name:"Venezuela",code:"VE",lat:10.4806,lng:-66.9036},{name:"Viêt Nam",code:"VN",lat:21.0278,lng:105.8342},
+    {name:"Yémen",code:"YE",lat:15.3694,lng:44.1910},{name:"Zambie",code:"ZM",lat:-15.3875,lng:28.3228},
+    {name:"Zimbabwe",code:"ZW",lat:-17.8292,lng:31.0522}
+  ].sort((a,b)=> a.name.localeCompare(b.name, 'fr'));
+
+  // Correspondance code ISO 3166-1 alpha-2 (utilisé dans COUNTRIES) -> alpha-3 (utilisé par le fond de carte)
+  const ISO2_TO_3 = {AF:'AFG',ZA:'ZAF',AL:'ALB',DZ:'DZA',DE:'DEU',AD:'AND',AO:'AGO',AG:'ATG',SA:'SAU',AR:'ARG',
+    AM:'ARM',AU:'AUS',AT:'AUT',AZ:'AZE',BS:'BHS',BH:'BHR',BD:'BGD',BB:'BRB',BE:'BEL',BZ:'BLZ',
+    BJ:'BEN',BT:'BTN',BY:'BLR',MM:'MMR',BO:'BOL',BA:'BIH',BW:'BWA',BR:'BRA',BN:'BRN',BG:'BGR',
+    BF:'BFA',BI:'BDI',KH:'KHM',CM:'CMR',CA:'CAN',CV:'CPV',CL:'CHL',CN:'CHN',CY:'CYP',CO:'COL',
+    KM:'COM',CG:'COG',CD:'COD',KP:'PRK',KR:'KOR',CR:'CRI',CI:'CIV',HR:'HRV',CU:'CUB',DK:'DNK',
+    DJ:'DJI',DM:'DMA',EG:'EGY',AE:'ARE',EC:'ECU',ER:'ERI',ES:'ESP',EE:'EST',SZ:'SWZ',US:'USA',
+    ET:'ETH',FJ:'FJI',FI:'FIN',FR:'FRA',GA:'GAB',GM:'GMB',GE:'GEO',GH:'GHA',GR:'GRC',GD:'GRD',
+    GT:'GTM',GN:'GIN',GW:'GNB',GQ:'GNQ',GY:'GUY',HT:'HTI',HN:'HND',HU:'HUN',IN:'IND',ID:'IDN',
+    IQ:'IRQ',IR:'IRN',IE:'IRL',IS:'ISL',IL:'ISR',IT:'ITA',JM:'JAM',JP:'JPN',JO:'JOR',KZ:'KAZ',
+    KE:'KEN',KG:'KGZ',KI:'KIR',XK:'XKX',KW:'KWT',LA:'LAO',LS:'LSO',LV:'LVA',LB:'LBN',LR:'LBR',
+    LY:'LBY',LI:'LIE',LT:'LTU',LU:'LUX',MK:'MKD',MG:'MDG',MY:'MYS',MW:'MWI',MV:'MDV',ML:'MLI',
+    MT:'MLT',MA:'MAR',MH:'MHL',MU:'MUS',MR:'MRT',MX:'MEX',FM:'FSM',MD:'MDA',MC:'MCO',MN:'MNG',
+    ME:'MNE',MZ:'MOZ',NA:'NAM',NR:'NRU',NP:'NPL',NI:'NIC',NE:'NER',NG:'NGA',NO:'NOR',NZ:'NZL',
+    OM:'OMN',UG:'UGA',UZ:'UZB',PK:'PAK',PW:'PLW',PS:'PSE',PA:'PAN',PG:'PNG',PY:'PRY',NL:'NLD',
+    PE:'PER',PH:'PHL',PL:'POL',PT:'PRT',QA:'QAT',CF:'CAF',DO:'DOM',CZ:'CZE',RO:'ROU',GB:'GBR',
+    RU:'RUS',RW:'RWA',KN:'KNA',LC:'LCA',SM:'SMR',VC:'VCT',SB:'SLB',SV:'SLV',WS:'WSM',ST:'STP',
+    SN:'SEN',RS:'SRB',SC:'SYC',SL:'SLE',SG:'SGP',SK:'SVK',SI:'SVN',SO:'SOM',SD:'SDN',SS:'SSD',
+    LK:'LKA',SE:'SWE',CH:'CHE',SR:'SUR',SY:'SYR',TJ:'TJK',TW:'TWN',TZ:'TZA',TD:'TCD',TH:'THA',
+    TL:'TLS',TG:'TGO',TO:'TON',TT:'TTO',TN:'TUN',TM:'TKM',TR:'TUR',TV:'TUV',UA:'UKR',UY:'URY',
+    VU:'VUT',VA:'VAT',VE:'VEN',VN:'VNM',YE:'YEM',ZM:'ZMB',ZW:'ZWE'};
+
+  const ISO3_TO_COUNTRY = {};
+  COUNTRIES.forEach(c=>{ const iso3 = ISO2_TO_3[c.code]; if(iso3) ISO3_TO_COUNTRY[iso3] = c; });
+
+  // Windows n'a pas de police avec les drapeaux emoji : on utilise de vraies images (flagcdn.com),
+  // fiable sur tous les systèmes.
+  function flagImgHtml(code, widthPx){
+    if(!code || code.length!==2) return '';
+    const w = widthPx || 20;
+    const h = Math.round(w * 0.75);
+    return `<img src="https://flagcdn.com/w40/${code.toLowerCase()}.png" alt="" width="${w}" height="${h}" style="width:${w}px;height:${h}px;object-fit:cover;border-radius:2px;vertical-align:middle;display:inline-block;">`;
+  }
+
+  let selectedTravelCountry = null;
+
+  function renderCountryDropdown(query){
+    const dropdown = document.getElementById('travel-country-dropdown');
+    const q = query.trim().toLowerCase();
+    const filtered = q ? COUNTRIES.filter(c=> c.name.toLowerCase().includes(q)) : COUNTRIES;
+    if(!filtered.length){
+      dropdown.innerHTML = '<div class="country-combobox-empty">Aucun pays trouvé</div>';
+      return;
+    }
+    dropdown.innerHTML = filtered.map(c=>`
+      <div class="country-combobox-option" data-name="${escapeHtml(c.name)}">
+        ${flagImgHtml(c.code, 20)}${escapeHtml(c.name)}
+      </div>
+    `).join('');
+  }
+
+  function selectTravelCountry(name){
+    const country = COUNTRIES.find(c=>c.name===name);
+    if(!country) return;
+    selectedTravelCountry = country;
+    const input = document.getElementById('travel-country-input');
+    input.value = country.name; // un champ texte ne peut pas afficher d'image, le drapeau reste visible dans la liste/l'historique
+    document.getElementById('travel-country-dropdown').style.display = 'none';
+  }
+
+  function populateCountrySelect(){
+    const input = document.getElementById('travel-country-input');
+    const dropdown = document.getElementById('travel-country-dropdown');
+    input.addEventListener('focus', ()=>{
+      renderCountryDropdown('');
+      dropdown.style.display = 'block';
+    });
+    input.addEventListener('input', ()=>{
+      selectedTravelCountry = null;
+      renderCountryDropdown(input.value);
+      dropdown.style.display = 'block';
+    });
+    dropdown.addEventListener('mousedown', (e)=>{
+      const opt = e.target.closest('.country-combobox-option');
+      if(!opt) return;
+      selectTravelCountry(opt.dataset.name);
+    });
+    document.addEventListener('click', (e)=>{
+      if(!e.target.closest('.country-combobox')) dropdown.style.display = 'none';
+    });
+  }
+
+  let travelMap = null;
+  let travelMarkersLayer = null;
+  let travelBordersLayer = null;
+  let worldGeoJson = null;
+
+  function initTravelMap(){
+    if(travelMap){
+      setTimeout(()=>travelMap.invalidateSize(), 60);
+      return;
+    }
+    if(typeof L === 'undefined') return; // Leaflet pas encore chargé
+    travelMap = L.map('travel-map', {
+      worldCopyJump:false,
+      minZoom:1,
+      maxZoom:6,
+      maxBounds:[[-85,-180],[85,180]],
+      maxBoundsViscosity:1.0,
+      attributionControl:false
+    }).setView([20,10], 2);
+    travelMarkersLayer = L.layerGroup().addTo(travelMap);
+    loadWorldBorders();
+    setTimeout(()=>travelMap.invalidateSize(), 60);
+  }
+
+  async function loadWorldBorders(){
+    if(!worldGeoJson){
+      try{
+        const res = await fetch('https://cdn.jsdelivr.net/gh/johan/world.geo.json@master/countries.geo.json');
+        worldGeoJson = await res.json();
+      }catch(e){
+        console.error('Impossible de charger le fond de carte', e);
+        return;
+      }
+    }
+    renderCountryBorders();
+    renderTravelMarkers();
+  }
+
+  function renderCountryBorders(){
+    if(!travelMap || !worldGeoJson) return;
+    if(travelBordersLayer){ travelMap.removeLayer(travelBordersLayer); }
+    const visited = new Set(state.travels.map(t=> ISO2_TO_3[t.code]).filter(Boolean));
+    travelBordersLayer = L.geoJSON(worldGeoJson, {
+      style: feature => {
+        const isVisited = visited.has(feature.id);
+        return {
+          fillColor: isVisited ? '#16A34A' : '#FFFFFF',
+          fillOpacity: isVisited ? 0.85 : 1,
+          color: '#E5E7EB',
+          weight: 1
+        };
+      },
+      onEachFeature: (feature, layer) => {
+        const info = ISO3_TO_COUNTRY[feature.id];
+        const name = info ? info.name : ((feature.properties && feature.properties.name) || '');
+        if(name) layer.bindTooltip(name, {sticky:true, direction:'top', className:'country-tooltip'});
+        layer.on('mouseover', ()=> layer.setStyle({weight:2, color:'#16181D'}));
+        layer.on('mouseout', ()=> travelBordersLayer.resetStyle(layer));
+        if(info){
+          layer.on('click', ()=>{
+            selectTravelCountry(info.name);
+            document.getElementById('travel-city-input').focus();
+          });
+        }
+      }
+    }).addTo(travelMap);
+  }
+
+  function renderTravelMarkers(){
+    if(!travelMarkersLayer) return;
+    travelMarkersLayer.clearLayers();
+    const byCountry = {};
+    state.travels.forEach(t=>{
+      byCountry[t.country] = byCountry[t.country] || {code:t.code, lat:t.lat, lng:t.lng, visits:[]};
+      byCountry[t.country].visits.push(t);
+    });
+    Object.keys(byCountry).forEach(countryName=>{
+      const g = byCountry[countryName];
+      const icon = L.divIcon({
+        html: `<div class="travel-flag-icon">${flagImgHtml(g.code, 26)}</div>`,
+        className: '',
+        iconSize: [28,28],
+        iconAnchor: [14,14]
+      });
+      const popupHtml = `<b>${escapeHtml(countryName)}</b><br>` + g.visits
+        .sort((a,b)=> (b.date||'').localeCompare(a.date||''))
+        .map(v => `${v.city?escapeHtml(v.city)+' — ':''}${v.date?formatDateLong(v.date):'date inconnue'}`)
+        .join('<br>');
+      L.marker([g.lat, g.lng], {icon}).addTo(travelMarkersLayer).bindPopup(popupHtml);
+    });
+  }
+
+  function renderTravels(){
+    document.getElementById('travel-count').textContent = state.travels.length ? `(${state.travels.length})` : '';
+    const container = document.getElementById('travels-container');
+    if(!state.travels.length){
+      container.innerHTML = '<p class="empty-state">Aucun pays enregistré pour l\'instant — ajoute ton premier voyage ci-dessus.</p>';
+    } else {
+      const sorted = [...state.travels].sort((a,b)=> (b.date||'').localeCompare(a.date||''));
+      container.innerHTML = sorted.map(t=>`
+        <div class="travel-row">
+          <span class="travel-flag">${flagImgHtml(t.code, 24)}</span>
+          <div class="mini-text">
+            <div class="mini-title">${escapeHtml(t.country)}${t.city?' — '+escapeHtml(t.city):''}</div>
+            ${t.date?`<div class="mini-sub">${formatDateLong(t.date)}</div>`:'<div class="mini-sub">Date non précisée</div>'}
+          </div>
+          <button class="task-del" data-action="del-travel" data-id="${t.id}">✕</button>
+        </div>
+      `).join('');
+    }
+    renderCountryBorders();
+    renderTravelMarkers();
+    renderToday();
+  }
+
+  document.getElementById('travels-container').addEventListener('click', async (e)=>{
+    const btn = e.target.closest('[data-action="del-travel"]');
+    if(!btn) return;
+    state.travels = state.travels.filter(t=>t.id!==btn.dataset.id);
+    await save('travels', state.travels);
+    renderTravels();
+  });
+
+  document.getElementById('travel-add-btn').addEventListener('click', async ()=>{
+    const countryInput = document.getElementById('travel-country-input');
+    const cityInput = document.getElementById('travel-city-input');
+    const dateInput = document.getElementById('travel-date-input');
+    const country = selectedTravelCountry;
+    if(!country) return;
+    state.travels.push({
+      id: uid(),
+      country: country.name,
+      code: country.code,
+      lat: country.lat,
+      lng: country.lng,
+      city: cityInput.value.trim(),
+      date: dateInput.value || null
+    });
+    countryInput.value = '';
+    selectedTravelCountry = null;
+    cityInput.value = '';
+    dateInput.value = '';
+    await save('travels', state.travels);
+    renderTravels();
+  });
+
+  // ---------------- Budget ----------------
+  function formatEUR(n){
+    return (n||0).toLocaleString('fr-FR', {style:'currency', currency:'EUR', maximumFractionDigits:2});
+  }
+
+  // Accepte "18 023,84", "18023,84" ou "18023.84" (espaces = milliers, virgule ou point = décimales)
+  function parseFrenchNumber(str){
+    if(!str) return 0;
+    const cleaned = String(str).trim().replace(/[\s ]/g,'').replace(',', '.');
+    const n = parseFloat(cleaned);
+    return isNaN(n) ? 0 : n;
+  }
+
+  const CATEGORY_COLORS = {
+    'Salaire':'#16A34A',
+    'Loyer':'#F2994A',
+    'Prélèvements':'#6366F1',
+    'Épargne':'#0EA5E9',
+    'Virement interne':'#D1D5DB',
+    'Dépense':'#DC2626',
+    'Autre':'#9CA3AF'
+  };
+  const ACCOUNT_COLORS = {LCL:'#16A34A', Revolut:'#F2994A', 'Livret A':'#0EA5E9'};
+  // Catégories qui ne représentent pas un vrai gain/dépense (juste de l'argent qui change de poche) :
+  // exclues des totaux entrées/sorties pour ne pas les compter en double.
+  const NON_FLOW_CATEGORIES = ['Épargne', 'Virement interne'];
+
+  function computeBudgetTotals(){
+    const ob = state.openingBalances || {};
+    const epargne = state.transactions.filter(t=>t.category==='Épargne').reduce((s,t)=>s+t.amount, 0);
+    const virementsInternes = state.transactions.filter(t=>t.category==='Virement interne').reduce((s,t)=>s+Math.abs(t.amount), 0);
+    const entrees = state.transactions.filter(t=>t.amount>0 && !NON_FLOW_CATEGORIES.includes(t.category)).reduce((s,t)=>s+t.amount, 0);
+    const sorties = state.transactions.filter(t=>t.amount<0 && !NON_FLOW_CATEGORIES.includes(t.category)).reduce((s,t)=>s+t.amount, 0);
+    const soldeLCL = (ob.LCL||0) + state.transactions.filter(t=>t.account==='LCL').reduce((s,t)=>s+t.amount, 0);
+    const soldeRevolut = (ob.Revolut||0) + state.transactions.filter(t=>t.account==='Revolut').reduce((s,t)=>s+t.amount, 0);
+    const soldeLivretA = (ob['Livret A']||0) + state.transactions.filter(t=>t.account==='Livret A').reduce((s,t)=>s+t.amount, 0);
+    const solde = soldeLCL + soldeRevolut + soldeLivretA;
+    return {solde, epargne, virementsInternes, entrees, sorties, soldeLCL, soldeRevolut, soldeLivretA};
+  }
+
+  function populateOpeningBalanceInputs(){
+    const ob = state.openingBalances || {};
+    document.getElementById('opening-lcl-input').value = ob.LCL ? toFrenchAmount(ob.LCL) : '';
+    document.getElementById('opening-revolut-input').value = ob.Revolut ? toFrenchAmount(ob.Revolut) : '';
+    document.getElementById('opening-livreta-input').value = ob['Livret A'] ? toFrenchAmount(ob['Livret A']) : '';
+  }
+
+  document.getElementById('opening-save-btn').addEventListener('click', async ()=>{
+    state.openingBalances = {
+      LCL: parseFrenchNumber(document.getElementById('opening-lcl-input').value),
+      Revolut: parseFrenchNumber(document.getElementById('opening-revolut-input').value),
+      'Livret A': parseFrenchNumber(document.getElementById('opening-livreta-input').value)
+    };
+    await save('openingBalances', state.openingBalances);
+    renderBudget();
+  });
+
+  // ---- Connexion bancaire en direct (Powens / Open Banking via le serveur local bank-sync-server) ----
+  // Chemins relatifs : l'appli doit être ouverte via ce même serveur (http://localhost:3000/carnet-de-bord.html)
+  // pour que la connexion bancaire ET la protection par mot de passe fonctionnent (basées sur un cookie de session).
+  const BANK_SYNC_BASE = '';
+  const APP_ACCOUNT_LABELS = ['LCL', 'Revolut', 'Livret A'];
+
+  // ---- Compte de l'application (identifiant / déconnexion) ----
+  async function refreshAuthAccount(){
+    const el = document.getElementById('settings-username');
+    if(!el) return;
+    try{
+      const res = await fetch('/api/me');
+      const data = await res.json();
+      el.textContent = data.username || '—';
+    }catch(e){
+      el.textContent = '—';
+    }
+  }
+  const logoutBtn = document.getElementById('logout-btn');
+  if(logoutBtn){
+    logoutBtn.addEventListener('click', async ()=>{
+      try{ await fetch('/api/logout', {method:'POST'}); } catch(e){}
+      window.location.href = '/login.html';
+    });
+  }
+
+  document.querySelectorAll('[data-connect]').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      const statusEl = document.getElementById('bank-sync-status');
+      statusEl.innerHTML = '<span class="spinner"></span> préparation de la connexion…';
+      try{
+        const res = await fetch(`${BANK_SYNC_BASE}/api/connect`);
+        const data = await res.json();
+        if(data.url){ window.location.href = data.url; }
+        else { statusEl.textContent = data.error || 'Impossible de démarrer la connexion.'; }
+      }catch(err){
+        statusEl.textContent = 'Serveur de connexion bancaire injoignable — lance bank-sync-server en local d\'abord.';
+      }
+    });
+  });
+
+  async function refreshBankAccountsList(){
+    const statusEl = document.getElementById('bank-sync-status');
+    const listEl = document.getElementById('bank-accounts-list');
+    try{
+      const res = await fetch(`${BANK_SYNC_BASE}/api/accounts`);
+      const data = await res.json();
+      if(data.error){ statusEl.textContent = data.error; return; }
+      const accounts = data.accounts || [];
+      if(!accounts.length){
+        listEl.innerHTML = '<p class="mini-empty">Aucun compte détecté pour l\'instant — connecte une banque ci-dessus.</p>';
+        statusEl.textContent = '';
+        return;
+      }
+      const mapping = state.bankAccountMapping || {};
+      listEl.innerHTML = accounts.map(a=>`
+        <div class="travel-row">
+          <div class="mini-text">
+            <div class="mini-title">${escapeHtml(a.name || 'Compte')}</div>
+            <div class="mini-sub">${a.iban ? escapeHtml(a.iban) + ' — ' : ''}${formatEUR(a.balance)}</div>
+          </div>
+          <select class="bank-account-map" data-account-id="${a.id}">
+            <option value="">Ignorer</option>
+            ${APP_ACCOUNT_LABELS.map(l=>`<option value="${l}" ${mapping[a.id]===l?'selected':''}>${l}</option>`).join('')}
+          </select>
+        </div>
+      `).join('');
+      statusEl.textContent = `${accounts.length} compte(s) trouvé(s) chez ta/tes banque(s) connectée(s).`;
+
+      listEl.querySelectorAll('.bank-account-map').forEach(sel=>{
+        sel.addEventListener('change', async ()=>{
+          const accountId = sel.dataset.accountId;
+          const label = sel.value;
+          state.bankAccountMapping = state.bankAccountMapping || {};
+          if(label){
+            state.bankAccountMapping[accountId] = label;
+            const account = accounts.find(a=> String(a.id)===String(accountId));
+            state.openingBalances = state.openingBalances || {};
+            state.openingBalances[label] = account.balance;
+            populateOpeningBalanceInputs();
+          } else {
+            delete state.bankAccountMapping[accountId];
+          }
+          await save('bankAccountMapping', state.bankAccountMapping);
+          await save('openingBalances', state.openingBalances);
+          renderBudget();
+        });
+      });
+    }catch(err){
+      statusEl.textContent = 'Serveur de connexion bancaire injoignable — lance bank-sync-server en local pour utiliser cette fonction.';
+    }
+  }
+  document.getElementById('bank-refresh-accounts-btn').addEventListener('click', refreshBankAccountsList);
+
+  let currentSign = 1;
+  function updateSignUI(){
+    document.getElementById('sign-plus-btn').classList.toggle('active', currentSign===1);
+    document.getElementById('sign-minus-btn').classList.toggle('active', currentSign===-1);
+  }
+  document.getElementById('sign-plus-btn').addEventListener('click', ()=>{ currentSign=1; updateSignUI(); });
+  document.getElementById('sign-minus-btn').addEventListener('click', ()=>{ currentSign=-1; updateSignUI(); });
+
+  // ---- Camemberts ----
+  function buildConicGradient(entries){
+    const total = entries.reduce((s,e)=>s+e.value, 0);
+    if(total<=0) return null;
+    let acc = 0;
+    const stops = entries.map(e=>{
+      const start = (acc/total*100).toFixed(2);
+      acc += e.value;
+      const end = (acc/total*100).toFixed(2);
+      return `${e.color} ${start}% ${end}%`;
+    });
+    return {gradient:`conic-gradient(${stops.join(',')})`, total};
+  }
+
+  function renderPieCard(containerId, entries){
+    const container = document.getElementById(containerId);
+    const nonZero = entries.filter(e=>e.value>0);
+    if(!nonZero.length){
+      container.innerHTML = '<p class="pie-empty">Pas encore assez de dépenses pour ce graphique.</p>';
+      return;
+    }
+    const built = buildConicGradient(nonZero);
+    container.innerHTML = `
+      <div class="pie" style="background:${built.gradient}"></div>
+      <div class="pie-legend">
+        ${nonZero.map(e=>`
+          <div class="pie-legend-row">
+            <span class="pie-dot" style="background:${e.color}"></span>
+            <span>${escapeHtml(e.label)}</span>
+            <span class="pie-pct">${Math.round(e.value/built.total*100)}%</span>
+            <span class="pie-amount">${formatEUR(e.value)}</span>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderBudgetCharts(){
+    // Les virements internes (entre tes propres comptes) sont exclus des camemberts :
+    // ce n'est pas une vraie dépense, juste de l'argent qui change de poche.
+    const realExpenses = state.transactions.filter(t=> t.amount<0 && t.category!=='Virement interne');
+
+    const byCategory = {};
+    realExpenses.forEach(t=>{
+      byCategory[t.category] = (byCategory[t.category]||0) + Math.abs(t.amount);
+    });
+    renderPieCard('pie-category', Object.keys(byCategory).map(cat=>({
+      label:cat, value:byCategory[cat], color:CATEGORY_COLORS[cat] || '#9CA3AF'
+    })));
+
+    const byAccount = {};
+    realExpenses.forEach(t=>{
+      const acc = t.account || 'Autre';
+      byAccount[acc] = (byAccount[acc]||0) + Math.abs(t.amount);
+    });
+    renderPieCard('pie-account', Object.keys(byAccount).map(acc=>({
+      label:acc, value:byAccount[acc], color:ACCOUNT_COLORS[acc] || '#9CA3AF'
+    })));
+  }
+
+  // ---- Historique / filtre par compte ----
+  let txnAccountFilter = 'Tous';
+  document.getElementById('txn-account-filter').addEventListener('click', e=>{
+    const btn = e.target.closest('button[data-account]');
+    if(!btn) return;
+    txnAccountFilter = btn.dataset.account;
+    document.querySelectorAll('#txn-account-filter button').forEach(b=> b.classList.toggle('active', b===btn));
+    renderBudget();
+  });
+
+  function renderBudget(){
+    const totals = computeBudgetTotals();
+    const soldeEl = document.getElementById('budget-solde');
+    soldeEl.textContent = formatEUR(totals.solde);
+    soldeEl.className = 'budget-stat-value ' + (totals.solde>=0 ? 'positive' : 'negative');
+    document.getElementById('budget-epargne').textContent = formatEUR(totals.epargne);
+    document.getElementById('budget-entrees').textContent = formatEUR(totals.entrees);
+    document.getElementById('budget-sorties').textContent = formatEUR(totals.sorties);
+
+    const lclEl = document.getElementById('budget-solde-lcl');
+    lclEl.textContent = formatEUR(totals.soldeLCL);
+    lclEl.className = 'budget-stat-value ' + (totals.soldeLCL>=0 ? 'positive' : 'negative');
+    const revEl = document.getElementById('budget-solde-revolut');
+    revEl.textContent = formatEUR(totals.soldeRevolut);
+    revEl.className = 'budget-stat-value ' + (totals.soldeRevolut>=0 ? 'positive' : 'negative');
+    const livretEl = document.getElementById('budget-solde-livreta');
+    livretEl.textContent = formatEUR(totals.soldeLivretA);
+    livretEl.className = 'budget-stat-value ' + (totals.soldeLivretA>=0 ? 'positive' : 'negative');
+
+    renderBudgetCharts();
+
+    const filtered = txnAccountFilter==='Tous' ? state.transactions : state.transactions.filter(t=>t.account===txnAccountFilter);
+    document.getElementById('txn-count').textContent = filtered.length ? `(${filtered.length})` : '';
+    const container = document.getElementById('txns-container');
+    if(!filtered.length){
+      container.innerHTML = '<p class="empty-state">Aucune opération enregistrée pour l\'instant — ajoute ton premier salaire ou ta première dépense ci-dessus.</p>';
+    } else {
+      const sorted = [...filtered].sort((a,b)=> (b.date||'').localeCompare(a.date||''));
+      container.innerHTML = sorted.map(t=>`
+        <div class="txn-row">
+          <span class="txn-account" style="background:${ACCOUNT_COLORS[t.account] || '#9CA3AF'}">${escapeHtml(t.account || '—')}</span>
+          <span class="txn-cat">${escapeHtml(t.category)}</span>
+          <span class="txn-label">${escapeHtml(t.label || '—')}</span>
+          ${t.date?`<span class="txn-date">${formatDateShort(t.date)}</span>`:''}
+          <span class="txn-amount ${t.amount>=0?'positive':'negative'}">${t.amount>=0?'+':''}${formatEUR(t.amount)}</span>
+          <button class="task-del" data-action="del-txn" data-id="${t.id}">✕</button>
+        </div>
+      `).join('');
+    }
+    renderToday();
+  }
+
+  document.getElementById('txns-container').addEventListener('click', async (e)=>{
+    const btn = e.target.closest('[data-action="del-txn"]');
+    if(!btn) return;
+    state.transactions = state.transactions.filter(t=>t.id!==btn.dataset.id);
+    await save('transactions', state.transactions);
+    renderBudget();
+  });
+
+  document.getElementById('txn-add-btn').addEventListener('click', async ()=>{
+    const amountInput = document.getElementById('txn-amount-input');
+    const raw = parseFloat(amountInput.value);
+    if(isNaN(raw) || raw === 0) return;
+    const amount = Math.abs(raw) * currentSign;
+    const label = document.getElementById('txn-label-input').value.trim();
+    const category = document.getElementById('txn-category-input').value;
+    const account = document.getElementById('txn-account-input').value;
+    const date = document.getElementById('txn-date-input').value || new Date().toISOString().slice(0,10);
+    state.transactions.push({id: uid(), amount, label, category, account, date});
+    amountInput.value = '';
+    document.getElementById('txn-label-input').value = '';
+    document.getElementById('txn-date-input').value = '';
+    await save('transactions', state.transactions);
+    renderBudget();
+  });
+
+  // ---- Import de relevé (plusieurs lignes collées d'un coup) ----
+  function normalizeDate(s){
+    s = (s||'').trim();
+    let m = s.match(/^(\d{2})\/(\d{2})\/(\d{2,4})$/);
+    if(m){
+      let [, d, mo, y] = m;
+      if(y.length===2) y = '20'+y;
+      return `${y}-${mo}-${d}`;
+    }
+    m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if(m) return s;
+    return null;
+  }
+
+  function normalizeAmount(s){
+    let str = (s||'').trim().replace('€','').trim();
+    let neg = false;
+    if(str.endsWith('-')){ neg = true; str = str.slice(0,-1).trim(); }
+    if(str.startsWith('-')){ neg = true; str = str.slice(1).trim(); }
+    if(str.startsWith('+')) str = str.slice(1).trim();
+    str = str.replace(/\s/g,'').replace(/\.(?=\d{3}(\D|$))/g,'').replace(',', '.');
+    const n = parseFloat(str);
+    if(isNaN(n)) return null;
+    return neg ? -Math.abs(n) : n;
+  }
+
+  // Nom du titulaire du compte : un virement libellé à son propre nom est presque toujours
+  // un mouvement entre ses propres comptes (LCL <-> Revolut <-> Livret A), pas un vrai revenu/dépense.
+  const OWN_NAME_RE = /YANISSE|BELAOUINAT/;
+
+  function guessCategory(label, amount){
+    const l = (label||'').toUpperCase();
+    if(OWN_NAME_RE.test(l)) return 'Virement interne';
+    if(/LOYER/.test(l)) return 'Loyer';
+    if(/PRLV|PRELEV|PRÉLÈV/.test(l)) return 'Prélèvements';
+    if(/EPARGNE|ÉPARGNE|LIVRET/.test(l)) return 'Épargne';
+    if(/SALAIRE|PAIE|HIGH ?COM|UBER/.test(l)) return 'Salaire';
+    return amount >= 0 ? 'Autre' : 'Dépense';
+  }
+
+  const DATE_RE = /\d{2}\/\d{2}\/\d{2,4}|\d{4}-\d{2}-\d{2}/;
+  const AMOUNT_RE = /-?\s?\d[\d\s]*[.,]\d{2}\s*-?\s*€?\s*$/;
+
+  function parseStatementLine(line){
+    if(!line || !line.trim()) return null;
+    const cols = line.split('\t').map(s=>s.trim()).filter(s=>s.length);
+    let dateStr, amountStr, label;
+    if(cols.length >= 2){
+      const dateIdx = cols.findIndex(c=> DATE_RE.test(c));
+      let amountIdx = -1;
+      for(let i=cols.length-1;i>=0;i--){ if(AMOUNT_RE.test(cols[i])){ amountIdx = i; break; } }
+      if(dateIdx!==-1 && amountIdx!==-1 && amountIdx!==dateIdx){
+        dateStr = cols[dateIdx];
+        amountStr = cols[amountIdx];
+        label = cols.filter((_,i)=> i!==dateIdx && i!==amountIdx).join(' ').trim();
+      }
+    }
+    if(!dateStr || !amountStr){
+      const dm = line.match(DATE_RE);
+      const am = line.match(AMOUNT_RE);
+      if(!dm || !am) return null;
+      dateStr = dm[0];
+      amountStr = am[0];
+      label = line.slice(0, am.index).replace(dateStr, '').trim();
+    }
+    const date = normalizeDate(dateStr);
+    const amount = normalizeAmount(amountStr);
+    if(date===null || amount===null) return null;
+    return {date, label: label || '(sans libellé)', amount};
+  }
+
+  // ---- Lecture d'un PDF de relevé ----
+  if(typeof pdfjsLib !== 'undefined'){
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  }
+
+  // Regroupe le texte du PDF en lignes (items positionnés sur une même hauteur = une ligne du tableau)
+  async function extractPdfRows(file){
+    if(typeof pdfjsLib === 'undefined') throw new Error('lecteur PDF indisponible');
+    const buf = await file.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({data: buf}).promise;
+    const rows = [];
+    let fullText = '';
+    for(let p=1; p<=pdf.numPages; p++){
+      const page = await pdf.getPage(p);
+      const content = await page.getTextContent();
+      const items = content.items
+        .map(it=>({str: it.str, x: it.transform[4], y: it.transform[5]}))
+        .filter(it=> it.str.trim().length);
+      fullText += ' ' + items.map(it=>it.str).join(' ');
+      items.sort((a,b)=> b.y - a.y || a.x - b.x);
+      let current = null;
+      items.forEach(it=>{
+        if(!current || Math.abs(current.y - it.y) > 3){
+          current = {y: it.y, items: []};
+          rows.push(current);
+        }
+        current.items.push(it);
+      });
+    }
+    rows.forEach(r=> r.items.sort((a,b)=> a.x - b.x));
+    return {rows, fullText};
+  }
+
+  const SHORT_DATE_RE = /^(\d{2})\.(\d{2})$/;
+  const VALEUR_DATE_RE = /^\d{2}\.\d{2}\.\d{2}$/;
+
+  // Un relevé indique sa période ("du 06.06.2026 au 07.07.2026") : ça permet de retrouver
+  // l'année de chaque date courte du tableau (ex: "08.06" -> 2026-06-08).
+  function buildMonthYearMap(fullText){
+    const m = fullText.match(/du\s+(\d{2})\.(\d{2})\.(\d{4})\s+au\s+(\d{2})\.(\d{2})\.(\d{4})/i);
+    const map = {};
+    if(!m) return map;
+    let mo = parseInt(m[2],10), yr = parseInt(m[3],10);
+    const em = parseInt(m[5],10), ey = parseInt(m[6],10);
+    let guard = 0;
+    while(guard++ < 36){
+      map[mo] = yr;
+      if(mo===em && yr===ey) break;
+      mo++;
+      if(mo>12){ mo=1; yr++; }
+    }
+    return map;
+  }
+
+  // Reconnaît le tableau "DATE | LIBELLE | VALEUR | DEBIT | CREDIT" typique d'un relevé LCL :
+  // repère la position (x) des colonnes DEBIT/CREDIT sur la ligne d'en-tête, puis classe chaque
+  // montant en dépense ou recette selon la colonne dont il est le plus proche.
+  function extractTableTransactions(rows, fullText){
+    const monthYearMap = buildMonthYearMap(fullText);
+    let debitX = null, creditX = null;
+    let openingBalanceHint = null;
+    const out = [];
+    rows.forEach(row=>{
+      const items = row.items;
+      if(!items.length) return;
+      const upper = items.map(it=> it.str.trim().toUpperCase());
+      const debitIdx = upper.indexOf('DEBIT');
+      const creditIdx = upper.indexOf('CREDIT');
+      if(upper.includes('DATE') && upper.includes('LIBELLE') && debitIdx!==-1 && creditIdx!==-1){
+        debitX = items[debitIdx].x;
+        creditX = items[creditIdx].x;
+        return;
+      }
+      const first = items[0].str.trim();
+      const dm = first.match(SHORT_DATE_RE);
+      if(!dm) return; // pas une ligne d'opération (suite de libellé, footer, etc.)
+      const month = parseInt(dm[2],10);
+      const year = monthYearMap[month] || new Date().getFullYear();
+      const date = `${year}-${dm[2]}-${dm[1]}`;
+
+      const rest = items.slice(1);
+      const valeurIdx = rest.findIndex(it=> VALEUR_DATE_RE.test(it.str.trim()));
+      const labelItems = valeurIdx!==-1 ? rest.slice(0, valeurIdx) : rest.slice(0, -1);
+      const amountItems = valeurIdx!==-1 ? rest.slice(valeurIdx+1) : rest.slice(-1);
+
+      const label = labelItems.map(it=>it.str.trim()).filter(Boolean).join(' ').replace(/\s+/g,' ').trim();
+      if(!label) return;
+
+      const amountRegionText = amountItems.map(it=>it.str).join(' ');
+      const amtMatch = amountRegionText.match(/\d[\d\s]*,\d{2}/);
+      if(!amtMatch) return;
+      const val = parseFloat(amtMatch[0].replace(/\s/g,'').replace(',', '.'));
+      if(isNaN(val)) return;
+
+      // "Ancien solde" / solde d'ouverture : pas une opération, mais utile pour le solde de départ
+      if(/ANCIEN SOLDE|SOLDE (DE )?(DEBUT|D.BUT|OUVERTURE|INITIAL)/i.test(label)){
+        if(openingBalanceHint===null) openingBalanceHint = val;
+        return;
+      }
+      if(/SOLDE|TOTAUX/i.test(label)) return; // autres lignes de solde/total, pas des opérations
+
+      const firstNumericItem = amountItems.find(it=> /\d/.test(it.str));
+      let signed;
+      if(firstNumericItem && debitX!==null && creditX!==null){
+        signed = Math.abs(firstNumericItem.x - creditX) < Math.abs(firstNumericItem.x - debitX) ? val : -val;
+      } else {
+        signed = -val; // en-tête non détecté : on suppose une dépense par défaut
+      }
+      out.push({date, label, amount: signed});
+    });
+    return {transactions: out, openingBalanceHint};
+  }
+
+  function toFrenchAmount(n){
+    return (n<0 ? '-' : '') + Math.abs(n).toFixed(2).replace('.', ',');
+  }
+
+  document.getElementById('import-pdf-input').addEventListener('change', async (e)=>{
+    const file = e.target.files[0];
+    const status = document.getElementById('import-pdf-status');
+    if(!file) return;
+    status.innerHTML = '<span class="spinner"></span> lecture du PDF…';
+    try{
+      const {rows, fullText} = await extractPdfRows(file);
+      const {transactions: tableTx, openingBalanceHint} = extractTableTransactions(rows, fullText);
+      if(tableTx.length){
+        importDraft = tableTx.map(t=>({
+          id: uid(),
+          date: t.date,
+          label: t.label,
+          amount: t.amount,
+          category: guessCategory(t.label, t.amount),
+          include: true
+        }));
+        document.getElementById('import-textarea').value = tableTx.map(t=> `${t.date}\t${t.label}\t${toFrenchAmount(t.amount)}`).join('\n');
+        renderImportPreview();
+        let msg = `${tableTx.length} opération(s) détectée(s) automatiquement — vérifie les montants et catégories avant d'importer.`;
+        if(openingBalanceHint!==null){
+          msg += ` Solde de départ trouvé dans le PDF : ${formatEUR(openingBalanceHint)} — pense à le renseigner dans "Soldes de départ" en haut si ce n'est pas déjà fait.`;
+        }
+        status.textContent = msg;
+      } else {
+        document.getElementById('import-textarea').value = rows.map(r=> r.items.map(it=>it.str).join('\t')).join('\n');
+        status.textContent = 'Tableau non reconnu automatiquement — texte brut collé, corrige si besoin puis clique "Analyser le texte".';
+        document.getElementById('import-parse-btn').click();
+      }
+    }catch(err){
+      status.textContent = 'Impossible de lire ce PDF (' + err.message + '). Copie-colle le texte du relevé dans la zone ci-dessous à la place.';
+    }
+  });
+
+  let importDraft = [];
+
+  document.getElementById('import-parse-btn').addEventListener('click', ()=>{
+    const text = document.getElementById('import-textarea').value;
+    importDraft = text.split('\n').map(parseStatementLine).filter(Boolean).map(row=>({
+      id: uid(),
+      date: row.date,
+      label: row.label,
+      amount: row.amount,
+      category: guessCategory(row.label, row.amount),
+      include: true
+    }));
+    renderImportPreview();
+  });
+
+  function renderImportPreview(){
+    const container = document.getElementById('import-preview');
+    if(!importDraft.length){
+      container.innerHTML = '<p class="empty-state">Aucune opération reconnue — vérifie que chaque ligne contient une date et un montant.</p>';
+      return;
+    }
+    const categories = ['Salaire','Loyer','Prélèvements','Épargne','Virement interne','Dépense','Autre'];
+    container.innerHTML = `
+      <p class="fetch-status" style="margin:10px 0;">${importDraft.length} opération(s) détectée(s) — vérifie avant d'importer.</p>
+      <div id="import-rows">
+        ${importDraft.map(row=>`
+          <div class="import-row" data-id="${row.id}">
+            <input type="checkbox" class="import-include" data-id="${row.id}" ${row.include?'checked':''}>
+            <input type="date" class="import-date" data-id="${row.id}" value="${row.date}">
+            <input type="text" class="import-label" data-id="${row.id}" value="${escapeHtml(row.label)}">
+            <select class="import-category" data-id="${row.id}">
+              ${categories.map(c=>`<option value="${c}" ${c===row.category?'selected':''}>${c}</option>`).join('')}
+            </select>
+            <input type="number" step="0.01" class="import-amount" data-id="${row.id}" value="${row.amount}">
+          </div>
+        `).join('')}
+      </div>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button class="btn" id="import-confirm-btn">Importer ${importDraft.filter(r=>r.include).length} opération(s)</button>
+        <button class="btn ghost" id="import-cancel-btn">Annuler</button>
+      </div>
+    `;
+    container.querySelectorAll('.import-include').forEach(el=> el.addEventListener('change', e=>{
+      const row = importDraft.find(r=>r.id===e.target.dataset.id);
+      row.include = e.target.checked;
+      document.getElementById('import-confirm-btn').textContent = `Importer ${importDraft.filter(r=>r.include).length} opération(s)`;
+    }));
+    container.querySelectorAll('.import-date').forEach(el=> el.addEventListener('change', e=>{
+      const row = importDraft.find(r=>r.id===e.target.dataset.id);
+      row.date = e.target.value;
+    }));
+    container.querySelectorAll('.import-label').forEach(el=> el.addEventListener('input', e=>{
+      const row = importDraft.find(r=>r.id===e.target.dataset.id);
+      row.label = e.target.value;
+    }));
+    container.querySelectorAll('.import-category').forEach(el=> el.addEventListener('change', e=>{
+      const row = importDraft.find(r=>r.id===e.target.dataset.id);
+      row.category = e.target.value;
+    }));
+    container.querySelectorAll('.import-amount').forEach(el=> el.addEventListener('input', e=>{
+      const row = importDraft.find(r=>r.id===e.target.dataset.id);
+      row.amount = parseFloat(e.target.value) || 0;
+    }));
+    document.getElementById('import-confirm-btn').addEventListener('click', async ()=>{
+      const account = document.getElementById('import-account-input').value;
+      const toAdd = importDraft.filter(r=>r.include).map(r=>({
+        id: uid(), amount: r.amount, label: r.label, category: r.category, date: r.date, account
+      }));
+      state.transactions.push(...toAdd);
+      importDraft = [];
+      document.getElementById('import-textarea').value = '';
+      container.innerHTML = '';
+      await save('transactions', state.transactions);
+      renderBudget();
+    });
+    document.getElementById('import-cancel-btn').addEventListener('click', ()=>{
+      importDraft = [];
+      container.innerHTML = '';
+    });
+  }
+
+  // ---------------- Boot ----------------
+  async function boot(){
+    const [projects, tasks, notes, travels, transactions, openingBalances, bankAccountMapping, emailsCache, agendaCache] = await Promise.all([
+      load('projects', []),
+      load('tasks', []),
+      load('notes', []),
+      load('travels', []),
+      load('transactions', []),
+      load('openingBalances', {LCL:0, Revolut:0, 'Livret A':0}),
+      load('bankAccountMapping', {}),
+      load('cache_emails', null),
+      load('cache_agenda', null)
+    ]);
+    state.projects = projects;
+    state.tasks = tasks;
+    state.notes = notes;
+    state.travels = travels;
+    state.transactions = transactions;
+    state.bankAccountMapping = bankAccountMapping || {};
+    state.openingBalances = Object.assign({LCL:0, Revolut:0, 'Livret A':0}, openingBalances);
+    state.emailsCache = emailsCache;
+    state.agendaCache = agendaCache;
+
+    // Ne garder que du perso : on retire un éventuel projet "Boulot" déjà présent
+    const workIdx = state.projects.findIndex(p => p.name.trim().toLowerCase() === 'boulot');
+    if(workIdx !== -1){
+      const removed = state.projects.splice(workIdx, 1)[0];
+      state.tasks.forEach(t => { if(t.projectId === removed.id) t.projectId = null; });
+      await save('projects', state.projects);
+      await save('tasks', state.tasks);
+    }
+
+    if(!state.projects.length){
+      state.projects = [{id:uid(), name:'Perso', color:'#F2994A'}];
+      await save('projects', state.projects);
+    }
+
+    populateCountrySelect();
+    populateOpeningBalanceInputs();
+    refreshBankAccountsList();
+    renderToday();
+    renderTasks();
+    renderNotes();
+    renderEmails();
+    renderAgenda();
+    renderTravels();
+    renderBudget();
+  }
+  boot();
+
+})();
+</script>
+</body>
+</html>
