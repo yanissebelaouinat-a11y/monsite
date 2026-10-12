@@ -72,7 +72,6 @@ NAV = [
     ("videosurveillance.html", "Vidéosurveillance"),
     ("alarme.html", "Alarme"),
     ("informatique.html", "Informatique & réseau"),
-    ("packs.html", "Packs"),
 ]
 
 
@@ -203,7 +202,7 @@ def layout(filename, title, description, body, extra_head=""):
           <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
           <li><a href="alarme.html">Alarme</a></li>
           <li><a href="informatique.html">Informatique &amp; réseau</a></li>
-          <li><a href="packs.html">Packs caméras</a></li>
+          <li><a href="videosurveillance.html#packs">Packs caméras</a></li>
         </ul>
       </div>
       <div>
@@ -261,7 +260,7 @@ home = f"""
         <p class="lead">J'installe des caméras et des alarmes dans les commerces, bureaux, entrepôts et chantiers des Alpes-Maritimes. Je m'occupe aussi de l'informatique et du réseau de votre entreprise.</p>
         <div class="hero-cta">
           <a href="contact.html" class="btn btn-primary">Demander un devis gratuit</a>
-          <a href="packs.html" class="btn btn-ghost">Voir les packs caméras</a>
+          <a href="videosurveillance.html#packs" class="btn btn-ghost">Voir les packs caméras</a>
         </div>
       </div>
       <aside class="hero-info">
@@ -328,15 +327,15 @@ home = f"""
         <h2>Deux packs caméras</h2>
         <p>Caméras intérieures ou extérieures, enregistreur, pose et réglage sur votre téléphone. Le prix dépend de vos locaux : je l'établis après la visite.</p>
         <div class="hero-cta">
-          <a href="packs.html" class="btn btn-dark">Voir le détail des packs</a>
+          <a href="videosurveillance.html#packs" class="btn btn-dark">Voir le détail des packs</a>
         </div>
       </div>
       <div class="grid-2">
-        <a href="packs.html#pack-4" class="card pack">
+        <a href="videosurveillance.html#pack-4" class="card pack">
           <div class="pack-top"><span class="big">4</span><span class="unit">caméras</span></div>
           <p>+ enregistreur. Pour un commerce ou un petit bureau.</p>
         </a>
-        <a href="packs.html#pack-8" class="card pack featured">
+        <a href="videosurveillance.html#pack-8" class="card pack featured">
           <div class="pack-top"><span class="big">8</span><span class="unit">caméras</span></div>
           <p>+ enregistreur. Pour les grands locaux et les extérieurs.</p>
         </a>
@@ -382,6 +381,12 @@ home = f"""
 # =============================================================================
 # VIDÉOSURVEILLANCE
 # =============================================================================
+PACK_COMMON = ["Caméras intérieures et/ou extérieures, au choix",
+               "Enregistreur avec disque dur",
+               "Installation et câblage (ou pose sans fil)",
+               "Configuration sur votre smartphone",
+               "Prise en main et explications"]
+
 VIDEO_FAQ = [
     ("Puis-je voir mes caméras depuis mon téléphone ?",
      "Oui. Je configure l'application du fabricant sur votre smartphone (et celui de vos collaborateurs si besoin) pour voir le direct et les enregistrements à distance."),
@@ -416,7 +421,33 @@ video = page_hero(
     </div>
   </section>
 
-  <section class="alt">
+  <section class="alt" id="packs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Les packs caméras</h2>
+        <p>Deux packs complets pour équiper vos locaux rapidement. Le prix dépend de vos locaux : je l'établis après la visite, qui est gratuite. Au-delà de 8 caméras, ou pour ajouter une alarme, je fais une étude sur mesure.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card pack" id="pack-4">
+          <div class="pack-top"><span class="big">4</span><span class="unit">caméras + enregistreur</span></div>
+          <p>Idéal pour un commerce, un restaurant, un cabinet ou un petit bureau.</p>
+          <div class="grow">{checks(PACK_COMMON)}</div>
+          <div class="price">Tarif sur devis — visite gratuite</div>
+          <a href="contact.html?besoin=pack-4" class="btn btn-dark">Demander un devis Pack 4 {ic('arrow')}</a>
+        </div>
+        <div class="card pack featured" id="pack-8">
+          <span class="tag">Grands locaux</span>
+          <div class="pack-top"><span class="big">8</span><span class="unit">caméras + enregistreur</span></div>
+          <p>Pour les grands commerces, entrepôts, ateliers et sites avec extérieurs.</p>
+          <div class="grow">{checks(PACK_COMMON)}</div>
+          <div class="price">Tarif sur devis — visite gratuite</div>
+          <a href="contact.html?besoin=pack-8" class="btn btn-primary">Demander un devis Pack 8 {ic('arrow')}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="wrap">
       <div class="section-head">
         <h2>Au quotidien</h2>
@@ -466,7 +497,7 @@ video = page_hero(
     <div class="wrap split">
       <div >
         <h2>Maintenance</h2>
-        <p>Vérification des caméras et de l'enregistreur, nettoyage, mises à jour, remplacement d'un équipement défectueux, ajout de caméras . Je reste joignable après l'installation.</p>
+        <p>Vérification des caméras et de l'enregistreur, nettoyage, mises à jour, remplacement d'un équipement défectueux, ajout de caméras. Je reste joignable après l'installation.</p>
       </div>
       <div class="card">
         {checks(["Contrôle du bon fonctionnement des caméras", "Vérification des enregistrements et du disque", "Mises à jour de sécurité", "Ajout ou déplacement de caméras", "Intervention en cas de panne"])}
@@ -482,7 +513,7 @@ video = page_hero(
       {faq(VIDEO_FAQ)}
     </div>
   </section>
-{cta_band("Besoin de caméras pour vos locaux ?", "Regardez les packs 4 et 8 caméras, ou demandez une étude sur mesure.")}
+{cta_band("Besoin de caméras pour vos locaux ?", "Visite gratuite sur place pour choisir un pack ou une installation sur mesure.")}
 """
 
 # =============================================================================
@@ -593,7 +624,7 @@ IT_FAQ = [
 it = page_hero(
     "Informatique & réseau",
     "Informatique <em>d'entreprise</em> &amp; réseau",
-    "Postes de travail, serveurs, réseau, Wi-Fi professionnel, sauvegardes et sécurité . J'installe et j'entretiens toute l'informatique de votre entreprise.") + f"""
+    "Postes de travail, serveurs, réseau, Wi-Fi professionnel, sauvegardes et sécurité. J'installe et j'entretiens toute l'informatique de votre entreprise.") + f"""
   <section>
     <div class="wrap">
       <div class="section-head">
@@ -642,48 +673,6 @@ PACK_COMMON = ["Caméras intérieures et/ou extérieures, au choix",
                "Installation et câblage (ou pose sans fil)",
                "Configuration sur votre smartphone",
                "Prise en main et explications"]
-
-packs = page_hero(
-    "Packs",
-    "Packs vidéosurveillance <em>4 et 8 caméras</em>",
-    "Deux packs complets pour équiper rapidement vos locaux : caméras, enregistreur, installation et configuration incluses. Tarif sur devis après visite gratuite.") + f"""
-  <section>
-    <div class="wrap">
-      <div class="grid-2" style="max-width:900px;margin:0 auto">
-        <div class="card pack" id="pack-4">
-          <div class="pack-top"><span class="big">4</span><span class="unit">caméras + enregistreur</span></div>
-          <p>Idéal pour un commerce, un restaurant, un cabinet ou un petit bureau.</p>
-          <div class="grow">{checks(PACK_COMMON)}</div>
-          <div class="price">Tarif sur devis — visite gratuite</div>
-          <a href="contact.html?besoin=pack-4" class="btn btn-dark">Demander un devis Pack 4 {ic('arrow')}</a>
-        </div>
-        <div class="card pack featured" id="pack-8">
-          <span class="tag">Grands locaux</span>
-          <div class="pack-top"><span class="big">8</span><span class="unit">caméras + enregistreur</span></div>
-          <p>Pour les grands commerces, entrepôts, ateliers et sites avec extérieurs.</p>
-          <div class="grow">{checks(PACK_COMMON)}</div>
-          <div class="price">Tarif sur devis — visite gratuite</div>
-          <a href="contact.html?besoin=pack-8" class="btn btn-primary">Demander un devis Pack 8 {ic('arrow')}</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Besoin d'autre chose ?</h2>
-        <p>Les packs sont une base. J'adapte le nombre de caméras et les options à vos locaux.</p>
-      </div>
-      <div class="grid-3">
-        <a href="alarme.html" class="card mini"><div class="icon">{ic('alarm')}</div><h3>Ajouter une alarme</h3><p>Combinez caméras et alarme Ajax pour une protection complète.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
-        <a href="contact.html" class="card mini"><div class="icon">{ic('cam')}</div><h3>Plus de caméras</h3><p>Au-delà de 8 caméras, je fais une étude sur mesure.</p><span class="more">Me contacter {ic('arrow')}</span></a>
-        <a href="videosurveillance.html" class="card mini"><div class="icon">{ic('tool')}</div><h3>Maintenance</h3><p>Faites suivre votre installation dans la durée.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
-      </div>
-    </div>
-  </section>
-{cta_band("Quel pack pour vos locaux ?", "Je viens sur place gratuitement pour vous conseiller le bon pack et vous remettre un devis.")}
-"""
 
 # =============================================================================
 # CONTACT
@@ -828,9 +817,6 @@ PAGES = [
     ("informatique.html", "Informatique d'entreprise & réseau · Alpes-Maritimes — BelaConnect",
      "Réseau, câblage, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes, sécurité et dépannage informatique pour les entreprises des Alpes-Maritimes.",
      it, faq_jsonld(IT_FAQ)),
-    ("packs.html", "Packs vidéosurveillance 4 et 8 caméras — BelaConnect",
-     "Packs vidéosurveillance 4 caméras + enregistreur et 8 caméras + enregistreur, installation et configuration incluses. Alpes-Maritimes, devis gratuit.",
-     packs, ""),
     ("contact.html", "Contact et devis gratuit — BelaConnect",
      "Demandez un devis gratuit pour votre projet de vidéosurveillance, d'alarme ou d'informatique dans les Alpes-Maritimes. Visite sur place offerte.",
      contact, ""),
