@@ -412,7 +412,7 @@ home = f"""
         <li><b>Bureaux et cabinets</b> : alarme des locaux, réseau, postes.</li>
         <li><b>Entrepôts et ateliers</b> : quais, périmètre, vision de nuit.</li>
         <li><b>Chantiers</b> : protection du matériel et des engins.</li>
-        <li><b>Copropriétés</b> : halls, parkings, locaux communs.</li>
+        <li><b>Copropriétés</b> : halls, parkings, locaux communs (<a href="videosurveillance.html#copropriete" class="inline-link">en savoir plus</a>).</li>
       </ul>
     </div>
   </section>
@@ -482,6 +482,8 @@ VIDEO_FAQ = [
      "Le filaire est le plus fiable pour une installation durable ; le sans fil est plus rapide à poser quand passer des câbles est compliqué. Nous vous conseillons lors de la visite."),
     ("Les caméras fonctionnent-elles la nuit ?",
      "Oui, les caméras que nous installons ont la vision de nuit. Certains modèles offrent même une image en couleur dans l'obscurité."),
+    ("Installez-vous des caméras en copropriété ?",
+     "Oui : halls, parkings, garages et locaux communs. Nous fournissons un devis détaillé à présenter en assemblée générale, puisque l'installation doit y être votée, et nous orientons les caméras uniquement sur les parties communes."),
     ("Ai-je des obligations légales en tant que professionnel ?",
      "Oui : informer les personnes filmées par un panneau, informer vos salariés, et demander une autorisation en préfecture pour filmer un lieu ouvert au public. Nous vous indiquons les démarches lors de l'installation."),
 ]
@@ -533,7 +535,25 @@ video = page_hero(
     </div>
   </section>
 
-  <section>
+  <section id="copropriete">
+    <div class="wrap split top">
+      <div>
+        <h2>Vidéosurveillance en copropriété</h2>
+        <p>Halls d'entrée, parkings, garages, locaux vélos et poubelles : nous équipons les parties communes des résidences et travaillons avec le syndic et le conseil syndical, de la visite jusqu'à la mise en service.</p>
+        {checks(["Visite gratuite et devis détaillé, à présenter en assemblée générale", "Caméras orientées uniquement sur les parties communes", "Accès aux images limité aux personnes autorisées", "Panneaux d'information des résidents fournis", "Maintenance de l'installation dans la durée"])}
+        <div class="hero-cta"><a href="contact.html?besoin=copro" class="btn btn-dark">Demander un devis copropriété {ic('arrow')}</a></div>
+      </div>
+      <div class="note">
+        {ic('info')}
+        <div>
+          <h3>Les règles à connaître</h3>
+          <p>L'installation de caméras dans les parties communes doit être votée en assemblée générale. Les caméras ne doivent filmer ni l'intérieur des logements ni les portes palières, les résidents doivent être informés par des panneaux, et les images ne sont conservées que quelques jours, un mois au maximum. Nous vous aidons à préparer le projet en conséquence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
     <div class="wrap">
       <div class="section-head">
         <h2>Au quotidien</h2>
@@ -844,6 +864,7 @@ contact = page_hero(
             <option value="pack-8">Pack 8 caméras + enregistreur</option>
             <option value="alarme">Alarme</option>
             <option value="video-alarme">Vidéosurveillance + alarme</option>
+            <option value="copro">Vidéosurveillance en copropriété</option>
             <option value="info">Informatique &amp; réseau</option>
             <option value="baie">Remise au propre de baie</option>
             <option value="maintenance">Maintenance / dépannage</option>
@@ -923,7 +944,7 @@ PAGES = [
      "Installateur de caméras de surveillance et d'alarmes pour les professionnels, dans tout le département des Alpes-Maritimes (06). Matériel Dahua, Hikvision, Ajax. Devis gratuit sur place.",
      home, faq_jsonld(HOME_FAQ)),
     ("videosurveillance.html", "Installation de caméras de surveillance pour professionnels (06) | BelaConnect",
-     "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Packs 4 et 8 caméras. Intervention dans tout le 06.",
+     "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Packs 4 et 8 caméras, copropriétés. Intervention dans tout le 06.",
      video, faq_jsonld(VIDEO_FAQ)),
     ("alarme.html", "Installation d'alarme Ajax pour commerces et bureaux (06) | BelaConnect",
      "Installation d'alarmes anti-intrusion Ajax sans fil ou filaires pour commerces, bureaux et entrepôts dans les Alpes-Maritimes. Alertes sur smartphone. Devis gratuit.",

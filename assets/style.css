@@ -330,3 +330,6 @@ form.quote .btn{width:100%;}
 @media (max-width:720px){ .hero-info dl{gap:2px 16px;} .hero-info dt:not(:first-child){margin-top:0;} }
 .alt + section.tight{padding-top:80px;}
 @media (max-width:720px){ .alt + section.tight{padding-top:56px;} }
+.inline-link{color:var(--cyan-ink);text-decoration:underline;text-underline-offset:3px;}
+.inline-link:hover{color:var(--ink);}
+.split .note{align-self:start;}
