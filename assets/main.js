@@ -10,6 +10,14 @@
     });
   }
 
+  // Ombre de l'en-tête au défilement
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   // Année du pied de page
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
