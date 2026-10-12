@@ -100,7 +100,7 @@ p{margin:0;}
 .brands .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 44px;}
 .brands small{font-size:15px;color:var(--ink-faint);}
 .brands strong{color:#3A4552;font-size:20px;font-weight:700;letter-spacing:.06em;}
-.brands img{height:30px;width:auto;}
+.brands img{width:auto;}
 
 /* Sections */
 section{padding:80px 0;}
@@ -270,6 +270,9 @@ form.quote .btn{width:100%;}
   .cta-band{padding:28px 22px;}
   .foot-grid{grid-template-columns:1fr;}
   .call-fab{display:flex;}
+  .brands .wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;align-items:center;justify-items:center;}
+  .brands small{grid-column:1/-1;justify-self:start;}
+  .brands img{max-width:100%;}
   body{padding-bottom:76px;}
 }
 

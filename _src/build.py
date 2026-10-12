@@ -82,6 +82,8 @@ CURRENT = ' aria-current="page"'
 
 # Logos des marques : déposer le fichier dans assets/marques/<nom>.png pour remplacer le texte
 BRAND_FILES = {"Dahua": "dahua", "Hikvision": "hikvision", "Ajax": "ajax", "TP-Link": "tplink"}
+BRAND_LOGO = {"Dahua": ("Dahua", 30), "Hikvision": ("Hikvision", 20), "Ajax": ("Ajax", 24),
+              "TP-Link": ("VIGI by TP-Link", 40)}
 
 
 def brands(names, label="Matériel installé"):
@@ -89,7 +91,8 @@ def brands(names, label="Matériel installé"):
     for n in names:
         f = ROOT / "assets" / "marques" / (BRAND_FILES[n] + ".png")
         if f.exists():
-            items.append(f'<img src="assets/marques/{f.name}" alt="{n}" height="30" loading="lazy">')
+            alt, hgt = BRAND_LOGO[n]
+            items.append(f'<img src="assets/marques/{f.name}" alt="{alt}" style="height:{hgt}px" loading="lazy">')
         else:
             items.append(f"<strong>{n.upper()}</strong>")
     return f'''
