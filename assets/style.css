@@ -97,7 +97,7 @@ p{margin:0;}
 
 /* Bandeau marques */
 .brands{background:#fff;border-bottom:1px solid var(--line);padding:18px 0;}
-.brands .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 44px;}
+.brands .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 64px;}
 .brands small{font-size:15px;color:var(--ink-faint);}
 .brands strong{color:#3A4552;font-size:20px;font-weight:700;letter-spacing:.06em;}
 .brands img{width:auto;}
@@ -139,6 +139,14 @@ a.card:hover .more{text-decoration:underline;text-underline-offset:4px;}
 .mini h3{font-size:19px;}
 .mini p{font-size:16px;margin-top:6px;color:var(--ink-soft);}
 .mini .icon svg{width:26px;height:26px;}
+
+/* Pourquoi nous */
+.why{background:var(--navy);color:#fff;}
+.why .section-head h2{color:#fff;}
+.why-grid > div{border-top:2px solid var(--cyan);padding-top:18px;}
+.why-grid b{display:block;font-size:44px;font-weight:700;line-height:1;color:var(--cyan);}
+.why-grid h3{font-size:19px;margin-top:6px;}
+.why-grid p{margin-top:8px;color:#C5CDD8;font-size:16px;}
 
 /* Étapes */
 .steps{counter-reset:step;}
@@ -270,8 +278,10 @@ form.quote .btn{width:100%;}
   .cta-band{padding:28px 22px;}
   .foot-grid{grid-template-columns:1fr;}
   .call-fab{display:flex;}
+  .hero-info dl{grid-template-columns:1fr 1fr;gap:12px 16px;}
+  .hero-info dd{font-size:15px;}
+  .hero-info{padding:18px;}
   .brands .wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;align-items:center;justify-items:center;}
-  .brands small{grid-column:1/-1;justify-self:start;}
   .brands img{max-width:100%;}
   body{padding-bottom:76px;}
 }

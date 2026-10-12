@@ -20,8 +20,6 @@ OWNER_ADDRESS = "[Adresse professionnelle], Alpes-Maritimes"  # TODO
 SIREN = "947 672 481"
 EMAIL_CONFIRMED = False              # passer à True quand l'adresse existe
 SITE_URL = "https://belaconnect.fr"
-CITIES = ["Nice", "Cannes", "Antibes", "Cagnes-sur-Mer", "Grasse", "Menton",
-          "Saint-Laurent-du-Var", "Sophia Antipolis", "Mandelieu", "Vence", "Carros", "Monaco"]
 
 # --- Icônes --------------------------------------------------------------------
 ICONS = """
@@ -96,7 +94,7 @@ def brands(names, label="Matériel installé"):
         else:
             items.append(f"<strong>{n.upper()}</strong>")
     return f'''
-  <div class="brands" aria-label="{label}"><div class="wrap"><small>{label}</small>{"".join(items)}</div></div>'''
+  <div class="brands" aria-label="{label}"><div class="wrap">{"".join(items)}</div></div>'''
 
 
 def ic(name):
@@ -179,8 +177,7 @@ def business_schema():
         "logo": SITE_URL + "/assets/apple-touch-icon.png",
         "image": SITE_URL + "/assets/og-image.png",
         "address": {"@type": "PostalAddress", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"},
-        "areaServed": [{"@type": "AdministrativeArea", "name": "Alpes-Maritimes"}] +
-                      [{"@type": "City", "name": c} for c in CITIES],
+        "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"},
         "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Wi-Fi professionnel"],
         "brand": [{"@type": "Brand", "name": b} for b in ("Dahua", "Hikvision", "Ajax", "TP-Link")],
         "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [
@@ -316,8 +313,8 @@ def layout(filename, title, description, body, extra_head=""):
 # ACCUEIL
 # =============================================================================
 HOME_FAQ = [
-    ("Dans quelles villes intervenez-vous ?",
-     "Partout dans les Alpes-Maritimes : Nice, Cannes, Antibes, Grasse, Menton, Cagnes-sur-Mer, Sophia Antipolis et leurs environs."),
+    ("Où intervenez-vous ?",
+     "Dans tout le département des Alpes-Maritimes (06), sur le littoral comme dans l'arrière-pays."),
     ("Le devis est-il gratuit ?",
      "Oui. Nous nous déplaçons gratuitement dans vos locaux pour étudier votre besoin, puis nous vous remettons un devis détaillé, sans engagement."),
     ("Fournissez-vous le matériel ?",
@@ -342,7 +339,7 @@ home = f"""
       </div>
       <aside class="hero-info">
         <dl>
-          <dt>Expérience</dt><dd>5 ans d'installations</dd>
+          <dt>Clients</dt><dd>Commerces, bureaux, entrepôts, chantiers</dd>
           <dt>Devis</dt><dd>Gratuit, après visite sur place</dd>
           <dt>Zone</dt><dd>Tout le département des Alpes-Maritimes</dd>
           <dt>Matériel</dt><dd>Dahua, Hikvision, Ajax, TP-Link</dd>
@@ -364,20 +361,37 @@ home = f"""
           <div class="icon">{ic('cam')}</div>
           <h3>Vidéosurveillance</h3>
           <p>Caméras intérieures et extérieures, filaires ou sans fil, avec enregistreur. Vous voyez les images en direct sur votre téléphone.</p>
+          {checks(["Dahua et Hikvision", "Vision de nuit", "Packs 4 et 8 caméras"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
         <a href="alarme.html" class="card main">
           <div class="icon">{ic('alarm')}</div>
           <h3>Alarme</h3>
           <p>Alarmes Ajax contre l'intrusion. Vous êtes prévenu sur votre téléphone dès qu'un détecteur se déclenche.</p>
+          {checks(["Sans fil ou filaire", "Badge ou code par salarié", "Couplage aux caméras"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
         <a href="informatique.html" class="card">
           <div class="icon">{ic('pc')}</div>
           <h3>Informatique et réseau</h3>
           <p>Câblage, Wi-Fi pro, postes de travail, sauvegardes et dépannage pour les entreprises.</p>
+          {checks(["Réseau et Wi-Fi TP-Link", "Postes et serveurs", "Maintenance du parc"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Pourquoi choisir BelaConnect</h2>
+      </div>
+      <div class="grid-4 why-grid">
+        <div><b>06</b><h3>tout le département</h3><p>Nous intervenons partout dans les Alpes-Maritimes, sur le littoral comme dans l'arrière-pays.</p></div>
+        <div><b>1</b><h3>seul interlocuteur</h3><p>Du devis à la maintenance, vous avez toujours affaire à la même personne.</p></div>
+        <div><b>0 €</b><h3>pour la visite et le devis</h3><p>Nous venons voir vos locaux avant de chiffrer quoi que ce soit, sans engagement.</p></div>
+        <div><b>4</b><h3>marques professionnelles</h3><p>Dahua, Hikvision, Ajax et TP-Link : du matériel fiable, conçu pour durer.</p></div>
       </div>
     </div>
   </section>
@@ -436,16 +450,6 @@ home = f"""
   </section>
 
   <section>
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Zone d'intervention</h2>
-        <p>Nous installons caméras de surveillance, alarmes et réseaux informatiques dans tout le département des Alpes-Maritimes : sur le littoral, de Mandelieu à Menton, comme dans l'arrière-pays.</p>
-      </div>
-      <p class="cities-line">{" · ".join(CITIES)}</p>
-    </div>
-  </section>
-
-  <section class="alt">
     <div class="wrap">
       <div class="section-head">
         <h2>Questions fréquentes</h2>
@@ -883,11 +887,11 @@ notfound = f"""
 """
 
 PAGES = [
-    ("index.html", "Installation vidéosurveillance et alarme à Nice, Cannes, Antibes | BelaConnect",
-     "Installateur de caméras de surveillance et d'alarmes pour les professionnels des Alpes-Maritimes : Nice, Cannes, Antibes, Grasse, Menton. Matériel Dahua, Hikvision, Ajax. Devis gratuit sur place.",
+    ("index.html", "Installation vidéosurveillance et alarme dans les Alpes-Maritimes (06) | BelaConnect",
+     "Installateur de caméras de surveillance et d'alarmes pour les professionnels, dans tout le département des Alpes-Maritimes (06). Matériel Dahua, Hikvision, Ajax. Devis gratuit sur place.",
      home, faq_jsonld(HOME_FAQ)),
     ("videosurveillance.html", "Installation de caméras de surveillance pour professionnels (06) | BelaConnect",
-     "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Packs 4 et 8 caméras. Nice, Cannes, Antibes et tout le 06.",
+     "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Packs 4 et 8 caméras. Intervention dans tout le 06.",
      video, faq_jsonld(VIDEO_FAQ)),
     ("alarme.html", "Installation d'alarme Ajax pour commerces et bureaux (06) | BelaConnect",
      "Installation d'alarmes anti-intrusion Ajax sans fil ou filaires pour commerces, bureaux et entrepôts dans les Alpes-Maritimes. Alertes sur smartphone. Devis gratuit.",
