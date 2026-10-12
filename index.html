@@ -3,673 +3,321 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BelaConnect — Installation vidéosurveillance et alarme</title>
-<meta name="description" content="BelaConnect, spécialiste de l'installation de vidéosurveillance et d'alarmes pour particuliers et professionnels. Aussi bornes Wi-Fi et informatique. Devis gratuit.">
-<meta property="og:title" content="BelaConnect — Vidéosurveillance & alarme">
-<meta property="og:description" content="Installation de vidéosurveillance, alarmes, bornes Wi-Fi et informatique. Devis gratuit.">
+<title>BelaConnect — Vidéosurveillance et alarme pour professionnels · Alpes-Maritimes</title>
+<meta name="description" content="Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels des Alpes-Maritimes (Nice, Cannes, Antibes…). Dahua, Hikvision, Ajax. Devis gratuit sur place.">
+<link rel="canonical" href="https://belaconnect.fr/">
+<meta property="og:title" content="BelaConnect — Vidéosurveillance et alarme pour professionnels · Alpes-Maritimes">
+<meta property="og:description" content="Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels des Alpes-Maritimes (Nice, Cannes, Antibes…). Dahua, Hikvision, Ajax. Devis gratuit sur place.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://belaconnect.fr/">
+<meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#0B1426">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1426'/%3E%3Cpath d='M20 16h14a10 10 0 0 1 4 19 10 10 0 0 1-4 19H20z' fill='none' stroke='%2322D3EE' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#0B1426;
-    --navy-2:#111D35;
-    --navy-3:#1A2847;
-    --cyan:#22D3EE;
-    --cyan-ink:#0E7490;
-    --blue:#3B82F6;
-    --bg:#F5F7FB;
-    --panel:#FFFFFF;
-    --ink:#0F172A;
-    --ink-soft:#475569;
-    --ink-faint:#94A3B8;
-    --line:#E2E8F0;
-    --radius:16px;
-    --max:1160px;
-    --shadow:0 10px 30px -12px rgba(15,23,42,.18);
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;scroll-padding-top:80px;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  img,svg{display:block;max-width:100%;}
-  a{color:inherit;text-decoration:none;}
-  h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.02em;}
-  p{margin:0;}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
-  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
-
-  /* Boutons */
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    padding:14px 22px;border-radius:12px;font-weight:600;font-size:15px;
-    border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s,border-color .15s;
-    font-family:inherit;
-  }
-  .btn:hover{transform:translateY(-1px);}
-  .btn-primary{background:var(--cyan);color:var(--navy);}
-  .btn-primary:hover{background:#67E8F9;}
-  .btn-ghost{border-color:rgba(255,255,255,.25);color:#fff;}
-  .btn-ghost:hover{border-color:#fff;}
-  .btn svg{width:18px;height:18px;}
-
-  /* En-tête */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(11,20,38,.88);
-    backdrop-filter:saturate(160%) blur(12px);
-    -webkit-backdrop-filter:saturate(160%) blur(12px);
-    border-bottom:1px solid rgba(255,255,255,.06);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
-  .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:20px;letter-spacing:-.02em;}
-  .logo-mark{width:34px;height:34px;}
-  .logo span{color:var(--cyan);}
-  .nav-links{display:flex;align-items:center;gap:28px;}
-  .nav-links a{color:#CBD5E1;font-size:15px;font-weight:500;transition:color .15s;}
-  .nav-links a:hover{color:#fff;}
-  .nav-links .btn{padding:10px 18px;color:var(--navy);}
-  .burger{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer;}
-  .burger svg{width:26px;height:26px;}
-
-  /* Hero */
-  .hero{
-    position:relative;overflow:hidden;
-    background:
-      radial-gradient(900px 500px at 85% -10%, rgba(34,211,238,.18), transparent 60%),
-      radial-gradient(700px 400px at -10% 110%, rgba(59,130,246,.18), transparent 60%),
-      var(--navy);
-    color:#fff;
-    padding:96px 0 110px;
-  }
-  .hero::before{
-    content:"";position:absolute;inset:0;
-    background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
-    background-size:48px 48px;
-    mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
-    -webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
-  }
-  .hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
-  .badge{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:6px 14px;border-radius:999px;
-    background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.3);
-    color:var(--cyan);font-size:13px;font-weight:600;margin-bottom:22px;
-  }
-  .badge i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(34,211,238,.2);}
-  .hero h1{font-size:clamp(36px,5.2vw,58px);font-weight:800;}
-  .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),#60A5FA);-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .hero p.lead{margin-top:20px;font-size:18px;color:#CBD5E1;max-width:560px;}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
-  .hero-points{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;color:#94A3B8;font-size:14px;}
-  .hero-points span{display:inline-flex;align-items:center;gap:8px;}
-  .hero-points svg{width:16px;height:16px;color:var(--cyan);}
-
-  .hero-card{
-    background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:22px;padding:22px;
-    box-shadow:0 30px 60px -20px rgba(0,0,0,.5);
-  }
-  .hc-head{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#94A3B8;margin-bottom:16px;}
-  .hc-live{display:inline-flex;align-items:center;gap:6px;color:#4ADE80;font-weight:600;}
-  .hc-live i{width:7px;height:7px;border-radius:50%;background:#4ADE80;animation:pulse 1.6s infinite;}
-  @keyframes pulse{50%{opacity:.3;}}
-  .hc-cams{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-  .cam{
-    aspect-ratio:16/10;border-radius:12px;position:relative;overflow:hidden;
-    background:linear-gradient(135deg,#1E2B4A,#0F1A30);
-    border:1px solid rgba(255,255,255,.06);
-  }
-  .cam::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 2px,transparent 2px 4px);}
-  .cam b{position:absolute;left:8px;bottom:6px;font-size:11px;font-weight:600;color:#CBD5E1;}
-  .cam svg{position:absolute;inset:0;margin:auto;width:34%;opacity:.35;color:#94A3B8;}
-  .hc-rows{margin-top:14px;display:grid;gap:8px;}
-  .hc-row{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-radius:12px;background:rgba(255,255,255,.04);font-size:14px;}
-  .hc-row span{display:flex;align-items:center;gap:10px;color:#E2E8F0;}
-  .hc-row svg{width:18px;height:18px;color:var(--cyan);}
-  .hc-row em{font-style:normal;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:rgba(74,222,128,.12);color:#4ADE80;}
-
-  /* Sections */
-  section{padding:96px 0;}
-  .section-head{max-width:640px;margin-bottom:52px;}
-  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
-  .eyebrow{color:var(--cyan-ink);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px;}
-  .section-head h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;}
-  .section-head p{margin-top:14px;color:var(--ink-soft);font-size:17px;}
-
-  /* Services */
-  .services{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
-  .service{
-    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-    padding:30px;transition:transform .2s,box-shadow .2s,border-color .2s;
-  }
-  .service:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#BAE6FD;}
-  .service-icon{
-    width:54px;height:54px;border-radius:14px;display:grid;place-items:center;
-    background:linear-gradient(135deg,#ECFEFF,#DBEAFE);color:var(--cyan-ink);margin-bottom:20px;
-  }
-  .service-icon svg{width:28px;height:28px;}
-  .service h3{font-size:21px;font-weight:700;}
-  .service{position:relative;}
-  .service.main{border:2px solid #A5F3FC;background:linear-gradient(180deg,#F0FDFF,#fff 45%);padding:36px;}
-  .service.main h3{font-size:25px;}
-  .service.main .service-icon{width:64px;height:64px;background:var(--navy);color:var(--cyan);}
-  .service.main .service-icon svg{width:32px;height:32px;}
-  .tag{position:absolute;top:20px;right:20px;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--navy);color:var(--cyan);}
-  .extra-title{grid-column:1/-1;margin-top:18px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.12em;font-size:13px;}
-  .service p{margin-top:10px;color:var(--ink-soft);}
-  .service ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px;}
-  .service li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink);}
-  .service li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--cyan-ink);}
-
-  /* Pourquoi */
-  .why{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-  .why-item{padding:6px 4px;}
-  .why-item .num{
-    width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
-    background:var(--navy);color:var(--cyan);margin-bottom:16px;
-  }
-  .why-item .num svg{width:22px;height:22px;}
-  .why-item h3{font-size:18px;font-weight:700;}
-  .why-item p{margin-top:8px;color:var(--ink-soft);font-size:15px;}
-
-  /* Étapes */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step;}
-  .step{
-    position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;
-  }
-  .step::before{
-    counter-increment:step;content:"0" counter(step);
-    display:block;font-size:44px;font-weight:800;letter-spacing:-.04em;
-    background:linear-gradient(90deg,var(--cyan-ink),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;
-    margin-bottom:10px;
-  }
-  .step h3{font-size:19px;font-weight:700;}
-  .step p{margin-top:8px;color:var(--ink-soft);font-size:15px;}
-
-  /* Clients */
-  .audience{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
-  .aud{
-    border-radius:var(--radius);padding:34px;color:#fff;position:relative;overflow:hidden;
-    background:linear-gradient(135deg,var(--navy-2),var(--navy-3));
-  }
-  .aud.pro{background:linear-gradient(135deg,#0E3A5B,#0B1426);}
-  .aud h3{font-size:22px;font-weight:700;}
-  .aud p{margin-top:10px;color:#CBD5E1;}
-  .aud ul{margin:18px 0 0;padding-left:18px;color:#E2E8F0;display:grid;gap:6px;}
-  .aud svg.bg{position:absolute;right:-20px;bottom:-20px;width:160px;height:160px;opacity:.08;color:#fff;}
-
-  /* FAQ */
-  .faq{max-width:800px;margin:0 auto;display:grid;gap:12px;}
-  details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:0 22px;}
-  summary{
-    list-style:none;cursor:pointer;padding:20px 0;font-weight:600;font-size:16px;
-    display:flex;justify-content:space-between;align-items:center;gap:16px;
-  }
-  summary::-webkit-details-marker{display:none;}
-  summary::after{content:"+";font-size:24px;font-weight:400;color:var(--cyan-ink);transition:transform .2s;}
-  details[open] summary::after{transform:rotate(45deg);}
-  details p{padding:0 0 20px;color:var(--ink-soft);}
-
-  /* Contact */
-  .contact{background:var(--navy);color:#fff;}
-  .contact .eyebrow{color:var(--cyan);}
-  .contact .section-head p{color:#CBD5E1;}
-  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start;}
-  .contact-info{display:grid;gap:14px;}
-  .ci{
-    display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:14px;
-    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);transition:border-color .15s;
-  }
-  a.ci:hover{border-color:var(--cyan);}
-  .ci-icon{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;background:rgba(34,211,238,.12);color:var(--cyan);}
-  .ci-icon svg{width:22px;height:22px;}
-  .ci small{display:block;color:#94A3B8;font-size:13px;}
-  .ci strong{font-weight:600;font-size:16px;word-break:break-word;}
-  form{
-    background:#fff;color:var(--ink);border-radius:20px;padding:30px;
-    display:grid;grid-template-columns:1fr 1fr;gap:16px;
-  }
-  form .full{grid-column:1/-1;}
-  label{display:block;font-size:14px;font-weight:600;margin-bottom:6px;}
-  input,select,textarea{
-    width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);
-    background:#F8FAFC;font:inherit;font-size:15px;color:var(--ink);transition:border-color .15s,box-shadow .15s;
-  }
-  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cyan-ink);box-shadow:0 0 0 3px rgba(34,211,238,.25);background:#fff;}
-  textarea{min-height:120px;resize:vertical;}
-  form .btn{width:100%;}
-  .form-note{font-size:13px;color:var(--ink-faint);text-align:center;}
-
-  /* Pied de page */
-  footer{background:#070D1A;color:#94A3B8;padding:40px 0;font-size:14px;}
-  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;}
-  .foot nav{display:flex;flex-wrap:wrap;gap:20px;}
-  .foot a:hover{color:#fff;}
-
-  /* Apparition au défilement */
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
-  .reveal.in{opacity:1;transform:none;}
-  @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto;}
-    .reveal{opacity:1;transform:none;transition:none;}
-    .hc-live i{animation:none;}
-  }
-
-  /* Responsive */
-  @media (max-width:960px){
-    .hero-grid{grid-template-columns:1fr;}
-    .hero-card{max-width:520px;}
-    .why-grid{grid-template-columns:1fr 1fr;}
-    .steps{grid-template-columns:1fr;}
-    .contact-grid{grid-template-columns:1fr;}
-  }
-  @media (max-width:760px){
-    .burger{display:block;}
-    .nav-links{
-      position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
-      background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);padding:8px 20px 20px;
-      display:none;
-    }
-    .nav-links.open{display:flex;}
-    .nav-links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);}
-    .nav-links .btn{margin-top:14px;border:0;}
-    section{padding:72px 0;}
-    .hero{padding:64px 0 80px;}
-    .services,.audience{grid-template-columns:1fr;}
-    .why-grid{grid-template-columns:1fr;}
-    form{grid-template-columns:1fr;padding:22px;}
-    .service,.service.main,.step,.aud{padding:24px;}
-    .tag{position:static;display:inline-block;margin-bottom:14px;}
-  }
-</style>
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"BelaConnect","description":"Installation de vidéosurveillance, alarmes et informatique pour les professionnels des Alpes-Maritimes.","url":"https://belaconnect.fr/","telephone":"+33600000000","email":"contact@belaconnect.fr","areaServed":{"@type":"AdministrativeArea","name":"Alpes-Maritimes"},"address":{"@type":"PostalAddress","addressRegion":"Alpes-Maritimes","addressCountry":"FR"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Dans quelles villes intervenez-vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Partout dans les Alpes-Maritimes : Nice, Cannes, Antibes, Grasse, Menton, Cagnes-sur-Mer, Sophia Antipolis et leurs environs."}}, {"@type": "Question", "name": "Le devis est-il gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nous nous déplaçons gratuitement dans vos locaux pour étudier votre besoin, puis nous vous remettons un devis détaillé, sans engagement."}}, {"@type": "Question", "name": "Fournissez-vous le matériel ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous fournissons du matériel professionnel (Dahua, Hikvision, Ajax, TP-Link) adapté à votre besoin. Nous pouvons aussi installer un matériel que vous possédez déjà."}}, {"@type": "Question", "name": "Pouvez-vous gérer de gros chantiers ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Pour les installations importantes, nous intervenons en équipe afin de respecter vos délais."}}, {"@type": "Question", "name": "Assurez-vous la maintenance après l'installation ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous proposons la maintenance de vos installations de vidéosurveillance, d'alarme et de votre parc informatique."}}]}</script>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-<!-- Icônes réutilisables -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11l4 4-4 4H3z"/><circle cx="9" cy="11" r="2"/><path d="M18 11h3"/><path d="M8 15v4h4"/></symbol>
+    <symbol id="i-dome" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18"/><path d="M5 5v3a7 7 0 0 0 14 0V5"/><circle cx="12" cy="9" r="2.5"/></symbol>
     <symbol id="i-alarm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6z"/><path d="M12 8v5"/><circle cx="12" cy="16" r=".6" fill="currentColor"/></symbol>
     <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a15 15 0 0 1 20 0"/><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-nowire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/><path d="M12 3v4"/></symbol>
+    <symbol id="i-cable" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v5M17 3v5"/><rect x="5" y="8" width="14" height="5" rx="1"/><path d="M12 13v3a4 4 0 0 1-4 4H6"/></symbol>
     <symbol id="i-pc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
-    <symbol id="i-euro" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7a7 7 0 1 0 0 10"/><path d="M4 10h9M4 14h9"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/></symbol>
+    <symbol id="i-backup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
     <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 6.3-6.3"/><path d="M14.7 6.3 13 4.6 3 14.6 6.4 18"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L3 21l2-6.2A8 8 0 1 1 21 12z"/></symbol>
-    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8v10H3z"/><path d="M9 21v-6h6v6"/></symbol>
     <symbol id="i-shop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/></symbol>
+    <symbol id="i-food" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v7a3 3 0 0 0 6 0V3M7 3v18"/><path d="M17 3c-2 0-3 2.5-3 6s1 4 3 4v8"/></symbol>
+    <symbol id="i-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 6h.01M15 6h.01M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 22v-4h4v4"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+    <symbol id="i-crane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4h1l13 3"/><path d="M6 7h14"/><path d="M18 7v5"/><rect x="16" y="12" width="4" height="3"/><path d="M3 21h8"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-5h6v5M9 11h.01M15 11h.01"/></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M22 21a7 7 0 0 0-4-6.3"/></symbol>
+    <symbol id="i-medal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="6"/><path d="M8.5 10 5 2h4l3 6 3-6h4l-3.5 8"/><path d="m12 12 1 2h2l-1.5 1.3.5 2.2-2-1.2-2 1.2.5-2.2L9 14h2z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4h5v16h-5"/><path d="M4 20V4l9-1v18z"/><path d="M10 12h.01"/></symbol>
+    <symbol id="i-radar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12 19 5"/><path d="M19.4 14A8 8 0 1 1 12 4"/><path d="M15.5 12.5A3.5 3.5 0 1 1 12 8.5"/></symbol>
+    <symbol id="i-siren" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 18h14v3H5z"/><path d="M12 2v2M4.2 5.2l1.4 1.4M19.8 5.2l-1.4 1.4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-hdd" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M5 13 7 4h10l2 9"/><path d="M6 17h.01M10 17h.01"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-euro" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7a7 7 0 1 0 0 10"/><path d="M4 10h9M4 14h9"/></symbol>
   </defs>
 </svg>
 
-<header>
+<header class="site-header">
   <div class="wrap nav">
-    <a href="#accueil" class="logo" aria-label="BelaConnect, accueil">
-      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16233F"/><path d="M20 16h14a10 10 0 0 1 4 19 10 10 0 0 1-4 19H20z" fill="none" stroke="#22D3EE" stroke-width="6" stroke-linejoin="round"/></svg>
-      Bela<span>Connect</span>
-    </a>
-    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <a href="index.html" class="logo" aria-label="BelaConnect, accueil"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16233F"/><path d="M20 16h14a10 10 0 0 1 4 19 10 10 0 0 1-4 19H20z" fill="none" stroke="#22D3EE" stroke-width="6" stroke-linejoin="round"/></svg>Bela<span>Connect</span></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
-    <nav class="nav-links" id="menu">
-      <a href="#services">Services</a>
-      <a href="#pourquoi">Pourquoi nous</a>
-      <a href="#etapes">Comment ça marche</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-primary">Devis gratuit</a>
+    <nav class="nav-links" id="menu" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="videosurveillance.html">Vidéosurveillance</a>
+      <a href="alarme.html">Alarme</a>
+      <a href="informatique.html">Informatique & réseau</a>
+      <a href="packs.html">Packs</a>
+      <a href="tel:+33600000000" class="nav-phone"><svg aria-hidden="true"><use href="#i-phone"/></svg> 06 00 00 00 00</a>
+      <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <!-- Accueil -->
-  <section class="hero" id="accueil">
+<main id="contenu">
+
+  <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="badge"><i></i> Particuliers &amp; professionnels</div>
-        <h1>Vidéosurveillance<br>&amp; alarme, <em>installées par un pro.</em></h1>
-        <p class="lead">BelaConnect protège votre maison et vos locaux : caméras visibles depuis votre téléphone, alarme qui vous alerte en temps réel. Installation propre, conseils honnêtes, devis gratuit.</p>
+        <div class="badge"><i></i> Professionnels · Alpes-Maritimes</div>
+        <h1>Vidéosurveillance &amp; alarme <em>pour les professionnels.</em></h1>
+        <p class="lead">BelaConnect protège vos commerces, bureaux et entrepôts dans les Alpes-Maritimes : caméras consultables à distance, alarmes connectées et informatique d'entreprise. Installées et suivies par un technicien expérimenté.</p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Sécuriser mon logement <svg><use href="#i-arrow"/></svg></a>
-          <a href="#services" class="btn btn-ghost">Voir les services</a>
+          <a href="contact.html" class="btn btn-primary">Demander un devis gratuit <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a href="packs.html" class="btn btn-ghost">Voir les packs caméras</a>
         </div>
         <div class="hero-points">
-          <span><svg><use href="#i-check"/></svg> Devis gratuit</span>
-          <span><svg><use href="#i-check"/></svg> Caméras visibles sur smartphone</span>
-          <span><svg><use href="#i-check"/></svg> Alertes en temps réel</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg> 5 ans d'expérience</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg> Devis gratuit sur place</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg> Matériel professionnel</span>
         </div>
       </div>
-
       <div class="hero-card" aria-hidden="true">
-        <div class="hc-head"><span>Mon installation</span><span class="hc-live"><i></i> En ligne</span></div>
+        <div class="hc-head"><span>Magasin — Nice</span><span class="hc-live"><i></i> En ligne</span></div>
         <div class="hc-cams">
-          <div class="cam"><svg><use href="#i-cam"/></svg><b>Entrée</b></div>
-          <div class="cam"><svg><use href="#i-cam"/></svg><b>Jardin</b></div>
-          <div class="cam"><svg><use href="#i-cam"/></svg><b>Garage</b></div>
-          <div class="cam"><svg><use href="#i-cam"/></svg><b>Parking</b></div>
+          <div class="cam"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="rec">REC</span><b>Entrée</b></div>
+          <div class="cam"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="rec">REC</span><b>Caisse</b></div>
+          <div class="cam"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="rec">REC</span><b>Réserve</b></div>
+          <div class="cam"><svg aria-hidden="true"><use href="#i-cam"/></svg><span class="rec">REC</span><b>Parking</b></div>
         </div>
         <div class="hc-rows">
-          <div class="hc-row"><span><svg><use href="#i-alarm"/></svg> Alarme</span><em>Activée</em></div>
-          <div class="hc-row"><span><svg><use href="#i-wifi"/></svg> Wi-Fi maison</span><em>Excellent</em></div>
+          <div class="hc-row"><span><svg aria-hidden="true"><use href="#i-alarm"/></svg> Alarme des locaux</span><em>Activée</em></div>
+          <div class="hc-row"><span><svg aria-hidden="true"><use href="#i-hdd"/></svg> Enregistreur</span><em>OK</em></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services">
+  <div class="brands" aria-label="Marques installées">
+    <div class="wrap">
+      <small>Matériel installé</small>
+      <strong>DAHUA</strong><strong>HIKVISION</strong><strong>AJAX</strong><strong>TP-LINK</strong>
+    </div>
+  </div>
+
+  <section>
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Nos services</div>
-        <h2>Notre spécialité : votre sécurité</h2>
-        <p>Vidéosurveillance et alarme, de l'étude de votre besoin jusqu'à la mise en service. Et pour compléter, votre Wi-Fi et votre informatique.</p>
+        <h2>Notre spécialité : la sécurité de vos locaux</h2>
+        <p>De l'étude sur place à la mise en service, un seul interlocuteur pour la vidéosurveillance, l'alarme et l'informatique de votre entreprise.</p>
       </div>
-      <div class="services">
-        <article class="service main reveal">
+      <div class="grid-3">
+        <a href="videosurveillance.html" class="card main reveal">
           <span class="tag">Spécialité</span>
-          <div class="service-icon"><svg><use href="#i-cam"/></svg></div>
+          <div class="icon dark"><svg aria-hidden="true"><use href="#i-cam"/></svg></div>
           <h3>Vidéosurveillance</h3>
-          <p>Des caméras intérieures et extérieures pour garder un œil sur votre maison ou votre commerce, même à distance.</p>
-          <ul>
-            <li><svg><use href="#i-check"/></svg> Caméras HD, vision de nuit</li>
-            <li><svg><use href="#i-check"/></svg> Consultation en direct sur smartphone</li>
-            <li><svg><use href="#i-check"/></svg> Enregistrement et alertes de mouvement</li>
-            <li><svg><use href="#i-check"/></svg> Caméras filaires ou sans fil, intérieur et extérieur</li>
-          </ul>
-        </article>
-        <article class="service main reveal">
+          <p>Caméras intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès à distance sur smartphone.</p>
+          <span class="more">Découvrir <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a href="alarme.html" class="card main reveal">
           <span class="tag">Spécialité</span>
-          <div class="service-icon"><svg><use href="#i-alarm"/></svg></div>
+          <div class="icon dark"><svg aria-hidden="true"><use href="#i-alarm"/></svg></div>
           <h3>Alarme</h3>
-          <p>Un système d'alarme fiable pour dissuader les intrusions et être prévenu immédiatement.</p>
-          <ul>
-            <li><svg><use href="#i-check"/></svg> Détecteurs de mouvement et d'ouverture</li>
-            <li><svg><use href="#i-check"/></svg> Sirène et notifications sur téléphone</li>
-            <li><svg><use href="#i-check"/></svg> Pilotage depuis une application</li>
-            <li><svg><use href="#i-check"/></svg> Couplage possible avec vos caméras</li>
-          </ul>
-        </article>
-        <p class="extra-title reveal">En complément</p>
-        <article class="service reveal">
-          <div class="service-icon"><svg><use href="#i-wifi"/></svg></div>
-          <h3>Bornes Wi-Fi</h3>
-          <p>Fini les zones mortes : un Wi-Fi rapide et stable dans toutes les pièces, le jardin ou vos locaux.</p>
-          <ul>
-            <li><svg><use href="#i-check"/></svg> Bornes et réseau maillé (mesh)</li>
-            <li><svg><use href="#i-check"/></svg> Wi-Fi invités séparé et sécurisé</li>
-            <li><svg><use href="#i-check"/></svg> Câblage réseau si nécessaire</li>
-          </ul>
-        </article>
-        <article class="service reveal">
-          <div class="service-icon"><svg><use href="#i-pc"/></svg></div>
-          <h3>Informatique</h3>
-          <p>Installation, configuration et dépannage de vos équipements informatiques au quotidien.</p>
-          <ul>
-            <li><svg><use href="#i-check"/></svg> Installation d'ordinateurs et imprimantes</li>
-            <li><svg><use href="#i-check"/></svg> Dépannage, nettoyage, sauvegardes</li>
-            <li><svg><use href="#i-check"/></svg> Configuration box, réseau, sécurité</li>
-          </ul>
-        </article>
+          <p>Systèmes d'alarme Ajax pour protéger vos locaux contre l'intrusion, avec alertes instantanées sur votre téléphone.</p>
+          <span class="more">Découvrir <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a href="informatique.html" class="card reveal">
+          <div class="icon"><svg aria-hidden="true"><use href="#i-pc"/></svg></div>
+          <h3>Informatique &amp; réseau</h3>
+          <p>Postes, serveurs, réseau, Wi-Fi professionnel, sauvegardes et dépannage : toute l'informatique de votre entreprise.</p>
+          <span class="more">Découvrir <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Pourquoi nous -->
-  <section class="why" id="pourquoi">
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Pour qui</div>
+        <h2>Des solutions adaptées à votre activité</h2>
+        <p>Chaque local est différent : nous dimensionnons l'installation selon votre surface, vos accès et vos horaires.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card mini reveal"><div class="icon"><svg aria-hidden="true"><use href="#i-shop"/></svg></div><h3>Commerces</h3><p>Surveillance de la surface de vente, de la caisse et de la réserve.</p></div>
+        <div class="card mini reveal"><div class="icon"><svg aria-hidden="true"><use href="#i-food"/></svg></div><h3>Restaurants &amp; hôtels</h3><p>Salle, cuisine, entrées et parkings, avec Wi-Fi clients séparé.</p></div>
+        <div class="card mini reveal"><div class="icon"><svg aria-hidden="true"><use href="#i-office"/></svg></div><h3>Bureaux &amp; cabinets</h3><p>Alarme des locaux, réseau, postes de travail et sauvegardes.</p></div>
+        <div class="card mini reveal"><div class="icon"><svg aria-hidden="true"><use href="#i-box"/></svg></div><h3>Entrepôts &amp; ateliers</h3><p>Caméras longue portée, vision de nuit, quais et périmètre.</p></div>
+        <div class="card mini reveal"><div class="icon"><svg aria-hidden="true"><use href="#i-crane"/></svg></div><h3>Chantiers</h3><p>Protection du matériel et des engins sur site.</p></div>
+        <div class="card mini reveal"><div class="icon"><svg aria-hidden="true"><use href="#i-building"/></svg></div><h3>Copropriétés</h3><p>Halls, parkings et locaux communs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="reveal">
+        <div class="eyebrow">Packs vidéosurveillance</div>
+        <h2>Deux packs prêts à installer</h2>
+        <p>Pour aller à l'essentiel, nous proposons deux packs complets avec caméras intérieures ou extérieures, enregistreur, installation et configuration sur votre smartphone.</p>
+        <div class="hero-cta">
+          <a href="packs.html" class="btn btn-dark">Voir les packs <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="grid-2 reveal">
+        <a href="packs.html#pack-4" class="card hover pack">
+          <div class="pack-top"><span class="big">4</span><span class="unit">caméras</span></div>
+          <p>+ enregistreur. Idéal pour un commerce ou un petit bureau.</p>
+          <span class="more">Détails <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a href="packs.html#pack-8" class="card hover pack featured">
+          <div class="pack-top"><span class="big">8</span><span class="unit">caméras</span></div>
+          <p>+ enregistreur. Pour les grands locaux, entrepôts et sites étendus.</p>
+          <span class="more">Détails <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
     <div class="wrap">
       <div class="section-head center reveal">
         <div class="eyebrow">Pourquoi BelaConnect</div>
-        <h2>Un travail soigné, sans mauvaise surprise</h2>
+        <h2>Un installateur de terrain, impliqué de A à Z</h2>
       </div>
-      <div class="why-grid">
-        <div class="why-item reveal">
-          <div class="num"><svg><use href="#i-euro"/></svg></div>
-          <h3>Devis gratuit et clair</h3>
-          <p>Un prix détaillé avant toute intervention. Vous savez exactement ce que vous payez.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="num"><svg><use href="#i-chat"/></svg></div>
-          <h3>Conseils sur mesure</h3>
-          <p>On vous propose le matériel adapté à votre besoin, pas le plus cher.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="num"><svg><use href="#i-tool"/></svg></div>
-          <h3>Installation propre</h3>
-          <p>Câbles rangés, matériel bien fixé, chantier laissé net après notre passage.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="num"><svg><use href="#i-phone"/></svg></div>
-          <h3>Suivi et réactivité</h3>
-          <p>On vous explique tout, et on reste joignable après l'installation.</p>
-        </div>
+      <div class="grid-4">
+        <div class="mini reveal"><div class="icon dark"><svg aria-hidden="true"><use href="#i-medal"/></svg></div><h3>5 ans d'expérience</h3><p>Des dizaines de situations différentes, des conseils concrets.</p></div>
+        <div class="mini reveal"><div class="icon dark"><svg aria-hidden="true"><use href="#i-users"/></svg></div><h3>Un seul interlocuteur</h3><p>La même personne du devis à la mise en service, et après.</p></div>
+        <div class="mini reveal"><div class="icon dark"><svg aria-hidden="true"><use href="#i-team"/></svg></div><h3>Équipe sur gros chantiers</h3><p>Renfort d'équipe pour les installations importantes.</p></div>
+        <div class="mini reveal"><div class="icon dark"><svg aria-hidden="true"><use href="#i-tool"/></svg></div><h3>Maintenance</h3><p>Suivi et entretien de vos équipements dans la durée.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Étapes -->
-  <section id="etapes">
+  <section>
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Comment ça marche</div>
-        <h2>Trois étapes, et c'est installé</h2>
+        <div class="eyebrow">Comment ça se passe</div>
+        <h2>Trois étapes, et vos locaux sont protégés</h2>
       </div>
-      <div class="steps">
-        <div class="step reveal">
-          <h3>Vous nous contactez</h3>
-          <p>Par téléphone ou via le formulaire. On échange sur votre besoin et on fixe un rendez-vous.</p>
-        </div>
-        <div class="step reveal">
-          <h3>Visite et devis gratuit</h3>
-          <p>On étudie les lieux, on vous conseille et on vous remet un devis clair, sans engagement.</p>
-        </div>
-        <div class="step reveal">
-          <h3>Installation et mise en service</h3>
-          <p>On installe, on teste tout, puis on vous montre comment utiliser votre équipement.</p>
-        </div>
+      <div class="grid-3 steps">
+        <div class="card step reveal"><h3>Visite gratuite sur place</h3><p>Nous étudions vos locaux, vos points sensibles et vos contraintes.</p></div>
+        <div class="card step reveal"><h3>Devis clair et détaillé</h3><p>Matériel, emplacement des équipements, délais : tout est indiqué, sans engagement.</p></div>
+        <div class="card step reveal"><h3>Installation et prise en main</h3><p>Pose propre, tests complets, configuration de votre smartphone et explications.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Pour qui -->
-  <section style="padding-top:0">
-    <div class="wrap audience">
-      <div class="aud reveal">
-        <svg class="bg"><use href="#i-home"/></svg>
-        <h3>Particuliers</h3>
-        <p>Maison, appartement, résidence secondaire : protégez votre logement et vos proches, même quand vous êtes absent.</p>
-        <ul>
-          <li>Caméras et alarme pour la maison</li>
-          <li>Surveillance à distance depuis le téléphone</li>
-          <li>Aide informatique à domicile</li>
-        </ul>
+  <section class="alt">
+    <div class="wrap split">
+      <div class="reveal">
+        <div class="eyebrow">Zone d'intervention</div>
+        <h2>Partout dans les Alpes-Maritimes</h2>
+        <p>Nous intervenons dans tout le département, du littoral à l'arrière-pays.</p>
+        <div class="cities"><span>Nice</span><span>Cannes</span><span>Antibes</span><span>Cagnes-sur-Mer</span><span>Grasse</span><span>Menton</span><span>Saint-Laurent-du-Var</span><span>Sophia Antipolis</span><span>Mandelieu</span><span>Vence</span><span>Carros</span><span>Monaco</span></div>
       </div>
-      <div class="aud pro reveal">
-        <svg class="bg"><use href="#i-shop"/></svg>
-        <h3>Professionnels</h3>
-        <p>Commerces, bureaux, entrepôts, artisans : protégez vos locaux, votre stock et vos équipes.</p>
-        <ul>
-          <li>Vidéosurveillance des locaux</li>
-          <li>Alarme anti-intrusion des locaux</li>
-          <li>Installation et maintenance du parc informatique</li>
-        </ul>
+      <div class="map-card reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 300">
+          <defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#22D3EE" stop-opacity=".35"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient></defs>
+          <path d="M40 210 L70 150 L110 120 L150 70 L210 50 L270 60 L320 90 L350 130 L360 175 L330 205 L290 215 L250 230 L200 245 L150 240 L100 235 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="2" stroke-dasharray="6 6"/>
+          <path d="M60 240 Q200 280 370 205" fill="none" stroke="rgba(96,165,250,.35)" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="255" cy="205" r="46" fill="url(#g)"/>
+          <g fill="#22D3EE"><circle cx="255" cy="205" r="6"/><circle cx="160" cy="225" r="4.5"/><circle cx="195" cy="215" r="4.5"/><circle cx="135" cy="185" r="4.5"/><circle cx="330" cy="190" r="4.5"/><circle cx="215" cy="200" r="4"/></g>
+          <g fill="#E2E8F0" font-family="Inter,sans-serif" font-size="13" font-weight="600">
+            <text x="262" y="196">Nice</text><text x="124" y="244">Cannes</text><text x="186" y="236">Antibes</text><text x="98" y="178">Grasse</text><text x="300" y="180">Menton</text>
+          </g>
+          <text x="20" y="34" fill="#94A3B8" font-family="Inter,sans-serif" font-size="13" font-weight="700" letter-spacing="2">ALPES-MARITIMES (06)</text>
+        </svg>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" style="padding-top:0">
+  <section>
     <div class="wrap">
       <div class="section-head center reveal">
         <div class="eyebrow">Questions fréquentes</div>
-        <h2>Vous vous posez des questions ?</h2>
+        <h2>Vous vous posez des questions&nbsp;?</h2>
       </div>
-      <div class="faq reveal">
-        <details>
-          <summary>Le devis est-il vraiment gratuit ?</summary>
-          <p>Oui. Le déplacement pour étudier votre besoin et le devis sont gratuits et sans engagement.</p>
-        </details>
-        <details>
-          <summary>Est-ce que je pourrai voir mes caméras depuis mon téléphone ?</summary>
-          <p>Oui. Toutes nos installations de vidéosurveillance sont consultables à distance depuis une application sur smartphone, et on vous la configure lors de la mise en service.</p>
-        </details>
-        <details>
-          <summary>Fournissez-vous le matériel ?</summary>
-          <p>Oui, nous pouvons fournir le matériel adapté à votre besoin. Si vous avez déjà acheté votre équipement, nous pouvons aussi simplement l'installer.</p>
-        </details>
-        <details>
-          <summary>Combien de temps dure une installation ?</summary>
-          <p>Cela dépend du projet : quelques heures pour une borne Wi-Fi ou une caméra, une journée pour une installation complète. La durée est indiquée sur le devis.</p>
-        </details>
-        <details>
-          <summary>Intervenez-vous chez les professionnels ?</summary>
-          <p>Oui, nous intervenons aussi bien chez les particuliers que dans les commerces, bureaux et locaux professionnels.</p>
-        </details>
-      </div>
+      <div class="faq reveal"><details><summary>Dans quelles villes intervenez-vous&nbsp;?</summary><p>Partout dans les Alpes-Maritimes : Nice, Cannes, Antibes, Grasse, Menton, Cagnes-sur-Mer, Sophia Antipolis et leurs environs.</p></details><details><summary>Le devis est-il gratuit&nbsp;?</summary><p>Oui. Nous nous déplaçons gratuitement dans vos locaux pour étudier votre besoin, puis nous vous remettons un devis détaillé, sans engagement.</p></details><details><summary>Fournissez-vous le matériel&nbsp;?</summary><p>Oui, nous fournissons du matériel professionnel (Dahua, Hikvision, Ajax, TP-Link) adapté à votre besoin. Nous pouvons aussi installer un matériel que vous possédez déjà.</p></details><details><summary>Pouvez-vous gérer de gros chantiers&nbsp;?</summary><p>Oui. Pour les installations importantes, nous intervenons en équipe afin de respecter vos délais.</p></details><details><summary>Assurez-vous la maintenance après l'installation&nbsp;?</summary><p>Oui, nous proposons la maintenance de vos installations de vidéosurveillance, d'alarme et de votre parc informatique.</p></details></div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
+  <section class="tight">
     <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Contact</div>
-        <h2>Parlons de votre projet</h2>
-        <p>Décrivez votre besoin en quelques mots : on vous recontacte rapidement pour un devis gratuit.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <a class="ci" href="tel:+33600000000" data-contact="phone">
-            <div class="ci-icon"><svg><use href="#i-phone"/></svg></div>
-            <div><small>Téléphone</small><strong>06 00 00 00 00</strong></div>
-          </a>
-          <a class="ci" href="mailto:contact@belaconnect.fr" data-contact="email">
-            <div class="ci-icon"><svg><use href="#i-mail"/></svg></div>
-            <div><small>Email</small><strong>contact@belaconnect.fr</strong></div>
-          </a>
-          <div class="ci">
-            <div class="ci-icon"><svg><use href="#i-pin"/></svg></div>
-            <div><small>Zone d'intervention</small><strong>Votre ville et ses alentours</strong></div>
-          </div>
+      <div class="cta-band reveal">
+        <div>
+          <h2>Un projet de sécurité pour vos locaux&nbsp;?</h2>
+          <p>Nous venons sur place, étudions vos besoins et vous remettons un devis gratuit et sans engagement.</p>
         </div>
-
-        <form id="devis" class="reveal" novalidate>
-          <div>
-            <label for="f-nom">Nom</label>
-            <input id="f-nom" name="nom" autocomplete="name" required>
-          </div>
-          <div>
-            <label for="f-tel">Téléphone</label>
-            <input id="f-tel" name="tel" type="tel" autocomplete="tel" required>
-          </div>
-          <div class="full">
-            <label for="f-mail">Email</label>
-            <input id="f-mail" name="email" type="email" autocomplete="email">
-          </div>
-          <div>
-            <label for="f-service">Service</label>
-            <select id="f-service" name="service">
-              <option>Vidéosurveillance</option>
-              <option>Alarme</option>
-              <option>Bornes Wi-Fi</option>
-              <option>Informatique</option>
-              <option>Vidéosurveillance + alarme</option>
-              <option>Plusieurs / je ne sais pas</option>
-            </select>
-          </div>
-          <div>
-            <label for="f-type">Vous êtes</label>
-            <select id="f-type" name="type">
-              <option>Particulier</option>
-              <option>Professionnel</option>
-            </select>
-          </div>
-          <div class="full">
-            <label for="f-msg">Votre besoin</label>
-            <textarea id="f-msg" name="message" placeholder="Ex. : 3 caméras extérieures pour une maison, consultables sur téléphone"></textarea>
-          </div>
-          <div class="full">
-            <button type="submit" class="btn btn-primary">Envoyer ma demande <svg><use href="#i-arrow"/></svg></button>
-          </div>
-          <p class="form-note full">Votre application email s'ouvrira avec votre demande pré-remplie.</p>
-        </form>
+        <div class="actions">
+          <a href="contact.html" class="btn btn-primary">Demander un devis gratuit <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a href="tel:+33600000000" class="btn btn-ghost"><svg aria-hidden="true"><use href="#i-phone"/></svg> 06 00 00 00 00</a>
+        </div>
       </div>
     </div>
   </section>
+
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <div>© <span id="year">2026</span> BelaConnect — Installation vidéosurveillance &amp; alarme · Wi-Fi · Informatique</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16233F"/><path d="M20 16h14a10 10 0 0 1 4 19 10 10 0 0 1-4 19H20z" fill="none" stroke="#22D3EE" stroke-width="6" stroke-linejoin="round"/></svg>Bela<span>Connect</span></a>
+        <p>Installation de vidéosurveillance, d'alarmes et d'équipements informatiques pour les professionnels des Alpes-Maritimes.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
+          <li><a href="alarme.html">Alarme</a></li>
+          <li><a href="informatique.html">Informatique &amp; réseau</a></li>
+          <li><a href="packs.html">Packs caméras</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Infos</h4>
+        <ul>
+          <li><a href="contact.html">Contact &amp; devis</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33600000000">06 00 00 00 00</a></li>
+          <li><a href="mailto:contact@belaconnect.fr">contact@belaconnect.fr</a></li>
+          <li>Alpes-Maritimes (06)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> BelaConnect — Tous droits réservés</span>
+      <span>Dahua · Hikvision · Ajax · TP-Link</span>
+    </div>
   </div>
 </footer>
 
-<script>
-  // Menu mobile
-  const burger = document.querySelector('.burger');
-  const menu = document.getElementById('menu');
-  burger.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open);
-  });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    menu.classList.remove('open');
-    burger.setAttribute('aria-expanded', false);
-  }));
-
-  // Année du pied de page
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Apparition au défilement
-  const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: .12 }) : null;
-  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
-
-  // Formulaire : ouvre l'email pré-rempli
-  const form = document.getElementById('devis');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const nom = form.nom.value.trim(), tel = form.tel.value.trim();
-    if (!nom || !tel) {
-      (nom ? form.tel : form.nom).focus();
-      alert('Merci d\'indiquer au moins votre nom et votre téléphone.');
-      return;
-    }
-    const to = document.querySelector('[data-contact="email"]').getAttribute('href').replace('mailto:', '');
-    const subject = `Demande de devis — ${form.service.value} (${form.type.value})`;
-    const body = [
-      `Nom : ${nom}`,
-      `Téléphone : ${tel}`,
-      `Email : ${form.email.value.trim() || '—'}`,
-      `Service : ${form.service.value}`,
-      `Profil : ${form.type.value}`,
-      '',
-      form.message.value.trim()
-    ].join('\n');
-    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
-</script>
+<a href="tel:+33600000000" class="btn btn-primary call-fab"><svg aria-hidden="true"><use href="#i-phone"/></svg> Appeler BelaConnect</a>
+<script src="assets/main.js"></script>
 </body>
 </html>

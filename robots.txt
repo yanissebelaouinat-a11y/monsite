@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /carnet/
+Sitemap: https://belaconnect.fr/sitemap.xml
