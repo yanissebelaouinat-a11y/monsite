@@ -96,10 +96,11 @@ p{margin:0;}
 .hero-phone svg{width:22px;height:22px;}
 
 /* Bandeau marques */
-.brands{background:var(--navy-2);color:#8FA0B5;padding:16px 0;}
-.brands .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;}
-.brands small{font-size:15px;}
-.brands strong{color:#E4E9EF;font-size:17px;font-weight:700;letter-spacing:.04em;}
+.brands{background:#fff;border-bottom:1px solid var(--line);padding:18px 0;}
+.brands .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 44px;}
+.brands small{font-size:15px;color:var(--ink-faint);}
+.brands strong{color:#3A4552;font-size:20px;font-weight:700;letter-spacing:.06em;}
+.brands img{height:30px;width:auto;}
 
 /* Sections */
 section{padding:80px 0;}

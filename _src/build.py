@@ -80,6 +80,21 @@ NAV = [
 
 CURRENT = ' aria-current="page"'
 
+# Logos des marques : déposer le fichier dans assets/marques/<nom>.png pour remplacer le texte
+BRAND_FILES = {"Dahua": "dahua", "Hikvision": "hikvision", "Ajax": "ajax", "TP-Link": "tplink"}
+
+
+def brands(names, label="Matériel installé"):
+    items = []
+    for n in names:
+        f = ROOT / "assets" / "marques" / (BRAND_FILES[n] + ".png")
+        if f.exists():
+            items.append(f'<img src="assets/marques/{f.name}" alt="{n}" height="30" loading="lazy">')
+        else:
+            items.append(f"<strong>{n.upper()}</strong>")
+    return f'''
+  <div class="brands" aria-label="{label}"><div class="wrap"><small>{label}</small>{"".join(items)}</div></div>'''
+
 
 def ic(name):
     return f'<svg aria-hidden="true"><use href="#i-{name}"/></svg>'
@@ -333,6 +348,7 @@ home = f"""
       </aside>
     </div>
   </section>
+{brands(["Dahua", "Hikvision", "Ajax", "TP-Link"])}
 
   <section>
     <div class="wrap">
@@ -464,7 +480,7 @@ video = page_hero(
     "Vidéosurveillance <em>pour professionnels</em> dans les Alpes-Maritimes",
     "Installation de caméras Dahua et Hikvision, intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès à distance depuis votre smartphone.",
     "Spécialité BelaConnect") + f"""
-  <div class="brands"><div class="wrap"><small>Marques</small><strong>DAHUA</strong><strong>HIKVISION</strong></div></div>
+{brands(["Dahua", "Hikvision"], "Marques installées")}
 
   <section>
     <div class="wrap">
@@ -594,7 +610,7 @@ alarm = page_hero(
     "Alarme anti-intrusion <em>Ajax</em> pour vos locaux",
     "Des systèmes d'alarme fiables, sans fil ou filaires, pour protéger commerces, bureaux et entrepôts. Vous êtes alerté immédiatement sur votre téléphone.",
     "Spécialité BelaConnect") + f"""
-  <div class="brands"><div class="wrap"><small>Marque</small><strong>AJAX</strong></div></div>
+{brands(["Ajax"], "Marque installée")}
 
   <section>
     <div class="wrap">
