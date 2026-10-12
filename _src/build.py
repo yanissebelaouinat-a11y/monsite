@@ -76,6 +76,8 @@ NAV = [
 
 
 CURRENT = ' aria-current="page"'
+# Couleur de survol propre à chaque service
+NAV_CLASS = {"videosurveillance.html": ' class="svc-video"', "alarme.html": ' class="svc-alarm"', "informatique.html": ' class="svc-it"'}
 
 # Logos des marques : déposer le fichier dans assets/marques/<nom>.png pour remplacer le texte
 BRAND_FILES = {"Dahua": "dahua", "Hikvision": "hikvision", "Ajax": "ajax", "TP-Link": "tplink"}
@@ -196,7 +198,7 @@ def business_schema():
 
 def layout(filename, title, description, body, extra_head=""):
     links = "\n      ".join(
-        f'<a href="{href}"{' class="nav-red"' if href == "videosurveillance.html" else ""}{CURRENT if href == filename else ""}>{label}</a>'
+        f'<a href="{href}"{NAV_CLASS.get(href, "")}{CURRENT if href == filename else ""}>{label}</a>'
         for href, label in NAV)
     contact_current = CURRENT if filename == "contact.html" else ""
     canonical = SITE_URL + "/" + ("" if filename == "index.html" else filename)
@@ -362,21 +364,21 @@ home = f"""
         <p>La vidéosurveillance et l'alarme sont notre cœur de métier. L'informatique vient en complément, pour que tout fonctionne sur un même réseau.</p>
       </div>
       <div class="grid-3">
-        <a href="videosurveillance.html" class="card main">
+        <a href="videosurveillance.html" class="card main svc-video">
           <div class="icon">{ic('cam')}</div>
           <h3>Vidéosurveillance</h3>
           <p>Caméras intérieures et extérieures, filaires ou sans fil, avec enregistreur. Vous voyez les images en direct sur votre téléphone.</p>
           {checks(["Dahua et Hikvision", "Vision de nuit", "Packs 4 et 8 caméras"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
-        <a href="alarme.html" class="card main">
+        <a href="alarme.html" class="card main svc-alarm">
           <div class="icon">{ic('alarm')}</div>
           <h3>Alarme</h3>
           <p>Alarmes Ajax contre l'intrusion. Vous êtes prévenu sur votre téléphone dès qu'un détecteur se déclenche.</p>
           {checks(["Sans fil ou filaire", "Badge ou code par salarié", "Couplage aux caméras"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
-        <a href="informatique.html" class="card">
+        <a href="informatique.html" class="card svc-it">
           <div class="icon">{ic('pc')}</div>
           <h3>Informatique et réseau</h3>
           <p>Câblage, Wi-Fi pro, postes de travail, sauvegardes et dépannage pour les entreprises.</p>
