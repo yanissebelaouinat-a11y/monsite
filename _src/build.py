@@ -15,7 +15,7 @@ PHONE_LINK = "+33600000000"           # TODO : même numéro au format internati
 EMAIL = "contact@belaconnect.fr"      # TODO : adresse à créer chez Hostinger
 OWNER_NAME = "[Prénom Nom]"           # TODO : nom de l'entrepreneur
 OWNER_ADDRESS = "[Adresse professionnelle], Alpes-Maritimes"  # TODO
-SIRET = "[SIRET en cours d'attribution]"  # TODO
+SIREN = "947 672 481"
 SITE_URL = "https://belaconnect.fr"
 CITIES = ["Nice", "Cannes", "Antibes", "Cagnes-sur-Mer", "Grasse", "Menton",
           "Saint-Laurent-du-Var", "Sophia Antipolis", "Mandelieu", "Vence", "Carros", "Monaco"]
@@ -88,7 +88,7 @@ def checks(items):
 
 
 def faq(items):
-    return '<div class="faq reveal">' + "".join(
+    return '<div class="faq">' + "".join(
         f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in items) + "</div>"
 
 
@@ -101,11 +101,11 @@ def faq_jsonld(items):
 
 
 def cta_band(title="Un projet de sécurité pour vos locaux ?",
-             text="Nous venons sur place, étudions vos besoins et vous remettons un devis gratuit et sans engagement."):
+             text="Je viens sur place, j'étudie vos besoins et je vous remets un devis gratuit, sans engagement."):
     return f"""
   <section class="tight">
     <div class="wrap">
-      <div class="cta-band reveal">
+      <div class="cta-band">
         <div>
           <h2>{title}</h2>
           <p>{text}</p>
@@ -120,7 +120,7 @@ def cta_band(title="Un projet de sécurité pour vos locaux ?",
 
 
 def page_hero(crumb, title, lead, badge=None):
-    b = f'<div class="badge"><i></i> {badge}</div>' if badge else ""
+    b = ""
     return f"""
   <section class="hero small">
     <div class="wrap hero-inner">
@@ -164,7 +164,7 @@ def layout(filename, title, description, body, extra_head=""):
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">{org}</script>{extra_head}
 </head>
@@ -195,7 +195,7 @@ def layout(filename, title, description, body, extra_head=""):
     <div class="foot-grid">
       <div>
         <a href="index.html" class="logo">{LOGO_SVG}Bela<span>Connect</span></a>
-        <p>Installation de vidéosurveillance, d'alarmes et d'équipements informatiques pour les professionnels des Alpes-Maritimes.</p>
+        <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels des Alpes-Maritimes.</p>
       </div>
       <div>
         <h4>Services</h4>
@@ -243,125 +243,102 @@ HOME_FAQ = [
     ("Dans quelles villes intervenez-vous ?",
      "Partout dans les Alpes-Maritimes : Nice, Cannes, Antibes, Grasse, Menton, Cagnes-sur-Mer, Sophia Antipolis et leurs environs."),
     ("Le devis est-il gratuit ?",
-     "Oui. Nous nous déplaçons gratuitement dans vos locaux pour étudier votre besoin, puis nous vous remettons un devis détaillé, sans engagement."),
+     "Oui. Je me déplace gratuitement dans vos locaux pour étudier votre besoin, puis je vous remets un devis détaillé, sans engagement."),
     ("Fournissez-vous le matériel ?",
-     "Oui, nous fournissons du matériel professionnel (Dahua, Hikvision, Ajax, TP-Link) adapté à votre besoin. Nous pouvons aussi installer un matériel que vous possédez déjà."),
+     "Oui, je fournis du matériel professionnel (Dahua, Hikvision, Ajax, TP-Link) adapté à votre besoin. Je peux aussi installer un matériel que vous possédez déjà."),
     ("Pouvez-vous gérer de gros chantiers ?",
-     "Oui. Pour les installations importantes, nous intervenons en équipe afin de respecter vos délais."),
+     "Oui. Pour les installations importantes, je viens en équipe afin de respecter vos délais."),
     ("Assurez-vous la maintenance après l'installation ?",
-     "Oui, nous proposons la maintenance de vos installations de vidéosurveillance, d'alarme et de votre parc informatique."),
+     "Oui, je propose la maintenance de vos installations de vidéosurveillance, d'alarme et de votre parc informatique."),
 ]
 
 home = f"""
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="badge"><i></i> Professionnels · Alpes-Maritimes</div>
-        <h1>Vidéosurveillance &amp; alarme <em>pour les professionnels.</em></h1>
-        <p class="lead">BelaConnect protège vos commerces, bureaux et entrepôts dans les Alpes-Maritimes : caméras consultables à distance, alarmes connectées et informatique d'entreprise. Installées et suivies par un technicien expérimenté.</p>
+        <p class="kicker">Installateur indépendant · Alpes-Maritimes</p>
+        <h1>Vidéosurveillance et alarme pour les professionnels du <em>06</em></h1>
+        <p class="lead">J'installe des caméras et des alarmes dans les commerces, bureaux, entrepôts et chantiers des Alpes-Maritimes. Je m'occupe aussi de l'informatique et du réseau de votre entreprise.</p>
         <div class="hero-cta">
-          <a href="contact.html" class="btn btn-primary">Demander un devis gratuit {ic('arrow')}</a>
+          <a href="contact.html" class="btn btn-primary">Demander un devis gratuit</a>
           <a href="packs.html" class="btn btn-ghost">Voir les packs caméras</a>
         </div>
-        <div class="hero-points">
-          <span>{ic('check')} 5 ans d'expérience</span>
-          <span>{ic('check')} Devis gratuit sur place</span>
-          <span>{ic('check')} Matériel professionnel</span>
-        </div>
       </div>
-      <div class="hero-card" aria-hidden="true">
-        <div class="hc-head"><span>Magasin — Nice</span><span class="hc-live"><i></i> En ligne</span></div>
-        <div class="hc-cams">
-          <div class="cam">{ic('cam')}<span class="rec">REC</span><b>Entrée</b></div>
-          <div class="cam">{ic('cam')}<span class="rec">REC</span><b>Caisse</b></div>
-          <div class="cam">{ic('cam')}<span class="rec">REC</span><b>Réserve</b></div>
-          <div class="cam">{ic('cam')}<span class="rec">REC</span><b>Parking</b></div>
-        </div>
-        <div class="hc-rows">
-          <div class="hc-row"><span>{ic('alarm')} Alarme des locaux</span><em>Activée</em></div>
-          <div class="hc-row"><span>{ic('hdd')} Enregistreur</span><em>OK</em></div>
-        </div>
-      </div>
+      <aside class="hero-info">
+        <dl>
+          <dt>Expérience</dt><dd>5 ans d'installations</dd>
+          <dt>Devis</dt><dd>Gratuit, après visite sur place</dd>
+          <dt>Zone</dt><dd>Tout le département des Alpes-Maritimes</dd>
+          <dt>Matériel</dt><dd>Dahua, Hikvision, Ajax, TP-Link</dd>
+        </dl>
+        <a href="tel:{PHONE_LINK}" class="hero-phone">{ic('phone')} {PHONE_DISPLAY}</a>
+      </aside>
     </div>
   </section>
 
-  <div class="brands" aria-label="Marques installées">
-    <div class="wrap">
-      <small>Matériel installé</small>
-      <strong>DAHUA</strong><strong>HIKVISION</strong><strong>AJAX</strong><strong>TP-LINK</strong>
-    </div>
-  </div>
-
   <section>
     <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Nos services</div>
-        <h2>Notre spécialité : la sécurité de vos locaux</h2>
-        <p>De l'étude sur place à la mise en service, un seul interlocuteur pour la vidéosurveillance, l'alarme et l'informatique de votre entreprise.</p>
+      <div class="section-head">
+        <h2>Ce que je fais</h2>
+        <p>La vidéosurveillance et l'alarme sont mon cœur de métier. L'informatique vient en complément, pour que tout fonctionne sur un même réseau.</p>
       </div>
       <div class="grid-3">
-        <a href="videosurveillance.html" class="card main reveal">
-          <span class="tag">Spécialité</span>
-          <div class="icon dark">{ic('cam')}</div>
+        <a href="videosurveillance.html" class="card main">
+          <div class="icon">{ic('cam')}</div>
           <h3>Vidéosurveillance</h3>
-          <p>Caméras intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès à distance sur smartphone.</p>
-          <span class="more">Découvrir {ic('arrow')}</span>
+          <p>Caméras intérieures et extérieures, filaires ou sans fil, avec enregistreur. Vous voyez les images en direct sur votre téléphone.</p>
+          <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
-        <a href="alarme.html" class="card main reveal">
-          <span class="tag">Spécialité</span>
-          <div class="icon dark">{ic('alarm')}</div>
+        <a href="alarme.html" class="card main">
+          <div class="icon">{ic('alarm')}</div>
           <h3>Alarme</h3>
-          <p>Systèmes d'alarme Ajax pour protéger vos locaux contre l'intrusion, avec alertes instantanées sur votre téléphone.</p>
-          <span class="more">Découvrir {ic('arrow')}</span>
+          <p>Alarmes Ajax contre l'intrusion. Vous êtes prévenu sur votre téléphone dès qu'un détecteur se déclenche.</p>
+          <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
-        <a href="informatique.html" class="card reveal">
+        <a href="informatique.html" class="card">
           <div class="icon">{ic('pc')}</div>
-          <h3>Informatique &amp; réseau</h3>
-          <p>Postes, serveurs, réseau, Wi-Fi professionnel, sauvegardes et dépannage : toute l'informatique de votre entreprise.</p>
-          <span class="more">Découvrir {ic('arrow')}</span>
+          <h3>Informatique et réseau</h3>
+          <p>Câblage, Wi-Fi pro, postes de travail, sauvegardes et dépannage pour les entreprises.</p>
+          <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
       </div>
     </div>
   </section>
 
   <section class="alt">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="eyebrow">Pour qui</div>
-        <h2>Des solutions adaptées à votre activité</h2>
-        <p>Chaque local est différent : nous dimensionnons l'installation selon votre surface, vos accès et vos horaires.</p>
+    <div class="wrap split top">
+      <div>
+        <h2>Pour quels locaux ?</h2>
+        <p>Chaque site est différent. Je viens voir les lieux avant de proposer quoi que ce soit : surface, accès, éclairage, horaires d'ouverture.</p>
       </div>
-      <div class="grid-3">
-        <div class="card mini reveal"><div class="icon">{ic('shop')}</div><h3>Commerces</h3><p>Surveillance de la surface de vente, de la caisse et de la réserve.</p></div>
-        <div class="card mini reveal"><div class="icon">{ic('food')}</div><h3>Restaurants &amp; hôtels</h3><p>Salle, cuisine, entrées et parkings, avec Wi-Fi clients séparé.</p></div>
-        <div class="card mini reveal"><div class="icon">{ic('office')}</div><h3>Bureaux &amp; cabinets</h3><p>Alarme des locaux, réseau, postes de travail et sauvegardes.</p></div>
-        <div class="card mini reveal"><div class="icon">{ic('box')}</div><h3>Entrepôts &amp; ateliers</h3><p>Caméras longue portée, vision de nuit, quais et périmètre.</p></div>
-        <div class="card mini reveal"><div class="icon">{ic('crane')}</div><h3>Chantiers</h3><p>Protection du matériel et des engins sur site.</p></div>
-        <div class="card mini reveal"><div class="icon">{ic('building')}</div><h3>Copropriétés</h3><p>Halls, parkings et locaux communs.</p></div>
-      </div>
+      <ul class="plain-list">
+        <li><b>Commerces</b> : surface de vente, caisse, réserve.</li>
+        <li><b>Restaurants et hôtels</b> : salle, cuisine, entrées, parking.</li>
+        <li><b>Bureaux et cabinets</b> : alarme des locaux, réseau, postes.</li>
+        <li><b>Entrepôts et ateliers</b> : quais, périmètre, vision de nuit.</li>
+        <li><b>Chantiers</b> : protection du matériel et des engins.</li>
+        <li><b>Copropriétés</b> : halls, parkings, locaux communs.</li>
+      </ul>
     </div>
   </section>
 
   <section>
     <div class="wrap split">
-      <div class="reveal">
-        <div class="eyebrow">Packs vidéosurveillance</div>
-        <h2>Deux packs prêts à installer</h2>
-        <p>Pour aller à l'essentiel, nous proposons deux packs complets avec caméras intérieures ou extérieures, enregistreur, installation et configuration sur votre smartphone.</p>
+      <div>
+        <h2>Deux packs caméras</h2>
+        <p>Caméras intérieures ou extérieures, enregistreur, pose et réglage sur votre téléphone. Le prix dépend de vos locaux : je l'établis après la visite.</p>
         <div class="hero-cta">
-          <a href="packs.html" class="btn btn-dark">Voir les packs {ic('arrow')}</a>
+          <a href="packs.html" class="btn btn-dark">Voir le détail des packs</a>
         </div>
       </div>
-      <div class="grid-2 reveal">
-        <a href="packs.html#pack-4" class="card hover pack">
+      <div class="grid-2">
+        <a href="packs.html#pack-4" class="card pack">
           <div class="pack-top"><span class="big">4</span><span class="unit">caméras</span></div>
-          <p>+ enregistreur. Idéal pour un commerce ou un petit bureau.</p>
-          <span class="more">Détails {ic('arrow')}</span>
+          <p>+ enregistreur. Pour un commerce ou un petit bureau.</p>
         </a>
-        <a href="packs.html#pack-8" class="card hover pack featured">
+        <a href="packs.html#pack-8" class="card pack featured">
           <div class="pack-top"><span class="big">8</span><span class="unit">caméras</span></div>
-          <p>+ enregistreur. Pour les grands locaux, entrepôts et sites étendus.</p>
-          <span class="more">Détails {ic('arrow')}</span>
+          <p>+ enregistreur. Pour les grands locaux et les extérieurs.</p>
         </a>
       </div>
     </div>
@@ -369,62 +346,32 @@ home = f"""
 
   <section class="alt">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="eyebrow">Pourquoi BelaConnect</div>
-        <h2>Un installateur de terrain, impliqué de A à Z</h2>
-      </div>
-      <div class="grid-4">
-        <div class="mini reveal"><div class="icon dark">{ic('medal')}</div><h3>5 ans d'expérience</h3><p>Des dizaines de situations différentes, des conseils concrets.</p></div>
-        <div class="mini reveal"><div class="icon dark">{ic('users')}</div><h3>Un seul interlocuteur</h3><p>La même personne du devis à la mise en service, et après.</p></div>
-        <div class="mini reveal"><div class="icon dark">{ic('team')}</div><h3>Équipe sur gros chantiers</h3><p>Renfort d'équipe pour les installations importantes.</p></div>
-        <div class="mini reveal"><div class="icon dark">{ic('tool')}</div><h3>Maintenance</h3><p>Suivi et entretien de vos équipements dans la durée.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Comment ça se passe</div>
-        <h2>Trois étapes, et vos locaux sont protégés</h2>
+      <div class="section-head">
+        <h2>Comment ça se passe</h2>
       </div>
       <div class="grid-3 steps">
-        <div class="card step reveal"><h3>Visite gratuite sur place</h3><p>Nous étudions vos locaux, vos points sensibles et vos contraintes.</p></div>
-        <div class="card step reveal"><h3>Devis clair et détaillé</h3><p>Matériel, emplacement des équipements, délais : tout est indiqué, sans engagement.</p></div>
-        <div class="card step reveal"><h3>Installation et prise en main</h3><p>Pose propre, tests complets, configuration de votre smartphone et explications.</p></div>
+        <div class="step"><h3>Visite sur place</h3><p>Je viens voir vos locaux, gratuitement. On fait le tour des points sensibles ensemble.</p></div>
+        <div class="step"><h3>Devis détaillé</h3><p>Matériel, emplacements, délais. Vous décidez sans engagement.</p></div>
+        <div class="step"><h3>Installation</h3><p>Pose, tests, réglage de votre téléphone. Je vous montre comment tout utiliser.</p></div>
       </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap split">
-      <div class="reveal">
-        <div class="eyebrow">Zone d'intervention</div>
-        <h2>Partout dans les Alpes-Maritimes</h2>
-        <p>Nous intervenons dans tout le département, du littoral à l'arrière-pays.</p>
-        <div class="cities">{"".join(f"<span>{c}</span>" for c in CITIES)}</div>
-      </div>
-      <div class="map-card reveal" aria-hidden="true">
-        <svg viewBox="0 0 400 300">
-          <defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#22D3EE" stop-opacity=".35"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient></defs>
-          <path d="M40 210 L70 150 L110 120 L150 70 L210 50 L270 60 L320 90 L350 130 L360 175 L330 205 L290 215 L250 230 L200 245 L150 240 L100 235 Z" fill="rgba(255,255,255,.05)" stroke="rgba(34,211,238,.6)" stroke-width="2" stroke-dasharray="6 6"/>
-          <path d="M60 240 Q200 280 370 205" fill="none" stroke="rgba(96,165,250,.35)" stroke-width="10" stroke-linecap="round"/>
-          <circle cx="255" cy="205" r="46" fill="url(#g)"/>
-          <g fill="#22D3EE"><circle cx="255" cy="205" r="6"/><circle cx="160" cy="225" r="4.5"/><circle cx="195" cy="215" r="4.5"/><circle cx="135" cy="185" r="4.5"/><circle cx="330" cy="190" r="4.5"/><circle cx="215" cy="200" r="4"/></g>
-          <g fill="#E2E8F0" font-family="Inter,sans-serif" font-size="13" font-weight="600">
-            <text x="262" y="196">Nice</text><text x="124" y="244">Cannes</text><text x="186" y="236">Antibes</text><text x="98" y="178">Grasse</text><text x="300" y="180">Menton</text>
-          </g>
-          <text x="20" y="34" fill="#94A3B8" font-family="Inter,sans-serif" font-size="13" font-weight="700" letter-spacing="2">ALPES-MARITIMES (06)</text>
-        </svg>
-      </div>
+      <p class="aside-note">Je travaille seul la plupart du temps. Pour les gros chantiers, je viens en équipe. Après l'installation, je peux assurer la maintenance.</p>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="eyebrow">Questions fréquentes</div>
-        <h2>Vous vous posez des questions ?</h2>
+      <div class="section-head">
+        <h2>Zone d'intervention</h2>
+        <p>Tout le département des Alpes-Maritimes, du littoral à l'arrière-pays.</p>
+      </div>
+      <p class="cities-line">{" · ".join(CITIES)}</p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
       </div>
       {faq(HOME_FAQ)}
     </div>
@@ -437,15 +384,15 @@ home = f"""
 # =============================================================================
 VIDEO_FAQ = [
     ("Puis-je voir mes caméras depuis mon téléphone ?",
-     "Oui. Nous configurons l'application du fabricant sur votre smartphone (et celui de vos collaborateurs si besoin) pour voir le direct et les enregistrements à distance."),
+     "Oui. Je configure l'application du fabricant sur votre smartphone (et celui de vos collaborateurs si besoin) pour voir le direct et les enregistrements à distance."),
     ("Combien de temps les images sont-elles conservées ?",
-     "Cela dépend du nombre de caméras et de la capacité du disque de l'enregistreur. Nous réglons la durée selon vos besoins et la réglementation, qui recommande en général de ne pas dépasser un mois."),
+     "Cela dépend du nombre de caméras et de la capacité du disque de l'enregistreur. Je règle la durée selon vos besoins et la réglementation, qui recommande en général de ne pas dépasser un mois."),
     ("Filaire ou sans fil, que choisir ?",
-     "Le filaire est le plus fiable pour une installation durable ; le sans fil est plus rapide à poser quand passer des câbles est compliqué. Nous vous conseillons lors de la visite."),
+     "Le filaire est le plus fiable pour une installation durable ; le sans fil est plus rapide à poser quand passer des câbles est compliqué. Je vous conseille lors de la visite."),
     ("Les caméras fonctionnent-elles la nuit ?",
-     "Oui, nos caméras disposent de la vision de nuit. Certains modèles offrent même une image en couleur dans l'obscurité."),
+     "Oui, les caméras que j'installe ont la vision de nuit. Certains modèles offrent même une image en couleur dans l'obscurité."),
     ("Ai-je des obligations légales en tant que professionnel ?",
-     "Oui : informer les personnes filmées par un panneau, informer vos salariés, et demander une autorisation en préfecture pour filmer un lieu ouvert au public. Nous vous indiquons les démarches lors de l'installation."),
+     "Oui : informer les personnes filmées par un panneau, informer vos salariés, et demander une autorisation en préfecture pour filmer un lieu ouvert au public. Je vous indique les démarches lors de l'installation."),
 ]
 
 video = page_hero(
@@ -457,47 +404,44 @@ video = page_hero(
 
   <section>
     <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Ce que nous installons</div>
-        <h2>Une installation complète, prête à l'emploi</h2>
-        <p>Nous choisissons, posons et configurons l'ensemble de votre système de vidéosurveillance.</p>
+      <div class="section-head">
+        <h2>Ce que j'installe</h2>
+        <p>Je choisis le matériel, je le pose et je le règle. Vous n'avez rien à gérer.</p>
       </div>
       <div class="grid-3">
-        <div class="card reveal"><div class="icon">{ic('cam')}</div><h3>Caméras extérieures</h3><p>Façades, entrées, parkings, quais de livraison et périmètre. Modèles résistants aux intempéries.</p></div>
-        <div class="card reveal"><div class="icon">{ic('dome')}</div><h3>Caméras intérieures</h3><p>Surface de vente, caisse, réserve, bureaux, couloirs. Modèles discrets type dôme.</p></div>
-        <div class="card reveal"><div class="icon">{ic('hdd')}</div><h3>Enregistreur</h3><p>Enregistrement continu ou sur détection, avec disque dur dimensionné selon vos besoins.</p></div>
+        <div class="card"><div class="icon">{ic('cam')}</div><h3>Caméras extérieures</h3><p>Façades, entrées, parkings, quais de livraison et périmètre. Modèles résistants aux intempéries.</p></div>
+        <div class="card"><div class="icon">{ic('dome')}</div><h3>Caméras intérieures</h3><p>Surface de vente, caisse, réserve, bureaux, couloirs. Modèles discrets type dôme.</p></div>
+        <div class="card"><div class="icon">{ic('hdd')}</div><h3>Enregistreur</h3><p>Enregistrement continu ou sur détection, avec disque dur dimensionné selon vos besoins.</p></div>
       </div>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="eyebrow">Fonctionnalités</div>
-        <h2>Gardez un œil sur votre activité, où que vous soyez</h2>
+      <div class="section-head">
+        <h2>Au quotidien</h2>
       </div>
       <div class="grid-4">
-        <div class="mini reveal"><div class="icon dark">{ic('mobile')}</div><h3>Accès à distance</h3><p>Direct et enregistrements sur smartphone, tablette ou ordinateur.</p></div>
-        <div class="mini reveal"><div class="icon dark">{ic('eye')}</div><h3>Image haute définition</h3><p>Des images nettes pour identifier une personne ou une plaque.</p></div>
-        <div class="mini reveal"><div class="icon dark">{ic('moon')}</div><h3>Vision de nuit</h3><p>Une surveillance efficace 24 h/24, même sans éclairage.</p></div>
-        <div class="mini reveal"><div class="icon dark">{ic('bell')}</div><h3>Détection intelligente</h3><p>Alertes sur détection de personnes ou de véhicules, moins de fausses alertes.</p></div>
+        <div class="mini"><div class="icon dark">{ic('mobile')}</div><h3>Accès à distance</h3><p>Direct et enregistrements sur smartphone, tablette ou ordinateur.</p></div>
+        <div class="mini"><div class="icon dark">{ic('eye')}</div><h3>Image haute définition</h3><p>Des images nettes pour identifier une personne ou une plaque.</p></div>
+        <div class="mini"><div class="icon dark">{ic('moon')}</div><h3>Vision de nuit</h3><p>Une surveillance efficace 24 h/24, même sans éclairage.</p></div>
+        <div class="mini"><div class="icon dark">{ic('bell')}</div><h3>Détection intelligente</h3><p>Alertes sur détection de personnes ou de véhicules, moins de fausses alertes.</p></div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Filaire ou sans fil</div>
-        <h2>La technologie adaptée à vos locaux</h2>
+      <div class="section-head">
+        <h2>Filaire ou sans fil ?</h2>
       </div>
       <div class="compare">
-        <div class="card reveal">
+        <div class="card">
           <h3>{ic('cable')} Caméras filaires</h3>
           {checks(["Connexion la plus stable et la plus fiable", "Alimentation par le câble réseau (PoE)", "Idéal pour les installations durables et nombreuses"])}
           <p class="ideal"><b>Idéal pour :</b> entrepôts, bâtiments neufs ou en rénovation, sites avec beaucoup de caméras.</p>
         </div>
-        <div class="card reveal">
+        <div class="card">
           <h3>{ic('nowire')} Caméras sans fil</h3>
           {checks(["Pose rapide, sans gros travaux", "Moins de câbles apparents", "Facile à compléter plus tard"])}
           <p class="ideal"><b>Idéal pour :</b> commerces en activité, locaux loués, bâtiments où passer des câbles est difficile.</p>
@@ -508,11 +452,11 @@ video = page_hero(
 
   <section class="tight">
     <div class="wrap">
-      <div class="note reveal">
+      <div class="note">
         {ic('info')}
         <div>
           <h3>Vidéosurveillance et réglementation</h3>
-          <p>En entreprise, filmer implique quelques obligations : panneau d'information, information des salariés et, pour un lieu ouvert au public, autorisation préfectorale. Nous positionnons les caméras en respectant ces règles et vous indiquons les démarches à effectuer.</p>
+          <p>En entreprise, filmer implique quelques obligations : panneau d'information, information des salariés et, pour un lieu ouvert au public, autorisation préfectorale. Je place les caméras en respectant ces règles et je vous indique les démarches.</p>
         </div>
       </div>
     </div>
@@ -520,12 +464,11 @@ video = page_hero(
 
   <section class="tight">
     <div class="wrap split">
-      <div class="reveal">
-        <div class="eyebrow">Maintenance</div>
-        <h2>Une installation suivie dans le temps</h2>
-        <p>Vérification des caméras et de l'enregistreur, nettoyage, mises à jour, remplacement d'un équipement défectueux, ajout de caméras : nous restons à vos côtés après l'installation.</p>
+      <div >
+        <h2>Maintenance</h2>
+        <p>Vérification des caméras et de l'enregistreur, nettoyage, mises à jour, remplacement d'un équipement défectueux, ajout de caméras . Je reste joignable après l'installation.</p>
       </div>
-      <div class="card reveal">
+      <div class="card">
         {checks(["Contrôle du bon fonctionnement des caméras", "Vérification des enregistrements et du disque", "Mises à jour de sécurité", "Ajout ou déplacement de caméras", "Intervention en cas de panne"])}
       </div>
     </div>
@@ -533,14 +476,13 @@ video = page_hero(
 
   <section>
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="eyebrow">Questions fréquentes</div>
-        <h2>Vidéosurveillance : vos questions</h2>
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
       </div>
       {faq(VIDEO_FAQ)}
     </div>
   </section>
-{cta_band("Besoin de caméras pour vos locaux ?", "Découvrez nos packs 4 et 8 caméras, ou demandez une étude sur mesure gratuite.")}
+{cta_band("Besoin de caméras pour vos locaux ?", "Regardez les packs 4 et 8 caméras, ou demandez une étude sur mesure.")}
 """
 
 # =============================================================================
@@ -566,55 +508,45 @@ alarm = page_hero(
 
   <section>
     <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Composition</div>
-        <h2>Un système complet, dimensionné pour vos locaux</h2>
-        <p>Nous définissons ensemble les zones à protéger et les équipements nécessaires.</p>
+      <div class="section-head">
+        <h2>Ce que comprend une alarme</h2>
+        <p>On définit ensemble les zones à protéger, puis je choisis les équipements.</p>
       </div>
       <div class="grid-3">
-        <div class="card reveal"><div class="icon">{ic('server')}</div><h3>Centrale d'alarme</h3><p>Le cœur du système, connecté à internet et au réseau mobile, avec batterie de secours.</p></div>
-        <div class="card reveal"><div class="icon">{ic('radar')}</div><h3>Détecteurs de mouvement</h3><p>Détection des intrusions dans les pièces, avec des modèles capables de prendre une photo pour vérifier l'alerte.</p></div>
-        <div class="card reveal"><div class="icon">{ic('door')}</div><h3>Détecteurs d'ouverture</h3><p>Portes, fenêtres, rideaux métalliques : l'alarme se déclenche dès l'ouverture.</p></div>
-        <div class="card reveal"><div class="icon">{ic('siren')}</div><h3>Sirènes</h3><p>Sirènes intérieures et extérieures puissantes pour faire fuir les intrus.</p></div>
-        <div class="card reveal"><div class="icon">{ic('lock')}</div><h3>Claviers et badges</h3><p>Armement et désarmement simples, avec un accès personnel par salarié.</p></div>
-        <div class="card reveal"><div class="icon">{ic('mobile')}</div><h3>Application mobile</h3><p>Alertes instantanées, armement à distance et historique des événements.</p></div>
+        <div class="card"><div class="icon">{ic('server')}</div><h3>Centrale d'alarme</h3><p>Le cœur du système, connecté à internet et au réseau mobile, avec batterie de secours.</p></div>
+        <div class="card"><div class="icon">{ic('radar')}</div><h3>Détecteurs de mouvement</h3><p>Détection des intrusions dans les pièces, avec des modèles capables de prendre une photo pour vérifier l'alerte.</p></div>
+        <div class="card"><div class="icon">{ic('door')}</div><h3>Détecteurs d'ouverture</h3><p>Portes, fenêtres, rideaux métalliques : l'alarme se déclenche dès l'ouverture.</p></div>
+        <div class="card"><div class="icon">{ic('siren')}</div><h3>Sirènes</h3><p>Sirènes intérieures et extérieures puissantes pour faire fuir les intrus.</p></div>
+        <div class="card"><div class="icon">{ic('lock')}</div><h3>Claviers et badges</h3><p>Armement et désarmement simples, avec un accès personnel par salarié.</p></div>
+        <div class="card"><div class="icon">{ic('mobile')}</div><h3>Application mobile</h3><p>Alertes instantanées, armement à distance et historique des événements.</p></div>
       </div>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap split">
-      <div class="reveal">
-        <div class="eyebrow">Au quotidien</div>
-        <h2>Vous gardez le contrôle depuis votre téléphone</h2>
+      <div >
+        <h2>Depuis votre téléphone</h2>
         <p>Armez ou désarmez l'alarme à distance, recevez une notification à chaque événement et sachez qui a ouvert ou fermé les locaux.</p>
-        {checks(["Notification immédiate en cas d'intrusion", "Historique : qui a armé ou désarmé, et quand", "Accès personnalisés par salarié", "Fonctionne même en cas de coupure internet ou de courant"])}
       </div>
-      <div class="visual reveal" aria-hidden="true">
-        <div class="hc-head"><span>Entrepôt — Carros</span><span class="hc-live"><i></i> Connecté</span></div>
-        <div class="hc-rows">
-          <div class="hc-row"><span>{ic('alarm')} Système</span><em>Armé</em></div>
-          <div class="hc-row"><span>{ic('door')} Porte quai n°2</span><em>Fermée</em></div>
-          <div class="hc-row"><span>{ic('radar')} Détecteur réserve</span><em>OK</em></div>
-          <div class="hc-row"><span>{ic('users')} Armé par Julien · 19:42</span><em>Journal</em></div>
-        </div>
+      <div class="card">
+        {checks(["Notification immédiate en cas d'intrusion", "Historique : qui a armé ou désarmé, et quand", "Accès personnalisés par salarié", "Fonctionne même en cas de coupure internet ou de courant"])}
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Sans fil ou filaire</div>
-        <h2>Ajax propose les deux</h2>
+      <div class="section-head">
+        <h2>Sans fil ou filaire ?</h2>
       </div>
       <div class="compare">
-        <div class="card reveal">
+        <div class="card">
           <h3>{ic('nowire')} Alarme sans fil</h3>
           {checks(["Installation rapide, sans travaux", "Détecteurs sur pile longue durée", "Communication radio chiffrée"])}
           <p class="ideal"><b>Idéal pour :</b> commerces et bureaux en activité, locaux loués.</p>
         </div>
-        <div class="card reveal">
+        <div class="card">
           <h3>{ic('cable')} Alarme filaire</h3>
           {checks(["Aucune pile à remplacer", "Adaptée aux grands bâtiments", "Parfaite lors de travaux ou en construction neuve"])}
           <p class="ideal"><b>Idéal pour :</b> entrepôts, grands sites, bâtiments neufs.</p>
@@ -625,11 +557,11 @@ alarm = page_hero(
 
   <section class="tight">
     <div class="wrap">
-      <div class="note reveal">
+      <div class="note">
         {ic('cam')}
         <div>
-          <h3>Alarme + vidéosurveillance : la combinaison la plus efficace</h3>
-          <p>L'alarme détecte et dissuade, les caméras vous permettent de vérifier et d'enregistrer. Nous installons les deux ensemble pour une protection complète de vos locaux.</p>
+          <h3>Alarme et caméras ensemble</h3>
+          <p>L'alarme détecte et dissuade, les caméras vous permettent de vérifier et d'enregistrer. J'installe souvent les deux ensemble.</p>
         </div>
       </div>
     </div>
@@ -637,9 +569,8 @@ alarm = page_hero(
 
   <section>
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="eyebrow">Questions fréquentes</div>
-        <h2>Alarme : vos questions</h2>
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
       </div>
       {faq(ALARM_FAQ)}
     </div>
@@ -652,9 +583,9 @@ alarm = page_hero(
 # =============================================================================
 IT_FAQ = [
     ("Intervenez-vous pour un simple dépannage ?",
-     "Oui, nous intervenons aussi bien pour un dépannage ponctuel que pour l'installation complète ou la gestion de votre parc informatique."),
+     "Oui, j'interviens aussi bien pour un dépannage ponctuel que pour l'installation complète ou la gestion de votre parc informatique."),
     ("Pouvez-vous fournir les ordinateurs et le matériel réseau ?",
-     "Oui. Nous fournissons et configurons postes de travail, serveurs, NAS, imprimantes et équipements réseau, ou installons le matériel que vous avez déjà."),
+     "Oui. Je fournis et configure postes de travail, serveurs, NAS, imprimantes et équipements réseau, ou j'installe le matériel que vous avez déjà."),
     ("Proposez-vous un suivi régulier ?",
      "Oui, la maintenance de votre parc est possible : mises à jour, vérification des sauvegardes, contrôle de la sécurité et interventions en cas de problème."),
 ]
@@ -662,55 +593,45 @@ IT_FAQ = [
 it = page_hero(
     "Informatique & réseau",
     "Informatique <em>d'entreprise</em> &amp; réseau",
-    "Postes de travail, serveurs, réseau, Wi-Fi professionnel, sauvegardes et sécurité : nous installons et entretenons toute l'informatique de votre entreprise.") + f"""
+    "Postes de travail, serveurs, réseau, Wi-Fi professionnel, sauvegardes et sécurité . J'installe et j'entretiens toute l'informatique de votre entreprise.") + f"""
   <section>
     <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Nos prestations</div>
-        <h2>Un seul prestataire pour tout votre informatique</h2>
+      <div class="section-head">
+        <h2>Ce que je fais en informatique</h2>
         <p>Vos caméras, votre alarme et votre informatique reposent sur le même réseau : autant confier l'ensemble à un seul interlocuteur.</p>
       </div>
       <div class="grid-3">
-        <div class="card reveal"><div class="icon">{ic('network')}</div><h3>Réseau &amp; câblage</h3><p>Câblage réseau, baie de brassage, switchs et routeurs pour un réseau rapide et organisé.</p></div>
-        <div class="card reveal"><div class="icon">{ic('wifi')}</div><h3>Wi-Fi professionnel</h3><p>Bornes TP-Link pour couvrir tous vos locaux, avec un réseau invités séparé et sécurisé.</p></div>
-        <div class="card reveal"><div class="icon">{ic('pc')}</div><h3>Postes de travail</h3><p>Fourniture, installation et configuration des ordinateurs, imprimantes et périphériques.</p></div>
-        <div class="card reveal"><div class="icon">{ic('server')}</div><h3>Serveurs &amp; stockage</h3><p>Serveurs, NAS et partage de fichiers pour travailler en équipe en toute sécurité.</p></div>
-        <div class="card reveal"><div class="icon">{ic('backup')}</div><h3>Sauvegardes</h3><p>Mise en place de sauvegardes automatiques pour ne jamais perdre vos données.</p></div>
-        <div class="card reveal"><div class="icon">{ic('lock')}</div><h3>Sécurité informatique</h3><p>Pare-feu, antivirus, mises à jour et bonnes pratiques pour protéger votre activité.</p></div>
+        <div class="card"><div class="icon">{ic('network')}</div><h3>Réseau &amp; câblage</h3><p>Câblage réseau, baie de brassage, switchs et routeurs pour un réseau rapide et organisé.</p></div>
+        <div class="card"><div class="icon">{ic('wifi')}</div><h3>Wi-Fi professionnel</h3><p>Bornes TP-Link pour couvrir tous vos locaux, avec un réseau invités séparé et sécurisé.</p></div>
+        <div class="card"><div class="icon">{ic('pc')}</div><h3>Postes de travail</h3><p>Fourniture, installation et configuration des ordinateurs, imprimantes et périphériques.</p></div>
+        <div class="card"><div class="icon">{ic('server')}</div><h3>Serveurs &amp; stockage</h3><p>Serveurs, NAS et partage de fichiers pour travailler en équipe en toute sécurité.</p></div>
+        <div class="card"><div class="icon">{ic('backup')}</div><h3>Sauvegardes</h3><p>Mise en place de sauvegardes automatiques pour ne jamais perdre vos données.</p></div>
+        <div class="card"><div class="icon">{ic('lock')}</div><h3>Sécurité informatique</h3><p>Pare-feu, antivirus, mises à jour et bonnes pratiques pour protéger votre activité.</p></div>
       </div>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap split">
-      <div class="reveal">
-        <div class="eyebrow">Dépannage &amp; maintenance</div>
-        <h2>Une informatique qui fonctionne, tout simplement</h2>
-        <p>Un poste qui ne démarre plus, un réseau lent, une imprimante capricieuse ? Nous intervenons rapidement, et pouvons suivre votre parc dans la durée pour éviter les pannes.</p>
-        {checks(["Dépannage sur site", "Mises à jour et entretien des postes", "Vérification régulière des sauvegardes", "Conseils pour faire évoluer votre équipement"])}
+      <div >
+        <h2>Dépannage et maintenance</h2>
+        <p>Un poste qui ne démarre plus, un réseau lent, une imprimante capricieuse ? J'interviens rapidement, et je peux suivre votre parc dans la durée pour éviter les pannes.</p>
       </div>
-      <div class="visual reveal" aria-hidden="true">
-        <div class="hc-head"><span>Cabinet — Antibes</span><span class="hc-live"><i></i> Réseau OK</span></div>
-        <div class="hc-rows">
-          <div class="hc-row"><span>{ic('wifi')} Wi-Fi bureaux</span><em>Excellent</em></div>
-          <div class="hc-row"><span>{ic('wifi')} Wi-Fi invités</span><em>Isolé</em></div>
-          <div class="hc-row"><span>{ic('backup')} Sauvegarde de cette nuit</span><em>Réussie</em></div>
-          <div class="hc-row"><span>{ic('pc')} 12 postes</span><em>À jour</em></div>
-        </div>
+      <div class="card">
+        {checks(["Dépannage sur site", "Mises à jour et entretien des postes", "Vérification régulière des sauvegardes", "Conseils pour faire évoluer votre équipement"])}
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="eyebrow">Questions fréquentes</div>
-        <h2>Informatique : vos questions</h2>
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
       </div>
       {faq(IT_FAQ)}
     </div>
   </section>
-{cta_band("Un projet informatique ou un dépannage ?", "Expliquez-nous votre besoin : nous vous recontactons rapidement.")}
+{cta_band("Un projet informatique ou un dépannage ?", "Expliquez-moi votre besoin, je vous rappelle rapidement.")}
 """
 
 # =============================================================================
@@ -729,17 +650,15 @@ packs = page_hero(
   <section>
     <div class="wrap">
       <div class="grid-2" style="max-width:900px;margin:0 auto">
-        <div class="card pack reveal" id="pack-4">
-          <div class="eyebrow">Pack 4</div>
+        <div class="card pack" id="pack-4">
           <div class="pack-top"><span class="big">4</span><span class="unit">caméras + enregistreur</span></div>
           <p>Idéal pour un commerce, un restaurant, un cabinet ou un petit bureau.</p>
           <div class="grow">{checks(PACK_COMMON)}</div>
           <div class="price">Tarif sur devis — visite gratuite</div>
           <a href="contact.html?besoin=pack-4" class="btn btn-dark">Demander un devis Pack 4 {ic('arrow')}</a>
         </div>
-        <div class="card pack featured reveal" id="pack-8">
+        <div class="card pack featured" id="pack-8">
           <span class="tag">Grands locaux</span>
-          <div class="eyebrow">Pack 8</div>
           <div class="pack-top"><span class="big">8</span><span class="unit">caméras + enregistreur</span></div>
           <p>Pour les grands commerces, entrepôts, ateliers et sites avec extérieurs.</p>
           <div class="grow">{checks(PACK_COMMON)}</div>
@@ -752,19 +671,18 @@ packs = page_hero(
 
   <section class="alt">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <div class="eyebrow">Sur mesure</div>
+      <div class="section-head">
         <h2>Besoin d'autre chose ?</h2>
-        <p>Les packs sont une base : nous adaptons le nombre de caméras et les options à vos locaux.</p>
+        <p>Les packs sont une base. J'adapte le nombre de caméras et les options à vos locaux.</p>
       </div>
       <div class="grid-3">
-        <a href="alarme.html" class="card mini reveal"><div class="icon">{ic('alarm')}</div><h3>Ajouter une alarme</h3><p>Combinez caméras et alarme Ajax pour une protection complète.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
-        <a href="contact.html" class="card mini reveal"><div class="icon">{ic('cam')}</div><h3>Plus de caméras</h3><p>Au-delà de 8 caméras, nous réalisons une étude sur mesure.</p><span class="more">Nous contacter {ic('arrow')}</span></a>
-        <a href="videosurveillance.html" class="card mini reveal"><div class="icon">{ic('tool')}</div><h3>Maintenance</h3><p>Faites suivre votre installation dans la durée.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
+        <a href="alarme.html" class="card mini"><div class="icon">{ic('alarm')}</div><h3>Ajouter une alarme</h3><p>Combinez caméras et alarme Ajax pour une protection complète.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
+        <a href="contact.html" class="card mini"><div class="icon">{ic('cam')}</div><h3>Plus de caméras</h3><p>Au-delà de 8 caméras, je fais une étude sur mesure.</p><span class="more">Me contacter {ic('arrow')}</span></a>
+        <a href="videosurveillance.html" class="card mini"><div class="icon">{ic('tool')}</div><h3>Maintenance</h3><p>Faites suivre votre installation dans la durée.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
       </div>
     </div>
   </section>
-{cta_band("Quel pack pour vos locaux ?", "Nous venons sur place gratuitement pour vous conseiller le pack adapté et vous remettre un devis.")}
+{cta_band("Quel pack pour vos locaux ?", "Je viens sur place gratuitement pour vous conseiller le bon pack et vous remettre un devis.")}
 """
 
 # =============================================================================
@@ -773,10 +691,10 @@ packs = page_hero(
 contact = page_hero(
     "Contact",
     "Demandez votre <em>devis gratuit</em>",
-    "Décrivez votre projet : nous vous recontactons rapidement pour convenir d'une visite gratuite sur place, partout dans les Alpes-Maritimes.") + f"""
+    "Décrivez votre projet en quelques mots. Je vous rappelle pour fixer une visite gratuite sur place, partout dans les Alpes-Maritimes.") + f"""
   <section>
     <div class="wrap contact-grid">
-      <div class="contact-info reveal">
+      <div class="contact-info">
         <a class="ci" href="tel:{PHONE_LINK}">
           <div class="ci-icon">{ic('phone')}</div>
           <div><small>Téléphone</small><strong>{PHONE_DISPLAY}</strong></div>
@@ -795,7 +713,7 @@ contact = page_hero(
         </div>
       </div>
 
-      <form id="devis" class="quote reveal" data-to="{EMAIL}" novalidate>
+      <form id="devis" class="quote" data-to="{EMAIL}" novalidate>
         <div class="full">
           <label for="f-entreprise">Entreprise <span class="opt">(facultatif)</span></label>
           <input id="f-entreprise" name="entreprise" autocomplete="organization">
@@ -858,7 +776,7 @@ legal = f"""
       <h2>Éditeur du site</h2>
       <p>BelaConnect — {OWNER_NAME}, entrepreneur individuel (micro-entreprise).<br>
       Adresse : {OWNER_ADDRESS}<br>
-      SIRET : {SIRET}<br>
+      SIREN : {SIREN}<br>
       TVA non applicable, article 293 B du Code général des impôts.<br>
       Téléphone : {PHONE_DISPLAY} — Email : <a href="mailto:{EMAIL}">{EMAIL}</a><br>
       Directeur de la publication : {OWNER_NAME}.</p>
@@ -871,11 +789,11 @@ legal = f"""
 
       <h2>Données personnelles</h2>
       <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer.</p>
-      <p>Les informations que vous nous transmettez (nom, téléphone, email, ville, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont jamais cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact.</p>
-      <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
+      <p>Les informations que vous me transmettez (nom, téléphone, email, ville, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont jamais cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact.</p>
+      <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-moi à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 
       <h2>Polices de caractères</h2>
-      <p>Le site utilise la police Inter, chargée depuis Google Fonts.</p>
+      <p>Le site utilise la police Barlow, chargée depuis Google Fonts.</p>
     </div>
   </section>
 """
@@ -886,12 +804,12 @@ legal = f"""
 notfound = f"""
   <section class="hero">
     <div class="wrap hero-inner">
-      <div class="badge"><i></i> Erreur 404</div>
+      <p class="kicker">Erreur 404</p>
       <h1>Cette page <em>n'existe pas.</em></h1>
       <p class="lead">Le lien est peut-être incorrect ou la page a été déplacée.</p>
       <div class="hero-cta">
         <a href="index.html" class="btn btn-primary">Retour à l'accueil {ic('arrow')}</a>
-        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
+        <a href="contact.html" class="btn btn-ghost">Me contacter</a>
       </div>
     </div>
   </section>
