@@ -196,7 +196,7 @@ def business_schema():
 
 def layout(filename, title, description, body, extra_head=""):
     links = "\n      ".join(
-        f'<a href="{href}"{CURRENT if href == filename else ""}>{label}</a>'
+        f'<a href="{href}"{' class="nav-red"' if href == "videosurveillance.html" else ""}{CURRENT if href == filename else ""}>{label}</a>'
         for href, label in NAV)
     contact_current = CURRENT if filename == "contact.html" else ""
     canonical = SITE_URL + "/" + ("" if filename == "index.html" else filename)

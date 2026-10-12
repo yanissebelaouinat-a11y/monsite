@@ -333,3 +333,7 @@ form.quote .btn{width:100%;}
 .inline-link{color:var(--cyan-ink);text-decoration:underline;text-underline-offset:3px;}
 .inline-link:hover{color:var(--ink);}
 .split .note{align-self:start;}
+
+/* Effet rouge au survol du lien « Vidéosurveillance » */
+.nav-links a.nav-red:hover{color:#FF4D4F;background-image:linear-gradient(#FF4D4F,#FF4D4F);text-shadow:0 0 12px rgba(255,77,79,.55);}
+.nav-links a.nav-red[aria-current="page"]:hover{background-image:linear-gradient(#FF4D4F,#FF4D4F);}
