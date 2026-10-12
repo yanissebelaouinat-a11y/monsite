@@ -100,7 +100,7 @@ def faq_jsonld(items):
 
 
 def cta_band(title="Un projet de sécurité pour vos locaux ?",
-             text="Je viens sur place, j'étudie vos besoins et je vous remets un devis gratuit, sans engagement."):
+             text="Nous venons sur place, étudions vos besoins et vous remettons un devis gratuit, sans engagement."):
     return f"""
   <section class="tight">
     <div class="wrap">
@@ -242,22 +242,22 @@ HOME_FAQ = [
     ("Dans quelles villes intervenez-vous ?",
      "Partout dans les Alpes-Maritimes : Nice, Cannes, Antibes, Grasse, Menton, Cagnes-sur-Mer, Sophia Antipolis et leurs environs."),
     ("Le devis est-il gratuit ?",
-     "Oui. Je me déplace gratuitement dans vos locaux pour étudier votre besoin, puis je vous remets un devis détaillé, sans engagement."),
+     "Oui. Nous nous déplaçons gratuitement dans vos locaux pour étudier votre besoin, puis nous vous remettons un devis détaillé, sans engagement."),
     ("Fournissez-vous le matériel ?",
-     "Oui, je fournis du matériel professionnel (Dahua, Hikvision, Ajax, TP-Link) adapté à votre besoin. Je peux aussi installer un matériel que vous possédez déjà."),
+     "Oui, nous fournissons du matériel professionnel (Dahua, Hikvision, Ajax, TP-Link) adapté à votre besoin. Nous pouvons aussi installer un matériel que vous possédez déjà."),
     ("Pouvez-vous gérer de gros chantiers ?",
-     "Oui. Pour les installations importantes, je viens en équipe afin de respecter vos délais."),
+     "Oui. Pour les installations importantes, nous intervenons en équipe afin de respecter vos délais."),
     ("Assurez-vous la maintenance après l'installation ?",
-     "Oui, je propose la maintenance de vos installations de vidéosurveillance, d'alarme et de votre parc informatique."),
+     "Oui, nous proposons la maintenance de vos installations de vidéosurveillance, d'alarme et de votre parc informatique."),
 ]
 
 home = f"""
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">Installateur indépendant · Alpes-Maritimes</p>
+        <p class="kicker">Installation · Alpes-Maritimes</p>
         <h1>Vidéosurveillance et alarme pour les professionnels du <em>06</em></h1>
-        <p class="lead">J'installe des caméras et des alarmes dans les commerces, bureaux, entrepôts et chantiers des Alpes-Maritimes. Je m'occupe aussi de l'informatique et du réseau de votre entreprise.</p>
+        <p class="lead">Nous installons des caméras et des alarmes dans les commerces, bureaux, entrepôts et chantiers des Alpes-Maritimes. Nous nous occupons aussi de l'informatique et du réseau de votre entreprise.</p>
         <div class="hero-cta">
           <a href="contact.html" class="btn btn-primary">Demander un devis gratuit</a>
           <a href="videosurveillance.html#packs" class="btn btn-ghost">Voir les packs caméras</a>
@@ -278,8 +278,8 @@ home = f"""
   <section>
     <div class="wrap">
       <div class="section-head">
-        <h2>Ce que je fais</h2>
-        <p>La vidéosurveillance et l'alarme sont mon cœur de métier. L'informatique vient en complément, pour que tout fonctionne sur un même réseau.</p>
+        <h2>Ce que nous faisons</h2>
+        <p>La vidéosurveillance et l'alarme sont notre cœur de métier. L'informatique vient en complément, pour que tout fonctionne sur un même réseau.</p>
       </div>
       <div class="grid-3">
         <a href="videosurveillance.html" class="card main">
@@ -308,7 +308,7 @@ home = f"""
     <div class="wrap split top">
       <div>
         <h2>Pour quels locaux ?</h2>
-        <p>Chaque site est différent. Je viens voir les lieux avant de proposer quoi que ce soit : surface, accès, éclairage, horaires d'ouverture.</p>
+        <p>Chaque site est différent. Nous venons voir les lieux avant de proposer quoi que ce soit : surface, accès, éclairage, horaires d'ouverture.</p>
       </div>
       <ul class="plain-list">
         <li><b>Commerces</b> : surface de vente, caisse, réserve.</li>
@@ -325,7 +325,7 @@ home = f"""
     <div class="wrap split">
       <div>
         <h2>Deux packs caméras</h2>
-        <p>Caméras intérieures ou extérieures, enregistreur, pose et réglage sur votre téléphone. Le prix dépend de vos locaux : je l'établis après la visite.</p>
+        <p>Caméras intérieures ou extérieures, enregistreur, pose et réglage sur votre téléphone. Le prix dépend de vos locaux : nous l'établissons après la visite.</p>
         <div class="hero-cta">
           <a href="videosurveillance.html#packs" class="btn btn-dark">Voir le détail des packs</a>
         </div>
@@ -349,11 +349,11 @@ home = f"""
         <h2>Comment ça se passe</h2>
       </div>
       <div class="grid-3 steps">
-        <div class="step"><h3>Visite sur place</h3><p>Je viens voir vos locaux, gratuitement. On fait le tour des points sensibles ensemble.</p></div>
+        <div class="step"><h3>Visite sur place</h3><p>Nous venons voir vos locaux, gratuitement, et faisons le tour des points sensibles avec vous.</p></div>
         <div class="step"><h3>Devis détaillé</h3><p>Matériel, emplacements, délais. Vous décidez sans engagement.</p></div>
-        <div class="step"><h3>Installation</h3><p>Pose, tests, réglage de votre téléphone. Je vous montre comment tout utiliser.</p></div>
+        <div class="step"><h3>Installation</h3><p>Pose, tests, réglage de votre téléphone. Nous vous montrons comment tout utiliser.</p></div>
       </div>
-      <p class="aside-note">Je travaille seul la plupart du temps. Pour les gros chantiers, je viens en équipe. Après l'installation, je peux assurer la maintenance.</p>
+      <p class="aside-note">Pour les gros chantiers, nous intervenons en équipe. Après l'installation, nous pouvons assurer la maintenance.</p>
     </div>
   </section>
 
@@ -389,15 +389,15 @@ PACK_COMMON = ["Caméras intérieures et/ou extérieures, au choix",
 
 VIDEO_FAQ = [
     ("Puis-je voir mes caméras depuis mon téléphone ?",
-     "Oui. Je configure l'application du fabricant sur votre smartphone (et celui de vos collaborateurs si besoin) pour voir le direct et les enregistrements à distance."),
+     "Oui. Nous configurons l'application du fabricant sur votre smartphone (et celui de vos collaborateurs si besoin) pour voir le direct et les enregistrements à distance."),
     ("Combien de temps les images sont-elles conservées ?",
-     "Cela dépend du nombre de caméras et de la capacité du disque de l'enregistreur. Je règle la durée selon vos besoins et la réglementation, qui recommande en général de ne pas dépasser un mois."),
+     "Cela dépend du nombre de caméras et de la capacité du disque de l'enregistreur. Nous réglons la durée selon vos besoins et la réglementation, qui recommande en général de ne pas dépasser un mois."),
     ("Filaire ou sans fil, que choisir ?",
-     "Le filaire est le plus fiable pour une installation durable ; le sans fil est plus rapide à poser quand passer des câbles est compliqué. Je vous conseille lors de la visite."),
+     "Le filaire est le plus fiable pour une installation durable ; le sans fil est plus rapide à poser quand passer des câbles est compliqué. Nous vous conseillons lors de la visite."),
     ("Les caméras fonctionnent-elles la nuit ?",
-     "Oui, les caméras que j'installe ont la vision de nuit. Certains modèles offrent même une image en couleur dans l'obscurité."),
+     "Oui, les caméras que nous installons ont la vision de nuit. Certains modèles offrent même une image en couleur dans l'obscurité."),
     ("Ai-je des obligations légales en tant que professionnel ?",
-     "Oui : informer les personnes filmées par un panneau, informer vos salariés, et demander une autorisation en préfecture pour filmer un lieu ouvert au public. Je vous indique les démarches lors de l'installation."),
+     "Oui : informer les personnes filmées par un panneau, informer vos salariés, et demander une autorisation en préfecture pour filmer un lieu ouvert au public. Nous vous indiquons les démarches lors de l'installation."),
 ]
 
 video = page_hero(
@@ -410,8 +410,8 @@ video = page_hero(
   <section>
     <div class="wrap">
       <div class="section-head">
-        <h2>Ce que j'installe</h2>
-        <p>Je choisis le matériel, je le pose et je le règle. Vous n'avez rien à gérer.</p>
+        <h2>Ce que nous installons</h2>
+        <p>Nous choisissons le matériel, le posons et le réglons. Vous n'avez rien à gérer.</p>
       </div>
       <div class="grid-3">
         <div class="card"><div class="icon">{ic('cam')}</div><h3>Caméras extérieures</h3><p>Façades, entrées, parkings, quais de livraison et périmètre. Modèles résistants aux intempéries.</p></div>
@@ -425,7 +425,7 @@ video = page_hero(
     <div class="wrap">
       <div class="section-head">
         <h2>Les packs caméras</h2>
-        <p>Deux packs complets pour équiper vos locaux rapidement. Le prix dépend de vos locaux : je l'établis après la visite, qui est gratuite. Au-delà de 8 caméras, ou pour ajouter une alarme, je fais une étude sur mesure.</p>
+        <p>Deux packs complets pour équiper vos locaux rapidement. Le prix dépend de vos locaux : nous l'établissons après la visite, qui est gratuite. Au-delà de 8 caméras, ou pour ajouter une alarme, nous réalisons une étude sur mesure.</p>
       </div>
       <div class="grid-2">
         <div class="card pack" id="pack-4">
@@ -487,7 +487,7 @@ video = page_hero(
         {ic('info')}
         <div>
           <h3>Vidéosurveillance et réglementation</h3>
-          <p>En entreprise, filmer implique quelques obligations : panneau d'information, information des salariés et, pour un lieu ouvert au public, autorisation préfectorale. Je place les caméras en respectant ces règles et je vous indique les démarches.</p>
+          <p>En entreprise, filmer implique quelques obligations : panneau d'information, information des salariés et, pour un lieu ouvert au public, autorisation préfectorale. Nous plaçons les caméras en respectant ces règles et vous indiquons les démarches.</p>
         </div>
       </div>
     </div>
@@ -497,7 +497,7 @@ video = page_hero(
     <div class="wrap split">
       <div >
         <h2>Maintenance</h2>
-        <p>Vérification des caméras et de l'enregistreur, nettoyage, mises à jour, remplacement d'un équipement défectueux, ajout de caméras. Je reste joignable après l'installation.</p>
+        <p>Vérification des caméras et de l'enregistreur, nettoyage, mises à jour, remplacement d'un équipement défectueux, ajout de caméras. Nous restons joignables après l'installation.</p>
       </div>
       <div class="card">
         {checks(["Contrôle du bon fonctionnement des caméras", "Vérification des enregistrements et du disque", "Mises à jour de sécurité", "Ajout ou déplacement de caméras", "Intervention en cas de panne"])}
@@ -541,7 +541,7 @@ alarm = page_hero(
     <div class="wrap">
       <div class="section-head">
         <h2>Ce que comprend une alarme</h2>
-        <p>On définit ensemble les zones à protéger, puis je choisis les équipements.</p>
+        <p>Nous définissons avec vous les zones à protéger, puis choisissons les équipements.</p>
       </div>
       <div class="grid-3">
         <div class="card"><div class="icon">{ic('server')}</div><h3>Centrale d'alarme</h3><p>Le cœur du système, connecté à internet et au réseau mobile, avec batterie de secours.</p></div>
@@ -592,7 +592,7 @@ alarm = page_hero(
         {ic('cam')}
         <div>
           <h3>Alarme et caméras ensemble</h3>
-          <p>L'alarme détecte et dissuade, les caméras vous permettent de vérifier et d'enregistrer. J'installe souvent les deux ensemble.</p>
+          <p>L'alarme détecte et dissuade, les caméras vous permettent de vérifier et d'enregistrer. Nous installons souvent les deux ensemble.</p>
         </div>
       </div>
     </div>
@@ -614,9 +614,9 @@ alarm = page_hero(
 # =============================================================================
 IT_FAQ = [
     ("Intervenez-vous pour un simple dépannage ?",
-     "Oui, j'interviens aussi bien pour un dépannage ponctuel que pour l'installation complète ou la gestion de votre parc informatique."),
+     "Oui, nous intervenons aussi bien pour un dépannage ponctuel que pour l'installation complète ou la gestion de votre parc informatique."),
     ("Pouvez-vous fournir les ordinateurs et le matériel réseau ?",
-     "Oui. Je fournis et configure postes de travail, serveurs, NAS, imprimantes et équipements réseau, ou j'installe le matériel que vous avez déjà."),
+     "Oui. Nous fournissons et configurons postes de travail, serveurs, NAS, imprimantes et équipements réseau, ou installons le matériel que vous avez déjà."),
     ("Proposez-vous un suivi régulier ?",
      "Oui, la maintenance de votre parc est possible : mises à jour, vérification des sauvegardes, contrôle de la sécurité et interventions en cas de problème."),
 ]
@@ -624,11 +624,11 @@ IT_FAQ = [
 it = page_hero(
     "Informatique & réseau",
     "Informatique <em>d'entreprise</em> &amp; réseau",
-    "Postes de travail, serveurs, réseau, Wi-Fi professionnel, sauvegardes et sécurité. J'installe et j'entretiens toute l'informatique de votre entreprise.") + f"""
+    "Postes de travail, serveurs, réseau, Wi-Fi professionnel, sauvegardes et sécurité. Nous installons et entretenons toute l'informatique de votre entreprise.") + f"""
   <section>
     <div class="wrap">
       <div class="section-head">
-        <h2>Ce que je fais en informatique</h2>
+        <h2>Nos prestations informatiques</h2>
         <p>Vos caméras, votre alarme et votre informatique reposent sur le même réseau : autant confier l'ensemble à un seul interlocuteur.</p>
       </div>
       <div class="grid-3">
@@ -646,7 +646,7 @@ it = page_hero(
     <div class="wrap split">
       <div >
         <h2>Dépannage et maintenance</h2>
-        <p>Un poste qui ne démarre plus, un réseau lent, une imprimante capricieuse ? J'interviens rapidement, et je peux suivre votre parc dans la durée pour éviter les pannes.</p>
+        <p>Un poste qui ne démarre plus, un réseau lent, une imprimante capricieuse ? Nous intervenons rapidement, et pouvons suivre votre parc dans la durée pour éviter les pannes.</p>
       </div>
       <div class="card">
         {checks(["Dépannage sur site", "Mises à jour et entretien des postes", "Vérification régulière des sauvegardes", "Conseils pour faire évoluer votre équipement"])}
@@ -662,7 +662,7 @@ it = page_hero(
       {faq(IT_FAQ)}
     </div>
   </section>
-{cta_band("Un projet informatique ou un dépannage ?", "Expliquez-moi votre besoin, je vous rappelle rapidement.")}
+{cta_band("Un projet informatique ou un dépannage ?", "Expliquez-nous votre besoin, nous vous rappelons rapidement.")}
 """
 
 # =============================================================================
@@ -680,7 +680,7 @@ PACK_COMMON = ["Caméras intérieures et/ou extérieures, au choix",
 contact = page_hero(
     "Contact",
     "Demandez votre <em>devis gratuit</em>",
-    "Décrivez votre projet en quelques mots. Je vous rappelle pour fixer une visite gratuite sur place, partout dans les Alpes-Maritimes.") + f"""
+    "Décrivez votre projet en quelques mots. Nous vous rappelons pour fixer une visite gratuite sur place, partout dans les Alpes-Maritimes.") + f"""
   <section>
     <div class="wrap contact-grid">
       <div class="contact-info">
@@ -778,8 +778,8 @@ legal = f"""
 
       <h2>Données personnelles</h2>
       <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer.</p>
-      <p>Les informations que vous me transmettez (nom, téléphone, email, ville, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont jamais cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact.</p>
-      <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-moi à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
+      <p>Les informations que vous nous transmettez (nom, téléphone, email, ville, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont jamais cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact.</p>
+      <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 
       <h2>Polices de caractères</h2>
       <p>Le site utilise la police Barlow, chargée depuis Google Fonts.</p>
@@ -798,7 +798,7 @@ notfound = f"""
       <p class="lead">Le lien est peut-être incorrect ou la page a été déplacée.</p>
       <div class="hero-cta">
         <a href="index.html" class="btn btn-primary">Retour à l'accueil {ic('arrow')}</a>
-        <a href="contact.html" class="btn btn-ghost">Me contacter</a>
+        <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
       </div>
     </div>
   </section>
