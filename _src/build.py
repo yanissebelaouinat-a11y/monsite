@@ -333,17 +333,18 @@ home = f"""
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">Installation · Alpes-Maritimes</p>
-        <h1>Vidéosurveillance et alarme pour les professionnels du <em>06</em></h1>
-        <p class="lead">Nous installons des caméras et des alarmes dans les commerces, bureaux, entrepôts et chantiers des Alpes-Maritimes. Nous nous occupons aussi de l'informatique et du réseau de votre entreprise.</p>
+        <p class="kicker">Sécurité · Réseau · Informatique · Alpes-Maritimes</p>
+        <h1>Sécurité et informatique pour les professionnels du <em>06</em></h1>
+        <p class="lead">Vidéosurveillance, alarme, réseau, Wi-Fi et informatique : nous installons et entretenons les équipements des commerces, bureaux, entrepôts, chantiers et copropriétés, partout dans les Alpes-Maritimes.</p>
         <div class="hero-cta">
           <a href="contact.html" class="btn btn-primary">Demander un devis gratuit</a>
-          <a href="videosurveillance.html#packs" class="btn btn-ghost">Voir les packs caméras</a>
+          <a href="#services" class="btn btn-ghost">Voir nos services</a>
         </div>
       </div>
       <aside class="hero-info">
         <dl>
-          <dt>Clients</dt><dd>Commerces, bureaux, entrepôts, chantiers</dd>
+          <dt>Services</dt><dd>Vidéosurveillance, alarme, réseau, informatique</dd>
+          <dt>Clients</dt><dd>Entreprises, commerces, copropriétés</dd>
           <dt>Devis</dt><dd>Gratuit, après visite sur place</dd>
           <dt>Zone</dt><dd>Tout le département des Alpes-Maritimes</dd>
           <dt>Matériel</dt><dd>Dahua, Hikvision, Ajax, TP-Link</dd>
@@ -354,7 +355,7 @@ home = f"""
   </section>
 {brands(["Dahua", "Hikvision", "Ajax", "TP-Link"])}
 
-  <section>
+  <section id="services">
     <div class="wrap">
       <div class="section-head">
         <h2>Ce que nous faisons</h2>
@@ -940,8 +941,8 @@ notfound = f"""
 """
 
 PAGES = [
-    ("index.html", "Installation vidéosurveillance et alarme dans les Alpes-Maritimes (06) | BelaConnect",
-     "Installateur de caméras de surveillance et d'alarmes pour les professionnels, dans tout le département des Alpes-Maritimes (06). Matériel Dahua, Hikvision, Ajax. Devis gratuit sur place.",
+    ("index.html", "Vidéosurveillance, alarme et informatique pour professionnels (06) | BelaConnect",
+     "Installation de vidéosurveillance, d'alarmes, de réseaux et d'informatique pour les entreprises, commerces et copropriétés des Alpes-Maritimes (06). Dahua, Hikvision, Ajax, TP-Link. Devis gratuit sur place.",
      home, faq_jsonld(HOME_FAQ)),
     ("videosurveillance.html", "Installation de caméras de surveillance pour professionnels (06) | BelaConnect",
      "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Packs 4 et 8 caméras, copropriétés. Intervention dans tout le 06.",
