@@ -6,6 +6,7 @@ Après modification : python3 _src/build.py (depuis la racine du dépôt).
 Le dossier _src n'est pas publié (Jekyll ignore les dossiers commençant par « _ »).
 """
 import json
+import math
 from datetime import date
 from pathlib import Path
 
@@ -161,6 +162,19 @@ BREADCRUMB = {
     "informatique.html": "Informatique et réseau",
     "contact.html": "Contact",
 }
+
+
+def _arc(cx, cy, r, a0, a1):
+    x0, y0 = cx + r * math.cos(math.radians(a0)), cy + r * math.sin(math.radians(a0))
+    x1, y1 = cx + r * math.cos(math.radians(a1)), cy + r * math.sin(math.radians(a1))
+    return f"M{x0:.1f} {y0:.1f}A{r} {r} 0 0 1 {x1:.1f} {y1:.1f}"
+
+
+# Ondes Wi-Fi animées en fond du haut de page (motif du logo)
+WAVES = ('<svg class="hero-waves" viewBox="0 0 420 600" aria-hidden="true">'
+         + "".join(f'<path class="w{i}" d="{_arc(0, 300, r, -50, 50)}"/>'
+                   for i, r in enumerate((110, 200, 290, 380), 1))
+         + "</svg>")
 
 
 def placeholder(value):
@@ -971,6 +985,8 @@ def main():
     for filename, title, desc, body, extra in PAGES:
         # Espace insécable avant « ? » et « ! » (typographie française)
         body = body.replace(" ?", "&nbsp;?").replace(" !", "&nbsp;!")
+        body = body.replace('<section class="hero">', '<section class="hero">' + WAVES, 1)
+        body = body.replace('<section class="hero small">', '<section class="hero small">' + WAVES, 1)
         (ROOT / filename).write_text(layout(filename, title, desc, body, extra), encoding="utf-8")
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

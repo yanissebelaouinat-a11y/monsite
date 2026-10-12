@@ -296,8 +296,12 @@ form.quote .btn{width:100%;}
 
 /* Motif « ondes » du logo */
 .hero{position:relative;overflow:hidden;}
-.hero::after{content:"";position:absolute;top:50%;right:-60px;width:520px;height:740px;transform:translateY(-50%);
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 600'%3E%3Cpath d='M70.7 215.7A110 110 0 0 1 70.7 384.3' fill='none' stroke='%232BC0DC' stroke-width='26' stroke-linecap='round' opacity='0.9'/%3E%3Cpath d='M128.6 146.8A200 200 0 0 1 128.6 453.2' fill='none' stroke='%232BC0DC' stroke-width='26' stroke-linecap='round' opacity='0.6'/%3E%3Cpath d='M186.4 77.8A290 290 0 0 1 186.4 522.2' fill='none' stroke='%232BC0DC' stroke-width='26' stroke-linecap='round' opacity='0.35'/%3E%3Cpath d='M244.3 8.9A380 380 0 0 1 244.3 591.1' fill='none' stroke='%232BC0DC' stroke-width='26' stroke-linecap='round' opacity='0.18'/%3E%3C/svg%3E") no-repeat center/contain;opacity:.10;pointer-events:none;}
+.hero-waves{position:absolute;top:50%;right:-60px;width:520px;height:740px;transform:translateY(-50%);pointer-events:none;}
+.hero-waves path{fill:none;stroke:var(--cyan);stroke-width:26;stroke-linecap:round;opacity:.05;animation:wave 3s ease-in-out infinite;}
+.hero-waves .w2{animation-delay:.35s;}
+.hero-waves .w3{animation-delay:.7s;}
+.hero-waves .w4{animation-delay:1.05s;}
+@keyframes wave{0%,100%{opacity:.04;}25%{opacity:.22;}55%{opacity:.04;}}
 .hero > .wrap{position:relative;z-index:1;}
 .cta-band{position:relative;overflow:hidden;}
 .cta-band::after{content:"";position:absolute;right:-40px;top:50%;width:260px;height:370px;transform:translateY(-50%);
@@ -322,7 +326,7 @@ form.quote .btn{width:100%;}
 .hero-info{background:rgba(255,255,255,.03);backdrop-filter:blur(2px);}
 @media (max-width:720px){
   .hero{padding:52px 0 60px;}
-  .hero::after{width:300px;height:430px;right:-120px;opacity:.07;}
+  .hero-waves{width:300px;height:430px;right:-120px;}
   .cta-band::after{display:none;}
 }
 .hero-info dl{gap:2px;}
@@ -347,3 +351,5 @@ a.card.svc-video:hover .more,a.card.svc-alarm:hover .more,a.card.svc-it:hover .m
 a.card.svc-video:hover .icon,a.card.svc-alarm:hover .icon,a.card.svc-it:hover .icon{color:var(--svc-ink);}
 a.card.svc-video .icon,a.card.svc-alarm .icon,a.card.svc-it .icon{transition:color .2s;}
 a.card.svc-video:hover .checks svg,a.card.svc-alarm:hover .checks svg,a.card.svc-it:hover .checks svg{color:var(--svc-ink);}
+
+@media (prefers-reduced-motion:reduce){ .hero-waves path{animation:none;opacity:.1;} }
