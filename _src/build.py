@@ -171,10 +171,17 @@ def _arc(cx, cy, r, a0, a1):
 
 
 # Ondes Wi-Fi animées en fond du haut de page (motif du logo)
-WAVES = ('<svg class="hero-waves" viewBox="0 0 420 600" aria-hidden="true">'
-         + "".join(f'<path class="w{i}" d="{_arc(0, 300, r, -50, 50)}"/>'
+WAVES = ('<svg class="hero-waves" viewBox="0 0 420 600" width="520" height="740" aria-hidden="true" focusable="false" '
+         'style="position:absolute;top:50%;right:-60px;transform:translateY(-50%);pointer-events:none">'
+         + "".join(f'<path class="w{i}" d="{_arc(0, 300, r, -50, 50)}" fill="none" stroke="#2BC0DC" '
+                   f'stroke-width="26" stroke-linecap="round" opacity="0.08"/>'
                    for i, r in enumerate((110, 200, 290, 380), 1))
          + "</svg>")
+
+
+def asset_version(path):
+    import hashlib
+    return hashlib.md5((ROOT / path).read_bytes()).hexdigest()[:8]
 
 
 def placeholder(value):
@@ -257,7 +264,7 @@ def layout(filename, title, description, body, extra_head=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v={asset_version('assets/style.css')}">
 <script type="application/ld+json">{org}</script>{crumbs}{extra_head}
 </head>
 <body>
@@ -323,7 +330,7 @@ def layout(filename, title, description, body, extra_head=""):
 </footer>
 
 <a href="tel:{PHONE_LINK}" class="btn btn-primary call-fab">{ic('phone')} Appeler BelaConnect</a>
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v={asset_version('assets/main.js')}"></script>
 </body>
 </html>
 """
