@@ -5,6 +5,8 @@ Les coordonnées, l'en-tête et le pied de page sont définis une seule fois ici
 Après modification : python3 _src/build.py (depuis la racine du dépôt).
 Le dossier _src n'est pas publié (Jekyll ignore les dossiers commençant par « _ »).
 """
+import json
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -16,6 +18,7 @@ EMAIL = "contact@belaconnect.fr"      # TODO : adresse à créer chez Hostinger
 OWNER_NAME = "[Prénom Nom]"           # TODO : nom de l'entrepreneur
 OWNER_ADDRESS = "[Adresse professionnelle], Alpes-Maritimes"  # TODO
 SIREN = "947 672 481"
+EMAIL_CONFIRMED = False              # passer à True quand l'adresse existe
 SITE_URL = "https://belaconnect.fr"
 CITIES = ["Nice", "Cannes", "Antibes", "Cagnes-sur-Mer", "Grasse", "Menton",
           "Saint-Laurent-du-Var", "Sophia Antipolis", "Mandelieu", "Vence", "Carros", "Monaco"]
@@ -135,17 +138,63 @@ def page_hero(crumb, title, lead, badge=None):
   </section>"""
 
 
+BREADCRUMB = {
+    "videosurveillance.html": "Vidéosurveillance",
+    "alarme.html": "Alarme",
+    "informatique.html": "Informatique et réseau",
+    "contact.html": "Contact",
+}
+
+
+def placeholder(value):
+    return value.startswith("[") or "00 00 00" in value or value == "+33600000000"
+
+
+def business_schema():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": SITE_URL + "/#entreprise",
+        "name": "BelaConnect",
+        "description": "Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels des Alpes-Maritimes.",
+        "url": SITE_URL + "/",
+        "logo": SITE_URL + "/assets/apple-touch-icon.png",
+        "image": SITE_URL + "/assets/og-image.png",
+        "address": {"@type": "PostalAddress", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"},
+        "areaServed": [{"@type": "AdministrativeArea", "name": "Alpes-Maritimes"}] +
+                      [{"@type": "City", "name": c} for c in CITIES],
+        "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Wi-Fi professionnel"],
+        "brand": [{"@type": "Brand", "name": b} for b in ("Dahua", "Hikvision", "Ajax", "TP-Link")],
+        "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "url": SITE_URL + "/" + u}}
+            for n, u in (("Installation de vidéosurveillance", "videosurveillance.html"),
+                         ("Installation d'alarme", "alarme.html"),
+                         ("Informatique et réseau d'entreprise", "informatique.html"))]},
+    }
+    if not placeholder(PHONE_LINK):
+        data["telephone"] = PHONE_LINK
+    if EMAIL != "contact@belaconnect.fr" or EMAIL_CONFIRMED:
+        data["email"] = EMAIL
+    if not placeholder(SIREN):
+        data["identifier"] = {"@type": "PropertyValue", "propertyID": "SIREN", "value": SIREN.replace(" ", "")}
+    return data
+
+
 def layout(filename, title, description, body, extra_head=""):
     links = "\n      ".join(
         f'<a href="{href}"{CURRENT if href == filename else ""}>{label}</a>'
         for href, label in NAV)
     contact_current = CURRENT if filename == "contact.html" else ""
     canonical = SITE_URL + "/" + ("" if filename == "index.html" else filename)
-    org = ('{"@context":"https://schema.org","@type":"LocalBusiness","name":"BelaConnect",'
-           '"description":"Installation de vidéosurveillance, alarmes et informatique pour les professionnels des Alpes-Maritimes.",'
-           f'"url":"{SITE_URL}/","telephone":"{PHONE_LINK}","email":"{EMAIL}",'
-           '"areaServed":{"@type":"AdministrativeArea","name":"Alpes-Maritimes"},'
-           '"address":{"@type":"PostalAddress","addressRegion":"Alpes-Maritimes","addressCountry":"FR"}}')
+    org = json.dumps(business_schema(), ensure_ascii=False)
+    crumbs = ""
+    if filename in BREADCRUMB:
+        crumbs = '\n<script type="application/ld+json">' + json.dumps({
+            "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE_URL + "/"},
+                {"@type": "ListItem", "position": 2, "name": BREADCRUMB[filename], "item": canonical}]},
+            ensure_ascii=False) + "</script>"
+    og_title = title.split(" | ")[0]
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -154,18 +203,28 @@ def layout(filename, title, description, body, extra_head=""):
 <title>{title}</title>
 <meta name="description" content="{description}">
 <link rel="canonical" href="{canonical}">
-<meta property="og:title" content="{title}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="geo.region" content="FR-06">
+<meta name="geo.placename" content="Alpes-Maritimes">
+<meta property="og:site_name" content="BelaConnect">
+<meta property="og:title" content="{og_title}">
 <meta property="og:description" content="{description}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canonical}">
 <meta property="og:locale" content="fr_FR">
-<meta name="theme-color" content="#0B1426">
-<link rel="icon" href="{FAVICON}">
+<meta property="og:image" content="{SITE_URL}/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BelaConnect, vidéosurveillance et alarme pour les professionnels des Alpes-Maritimes">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0E1A2E">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script type="application/ld+json">{org}</script>{extra_head}
+<script type="application/ld+json">{org}</script>{crumbs}{extra_head}
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -173,7 +232,7 @@ def layout(filename, title, description, body, extra_head=""):
 
 <header class="site-header">
   <div class="wrap nav">
-    <a href="index.html" class="logo" aria-label="BelaConnect, accueil">{LOGO_SVG}Bela<span>Connect</span></a>
+    <a href="index.html" class="logo" aria-label="BelaConnect, accueil">{LOGO_SVG}<b>Bela<span>Connect</span></b></a>
     <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -193,7 +252,7 @@ def layout(filename, title, description, body, extra_head=""):
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="index.html" class="logo">{LOGO_SVG}Bela<span>Connect</span></a>
+        <a href="index.html" class="logo">{LOGO_SVG}<b>Bela<span>Connect</span></b></a>
         <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels des Alpes-Maritimes.</p>
       </div>
       <div>
@@ -361,7 +420,7 @@ home = f"""
     <div class="wrap">
       <div class="section-head">
         <h2>Zone d'intervention</h2>
-        <p>Tout le département des Alpes-Maritimes, du littoral à l'arrière-pays.</p>
+        <p>Nous installons caméras de surveillance, alarmes et réseaux informatiques dans tout le département des Alpes-Maritimes : sur le littoral, de Mandelieu à Menton, comme dans l'arrière-pays.</p>
       </div>
       <p class="cities-line">{" · ".join(CITIES)}</p>
     </div>
@@ -805,19 +864,19 @@ notfound = f"""
 """
 
 PAGES = [
-    ("index.html", "BelaConnect — Vidéosurveillance et alarme pour professionnels · Alpes-Maritimes",
-     "Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels des Alpes-Maritimes (Nice, Cannes, Antibes…). Dahua, Hikvision, Ajax. Devis gratuit sur place.",
+    ("index.html", "Installation vidéosurveillance et alarme à Nice, Cannes, Antibes | BelaConnect",
+     "Installateur de caméras de surveillance et d'alarmes pour les professionnels des Alpes-Maritimes : Nice, Cannes, Antibes, Grasse, Menton. Matériel Dahua, Hikvision, Ajax. Devis gratuit sur place.",
      home, faq_jsonld(HOME_FAQ)),
-    ("videosurveillance.html", "Installation vidéosurveillance professionnelle · Alpes-Maritimes — BelaConnect",
-     "Caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Installation et maintenance dans les Alpes-Maritimes.",
+    ("videosurveillance.html", "Installation de caméras de surveillance pour professionnels (06) | BelaConnect",
+     "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Packs 4 et 8 caméras. Nice, Cannes, Antibes et tout le 06.",
      video, faq_jsonld(VIDEO_FAQ)),
-    ("alarme.html", "Alarme Ajax pour professionnels · Alpes-Maritimes — BelaConnect",
+    ("alarme.html", "Installation d'alarme Ajax pour commerces et bureaux (06) | BelaConnect",
      "Installation d'alarmes anti-intrusion Ajax sans fil ou filaires pour commerces, bureaux et entrepôts dans les Alpes-Maritimes. Alertes sur smartphone. Devis gratuit.",
      alarm, faq_jsonld(ALARM_FAQ)),
-    ("informatique.html", "Informatique d'entreprise & réseau · Alpes-Maritimes — BelaConnect",
+    ("informatique.html", "Informatique d'entreprise, réseau et Wi-Fi pro (06) | BelaConnect",
      "Réseau, câblage, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes, sécurité et dépannage informatique pour les entreprises des Alpes-Maritimes.",
      it, faq_jsonld(IT_FAQ)),
-    ("contact.html", "Contact et devis gratuit — BelaConnect",
+    ("contact.html", "Devis gratuit vidéosurveillance et alarme (06) | BelaConnect",
      "Demandez un devis gratuit pour votre projet de vidéosurveillance, d'alarme ou d'informatique dans les Alpes-Maritimes. Visite sur place offerte.",
      contact, ""),
     ("mentions-legales.html", "Mentions légales — BelaConnect",
@@ -840,9 +899,16 @@ def main():
         if filename in ("404.html", "mentions-legales.html"):
             continue
         loc = SITE_URL + "/" + ("" if filename == "index.html" else filename)
-        sitemap.append(f"  <url><loc>{loc}</loc></url>")
+        sitemap.append(f"  <url><loc>{loc}</loc><lastmod>{date.today().isoformat()}</lastmod></url>")
     sitemap.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
+    (ROOT / "packs.html").write_text(
+        '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Packs caméras — BelaConnect</title>'
+        f'<link rel="canonical" href="{SITE_URL}/videosurveillance.html#packs">'
+        '<meta name="robots" content="noindex">'
+        '<meta http-equiv="refresh" content="0; url=videosurveillance.html#packs"></head>'
+        '<body><p>Les packs sont maintenant sur la page <a href="videosurveillance.html#packs">Vidéosurveillance</a>.</p></body></html>\n',
+        encoding="utf-8")
     (ROOT / "robots.txt").write_text(
         f"User-agent: *\nDisallow: /carnet/\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
     print("Pages générées :", ", ".join(p[0] for p in PAGES))

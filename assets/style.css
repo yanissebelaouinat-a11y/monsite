@@ -33,28 +33,41 @@ p{margin:0;}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   padding:13px 22px;border-radius:var(--radius);font-weight:600;font-size:16px;line-height:1.2;
-  border:2px solid transparent;cursor:pointer;font-family:inherit;transition:background .15s,border-color .15s,color .15s;
+  border:2px solid transparent;cursor:pointer;font-family:inherit;
+  transition:background .18s,border-color .18s,color .18s,transform .18s,box-shadow .18s;
 }
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px -6px rgba(14,26,46,.45);}
+.btn:active{transform:translateY(0);box-shadow:none;}
+.btn svg{transition:transform .18s;}
+.btn:hover svg{transform:translateX(3px);}
+.btn[href^="tel:"]:hover svg{transform:rotate(-12deg);}
 .btn-primary{background:var(--cyan);color:var(--navy);}
 .btn-primary:hover{background:#56D0E6;}
 .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff;}
-.btn-ghost:hover{border-color:#fff;}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);}
 .btn-dark{background:var(--navy);color:#fff;}
 .btn-dark:hover{background:var(--navy-2);}
 .btn svg{width:18px;height:18px;flex:none;}
+.btn-dark:hover{background:#1F3354;}
 
 /* En-tête */
 .site-header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px;}
 .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:22px;flex:none;}
 .logo svg{width:32px;height:32px;}
+.logo b{font-weight:inherit;}
 .logo span{color:var(--cyan);}
 .nav-links{display:flex;align-items:center;gap:24px;}
-.nav-links a{color:#C5CDD8;font-size:16px;font-weight:500;}
+.nav-links a{color:#C5CDD8;font-size:16px;font-weight:500;transition:color .15s;}
+.nav-links a:not(.btn):not(.nav-phone){background:linear-gradient(var(--cyan),var(--cyan)) left bottom/0 2px no-repeat;padding-bottom:4px;transition:color .15s,background-size .2s;}
+.nav-links a:not(.btn):not(.nav-phone):hover{background-size:100% 2px;}
 .nav-links a:hover,.nav-links a[aria-current="page"]{color:#fff;}
-.nav-links a[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--cyan);text-decoration-thickness:2px;text-underline-offset:6px;}
+.nav-links a[aria-current="page"]:not(.btn){background-size:100% 2px !important;}
 .nav-links .btn{padding:9px 16px;color:var(--navy);text-decoration:none;}
 .nav-phone{display:inline-flex;align-items:center;gap:8px;color:#fff !important;font-weight:600 !important;}
+.nav-phone:hover{color:var(--cyan) !important;}
+.logo{transition:opacity .15s;}
+.logo:hover{opacity:.85;}
 .nav-phone svg{width:16px;height:16px;color:var(--cyan);}
 .burger{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer;}
 .burger svg{width:26px;height:26px;}
@@ -73,6 +86,7 @@ p{margin:0;}
 .crumbs{font-size:15px;color:#8FA0B5;margin-bottom:16px;}
 .crumbs a{text-decoration:underline;text-underline-offset:3px;}
 .crumbs a:hover{color:#fff;}
+.prose a:hover{color:var(--ink);}
 
 .hero-info{border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:24px;}
 .hero-info dl{margin:0;display:grid;gap:14px;}
@@ -101,8 +115,14 @@ section.tight{padding-top:0;}
 
 /* Cartes */
 .card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;}
-a.card{transition:border-color .15s;}
-a.card:hover{border-color:var(--ink);}
+a.card{transition:border-color .2s,box-shadow .2s,transform .2s;}
+a.card:hover{border-color:var(--cyan-ink);box-shadow:0 12px 28px -14px rgba(14,26,46,.35);transform:translateY(-3px);}
+a.card:hover h3{color:var(--cyan-ink);}
+.card h3{transition:color .2s;}
+.card .more svg{transition:transform .2s;}
+a.card:hover .more svg{transform:translateX(4px);}
+.card .more{text-decoration:none;}
+a.card:hover .more{text-decoration:underline;text-underline-offset:4px;}
 .card.main{border-top:4px solid var(--cyan);}
 .icon{color:var(--cyan-ink);margin-bottom:14px;}
 .icon svg{width:32px;height:32px;}
@@ -165,6 +185,8 @@ a.card:hover{border-color:var(--ink);}
 details{border-bottom:1px solid var(--line);}
 summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:600;font-size:18px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
 summary::-webkit-details-marker{display:none;}
+summary{transition:color .15s;}
+summary:hover{color:var(--cyan-ink);}
 summary::after{content:"+";font-size:26px;font-weight:400;color:var(--cyan-ink);flex:none;}
 details[open] summary::after{content:"–";}
 details p{padding:0 0 18px;color:var(--ink-soft);}
@@ -179,7 +201,9 @@ details p{padding:0 0 18px;color:var(--ink-soft);}
 .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start;}
 .contact-info{display:grid;gap:0;border-top:1px solid var(--line);}
 .ci{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);}
-a.ci:hover strong{text-decoration:underline;}
+a.ci{transition:padding .2s;}
+a.ci:hover{padding-left:8px;}
+a.ci:hover strong{color:var(--cyan-ink);}
 .ci-icon{flex:none;color:var(--cyan-ink);}
 .ci-icon svg{width:24px;height:24px;}
 .ci small{display:block;color:var(--ink-faint);font-size:14px;}
@@ -208,7 +232,8 @@ form.quote .btn{width:100%;}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px;}
 .foot-grid h4{color:#fff;font-size:16px;margin:0 0 12px;}
 .foot-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;}
-.foot-grid a:hover{color:#fff;text-decoration:underline;}
+.foot-grid a{transition:color .15s;}
+.foot-grid a:hover{color:var(--cyan);}
 .foot-grid p{margin-top:12px;max-width:300px;}
 .foot-bottom{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;}
 
@@ -245,4 +270,12 @@ form.quote .btn{width:100%;}
   .foot-grid{grid-template-columns:1fr;}
   .call-fab{display:flex;}
   body{padding-bottom:76px;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;}
+  .btn:hover,a.card:hover{transform:none;}
+}
+@media (hover:none){
+  .btn:hover,a.card:hover{transform:none;box-shadow:none;}
 }
