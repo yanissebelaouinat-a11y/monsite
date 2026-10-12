@@ -177,7 +177,7 @@ def business_schema():
         "image": SITE_URL + "/assets/og-image.png",
         "address": {"@type": "PostalAddress", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"},
         "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"},
-        "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Wi-Fi professionnel"],
+        "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Remise au propre de baies de brassage", "Wi-Fi professionnel"],
         "brand": [{"@type": "Brand", "name": b} for b in ("Dahua", "Hikvision", "Ajax", "TP-Link")],
         "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "url": SITE_URL + "/" + u}}
@@ -279,6 +279,7 @@ def layout(filename, title, description, body, extra_head=""):
           <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
           <li><a href="alarme.html">Alarme</a></li>
           <li><a href="informatique.html">Informatique &amp; réseau</a></li>
+          <li><a href="informatique.html#baies">Remise au propre de baies</a></li>
           <li><a href="videosurveillance.html#packs">Packs caméras</a></li>
         </ul>
       </div>
@@ -378,7 +379,7 @@ home = f"""
           <div class="icon">{ic('pc')}</div>
           <h3>Informatique et réseau</h3>
           <p>Câblage, Wi-Fi pro, postes de travail, sauvegardes et dépannage pour les entreprises.</p>
-          {checks(["Réseau et Wi-Fi TP-Link", "Postes et serveurs", "Maintenance du parc"])}
+          {checks(["Réseau et Wi-Fi TP-Link", "Remise au propre de baies", "Postes, serveurs, maintenance"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
       </div>
@@ -702,6 +703,8 @@ IT_FAQ = [
      "Oui, nous intervenons aussi bien pour un dépannage ponctuel que pour l'installation complète ou la gestion de votre parc informatique."),
     ("Pouvez-vous fournir les ordinateurs et le matériel réseau ?",
      "Oui. Nous fournissons et configurons postes de travail, serveurs, NAS, imprimantes et équipements réseau, ou installons le matériel que vous avez déjà."),
+    ("Pouvez-vous remettre au propre une baie existante ?",
+     "Oui. Nous reprenons le câblage d'une baie déjà en place : tri des câbles, cordons à la bonne longueur, étiquetage des ports et plan de brassage. L'intervention est organisée pour limiter la coupure du réseau."),
     ("Proposez-vous un suivi régulier ?",
      "Oui, la maintenance de votre parc est possible : mises à jour, vérification des sauvegardes, contrôle de la sécurité et interventions en cas de problème."),
 ]
@@ -709,7 +712,7 @@ IT_FAQ = [
 it = page_hero(
     "Informatique & réseau",
     "Informatique <em>d'entreprise</em> &amp; réseau",
-    "Postes de travail, serveurs, réseau, Wi-Fi professionnel, sauvegardes et sécurité. Nous installons et entretenons toute l'informatique de votre entreprise.") + f"""
+    "Postes de travail, serveurs, réseau, Wi-Fi professionnel, remise au propre de baies, sauvegardes et sécurité. Nous installons et entretenons toute l'informatique de votre entreprise.") + f"""
   <section>
     <div class="wrap">
       <div class="section-head">
@@ -717,7 +720,7 @@ it = page_hero(
         <p>Vos caméras, votre alarme et votre informatique reposent sur le même réseau : autant confier l'ensemble à un seul interlocuteur.</p>
       </div>
       <div class="grid-3">
-        <div class="card"><div class="icon">{ic('network')}</div><h3>Réseau &amp; câblage</h3><p>Câblage réseau, baie de brassage, switchs et routeurs pour un réseau rapide et organisé.</p></div>
+        <div class="card"><div class="icon">{ic('network')}</div><h3>Réseau &amp; câblage</h3><p>Câblage réseau, baie de brassage, switchs et routeurs pour un réseau rapide et organisé.</p><a href="#baies" class="more">Remise au propre de baies {ic('arrow')}</a></div>
         <div class="card"><div class="icon">{ic('wifi')}</div><h3>Wi-Fi professionnel</h3><p>Bornes TP-Link pour couvrir tous vos locaux, avec un réseau invités séparé et sécurisé.</p></div>
         <div class="card"><div class="icon">{ic('pc')}</div><h3>Postes de travail</h3><p>Fourniture, installation et configuration des ordinateurs, imprimantes et périphériques.</p></div>
         <div class="card"><div class="icon">{ic('server')}</div><h3>Serveurs &amp; stockage</h3><p>Serveurs, NAS et partage de fichiers pour travailler en équipe en toute sécurité.</p></div>
@@ -727,7 +730,32 @@ it = page_hero(
     </div>
   </section>
 
-  <section class="alt">
+
+  <section class="alt" id="baies">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Remise au propre de baies</h2>
+        <p>Une baie de brassage en désordre, ce sont des pannes difficiles à trouver, des équipements qui chauffent et des interventions qui durent. Nous la remettons au propre, en organisant le chantier pour limiter la coupure du réseau.</p>
+      </div>
+      <div class="compare">
+        <div class="card">
+          <h3>{ic('cable')} Avant</h3>
+          <ul class="plain-list">
+            <li>Câbles emmêlés, de toutes les longueurs</li>
+            <li>Ports non identifiés : impossible de savoir qui est branché où</li>
+            <li>Mauvaise circulation de l'air, équipements qui chauffent</li>
+            <li>Chaque dépannage prend du temps</li>
+          </ul>
+        </div>
+        <div class="card main">
+          <h3>{ic('server')} Après</h3>
+          {checks(["Câbles inutiles retirés, cordons à la bonne longueur", "Passe-câbles et code couleur", "Chaque port repéré et étiqueté", "Switchs, box, enregistreur et onduleur rangés", "Plan de brassage remis en fin d'intervention"])}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="wrap split">
       <div >
         <h2>Dépannage et maintenance</h2>
@@ -739,7 +767,7 @@ it = page_hero(
     </div>
   </section>
 
-  <section>
+  <section class="alt">
     <div class="wrap">
       <div class="section-head">
         <h2>Questions fréquentes</h2>
@@ -817,6 +845,7 @@ contact = page_hero(
             <option value="alarme">Alarme</option>
             <option value="video-alarme">Vidéosurveillance + alarme</option>
             <option value="info">Informatique &amp; réseau</option>
+            <option value="baie">Remise au propre de baie</option>
             <option value="maintenance">Maintenance / dépannage</option>
             <option value="autre">Autre</option>
           </select>
@@ -899,8 +928,8 @@ PAGES = [
     ("alarme.html", "Installation d'alarme Ajax pour commerces et bureaux (06) | BelaConnect",
      "Installation d'alarmes anti-intrusion Ajax sans fil ou filaires pour commerces, bureaux et entrepôts dans les Alpes-Maritimes. Alertes sur smartphone. Devis gratuit.",
      alarm, faq_jsonld(ALARM_FAQ)),
-    ("informatique.html", "Informatique d'entreprise, réseau et Wi-Fi pro (06) | BelaConnect",
-     "Réseau, câblage, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes, sécurité et dépannage informatique pour les entreprises des Alpes-Maritimes.",
+    ("informatique.html", "Informatique d'entreprise, réseau, baies et Wi-Fi pro (06) | BelaConnect",
+     "Réseau, câblage, remise au propre de baies de brassage, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes et dépannage informatique pour les entreprises du 06.",
      it, faq_jsonld(IT_FAQ)),
     ("contact.html", "Devis gratuit vidéosurveillance et alarme (06) | BelaConnect",
      "Demandez un devis gratuit pour votre projet de vidéosurveillance, d'alarme ou d'informatique dans les Alpes-Maritimes. Visite sur place offerte.",
