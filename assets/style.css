@@ -345,7 +345,7 @@ form.quote .btn{width:100%;}
 .nav-links a.svc-video:hover,.nav-links a.svc-alarm:hover,.nav-links a.svc-it:hover{
   color:var(--svc);background-image:linear-gradient(var(--svc),var(--svc));text-shadow:0 0 12px color-mix(in srgb,var(--svc) 55%,transparent);}
 a.card.svc-video:hover,a.card.svc-alarm:hover,a.card.svc-it:hover{border-color:var(--svc-ink);box-shadow:0 14px 30px -14px color-mix(in srgb,var(--svc) 60%,transparent);}
-a.card.main.svc-video:hover,a.card.main.svc-alarm:hover{border-top-color:var(--svc);}
+a.card.main.svc-video:hover,a.card.main.svc-alarm:hover,a.card.main.svc-it:hover{border-top-color:var(--svc);}
 a.card.svc-video:hover h3,a.card.svc-alarm:hover h3,a.card.svc-it:hover h3,
 a.card.svc-video:hover .more,a.card.svc-alarm:hover .more,a.card.svc-it:hover .more,
 a.card.svc-video:hover .icon,a.card.svc-alarm:hover .icon,a.card.svc-it:hover .icon{color:var(--svc-ink);}

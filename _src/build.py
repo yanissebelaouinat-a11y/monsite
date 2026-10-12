@@ -392,7 +392,7 @@ home = f"""
           {checks(["Sans fil ou filaire", "Badge ou code par salarié", "Couplage aux caméras"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
-        <a href="informatique.html" class="card svc-it">
+        <a href="informatique.html" class="card main svc-it">
           <div class="icon">{ic('pc')}</div>
           <h3>Informatique et réseau</h3>
           <p>Câblage, Wi-Fi pro, postes de travail, sauvegardes et dépannage pour les entreprises.</p>
