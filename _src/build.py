@@ -19,6 +19,9 @@ EMAIL = "contact@belaconnect.fr"      # TODO : adresse à créer chez Hostinger
 OWNER_NAME = "[Prénom Nom]"           # TODO : nom de l'entrepreneur
 OWNER_ADDRESS = "[Adresse professionnelle], Alpes-Maritimes"  # TODO
 SIREN = "947 672 481"
+# Clé Web3Forms (gratuite, sur web3forms.com avec l'adresse qui doit recevoir les demandes).
+# Vide = le formulaire ouvre l'application email du visiteur.
+FORM_KEY = ""
 EMAIL_CONFIRMED = False              # passer à True quand l'adresse existe
 SITE_URL = "https://belaconnect.fr"
 
@@ -859,7 +862,8 @@ contact = page_hero(
         </div>
       </div>
 
-      <form id="devis" class="quote" data-to="{EMAIL}" novalidate>
+      <form id="devis" class="quote" data-to="{EMAIL}"{f' data-key="{FORM_KEY}"' if FORM_KEY else ""} novalidate>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="full">
           <label for="f-entreprise">Entreprise <span class="opt">(facultatif)</span></label>
           <input id="f-entreprise" name="entreprise" autocomplete="organization">
@@ -903,7 +907,8 @@ contact = page_hero(
         <div class="full">
           <button type="submit" class="btn btn-primary">Envoyer ma demande {ic('arrow')}</button>
         </div>
-        <p class="form-note full">En cliquant, votre application email s'ouvre avec votre demande pré-remplie : il ne vous reste qu'à l'envoyer. Vos informations servent uniquement à répondre à votre demande (voir les <a href="mentions-legales.html" style="text-decoration:underline">mentions légales</a>).</p>
+        <p id="form-ok" class="form-ok full" role="status"></p>
+        <p class="form-note full">{"Votre demande nous est envoyée directement." if FORM_KEY else "En cliquant, votre application email s'ouvre avec votre demande pré-remplie : il ne vous reste qu'à l'envoyer."} Vos informations servent uniquement à répondre à votre demande (voir les <a href="mentions-legales.html" style="text-decoration:underline">mentions légales</a>).</p>
       </form>
     </div>
   </section>
@@ -936,7 +941,7 @@ legal = f"""
       <p>L'ensemble des contenus de ce site (textes, visuels, logo) est la propriété de BelaConnect, sauf mention contraire. Toute reproduction sans autorisation est interdite. Les marques citées (Dahua, Hikvision, Ajax, TP-Link) appartiennent à leurs propriétaires respectifs.</p>
 
       <h2>Données personnelles</h2>
-      <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer.</p>
+      <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. {"Les demandes envoyées par le formulaire de contact nous sont transmises par email via le service Web3Forms, sans être conservées sur le site." if FORM_KEY else "Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer."}</p>
       <p>Les informations que vous nous transmettez (nom, téléphone, email, ville, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont jamais cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact.</p>
       <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 
@@ -1012,7 +1017,7 @@ def main():
         '<body><p>Les packs sont maintenant sur la page <a href="videosurveillance.html#packs">Vidéosurveillance</a>.</p></body></html>\n',
         encoding="utf-8")
     (ROOT / "robots.txt").write_text(
-        f"User-agent: *\nDisallow: /carnet/\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
+        f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
     print("Pages générées :", ", ".join(p[0] for p in PAGES))
 
 

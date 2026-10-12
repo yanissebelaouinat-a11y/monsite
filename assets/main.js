@@ -59,6 +59,7 @@
     }
     err.classList.remove('show');
     var to = form.getAttribute('data-to');
+    var key = form.getAttribute('data-key');
     var besoinTxt = form.besoin.options[form.besoin.selectedIndex].text;
     var entreprise = form.entreprise.value.trim();
     var subject = 'Demande de devis — ' + besoinTxt + (entreprise ? ' — ' + entreprise : '');
@@ -72,6 +73,38 @@
       '',
       form.message.value.trim()
     ].join('\n');
-    window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var mailto = function () {
+      window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    };
+    if (!key) { mailto(); return; }
+
+    // Envoi direct (Web3Forms) ; en cas d'échec, on retombe sur l'email
+    var ok = document.getElementById('form-ok');
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    var label = btn.innerHTML;
+    btn.textContent = 'Envoi en cours…';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: key,
+        subject: subject,
+        from_name: 'Site BELACONNECT',
+        replyto: form.email.value.trim() || undefined,
+        botcheck: form.botcheck.checked,
+        message: body
+      })
+    }).then(function (r) { return r.json(); }).then(function (res) {
+      if (!res.success) throw new Error(res.message);
+      form.reset();
+      ok.textContent = 'Merci, votre demande a bien été envoyée. Nous vous rappelons rapidement.';
+      ok.classList.add('show');
+    }).catch(function () {
+      mailto();
+    }).then(function () {
+      btn.disabled = false;
+      btn.innerHTML = label;
+    });
   });
 })();

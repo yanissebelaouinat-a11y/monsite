@@ -351,3 +351,6 @@ a.card.svc-video .icon,a.card.svc-alarm .icon,a.card.svc-it .icon{transition:col
 a.card.svc-video:hover .checks svg,a.card.svc-alarm:hover .checks svg,a.card.svc-it:hover .checks svg{color:var(--svc-ink);}
 
 @media (prefers-reduced-motion:reduce){ .hero-waves path{animation:none;opacity:.1;} }
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+.form-ok{display:none;padding:14px 16px;border-radius:var(--radius);background:#E7F8EF;color:#14653F;font-weight:600;}
+.form-ok.show{display:block;}
