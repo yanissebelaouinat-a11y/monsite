@@ -53,8 +53,8 @@ p{margin:0;}
 /* En-tête */
 .site-header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px;}
-.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:22px;flex:none;}
-.logo svg{width:32px;height:32px;}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:24px;letter-spacing:-.01em;flex:none;}
+.logo svg{width:36px;height:36px;}
 .logo b{font-weight:inherit;}
 .logo span{color:var(--cyan);}
 .nav-links{display:flex;align-items:center;gap:24px;}
