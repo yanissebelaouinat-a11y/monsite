@@ -55,7 +55,7 @@ p{margin:0;}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px;}
 .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:24px;letter-spacing:-.01em;flex:none;}
 .logo svg{width:36px;height:36px;}
-.logo b{font-weight:inherit;}
+.logo b{font-weight:800;letter-spacing:.03em;}
 .logo span{color:var(--cyan);}
 .nav-links{display:flex;align-items:center;gap:24px;}
 .nav-links a{color:#C5CDD8;font-size:16px;font-weight:500;transition:color .15s;}

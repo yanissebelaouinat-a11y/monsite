@@ -273,7 +273,7 @@ def layout(filename, title, description, body, extra_head=""):
 
 <header class="site-header">
   <div class="wrap nav">
-    <a href="index.html" class="logo" aria-label="BelaConnect, accueil">{LOGO_SVG}<b>bela<span>connect</span></b></a>
+    <a href="index.html" class="logo" aria-label="BelaConnect, accueil">{LOGO_SVG}<b>BELA<span>CONNECT</span></b></a>
     <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -293,7 +293,7 @@ def layout(filename, title, description, body, extra_head=""):
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="index.html" class="logo">{LOGO_SVG}<b>bela<span>connect</span></b></a>
+        <a href="index.html" class="logo">{LOGO_SVG}<b>BELA<span>CONNECT</span></b></a>
         <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels des Alpes-Maritimes.</p>
       </div>
       <div>
