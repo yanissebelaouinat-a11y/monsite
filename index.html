@@ -27,10 +27,9 @@
 <link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=554b62d3">
+<link rel="preload" href="assets/fonts/barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=4ee2bd68">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://belaconnect.fr/#entreprise", "name": "BelaConnect", "description": "Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels des Alpes-Maritimes.", "url": "https://belaconnect.fr/", "logo": "https://belaconnect.fr/assets/apple-touch-icon.png", "image": "https://belaconnect.fr/assets/og-image.png", "address": {"@type": "PostalAddress", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"}, "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"}, "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Remise au propre de baies de brassage", "Wi-Fi professionnel"], "brand": [{"@type": "Brand", "name": "Dahua"}, {"@type": "Brand", "name": "Hikvision"}, {"@type": "Brand", "name": "Ajax"}, {"@type": "Brand", "name": "TP-Link"}], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de vidéosurveillance", "url": "https://belaconnect.fr/videosurveillance.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation d'alarme", "url": "https://belaconnect.fr/alarme.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Informatique et réseau d'entreprise", "url": "https://belaconnect.fr/informatique.html"}}]}, "identifier": {"@type": "PropertyValue", "propertyID": "SIREN", "value": "947672481"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Où intervenez-vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans tout le département des Alpes-Maritimes (06), sur le littoral comme dans l'arrière-pays."}}, {"@type": "Question", "name": "Le devis est-il gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nous nous déplaçons gratuitement dans vos locaux pour étudier votre besoin, puis nous vous remettons un devis détaillé, sans engagement."}}, {"@type": "Question", "name": "Fournissez-vous le matériel ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous fournissons du matériel professionnel (Dahua, Hikvision, Ajax, TP-Link) adapté à votre besoin. Nous pouvons aussi installer un matériel que vous possédez déjà."}}, {"@type": "Question", "name": "Pouvez-vous gérer de gros chantiers ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Pour les installations importantes, nous intervenons en équipe afin de respecter vos délais."}}, {"@type": "Question", "name": "Assurez-vous la maintenance après l'installation ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous proposons la maintenance de vos installations de vidéosurveillance, d'alarme et de votre parc informatique."}}]}</script>
 </head>
 <body>
@@ -121,7 +120,7 @@
     </div>
   </section>
 
-  <div class="brands" aria-label="Matériel installé"><div class="wrap"><img src="assets/marques/dahua.png" alt="Dahua" style="height:30px" loading="lazy"><img src="assets/marques/hikvision.png" alt="Hikvision" style="height:20px" loading="lazy"><img src="assets/marques/ajax.png" alt="Ajax" style="height:24px" loading="lazy"><img src="assets/marques/tplink.png" alt="VIGI by TP-Link" style="height:40px" loading="lazy"></div></div>
+  <div class="brands" aria-label="Matériel installé"><div class="wrap"><img src="assets/marques/dahua.png" alt="Dahua" width="100" height="30" style="height:30px" loading="lazy"><img src="assets/marques/hikvision.png" alt="Hikvision" width="160" height="20" style="height:20px" loading="lazy"><img src="assets/marques/ajax.png" alt="Ajax" width="116" height="24" style="height:24px" loading="lazy"><img src="assets/marques/tplink.png" alt="VIGI by TP-Link" width="72" height="40" style="height:40px" loading="lazy"></div></div>
 
   <section id="services">
     <div class="wrap">
@@ -256,7 +255,7 @@
         <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels des Alpes-Maritimes.</p>
       </div>
       <div>
-        <h4>Services</h4>
+        <p class="foot-title">Services</p>
         <ul>
           <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
           <li><a href="alarme.html">Alarme</a></li>
@@ -266,14 +265,14 @@
         </ul>
       </div>
       <div>
-        <h4>Infos</h4>
+        <p class="foot-title">Infos</p>
         <ul>
           <li><a href="contact.html">Contact &amp; devis</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <p class="foot-title">Contact</p>
         <ul>
           <li><a href="tel:+33600000000">06 00 00 00 00</a></li>
           <li><a href="mailto:contact@belaconnect.fr">contact@belaconnect.fr</a></li>
@@ -289,6 +288,6 @@
 </footer>
 
 <a href="tel:+33600000000" class="btn btn-primary call-fab"><svg aria-hidden="true"><use href="#i-phone"/></svg> Appeler BelaConnect</a>
-<script src="assets/main.js?v=200decce"></script>
+<script src="assets/main.js?v=200decce" defer></script>
 </body>
 </html>

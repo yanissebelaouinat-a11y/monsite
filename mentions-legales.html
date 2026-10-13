@@ -27,10 +27,9 @@
 <link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=554b62d3">
+<link rel="preload" href="assets/fonts/barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=4ee2bd68">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://belaconnect.fr/#entreprise", "name": "BelaConnect", "description": "Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels des Alpes-Maritimes.", "url": "https://belaconnect.fr/", "logo": "https://belaconnect.fr/assets/apple-touch-icon.png", "image": "https://belaconnect.fr/assets/og-image.png", "address": {"@type": "PostalAddress", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"}, "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"}, "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Remise au propre de baies de brassage", "Wi-Fi professionnel"], "brand": [{"@type": "Brand", "name": "Dahua"}, {"@type": "Brand", "name": "Hikvision"}, {"@type": "Brand", "name": "Ajax"}, {"@type": "Brand", "name": "TP-Link"}], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation de vidéosurveillance", "url": "https://belaconnect.fr/videosurveillance.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation d'alarme", "url": "https://belaconnect.fr/alarme.html"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Informatique et réseau d'entreprise", "url": "https://belaconnect.fr/informatique.html"}}]}, "identifier": {"@type": "PropertyValue", "propertyID": "SIREN", "value": "947672481"}}</script>
 <meta name="robots" content="noindex">
 </head>
@@ -126,7 +125,7 @@
       <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:contact@belaconnect.fr">contact@belaconnect.fr</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 
       <h2>Polices de caractères</h2>
-      <p>Le site utilise la police Barlow, chargée depuis Google Fonts.</p>
+      <p>Le site utilise la police Barlow (licence SIL Open Font), hébergée directement sur le site : aucune donnée n'est transmise à un service tiers pour l'afficher.</p>
     </div>
   </section>
 
@@ -140,7 +139,7 @@
         <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels des Alpes-Maritimes.</p>
       </div>
       <div>
-        <h4>Services</h4>
+        <p class="foot-title">Services</p>
         <ul>
           <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
           <li><a href="alarme.html">Alarme</a></li>
@@ -150,14 +149,14 @@
         </ul>
       </div>
       <div>
-        <h4>Infos</h4>
+        <p class="foot-title">Infos</p>
         <ul>
           <li><a href="contact.html">Contact &amp; devis</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <p class="foot-title">Contact</p>
         <ul>
           <li><a href="tel:+33600000000">06 00 00 00 00</a></li>
           <li><a href="mailto:contact@belaconnect.fr">contact@belaconnect.fr</a></li>
@@ -173,6 +172,6 @@
 </footer>
 
 <a href="tel:+33600000000" class="btn btn-primary call-fab"><svg aria-hidden="true"><use href="#i-phone"/></svg> Appeler BelaConnect</a>
-<script src="assets/main.js?v=200decce"></script>
+<script src="assets/main.js?v=200decce" defer></script>
 </body>
 </html>

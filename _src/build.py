@@ -6,6 +6,7 @@ Après modification : python3 _src/build.py (depuis la racine du dépôt).
 Le dossier _src n'est pas publié (Jekyll ignore les dossiers commençant par « _ »).
 """
 import json
+from PIL import Image
 import math
 from datetime import date
 from pathlib import Path
@@ -95,7 +96,8 @@ def brands(names, label="Matériel installé"):
         f = ROOT / "assets" / "marques" / (BRAND_FILES[n] + ".png")
         if f.exists():
             alt, hgt = BRAND_LOGO[n]
-            items.append(f'<img src="assets/marques/{f.name}" alt="{alt}" style="height:{hgt}px" loading="lazy">')
+            iw, ih = Image.open(f).size
+            items.append(f'<img src="assets/marques/{f.name}" alt="{alt}" width="{round(iw * hgt / ih)}" height="{hgt}" style="height:{hgt}px" loading="lazy">')
         else:
             items.append(f"<strong>{n.upper()}</strong>")
     return f'''
@@ -187,6 +189,16 @@ def asset_version(path):
     return hashlib.md5((ROOT / path).read_bytes()).hexdigest()[:8]
 
 
+SERVICE_SCHEMA = {
+    "videosurveillance.html": ("Installation de vidéosurveillance",
+        "Pose de caméras Dahua et Hikvision intérieures et extérieures, avec enregistreur et accès smartphone, pour entreprises, commerces et copropriétés."),
+    "alarme.html": ("Installation d'alarme anti-intrusion",
+        "Systèmes d'alarme Ajax sans fil ou filaires pour commerces, bureaux et entrepôts, avec alertes sur smartphone."),
+    "informatique.html": ("Informatique et réseau d'entreprise",
+        "Câblage, remise au propre de baies, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes et dépannage."),
+}
+
+
 def placeholder(value):
     return value.startswith("[") or "00 00 00" in value or value == "+33600000000"
 
@@ -235,6 +247,14 @@ def layout(filename, title, description, body, extra_head=""):
                 {"@type": "ListItem", "position": 2, "name": BREADCRUMB[filename], "item": canonical}]},
             ensure_ascii=False) + "</script>"
     og_title = title.split(" | ")[0]
+    if filename in SERVICE_SCHEMA:
+        name, desc = SERVICE_SCHEMA[filename]
+        crumbs += '\n<script type="application/ld+json">' + json.dumps({
+            "@context": "https://schema.org", "@type": "Service", "name": name, "description": desc,
+            "serviceType": name, "url": canonical,
+            "provider": {"@id": SITE_URL + "/#entreprise"},
+            "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"}},
+            ensure_ascii=False) + "</script>"
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -264,9 +284,8 @@ def layout(filename, title, description, body, extra_head=""):
 <link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css?v={asset_version('assets/style.css')}">
 <script type="application/ld+json">{org}</script>{crumbs}{extra_head}
 </head>
@@ -300,7 +319,7 @@ def layout(filename, title, description, body, extra_head=""):
         <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels des Alpes-Maritimes.</p>
       </div>
       <div>
-        <h4>Services</h4>
+        <p class="foot-title">Services</p>
         <ul>
           <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
           <li><a href="alarme.html">Alarme</a></li>
@@ -310,14 +329,14 @@ def layout(filename, title, description, body, extra_head=""):
         </ul>
       </div>
       <div>
-        <h4>Infos</h4>
+        <p class="foot-title">Infos</p>
         <ul>
           <li><a href="contact.html">Contact &amp; devis</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <p class="foot-title">Contact</p>
         <ul>
           <li><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
@@ -333,7 +352,7 @@ def layout(filename, title, description, body, extra_head=""):
 </footer>
 
 <a href="tel:{PHONE_LINK}" class="btn btn-primary call-fab">{ic('phone')} Appeler BelaConnect</a>
-<script src="assets/main.js?v={asset_version('assets/main.js')}"></script>
+<script src="assets/main.js?v={asset_version('assets/main.js')}" defer></script>
 </body>
 </html>
 """
@@ -946,7 +965,7 @@ legal = f"""
       <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 
       <h2>Polices de caractères</h2>
-      <p>Le site utilise la police Barlow, chargée depuis Google Fonts.</p>
+      <p>Le site utilise la police Barlow (licence SIL Open Font), hébergée directement sur le site : aucune donnée n'est transmise à un service tiers pour l'afficher.</p>
     </div>
   </section>
 """
