@@ -22,17 +22,52 @@
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  // Apparition au défilement
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
+  // Animations (désactivées si l'utilisateur préfère réduire les mouvements)
+  var motionOk = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (motionOk && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('anim');
+
+    // Apparition progressive des blocs au défilement, avec un léger décalage entre voisins
+    var targets = '.section-head, .split > *, .grid-2 > *, .grid-3 > *, .grid-4 > *, .compare > *, ' +
+      '.plain-list li, .faq details, .cta-band, .note, .brands img, .brands strong, .contact-info .ci, form.quote, .aside-note';
+    var items = document.querySelectorAll(targets);
+    items.forEach(function (el) {
+      if (el.closest('.hero')) return;
+      var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+      el.classList.add('reveal');
+      el.style.transitionDelay = (i % 6) * 90 + 'ms';
+    });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+        // Une fois apparu, on retire le délai pour que les effets au survol restent instantanés
+        setTimeout(function () { e.target.style.transitionDelay = ''; }, 1200);
       });
-    }, { threshold: 0.12 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add('in'); });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    // Compteurs de la bande « Pourquoi choisir BelaConnect »
+    var counters = document.querySelectorAll('.why-grid b');
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        co.unobserve(e.target);
+        var el = e.target, text = el.textContent, m = text.match(/^(\d+)(.*)$/);
+        if (!m) return;
+        var end = parseInt(m[1], 10), pad = m[1].length, rest = m[2], t0 = null, dur = 1200;
+        var step = function (t) {
+          if (!t0) t0 = t;
+          var k = Math.min(1, (t - t0) / dur), v = Math.round(end * (1 - Math.pow(1 - k, 3)));
+          el.textContent = String(v).padStart(pad, '0') + rest;
+          if (k < 1) requestAnimationFrame(step);
+        };
+        el.textContent = '0'.padStart(pad, '0') + rest;
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { co.observe(el); });
   }
 
   // Pré-sélection du besoin depuis l'URL (ex. contact.html?besoin=pack-4)
