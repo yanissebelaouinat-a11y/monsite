@@ -17,8 +17,8 @@ ROOT = Path(__file__).resolve().parent.parent
 PHONE_DISPLAY = "06 59 76 27 85"
 PHONE_LINK = "+33659762785"
 EMAIL = "belaconnect06@gmail.com"
-OWNER_NAME = "[Prénom Nom]"           # TODO : nom de l'entrepreneur
-OWNER_ADDRESS = "[Adresse professionnelle], Alpes-Maritimes"  # TODO
+OWNER_NAME = "Yanisse [Nom de famille]"
+OWNER_ADDRESS = "Nice (06), Alpes-Maritimes"
 SIREN = "947 672 481"
 # Clé Web3Forms (gratuite, sur web3forms.com avec l'adresse qui doit recevoir les demandes).
 # Vide = le formulaire ouvre l'application email du visiteur.
@@ -213,7 +213,7 @@ def business_schema():
         "url": SITE_URL + "/",
         "logo": SITE_URL + "/assets/apple-touch-icon.png",
         "image": SITE_URL + "/assets/og-image.png",
-        "address": {"@type": "PostalAddress", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"},
+        "address": {"@type": "PostalAddress", "addressLocality": "Nice", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"},
         "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"},
         "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Remise au propre de baies de brassage", "Wi-Fi professionnel"],
         "brand": [{"@type": "Brand", "name": b} for b in ("Dahua", "Hikvision", "Ajax", "TP-Link")],
