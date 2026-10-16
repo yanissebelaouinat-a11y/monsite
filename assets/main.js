@@ -130,13 +130,23 @@
         botcheck: form.botcheck.checked,
         message: body
       })
-    }).then(function (r) { return r.json(); }).then(function (res) {
-      if (!res.success) throw new Error(res.message);
+    }).then(function (r) {
+      return r.json().catch(function () { throw new Error('réponse ' + r.status); });
+    }).then(function (res) {
+      if (!res.success) throw new Error(res.message || 'refusé');
       form.reset();
+      ok.className = 'form-ok show';
       ok.textContent = 'Merci, votre demande a bien été envoyée. Nous vous rappelons rapidement.';
       ok.classList.add('show');
-    }).catch(function () {
-      mailto();
+    }).catch(function (e) {
+      // Échec : on l'affiche clairement et on propose les autres moyens de contact
+      ok.className = 'form-ok form-fail show';
+      ok.innerHTML = "L'envoi n'a pas abouti" + (e && e.message ? ' (' + e.message.replace(/[<>&]/g, '') + ')' : '') +
+        '. Vous pouvez <a href="tel:' + (form.getAttribute('data-tel') || '') + '">nous appeler</a> ou ' +
+        '<a href="#" id="form-mail">envoyer votre demande par email</a>.';
+      var m = document.getElementById('form-mail');
+      if (m) m.addEventListener('click', function (ev) { ev.preventDefault(); mailto(); });
+      if (window.console) console.error('Web3Forms', e);
     }).then(function () {
       btn.disabled = false;
       btn.innerHTML = label;

@@ -497,3 +497,5 @@ html.anim .call-fab{animation:ring 2.4s ease-out 1.5s infinite;}
   .logo:hover svg path,.call-fab{animation:none !important;}
   .btn-primary::after{display:none;}
 }
+.form-fail{background:#FDECEC;color:#9B1C1C;}
+.form-fail a{text-decoration:underline;color:inherit;}

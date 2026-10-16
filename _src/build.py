@@ -881,7 +881,7 @@ contact = page_hero(
         </div>
       </div>
 
-      <form id="devis" class="quote" data-to="{EMAIL}"{f' data-key="{FORM_KEY}"' if FORM_KEY else ""} novalidate>
+      <form id="devis" class="quote" data-to="{EMAIL}" data-tel="{PHONE_LINK}"{f' data-key="{FORM_KEY}"' if FORM_KEY else ""} novalidate>
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="full">
           <label for="f-entreprise">Entreprise <span class="opt">(facultatif)</span></label>
