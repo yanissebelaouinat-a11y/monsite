@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # --- Coordonnées (À COMPLÉTER) ------------------------------------------------
 PHONE_DISPLAY = "06 59 76 27 85"
 PHONE_LINK = "+33659762785"
-EMAIL = "contact@belaconnect.fr"      # TODO : adresse à créer chez Hostinger
+EMAIL = "belaconnect06@gmail.com"
 OWNER_NAME = "[Prénom Nom]"           # TODO : nom de l'entrepreneur
 OWNER_ADDRESS = "[Adresse professionnelle], Alpes-Maritimes"  # TODO
 SIREN = "947 672 481"
