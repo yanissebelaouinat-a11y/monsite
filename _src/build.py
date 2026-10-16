@@ -14,8 +14,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 # --- Coordonnées (À COMPLÉTER) ------------------------------------------------
-PHONE_DISPLAY = "06 00 00 00 00"      # TODO : vrai numéro
-PHONE_LINK = "+33600000000"           # TODO : même numéro au format international
+PHONE_DISPLAY = "06 59 76 27 85"
+PHONE_LINK = "+33659762785"
 EMAIL = "contact@belaconnect.fr"      # TODO : adresse à créer chez Hostinger
 OWNER_NAME = "[Prénom Nom]"           # TODO : nom de l'entrepreneur
 OWNER_ADDRESS = "[Adresse professionnelle], Alpes-Maritimes"  # TODO
