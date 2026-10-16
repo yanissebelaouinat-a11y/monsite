@@ -22,7 +22,7 @@ OWNER_ADDRESS = "[Adresse professionnelle], Alpes-Maritimes"  # TODO
 SIREN = "947 672 481"
 # Clé Web3Forms (gratuite, sur web3forms.com avec l'adresse qui doit recevoir les demandes).
 # Vide = le formulaire ouvre l'application email du visiteur.
-FORM_KEY = ""
+FORM_KEY = "031f8237-9600-4449-a1bd-4605361c13ce"
 EMAIL_CONFIRMED = False              # passer à True quand l'adresse existe
 SITE_URL = "https://belaconnect.fr"
 
