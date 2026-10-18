@@ -805,6 +805,43 @@ def tiles(name, options, kind="radio", cls="tiles"):
     return f'<div class="{cls}">' + "".join(out) + "</div>"
 
 
+
+# Questions de l'étape 2 selon le besoin choisi : (catégories, titre, nom, options, type, style)
+LOCAUX = [("Commerce", "Commerce", "shop"), ("Restaurant / hôtel", "Restaurant / hôtel", "food"), ("Bureaux", "Bureaux", "office"),
+          ("Entrepôt / atelier", "Entrepôt / atelier", "box"), ("Chantier", "Chantier", "crane"), ("Autre", "Autre", None)]
+CHIP = lambda *xs: [(x, x, None) for x in xs]
+STEP2 = [
+    ("video alarme autre", "Type de locaux", "locaux", LOCAUX, "radio", "tiles small"),
+    ("copro", "Vous êtes", "profil", CHIP("Syndic", "Conseil syndical", "Copropriétaire", "Gestionnaire / bailleur"), "radio", "tiles chips"),
+    ("copro", "Parties communes à surveiller", "zones", [("Hall d'entrée", "Hall d'entrée", "door"), ("Parking", "Parking", "cam"), ("Garages / box", "Garages / box", "box"), ("Local vélos / poubelles", "Local vélos / poubelles", "building"), ("Extérieurs / portail", "Extérieurs / portail", "pin"), ("Ascenseurs / couloirs", "Ascenseurs / couloirs", "users")], "checkbox", "tiles small"),
+    ("copro", "Taille de la résidence", "lots", CHIP("Moins de 20 logements", "20 à 50 logements", "Plus de 50 logements"), "radio", "tiles chips"),
+    ("copro", "Où en est le projet ?", "ag", CHIP("Déjà voté en AG", "À présenter à la prochaine AG", "Simple étude pour l'instant"), "radio", "tiles chips"),
+    ("video copro", "Nombre de caméras envisagé", "cameras", CHIP("1 à 4", "5 à 8", "Plus de 8", "Je ne sais pas"), "radio", "tiles chips"),
+    ("video", "Emplacement des caméras", "emplacement", CHIP("Intérieur", "Extérieur"), "checkbox", "tiles chips"),
+    ("alarme", "Accès à protéger", "acces", CHIP("Portes", "Fenêtres", "Rideau métallique", "Réserve / stock", "Bureaux"), "checkbox", "tiles chips"),
+    ("alarme", "Surface approximative", "surface", CHIP("Moins de 100 m²", "100 à 300 m²", "Plus de 300 m²"), "radio", "tiles chips"),
+    ("baie", "Taille de l'installation", "baie_taille", CHIP("Petit coffret", "Une baie", "Plusieurs baies"), "radio", "tiles chips"),
+    ("info", "Ce dont vous avez besoin", "besoin_info", CHIP("Câblage réseau", "Wi-Fi professionnel", "Postes de travail", "Serveur / NAS", "Sauvegardes", "Sécurité informatique"), "checkbox", "tiles chips"),
+    ("baie info", "Nombre de postes / prises réseau", "postes", CHIP("Moins de 10", "10 à 30", "Plus de 30"), "radio", "tiles chips"),
+    ("baie", "Coupure du réseau possible", "coupure", CHIP("En dehors des horaires", "En journée", "Peu importe"), "radio", "tiles chips"),
+    ("maint", "Équipement concerné", "equipement", [("Caméras", "Caméras", "cam"), ("Alarme", "Alarme", "alarm"), ("Réseau / Wi-Fi", "Réseau / Wi-Fi", "wifi"), ("Informatique", "Informatique", "pc")], "checkbox", "tiles small"),
+    ("maint", "Marque du matériel", "marque", CHIP("Dahua", "Hikvision", "Ajax", "TP-Link", "Autre", "Je ne sais pas"), "radio", "tiles chips"),
+    ("maint", "Le problème", "probleme", CHIP("Panne / ne fonctionne plus", "Plus d'image ou d'accès à distance", "Alarme qui se déclenche seule", "Contrat d'entretien", "Autre"), "radio", "tiles chips"),
+    ("maint", "Installé par BELACONNECT ?", "notre_install", CHIP("Oui", "Non"), "radio", "tiles chips"),
+    ("video alarme copro autre", "Une installation existe déjà ?", "existant", CHIP("Non, première installation", "Oui, à remplacer ou compléter"), "radio", "tiles chips"),
+    ("maint", "Urgence", "urgence", CHIP("Urgent", "Cette semaine", "Pas urgent"), "radio", "tiles chips"),
+    ("video alarme copro baie info autre", "Quand souhaitez-vous l'intervention ?", "delai", CHIP("Urgent", "Dans le mois", "D'ici 3 mois", "Je me renseigne"), "radio", "tiles chips"),
+]
+
+
+def step2_groups():
+    out = []
+    for cats, title, name, opts, kind, cls in STEP2:
+        out.append(f'<div class="q-group" data-for="{cats}" data-name="{name}" data-title="{title}">'
+                   f'<p class="q">{title}</p>{tiles(name, opts, kind=kind, cls=cls)}</div>')
+    return "\n          ".join(out)
+
+
 BESOINS = [("video", "Vidéosurveillance", "cam"), ("alarme", "Alarme", "alarm"),
            ("video-alarme", "Caméras + alarme", "alarm"), ("copro", "Copropriété", "building"),
            ("baie", "Remise au propre de baie", "server"), ("info", "Réseau / informatique", "network"),
@@ -828,33 +865,8 @@ contact = page_hero(
         </fieldset>
 
         <fieldset class="step-panel" data-step="2">
-          <legend>Parlez-nous de vos locaux</legend>
-          <div class="only-copro">
-            <p class="q">Vous êtes</p>
-            {tiles("profil", [("Syndic", "Syndic", None), ("Conseil syndical", "Conseil syndical", None), ("Copropriétaire", "Copropriétaire", None), ("Gestionnaire / bailleur", "Gestionnaire / bailleur", None)], cls="tiles chips")}
-            <p class="q">Parties communes à surveiller</p>
-            {tiles("zones", [("Hall d'entrée", "Hall d'entrée", "door"), ("Parking", "Parking", "cam"), ("Garages / box", "Garages / box", "box"), ("Local vélos / poubelles", "Local vélos / poubelles", "building"), ("Extérieurs / portail", "Extérieurs / portail", "pin"), ("Ascenseurs / couloirs", "Ascenseurs / couloirs", "users")], kind="checkbox", cls="tiles small")}
-            <p class="q">Taille de la résidence</p>
-            {tiles("lots", [("Moins de 20 logements", "Moins de 20 logements", None), ("20 à 50 logements", "20 à 50 logements", None), ("Plus de 50 logements", "Plus de 50 logements", None)], cls="tiles chips")}
-            <p class="q">Où en est le projet ?</p>
-            {tiles("ag", [("Déjà voté en AG", "Déjà voté en AG", None), ("À présenter à la prochaine AG", "À présenter à la prochaine AG", None), ("Simple étude pour l'instant", "Simple étude pour l'instant", None)], cls="tiles chips")}
-          </div>
-          <div class="not-copro">
-          <p class="q">Type de locaux</p>
-          {tiles("locaux", [("Commerce", "Commerce", "shop"), ("Restaurant / hôtel", "Restaurant / hôtel", "food"), ("Bureaux", "Bureaux", "office"), ("Entrepôt / atelier", "Entrepôt / atelier", "box"), ("Chantier", "Chantier", "crane"), ("Autre", "Autre", None)], cls="tiles small")}
-          </div>
-          <div class="only-cam">
-            <p class="q">Nombre de caméras envisagé</p>
-            {tiles("cameras", [("1 à 4", "1 à 4", None), ("5 à 8", "5 à 8", None), ("Plus de 8", "Plus de 8", None), ("Je ne sais pas", "Je ne sais pas", None)], cls="tiles chips")}
-            <div class="not-copro-2">
-            <p class="q">Emplacement</p>
-            {tiles("emplacement", [("Intérieur", "Intérieur", None), ("Extérieur", "Extérieur", None)], kind="checkbox", cls="tiles chips")}
-            </div>
-          </div>
-          <p class="q">Une installation existe déjà ?</p>
-          {tiles("existant", [("Non, c'est une première installation", "Non, première installation", None), ("Oui, à remplacer ou compléter", "Oui, à remplacer ou compléter", None)], cls="tiles chips")}
-          <p class="q">Quand souhaitez-vous l'installation ?</p>
-          {tiles("delai", [("Urgent", "Urgent", None), ("Dans le mois", "Dans le mois", None), ("D'ici 3 mois", "D'ici 3 mois", None), ("Je me renseigne", "Je me renseigne", None)], cls="tiles chips")}
+          <legend>Parlez-nous de votre projet</legend>
+          {step2_groups()}
           <div class="step-nav"><button type="button" class="btn btn-ghost-dark prev">Retour</button><button type="button" class="btn btn-primary next">Continuer {ic('arrow')}</button></div>
         </fieldset>
 

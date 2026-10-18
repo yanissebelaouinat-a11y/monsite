@@ -84,19 +84,29 @@
     var f = form.querySelectorAll('[name="' + name + '"]:checked');
     return Array.prototype.map.call(f, function (x) { return x.parentNode.textContent.trim(); }).join(', ');
   };
-  var camNeeded = function () { return /video|pack|copro/.test(val('besoin')); };
+  var CAT = { 'video': 'video', 'video-alarme': 'video', 'alarme': 'alarme', 'copro': 'copro', 'baie': 'baie',
+              'info': 'info', 'maintenance': 'maint', 'autre': 'autre' };
+  var LEGEND = { video: 'Parlez-nous de vos locaux', alarme: 'Parlez-nous de vos locaux', copro: 'Parlez-nous de la résidence',
+                 baie: 'Parlez-nous de votre baie', info: 'Parlez-nous de votre informatique', maint: 'Que faut-il réparer ou entretenir ?',
+                 autre: 'Parlez-nous de votre projet' };
+  var cats = function () {
+    var c = {};
+    form.querySelectorAll('[name="besoin"]:checked').forEach(function (r) { c[CAT[r.value] || 'autre'] = 1; });
+    if (form.querySelector('[name="besoin"][value="video-alarme"]:checked')) c.alarme = 1;
+    return Object.keys(c);
+  };
+  var groupVisible = function (g) {
+    var want = g.getAttribute('data-for').split(' '), have = cats();
+    return have.some(function (c) { return want.indexOf(c) >= 0; });
+  };
   var show = function (n) {
     current = n;
     form.classList.add('js-steps');
     panels.forEach(function (p) { p.classList.toggle('active', +p.getAttribute('data-step') === n); });
     marks.forEach(function (m, k) { m.classList.toggle('on', k < n); });
-    form.querySelector('.only-cam').hidden = !camNeeded();
-    var copro = /copro/.test(val('besoin'));
-    form.querySelector('.only-copro').hidden = !copro;
-    form.querySelector('.not-copro').hidden = copro;
-    form.querySelector('.not-copro-2').hidden = copro;
-    var lg = form.querySelector('[data-step="2"] legend');
-    if (lg) lg.textContent = copro ? 'Parlez-nous de la résidence' : 'Parlez-nous de vos locaux';
+    form.querySelectorAll('.q-group').forEach(function (g) { g.hidden = !groupVisible(g); });
+    var lg = form.querySelector('[data-step="2"] legend'), c0 = cats()[0];
+    if (lg) lg.textContent = LEGEND[c0] || LEGEND.autre;
     if (n > 1) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
   show(1);
@@ -143,24 +153,12 @@
     var key = form.getAttribute('data-key');
     var besoinTxt = label('besoin') || 'Non précisé';
     var entreprise = form.entreprise.value.trim();
-    var subject = 'Demande de devis — ' + besoinTxt + (entreprise ? ' — ' + entreprise : '') + ' — ' + form.ville.value.trim();
-    var lines = [
-      'BESOIN : ' + besoinTxt,
-    ];
-    if (/copro/.test(val('besoin'))) {
-      lines.push('Profil : ' + (label('profil') || '—'));
-      lines.push('Zones à surveiller : ' + (label('zones') || '—'));
-      lines.push('Taille : ' + (label('lots') || '—'));
-      lines.push('Avancement : ' + (label('ag') || '—'));
-    } else {
-      lines.push('Locaux : ' + (label('locaux') || '—'));
-    }
-    if (camNeeded()) {
-      lines.push('Caméras : ' + (label('cameras') || '—'));
-      if (!/copro/.test(val('besoin'))) lines.push('Emplacement : ' + (label('emplacement') || '—'));
-    }
-    lines.push('Installation existante : ' + (label('existant') || '—'));
-    lines.push('Délai : ' + (label('delai') || '—'));
+    var subject = (cats().indexOf('maint') >= 0 ? 'Demande de dépannage — ' : 'Demande de devis — ') + besoinTxt + (entreprise ? ' — ' + entreprise : '') + ' — ' + form.ville.value.trim();
+    var lines = ['BESOIN : ' + besoinTxt];
+    form.querySelectorAll('.q-group').forEach(function (g) {
+      if (!groupVisible(g)) return;
+      lines.push(g.getAttribute('data-title') + ' : ' + (label(g.getAttribute('data-name')) || '—'));
+    });
     lines.push('', 'CONTACT',
       'Entreprise : ' + (entreprise || '—'),
       'Nom : ' + form.nom.value.trim(),
