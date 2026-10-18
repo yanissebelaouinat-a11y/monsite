@@ -825,8 +825,6 @@ STEP2 = [
     ("baie info", "Nombre de postes / prises réseau", "postes", CHIP("Moins de 10", "10 à 30", "Plus de 30"), "radio", "tiles chips"),
     ("baie", "Coupure du réseau possible", "coupure", CHIP("En dehors des horaires", "En journée", "Peu importe"), "radio", "tiles chips"),
     ("maint", "Équipement concerné", "equipement", [("Caméras", "Caméras", "cam"), ("Alarme", "Alarme", "alarm"), ("Réseau / Wi-Fi", "Réseau / Wi-Fi", "wifi"), ("Informatique", "Informatique", "pc")], "checkbox", "tiles small"),
-    ("maint", "Marque du matériel", "marque", CHIP("Dahua", "Hikvision", "Ajax", "TP-Link", "Autre", "Je ne sais pas"), "radio", "tiles chips"),
-    ("maint", "Le problème", "probleme", CHIP("Panne / ne fonctionne plus", "Plus d'image ou d'accès à distance", "Alarme qui se déclenche seule", "Contrat d'entretien", "Autre"), "radio", "tiles chips"),
     ("maint", "Installé par BELACONNECT ?", "notre_install", CHIP("Oui", "Non"), "radio", "tiles chips"),
     ("video alarme copro autre", "Une installation existe déjà ?", "existant", CHIP("Non, première installation", "Oui, à remplacer ou compléter"), "radio", "tiles chips"),
     ("maint", "Urgence", "urgence", CHIP("Urgent", "Cette semaine", "Pas urgent"), "radio", "tiles chips"),
