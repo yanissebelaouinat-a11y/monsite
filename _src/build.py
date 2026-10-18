@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PHONE_DISPLAY = "06 59 76 27 85"
 PHONE_LINK = "+33659762785"
 EMAIL = "belaconnect06@gmail.com"
-OWNER_NAME = "Yanisse [Nom de famille]"
+OWNER_NAME = "Yanisse Belaouinat"
 OWNER_ADDRESS = "Nice (06), Alpes-Maritimes"
 SIREN = "947 672 481"
 # Clé Web3Forms (gratuite, sur web3forms.com avec l'adresse qui doit recevoir les demandes).
@@ -332,7 +332,6 @@ def layout(filename, title, description, body, extra_head=""):
         <p class="foot-title">Infos</p>
         <ul>
           <li><a href="contact.html">Contact &amp; devis</a></li>
-          <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
       <div>
@@ -345,7 +344,7 @@ def layout(filename, title, description, body, extra_head=""):
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year">2026</span> BelaConnect — Tous droits réservés</span>
+      <span>© <span id="year">2026</span> BelaConnect — Tous droits réservés · <a href="mentions-legales.html" class="foot-legal">Mentions légales</a></span>
       <span>Dahua · Hikvision · Ajax · TP-Link</span>
     </div>
   </div>
@@ -926,12 +925,12 @@ legal = f"""
   <section>
     <div class="wrap prose">
       <h2>Éditeur du site</h2>
-      <p>BelaConnect — {OWNER_NAME}, entrepreneur individuel (micro-entreprise).<br>
+      <p>BelaConnect — <small class="tiny">{OWNER_NAME}</small>, entrepreneur individuel (micro-entreprise).<br>
       Adresse : {OWNER_ADDRESS}<br>
       SIREN : {SIREN}<br>
       TVA non applicable, article 293 B du Code général des impôts.<br>
       Téléphone : {PHONE_DISPLAY} — Email : <a href="mailto:{EMAIL}">{EMAIL}</a><br>
-      Directeur de la publication : {OWNER_NAME}.</p>
+      Directeur de la publication : <small class="tiny">{OWNER_NAME}</small>.</p>
 
       <h2>Hébergement</h2>
       <p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — <a href="https://github.com" rel="noopener">github.com</a>.</p>
