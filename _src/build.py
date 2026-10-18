@@ -167,6 +167,7 @@ BREADCRUMB = {
     "alarme.html": "Alarme",
     "informatique.html": "Informatique et réseau",
     "contact.html": "Contact",
+    "reglementation.html": "Réglementation",
 }
 
 
@@ -329,14 +330,19 @@ def layout(filename, title, description, body, extra_head=""):
         </ul>
       </div>
       <div>
-        <p class="foot-title">Infos</p>
+        <p class="foot-title">Réglementation</p>
         <ul>
-          <li><a href="contact.html">Contact &amp; devis</a></li>
+          <li><a href="reglementation.html#entreprise">Caméras en entreprise</a></li>
+          <li><a href="reglementation.html#commerce">Commerces et lieux publics</a></li>
+          <li><a href="reglementation.html#copropriete">Copropriétés</a></li>
+          <li><a href="reglementation.html#panneau">Panneau d'information</a></li>
+          <li><a href="reglementation.html#conservation">Durée de conservation</a></li>
         </ul>
       </div>
       <div>
         <p class="foot-title">Contact</p>
         <ul>
+          <li><a href="contact.html">Demander un devis</a></li>
           <li><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
           <li>Alpes-Maritimes (06)</li>
@@ -585,7 +591,7 @@ video = page_hero(
         {ic('info')}
         <div>
           <h3>Vidéosurveillance et réglementation</h3>
-          <p>En entreprise, filmer implique quelques obligations : panneau d'information, information des salariés et, pour un lieu ouvert au public, autorisation préfectorale. Nous plaçons les caméras en respectant ces règles et vous indiquons les démarches.</p>
+          <p>En entreprise, filmer implique quelques obligations : panneau d'information, information des salariés et, pour un lieu ouvert au public, autorisation préfectorale. Nous plaçons les caméras en respectant ces règles et vous indiquons les démarches. <a href="reglementation.html" class="inline-link">Voir toutes les règles</a>.</p>
         </div>
       </div>
     </div>
@@ -966,6 +972,129 @@ notfound = f"""
   </section>
 """
 
+
+# =============================================================================
+# RÉGLEMENTATION
+# =============================================================================
+REG_FAQ = [
+    ("Faut-il une autorisation pour installer des caméras dans mon magasin ?",
+     "Oui, si les caméras filment une zone ouverte au public (surface de vente, entrée, caisse). Il faut une autorisation de la préfecture avant la mise en service. Les zones réservées au personnel (réserve, bureaux) relèvent du RGPD et du Code du travail."),
+    ("Puis-je filmer mes salariés ?",
+     "Oui pour protéger les biens et les personnes (entrées, issues, zones de stockage, caisse), à condition d'informer chaque salarié et le CSE. Filmer un salarié en permanence à son poste est en principe interdit, sauf circonstances particulières."),
+    ("Combien de temps garder les images ?",
+     "Le temps nécessaire pour constater un incident, en pratique quelques jours. La durée ne doit pas dépasser un mois, sauf si les images sont extraites pour une procédure."),
+    ("Puis-je filmer le trottoir devant mon commerce ?",
+     "Non. Seules les autorités peuvent filmer la voie publique. Une caméra extérieure peut filmer vos abords immédiats (porte, vitrine) mais pas la rue ni les propriétés voisines."),
+    ("Les caméras peuvent-elles enregistrer le son ?",
+     "En principe non : l'enregistrement sonore est jugé excessif dans la grande majorité des cas, en particulier sur un lieu de travail."),
+]
+
+reg = page_hero(
+    "Réglementation",
+    "Vidéosurveillance : <em>les règles</em> à connaître",
+    "Entreprises, commerces, copropriétés : ce que dit la loi avant d'installer des caméras, et ce que nous prenons en compte lors de chaque installation.") + f"""
+  <section>
+    <div class="wrap">
+      <div class="note">
+        {ic('info')}
+        <div>
+          <h3>En résumé</h3>
+          <p>Une caméra doit avoir un but légitime (protéger les biens et les personnes), ne filmer que ce qui est nécessaire, être signalée par un panneau, et ses images doivent être conservées peu de temps et consultées par un nombre limité de personnes. Selon le lieu filmé, une autorisation préfectorale ou un vote en assemblée générale s'ajoute.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="reg-table">
+          <thead><tr><th>Lieu filmé</th><th>Démarche</th><th>Informer</th><th>Conservation</th></tr></thead>
+          <tbody>
+            <tr><td><b>Zones privées de l'entreprise</b><br><span>réserve, bureaux, entrepôt</span></td><td>Registre RGPD, information et consultation du CSE</td><td>Panneau + information individuelle des salariés</td><td>Quelques jours, 1 mois max.</td></tr>
+            <tr><td><b>Lieu ouvert au public</b><br><span>surface de vente, accueil, caisse</span></td><td>Autorisation de la préfecture avant mise en service</td><td>Panneau visible à l'entrée</td><td>1 mois max.</td></tr>
+            <tr><td><b>Parties communes d'immeuble</b><br><span>hall, parking, garages</span></td><td>Vote en assemblée générale de copropriété</td><td>Panneau dans les zones filmées</td><td>Quelques jours, 1 mois max.</td></tr>
+            <tr><td><b>Voie publique</b><br><span>trottoir, rue</span></td><td>Interdit aux particuliers et aux entreprises</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="entreprise">
+    <div class="wrap split top">
+      <div>
+        <h2>Caméras en entreprise</h2>
+        <p>Le Code du travail et le RGPD autorisent la vidéosurveillance pour protéger les biens et les personnes, à condition qu'elle reste proportionnée et que les salariés soient prévenus.</p>
+      </div>
+      <div class="card">
+        {checks(["Filmer les entrées, issues de secours, zones de stockage et caisses", "Informer chaque salarié individuellement avant la mise en service", "Informer et consulter le CSE s'il existe", "Inscrire le dispositif au registre des traitements (RGPD)", "Limiter l'accès aux images aux personnes habilitées"])}
+        <p class="ideal"><b>Interdit :</b> filmer en continu un salarié à son poste (sauf circonstances particulières), filmer les toilettes, vestiaires, salles de pause ou locaux syndicaux, et enregistrer le son.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="commerce">
+    <div class="wrap split top">
+      <div>
+        <h2>Commerces et lieux ouverts au public</h2>
+        <p>Dès qu'une caméra filme une zone où entre le public (magasin, restaurant, accueil, salle d'attente), le dispositif relève du Code de la sécurité intérieure et doit être autorisé par la préfecture.</p>
+      </div>
+      <div class="card">
+        {checks(["Déposer une demande d'autorisation en préfecture (formulaire Cerfa n°13806, ou en ligne)", "Attendre l'autorisation avant la mise en service ; elle est valable 5 ans, renouvelable", "Installer un panneau visible à l'entrée", "Ne pas filmer la voie publique ni les propriétés voisines"])}
+        <p class="ideal"><b>Sanction :</b> installer un système de vidéoprotection sans autorisation est puni de 3 ans d'emprisonnement et de 45 000 € d'amende (article L254-1 du Code de la sécurité intérieure).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="copropriete">
+    <div class="wrap split top">
+      <div>
+        <h2>Copropriétés et immeubles</h2>
+        <p>Les caméras dans les parties communes servent à protéger les résidents et les biens communs. Leur installation est une décision collective.</p>
+      </div>
+      <div class="card">
+        {checks(["Vote en assemblée générale de copropriété", "Filmer uniquement les parties communes (hall, parking, garages, locaux)", "Ne pas filmer les portes palières, fenêtres ni balcons", "Informer les résidents par des panneaux", "Réserver l'accès aux images au syndic ou aux personnes désignées"])}
+      </div>
+    </div>
+  </section>
+
+  <section id="panneau">
+    <div class="wrap split top">
+      <div>
+        <h2>Le panneau d'information</h2>
+        <p>Toute personne filmée doit être informée, de manière visible, avant d'entrer dans la zone surveillée. Un simple pictogramme de caméra ne suffit pas : le panneau doit indiquer les informations essentielles.</p>
+      </div>
+      <div class="card">
+        {checks(["L'existence de la vidéosurveillance", "Le nom du responsable du dispositif", "Le but (sécurité des biens et des personnes)", "La durée de conservation des images", "Comment exercer ses droits et la possibilité de saisir la CNIL"])}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="conservation">
+    <div class="wrap split top">
+      <div>
+        <h2>Durée de conservation et accès aux images</h2>
+        <p>Les images servent à constater un incident : elles ne doivent pas être gardées « au cas où ». En pratique, quelques jours suffisent ; au-delà d'un mois, la conservation n'est plus justifiée, sauf si des images sont extraites pour une procédure.</p>
+      </div>
+      <div class="card">
+        {checks(["Effacement automatique réglé sur l'enregistreur", "Accès protégé par mot de passe, réservé aux personnes habilitées", "Extraction des images uniquement en cas d'incident (plainte, réquisition)", "Toute personne filmée peut demander à accéder aux images la concernant"])}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Ce que nous faisons pour vous</h2>
+        <p>Lors de chaque installation, nous tenons compte de ces règles : placement et angles des caméras, masquage des zones privées si nécessaire, durée d'effacement réglée sur l'enregistreur, comptes d'accès séparés. Nous vous indiquons les démarches à effectuer selon votre situation.</p>
+      </div>
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
+      </div>
+      {faq(REG_FAQ)}
+      <p class="aside-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les textes officiels et les démarches : <a class="inline-link" href="https://www.cnil.fr" rel="noopener">cnil.fr</a> (CNIL) et <a class="inline-link" href="https://www.service-public.fr" rel="noopener">service-public.fr</a>.</p>
+    </div>
+  </section>
+{cta_band("Un projet de vidéosurveillance en règle ?", "Nous vous conseillons sur l'emplacement des caméras et les démarches, dès la visite gratuite.")}
+"""
+
 PAGES = [
     ("index.html", "Vidéosurveillance, alarme et informatique pour professionnels (06) | BelaConnect",
      "Installation de vidéosurveillance, d'alarmes, de réseaux et d'informatique pour les entreprises, commerces et copropriétés des Alpes-Maritimes (06). Dahua, Hikvision, Ajax, TP-Link. Devis gratuit sur place.",
@@ -982,6 +1111,9 @@ PAGES = [
     ("contact.html", "Devis gratuit vidéosurveillance et alarme (06) | BelaConnect",
      "Demandez un devis gratuit pour votre projet de vidéosurveillance, d'alarme ou d'informatique dans les Alpes-Maritimes. Visite sur place offerte.",
      contact, ""),
+    ("reglementation.html", "Réglementation vidéosurveillance en entreprise, commerce et copropriété | BelaConnect",
+     "Les règles de la vidéosurveillance en France : information des salariés, autorisation préfectorale pour les commerces, vote en AG en copropriété, panneau, durée de conservation, sanctions.",
+     reg, faq_jsonld(REG_FAQ)),
     ("mentions-legales.html", "Mentions légales — BelaConnect",
      "Mentions légales et politique de confidentialité du site BelaConnect.",
      legal, '\n<meta name="robots" content="noindex">'),

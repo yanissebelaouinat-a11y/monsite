@@ -604,3 +604,11 @@ html.anim .wa-fab{animation:waIn .5s cubic-bezier(.2,.7,.2,1) 1.2s both;}
 .foot-legal{font-size:12px;opacity:.7;}
 .foot-legal:hover{opacity:1;color:#fff;}
 .tiny{font-size:11px;}
+/* Page réglementation */
+.table-wrap{margin-top:28px;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.reg-table{width:100%;border-collapse:collapse;min-width:640px;font-size:16px;}
+.reg-table th{text-align:left;font-size:14px;color:var(--ink-faint);font-weight:600;padding:12px 14px;border-bottom:2px solid var(--ink);}
+.reg-table td{padding:14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-soft);}
+.reg-table td b{color:var(--ink);}
+.reg-table td span{font-size:14px;color:var(--ink-faint);}
+@media (min-width:961px){ .foot-grid{grid-template-columns:1.3fr 1fr 1.1fr 1.1fr;} }
