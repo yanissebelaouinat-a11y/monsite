@@ -326,7 +326,6 @@ def layout(filename, title, description, body, extra_head=""):
           <li><a href="alarme.html">Alarme</a></li>
           <li><a href="informatique.html">Informatique &amp; réseau</a></li>
           <li><a href="informatique.html#baies">Remise au propre de baies</a></li>
-          <li><a href="videosurveillance.html#packs">Packs caméras</a></li>
         </ul>
       </div>
       <div>
@@ -413,7 +412,7 @@ home = f"""
           <div class="icon">{ic('cam')}</div>
           <h3>Vidéosurveillance</h3>
           <p>Caméras intérieures et extérieures, filaires ou sans fil, avec enregistreur. Vous voyez les images en direct sur votre téléphone.</p>
-          {checks(["Dahua et Hikvision", "Vision de nuit", "Packs 4 et 8 caméras"])}
+          {checks(["Dahua et Hikvision", "Vision de nuit", "Accès à distance sur smartphone"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
         <a href="alarme.html" class="card main svc-alarm">
@@ -466,28 +465,6 @@ home = f"""
   </section>
 
   <section>
-    <div class="wrap split">
-      <div>
-        <h2>Deux packs caméras</h2>
-        <p>Caméras intérieures ou extérieures, enregistreur, pose et réglage sur votre téléphone. Le prix dépend de vos locaux : nous l'établissons après la visite.</p>
-        <div class="hero-cta">
-          <a href="videosurveillance.html#packs" class="btn btn-dark">Voir le détail des packs</a>
-        </div>
-      </div>
-      <div class="grid-2">
-        <a href="videosurveillance.html#pack-4" class="card pack">
-          <div class="pack-top"><span class="big">4</span><span class="unit">caméras</span></div>
-          <p>+ enregistreur. Pour un commerce ou un petit bureau.</p>
-        </a>
-        <a href="videosurveillance.html#pack-8" class="card pack featured">
-          <div class="pack-top"><span class="big">8</span><span class="unit">caméras</span></div>
-          <p>+ enregistreur. Pour les grands locaux et les extérieurs.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="alt">
     <div class="wrap">
       <div class="section-head">
         <h2>Comment ça se passe</h2>
@@ -501,7 +478,7 @@ home = f"""
     </div>
   </section>
 
-  <section>
+  <section class="alt">
     <div class="wrap">
       <div class="section-head">
         <h2>Questions fréquentes</h2>
@@ -515,12 +492,6 @@ home = f"""
 # =============================================================================
 # VIDÉOSURVEILLANCE
 # =============================================================================
-PACK_COMMON = ["Caméras intérieures et/ou extérieures, au choix",
-               "Enregistreur avec disque dur",
-               "Installation et câblage (ou pose sans fil)",
-               "Configuration sur votre smartphone",
-               "Prise en main et explications"]
-
 VIDEO_FAQ = [
     ("Puis-je voir mes caméras depuis mon téléphone ?",
      "Oui. Nous configurons l'application du fabricant sur votre smartphone (et celui de vos collaborateurs si besoin) pour voir le direct et les enregistrements à distance."),
@@ -557,33 +528,7 @@ video = page_hero(
     </div>
   </section>
 
-  <section class="alt" id="packs">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Les packs caméras</h2>
-        <p>Deux packs complets pour équiper vos locaux rapidement. Le prix dépend de vos locaux : nous l'établissons après la visite, qui est gratuite. Au-delà de 8 caméras, ou pour ajouter une alarme, nous réalisons une étude sur mesure.</p>
-      </div>
-      <div class="grid-2">
-        <div class="card pack" id="pack-4">
-          <div class="pack-top"><span class="big">4</span><span class="unit">caméras + enregistreur</span></div>
-          <p>Idéal pour un commerce, un restaurant, un cabinet ou un petit bureau.</p>
-          <div class="grow">{checks(PACK_COMMON)}</div>
-          <div class="price">Tarif sur devis — visite gratuite</div>
-          <a href="contact.html?besoin=pack-4" class="btn btn-dark">Demander un devis Pack 4 {ic('arrow')}</a>
-        </div>
-        <div class="card pack featured" id="pack-8">
-          <span class="tag">Grands locaux</span>
-          <div class="pack-top"><span class="big">8</span><span class="unit">caméras + enregistreur</span></div>
-          <p>Pour les grands commerces, entrepôts, ateliers et sites avec extérieurs.</p>
-          <div class="grow">{checks(PACK_COMMON)}</div>
-          <div class="price">Tarif sur devis — visite gratuite</div>
-          <a href="contact.html?besoin=pack-8" class="btn btn-primary">Demander un devis Pack 8 {ic('arrow')}</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="copropriete">
+  <section id="copropriete" class="alt">
     <div class="wrap split top">
       <div>
         <h2>Vidéosurveillance en copropriété</h2>
@@ -601,7 +546,7 @@ video = page_hero(
     </div>
   </section>
 
-  <section class="alt">
+  <section>
     <div class="wrap">
       <div class="section-head">
         <h2>Au quotidien</h2>
@@ -615,7 +560,7 @@ video = page_hero(
     </div>
   </section>
 
-  <section>
+  <section class="alt">
     <div class="wrap">
       <div class="section-head">
         <h2>Filaire ou sans fil ?</h2>
@@ -667,7 +612,7 @@ video = page_hero(
       {faq(VIDEO_FAQ)}
     </div>
   </section>
-{cta_band("Besoin de caméras pour vos locaux ?", "Visite gratuite sur place pour choisir un pack ou une installation sur mesure.")}
+{cta_band("Besoin de caméras pour vos locaux ?", "Visite gratuite sur place pour étudier vos locaux et vous proposer une installation sur mesure.")}
 """
 
 # =============================================================================
@@ -847,15 +792,6 @@ it = page_hero(
 """
 
 # =============================================================================
-# PACKS
-# =============================================================================
-PACK_COMMON = ["Caméras intérieures et/ou extérieures, au choix",
-               "Enregistreur avec disque dur",
-               "Installation et câblage (ou pose sans fil)",
-               "Configuration sur votre smartphone",
-               "Prise en main et explications"]
-
-# =============================================================================
 # CONTACT
 # =============================================================================
 WHATSAPP = "https://wa.me/" + PHONE_LINK.lstrip("+")
@@ -869,8 +805,7 @@ def tiles(name, options, kind="radio", cls="tiles"):
     return f'<div class="{cls}">' + "".join(out) + "</div>"
 
 
-BESOINS = [("video", "Vidéosurveillance", "cam"), ("pack-4", "Pack 4 caméras", "cam"),
-           ("pack-8", "Pack 8 caméras", "cam"), ("alarme", "Alarme", "alarm"),
+BESOINS = [("video", "Vidéosurveillance", "cam"), ("alarme", "Alarme", "alarm"),
            ("video-alarme", "Caméras + alarme", "alarm"), ("copro", "Copropriété", "building"),
            ("baie", "Remise au propre de baie", "server"), ("info", "Réseau / informatique", "network"),
            ("maintenance", "Maintenance / dépannage", "tool"), ("autre", "Autre", "chat")]
@@ -1013,7 +948,7 @@ PAGES = [
      "Installation de vidéosurveillance, d'alarmes, de réseaux et d'informatique pour les entreprises, commerces et copropriétés des Alpes-Maritimes (06). Dahua, Hikvision, Ajax, TP-Link. Devis gratuit sur place.",
      home, faq_jsonld(HOME_FAQ)),
     ("videosurveillance.html", "Installation de caméras de surveillance pour professionnels (06) | BelaConnect",
-     "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Packs 4 et 8 caméras, copropriétés. Intervention dans tout le 06.",
+     "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Commerces, entreprises, copropriétés. Intervention dans tout le 06.",
      video, faq_jsonld(VIDEO_FAQ)),
     ("alarme.html", "Installation d'alarme Ajax pour commerces et bureaux (06) | BelaConnect",
      "Installation d'alarmes anti-intrusion Ajax sans fil ou filaires pour commerces, bureaux et entrepôts dans les Alpes-Maritimes. Alertes sur smartphone. Devis gratuit.",
@@ -1050,11 +985,11 @@ def main():
     sitemap.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
     (ROOT / "packs.html").write_text(
-        '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Packs caméras — BelaConnect</title>'
-        f'<link rel="canonical" href="{SITE_URL}/videosurveillance.html#packs">'
+        '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Vidéosurveillance — BelaConnect</title>'
+        f'<link rel="canonical" href="{SITE_URL}/videosurveillance.html">'
         '<meta name="robots" content="noindex">'
-        '<meta http-equiv="refresh" content="0; url=videosurveillance.html#packs"></head>'
-        '<body><p>Les packs sont maintenant sur la page <a href="videosurveillance.html#packs">Vidéosurveillance</a>.</p></body></html>\n',
+        '<meta http-equiv="refresh" content="0; url=videosurveillance.html"></head>'
+        '<body><p>Voir la page <a href="videosurveillance.html">Vidéosurveillance</a>.</p></body></html>\n',
         encoding="utf-8")
     (ROOT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
