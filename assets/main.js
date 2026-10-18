@@ -70,16 +70,56 @@
     counters.forEach(function (el) { co.observe(el); });
   }
 
-  // Pré-sélection du besoin depuis l'URL (ex. contact.html?besoin=pack-4)
+  // ===== Formulaire de devis en 3 étapes =====
   var form = document.getElementById('devis');
   if (!form) return;
-  var besoin = new URLSearchParams(window.location.search).get('besoin');
-  if (besoin && form.besoin) {
-    var opt = form.besoin.querySelector('option[value="' + besoin + '"]');
-    if (opt) form.besoin.value = besoin;
+  var panels = form.querySelectorAll('.step-panel');
+  var marks = form.querySelectorAll('.progress li');
+  var current = 1;
+  var val = function (name) {
+    var f = form.querySelectorAll('[name="' + name + '"]:checked');
+    return Array.prototype.map.call(f, function (x) { return x.value; }).join(', ');
+  };
+  var label = function (name) {
+    var f = form.querySelectorAll('[name="' + name + '"]:checked');
+    return Array.prototype.map.call(f, function (x) { return x.parentNode.textContent.trim(); }).join(', ');
+  };
+  var camNeeded = function () { return /video|pack|copro/.test(val('besoin')); };
+  var show = function (n) {
+    current = n;
+    form.classList.add('js-steps');
+    panels.forEach(function (p) { p.classList.toggle('active', +p.getAttribute('data-step') === n); });
+    marks.forEach(function (m, k) { m.classList.toggle('on', k < n); });
+    form.querySelector('.only-cam').hidden = !camNeeded();
+    if (n > 1) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  show(1);
+
+  // Pré-sélection depuis l'URL (ex. contact.html?besoin=pack-4)
+  var pre = new URLSearchParams(window.location.search).get('besoin');
+  if (pre) {
+    var r = form.querySelector('[name="besoin"][value="' + pre + '"]');
+    if (r) r.checked = true;
   }
 
-  // Formulaire : ouvre l'email pré-rempli
+  form.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b.classList.contains('next')) {
+      if (current === 1 && !val('besoin')) {
+        panels[0].querySelector('.step-error').classList.add('show');
+        return;
+      }
+      panels[0].querySelector('.step-error').classList.remove('show');
+      show(current + 1);
+    }
+    if (b.classList.contains('prev')) show(current - 1);
+  });
+  // Un choix à l'étape 1 fait passer directement à la suite
+  form.querySelectorAll('[name="besoin"]').forEach(function (r) {
+    r.addEventListener('change', function () { setTimeout(function () { show(2); }, 180); });
+  });
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var err = document.getElementById('form-error');
@@ -95,29 +135,38 @@
     err.classList.remove('show');
     var to = form.getAttribute('data-to');
     var key = form.getAttribute('data-key');
-    var besoinTxt = form.besoin.options[form.besoin.selectedIndex].text;
+    var besoinTxt = label('besoin') || 'Non précisé';
     var entreprise = form.entreprise.value.trim();
-    var subject = 'Demande de devis — ' + besoinTxt + (entreprise ? ' — ' + entreprise : '');
-    var body = [
+    var subject = 'Demande de devis — ' + besoinTxt + (entreprise ? ' — ' + entreprise : '') + ' — ' + form.ville.value.trim();
+    var lines = [
+      'BESOIN : ' + besoinTxt,
+      'Locaux : ' + (label('locaux') || '—')
+    ];
+    if (camNeeded()) {
+      lines.push('Caméras : ' + (label('cameras') || '—'));
+      lines.push('Emplacement : ' + (label('emplacement') || '—'));
+    }
+    lines.push('Installation existante : ' + (label('existant') || '—'));
+    lines.push('Délai : ' + (label('delai') || '—'));
+    lines.push('', 'CONTACT',
       'Entreprise : ' + (entreprise || '—'),
       'Nom : ' + form.nom.value.trim(),
       'Téléphone : ' + form.tel.value.trim(),
       'Email : ' + (form.email.value.trim() || '—'),
       'Ville : ' + form.ville.value.trim(),
-      'Besoin : ' + besoinTxt,
-      '',
-      form.message.value.trim()
-    ].join('\n');
+      'Rappel : ' + form.rappel.value,
+      '', 'PRÉCISIONS', form.message.value.trim() || '—');
+    var body = lines.join('\n');
     var mailto = function () {
       window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     };
     if (!key) { mailto(); return; }
 
-    // Envoi direct (Web3Forms) ; en cas d'échec, on retombe sur l'email
+    // Envoi direct (Web3Forms)
     var ok = document.getElementById('form-ok');
     var btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;
-    var label = btn.innerHTML;
+    var btnLabel = btn.innerHTML;
     btn.textContent = 'Envoi en cours…';
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -134,12 +183,11 @@
       return r.json().catch(function () { throw new Error('réponse ' + r.status); });
     }).then(function (res) {
       if (!res.success) throw new Error(res.message || 'refusé');
-      form.reset();
+      form.classList.add('sent');
       ok.className = 'form-ok show';
-      ok.textContent = 'Merci, votre demande a bien été envoyée. Nous vous rappelons rapidement.';
-      ok.classList.add('show');
+      ok.innerHTML = '<b>Merci, votre demande a bien été envoyée.</b> Nous vous rappelons rapidement pour convenir d\'une visite gratuite.';
+      form.reset();
     }).catch(function (e) {
-      // Échec : on l'affiche clairement et on propose les autres moyens de contact
       ok.className = 'form-ok form-fail show';
       ok.innerHTML = "L'envoi n'a pas abouti" + (e && e.message ? ' (' + e.message.replace(/[<>&]/g, '') + ')' : '') +
         '. Vous pouvez <a href="tel:' + (form.getAttribute('data-tel') || '') + '">nous appeler</a> ou ' +
@@ -149,7 +197,7 @@
       if (window.console) console.error('Web3Forms', e);
     }).then(function () {
       btn.disabled = false;
-      btn.innerHTML = label;
+      btn.innerHTML = btnLabel;
     });
   });
 })();

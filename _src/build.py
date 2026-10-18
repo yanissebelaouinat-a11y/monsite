@@ -856,82 +856,101 @@ PACK_COMMON = ["Caméras intérieures et/ou extérieures, au choix",
 # =============================================================================
 # CONTACT
 # =============================================================================
-contact = page_hero(
-    "Contact",
-    "Demandez votre <em>devis gratuit</em>",
-    "Décrivez votre projet en quelques mots. Nous vous rappelons pour fixer une visite gratuite sur place, partout dans les Alpes-Maritimes.") + f"""
-  <section>
-    <div class="wrap contact-grid">
-      <div class="contact-info">
-        <a class="ci" href="tel:{PHONE_LINK}">
-          <div class="ci-icon">{ic('phone')}</div>
-          <div><small>Téléphone</small><strong>{PHONE_DISPLAY}</strong></div>
-        </a>
-        <a class="ci" href="mailto:{EMAIL}">
-          <div class="ci-icon">{ic('mail')}</div>
-          <div><small>Email</small><strong>{EMAIL}</strong></div>
-        </a>
-        <div class="ci">
-          <div class="ci-icon">{ic('pin')}</div>
-          <div><small>Zone d'intervention</small><strong>Tout le département des Alpes-Maritimes (06)</strong></div>
-        </div>
-        <div class="ci">
-          <div class="ci-icon">{ic('euro')}</div>
-          <div><small>Devis</small><strong>Gratuit, après visite sur place</strong></div>
-        </div>
-      </div>
+WHATSAPP = "https://wa.me/" + PHONE_LINK.lstrip("+")
 
-      <form id="devis" class="quote" data-to="{EMAIL}" data-tel="{PHONE_LINK}"{f' data-key="{FORM_KEY}"' if FORM_KEY else ""} novalidate>
+
+def tiles(name, options, kind="radio", cls="tiles"):
+    out = []
+    for val, label, icon in options:
+        ico = ic(icon) if icon else ""
+        out.append(f'<label class="tile"><input type="{kind}" name="{name}" value="{val}"><span>{ico}{label}</span></label>')
+    return f'<div class="{cls}">' + "".join(out) + "</div>"
+
+
+BESOINS = [("video", "Vidéosurveillance", "cam"), ("pack-4", "Pack 4 caméras", "cam"),
+           ("pack-8", "Pack 8 caméras", "cam"), ("alarme", "Alarme", "alarm"),
+           ("video-alarme", "Caméras + alarme", "alarm"), ("copro", "Copropriété", "building"),
+           ("baie", "Remise au propre de baie", "server"), ("info", "Réseau / informatique", "network"),
+           ("maintenance", "Maintenance / dépannage", "tool"), ("autre", "Autre", "chat")]
+
+contact = page_hero(
+    "Devis gratuit",
+    "Votre devis <em>gratuit</em> en 2 minutes",
+    "Trois étapes rapides pour décrire votre projet. Nous vous rappelons pour convenir d'une visite gratuite sur place, partout dans les Alpes-Maritimes. Sans engagement.") + f"""
+  <section>
+    <div class="wrap quote-grid">
+      <form id="devis" class="quote steps-form" data-to="{EMAIL}" data-tel="{PHONE_LINK}"{f' data-key="{FORM_KEY}"' if FORM_KEY else ""} novalidate>
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="full">
-          <label for="f-entreprise">Entreprise <span class="opt">(facultatif)</span></label>
-          <input id="f-entreprise" name="entreprise" autocomplete="organization">
-        </div>
-        <div>
-          <label for="f-nom">Nom *</label>
-          <input id="f-nom" name="nom" autocomplete="name" required>
-        </div>
-        <div>
-          <label for="f-tel">Téléphone *</label>
-          <input id="f-tel" name="tel" type="tel" autocomplete="tel" required>
-        </div>
-        <div>
-          <label for="f-mail">Email <span class="opt">(facultatif)</span></label>
-          <input id="f-mail" name="email" type="email" autocomplete="email">
-        </div>
-        <div>
-          <label for="f-ville">Ville *</label>
-          <input id="f-ville" name="ville" autocomplete="address-level2" required>
-        </div>
-        <div class="full">
-          <label for="f-besoin">Votre besoin</label>
-          <select id="f-besoin" name="besoin">
-            <option value="video">Vidéosurveillance</option>
-            <option value="pack-4">Pack 4 caméras + enregistreur</option>
-            <option value="pack-8">Pack 8 caméras + enregistreur</option>
-            <option value="alarme">Alarme</option>
-            <option value="video-alarme">Vidéosurveillance + alarme</option>
-            <option value="copro">Vidéosurveillance en copropriété</option>
-            <option value="info">Informatique &amp; réseau</option>
-            <option value="baie">Remise au propre de baie</option>
-            <option value="maintenance">Maintenance / dépannage</option>
-            <option value="autre">Autre</option>
-          </select>
-        </div>
-        <div class="full">
-          <label for="f-msg">Votre projet <span class="opt">(facultatif)</span></label>
-          <textarea id="f-msg" name="message" placeholder="Ex. : commerce de 150 m², 6 caméras dont 2 extérieures, consultables sur téléphone"></textarea>
-        </div>
-        <p id="form-error" class="form-error full" role="alert">Merci de remplir votre nom, votre téléphone et votre ville.</p>
-        <div class="full">
-          <button type="submit" class="btn btn-primary">Envoyer ma demande {ic('arrow')}</button>
-        </div>
-        <p id="form-ok" class="form-ok full" role="status"></p>
-        <p class="form-note full">{"Votre demande nous est envoyée directement." if FORM_KEY else "En cliquant, votre application email s'ouvre avec votre demande pré-remplie : il ne vous reste qu'à l'envoyer."} Vos informations servent uniquement à répondre à votre demande (voir les <a href="mentions-legales.html" style="text-decoration:underline">mentions légales</a>).</p>
+        <ol class="progress" aria-hidden="true"><li class="on">Votre besoin</li><li>Vos locaux</li><li>Vos coordonnées</li></ol>
+
+        <fieldset class="step-panel" data-step="1">
+          <legend>De quoi avez-vous besoin ?</legend>
+          {tiles("besoin", BESOINS)}
+          <p class="step-error" role="alert">Choisissez au moins une option pour continuer.</p>
+          <div class="step-nav"><span></span><button type="button" class="btn btn-primary next">Continuer {ic('arrow')}</button></div>
+        </fieldset>
+
+        <fieldset class="step-panel" data-step="2">
+          <legend>Parlez-nous de vos locaux</legend>
+          <p class="q">Type de locaux</p>
+          {tiles("locaux", [("Commerce", "Commerce", "shop"), ("Restaurant / hôtel", "Restaurant / hôtel", "food"), ("Bureaux", "Bureaux", "office"), ("Entrepôt / atelier", "Entrepôt / atelier", "box"), ("Chantier", "Chantier", "crane"), ("Copropriété", "Copropriété", "building"), ("Autre", "Autre", None)], cls="tiles small")}
+          <div class="only-cam">
+            <p class="q">Nombre de caméras envisagé</p>
+            {tiles("cameras", [("1 à 4", "1 à 4", None), ("5 à 8", "5 à 8", None), ("Plus de 8", "Plus de 8", None), ("Je ne sais pas", "Je ne sais pas", None)], cls="tiles chips")}
+            <p class="q">Emplacement</p>
+            {tiles("emplacement", [("Intérieur", "Intérieur", None), ("Extérieur", "Extérieur", None)], kind="checkbox", cls="tiles chips")}
+          </div>
+          <p class="q">Une installation existe déjà ?</p>
+          {tiles("existant", [("Non, c'est une première installation", "Non, première installation", None), ("Oui, à remplacer ou compléter", "Oui, à remplacer ou compléter", None)], cls="tiles chips")}
+          <p class="q">Quand souhaitez-vous l'installation ?</p>
+          {tiles("delai", [("Urgent", "Urgent", None), ("Dans le mois", "Dans le mois", None), ("D'ici 3 mois", "D'ici 3 mois", None), ("Je me renseigne", "Je me renseigne", None)], cls="tiles chips")}
+          <div class="step-nav"><button type="button" class="btn btn-ghost-dark prev">Retour</button><button type="button" class="btn btn-primary next">Continuer {ic('arrow')}</button></div>
+        </fieldset>
+
+        <fieldset class="step-panel" data-step="3">
+          <legend>Où pouvons-nous vous joindre ?</legend>
+          <div class="fields">
+            <div class="full"><label for="f-entreprise">Entreprise / résidence <span class="opt">(facultatif)</span></label><input id="f-entreprise" name="entreprise" autocomplete="organization"></div>
+            <div><label for="f-nom">Nom *</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+            <div><label for="f-tel">Téléphone *</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+            <div><label for="f-mail">Email <span class="opt">(facultatif)</span></label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
+            <div><label for="f-ville">Ville de l'intervention *</label><input id="f-ville" name="ville" autocomplete="address-level2" required></div>
+            <div class="full"><label for="f-rappel">Meilleur moment pour vous rappeler</label>
+              <select id="f-rappel" name="rappel"><option>Indifférent</option><option>Le matin</option><option>Le midi</option><option>L'après-midi</option><option>En fin de journée</option></select></div>
+            <div class="full"><label for="f-msg">Précisions <span class="opt">(facultatif)</span></label>
+              <textarea id="f-msg" name="message" placeholder="Ex. : magasin de 150 m², 2 entrées, réserve à l'arrière, caméras visibles sur 2 téléphones"></textarea></div>
+          </div>
+          <p id="form-error" class="form-error" role="alert">Merci de remplir votre nom, votre téléphone et la ville.</p>
+          <p id="form-ok" class="form-ok" role="status"></p>
+          <div class="step-nav"><button type="button" class="btn btn-ghost-dark prev">Retour</button><button type="submit" class="btn btn-primary">Envoyer ma demande {ic('arrow')}</button></div>
+          <p class="form-note">{"Votre demande nous est envoyée directement." if FORM_KEY else "Votre application email s'ouvre avec votre demande pré-remplie."} Vos informations servent uniquement à vous répondre (<a href="mentions-legales.html" class="inline-link">mentions légales</a>).</p>
+        </fieldset>
       </form>
+
+      <aside class="quote-aside">
+        <div class="aside-card dark">
+          <p class="aside-title">Vous préférez en parler ?</p>
+          <a class="big-phone" href="tel:{PHONE_LINK}">{ic('phone')} {PHONE_DISPLAY}</a>
+          <a class="btn btn-wa" href="{WHATSAPP}?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20" target="_blank" rel="noopener">{ic('chat')} Écrire sur WhatsApp</a>
+          <p class="small">Vous pouvez aussi nous y envoyer des photos de vos locaux.</p>
+          <a class="mail-link" href="mailto:{EMAIL}">{ic('mail')} {EMAIL}</a>
+        </div>
+        <div class="aside-card">
+          <p class="aside-title">Après votre demande</p>
+          <ol class="next-steps">
+            <li><b>Nous vous rappelons</b> pour préciser votre besoin.</li>
+            <li><b>Visite gratuite</b> de vos locaux, partout dans le 06.</li>
+            <li><b>Devis détaillé</b> : matériel, emplacements, délais.</li>
+          </ol>
+          {checks(["Gratuit et sans engagement", "Matériel professionnel Dahua, Hikvision, Ajax", "Un seul interlocuteur, du devis à la maintenance"])}
+        </div>
+      </aside>
     </div>
   </section>
 """
+
+contact = contact.replace(f'<a href="contact.html" class="btn btn-primary">Demander un devis gratuit {ic('arrow')}</a>',
+                          f'<a href="#devis" class="btn btn-primary">Commencer ma demande {ic('arrow')}</a>', 1)
 
 # =============================================================================
 # MENTIONS LÉGALES
