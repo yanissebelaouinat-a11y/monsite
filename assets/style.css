@@ -599,3 +599,4 @@ html.anim .wa-fab{animation:waIn .5s cubic-bezier(.2,.7,.2,1) 1.2s both;}
   .wa-tip{display:none;}
   .btn-primary.call-fab{right:78px;}
 }
+.only-copro[hidden],.not-copro[hidden],.not-copro-2[hidden]{display:none;}

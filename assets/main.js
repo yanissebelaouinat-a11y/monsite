@@ -91,6 +91,12 @@
     panels.forEach(function (p) { p.classList.toggle('active', +p.getAttribute('data-step') === n); });
     marks.forEach(function (m, k) { m.classList.toggle('on', k < n); });
     form.querySelector('.only-cam').hidden = !camNeeded();
+    var copro = /copro/.test(val('besoin'));
+    form.querySelector('.only-copro').hidden = !copro;
+    form.querySelector('.not-copro').hidden = copro;
+    form.querySelector('.not-copro-2').hidden = copro;
+    var lg = form.querySelector('[data-step="2"] legend');
+    if (lg) lg.textContent = copro ? 'Parlez-nous de la résidence' : 'Parlez-nous de vos locaux';
     if (n > 1) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
   show(1);
@@ -140,11 +146,18 @@
     var subject = 'Demande de devis — ' + besoinTxt + (entreprise ? ' — ' + entreprise : '') + ' — ' + form.ville.value.trim();
     var lines = [
       'BESOIN : ' + besoinTxt,
-      'Locaux : ' + (label('locaux') || '—')
     ];
+    if (/copro/.test(val('besoin'))) {
+      lines.push('Profil : ' + (label('profil') || '—'));
+      lines.push('Zones à surveiller : ' + (label('zones') || '—'));
+      lines.push('Taille : ' + (label('lots') || '—'));
+      lines.push('Avancement : ' + (label('ag') || '—'));
+    } else {
+      lines.push('Locaux : ' + (label('locaux') || '—'));
+    }
     if (camNeeded()) {
       lines.push('Caméras : ' + (label('cameras') || '—'));
-      lines.push('Emplacement : ' + (label('emplacement') || '—'));
+      if (!/copro/.test(val('besoin'))) lines.push('Emplacement : ' + (label('emplacement') || '—'));
     }
     lines.push('Installation existante : ' + (label('existant') || '—'));
     lines.push('Délai : ' + (label('delai') || '—'));

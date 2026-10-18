@@ -818,7 +818,7 @@ contact = page_hero(
     <div class="wrap quote-grid">
       <form id="devis" class="quote steps-form" data-to="{EMAIL}" data-tel="{PHONE_LINK}"{f' data-key="{FORM_KEY}"' if FORM_KEY else ""} novalidate>
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <ol class="progress" aria-hidden="true"><li class="on">Votre besoin</li><li>Vos locaux</li><li>Vos coordonnées</li></ol>
+        <ol class="progress" aria-hidden="true"><li class="on">Votre besoin</li><li>Votre projet</li><li>Vos coordonnées</li></ol>
 
         <fieldset class="step-panel" data-step="1">
           <legend>De quoi avez-vous besoin ?</legend>
@@ -829,13 +829,27 @@ contact = page_hero(
 
         <fieldset class="step-panel" data-step="2">
           <legend>Parlez-nous de vos locaux</legend>
+          <div class="only-copro">
+            <p class="q">Vous êtes</p>
+            {tiles("profil", [("Syndic", "Syndic", None), ("Conseil syndical", "Conseil syndical", None), ("Copropriétaire", "Copropriétaire", None), ("Gestionnaire / bailleur", "Gestionnaire / bailleur", None)], cls="tiles chips")}
+            <p class="q">Parties communes à surveiller</p>
+            {tiles("zones", [("Hall d'entrée", "Hall d'entrée", "door"), ("Parking", "Parking", "cam"), ("Garages / box", "Garages / box", "box"), ("Local vélos / poubelles", "Local vélos / poubelles", "building"), ("Extérieurs / portail", "Extérieurs / portail", "pin"), ("Ascenseurs / couloirs", "Ascenseurs / couloirs", "users")], kind="checkbox", cls="tiles small")}
+            <p class="q">Taille de la résidence</p>
+            {tiles("lots", [("Moins de 20 logements", "Moins de 20 logements", None), ("20 à 50 logements", "20 à 50 logements", None), ("Plus de 50 logements", "Plus de 50 logements", None)], cls="tiles chips")}
+            <p class="q">Où en est le projet ?</p>
+            {tiles("ag", [("Déjà voté en AG", "Déjà voté en AG", None), ("À présenter à la prochaine AG", "À présenter à la prochaine AG", None), ("Simple étude pour l'instant", "Simple étude pour l'instant", None)], cls="tiles chips")}
+          </div>
+          <div class="not-copro">
           <p class="q">Type de locaux</p>
-          {tiles("locaux", [("Commerce", "Commerce", "shop"), ("Restaurant / hôtel", "Restaurant / hôtel", "food"), ("Bureaux", "Bureaux", "office"), ("Entrepôt / atelier", "Entrepôt / atelier", "box"), ("Chantier", "Chantier", "crane"), ("Copropriété", "Copropriété", "building"), ("Autre", "Autre", None)], cls="tiles small")}
+          {tiles("locaux", [("Commerce", "Commerce", "shop"), ("Restaurant / hôtel", "Restaurant / hôtel", "food"), ("Bureaux", "Bureaux", "office"), ("Entrepôt / atelier", "Entrepôt / atelier", "box"), ("Chantier", "Chantier", "crane"), ("Autre", "Autre", None)], cls="tiles small")}
+          </div>
           <div class="only-cam">
             <p class="q">Nombre de caméras envisagé</p>
             {tiles("cameras", [("1 à 4", "1 à 4", None), ("5 à 8", "5 à 8", None), ("Plus de 8", "Plus de 8", None), ("Je ne sais pas", "Je ne sais pas", None)], cls="tiles chips")}
+            <div class="not-copro-2">
             <p class="q">Emplacement</p>
             {tiles("emplacement", [("Intérieur", "Intérieur", None), ("Extérieur", "Extérieur", None)], kind="checkbox", cls="tiles chips")}
+            </div>
           </div>
           <p class="q">Une installation existe déjà ?</p>
           {tiles("existant", [("Non, c'est une première installation", "Non, première installation", None), ("Oui, à remplacer ou compléter", "Oui, à remplacer ou compléter", None)], cls="tiles chips")}
