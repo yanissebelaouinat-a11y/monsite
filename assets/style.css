@@ -491,7 +491,6 @@ html.anim .step.reveal.in{background-size:100% 2px;}
 
 /* Bouton d'appel mobile : léger battement */
 @keyframes ring{0%{box-shadow:0 0 0 0 rgba(43,192,220,.55);}70%{box-shadow:0 0 0 14px rgba(43,192,220,0);}100%{box-shadow:0 0 0 0 rgba(43,192,220,0);}}
-html.anim .call-fab{animation:ring 2.4s ease-out 1.5s infinite;}
 
 @media (prefers-reduced-motion:reduce){
   .logo:hover svg path,.call-fab{animation:none !important;}
@@ -592,7 +591,7 @@ form.sent .progress{display:none;}
   box-shadow:0 8px 20px -10px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;}
 .wa-fab:hover .wa-tip,.wa-fab:focus-visible .wa-tip{opacity:1;transform:translateY(-50%);}
 @keyframes waIn{from{opacity:0;transform:scale(.6);}to{opacity:1;transform:none;}}
-html.anim .wa-fab{animation:waIn .5s cubic-bezier(.2,.7,.2,1) 1.2s both;}
+@media (hover:hover){ html.anim .wa-fab{animation:waIn .5s cubic-bezier(.2,.7,.2,1) .6s both;} }
 @media (max-width:720px){
   .wa-fab{right:12px;bottom:12px;width:54px;height:54px;}
   .wa-fab svg{width:30px;height:30px;}
@@ -612,3 +611,11 @@ html.anim .wa-fab{animation:waIn .5s cubic-bezier(.2,.7,.2,1) 1.2s both;}
 .reg-table td b{color:var(--ink);}
 .reg-table td span{font-size:14px;color:var(--ink-faint);}
 @media (min-width:961px){ .foot-grid{grid-template-columns:1.3fr 1fr 1.1fr 1.1fr;} }
+
+/* Boutons flottants stables sur mobile (pas de clignotement au défilement) */
+.wa-fab,.btn-primary.call-fab{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-tap-highlight-color:transparent;}
+.btn-primary.call-fab::after{display:none;}
+@media (hover:none){
+  .wa-fab:hover{transform:translateZ(0);box-shadow:0 10px 24px -8px rgba(0,0,0,.45);}
+  .btn-primary.call-fab:hover{transform:translateZ(0);}
+}
