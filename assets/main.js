@@ -18,6 +18,11 @@
     onScroll();
   }
 
+  // Adresse propre pour l'accueil : belaconnect.fr/ au lieu de /index.html
+  if (/\/index\.html$/.test(location.pathname) && location.protocol !== 'file:' && history.replaceState) {
+    history.replaceState(null, '', location.pathname.replace(/index\.html$/, '') + location.search + location.hash);
+  }
+
   // Année du pied de page
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

@@ -150,7 +150,7 @@ def page_hero(crumb, title, lead, badge=None):
     return f"""
   <section class="hero small">
     <div class="wrap hero-inner">
-      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> / {crumb}</nav>
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> / {crumb}</nav>
       {b}
       <h1>{title}</h1>
       <p class="lead">{lead}</p>
@@ -237,7 +237,7 @@ def business_schema():
 
 def layout(filename, title, description, body, extra_head=""):
     links = "\n      ".join(
-        f'<a href="{href}"{NAV_CLASS.get(href, "")}{CURRENT if href == filename else ""}>{label}</a>'
+        f'<a href="{"/" if href == "index.html" else href}"{NAV_CLASS.get(href, "")}{CURRENT if href == filename else ""}>{label}</a>'
         for href, label in NAV)
     contact_current = CURRENT if filename == "contact.html" else ""
     canonical = SITE_URL + "/" + ("" if filename == "index.html" else filename)
@@ -298,7 +298,7 @@ def layout(filename, title, description, body, extra_head=""):
 
 <header class="site-header">
   <div class="wrap nav">
-    <a href="index.html" class="logo" aria-label="BelaConnect, accueil">{LOGO_SVG}<b>BELA<span>CONNECT</span></b></a>
+    <a href="/" class="logo" aria-label="BelaConnect, accueil">{LOGO_SVG}<b>BELA<span>CONNECT</span></b></a>
     <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -318,7 +318,7 @@ def layout(filename, title, description, body, extra_head=""):
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="index.html" class="logo">{LOGO_SVG}<b>BELA<span>CONNECT</span></b></a>
+        <a href="/" class="logo">{LOGO_SVG}<b>BELA<span>CONNECT</span></b></a>
         <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels des Alpes-Maritimes.</p>
       </div>
       <div>
@@ -925,7 +925,7 @@ contact = contact.replace(f'<a href="contact.html" class="btn btn-primary">Deman
 legal = f"""
   <section class="hero small">
     <div class="wrap hero-inner">
-      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> / Mentions légales</nav>
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> / Mentions légales</nav>
       <h1>Mentions légales</h1>
     </div>
   </section>
@@ -966,7 +966,7 @@ notfound = f"""
       <h1>Cette page <em>n'existe pas.</em></h1>
       <p class="lead">Le lien est peut-être incorrect ou la page a été déplacée.</p>
       <div class="hero-cta">
-        <a href="index.html" class="btn btn-primary">Retour à l'accueil {ic('arrow')}</a>
+        <a href="/" class="btn btn-primary">Retour à l'accueil {ic('arrow')}</a>
         <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
       </div>
     </div>
