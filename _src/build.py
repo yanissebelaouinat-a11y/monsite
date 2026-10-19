@@ -214,7 +214,7 @@ def business_schema():
         "alternateName": ["BelaConnect", "Bela Connect", "Bela Connect 06"],
         "description": "Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels des Alpes-Maritimes.",
         "url": SITE_URL + "/",
-        "logo": SITE_URL + "/assets/apple-touch-icon.png",
+        "logo": SITE_URL + "/assets/favicon-512.png",
         "image": SITE_URL + "/assets/og-image.png",
         "address": {"@type": "PostalAddress", "addressLocality": "Nice", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"},
         "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"},
@@ -281,12 +281,12 @@ def layout(filename, title, description, body, extra_head=""):
 <meta property="og:image:alt" content="BelaConnect, vidéosurveillance et alarme pour les professionnels des Alpes-Maritimes">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0E1A2E">
-<link rel="icon" href="favicon.ico" sizes="48x48">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/barlow-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css?v={asset_version('assets/style.css')}">
