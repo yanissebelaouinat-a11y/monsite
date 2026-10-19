@@ -18,9 +18,9 @@
     onScroll();
   }
 
-  // Adresse propre pour l'accueil : belaconnect.fr/ au lieu de /index.html
-  if (/\/index\.html$/.test(location.pathname) && location.protocol !== 'file:' && history.replaceState) {
-    history.replaceState(null, '', location.pathname.replace(/index\.html$/, '') + location.search + location.hash);
+  // Adresses propres : belaconnect.fr/ et belaconnect.fr/alarme au lieu de /index.html et /alarme.html
+  if (/\.html$/.test(location.pathname) && location.protocol !== 'file:' && history.replaceState) {
+    history.replaceState(null, '', location.pathname.replace(/index\.html$/, '').replace(/\.html$/, '') + location.search + location.hash);
   }
 
   // Année du pied de page
@@ -116,7 +116,7 @@
   };
   show(1);
 
-  // Pré-sélection depuis l'URL (ex. contact.html?besoin=pack-4)
+  // Pré-sélection depuis l'URL (ex. /contact?besoin=copro)
   var pre = new URLSearchParams(window.location.search).get('besoin');
   if (pre) {
     var r = form.querySelector('[name="besoin"][value="' + pre + '"]');

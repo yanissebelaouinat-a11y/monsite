@@ -5,6 +5,7 @@ Les coordonnées, l'en-tête et le pied de page sont définis une seule fois ici
 Après modification : python3 _src/build.py (depuis la racine du dépôt).
 Le dossier _src n'est pas publié (Jekyll ignore les dossiers commençant par « _ »).
 """
+import re
 import json
 from PIL import Image
 import math
@@ -324,7 +325,7 @@ def layout(filename, title, description, body, extra_head=""):
       <div>
         <p class="foot-title">Services</p>
         <ul>
-          <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
+          <li><a href="/videosurveillance">Vidéosurveillance</a></li>
           <li><a href="alarme.html">Alarme</a></li>
           <li><a href="informatique.html">Informatique &amp; réseau</a></li>
           <li><a href="informatique.html#baies">Remise au propre de baies</a></li>
@@ -1124,28 +1125,39 @@ PAGES = [
 ]
 
 
+CLEAN_PAGES = "videosurveillance|alarme|informatique|contact|reglementation|mentions-legales|packs"
+
+
+def clean_urls(html):
+    """Adresses sans « .html » (GitHub Pages sert /alarme à partir de alarme.html)."""
+    html = re.sub(r'(href|src|srcset)="assets/', r'\1="/assets/', html)
+    html = re.sub(r'href="/?index\.html', 'href="/', html)
+    html = re.sub(r'href="/?(' + CLEAN_PAGES + r')\.html', r'href="/\1', html)
+    return re.sub(re.escape(SITE_URL) + r'/(' + CLEAN_PAGES + r')\.html', SITE_URL + r'/\1', html)
+
+
 def main():
     for filename, title, desc, body, extra in PAGES:
         # Espace insécable avant « ? » et « ! » (typographie française)
         body = body.replace(" ?", "&nbsp;?").replace(" !", "&nbsp;!")
         body = body.replace('<section class="hero">', '<section class="hero">' + WAVES, 1)
         body = body.replace('<section class="hero small">', '<section class="hero small">' + WAVES, 1)
-        (ROOT / filename).write_text(layout(filename, title, desc, body, extra), encoding="utf-8")
+        (ROOT / filename).write_text(clean_urls(layout(filename, title, desc, body, extra)), encoding="utf-8")
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for filename, *_ in PAGES:
         if filename in ("404.html", "mentions-legales.html"):
             continue
-        loc = SITE_URL + "/" + ("" if filename == "index.html" else filename)
+        loc = clean_urls(SITE_URL + "/" + ("" if filename == "index.html" else filename))
         sitemap.append(f"  <url><loc>{loc}</loc><lastmod>{date.today().isoformat()}</lastmod></url>")
     sitemap.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
     (ROOT / "packs.html").write_text(
         '<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Vidéosurveillance — BelaConnect</title>'
-        f'<link rel="canonical" href="{SITE_URL}/videosurveillance.html">'
+        f'<link rel="canonical" href="{SITE_URL}/videosurveillance">'
         '<meta name="robots" content="noindex">'
-        '<meta http-equiv="refresh" content="0; url=videosurveillance.html"></head>'
-        '<body><p>Voir la page <a href="videosurveillance.html">Vidéosurveillance</a>.</p></body></html>\n',
+        '<meta http-equiv="refresh" content="0; url=/videosurveillance"></head>'
+        '<body><p>Voir la page <a href="/videosurveillance">Vidéosurveillance</a>.</p></body></html>\n',
         encoding="utf-8")
     (ROOT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
