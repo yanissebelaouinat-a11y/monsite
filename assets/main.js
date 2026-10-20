@@ -27,6 +27,44 @@
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
+  // Cookies Google Ads : la balise n'est chargée qu'après accord du visiteur (choix gardé 6 mois)
+  var consent = document.getElementById('consent');
+  if (consent) {
+    var KEY = 'bc-consent', SIX_MONTHS = 182 * 24 * 3600 * 1000;
+    var read = function () {
+      try { var c = JSON.parse(localStorage.getItem(KEY)); return c && Date.now() - c.t < SIX_MONTHS ? c.v : null; }
+      catch (e) { return null; }
+    };
+    var loadAds = function () {
+      if (window.gtag) return;
+      var id = consent.getAttribute('data-ads');
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('consent', 'default', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'denied' });
+      gtag('js', new Date());
+      gtag('config', id);
+      var sc = document.createElement('script');
+      sc.async = true;
+      sc.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(sc);
+    };
+    var choice = read();
+    if (choice === 'yes') loadAds();
+    else if (choice === null) consent.hidden = false;
+    consent.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-consent]');
+      if (!b) return;
+      var v = b.getAttribute('data-consent');
+      try { localStorage.setItem(KEY, JSON.stringify({ v: v, t: Date.now() })); } catch (err) {}
+      consent.hidden = true;
+      if (v === 'yes') loadAds();
+      else if (window.gtag) gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    });
+    document.querySelectorAll('[data-cookies]').forEach(function (b) {
+      b.addEventListener('click', function () { consent.hidden = false; });
+    });
+  }
+
   // Animations (désactivées si l'utilisateur préfère réduire les mouvements)
   var motionOk = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   if (motionOk && 'IntersectionObserver' in window) {

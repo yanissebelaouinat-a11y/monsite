@@ -26,6 +26,8 @@ SIREN = "947 672 481"
 FORM_KEY = "031f8237-9600-4449-a1bd-4605361c13ce"
 EMAIL_CONFIRMED = False              # passer à True quand l'adresse existe
 SITE_URL = "https://belaconnect.fr"
+# Balise Google Ads : chargée seulement si le visiteur accepte les cookies (bandeau).
+ADS_ID = "AW-18520950625"
 
 # --- Icônes --------------------------------------------------------------------
 ICONS = """
@@ -236,6 +238,13 @@ def business_schema():
     return data
 
 
+CONSENT = f"""<div class="consent" id="consent" data-ads="{ADS_ID}" role="dialog" aria-label="Cookies" hidden>
+  <p>Nous utilisons des cookies Google Ads pour mesurer l'efficacité de nos annonces. Vous pouvez les accepter ou les refuser, le site fonctionne de la même façon. <a href="mentions-legales.html#cookies">En savoir plus</a></p>
+  <div class="consent-btns"><button type="button" class="btn btn-ghost" data-consent="no">Refuser</button><button type="button" class="btn btn-primary" data-consent="yes">Accepter</button></div>
+</div>
+"""
+
+
 def layout(filename, title, description, body, extra_head=""):
     links = "\n      ".join(
         f'<a href="{"/" if href == "index.html" else href}"{NAV_CLASS.get(href, "")}{CURRENT if href == filename else ""}>{label}</a>'
@@ -352,7 +361,7 @@ def layout(filename, title, description, body, extra_head=""):
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year">2026</span> BelaConnect — Tous droits réservés · <a href="mentions-legales.html" class="foot-legal">Mentions légales</a></span>
+      <span>© <span id="year">2026</span> BelaConnect — Tous droits réservés · <a href="mentions-legales.html" class="foot-legal">Mentions légales</a>{' · <button type="button" class="foot-legal" data-cookies>Cookies</button>' if ADS_ID else ''}</span>
       <span>Dahua · Hikvision · Ajax · TP-Link</span>
     </div>
   </div>
@@ -360,7 +369,7 @@ def layout(filename, title, description, body, extra_head=""):
 
 <a href="tel:{PHONE_LINK}" class="btn btn-primary call-fab">{ic('phone')} Appeler BelaConnect</a>
 <a href="https://wa.me/{PHONE_LINK.lstrip('+')}?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20" class="wa-fab" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">{ic('whatsapp')}<span class="wa-tip">Une question ? Écrivez-nous</span></a>
-<script src="assets/main.js?v={asset_version('assets/main.js')}" defer></script>
+{CONSENT if ADS_ID else ''}<script src="assets/main.js?v={asset_version('assets/main.js')}" defer></script>
 </body>
 </html>
 """
@@ -947,7 +956,9 @@ legal = f"""
       <p>L'ensemble des contenus de ce site (textes, visuels, logo) est la propriété de BelaConnect, sauf mention contraire. Toute reproduction sans autorisation est interdite. Les marques citées (Dahua, Hikvision, Ajax, TP-Link) appartiennent à leurs propriétaires respectifs.</p>
 
       <h2>Données personnelles</h2>
-      <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. {"Les demandes envoyées par le formulaire de contact nous sont transmises par email via le service Web3Forms, sans être conservées sur le site." if FORM_KEY else "Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer."}</p>
+      <h2 id="cookies">Cookies</h2>
+      <p>{"Si vous l'acceptez via le bandeau, ce site utilise la balise Google Ads (Google Ireland Ltd) pour mesurer l'efficacité de nos annonces, par exemple savoir si une visite venue d'une annonce aboutit à une demande de devis. Sans votre accord, aucun cookie publicitaire ni de mesure d'audience n'est déposé. Votre choix est conservé 6 mois ; vous pouvez le modifier à tout moment avec le lien « Cookies » en bas de page." if ADS_ID else "Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience."}</p>
+      <p>{"Les demandes envoyées par le formulaire de contact nous sont transmises par email via le service Web3Forms, sans être conservées sur le site." if FORM_KEY else "Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer."}</p>
       <p>Les informations que vous nous transmettez (nom, téléphone, email, ville, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont jamais cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact.</p>
       <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 
