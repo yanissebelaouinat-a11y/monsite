@@ -29,7 +29,7 @@ SITE_URL = "https://belaconnect.fr"
 # Balise Google Ads : chargée seulement si le visiteur accepte les cookies (bandeau).
 ADS_ID = "AW-18520950625"
 # Libellés de conversion Google Ads (la partie après « AW-…/ »). Vide = pas de suivi.
-ADS_CONV_DEVIS = ""   # « Demande de devis » : formulaire envoyé
+ADS_CONV_DEVIS = "6zOSCImt1qMdEOGOvf9E"   # « Demande de devis » : formulaire envoyé
 ADS_CONV_APPEL = ""   # « Clic appel / WhatsApp »
 
 # --- Icônes --------------------------------------------------------------------
