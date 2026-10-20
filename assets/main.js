@@ -60,6 +60,14 @@
       if (v === 'yes') loadAds();
       else if (window.gtag) gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
     });
+    // Conversions Google Ads (envoyées seulement si la balise est chargée, donc après accord)
+    window.bcConversion = function (kind) {
+      var label = consent.getAttribute('data-conv-' + kind);
+      if (label && window.gtag) gtag('event', 'conversion', { send_to: consent.getAttribute('data-ads') + '/' + label });
+    };
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('a[href^="tel:"], a[href*="wa.me/"]')) window.bcConversion('appel');
+    });
     document.querySelectorAll('[data-cookies]').forEach(function (b) {
       b.addEventListener('click', function () { consent.hidden = false; });
     });
@@ -238,6 +246,7 @@
     }).then(function (res) {
       if (!res.success) throw new Error(res.message || 'refusé');
       form.classList.add('sent');
+      if (window.bcConversion) window.bcConversion('devis');
       ok.className = 'form-ok show';
       ok.innerHTML = '<b>Merci, votre demande a bien été envoyée.</b> Nous vous rappelons rapidement pour convenir d\'une visite gratuite.';
       form.reset();

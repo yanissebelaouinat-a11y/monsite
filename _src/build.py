@@ -28,6 +28,9 @@ EMAIL_CONFIRMED = False              # passer à True quand l'adresse existe
 SITE_URL = "https://belaconnect.fr"
 # Balise Google Ads : chargée seulement si le visiteur accepte les cookies (bandeau).
 ADS_ID = "AW-18520950625"
+# Libellés de conversion Google Ads (la partie après « AW-…/ »). Vide = pas de suivi.
+ADS_CONV_DEVIS = ""   # « Demande de devis » : formulaire envoyé
+ADS_CONV_APPEL = ""   # « Clic appel / WhatsApp »
 
 # --- Icônes --------------------------------------------------------------------
 ICONS = """
@@ -238,7 +241,7 @@ def business_schema():
     return data
 
 
-CONSENT = f"""<div class="consent" id="consent" data-ads="{ADS_ID}" role="dialog" aria-label="Cookies" hidden>
+CONSENT = f"""<div class="consent" id="consent" data-ads="{ADS_ID}" data-conv-devis="{ADS_CONV_DEVIS}" data-conv-appel="{ADS_CONV_APPEL}" role="dialog" aria-label="Cookies" hidden>
   <p>Nous utilisons des cookies Google Ads pour mesurer l'efficacité de nos annonces. Vous pouvez les accepter ou les refuser, le site fonctionne de la même façon. <a href="mentions-legales.html#cookies">En savoir plus</a></p>
   <div class="consent-btns"><button type="button" class="btn btn-ghost" data-consent="no">Refuser</button><button type="button" class="btn btn-primary" data-consent="yes">Accepter</button></div>
 </div>
