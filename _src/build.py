@@ -192,7 +192,7 @@ def _arc(cx, cy, r, a0, a1):
 
 # Ondes Wi-Fi animées en fond du haut de page (motif du logo)
 WAVES = ('<svg class="hero-waves" viewBox="0 0 420 600" width="520" height="740" aria-hidden="true" focusable="false" '
-         'style="position:absolute;top:50%;right:-60px;transform:translateY(-50%);pointer-events:none">'
+         'style="position:absolute;top:50%;right:-60px;transform:translateY(-50%) translate3d(var(--px,0px),var(--py,0px),0);pointer-events:none">'
          + "".join(f'<path class="w{i}" d="{_arc(0, 300, r, -50, 50)}" fill="none" stroke="#2BC0DC" '
                    f'stroke-width="26" stroke-linecap="round" opacity="0.08"/>'
                    for i, r in enumerate((110, 200, 290, 380), 1))

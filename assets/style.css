@@ -670,3 +670,42 @@ a.art-card:hover .art-more svg{transform:translateX(4px);}
 .btn-outline{background:transparent;border-color:var(--navy);color:var(--navy);}
 .btn-outline:hover{background:var(--navy);color:#fff;}
 .article .small-note{margin-top:28px;font-size:15px;color:var(--ink-soft);font-style:italic;}
+
+/* ===== Animations supplémentaires ===== */
+/* Barre cyan des titres qui se dessine à l'apparition */
+html.anim .reveal h2::before,html.anim .reveal > h2::before{width:0;transition:width .8s cubic-bezier(.2,.7,.2,1) .25s;}
+html.anim .reveal.in h2::before{width:44px;}
+
+/* Listes à coches qui apparaissent une par une */
+html.anim .reveal .checks li{opacity:0;transform:translateX(-10px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1);}
+html.anim .reveal.in .checks li{opacity:1;transform:none;}
+html.anim .reveal.in .checks li:nth-child(2){transition-delay:.08s;}
+html.anim .reveal.in .checks li:nth-child(3){transition-delay:.16s;}
+html.anim .reveal.in .checks li:nth-child(4){transition-delay:.24s;}
+html.anim .reveal.in .checks li:nth-child(5){transition-delay:.32s;}
+html.anim .reveal.in .checks li:nth-child(6){transition-delay:.4s;}
+
+/* Soulignement animé du mot mis en avant dans le titre */
+@keyframes underline{to{background-size:100% 4px;}}
+html.anim .hero h1 em{background:linear-gradient(var(--cyan),var(--cyan)) 0 96%/0 4px no-repeat;animation:underline .9s cubic-bezier(.2,.7,.2,1) .9s forwards;}
+
+/* Icônes des cartes qui réagissent au survol */
+@keyframes iconPop{0%{transform:none;}40%{transform:scale(1.18) rotate(-8deg);}70%{transform:scale(.96) rotate(3deg);}100%{transform:none;}}
+@media (hover:hover){
+  html.anim .card:hover .icon svg,html.anim .mini:hover .icon svg{animation:iconPop .6s cubic-bezier(.2,.7,.2,1);}
+}
+
+/* Halo lumineux qui suit la souris sur les cartes de services et d'articles */
+@media (hover:hover){
+  html.anim a.card.main::before,html.anim a.art-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(43,192,220,.13),transparent 60%);background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--svc,#2BC0DC) 14%,transparent),transparent 60%);transition:opacity .3s;}
+  html.anim a.card.main:hover::before,html.anim a.art-card:hover::before{opacity:1;}
+}
+a.art-card{position:relative;}
+
+/* Barre de progression de lecture sur les articles */
+.read-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:90;background:var(--cyan);transform-origin:0 50%;transform:scaleX(0);pointer-events:none;}
+
+@media (prefers-reduced-motion:reduce){
+  .read-progress{display:none;}
+}
