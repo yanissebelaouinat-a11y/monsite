@@ -29,6 +29,9 @@ EMAIL_CONFIRMED = False              # passer à True quand l'adresse existe
 SITE_URL = "https://belaconnect.fr"
 # Balise Google Ads : chargée seulement si le visiteur accepte les cookies (bandeau).
 ADS_ID = "AW-18520950625"
+# Adresse du relais Cloudflare Worker qui transmet les demandes et les clics sur Telegram
+# (voir _src/telegram-worker.js). Vide = pas de notification Telegram.
+TG_RELAY = ""
 # Libellés de conversion Google Ads (la partie après « AW-…/ »). Vide = pas de suivi.
 ADS_CONV_DEVIS = "6zOSCImt1qMdEOGOvf9E"   # « Demande de devis » : formulaire envoyé
 ADS_CONV_APPEL = ""   # « Clic appel / WhatsApp »
@@ -311,7 +314,7 @@ def layout(filename, title, description, body, extra_head=""):
 <link rel="stylesheet" href="assets/style.css?v={asset_version('assets/style.css')}">
 <script type="application/ld+json">{org}</script>{crumbs}{extra_head}
 </head>
-<body>
+<body{f' data-tg="{TG_RELAY}"' if TG_RELAY else ""}>
 <a class="skip" href="#contenu">Aller au contenu</a>
 {ICONS}
 
@@ -1041,7 +1044,7 @@ legal = f"""
       <h2>Données personnelles</h2>
       <h2 id="cookies">Cookies</h2>
       <p>{"Si vous l'acceptez via le bandeau, ce site utilise la balise Google Ads (Google Ireland Ltd) pour mesurer l'efficacité de nos annonces, par exemple savoir si une visite venue d'une annonce aboutit à une demande de devis. Sans votre accord, aucun cookie publicitaire ni de mesure d'audience n'est déposé. Votre choix est conservé 6 mois ; vous pouvez le modifier à tout moment avec le lien « Cookies » en bas de page." if ADS_ID else "Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience."}</p>
-      <p>{"Les demandes envoyées par le formulaire de contact nous sont transmises par email via le service Web3Forms, sans être conservées sur le site." if FORM_KEY else "Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer."}</p>
+      <p>{"Les demandes envoyées par le formulaire de contact nous sont transmises par email via le service Web3Forms, sans être conservées sur le site." + (" Une copie nous est également envoyée par notification sur la messagerie Telegram, via un relais hébergé par Cloudflare." if TG_RELAY else "") if FORM_KEY else "Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer."}</p>
       <p>Les informations que vous nous transmettez (nom, téléphone, email, ville, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont jamais cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact.</p>
       <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 

@@ -27,6 +27,20 @@
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
+  // Notifications Telegram (via le relais Cloudflare) : demandes de devis et clics Appeler / WhatsApp
+  var relay = document.body.getAttribute('data-tg');
+  window.bcNotify = function (payload) {
+    if (!relay || !window.fetch) return;
+    try {
+      fetch(relay, { method: 'POST', keepalive: true, headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(payload) })
+        .catch(function () {});
+    } catch (e) {}
+  };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="tel:"], a[href*="wa.me/"]');
+    if (a) window.bcNotify({ type: 'clic', what: a.href.indexOf('wa.me') >= 0 ? 'whatsapp' : 'appel', page: location.pathname });
+  });
+
   // Cookies Google Ads : la balise n'est chargée qu'après accord du visiteur (choix gardé 6 mois)
   var consent = document.getElementById('consent');
   if (consent) {
@@ -219,6 +233,7 @@
       'Rappel : ' + form.rappel.value,
       '', 'PRÉCISIONS', form.message.value.trim() || '—');
     var body = lines.join('\n');
+    window.bcNotify({ type: 'devis', subject: subject, message: body });
     var mailto = function () {
       window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     };
