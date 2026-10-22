@@ -242,7 +242,7 @@ def business_schema():
 
 
 CONSENT = f"""<div class="consent" id="consent" data-ads="{ADS_ID}" data-conv-devis="{ADS_CONV_DEVIS}" data-conv-appel="{ADS_CONV_APPEL}" role="dialog" aria-label="Cookies" hidden>
-  <p>Nous utilisons des cookies Google Ads pour mesurer l'efficacité de nos annonces. Vous pouvez les accepter ou les refuser, le site fonctionne de la même façon. <a href="mentions-legales.html#cookies">En savoir plus</a></p>
+  <p>Ce site utilise des cookies pour améliorer votre expérience et mesurer sa fréquentation. Vous pouvez les accepter ou les refuser. <a href="mentions-legales.html#cookies">En savoir plus</a></p>
   <div class="consent-btns"><button type="button" class="btn btn-ghost" data-consent="no">Refuser</button><button type="button" class="btn btn-primary" data-consent="yes">Accepter</button></div>
 </div>
 """
