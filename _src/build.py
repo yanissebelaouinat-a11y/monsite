@@ -6,6 +6,7 @@ Après modification : python3 _src/build.py (depuis la racine du dépôt).
 Le dossier _src n'est pas publié (Jekyll ignore les dossiers commençant par « _ »).
 """
 import re
+from conseils import ARTICLES
 import json
 from PIL import Image
 import math
@@ -174,6 +175,7 @@ BREADCRUMB = {
     "informatique.html": "Informatique et réseau",
     "contact.html": "Contact",
     "reglementation.html": "Réglementation",
+    "conseils/index.html": "Conseils",
 }
 
 
@@ -341,6 +343,7 @@ def layout(filename, title, description, body, extra_head=""):
           <li><a href="alarme.html">Alarme</a></li>
           <li><a href="informatique.html">Informatique &amp; réseau</a></li>
           <li><a href="informatique.html#baies">Remise au propre de baies</a></li>
+          <li><a href="/conseils/">Nos conseils</a></li>
         </ul>
       </div>
       <div>
@@ -1163,6 +1166,96 @@ reg = page_hero(
 {cta_band("Un projet de vidéosurveillance en règle ?", "Nous vous conseillons sur l'emplacement des caméras et les démarches, dès la visite gratuite.")}
 """
 
+# =============================================================================
+# CONSEILS (articles)
+# =============================================================================
+ART = {a["slug"]: a for a in ARTICLES}
+MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
+
+
+def date_fr(iso):
+    y, m, d = iso.split("-")
+    return f"{int(d)} {MOIS[int(m) - 1]} {y}"
+
+
+def article_cards(slugs, cls="grid-3"):
+    cards = "".join(
+        f'<a class="card art-card" href="/conseils/{x}"><span class="art-tag">Conseil</span>'
+        f'<h3>{ART[x]["title"]}</h3><p>{ART[x]["summary"]}</p>'
+        f'<span class="art-more">Lire l\'article {ic("arrow")}</span></a>' for x in slugs)
+    return f'<div class="{cls}">{cards}</div>'
+
+
+def conseils_band(slugs, title="Nos conseils", cls="alt"):
+    return f"""
+  <section class="{cls}">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>{title}</h2>
+        <p>Des réponses claires aux questions que nous posent nos clients. <a href="/conseils/" class="inline-link">Tous nos conseils</a></p>
+      </div>
+      {article_cards(slugs)}
+    </div>
+  </section>
+"""
+
+
+def article_page(a):
+    return f"""
+  <section class="hero small">
+    <div class="wrap hero-inner">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> / <a href="/conseils/">Conseils</a> / {a["short"]}</nav>
+      <h1>{a["title"]}</h1>
+      <p class="lead">{a["desc"]}</p>
+      <p class="art-meta">Par BELACONNECT · Mis à jour le {date_fr(a["date"])}</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap prose article">
+{a["body"]}
+    </div>
+  </section>
+{conseils_band(a["related"] + [x for x in ART if x not in a["related"] and x != a["slug"]][:1], "À lire aussi")}
+{cta_band()}
+"""
+
+
+def article_jsonld(a):
+    url = f"{SITE_URL}/conseils/{a['slug']}"
+    org = {"@id": SITE_URL + "/#entreprise"}
+    return ('\n<script type="application/ld+json">' + json.dumps({
+        "@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["desc"],
+        "datePublished": a["date"], "dateModified": a["date"], "inLanguage": "fr-FR",
+        "mainEntityOfPage": url, "image": SITE_URL + "/assets/og-image.png",
+        "author": {"@type": "Organization", "name": "BELACONNECT", "url": SITE_URL + "/"}, "publisher": org},
+        ensure_ascii=False) + "</script>"
+        '\n<script type="application/ld+json">' + json.dumps({
+        "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE_URL + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Conseils", "item": SITE_URL + "/conseils/"},
+            {"@type": "ListItem", "position": 3, "name": a["short"], "item": url}]}, ensure_ascii=False) + "</script>"
+        '\n<meta property="og:type" content="article">')
+
+
+conseils_index = page_hero(
+    "Conseils",
+    "Nos <em>conseils</em> en sécurité et informatique",
+    "Vidéosurveillance, alarme, copropriété, réseau : des réponses claires aux questions que se posent les professionnels avant de s'équiper.") + f"""
+  <section>
+    <div class="wrap">
+      {article_cards(list(ART), "grid-2")}
+    </div>
+  </section>
+{cta_band()}
+"""
+
+RELATED = {
+    "index.html": ["proteger-son-commerce", "combien-de-cameras", "videosurveillance-copropriete"],
+    "videosurveillance.html": ["proteger-son-commerce", "combien-de-cameras", "videosurveillance-copropriete"],
+    "alarme.html": ["alarme-sans-fil-ou-filaire", "proteger-son-commerce", "combien-de-cameras"],
+    "informatique.html": ["baie-de-brassage", "proteger-son-commerce", "alarme-sans-fil-ou-filaire"],
+}
+
 PAGES = [
     ("index.html", "Vidéosurveillance, alarme et informatique pour professionnels (06) | BelaConnect",
      "Installation de vidéosurveillance, d'alarmes, de réseaux et d'informatique pour les entreprises, commerces et copropriétés des Alpes-Maritimes (06). Dahua, Hikvision, Ajax, TP-Link. Devis gratuit sur place.",
@@ -1188,7 +1281,10 @@ PAGES = [
     ("404.html", "Page introuvable — BelaConnect",
      "Cette page n'existe pas.",
      notfound, '\n<meta name="robots" content="noindex">'),
-]
+    ("conseils/index.html", "Conseils vidéosurveillance, alarme et réseau pour professionnels | BelaConnect",
+     "Nos conseils pour protéger un commerce, choisir une alarme, installer des caméras en copropriété ou remettre au propre une baie réseau.",
+     conseils_index, ""),
+] + [(f"conseils/{a['slug']}.html", a["seo"] + " | BelaConnect", a["desc"], article_page(a), article_jsonld(a)) for a in ARTICLES]
 
 
 CLEAN_PAGES = "videosurveillance|alarme|informatique|contact|reglementation|mentions-legales|packs"
@@ -1199,6 +1295,8 @@ def clean_urls(html):
     html = re.sub(r'(href|src|srcset)="assets/', r'\1="/assets/', html)
     html = re.sub(r'href="/?index\.html', 'href="/', html)
     html = re.sub(r'href="/?(' + CLEAN_PAGES + r')\.html', r'href="/\1', html)
+    html = re.sub(re.escape(SITE_URL) + r'/conseils/index\.html', SITE_URL + '/conseils/', html)
+    html = re.sub(re.escape(SITE_URL) + r'/conseils/([a-z0-9-]+)\.html', SITE_URL + r'/conseils/\1', html)
     return re.sub(re.escape(SITE_URL) + r'/(' + CLEAN_PAGES + r')\.html', SITE_URL + r'/\1', html)
 
 
@@ -1208,7 +1306,15 @@ def main():
         body = body.replace(" ?", "&nbsp;?").replace(" !", "&nbsp;!")
         body = body.replace('<section class="hero">', '<section class="hero">' + WAVES, 1)
         body = body.replace('<section class="hero small">', '<section class="hero small">' + WAVES, 1)
-        (ROOT / filename).write_text(clean_urls(layout(filename, title, desc, body, extra)), encoding="utf-8")
+        if filename in RELATED:
+            k = body.rfind('<section class="tight">\n    <div class="wrap">\n      <div class="cta-band">')
+            body = body[:k] + conseils_band(RELATED[filename], cls="" if filename == "index.html" else "alt").lstrip("\n") + body[k:]
+        out = ROOT / filename
+        out.parent.mkdir(exist_ok=True)
+        html = layout(filename, title, desc, body, extra)
+        if 'og:type" content="article"' in html:
+            html = html.replace('<meta property="og:type" content="website">\n', '', 1)
+        out.write_text(clean_urls(html), encoding="utf-8")
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for filename, *_ in PAGES:
@@ -1225,8 +1331,43 @@ def main():
         '<meta http-equiv="refresh" content="0; url=/videosurveillance"></head>'
         '<body><p>Voir la page <a href="/videosurveillance">Vidéosurveillance</a>.</p></body></html>\n',
         encoding="utf-8")
+    # Robots : tout est ouvert, y compris aux moteurs des assistants IA (cités explicitement)
+    ai_bots = ["Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "GPTBot", "PerplexityBot", "Perplexity-User",
+               "ClaudeBot", "Claude-SearchBot", "Claude-User", "Google-Extended", "Applebot", "Applebot-Extended",
+               "DuckAssistBot", "MistralAI-User"]
     (ROOT / "robots.txt").write_text(
-        f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
+        "User-agent: *\nAllow: /\n\n" + "".join(f"User-agent: {b}\nAllow: /\n\n" for b in ai_bots)
+        + f"Sitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
+    # llms.txt : fiche de présentation lisible par les assistants IA (format llmstxt.org)
+    arts = "\n".join(f"- [{a['title']}]({SITE_URL}/conseils/{a['slug']}): {a['summary']}" for a in ARTICLES)
+    (ROOT / "llms.txt").write_text(f"""# BELACONNECT
+
+> BELACONNECT est un installateur indépendant de vidéosurveillance, d'alarmes anti-intrusion, de réseaux et d'informatique pour les professionnels (commerces, restaurants, bureaux, entrepôts, chantiers) et les copropriétés, dans tout le département des Alpes-Maritimes (06), au départ de Nice.
+
+- Zone d'intervention : tout le département des Alpes-Maritimes (06), littoral et arrière-pays.
+- Clients : entreprises, commerces, restaurants et hôtels, bureaux et cabinets, entrepôts et ateliers, chantiers, copropriétés (syndics et conseils syndicaux).
+- Services : installation et maintenance de vidéosurveillance (caméras intérieures et extérieures, filaires ou sans fil, enregistreur, accès smartphone), alarmes anti-intrusion sans fil ou filaires, réseau et câblage, Wi-Fi professionnel, remise au propre de baies de brassage, postes, serveurs, sauvegardes, dépannage informatique.
+- Matériel : Dahua, Hikvision, Ajax, TP-Link.
+- Devis : gratuit et sans engagement, après une visite sur place offerte.
+- Contact : téléphone {PHONE_DISPLAY} (aussi sur WhatsApp), email {EMAIL}, formulaire de devis {SITE_URL}/contact
+- Entreprise : micro-entreprise, SIREN {SIREN}.
+
+## Services
+
+- [Vidéosurveillance]({SITE_URL}/videosurveillance): caméras pour commerces, bureaux, entrepôts et copropriétés, protection des commerces contre le vol et les dégradations.
+- [Alarme]({SITE_URL}/alarme): alarmes anti-intrusion sans fil ou filaires avec alertes sur smartphone.
+- [Informatique et réseau]({SITE_URL}/informatique): réseau, câblage, Wi-Fi pro, remise au propre de baies, postes, serveurs, sauvegardes, dépannage.
+- [Demander un devis]({SITE_URL}/contact): formulaire en 3 étapes, rappel rapide.
+
+## Conseils
+
+{arts}
+
+## Informations utiles
+
+- [Réglementation de la vidéosurveillance]({SITE_URL}/reglementation): règles en entreprise, en commerce (autorisation préfectorale), en copropriété (vote en AG), panneau, durée de conservation.
+- [Mentions légales]({SITE_URL}/mentions-legales)
+""", encoding="utf-8")
     print("Pages générées :", ", ".join(p[0] for p in PAGES))
 
 
