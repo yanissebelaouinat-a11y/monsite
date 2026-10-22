@@ -975,7 +975,7 @@ contact = page_hero(
           <div class="fields">
             <div class="full"><label for="f-entreprise">Entreprise / résidence <span class="opt">(facultatif)</span></label><input id="f-entreprise" name="entreprise" autocomplete="organization"></div>
             <div><label for="f-nom">Nom *</label><input id="f-nom" name="nom" autocomplete="name" required></div>
-            <div><label for="f-tel">Téléphone *</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+            <div><label for="f-tel">Téléphone *</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" maxlength="20" aria-describedby="tel-error" required><p id="tel-error" class="field-error" role="alert">Numéro invalide : indiquez 10 chiffres, par exemple 06 12 34 56 78.</p></div>
             <div><label for="f-mail">Email <span class="opt">(facultatif)</span></label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
             <div><label for="f-ville">Ville de l'intervention *</label><input id="f-ville" name="ville" autocomplete="address-level2" required></div>
             <div class="full"><label for="f-rappel">Meilleur moment pour vous rappeler</label>

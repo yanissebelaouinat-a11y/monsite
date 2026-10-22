@@ -275,8 +275,32 @@
     r.addEventListener('change', function () { setTimeout(function () { show(2); }, 180); });
   });
 
+  // Téléphone : uniquement des chiffres (et + au début), mis en forme « 06 12 34 56 78 » pendant la saisie
+  var tel = form.tel, telErr = document.getElementById('tel-error');
+  var telDigits = function (v) { return v.replace(/[^\d+]/g, '').replace(/(?!^)\+/g, ''); };
+  var telValid = function (v) {
+    var d = telDigits(v);
+    return /^0[1-9]\d{8}$/.test(d) || /^\+33[1-9]\d{8}$/.test(d) || /^\+(?!33)\d{8,14}$/.test(d);
+  };
+  var telShow = function (bad) {
+    tel.classList.toggle('invalid', bad);
+    tel.setAttribute('aria-invalid', bad ? 'true' : 'false');
+    if (telErr) telErr.classList.toggle('show', bad);
+  };
+  if (tel) {
+    tel.addEventListener('input', function () {
+      var d = telDigits(tel.value);
+      if (d.charAt(0) === '0') d = d.slice(0, 10).replace(/(\d{2})(?=\d)/g, '$1 ');
+      else if (d.indexOf('+33') === 0) d = ('+33 ' + d.slice(3, 12).replace(/^(\d)(?=\d)/, '$1 ').replace(/(\d{2})(?=\d)/g, '$1 ')).replace(/ (\d) /, ' $1 ');
+      tel.value = d;
+      if (tel.classList.contains('invalid') && telValid(d)) telShow(false);
+    });
+    tel.addEventListener('blur', function () { if (tel.value.trim()) telShow(!telValid(tel.value)); });
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (tel && !telValid(tel.value)) { telShow(true); tel.focus(); return; }
     var err = document.getElementById('form-error');
     var required = ['nom', 'tel', 'ville'];
     for (var i = 0; i < required.length; i++) {

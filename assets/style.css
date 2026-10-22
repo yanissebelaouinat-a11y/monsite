@@ -709,3 +709,6 @@ a.art-card{position:relative;}
 @media (prefers-reduced-motion:reduce){
   .read-progress{display:none;}
 }
+.field-error{display:none;margin:6px 0 0;color:#B91C1C;font-size:14px;font-weight:600;}
+.field-error.show{display:block;}
+input.invalid{border-color:#DC2626 !important;box-shadow:0 0 0 3px rgba(220,38,38,.15);}
