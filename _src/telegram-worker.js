@@ -25,8 +25,23 @@ export default {
     const clip = (v, n) => String(v || "").slice(0, n);
     const esc = (v) => v.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
 
+    // Mise en forme lisible : titres en MAJUSCULES et libellés « xxx : » en gras
+    // (le texte libre du client, sous « MESSAGE », reste tel quel jusqu'à la ligne vide suivante)
+    const pretty = (t) => {
+      let free = false;
+      return esc(clip(t, 3500)).split("\n").map((l) => {
+        if (!l.trim()) { free = false; return l; }
+        if (free) return l;
+        if (/^\S+ [A-ZÀÂÉÈÊÎÔÛÇ' ]{4,}$/.test(l)) { free = /MESSAGE/.test(l); return "<b>" + l + "</b>"; }
+        const i = l.indexOf(" : ");
+        return i > 0 && i < 40 ? "<b>" + l.slice(0, i) + "</b> :" + l.slice(i + 2) : l;
+      }).join("\n");
+    };
+
     let text;
-    if (data.type === "devis") {
+    if (data.v === 2 && (data.type === "devis" || data.type === "clic")) {
+      text = "<b>" + esc(clip(data.title, 120)) + "</b>\n━━━━━━━━━━━━━━━\n" + pretty(data.text);
+    } else if (data.type === "devis") {
       text = "📩 <b>" + esc(clip(data.subject, 200)) + "</b>\n\n" + esc(clip(data.message, 3500));
     } else if (data.type === "clic") {
       const what = data.what === "whatsapp" ? "💬 Clic sur WhatsApp" : "📞 Clic sur Appeler";

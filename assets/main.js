@@ -28,6 +28,33 @@
   if (year) year.textContent = new Date().getFullYear();
 
   // Notifications Telegram (via le relais Cloudflare) : demandes de devis et clics Appeler / WhatsApp
+  // Provenance du visiteur (mémorisée à son arrivée sur le site, pour la session)
+  var source = (function () {
+    try {
+      var known = sessionStorage.getItem('bc-src');
+      if (known) return known;
+      var q = location.search, ref = document.referrer, src;
+      if (/[?&](gclid|gbraid|wbraid)=/.test(q)) src = 'Annonce Google Ads';
+      else if (/[?&]utm_source=([^&]+)/.test(q)) src = 'Campagne ' + decodeURIComponent(RegExp.$1);
+      else if (/google\./.test(ref)) src = 'Recherche Google';
+      else if (/bing\.|duckduckgo\.|qwant\.|yahoo\./.test(ref)) src = 'Moteur de recherche';
+      else if (/chatgpt|openai|perplexity|claude\.ai|gemini|copilot/.test(ref)) src = 'Assistant IA';
+      else if (/facebook|instagram|linkedin|whatsapp|t\.co\//.test(ref)) src = 'Réseaux sociaux';
+      else if (ref && ref.indexOf(location.host) < 0) src = 'Lien depuis ' + ref.split('/')[2];
+      else src = 'Accès direct';
+      sessionStorage.setItem('bc-src', src);
+      return src;
+    } catch (e) { return ''; }
+  })();
+  var when = function () {
+    var d = new Date(), z = function (n) { return (n < 10 ? '0' : '') + n; };
+    return z(d.getDate()) + '/' + z(d.getMonth() + 1) + ' à ' + z(d.getHours()) + 'h' + z(d.getMinutes());
+  };
+  var pageName = function () {
+    var c = document.querySelector('.crumbs');
+    if (c) return c.textContent.split('/').pop().trim();
+    return location.pathname === '/' ? 'Accueil' : (document.title.split(' | ')[0] || location.pathname).trim();
+  };
   var relay = document.body.getAttribute('data-tg');
   window.bcNotify = function (payload) {
     if (!relay || !window.fetch) return;
@@ -38,7 +65,11 @@
   };
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href^="tel:"], a[href*="wa.me/"]');
-    if (a) window.bcNotify({ type: 'clic', what: a.href.indexOf('wa.me') >= 0 ? 'whatsapp' : 'appel', page: location.pathname });
+    if (!a) return;
+    var wa = a.href.indexOf('wa.me') >= 0;
+    var title = wa ? '💬 CLIC SUR WHATSAPP' : '📞 CLIC SUR APPELER';
+    var text = '📄 Page : ' + pageName() + '\n🔗 ' + location.pathname + (source ? '\n🎯 Provenance : ' + source : '') + '\n🕒 ' + when();
+    window.bcNotify({ type: 'clic', what: wa ? 'whatsapp' : 'appel', page: location.pathname, v: 2, title: title, text: text });
   });
 
   // Cookies Google Ads : la balise n'est chargée qu'après accord du visiteur (choix gardé 6 mois)
@@ -276,7 +307,25 @@
       'Rappel : ' + form.rappel.value,
       '', 'PRÉCISIONS', form.message.value.trim() || '—');
     var body = lines.join('\n');
-    window.bcNotify({ type: 'devis', subject: subject, message: body });
+    var EMOJI = { video: '📹', alarme: '🚨', copro: '🏢', baie: '🗄️', info: '💻', maint: '🔧', autre: '💡' };
+    var isMaint = cats().indexOf('maint') >= 0;
+    var tgTitle = isMaint ? '🛠️ NOUVELLE DEMANDE DE DÉPANNAGE' : '🔔 NOUVELLE DEMANDE DE DEVIS';
+    var tg = [cats().map(function (c) { return EMOJI[c] || '💡'; }).join('') + ' ' + besoinTxt, '',
+      '👤 Nom : ' + form.nom.value.trim()];
+    if (entreprise) tg.push('🏢 Entreprise : ' + entreprise);
+    tg.push('📞 Tél : ' + form.tel.value.trim());
+    if (form.email.value.trim()) tg.push('✉️ Email : ' + form.email.value.trim());
+    tg.push('📍 Ville : ' + form.ville.value.trim(), '🕐 Rappel : ' + form.rappel.value);
+    var det = [];
+    form.querySelectorAll('.q-group').forEach(function (g) {
+      if (!groupVisible(g)) return;
+      var v = label(g.getAttribute('data-name'));
+      if (v) det.push('▫️ ' + g.getAttribute('data-title') + ' : ' + v);
+    });
+    if (det.length) tg.push('', '📋 DÉTAILS', det.join('\n'));
+    if (form.message.value.trim()) tg.push('', '💬 MESSAGE', form.message.value.trim());
+    tg.push('', '🎯 Provenance : ' + (source || '—'), '🕒 ' + when());
+    window.bcNotify({ type: 'devis', subject: tgTitle, message: tg.join('\n'), v: 2, title: tgTitle, text: tg.join('\n') });
     var mailto = function () {
       window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     };
