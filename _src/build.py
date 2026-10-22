@@ -522,6 +522,10 @@ VIDEO_FAQ = [
      "Oui, les caméras que nous installons ont la vision de nuit. Certains modèles offrent même une image en couleur dans l'obscurité."),
     ("Installez-vous des caméras en copropriété ?",
      "Oui : halls, parkings, garages et locaux communs. Nous fournissons un devis détaillé à présenter en assemblée générale, puisque l'installation doit y être votée, et nous orientons les caméras uniquement sur les parties communes."),
+    ("Les images peuvent-elles servir en cas de vol ou de dégradation ?",
+     "Oui. Les images enregistrées peuvent être remises aux forces de l'ordre lors d'un dépôt de plainte et transmises à votre assureur. Nous vous montrons comment exporter une séquence depuis l'enregistreur ou votre téléphone."),
+    ("Combien de temps dure l'installation ?",
+     "Nous fixons la date avec vous dès l'acceptation du devis. Une installation de quelques caméras dans un commerce se fait généralement en une journée, sans fermer votre boutique."),
     ("Ai-je des obligations légales en tant que professionnel ?",
      "Oui : informer les personnes filmées par un panneau, informer vos salariés, et demander une autorisation en préfecture pour filmer un lieu ouvert au public. Nous vous indiquons les démarches lors de l'installation."),
 ]
@@ -529,7 +533,7 @@ VIDEO_FAQ = [
 video = page_hero(
     "Vidéosurveillance",
     "Vidéosurveillance <em>pour professionnels</em> dans les Alpes-Maritimes",
-    "Installation de caméras Dahua et Hikvision, intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès à distance depuis votre smartphone.",
+    "Commerces, bureaux, entrepôts et copropriétés : nous installons des caméras intérieures et extérieures, avec enregistreur et accès depuis votre téléphone, pour dissuader, être alerté et garder une preuve.",
     "Spécialité BelaConnect") + f"""
 {brands(["Dahua", "Hikvision"], "Marques installées")}
 
@@ -543,6 +547,41 @@ video = page_hero(
         <div class="card"><div class="icon">{ic('cam')}</div><h3>Caméras extérieures</h3><p>Façades, entrées, parkings, quais de livraison et périmètre. Modèles résistants aux intempéries.</p></div>
         <div class="card"><div class="icon">{ic('dome')}</div><h3>Caméras intérieures</h3><p>Surface de vente, caisse, réserve, bureaux, couloirs. Modèles discrets type dôme.</p></div>
         <div class="card"><div class="icon">{ic('hdd')}</div><h3>Enregistreur</h3><p>Enregistrement continu ou sur détection, avec disque dur dimensionné selon vos besoins.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Pour quels locaux ?</h2>
+        <p>Chaque site a ses points sensibles. Nous les repérons avec vous lors de la visite gratuite.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="icon">{ic('shop')}</div><h3>Commerces et boutiques</h3><p>Vitrine, entrée, caisse, surface de vente et réserve. Dissuasion visible et preuves en cas de vol ou de dégradation.</p></div>
+        <div class="card"><div class="icon">{ic('food')}</div><h3>Restaurants et hôtels</h3><p>Salle, terrasse, entrées, cuisine et parking, avec un accès aux images depuis votre téléphone.</p></div>
+        <div class="card"><div class="icon">{ic('office')}</div><h3>Bureaux et cabinets</h3><p>Accueil, accès et locaux techniques, en respectant la vie privée de vos salariés.</p></div>
+        <div class="card"><div class="icon">{ic('box')}</div><h3>Entrepôts et ateliers</h3><p>Quais de livraison, stock, périmètre et parking, avec vision de nuit longue portée.</p></div>
+        <div class="card"><div class="icon">{ic('crane')}</div><h3>Chantiers</h3><p>Protection du matériel et des engins, y compris sur les sites sans réseau internet.</p></div>
+        <div class="card"><div class="icon">{ic('building')}</div><h3>Copropriétés</h3><p>Halls, parkings, garages et locaux communs. <a href="#copropriete" class="inline-link">Voir le détail</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="commerce">
+    <div class="wrap split top">
+      <div>
+        <h2>Protéger votre commerce</h2>
+        <p>Vitrine brisée, tags, vol à l'étalage ou intrusion la nuit : une installation bien pensée dissuade, vous alerte et vous donne des images exploitables.</p>
+        {checks(["Caméras extérieures anti-vandalisme, placées hors de portée", "Vision de nuit couleur sur la façade et la vitrine", "Alerte sur votre téléphone en cas de présence la nuit", "Images nettes à fournir pour une plainte ou à votre assureur", "Enregistreur à l'abri, les images restent même si une caméra est arrachée"])}
+        <div class="hero-cta"><a href="contact.html?besoin=video" class="btn btn-dark">Demander un devis gratuit {ic('arrow')}</a></div>
+      </div>
+      <div class="note">
+        {ic('info')}
+        <div>
+          <h3>Caméras et alarme ensemble</h3>
+          <p>Couplée à une <a href="alarme.html" class="inline-link">alarme</a>, la vidéosurveillance vous permet de vérifier sur votre téléphone ce qui se passe dès qu'une alerte se déclenche, et de réagir au bon moment.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -619,6 +658,19 @@ video = page_hero(
       </div>
       <div class="card">
         {checks(["Contrôle du bon fonctionnement des caméras", "Vérification des enregistrements et du disque", "Mises à jour de sécurité", "Ajout ou déplacement de caméras", "Intervention en cas de panne"])}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Comment ça se passe</h2>
+      </div>
+      <div class="grid-3 steps">
+        <div class="step"><h3>Visite sur place</h3><p>Nous venons gratuitement voir vos locaux et repérons avec vous les zones à couvrir.</p></div>
+        <div class="step"><h3>Devis détaillé</h3><p>Nombre et emplacement des caméras, matériel, durée d'enregistrement. Sans engagement.</p></div>
+        <div class="step"><h3>Installation et prise en main</h3><p>Pose, réglages, application sur votre téléphone. Nous vous montrons comment retrouver une image.</p></div>
       </div>
     </div>
   </section>
