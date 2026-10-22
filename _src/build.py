@@ -31,7 +31,7 @@ SITE_URL = "https://belaconnect.fr"
 ADS_ID = "AW-18520950625"
 # Adresse du relais Cloudflare Worker qui transmet les demandes et les clics sur Telegram
 # (voir _src/telegram-worker.js). Vide = pas de notification Telegram.
-TG_RELAY = ""
+TG_RELAY = "https://belaconnect-telegram.belaconnect06.workers.dev/"
 # Libellés de conversion Google Ads (la partie après « AW-…/ »). Vide = pas de suivi.
 ADS_CONV_DEVIS = "6zOSCImt1qMdEOGOvf9E"   # « Demande de devis » : formulaire envoyé
 ADS_CONV_APPEL = ""   # « Clic appel / WhatsApp »
