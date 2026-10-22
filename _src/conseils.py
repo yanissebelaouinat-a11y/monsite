@@ -231,4 +231,130 @@ ARTICLES = [
 <h2>C'est aussi le bon moment pour…</h2>
 <p>Profiter de l'intervention pour vérifier le switch, le routeur, l'onduleur et le Wi-Fi, et remplacer les éléments fatigués. <a href="/informatique#baies">Voir notre offre de remise au propre de baies</a> ou <a href="/contact?besoin=baie">demander un devis</a>.</p>
 """),
+    dict(
+        slug="autorisation-prefectorale-videosurveillance",
+        title="Autorisation préfectorale de vidéosurveillance : les démarches pour un commerce",
+        short="Autorisation préfectorale",
+        seo="Autorisation préfectorale vidéosurveillance commerce : démarches",
+        desc="Quand un commerce doit-il demander une autorisation préfectorale pour ses caméras, comment faire la demande, quels documents fournir et quels délais prévoir.",
+        summary="Quand elle est obligatoire, comment faire la demande, quels documents fournir : le parcours pour un commerce ou un restaurant.",
+        date="2026-10-22",
+        related=["panneau-videosurveillance", "proteger-son-commerce"],
+        body="""
+<p>Vous voulez installer des caméras dans votre boutique ou votre restaurant ? Dès qu'elles filment un espace où entrent vos clients, une autorisation de la préfecture est nécessaire. Voici comment ça fonctionne, en pratique.</p>
+
+<h2>Quand l'autorisation est-elle obligatoire ?</h2>
+<p>La règle dépend de ce que filment les caméras :</p>
+<ul>
+  <li><b>Un lieu ouvert au public</b> (surface de vente, salle de restaurant, accueil, caisse côté client) : l'autorisation du préfet est obligatoire, en application du Code de la sécurité intérieure.</li>
+  <li><b>Un espace réservé au personnel</b> (réserve, bureau, entrepôt fermé au public) : pas d'autorisation préfectorale, mais les règles de protection des données s'appliquent (information des salariés, panneau, durée de conservation limitée).</li>
+</ul>
+<p>La plupart des commerces ont les deux types de zones, donc ils sont concernés par la demande.</p>
+
+<h2>Comment faire la demande</h2>
+<ol>
+  <li><b>Préparer le projet</b> : nombre de caméras, emplacement, zones filmées, durée de conservation des images, personnes qui y auront accès.</li>
+  <li><b>Déposer le dossier</b> auprès de la préfecture du département, en général en ligne via le téléservice du ministère de l'Intérieur, ou avec le formulaire Cerfa prévu à cet effet.</li>
+  <li><b>Joindre les pièces</b> : un plan des locaux montrant l'emplacement des caméras et leur champ de vision, une description du matériel, et les informations sur le responsable du système.</li>
+  <li><b>Attendre la décision</b> : le dossier est examiné par la commission départementale de vidéoprotection avant la décision du préfet. Comptez plusieurs semaines, voire quelques mois.</li>
+</ol>
+<p>L'autorisation est en principe accordée pour <b>5 ans</b>, renouvelable. Elle fixe notamment la durée de conservation des images, qui ne peut pas dépasser un mois.</p>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><b>Mettre en service avant d'avoir l'autorisation</b> : exploiter un système sans autorisation est un délit.</li>
+  <li><b>Filmer la voie publique</b> : la caméra extérieure doit se limiter aux abords immédiats de votre commerce, comme la façade et l'entrée.</li>
+  <li><b>Oublier le panneau</b> : il est obligatoire, même avec une autorisation. Voir notre article sur <a href="/conseils/panneau-videosurveillance">le panneau de vidéosurveillance</a>.</li>
+  <li><b>Modifier l'installation sans le signaler</b> : ajouter ou déplacer des caméras peut nécessiter une mise à jour de l'autorisation.</li>
+</ul>
+
+<h2>Comment nous vous aidons</h2>
+<p>Lors de la visite, nous plaçons les caméras en respectant ces règles et vous fournissons le plan d'implantation et la description du matériel dont vous aurez besoin pour votre dossier. Retrouvez aussi toutes les règles sur notre page <a href="/reglementation#commerce">réglementation</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les démarches officielles, consultez le site de votre préfecture ou service-public.fr.</p>
+"""),
+    dict(
+        slug="panneau-videosurveillance",
+        title="Panneau de vidéosurveillance : est-il obligatoire et que doit-il indiquer ?",
+        short="Panneau de vidéosurveillance",
+        seo="Panneau vidéosurveillance obligatoire : mentions et emplacement",
+        desc="Le panneau d'information de vidéosurveillance est obligatoire pour les commerces, entreprises et copropriétés : où le placer et quelles mentions y faire figurer.",
+        summary="Obligatoire dans un commerce, une entreprise ou une copropriété : où le placer et quelles informations y faire figurer.",
+        date="2026-10-22",
+        related=["autorisation-prefectorale-videosurveillance", "videosurveillance-copropriete"],
+        body="""
+<p>Dès que des caméras filment des clients, des salariés ou des résidents, ces personnes doivent en être informées. Le moyen le plus simple et le plus courant : un panneau bien visible.</p>
+
+<h2>Est-il obligatoire ?</h2>
+<p>Oui. Qu'il s'agisse d'un commerce, de bureaux, d'un entrepôt ou des parties communes d'une copropriété, les personnes filmées doivent être informées de l'existence des caméras. Un système sans panneau n'est pas conforme, même s'il est par ailleurs autorisé.</p>
+
+<h2>Où le placer ?</h2>
+<ul>
+  <li><b>À chaque entrée</b> de la zone filmée, avant que la personne n'entre dans le champ des caméras.</li>
+  <li><b>À hauteur des yeux</b> et bien éclairé, pour qu'il soit lu, pas seulement vu.</li>
+  <li>En copropriété : dans le hall, à l'entrée du parking et des locaux communs filmés.</li>
+</ul>
+
+<h2>Que doit-il indiquer ?</h2>
+<p>Selon les recommandations de la CNIL, le panneau comporte au minimum :</p>
+<ul>
+  <li>un <b>pictogramme de caméra</b> et la mention que le lieu est placé sous vidéosurveillance ;</li>
+  <li>la <b>finalité</b> du dispositif, par exemple la sécurité des personnes et des biens ;</li>
+  <li>le <b>nom ou la qualité du responsable</b> et un moyen de le contacter ;</li>
+  <li>la <b>durée de conservation</b> des images ;</li>
+  <li>la façon d'exercer ses <b>droits</b> (accès aux images) et la possibilité de saisir la CNIL.</li>
+</ul>
+<p>Les informations plus détaillées peuvent figurer dans un second document, affiché à l'intérieur ou remis sur demande, par exemple une note pour les salariés.</p>
+
+<h2>Le panneau dissuade aussi</h2>
+<p>Au-delà de l'obligation, un panneau visible fait partie de la protection : il prévient qu'une tentative de vol ou de dégradation sera filmée. Combiné à des caméras visibles, il décourage une bonne partie des passages à l'acte.</p>
+
+<h2>Nous fournissons les panneaux</h2>
+<p>À chaque installation, nous fournissons et posons les panneaux adaptés à vos locaux. <a href="/reglementation#panneau">Voir les règles en détail</a> ou <a href="/contact?besoin=video">demander un devis</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les textes officiels, consultez cnil.fr.</p>
+"""),
+    dict(
+        slug="cameras-ne-fonctionnent-plus",
+        title="Caméras de surveillance qui ne fonctionnent plus : les causes fréquentes et les solutions",
+        short="Caméras qui ne marchent plus",
+        seo="Caméra de surveillance qui ne marche plus : causes et solutions",
+        desc="Plus d'image sur le téléphone, enregistreur qui n'enregistre plus, caméra noire la nuit, codes perdus : les pannes les plus courantes et comment les régler.",
+        summary="Plus d'image sur le téléphone, enregistreur muet, codes perdus : les pannes les plus courantes et comment les régler.",
+        date="2026-10-22",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>Une installation de vidéosurveillance tombe rarement en panne d'un coup : le plus souvent, un détail lâche et personne ne s'en rend compte avant d'avoir besoin d'une image. Voici les problèmes que nous rencontrons le plus souvent chez les commerçants et les entreprises, et ce qu'il faut faire.</p>
+
+<h2>Plus d'image sur le téléphone</h2>
+<p>Les caméras enregistrent peut-être toujours, mais l'accès à distance est coupé. Causes fréquentes :</p>
+<ul>
+  <li>changement de box internet ou d'opérateur ;</li>
+  <li>application du fabricant mise à jour, ou changement de téléphone ;</li>
+  <li>mot de passe modifié ou compte de l'application perdu.</li>
+</ul>
+<p>Dans la plupart des cas, il suffit de reconfigurer l'enregistreur et l'application. Vérifiez d'abord sur place, sur l'écran de l'enregistreur, que les caméras s'affichent toujours.</p>
+
+<h2>L'enregistreur n'enregistre plus</h2>
+<ul>
+  <li><b>Disque dur en fin de vie</b> : c'est la panne la plus fréquente après quelques années. Un disque prévu pour la vidéosurveillance tourne en continu et s'use.</li>
+  <li><b>Mauvais réglage</b> : enregistrement désactivé après une coupure de courant, ou programmé seulement sur détection.</li>
+  <li><b>Date et heure fausses</b> : les images existent, mais impossible de retrouver le bon moment.</li>
+</ul>
+<p>Bon réflexe : vérifier une fois par mois qu'on retrouve bien l'enregistrement de la veille.</p>
+
+<h2>Une caméra est noire ou floue</h2>
+<ul>
+  <li><b>La nuit</b> : toile d'araignée ou poussière devant l'objectif, qui renvoie la lumière infrarouge et rend l'image blanche ou floue.</li>
+  <li><b>Le jour comme la nuit</b> : câble abîmé, connecteur oxydé à l'extérieur, alimentation défaillante.</li>
+  <li><b>Caméra déplacée</b> par un choc ou une tentative de vandalisme.</li>
+</ul>
+
+<h2>Codes perdus, installateur injoignable</h2>
+<p>C'est une situation très courante : l'installation fonctionne, mais plus personne n'a les accès. Il est généralement possible de reprendre la main sur l'enregistreur, après avoir vérifié que vous êtes bien le propriétaire du matériel.</p>
+
+<h2>Réparer ou remplacer ?</h2>
+<p>Un disque dur, une alimentation ou une caméra se remplacent sans tout refaire. En revanche, si le matériel a plus de 8 à 10 ans, la qualité d'image et la sécurité des anciens enregistreurs justifient souvent une remise à niveau : de nouvelles caméras peuvent parfois réutiliser les câbles existants.</p>
+
+<h2>Nous reprenons votre installation</h2>
+<p>Que nous l'ayons posée ou non, nous diagnostiquons votre installation, la remettons en état et pouvons en assurer l'entretien. <a href="/maintenance#reprise">Voir notre offre de maintenance</a> ou <a href="/contact?besoin=maintenance">demander une intervention</a>.</p>
+"""),
 ]

@@ -667,3 +667,6 @@ a.art-card:hover .art-more svg{transform:translateX(4px);}
 .article ul,.article ol{margin:10px 0 0;padding-left:22px;}
 .article li{margin:6px 0;}
 .article li b{color:var(--ink);}
+.btn-outline{background:transparent;border-color:var(--navy);color:var(--navy);}
+.btn-outline:hover{background:var(--navy);color:#fff;}
+.article .small-note{margin-top:28px;font-size:15px;color:var(--ink-soft);font-style:italic;}

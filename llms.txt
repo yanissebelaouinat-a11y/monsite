@@ -15,6 +15,8 @@
 - [Vidéosurveillance](https://belaconnect.fr/videosurveillance): caméras pour commerces, bureaux, entrepôts et copropriétés, protection des commerces contre le vol et les dégradations.
 - [Alarme](https://belaconnect.fr/alarme): alarmes anti-intrusion sans fil ou filaires avec alertes sur smartphone.
 - [Informatique et réseau](https://belaconnect.fr/informatique): réseau, câblage, Wi-Fi pro, remise au propre de baies, postes, serveurs, sauvegardes, dépannage.
+- [Maintenance et dépannage](https://belaconnect.fr/maintenance): contrat d'entretien ou dépannage ponctuel, reprise d'installations posées par d'autres installateurs.
+- [À propos](https://belaconnect.fr/a-propos): présentation de l'entreprise, façon de travailler, engagements.
 - [Demander un devis](https://belaconnect.fr/contact): formulaire en 3 étapes, rappel rapide.
 
 ## Conseils
@@ -24,6 +26,9 @@
 - [Installer des caméras en copropriété : les étapes jusqu'au vote en AG](https://belaconnect.fr/conseils/videosurveillance-copropriete): Du premier devis au vote en assemblée générale, puis à la mise en service : le parcours complet et les règles à respecter.
 - [Alarme sans fil ou filaire : que choisir pour un local professionnel ?](https://belaconnect.fr/conseils/alarme-sans-fil-ou-filaire): Fiabilité, pose, entretien, évolutivité : les vraies différences entre les deux technologies pour un commerce ou un bureau.
 - [Baie de brassage en désordre : pourquoi et comment la remettre au propre](https://belaconnect.fr/conseils/baie-de-brassage): Câbles emmêlés, ports non identifiés, pannes impossibles à trouver : comment se passe une remise au propre et ce qu'elle change.
+- [Autorisation préfectorale de vidéosurveillance : les démarches pour un commerce](https://belaconnect.fr/conseils/autorisation-prefectorale-videosurveillance): Quand elle est obligatoire, comment faire la demande, quels documents fournir : le parcours pour un commerce ou un restaurant.
+- [Panneau de vidéosurveillance : est-il obligatoire et que doit-il indiquer ?](https://belaconnect.fr/conseils/panneau-videosurveillance): Obligatoire dans un commerce, une entreprise ou une copropriété : où le placer et quelles informations y faire figurer.
+- [Caméras de surveillance qui ne fonctionnent plus : les causes fréquentes et les solutions](https://belaconnect.fr/conseils/cameras-ne-fonctionnent-plus): Plus d'image sur le téléphone, enregistreur muet, codes perdus : les pannes les plus courantes et comment les régler.
 
 ## Informations utiles
 

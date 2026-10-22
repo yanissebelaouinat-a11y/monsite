@@ -176,6 +176,8 @@ BREADCRUMB = {
     "contact.html": "Contact",
     "reglementation.html": "Réglementation",
     "conseils/index.html": "Conseils",
+    "a-propos.html": "À propos",
+    "maintenance.html": "Maintenance",
 }
 
 
@@ -206,6 +208,8 @@ SERVICE_SCHEMA = {
         "Systèmes d'alarme Ajax sans fil ou filaires pour commerces, bureaux et entrepôts, avec alertes sur smartphone."),
     "informatique.html": ("Informatique et réseau d'entreprise",
         "Câblage, remise au propre de baies, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes et dépannage."),
+    "maintenance.html": ("Maintenance et dépannage de vidéosurveillance, alarme et réseau",
+        "Contrat d'entretien ou dépannage ponctuel, y compris pour les installations posées par d'autres installateurs."),
 }
 
 
@@ -343,6 +347,7 @@ def layout(filename, title, description, body, extra_head=""):
           <li><a href="alarme.html">Alarme</a></li>
           <li><a href="informatique.html">Informatique &amp; réseau</a></li>
           <li><a href="informatique.html#baies">Remise au propre de baies</a></li>
+          <li><a href="maintenance.html">Maintenance et dépannage</a></li>
           <li><a href="/conseils/">Nos conseils</a></li>
         </ul>
       </div>
@@ -360,6 +365,7 @@ def layout(filename, title, description, body, extra_head=""):
         <p class="foot-title">Contact</p>
         <ul>
           <li><a href="contact.html">Demander un devis</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
           <li><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
           <li>Alpes-Maritimes (06)</li>
@@ -465,6 +471,25 @@ home = f"""
         <div><b>1</b><h3>seul interlocuteur</h3><p>Du devis à la maintenance, vous avez toujours affaire à la même personne.</p></div>
         <div><b>0 €</b><h3>pour la visite et le devis</h3><p>Nous venons voir vos locaux avant de chiffrer quoi que ce soit, sans engagement.</p></div>
         <div><b>4</b><h3>marques professionnelles</h3><p>Dahua, Hikvision, Ajax et TP-Link : du matériel fiable, conçu pour durer.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split top">
+      <div>
+        <h2>Commerçants : protégez votre boutique</h2>
+        <p>Vitrine, caisse, réserve, intrusion la nuit : nous installons des caméras et des alarmes qui dissuadent, vous alertent sur votre téléphone et gardent une preuve. Pose rapide, sans fermer votre commerce.</p>
+        {checks(["Caméras extérieures anti-vandalisme et vision de nuit", "Alerte sur votre téléphone en dehors des heures d'ouverture", "Images utilisables pour une plainte ou votre assureur", "Conseils sur les démarches et l'autorisation en préfecture"])}
+        <div class="hero-cta">
+          <a href="videosurveillance.html#commerce" class="btn btn-dark">Protéger mon commerce {ic('arrow')}</a>
+          <a href="/conseils/proteger-son-commerce" class="btn btn-outline">Nos conseils</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Déjà équipé ?</h3>
+        <p>Caméras qui ne s'affichent plus, enregistreur plein, codes perdus, installation posée par un autre installateur : nous la reprenons, la remettons en état et en assurons la maintenance.</p>
+        <div class="hero-cta"><a href="maintenance.html#reprise" class="btn btn-dark">Maintenance et dépannage {ic('arrow')}</a></div>
       </div>
     </div>
   </section>
@@ -657,7 +682,7 @@ video = page_hero(
     <div class="wrap split">
       <div >
         <h2>Maintenance</h2>
-        <p>Vérification des caméras et de l'enregistreur, nettoyage, mises à jour, remplacement d'un équipement défectueux, ajout de caméras. Nous restons joignables après l'installation.</p>
+        <p>Vérification des caméras et de l'enregistreur, nettoyage, mises à jour, remplacement d'un équipement défectueux, ajout de caméras. Nous restons joignables après l'installation. <a href="maintenance.html" class="inline-link">Voir nos formules de maintenance</a>.</p>
       </div>
       <div class="card">
         {checks(["Contrôle du bon fonctionnement des caméras", "Vérification des enregistrements et du disque", "Mises à jour de sécurité", "Ajout ou déplacement de caméras", "Intervention en cas de panne"])}
@@ -1167,6 +1192,145 @@ reg = page_hero(
 """
 
 # =============================================================================
+# À PROPOS
+# =============================================================================
+about = page_hero(
+    "À propos",
+    "À propos de <em>BELACONNECT</em>",
+    "Installateur indépendant en vidéosurveillance, alarme et informatique pour les commerçants, entreprises et copropriétés des Alpes-Maritimes.") + f"""
+  <section>
+    <div class="wrap split top">
+      <div>
+        <h2>Qui sommes-nous</h2>
+        <p>BELACONNECT est une entreprise des Alpes-Maritimes spécialisée dans la sécurité des locaux professionnels : vidéosurveillance, alarme anti-intrusion, et l'informatique qui va avec, du réseau au Wi-Fi.</p>
+        <p>Nous travaillons surtout pour les commerçants, qui ont besoin d'une installation fiable, posée proprement et sans fermer la boutique, mais aussi pour les bureaux, les entrepôts, les chantiers et les copropriétés.</p>
+        <p>Vous avez un seul interlocuteur, du premier rendez-vous à la maintenance. Pour les chantiers importants, nous intervenons en équipe afin de respecter vos délais.</p>
+      </div>
+      <div class="card">
+        <h3>En bref</h3>
+        {checks(["Vidéosurveillance, alarme, réseau et informatique", "Commerces, bureaux, entrepôts, chantiers, copropriétés", "Tout le département des Alpes-Maritimes (06)", "Visite et devis gratuits, sans engagement", "Intervention rapide en cas de panne", "Reprise d'installations posées par d'autres"])}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Notre façon de travailler</h2>
+        <p>Une installation de sécurité ne vaut que si elle est bien pensée, bien posée et bien suivie.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="icon">{ic('pin')}</div><h3>La visite avant le devis</h3><p>Nous venons voir vos locaux avant de chiffrer quoi que ce soit : accès, éclairage, points sensibles, horaires.</p></div>
+        <div class="card"><div class="icon">{ic('eye')}</div><h3>Un conseil honnête</h3><p>Le nombre juste de caméras et de détecteurs, pas de matériel inutile. Nous vous expliquons chaque choix.</p></div>
+        <div class="card"><div class="icon">{ic('tool')}</div><h3>Une pose propre</h3><p>Câbles rangés, matériel bien fixé, chantier nettoyé. Dans un commerce, nous nous adaptons à vos horaires.</p></div>
+        <div class="card"><div class="icon">{ic('mobile')}</div><h3>La prise en main</h3><p>Nous installons l'application sur votre téléphone et vous montrons comment retrouver une image ou armer l'alarme.</p></div>
+        <div class="card"><div class="icon">{ic('info')}</div><h3>Le respect des règles</h3><p>Caméras placées en conformité, panneaux d'information, et explication des démarches à faire.</p></div>
+        <div class="card"><div class="icon">{ic('phone')}</div><h3>Un suivi dans la durée</h3><p>Nous restons joignables après l'installation et intervenons rapidement en cas de problème.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split top">
+      <div>
+        <h2>Nos engagements</h2>
+        {checks(["Une visite et un devis gratuits, détaillés et sans engagement", "Du matériel professionnel, choisi pour durer", "Une installation propre, testée devant vous", "Des explications claires, sans jargon", "Une réponse rapide quand vous avez besoin de nous"])}
+      </div>
+      <div class="card">
+        <h3>L'entreprise</h3>
+        <p>BELACONNECT, micro-entreprise immatriculée sous le SIREN {SIREN}. Intervention dans tout le département des Alpes-Maritimes.</p>
+        <p>Matériel installé : Dahua, Hikvision, Ajax, TP-Link.</p>
+        <p><a href="tel:{PHONE_LINK}" class="inline-link">{PHONE_DISPLAY}</a> · <a href="mailto:{EMAIL}" class="inline-link">{EMAIL}</a></p>
+      </div>
+    </div>
+  </section>
+{cta_band("Parlons de votre projet", "Une visite gratuite pour voir vos locaux et vous proposer la solution adaptée.")}
+"""
+
+# =============================================================================
+# MAINTENANCE
+# =============================================================================
+MAINT_FAQ = [
+    ("Intervenez-vous sur du matériel que vous n'avez pas installé ?",
+     "Oui. Nous reprenons régulièrement des installations posées par d'autres : nous faisons un diagnostic, remettons le système en état et pouvons ensuite en assurer la maintenance."),
+    ("Faut-il un contrat pour être dépanné ?",
+     "Non. Vous pouvez nous appeler ponctuellement en cas de panne. Le contrat d'entretien est utile si vous voulez des contrôles réguliers et une intervention prioritaire."),
+    ("Combien coûte un contrat d'entretien ?",
+     "Le tarif dépend du nombre d'équipements et de la fréquence des visites. Nous vous remettons un devis après avoir vu votre installation."),
+    ("Mon ancien installateur est injoignable et je n'ai plus les codes. Pouvez-vous m'aider ?",
+     "Oui, dans la plupart des cas. Après avoir vérifié que vous êtes bien le propriétaire du matériel, nous reprenons la main sur l'enregistreur ou l'alarme et vous remettons vos accès."),
+    ("En combien de temps intervenez-vous ?",
+     "Nous intervenons rapidement en cas de panne, en priorité pour les clients sous contrat. Appelez-nous ou écrivez-nous sur WhatsApp pour convenir d'un passage."),
+]
+
+maint = page_hero(
+    "Maintenance",
+    "Maintenance et dépannage <em>de vos installations</em>",
+    "Caméras, alarme, réseau : nous entretenons et dépannons vos équipements, que nous les ayons installés ou non. Contrat d'entretien ou intervention ponctuelle, partout dans le 06.") + f"""
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Deux façons de travailler ensemble</h2>
+        <p>Vous choisissez selon vos besoins. Dans les deux cas, nous intervenons rapidement.</p>
+      </div>
+      <div class="compare">
+        <div class="card">
+          <h3>{ic('backup')} Contrat d'entretien</h3>
+          {checks(["Visites de contrôle planifiées", "Vérification des caméras, de l'enregistreur et du disque", "Test de l'alarme, des détecteurs et des piles", "Mises à jour de sécurité", "Intervention prioritaire en cas de panne", "Compte rendu après chaque visite"])}
+          <p class="ideal"><b>Idéal pour :</b> commerces, copropriétés et entreprises qui veulent une installation toujours opérationnelle.</p>
+        </div>
+        <div class="card">
+          <h3>{ic('tool')} Dépannage ponctuel</h3>
+          {checks(["Sans engagement", "Diagnostic sur place", "Réparation ou remplacement de l'équipement en cause", "Devis avant toute dépense importante", "Possibilité de passer ensuite sous contrat"])}
+          <p class="ideal"><b>Idéal pour :</b> une panne, un ajout de caméra ou une remise à niveau ponctuelle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reprise" class="alt">
+    <div class="wrap split top">
+      <div>
+        <h2>Nous reprenons les installations existantes</h2>
+        <p>Votre installateur n'est plus joignable, ou votre système a été posé par un autre ? Nous le reprenons : diagnostic, remise en état, puis maintenance si vous le souhaitez.</p>
+        {checks(["Caméras qui ne s'affichent plus sur le téléphone", "Enregistreur qui n'enregistre plus ou disque plein", "Codes ou mots de passe perdus", "Alarme qui se déclenche sans raison", "Ajout de caméras ou de détecteurs sur un système existant", "Remplacement d'un matériel ancien"])}
+        <div class="hero-cta"><a href="contact.html?besoin=maintenance" class="btn btn-dark">Demander une intervention {ic('arrow')}</a></div>
+      </div>
+      <div class="note">
+        {ic('info')}
+        <div>
+          <h3>Pour aller plus vite</h3>
+          <p>Indiquez-nous la marque du matériel si vous la connaissez et décrivez le problème. Une photo de l'enregistreur ou de la centrale envoyée sur WhatsApp nous aide à préparer l'intervention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Ce que nous entretenons</h2>
+      </div>
+      <div class="grid-3">
+        <a href="videosurveillance.html" class="card main svc-video"><div class="icon">{ic('cam')}</div><h3>Vidéosurveillance</h3><p>Caméras, enregistreur, disque dur, accès à distance, ajout de caméras.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
+        <a href="alarme.html" class="card main svc-alarm"><div class="icon">{ic('alarm')}</div><h3>Alarme</h3><p>Centrale, détecteurs, sirènes, piles, codes et badges, alertes sur téléphone.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
+        <a href="informatique.html" class="card main svc-it"><div class="icon">{ic('pc')}</div><h3>Réseau et informatique</h3><p>Baie, switch, Wi-Fi, postes, sauvegardes, dépannage.</p><span class="more">En savoir plus {ic('arrow')}</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
+      </div>
+      {faq(MAINT_FAQ)}
+    </div>
+  </section>
+{cta_band("Une panne ou une installation à reprendre ?", "Appelez-nous ou décrivez votre problème : nous intervenons rapidement dans tout le 06.")}
+"""
+
+# =============================================================================
 # CONSEILS (articles)
 # =============================================================================
 ART = {a["slug"]: a for a in ARTICLES}
@@ -1251,7 +1415,9 @@ conseils_index = page_hero(
 
 RELATED = {
     "index.html": ["proteger-son-commerce", "combien-de-cameras", "videosurveillance-copropriete"],
-    "videosurveillance.html": ["proteger-son-commerce", "combien-de-cameras", "videosurveillance-copropriete"],
+    "videosurveillance.html": ["proteger-son-commerce", "autorisation-prefectorale-videosurveillance", "combien-de-cameras"],
+    "maintenance.html": ["cameras-ne-fonctionnent-plus", "proteger-son-commerce", "combien-de-cameras"],
+    "reglementation.html": ["autorisation-prefectorale-videosurveillance", "panneau-videosurveillance", "videosurveillance-copropriete"],
     "alarme.html": ["alarme-sans-fil-ou-filaire", "proteger-son-commerce", "combien-de-cameras"],
     "informatique.html": ["baie-de-brassage", "proteger-son-commerce", "alarme-sans-fil-ou-filaire"],
 }
@@ -1281,13 +1447,19 @@ PAGES = [
     ("404.html", "Page introuvable — BelaConnect",
      "Cette page n'existe pas.",
      notfound, '\n<meta name="robots" content="noindex">'),
+    ("a-propos.html", "À propos de BELACONNECT, installateur sécurité et informatique (06) | BelaConnect",
+     "BELACONNECT, installateur indépendant de vidéosurveillance, d'alarmes et d'informatique pour les commerçants, entreprises et copropriétés des Alpes-Maritimes.",
+     about, ""),
+    ("maintenance.html", "Maintenance et dépannage vidéosurveillance, alarme, réseau (06) | BelaConnect",
+     "Contrat d'entretien ou dépannage ponctuel de caméras, alarmes et réseaux dans les Alpes-Maritimes. Reprise d'installations posées par d'autres installateurs.",
+     maint, faq_jsonld(MAINT_FAQ)),
     ("conseils/index.html", "Conseils vidéosurveillance, alarme et réseau pour professionnels | BelaConnect",
      "Nos conseils pour protéger un commerce, choisir une alarme, installer des caméras en copropriété ou remettre au propre une baie réseau.",
      conseils_index, ""),
 ] + [(f"conseils/{a['slug']}.html", a["seo"] + " | BelaConnect", a["desc"], article_page(a), article_jsonld(a)) for a in ARTICLES]
 
 
-CLEAN_PAGES = "videosurveillance|alarme|informatique|contact|reglementation|mentions-legales|packs"
+CLEAN_PAGES = "a-propos|maintenance|videosurveillance|alarme|informatique|contact|reglementation|mentions-legales|packs"
 
 
 def clean_urls(html):
@@ -1357,6 +1529,8 @@ def main():
 - [Vidéosurveillance]({SITE_URL}/videosurveillance): caméras pour commerces, bureaux, entrepôts et copropriétés, protection des commerces contre le vol et les dégradations.
 - [Alarme]({SITE_URL}/alarme): alarmes anti-intrusion sans fil ou filaires avec alertes sur smartphone.
 - [Informatique et réseau]({SITE_URL}/informatique): réseau, câblage, Wi-Fi pro, remise au propre de baies, postes, serveurs, sauvegardes, dépannage.
+- [Maintenance et dépannage]({SITE_URL}/maintenance): contrat d'entretien ou dépannage ponctuel, reprise d'installations posées par d'autres installateurs.
+- [À propos]({SITE_URL}/a-propos): présentation de l'entreprise, façon de travailler, engagements.
 - [Demander un devis]({SITE_URL}/contact): formulaire en 3 étapes, rappel rapide.
 
 ## Conseils
