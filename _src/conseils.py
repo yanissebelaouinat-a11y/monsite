@@ -140,7 +140,7 @@ ARTICLES = [
 <p>Une fois le vote acquis, nous fixons la date avec le syndic. Nous posons les caméras, l'enregistreur et les panneaux, réglons les accès des personnes autorisées et leur montrons comment retrouver une séquence. La maintenance peut ensuite être assurée dans la durée.</p>
 
 <h2>Vous préparez une assemblée générale ?</h2>
-<p>Nous intervenons dans les copropriétés de tout le département des Alpes-Maritimes. <a href="/contact?besoin=copro">Demander un devis copropriété</a> ou <a href="/videosurveillance#copropriete">voir notre offre</a>.</p>
+<p>Nous intervenons dans les copropriétés de tout le département des Alpes-Maritimes. <a href="/contact?besoin=copro">Demander un devis copropriété</a> ou <a href="/copropriete">voir notre offre copropriétés</a>.</p>
 """),
     dict(
         slug="alarme-sans-fil-ou-filaire",

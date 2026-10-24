@@ -15,6 +15,7 @@
 - [Vidéosurveillance](https://belaconnect.fr/videosurveillance): caméras pour commerces, bureaux, entrepôts et copropriétés, protection des commerces contre le vol et les dégradations.
 - [Alarme](https://belaconnect.fr/alarme): alarmes anti-intrusion sans fil ou filaires avec alertes sur smartphone.
 - [Informatique et réseau](https://belaconnect.fr/informatique): réseau, câblage, Wi-Fi pro, remise au propre de baies, postes, serveurs, sauvegardes, dépannage.
+- [Copropriétés](https://belaconnect.fr/copropriete): vidéosurveillance des parties communes (halls, parkings, garages, locaux communs), devis pour l'assemblée générale, syndics professionnels et bénévoles.
 - [Maintenance et dépannage](https://belaconnect.fr/maintenance): contrat d'entretien ou dépannage ponctuel, reprise d'installations posées par d'autres installateurs.
 - [À propos](https://belaconnect.fr/a-propos): présentation de l'entreprise, façon de travailler, engagements.
 - [Demander un devis](https://belaconnect.fr/contact): formulaire en 3 étapes, rappel rapide.

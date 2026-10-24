@@ -179,6 +179,7 @@ BREADCRUMB = {
     "contact.html": "Contact",
     "reglementation.html": "Réglementation",
     "conseils/index.html": "Conseils",
+    "copropriete.html": "Copropriétés",
     "a-propos.html": "À propos",
     "maintenance.html": "Maintenance",
 }
@@ -211,6 +212,8 @@ SERVICE_SCHEMA = {
         "Systèmes d'alarme Ajax sans fil ou filaires pour commerces, bureaux et entrepôts, avec alertes sur smartphone."),
     "informatique.html": ("Informatique et réseau d'entreprise",
         "Câblage, remise au propre de baies, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes et dépannage."),
+    "copropriete.html": ("Vidéosurveillance en copropriété",
+        "Installation de caméras dans les parties communes des copropriétés : halls, parkings, garages, locaux communs, avec devis pour l'assemblée générale."),
     "maintenance.html": ("Maintenance et dépannage de vidéosurveillance, alarme et réseau",
         "Contrat d'entretien ou dépannage ponctuel, y compris pour les installations posées par d'autres installateurs."),
 }
@@ -350,6 +353,7 @@ def layout(filename, title, description, body, extra_head=""):
           <li><a href="alarme.html">Alarme</a></li>
           <li><a href="informatique.html">Informatique &amp; réseau</a></li>
           <li><a href="informatique.html#baies">Remise au propre de baies</a></li>
+          <li><a href="copropriete.html">Copropriétés</a></li>
           <li><a href="maintenance.html">Maintenance et dépannage</a></li>
           <li><a href="/conseils/">Nos conseils</a></li>
         </ul>
@@ -509,7 +513,7 @@ home = f"""
         <li><b>Bureaux et cabinets</b> : alarme des locaux, réseau, postes.</li>
         <li><b>Entrepôts et ateliers</b> : quais, périmètre, vision de nuit.</li>
         <li><b>Chantiers</b> : protection du matériel et des engins.</li>
-        <li><b>Copropriétés</b> : halls, parkings, locaux communs (<a href="videosurveillance.html#copropriete" class="inline-link">en savoir plus</a>).</li>
+        <li><b>Copropriétés</b> : halls, parkings, locaux communs (<a href="copropriete.html" class="inline-link">en savoir plus</a>).</li>
       </ul>
     </div>
   </section>
@@ -594,7 +598,7 @@ video = page_hero(
         <div class="card"><div class="icon">{ic('office')}</div><h3>Bureaux et cabinets</h3><p>Accueil, accès et locaux techniques, en respectant la vie privée de vos salariés.</p></div>
         <div class="card"><div class="icon">{ic('box')}</div><h3>Entrepôts et ateliers</h3><p>Quais de livraison, stock, périmètre et parking, avec vision de nuit longue portée.</p></div>
         <div class="card"><div class="icon">{ic('crane')}</div><h3>Chantiers</h3><p>Protection du matériel et des engins, y compris sur les sites sans réseau internet.</p></div>
-        <div class="card"><div class="icon">{ic('building')}</div><h3>Copropriétés</h3><p>Halls, parkings, garages et locaux communs. <a href="#copropriete" class="inline-link">Voir le détail</a>.</p></div>
+        <div class="card"><div class="icon">{ic('building')}</div><h3>Copropriétés</h3><p>Halls, parkings, garages et locaux communs. <a href="copropriete.html" class="inline-link">Voir notre page copropriétés</a>.</p></div>
       </div>
     </div>
   </section>
@@ -623,7 +627,7 @@ video = page_hero(
         <h2>Vidéosurveillance en copropriété</h2>
         <p>Halls d'entrée, parkings, garages, locaux vélos et poubelles : nous équipons les parties communes des résidences et travaillons avec le syndic et le conseil syndical, de la visite jusqu'à la mise en service.</p>
         {checks(["Visite gratuite et devis détaillé, à présenter en assemblée générale", "Caméras orientées uniquement sur les parties communes", "Accès aux images limité aux personnes autorisées", "Panneaux d'information des résidents fournis", "Maintenance de l'installation dans la durée"])}
-        <div class="hero-cta"><a href="contact.html?besoin=copro" class="btn btn-dark">Demander un devis copropriété {ic('arrow')}</a></div>
+        <div class="hero-cta"><a href="contact.html?besoin=copro" class="btn btn-dark">Demander un devis copropriété {ic('arrow')}</a> <a href="copropriete.html" class="btn btn-outline">Tout savoir</a></div>
       </div>
       <div class="note">
         {ic('info')}
@@ -1195,6 +1199,111 @@ reg = page_hero(
 """
 
 # =============================================================================
+# COPROPRIÉTÉS
+# =============================================================================
+COPRO_FAQ = [
+    ("La vidéosurveillance en copropriété doit-elle être votée en AG ?",
+     "Oui. L'installation de caméras dans les parties communes doit être votée en assemblée générale, en règle générale à la majorité de l'article 25. Nous fournissons un devis détaillé à joindre à la convocation."),
+    ("Que peuvent filmer les caméras ?",
+     "Uniquement les parties communes : hall, accès, parkings, garages, locaux vélos et poubelles. Jamais l'intérieur des logements, les portes palières ou la voie publique."),
+    ("Qui peut regarder les images ?",
+     "Seulement les personnes désignées par la copropriété, par exemple le syndic et des membres du conseil syndical. Nous configurons des accès limités à ces personnes."),
+    ("Combien de temps les images sont-elles conservées ?",
+     "Quelques jours, et au maximum un mois en règle générale. La durée est réglée sur l'enregistreur selon la décision de la copropriété."),
+    ("Travaillez-vous avec les syndics bénévoles ?",
+     "Oui. Nous travaillons aussi bien avec les syndics professionnels qu'avec les syndics bénévoles et les conseils syndicaux, de la visite jusqu'à la mise en service."),
+    ("La résidence a déjà des caméras qui ne marchent plus, pouvez-vous intervenir ?",
+     "Oui. Nous reprenons les installations existantes, même posées par un autre installateur : diagnostic, remise en état, puis maintenance si la copropriété le souhaite."),
+]
+
+copro = page_hero(
+    "Copropriétés",
+    "Vidéosurveillance <em>pour les copropriétés</em> du 06",
+    "Halls, parkings, garages, locaux vélos et poubelles : nous équipons les parties communes des résidences des Alpes-Maritimes, avec un devis prêt pour votre assemblée générale.") + f"""
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Les problèmes que nous réglons</h2>
+        <p>Des dégradations répétées coûtent cher à la copropriété et pèsent sur la vie des résidents.</p>
+      </div>
+      <div class="grid-4">
+        <div class="mini"><div class="icon dark">{ic('door')}</div><h3>Dégradations</h3><p>Tags, portes forcées, boîtes aux lettres et ascenseurs abîmés.</p></div>
+        <div class="mini"><div class="icon dark">{ic('lock')}</div><h3>Vols</h3><p>Vélos, caves, véhicules et effets personnels dans les parkings.</p></div>
+        <div class="mini"><div class="icon dark">{ic('box')}</div><h3>Dépôts sauvages</h3><p>Encombrants abandonnés dans les locaux poubelles et les sous-sols.</p></div>
+        <div class="mini"><div class="icon dark">{ic('users')}</div><h3>Intrusions</h3><p>Personnes étrangères à la résidence dans les halls et les garages.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Les zones que nous équipons</h2>
+        <p>Toujours dans les parties communes, en respectant la vie privée des résidents.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="icon">{ic('building')}</div><h3>Halls et entrées</h3><p>Accès principal, boîtes aux lettres, ascenseurs, portes de service.</p></div>
+        <div class="card"><div class="icon">{ic('cam')}</div><h3>Parkings et garages</h3><p>Accès véhicules, allées, portails, avec vision de nuit.</p></div>
+        <div class="card"><div class="icon">{ic('box')}</div><h3>Locaux communs</h3><p>Locaux vélos, locaux poubelles, caves et sous-sols.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Du premier rendez-vous au vote en AG</h2>
+        <p>Nous préparons le projet avec le syndic et le conseil syndical, pour que chaque copropriétaire sache sur quoi il vote.</p>
+      </div>
+      <div class="grid-4 steps">
+        <div class="step"><h3>Visite gratuite</h3><p>Tour des parties communes avec le gestionnaire ou le conseil syndical.</p></div>
+        <div class="step"><h3>Devis pour l'AG</h3><p>Emplacements, matériel, panneaux, accès aux images : un document clair à joindre à la convocation.</p></div>
+        <div class="step"><h3>Vote et installation</h3><p>Une fois le projet voté, nous fixons la date avec le syndic et installons le système.</p></div>
+        <div class="step"><h3>Mise en service</h3><p>Réglage des accès des personnes autorisées et prise en main de la consultation des images.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap split top">
+      <div>
+        <h2>Un projet conforme aux règles</h2>
+        {checks(["Caméras orientées uniquement sur les parties communes", "Ni logements, ni portes palières, ni voie publique", "Panneaux d'information des résidents fournis et posés", "Accès aux images limité aux personnes désignées", "Durée de conservation réglée selon la décision de l'AG"])}
+        <p class="aside-note">Toutes les règles sont résumées sur notre page <a href="/reglementation#copropriete" class="inline-link">réglementation</a>.</p>
+      </div>
+      <div class="card">
+        <h3>Pour les syndics et conseils syndicaux</h3>
+        <p>Syndic professionnel ou bénévole, conseil syndical : nous vous remettons un devis détaillé et compréhensible, et restons votre interlocuteur pendant toute la vie de l'installation.</p>
+        <div class="hero-cta"><a href="contact.html?besoin=copro" class="btn btn-dark">Demander une visite {ic('arrow')}</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split top">
+      <div>
+        <h2>Maintenance et reprise d'installations</h2>
+        <p>Des caméras déjà en place qui ne s'affichent plus, un enregistreur plein, un installateur injoignable ? Nous reprenons l'installation de la résidence, la remettons en état et pouvons en assurer l'entretien.</p>
+        <p><a href="maintenance.html" class="inline-link">Voir nos formules de maintenance</a>.</p>
+      </div>
+      <div class="card">
+        {checks(["Contrôles réguliers des caméras et de l'enregistreur", "Ajout de caméras sur un système existant", "Intervention rapide en cas de panne", "Un seul interlocuteur pour la résidence"])}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
+      </div>
+      {faq(COPRO_FAQ)}
+    </div>
+  </section>
+{cta_band("Un projet de caméras pour votre résidence ?", "Visite gratuite des parties communes et devis prêt à présenter en assemblée générale, partout dans le 06.")}
+"""
+
+# =============================================================================
 # À PROPOS
 # =============================================================================
 about = page_hero(
@@ -1420,6 +1529,7 @@ RELATED = {
     "index.html": ["proteger-son-commerce", "combien-de-cameras", "videosurveillance-copropriete"],
     "videosurveillance.html": ["proteger-son-commerce", "autorisation-prefectorale-videosurveillance", "combien-de-cameras"],
     "maintenance.html": ["cameras-ne-fonctionnent-plus", "proteger-son-commerce", "combien-de-cameras"],
+    "copropriete.html": ["videosurveillance-copropriete", "panneau-videosurveillance", "cameras-ne-fonctionnent-plus"],
     "reglementation.html": ["autorisation-prefectorale-videosurveillance", "panneau-videosurveillance", "videosurveillance-copropriete"],
     "alarme.html": ["alarme-sans-fil-ou-filaire", "proteger-son-commerce", "combien-de-cameras"],
     "informatique.html": ["baie-de-brassage", "proteger-son-commerce", "alarme-sans-fil-ou-filaire"],
@@ -1450,6 +1560,9 @@ PAGES = [
     ("404.html", "Page introuvable — BelaConnect",
      "Cette page n'existe pas.",
      notfound, '\n<meta name="robots" content="noindex">'),
+    ("copropriete.html", "Vidéosurveillance en copropriété dans les Alpes-Maritimes (06) | BelaConnect",
+     "Caméras pour halls, parkings, garages et locaux communs des copropriétés du 06. Visite gratuite et devis détaillé prêt pour l'assemblée générale. Syndics et conseils syndicaux.",
+     copro, faq_jsonld(COPRO_FAQ)),
     ("a-propos.html", "À propos de BELACONNECT, installateur sécurité et informatique (06) | BelaConnect",
      "BELACONNECT, installateur indépendant de vidéosurveillance, d'alarmes et d'informatique pour les commerçants, entreprises et copropriétés des Alpes-Maritimes.",
      about, ""),
@@ -1462,7 +1575,7 @@ PAGES = [
 ] + [(f"conseils/{a['slug']}.html", a["seo"] + " | BelaConnect", a["desc"], article_page(a), article_jsonld(a)) for a in ARTICLES]
 
 
-CLEAN_PAGES = "a-propos|maintenance|videosurveillance|alarme|informatique|contact|reglementation|mentions-legales|packs"
+CLEAN_PAGES = "copropriete|a-propos|maintenance|videosurveillance|alarme|informatique|contact|reglementation|mentions-legales|packs"
 
 
 def clean_urls(html):
@@ -1483,7 +1596,7 @@ def main():
         body = body.replace('<section class="hero small">', '<section class="hero small">' + WAVES, 1)
         if filename in RELATED:
             k = body.rfind('<section class="tight">\n    <div class="wrap">\n      <div class="cta-band">')
-            body = body[:k] + conseils_band(RELATED[filename], cls="" if filename == "index.html" else "alt").lstrip("\n") + body[k:]
+            body = body[:k] + conseils_band(RELATED[filename], cls="" if filename in ("index.html", "copropriete.html", "maintenance.html") else "alt").lstrip("\n") + body[k:]
         out = ROOT / filename
         out.parent.mkdir(exist_ok=True)
         html = layout(filename, title, desc, body, extra)
@@ -1532,6 +1645,7 @@ def main():
 - [Vidéosurveillance]({SITE_URL}/videosurveillance): caméras pour commerces, bureaux, entrepôts et copropriétés, protection des commerces contre le vol et les dégradations.
 - [Alarme]({SITE_URL}/alarme): alarmes anti-intrusion sans fil ou filaires avec alertes sur smartphone.
 - [Informatique et réseau]({SITE_URL}/informatique): réseau, câblage, Wi-Fi pro, remise au propre de baies, postes, serveurs, sauvegardes, dépannage.
+- [Copropriétés]({SITE_URL}/copropriete): vidéosurveillance des parties communes (halls, parkings, garages, locaux communs), devis pour l'assemblée générale, syndics professionnels et bénévoles.
 - [Maintenance et dépannage]({SITE_URL}/maintenance): contrat d'entretien ou dépannage ponctuel, reprise d'installations posées par d'autres installateurs.
 - [À propos]({SITE_URL}/a-propos): présentation de l'entreprise, façon de travailler, engagements.
 - [Demander un devis]({SITE_URL}/contact): formulaire en 3 étapes, rappel rapide.
