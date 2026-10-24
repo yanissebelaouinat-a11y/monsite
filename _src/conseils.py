@@ -357,4 +357,64 @@ ARTICLES = [
 <h2>Nous reprenons votre installation</h2>
 <p>Que nous l'ayons posée ou non, nous diagnostiquons votre installation, la remettons en état et pouvons en assurer l'entretien. <a href="/maintenance#reprise">Voir notre offre de maintenance</a> ou <a href="/contact?besoin=maintenance">demander une intervention</a>.</p>
 """),
+    dict(
+        slug="cameras-de-chantier",
+        title="Caméras de chantier : comment protéger le matériel et les engins",
+        short="Caméras de chantier",
+        seo="Vidéosurveillance de chantier : protéger matériel et engins",
+        desc="Vol de matériel, de carburant ou d'engins, intrusions le week-end : comment surveiller un chantier avec des caméras, même sans électricité ni internet sur place.",
+        summary="Vols de matériel et d'engins, intrusions le week-end : comment surveiller un chantier, même sans courant ni internet.",
+        date="2026-10-24",
+        related=["combien-de-cameras", "alarme-sans-fil-ou-filaire"],
+        body="""
+<p>Outils, câbles, carburant, engins : un chantier concentre beaucoup de matériel de valeur, souvent stocké à l'air libre ou dans un simple conteneur. Les vols ont lieu surtout la nuit et le week-end, quand personne n'est sur place. Une surveillance adaptée réduit fortement ce risque, à condition de tenir compte des contraintes propres à un chantier.</p>
+
+<h2>Les risques sur un chantier</h2>
+<ul>
+  <li><b>Le vol d'outillage</b> : outils électroportatifs, groupes électrogènes, échafaudages.</li>
+  <li><b>Le vol de matériaux</b> : câbles en cuivre, métaux, matériaux stockés sur palettes.</li>
+  <li><b>Le vol de carburant</b> dans les engins et les cuves.</li>
+  <li><b>Les intrusions et dégradations</b>, qui peuvent aussi poser un problème de sécurité si quelqu'un se blesse sur le site.</li>
+</ul>
+<p>Au-delà de la perte du matériel, un vol peut retarder tout le chantier, le temps de remplacer ce qui a disparu.</p>
+
+<h2>Les contraintes d'un chantier</h2>
+<p>Un chantier n'est pas un bâtiment fini. Il faut souvent composer avec :</p>
+<ul>
+  <li><b>l'absence d'électricité</b> ou une alimentation provisoire coupée le soir ;</li>
+  <li><b>l'absence de connexion internet</b> pour consulter les images à distance ;</li>
+  <li><b>un site qui évolue</b> au fil des semaines : les zones à surveiller changent ;</li>
+  <li><b>une installation temporaire</b>, à déposer à la fin des travaux.</li>
+</ul>
+
+<h2>Les solutions de surveillance</h2>
+<ul>
+  <li><b>Des caméras alimentées sur batterie ou panneau solaire</b>, quand il n'y a pas de courant permanent sur place.</li>
+  <li><b>Une connexion par carte SIM (4G)</b> pour recevoir les alertes et voir les images sur votre téléphone, sans box internet.</li>
+  <li><b>La détection de personnes et de véhicules</b>, pour être prévenu en dehors des horaires du chantier, sans être dérangé par chaque animal ou chaque branche qui bouge.</li>
+  <li><b>Une alarme avec sirène</b> sur le conteneur de stockage ou la base vie, pour faire fuir l'intrus dès l'ouverture.</li>
+  <li><b>Un éclairage déclenché par détection</b>, qui dissuade et améliore la qualité des images la nuit.</li>
+</ul>
+
+<h2>Bien placer les équipements</h2>
+<ol>
+  <li><b>Les accès du chantier</b> : portail, entrée des véhicules.</li>
+  <li><b>La zone de stockage</b> : conteneurs, palettes, cuve à carburant.</li>
+  <li><b>Le stationnement des engins</b> en fin de journée.</li>
+  <li><b>Le périmètre</b>, sur les côtés les moins visibles depuis la rue.</li>
+</ol>
+<p>Les caméras sont fixées en hauteur et hors de portée, pour éviter qu'elles soient arrachées ou masquées. Elles doivent filmer le chantier, pas la voie publique ni les propriétés voisines.</p>
+
+<h2>Les bons réflexes en complément</h2>
+<ul>
+  <li>Regrouper le matériel de valeur dans un <b>conteneur fermé</b> chaque soir.</li>
+  <li>Garer les engins de façon à <b>bloquer l'accès</b> au stockage.</li>
+  <li><b>Marquer</b> l'outillage pour pouvoir le reconnaître en cas de vol.</li>
+  <li>Afficher un <b>panneau de vidéosurveillance</b> à l'entrée du site : il est obligatoire et il dissuade.</li>
+  <li>Prévoir qui reçoit les alertes et qui se déplace en cas de déclenchement, surtout le week-end.</li>
+</ul>
+
+<h2>Une installation adaptée à chaque chantier</h2>
+<p>Nous étudions chaque site avec vous : durée du chantier, alimentation disponible, zones sensibles, personnes à prévenir. Nous installons le matériel, le déplaçons si le chantier évolue, et le déposons à la fin des travaux. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis</a>.</p>
+"""),
 ]
