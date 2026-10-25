@@ -417,4 +417,59 @@ ARTICLES = [
 <h2>Une installation adaptée à chaque chantier</h2>
 <p>Nous étudions chaque site avec vous : durée du chantier, alimentation disponible, zones sensibles, personnes à prévenir. Nous installons le matériel, le déplaçons si le chantier évolue, et le déposons à la fin des travaux. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis</a>.</p>
 """),
+    dict(
+        slug="videosurveillance-restaurant",
+        title="Vidéosurveillance dans un restaurant : où placer les caméras",
+        short="Caméras dans un restaurant",
+        seo="Vidéosurveillance restaurant : où placer les caméras",
+        desc="Entrée, salle, caisse, terrasse, cuisine, réserve : où installer les caméras dans un restaurant, ce qu'il ne faut pas filmer et les règles à respecter.",
+        summary="Entrée, caisse, salle, terrasse, réserve : les bons emplacements, ce qu'il ne faut pas filmer et les règles à connaître.",
+        date="2026-10-25",
+        related=["proteger-son-commerce", "autorisation-prefectorale-videosurveillance"],
+        body="""
+<p>Un restaurant cumule les situations à risque : la caisse, les livraisons, la terrasse le soir, la réserve pleine de marchandises, et des locaux vides une bonne partie de la nuit. Une vidéosurveillance bien pensée protège l'établissement sans gêner les clients ni l'équipe. Tout se joue sur le placement des caméras.</p>
+
+<h2>1. L'entrée et la façade</h2>
+<p>C'est l'emplacement prioritaire. Une caméra sur l'entrée permet d'identifier toute personne qui entre, de jour comme de nuit.</p>
+<ul>
+  <li><b>Une caméra extérieure</b> sur la porte et la vitrine, placée en hauteur et hors de portée.</li>
+  <li><b>La vision de nuit</b>, pour les heures de fermeture, quand les intrusions et dégradations sont les plus fréquentes.</li>
+  <li><b>Un cadrage sur l'entrée</b>, et non sur le trottoir : la voie publique ne doit pas être filmée.</li>
+</ul>
+
+<h2>2. La caisse</h2>
+<p>Une caméra au-dessus de la caisse aide à régler un litige avec un client, une erreur de rendu de monnaie ou un vol. Elle doit être cadrée sur le comptoir et le tiroir-caisse, pas sur le poste de travail du salarié en permanence.</p>
+
+<h2>3. La salle et la terrasse</h2>
+<ul>
+  <li><b>Une vue d'ensemble de la salle</b>, avec une caméra grand angle placée dans un coin, suffit généralement.</li>
+  <li><b>La terrasse</b>, surtout si le mobilier reste dehors la nuit : vols de chaises, de parasols ou de chauffages.</li>
+  <li>Les caméras restent <b>discrètes</b>, de type dôme, pour ne pas gâcher l'ambiance.</li>
+</ul>
+
+<h2>4. La réserve, la cuisine et l'accès livraison</h2>
+<ul>
+  <li><b>La réserve et la chambre froide</b> : le stock représente une valeur importante.</li>
+  <li><b>La porte de service</b> et la zone de livraison, souvent moins visibles depuis la rue.</li>
+  <li><b>La cuisine</b> : une caméra peut être utile pour la sécurité des biens, mais elle ne doit pas servir à surveiller en continu le travail des cuisiniers.</li>
+</ul>
+
+<h2>Ce qu'il ne faut pas filmer</h2>
+<ul>
+  <li><b>Les toilettes et les vestiaires</b> : c'est strictement interdit.</li>
+  <li><b>La salle de pause</b> du personnel.</li>
+  <li><b>Les salariés en permanence</b> à leur poste, sauf circonstances particulières.</li>
+  <li><b>La voie publique</b> et les commerces voisins.</li>
+</ul>
+
+<h2>Les démarches à prévoir</h2>
+<p>La salle d'un restaurant est un lieu ouvert au public. En principe, une autorisation de la préfecture est donc nécessaire pour les caméras qui la filment. Il faut aussi informer les clients et les salariés par un panneau, et informer le personnel avant la mise en service. Nous détaillons ces étapes dans notre article sur <a href="/conseils/autorisation-prefectorale-videosurveillance">l'autorisation préfectorale</a> et sur notre page <a href="/reglementation#commerce">réglementation</a>.</p>
+
+<h2>Combien de caméras pour un restaurant ?</h2>
+<p>Tout dépend de la configuration des lieux. On compte souvent une caméra pour l'entrée, une pour la caisse, une ou deux pour la salle et la terrasse, et une pour la réserve ou l'accès livraison. La visite sur place permet de fixer le nombre juste, sans caméra inutile.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons des caméras dans les restaurants de tout le 06, avec un accès aux images depuis votre téléphone, et en dehors de vos heures de service si besoin. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+"""),
 ]
