@@ -92,6 +92,16 @@
       sc.async = true;
       sc.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
       document.head.appendChild(sc);
+      // Microsoft Clarity (enregistrements de visites et cartes de chaleur)
+      var cl = consent.getAttribute('data-clarity');
+      if (cl && !window.clarity) {
+        window.clarity = function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
+        var cs = document.createElement('script');
+        cs.async = true;
+        cs.src = 'https://www.clarity.ms/tag/' + cl;
+        document.head.appendChild(cs);
+        window.clarity('consent');
+      }
     };
     var choice = read();
     if (choice === 'yes') loadAds();
@@ -103,7 +113,10 @@
       try { localStorage.setItem(KEY, JSON.stringify({ v: v, t: Date.now() })); } catch (err) {}
       consent.hidden = true;
       if (v === 'yes') loadAds();
-      else if (window.gtag) gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+      else {
+        if (window.gtag) gtag('consent', 'update', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+        if (window.clarity) window.clarity('consent', false);
+      }
     });
     // Conversions Google Ads (envoyées seulement si la balise est chargée, donc après accord)
     window.bcConversion = function (kind) {

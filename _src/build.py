@@ -29,6 +29,8 @@ EMAIL_CONFIRMED = False              # passer à True quand l'adresse existe
 SITE_URL = "https://belaconnect.fr"
 # Balise Google Ads : chargée seulement si le visiteur accepte les cookies (bandeau).
 ADS_ID = "AW-18520950625"
+# Microsoft Clarity (cartes de chaleur, enregistrements de visites) : chargé seulement après accord cookies.
+CLARITY_ID = "z3gr1qn5mf"
 # Adresse du relais Cloudflare Worker qui transmet les demandes et les clics sur Telegram
 # (voir _src/telegram-worker.js). Vide = pas de notification Telegram.
 TG_RELAY = "https://belaconnect-telegram.belaconnect06.workers.dev/"
@@ -253,7 +255,7 @@ def business_schema():
     return data
 
 
-CONSENT = f"""<div class="consent" id="consent" data-ads="{ADS_ID}" data-conv-devis="{ADS_CONV_DEVIS}" data-conv-appel="{ADS_CONV_APPEL}" role="dialog" aria-label="Cookies" hidden>
+CONSENT = f"""<div class="consent" id="consent" data-ads="{ADS_ID}" data-clarity="{CLARITY_ID}" data-conv-devis="{ADS_CONV_DEVIS}" data-conv-appel="{ADS_CONV_APPEL}" role="dialog" aria-label="Cookies" hidden>
   <p>Ce site utilise des cookies pour améliorer votre expérience et mesurer sa fréquentation. Vous pouvez les accepter ou les refuser. <a href="mentions-legales.html#cookies">En savoir plus</a></p>
   <div class="consent-btns"><button type="button" class="btn btn-ghost" data-consent="no">Refuser</button><button type="button" class="btn btn-primary" data-consent="yes">Accepter</button></div>
 </div>
@@ -1047,7 +1049,7 @@ legal = f"""
 
       <h2>Données personnelles</h2>
       <h2 id="cookies">Cookies</h2>
-      <p>{"Si vous l'acceptez via le bandeau, ce site utilise la balise Google Ads (Google Ireland Ltd) pour mesurer l'efficacité de nos annonces, par exemple savoir si une visite venue d'une annonce aboutit à une demande de devis. Sans votre accord, aucun cookie publicitaire ni de mesure d'audience n'est déposé. Votre choix est conservé 6 mois ; vous pouvez le modifier à tout moment avec le lien « Cookies » en bas de page." if ADS_ID else "Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience."}</p>
+      <p>{"Si vous l'acceptez via le bandeau, ce site utilise la balise Google Ads (Google Ireland Ltd) pour mesurer l'efficacité de nos annonces, par exemple savoir si une visite venue d'une annonce aboutit à une demande de devis" + (", ainsi que Microsoft Clarity (Microsoft Ireland Operations Ltd) pour comprendre comment le site est utilisé : pages consultées, clics, défilement. Clarity masque les informations saisies dans les formulaires" if CLARITY_ID else "") + ". Sans votre accord, aucun cookie publicitaire ni de mesure d'audience n'est déposé. Votre choix est conservé 6 mois ; vous pouvez le modifier à tout moment avec le lien « Cookies » en bas de page." if ADS_ID else "Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience."}</p>
       <p>{"Les demandes envoyées par le formulaire de contact nous sont transmises par email via le service Web3Forms, sans être conservées sur le site." + (" Une copie nous est également envoyée par notification sur la messagerie Telegram, via un relais hébergé par Cloudflare." if TG_RELAY else "") if FORM_KEY else "Le formulaire de contact ne stocke aucune donnée sur le site : il prépare un email que vous choisissez d'envoyer."}</p>
       <p>Les informations que vous nous transmettez (nom, téléphone, email, ville, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont jamais cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact.</p>
       <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
