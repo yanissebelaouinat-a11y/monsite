@@ -472,4 +472,57 @@ ARTICLES = [
 <p>Nous installons des caméras dans les restaurants de tout le 06, avec un accès aux images depuis votre téléphone, et en dehors de vos heures de service si besoin. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
 <p class="small-note">Ces informations sont données à titre indicatif. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
 """),
+    dict(
+        slug="filmer-ses-salaries",
+        title="Filmer ses salariés : ce qui est autorisé et ce qui ne l'est pas",
+        short="Caméras et salariés",
+        seo="Vidéosurveillance et salariés : ce que l'employeur peut filmer",
+        desc="Caméras dans un commerce ou une entreprise : quelles zones l'employeur peut filmer, ce qui est interdit, et comment informer correctement ses salariés.",
+        summary="Les zones que l'employeur peut filmer, celles qui sont interdites, et comment informer correctement l'équipe.",
+        date="2026-10-26",
+        related=["panneau-videosurveillance", "autorisation-prefectorale-videosurveillance"],
+        body="""
+<p>Installer des caméras dans un commerce ou des bureaux, c'est protéger les locaux, le stock et les personnes. Mais dès que des salariés travaillent sur place, la vidéosurveillance doit respecter leur vie privée. Voici les grandes règles à connaître avant de poser la première caméra.</p>
+
+<h2>Ce que l'employeur peut filmer</h2>
+<p>La vidéosurveillance doit avoir un but légitime, en général la sécurité des personnes et des biens. Dans ce cadre, on peut en principe filmer :</p>
+<ul>
+  <li><b>les entrées et sorties</b> des locaux ;</li>
+  <li><b>les issues de secours</b> et les voies de circulation ;</li>
+  <li><b>les zones où sont stockés des biens</b> : réserve, entrepôt, local technique ;</li>
+  <li><b>la surface de vente</b> ouverte au public, avec en principe une autorisation de la préfecture.</li>
+</ul>
+
+<h2>Ce qui est interdit</h2>
+<ul>
+  <li><b>Les toilettes, vestiaires et douches</b> : jamais.</li>
+  <li><b>Les salles de pause</b> et les espaces de repos.</li>
+  <li><b>Les locaux des représentants du personnel</b>.</li>
+  <li><b>Les salariés en permanence à leur poste de travail</b>, sauf circonstances particulières, par exemple un salarié qui manipule des fonds ou des objets de valeur. Même dans ce cas, la caméra doit filmer de préférence la caisse ou la zone sensible plutôt que la personne.</li>
+</ul>
+<p>Une caméra ne doit pas non plus servir à contrôler en continu l'activité ou la productivité de l'équipe.</p>
+
+<h2>Informer les salariés avant la mise en service</h2>
+<p>C'est l'étape qu'on oublie le plus souvent. Avant la mise en service :</p>
+<ol>
+  <li><b>Informer chaque salarié</b>, par exemple par une note de service ou un avenant, de l'existence des caméras, de leur but, de la durée de conservation des images et de la manière d'exercer ses droits.</li>
+  <li><b>Consulter le comité social et économique (CSE)</b>, s'il existe dans l'entreprise.</li>
+  <li><b>Poser un panneau</b> visible à l'entrée des zones filmées. Voir notre article sur <a href="/conseils/panneau-videosurveillance">le panneau de vidéosurveillance</a>.</li>
+</ol>
+<p>Des images obtenues avec un dispositif dont les salariés n'ont pas été informés peuvent en principe être écartées en cas de litige.</p>
+
+<h2>Qui peut regarder les images, et combien de temps les garder</h2>
+<ul>
+  <li><b>L'accès aux images</b> est réservé à quelques personnes habilitées, par exemple le gérant ou un responsable désigné.</li>
+  <li><b>Les images sont conservées</b> quelques jours, et en règle générale pas plus d'un mois.</li>
+  <li><b>Les accès</b> à l'enregistreur et à l'application sont protégés par des mots de passe personnels.</li>
+</ul>
+
+<h2>Une installation pensée dès le départ</h2>
+<p>La plupart des difficultés viennent d'une caméra mal orientée ou posée sans réflexion. En choisissant les bons emplacements dès l'installation, on protège efficacement les locaux sans filmer ce qui ne doit pas l'être. C'est ce que nous faisons lors de la visite : nous repérons les zones à couvrir et nous orientons chaque caméra en conséquence.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons la vidéosurveillance des commerces, bureaux et entrepôts de tout le 06 en respectant ces règles, et nous vous indiquons les démarches à prévoir. <a href="/reglementation#entreprise">Voir les règles pour les entreprises</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+"""),
 ]
