@@ -525,4 +525,59 @@ ARTICLES = [
 <p>Nous installons la vidéosurveillance des commerces, bureaux et entrepôts de tout le 06 en respectant ces règles, et nous vous indiquons les démarches à prévoir. <a href="/reglementation#entreprise">Voir les règles pour les entreprises</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
 <p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
 """),
+    dict(
+        slug="duree-conservation-images",
+        title="Combien de temps garder les images de vidéosurveillance ?",
+        short="Durée de conservation",
+        seo="Durée de conservation des images de vidéosurveillance : les règles",
+        desc="Commerce, entreprise ou copropriété : combien de temps conserver les enregistrements de vidéosurveillance, comment régler l'enregistreur et que faire en cas d'incident.",
+        summary="La durée à respecter, comment régler l'enregistreur, et quoi faire des images quand un incident se produit.",
+        date="2026-10-27",
+        related=["filmer-ses-salaries", "panneau-videosurveillance"],
+        body="""
+<p>Une caméra enregistre en continu ou à la détection, et le disque de l'enregistreur se remplit jour après jour. Combien de temps faut-il garder ces images ? La réponse tient en une idée simple : assez longtemps pour pouvoir réagir à un incident, mais pas plus que nécessaire.</p>
+
+<h2>La règle générale : un mois au maximum</h2>
+<p>En règle générale, les images de vidéosurveillance ne doivent pas être conservées plus d'<b>un mois</b>. C'est la durée recommandée par la CNIL pour les commerces, les entreprises et les copropriétés.</p>
+<ul>
+  <li><b>Pour un lieu ouvert au public</b> (surface de vente, salle de restaurant), la durée est fixée dans l'autorisation délivrée par la préfecture, dans la limite d'un mois.</li>
+  <li><b>Pour des locaux fermés au public</b> (réserve, bureaux, entrepôt), c'est à vous de fixer une durée adaptée, en principe quelques jours, sans dépasser un mois.</li>
+  <li><b>En copropriété</b>, la durée est en général décidée avec le projet voté en assemblée générale.</li>
+</ul>
+
+<h2>Pourquoi ne pas tout garder plus longtemps ?</h2>
+<p>Les images permettent d'identifier des personnes : ce sont des données personnelles. Les garder sans limite n'apporte rien à la sécurité et expose à des risques : accès non autorisé, fuite d'images, non-conformité en cas de contrôle. En pratique, un incident est presque toujours constaté dans les jours qui suivent.</p>
+
+<h2>Quelle durée choisir en pratique ?</h2>
+<ul>
+  <li><b>Commerce ouvert tous les jours</b> : quelques jours suffisent souvent, une à deux semaines laissent une marge confortable.</li>
+  <li><b>Locaux fermés le week-end ou pendant les congés</b> : prévoir une durée qui couvre ces périodes, pour qu'un vol découvert au retour soit encore visible.</li>
+  <li><b>Copropriété</b> : une durée courte, de quelques jours à deux semaines, est souvent retenue.</li>
+</ul>
+<p>Ce qui compte, c'est que la durée choisie corresponde à vos horaires et soit indiquée sur le panneau d'information. Voir notre article sur <a href="/conseils/panneau-videosurveillance">le panneau de vidéosurveillance</a>.</p>
+
+<h2>Comment l'enregistreur gère la durée</h2>
+<ol>
+  <li><b>Écrasement automatique</b> : une fois le disque plein, l'enregistreur efface les images les plus anciennes. La durée réelle dépend donc de la capacité du disque.</li>
+  <li><b>Durée maximale programmée</b> : la plupart des enregistreurs permettent de fixer un nombre de jours. Au-delà, les images sont supprimées, même s'il reste de la place.</li>
+  <li><b>Réglage de la qualité</b> : résolution, nombre d'images par seconde et enregistrement continu ou à la détection font varier l'espace utilisé.</li>
+</ol>
+<p>Lors de l'installation, nous dimensionnons le disque et réglons la durée selon votre activité, pour rester dans le cadre recommandé.</p>
+
+<h2>Et en cas d'incident ?</h2>
+<p>Si un vol, une dégradation ou une intrusion se produit, il faut agir avant que les images ne soient effacées :</p>
+<ul>
+  <li><b>Exporter rapidement la séquence</b> concernée sur une clé USB ou depuis l'application.</li>
+  <li><b>Déposer plainte</b> et remettre les images aux forces de l'ordre si elles le demandent.</li>
+  <li>La séquence extraite pour une procédure peut être conservée le temps de cette procédure.</li>
+</ul>
+<p>Nous montrons à chaque client comment retrouver et exporter une séquence en quelques minutes.</p>
+
+<h2>Un réglage à vérifier régulièrement</h2>
+<p>Un disque fatigué ou un réglage modifié peut réduire la durée sans que personne ne s'en aperçoive. Vérifier de temps en temps qu'on retrouve bien les images de la semaine passée évite les mauvaises surprises. C'est l'un des contrôles réalisés lors de nos <a href="/maintenance">visites de maintenance</a>.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons et réglons la vidéosurveillance des commerces, entreprises et copropriétés du 06, avec une durée de conservation adaptée et conforme. <a href="/reglementation#conservation">Voir les règles de conservation</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+"""),
 ]
