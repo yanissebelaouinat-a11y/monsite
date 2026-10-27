@@ -750,3 +750,17 @@ input.invalid{border-color:#DC2626 !important;box-shadow:0 0 0 3px rgba(220,38,3
 @media (max-width:720px) and (prefers-reduced-motion:no-preference){
   .mbar-wa svg{animation:mbarPulse 1.6s ease-in-out infinite;}
 }
+/* Petits écrans (iPhone SE, téléphones pliants fermés) */
+.mbar a span{white-space:nowrap;}
+@media (max-width:360px){
+  .mbar{gap:6px;padding-left:6px;padding-right:6px;grid-template-columns:1fr 1fr 1.15fr;}
+  .mbar a{font-size:12px;}
+  .mbar-devis{font-size:13px !important;}
+  .mbar-devis svg{display:none;}
+  .hero h1,.hero.small h1{font-size:26px;}
+}
+@media (max-width:300px){
+  .hero h1,.hero.small h1{font-size:23px;}
+  .mbar a svg{width:18px;height:18px;}
+  .mbar-devis{font-size:12px !important;}
+}
