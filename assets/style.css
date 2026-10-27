@@ -712,3 +712,41 @@ a.art-card{position:relative;}
 .field-error{display:none;margin:6px 0 0;color:#B91C1C;font-size:14px;font-weight:600;}
 .field-error.show{display:block;}
 input.invalid{border-color:#DC2626 !important;box-shadow:0 0 0 3px rgba(220,38,38,.15);}
+
+/* ===== Version mobile optimisée (visiteurs des annonces) ===== */
+.hero-trust{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;color:#C5CDD8;font-size:15px;font-weight:600;}
+.hero-trust li{display:flex;align-items:center;gap:6px;}
+.hero-trust svg{width:16px;height:16px;color:var(--cyan);flex:none;}
+.mbar{display:none;}
+@media (max-width:720px){
+  .hero,.hero.small{padding:28px 0 36px;}
+  .hero .crumbs{margin-bottom:10px;font-size:13px;}
+  .kicker{font-size:14px;margin-bottom:10px;}
+  .hero h1,.hero.small h1{font-size:29px;line-height:1.18;}
+  .lead{font-size:16px;line-height:1.55;margin-top:14px;}
+  .hero-cta{margin-top:20px;}
+  .hero-cta .btn-primary{flex:1 1 100%;padding:15px 18px;font-size:17px;}
+  .hero-cta .btn-ghost{display:none;}
+  .hero-trust{margin-top:16px;gap:6px 14px;font-size:14px;}
+  .hero-grid .hero-info{display:none;}
+  .hero-grid{gap:0;}
+  /* Barre d'actions fixe en bas : Appeler / WhatsApp / Devis */
+  .call-fab,.btn-primary.call-fab,.wa-fab{display:none !important;}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:70;
+    padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(14,26,46,.97);border-top:1px solid rgba(255,255,255,.12);
+    box-shadow:0 -8px 24px -12px rgba(0,0,0,.5);}
+  .mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:52px;border-radius:10px;
+    font-size:13px;font-weight:700;color:#fff;background:rgba(255,255,255,.08);-webkit-tap-highlight-color:transparent;}
+  .mbar a svg{width:20px;height:20px;}
+  .mbar-call svg{color:var(--cyan);}
+  .mbar-wa{background:#25D366 !important;color:#06351A !important;}
+  .mbar-devis{background:var(--cyan) !important;color:var(--navy) !important;flex-direction:row !important;gap:6px !important;font-size:15px !important;}
+  .mbar-devis svg{order:2;width:18px;height:18px;}
+  .mbar a:active{transform:scale(.97);}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom));}
+  .consent{bottom:calc(80px + env(safe-area-inset-bottom));}
+}
+@keyframes mbarPulse{0%,100%{transform:scale(1);}12%{transform:scale(1.25);}24%{transform:scale(1);}}
+@media (max-width:720px) and (prefers-reduced-motion:no-preference){
+  .mbar-wa svg{animation:mbarPulse 1.6s ease-in-out infinite;}
+}

@@ -170,6 +170,11 @@ def page_hero(crumb, title, lead, badge=None):
         <a href="contact.html" class="btn btn-primary">Demander un devis gratuit {ic('arrow')}</a>
         <a href="tel:{PHONE_LINK}" class="btn btn-ghost">{ic('phone')} Appeler</a>
       </div>
+      <ul class="hero-trust">
+        <li>{ic('check')} Devis gratuit</li>
+        <li>{ic('check')} Visite sur place</li>
+        <li>{ic('check')} Tout le 06</li>
+      </ul>
     </div>
   </section>"""
 
@@ -390,6 +395,11 @@ def layout(filename, title, description, body, extra_head=""):
 
 <a href="tel:{PHONE_LINK}" class="btn btn-primary call-fab">{ic('phone')} Appeler BelaConnect</a>
 <a href="https://wa.me/{PHONE_LINK.lstrip('+')}?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20" class="wa-fab" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">{ic('whatsapp')}<span class="wa-tip">Une question ? Écrivez-nous</span></a>
+<nav class="mbar" aria-label="Nous contacter">
+  <a href="tel:{PHONE_LINK}" class="mbar-call">{ic('phone')}<span>Appeler</span></a>
+  <a href="https://wa.me/{PHONE_LINK.lstrip('+')}?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20" class="mbar-wa" target="_blank" rel="noopener">{ic('whatsapp')}<span>WhatsApp</span></a>
+  <a href="contact.html" class="mbar-devis">{ic('arrow')}<span>Devis gratuit</span></a>
+</nav>
 {CONSENT if ADS_ID else ''}<script src="assets/main.js?v={asset_version('assets/main.js')}" defer></script>
 </body>
 </html>
@@ -423,6 +433,11 @@ home = f"""
           <a href="contact.html" class="btn btn-primary">Demander un devis gratuit</a>
           <a href="#services" class="btn btn-ghost">Voir nos services</a>
         </div>
+        <ul class="hero-trust">
+          <li>{ic('check')} Devis gratuit</li>
+          <li>{ic('check')} Visite sur place</li>
+          <li>{ic('check')} Tout le 06</li>
+        </ul>
       </div>
       <aside class="hero-info">
         <dl>
@@ -436,7 +451,6 @@ home = f"""
       </aside>
     </div>
   </section>
-{brands(["Dahua", "Hikvision", "Ajax", "TP-Link"])}
 
   <section id="services">
     <div class="wrap">
@@ -572,7 +586,6 @@ video = page_hero(
     "Vidéosurveillance <em>pour professionnels</em> dans les Alpes-Maritimes",
     "Commerces, bureaux, entrepôts et copropriétés : nous installons des caméras intérieures et extérieures, avec enregistreur et accès depuis votre téléphone, pour dissuader, être alerté et garder une preuve.",
     "Spécialité BelaConnect") + f"""
-{brands(["Dahua", "Hikvision"], "Marques installées")}
 
   <section>
     <div class="wrap">
@@ -742,7 +755,6 @@ alarm = page_hero(
     "Alarme anti-intrusion <em>Ajax</em> pour vos locaux",
     "Des systèmes d'alarme fiables, sans fil ou filaires, pour protéger commerces, bureaux et entrepôts. Vous êtes alerté immédiatement sur votre téléphone.",
     "Spécialité BelaConnect") + f"""
-{brands(["Ajax"], "Marque installée")}
 
   <section>
     <div class="wrap">
