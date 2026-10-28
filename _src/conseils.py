@@ -580,4 +580,55 @@ ARTICLES = [
 <p>Nous installons et réglons la vidéosurveillance des commerces, entreprises et copropriétés du 06, avec une durée de conservation adaptée et conforme. <a href="/reglementation#conservation">Voir les règles de conservation</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
 <p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
 """),
+    dict(
+        slug="camera-wifi-ou-poe",
+        title="Caméra Wi-Fi ou caméra filaire PoE : que choisir pour un commerce ?",
+        short="Wi-Fi ou filaire PoE",
+        seo="Caméra Wi-Fi ou PoE pour un commerce : avantages et limites",
+        desc="Caméras Wi-Fi ou caméras filaires alimentées par le câble réseau (PoE) : fiabilité, qualité d'image, installation et cas d'usage pour un commerce ou un bureau.",
+        summary="Fiabilité, qualité d'image, pose, coupures : les vraies différences entre les deux technologies pour une boutique.",
+        date="2026-10-28",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>Au moment de s'équiper, beaucoup de commerçants hésitent entre des caméras Wi-Fi, faciles à poser, et des caméras filaires dites PoE, reliées par un câble réseau. Les deux existent pour de bonnes raisons. Voici comment choisir selon vos locaux et ce que vous attendez de votre installation.</p>
+
+<h2>Ce que veut dire « PoE »</h2>
+<p>PoE signifie <b>alimentation par le câble réseau</b>. Un seul câble apporte à la fois l'électricité et la connexion à l'enregistreur. Pas besoin de prise à côté de chaque caméra : tout part de l'enregistreur ou d'un switch installé dans un endroit protégé.</p>
+
+<h2>La caméra filaire PoE</h2>
+<ul>
+  <li><b>Une connexion stable</b> : pas de coupure liée au Wi-Fi, aux murs épais ou aux appareils voisins.</li>
+  <li><b>Une image fluide et nette</b>, même avec plusieurs caméras qui enregistrent en même temps.</li>
+  <li><b>Un enregistrement local</b> sur l'enregistreur, qui continue même si la connexion internet tombe.</li>
+  <li><b>Plus difficile à neutraliser</b> : un brouilleur Wi-Fi n'a aucun effet sur une caméra câblée.</li>
+  <li><b>Une pose plus longue</b> : il faut passer un câble jusqu'à chaque caméra, ce qui se prévoit mieux lors de travaux.</li>
+</ul>
+
+<h2>La caméra Wi-Fi</h2>
+<ul>
+  <li><b>Une pose rapide</b>, sans tirer de câble réseau : pratique dans un local loué ou un commerce déjà aménagé.</li>
+  <li><b>Une alimentation à prévoir</b> : une caméra Wi-Fi a quand même besoin d'une prise ou d'une batterie à recharger.</li>
+  <li><b>Une qualité qui dépend du signal</b> : murs, distance et réseau chargé peuvent provoquer des saccades ou des coupures.</li>
+  <li><b>Parfois dépendante d'un service en ligne</b> : certains modèles enregistrent surtout dans le cloud et ne gardent rien si internet coupe.</li>
+</ul>
+
+<h2>Ce que nous recommandons pour un commerce</h2>
+<ul>
+  <li><b>Le filaire PoE pour l'essentiel</b> : entrée, caisse, vitrine et réserve. Ce sont les caméras qui doivent fonctionner à coup sûr.</li>
+  <li><b>Le Wi-Fi en complément</b>, pour un endroit où passer un câble est vraiment compliqué, avec un enregistrement sur le même enregistreur.</li>
+  <li><b>Un enregistreur rangé à l'abri</b>, pour que les images restent disponibles même si une caméra est arrachée.</li>
+</ul>
+<p>Dans un commerce en activité, le câblage se fait proprement, avec des goulottes discrètes ou par les faux plafonds, souvent en dehors des heures d'ouverture.</p>
+
+<h2>Les questions à se poser</h2>
+<ol>
+  <li><b>Pouvez-vous passer des câbles</b> (faux plafond, goulottes, travaux prévus) ?</li>
+  <li><b>Le Wi-Fi est-il fiable</b> partout dans le local, y compris en réserve et en façade ?</li>
+  <li><b>Les images doivent-elles rester disponibles</b> même sans internet ?</li>
+  <li><b>Combien de caméras</b> faut-il ? Plus il y en a, plus le filaire s'impose. Voir notre article <a href="/conseils/combien-de-cameras">combien de caméras pour un commerce</a>.</li>
+</ol>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons des caméras filaires comme sans fil, et choisissons avec vous lors de la visite gratuite la solution la plus fiable pour vos locaux, partout dans le 06. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
 ]

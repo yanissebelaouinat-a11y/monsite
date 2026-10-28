@@ -34,6 +34,7 @@
 - [Vidéosurveillance dans un restaurant : où placer les caméras](https://belaconnect.fr/conseils/videosurveillance-restaurant): Entrée, caisse, salle, terrasse, réserve : les bons emplacements, ce qu'il ne faut pas filmer et les règles à connaître.
 - [Filmer ses salariés : ce qui est autorisé et ce qui ne l'est pas](https://belaconnect.fr/conseils/filmer-ses-salaries): Les zones que l'employeur peut filmer, celles qui sont interdites, et comment informer correctement l'équipe.
 - [Combien de temps garder les images de vidéosurveillance ?](https://belaconnect.fr/conseils/duree-conservation-images): La durée à respecter, comment régler l'enregistreur, et quoi faire des images quand un incident se produit.
+- [Caméra Wi-Fi ou caméra filaire PoE : que choisir pour un commerce ?](https://belaconnect.fr/conseils/camera-wifi-ou-poe): Fiabilité, qualité d'image, pose, coupures : les vraies différences entre les deux technologies pour une boutique.
 
 ## Informations utiles
 
