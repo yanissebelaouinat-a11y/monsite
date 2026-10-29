@@ -35,6 +35,7 @@
 - [Filmer ses salariés : ce qui est autorisé et ce qui ne l'est pas](https://belaconnect.fr/conseils/filmer-ses-salaries): Les zones que l'employeur peut filmer, celles qui sont interdites, et comment informer correctement l'équipe.
 - [Combien de temps garder les images de vidéosurveillance ?](https://belaconnect.fr/conseils/duree-conservation-images): La durée à respecter, comment régler l'enregistreur, et quoi faire des images quand un incident se produit.
 - [Caméra Wi-Fi ou caméra filaire PoE : que choisir pour un commerce ?](https://belaconnect.fr/conseils/camera-wifi-ou-poe): Fiabilité, qualité d'image, pose, coupures : les vraies différences entre les deux technologies pour une boutique.
+- [Vision de nuit : caméra infrarouge ou caméra couleur ?](https://belaconnect.fr/conseils/vision-de-nuit): Infrarouge ou couleur : comment chaque technologie voit la nuit, et laquelle choisir pour votre vitrine, votre réserve ou votre parking.
 
 ## Informations utiles
 

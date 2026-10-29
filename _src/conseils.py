@@ -631,4 +631,58 @@ ARTICLES = [
 <h2>Notre accompagnement</h2>
 <p>Nous installons des caméras filaires comme sans fil, et choisissons avec vous lors de la visite gratuite la solution la plus fiable pour vos locaux, partout dans le 06. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="vision-de-nuit",
+        title="Vision de nuit : caméra infrarouge ou caméra couleur ?",
+        short="Vision de nuit",
+        seo="Vision de nuit infrarouge ou couleur : que choisir pour un commerce ?",
+        desc="Caméra infrarouge noir et blanc ou caméra couleur de nuit : fonctionnement, avantages, limites et bons réglages pour filmer un commerce ou un local la nuit.",
+        summary="Infrarouge ou couleur : comment chaque technologie voit la nuit, et laquelle choisir pour votre vitrine, votre réserve ou votre parking.",
+        date="2026-10-29",
+        related=["camera-wifi-ou-poe", "combien-de-cameras"],
+        body="""
+<p>C'est la nuit, quand le commerce est fermé, qu'une caméra est la plus utile. Pourtant, beaucoup d'images nocturnes sont floues, sombres ou éblouies et ne permettent de reconnaître personne. Le choix entre vision infrarouge et vision couleur, et la façon de poser la caméra, font toute la différence.</p>
+
+<h2>La vision infrarouge : le noir et blanc</h2>
+<p>La plupart des caméras disposent de petites <b>LED infrarouges</b>, invisibles à l'œil nu, qui éclairent la scène quand la lumière baisse. La caméra bascule alors automatiquement en <b>noir et blanc</b>.</p>
+<ul>
+  <li><b>Elle voit dans le noir complet</b>, sans aucun éclairage extérieur.</li>
+  <li><b>Elle reste discrète</b> : la zone filmée n'est pas éclairée, seul un léger point rouge est parfois visible sur la caméra.</li>
+  <li><b>Elle perd les couleurs</b> : impossible de dire de quelle couleur était un vêtement ou un véhicule.</li>
+  <li><b>Sa portée est limitée</b> : au-delà de la distance prévue par le fabricant, l'image devient noire.</li>
+</ul>
+
+<h2>La vision couleur de nuit</h2>
+<p>Les caméras couleur de nuit utilisent un capteur très sensible, parfois aidé d'un <b>petit projecteur de lumière blanche</b> qui s'allume à la détection d'un mouvement.</p>
+<ul>
+  <li><b>Elle garde les couleurs</b>, ce qui aide beaucoup à décrire une personne ou un véhicule.</li>
+  <li><b>Elle a besoin d'un minimum de lumière</b> : éclairage public, enseigne, éclairage de façade ou projecteur intégré.</li>
+  <li><b>Le projecteur a un effet dissuasif</b> : une personne qui se voit soudain éclairée a tendance à repartir.</li>
+  <li><b>Elle est plus visible</b>, ce qui peut gêner dans une zone proche d'habitations.</li>
+</ul>
+
+<h2>Laquelle choisir selon l'emplacement</h2>
+<ul>
+  <li><b>Vitrine et entrée côté rue</b> : la couleur fonctionne bien grâce à l'éclairage public et à l'enseigne.</li>
+  <li><b>Réserve, local technique, sous-sol</b> : sans aucune lumière, l'infrarouge reste le plus fiable.</li>
+  <li><b>Arrière-boutique, cour, parking</b> : une caméra couleur avec projecteur à détection combine image utile et dissuasion.</li>
+  <li><b>Zone sensible comme la caisse</b> : l'important est surtout de bien voir les visages, de jour comme de nuit.</li>
+</ul>
+
+<h2>Les erreurs qui gâchent les images de nuit</h2>
+<ol>
+  <li><b>Filmer à travers une vitre</b> : les LED infrarouges se reflètent dans le verre et l'image devient blanche. Une caméra posée derrière la vitrine doit être collée au vitrage ou placée à l'extérieur.</li>
+  <li><b>Viser une source de lumière</b> : un lampadaire ou des phares dans le champ éblouissent la caméra et cachent le reste.</li>
+  <li><b>Laisser un mur ou un auvent trop près</b> : l'infrarouge s'y reflète et assombrit tout le reste de l'image.</li>
+  <li><b>Négliger les toiles d'araignée</b> : attirées par la chaleur des LED, elles déclenchent de fausses alertes et brouillent l'image.</li>
+  <li><b>Placer la caméra trop haut</b> : de nuit encore plus que de jour, on ne voit plus que le dessus des têtes.</li>
+</ol>
+
+<h2>Testez vos caméras la nuit</h2>
+<p>Une installation se vérifie toujours <b>dans les conditions réelles</b>. Après la pose, prenez le temps de regarder les images enregistrées une nuit : reconnaît-on un visage à l'entrée ? Lit-on une plaque sur le parking ? Le moindre réglage d'angle ou de hauteur peut transformer une image inutilisable en image exploitable.</p>
+<p>Pensez aussi à nettoyer l'objectif de temps en temps : poussière, pollen et sel marin près du littoral voilent l'image, surtout la nuit.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Lors de la visite gratuite, nous regardons l'éclairage de chaque zone, de jour comme de nuit, pour choisir entre infrarouge et couleur et placer chaque caméra au bon endroit, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
 ]
