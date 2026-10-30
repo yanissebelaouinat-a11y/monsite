@@ -330,7 +330,7 @@ form.quote .btn{width:100%;}
 
 /* Pied de page */
 .site-footer{background:var(--navy);color:#8FA0B5;padding:52px 0 26px;font-size:15px;}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px;}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:32px;}
 .foot-title{color:#fff;font-size:16px;font-weight:700;margin:0 0 12px;}
 .foot-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;}
 .foot-grid a{transition:color .15s;}
@@ -610,7 +610,7 @@ form.sent .progress{display:none;}
 .reg-table td{padding:14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-soft);}
 .reg-table td b{color:var(--ink);}
 .reg-table td span{font-size:14px;color:var(--ink-faint);}
-@media (min-width:961px){ .foot-grid{grid-template-columns:1.3fr 1fr 1.1fr 1.1fr;} }
+@media (min-width:961px){ .foot-grid{grid-template-columns:1.3fr 1fr 1fr 1.1fr 1.1fr;} }
 
 /* Boutons flottants stables sur mobile (pas de clignotement au défilement) */
 .wa-fab,.btn-primary.call-fab{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-tap-highlight-color:transparent;}

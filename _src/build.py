@@ -7,6 +7,7 @@ Le dossier _src n'est pas publié (Jekyll ignore les dossiers commençant par «
 """
 import re
 from conseils import ARTICLES
+from secteurs import SECTEURS
 import json
 from PIL import Image
 import math
@@ -190,6 +191,8 @@ BREADCRUMB = {
     "a-propos.html": "À propos",
     "maintenance.html": "Maintenance",
 }
+BREADCRUMB.update({x["file"]: x["crumb"] for x in SECTEURS})
+SECTEURS_NAV = "\n          ".join(f'<li><a href="{x["file"]}">{x["nav"]}</a></li>' for x in SECTEURS)
 
 
 def _arc(cx, cy, r, a0, a1):
@@ -224,6 +227,7 @@ SERVICE_SCHEMA = {
     "maintenance.html": ("Maintenance et dépannage de vidéosurveillance, alarme et réseau",
         "Contrat d'entretien ou dépannage ponctuel, y compris pour les installations posées par d'autres installateurs."),
 }
+SERVICE_SCHEMA.update({x["file"]: x["schema"] for x in SECTEURS})
 
 
 def placeholder(value):
@@ -362,6 +366,13 @@ def layout(filename, title, description, body, extra_head=""):
           <li><a href="copropriete.html">Copropriétés</a></li>
           <li><a href="maintenance.html">Maintenance et dépannage</a></li>
           <li><a href="/conseils/">Nos conseils</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-title">Vos secteurs</p>
+        <ul>
+          {SECTEURS_NAV}
+          <li><a href="copropriete.html">Copropriétés</a></li>
         </ul>
       </div>
       <div>
@@ -523,8 +534,9 @@ home = f"""
       </div>
       <ul class="plain-list">
         <li><b>Commerces</b> : surface de vente, caisse, réserve.</li>
-        <li><b>Restaurants et hôtels</b> : salle, cuisine, entrées, parking.</li>
-        <li><b>Bureaux et cabinets</b> : alarme des locaux, réseau, postes.</li>
+        <li><b>Restaurants et hôtels</b> : salle, cuisine, entrées, parking (<a href="restaurant.html" class="inline-link">en savoir plus</a>).</li>
+        <li><b>Pharmacies</b> : comptoir, caisse, réserve, bouton d'alerte (<a href="pharmacie.html" class="inline-link">en savoir plus</a>).</li>
+        <li><b>Bureaux et cabinets</b> : alarme des locaux, réseau, postes (<a href="bureaux.html" class="inline-link">bureaux</a>, <a href="cabinet-medical.html" class="inline-link">cabinets médicaux</a>).</li>
         <li><b>Entrepôts et ateliers</b> : quais, périmètre, vision de nuit.</li>
         <li><b>Chantiers</b> : protection du matériel et des engins.</li>
         <li><b>Copropriétés</b> : halls, parkings, locaux communs (<a href="copropriete.html" class="inline-link">en savoir plus</a>).</li>
@@ -607,8 +619,8 @@ video = page_hero(
       </div>
       <div class="grid-3">
         <div class="card"><div class="icon">{ic('shop')}</div><h3>Commerces et boutiques</h3><p>Vitrine, entrée, caisse, surface de vente et réserve. Dissuasion visible et preuves en cas de vol ou de dégradation.</p></div>
-        <div class="card"><div class="icon">{ic('food')}</div><h3>Restaurants et hôtels</h3><p>Salle, terrasse, entrées, cuisine et parking, avec un accès aux images depuis votre téléphone.</p></div>
-        <div class="card"><div class="icon">{ic('office')}</div><h3>Bureaux et cabinets</h3><p>Accueil, accès et locaux techniques, en respectant la vie privée de vos salariés.</p></div>
+        <div class="card"><div class="icon">{ic('food')}</div><h3>Restaurants et hôtels</h3><p>Salle, terrasse, entrées, cuisine et parking, avec un accès aux images depuis votre téléphone. <a href="restaurant.html" class="inline-link">Voir notre page restaurants</a>.</p></div>
+        <div class="card"><div class="icon">{ic('office')}</div><h3>Bureaux et cabinets</h3><p>Accueil, accès et locaux techniques, en respectant la vie privée de vos salariés. <a href="bureaux.html" class="inline-link">Bureaux</a> · <a href="cabinet-medical.html" class="inline-link">Cabinets médicaux</a>.</p></div>
         <div class="card"><div class="icon">{ic('box')}</div><h3>Entrepôts et ateliers</h3><p>Quais de livraison, stock, périmètre et parking, avec vision de nuit longue portée.</p></div>
         <div class="card"><div class="icon">{ic('crane')}</div><h3>Chantiers</h3><p>Protection du matériel et des engins, y compris sur les sites sans réseau internet.</p></div>
         <div class="card"><div class="icon">{ic('building')}</div><h3>Copropriétés</h3><p>Halls, parkings, garages et locaux communs. <a href="copropriete.html" class="inline-link">Voir notre page copropriétés</a>.</p></div>
@@ -1316,6 +1328,92 @@ copro = page_hero(
 """
 
 # =============================================================================
+# PAGES PAR TYPE DE CLIENT (données dans secteurs.py)
+# =============================================================================
+def secteur_page(x):
+    risks = "\n        ".join(f'<div class="mini"><div class="icon dark">{ic(i)}</div><h3>{t}</h3><p>{d}</p></div>' for i, t, d in x["risks"])
+    zones = "\n        ".join(f'<div class="card"><div class="icon">{ic(i)}</div><h3>{t}</h3><p>{d}</p></div>' for i, t, d in x["zones"])
+    return page_hero(x["crumb"], x["h1"], x["lead"]) + f"""
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Les risques que nous prenons en compte</h2>
+        <p>{x["risks_intro"]}</p>
+      </div>
+      <div class="grid-4">
+        {risks}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Ce que nous installons</h2>
+        <p>{x["zones_intro"]}</p>
+      </div>
+      <div class="grid-3">
+        {zones}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split top">
+      <div>
+        <h2>{x["solution_title"]}</h2>
+        {checks(x["solution"])}
+      </div>
+      <div class="card">
+        <h3>{x["card_title"]}</h3>
+        <p>{x["card_text"]}</p>
+        <div class="hero-cta"><a href="contact.html?besoin={x["besoin"]}" class="btn btn-dark">Demander une visite gratuite {ic('arrow')}</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Comment ça se passe</h2>
+      </div>
+      <div class="grid-4 steps">
+        <div class="step"><h3>Visite gratuite</h3><p>Nous venons voir vos locaux et repérons avec vous les points sensibles.</p></div>
+        <div class="step"><h3>Devis détaillé</h3><p>Matériel, emplacements et démarches : un devis clair, sans engagement.</p></div>
+        <div class="step"><h3>Installation</h3><p>Pose propre, organisée pour gêner le moins possible votre activité.</p></div>
+        <div class="step"><h3>Mise en service</h3><p>Réglages, accès sur votre téléphone et prise en main avec vous.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split top">
+      <div>
+        <h2>Les règles à respecter</h2>
+        {checks(x["rules"])}
+        <p class="aside-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Toutes les règles sont résumées sur notre page <a href="reglementation.html" class="inline-link">réglementation</a> ; pour les textes officiels : <a class="inline-link" href="https://www.cnil.fr" rel="noopener">cnil.fr</a> et <a class="inline-link" href="https://www.service-public.fr" rel="noopener">service-public.fr</a>.</p>
+      </div>
+      <div class="card">
+        <h3>Déjà équipé ?</h3>
+        <p>Des caméras qui ne s'affichent plus, une alarme capricieuse, un installateur injoignable ? Nous reprenons l'installation, la remettons en état et pouvons en assurer l'entretien.</p>
+        <div class="hero-cta"><a href="maintenance.html" class="btn btn-outline">Maintenance et dépannage {ic('arrow')}</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Questions fréquentes</h2>
+      </div>
+      {faq(x["faq"])}
+    </div>
+  </section>
+{cta_band(*x["cta"])}
+"""
+
+
+# =============================================================================
 # À PROPOS
 # =============================================================================
 about = page_hero(
@@ -1545,6 +1643,7 @@ RELATED = {
     "alarme.html": ["alarme-sans-fil-ou-filaire", "proteger-son-commerce", "combien-de-cameras"],
     "informatique.html": ["baie-de-brassage", "proteger-son-commerce", "alarme-sans-fil-ou-filaire"],
 }
+RELATED.update({x["file"]: x["related"] for x in SECTEURS})
 
 PAGES = [
     ("index.html", "Vidéosurveillance, alarme et informatique pour professionnels (06) | BelaConnect",
@@ -1583,10 +1682,11 @@ PAGES = [
     ("conseils/index.html", "Conseils vidéosurveillance, alarme et réseau pour professionnels | BelaConnect",
      "Nos conseils pour protéger un commerce, choisir une alarme, installer des caméras en copropriété ou remettre au propre une baie réseau.",
      conseils_index, ""),
+ ] + [(x["file"], x["seo"] + " | BelaConnect", x["desc"], secteur_page(x), faq_jsonld(x["faq"])) for x in SECTEURS
 ] + [(f"conseils/{a['slug']}.html", a["seo"] + " | BelaConnect", a["desc"], article_page(a), article_jsonld(a)) for a in ARTICLES]
 
 
-CLEAN_PAGES = "copropriete|a-propos|maintenance|videosurveillance|alarme|informatique|contact|reglementation|mentions-legales|packs"
+CLEAN_PAGES = "restaurant|pharmacie|cabinet-medical|bureaux|copropriete|a-propos|maintenance|videosurveillance|alarme|informatique|contact|reglementation|mentions-legales|packs"
 
 
 def clean_urls(html):
@@ -1607,7 +1707,7 @@ def main():
         body = body.replace('<section class="hero small">', '<section class="hero small">' + WAVES, 1)
         if filename in RELATED:
             k = body.rfind('<section class="tight">\n    <div class="wrap">\n      <div class="cta-band">')
-            body = body[:k] + conseils_band(RELATED[filename], cls="" if filename in ("index.html", "copropriete.html", "maintenance.html") else "alt").lstrip("\n") + body[k:]
+            body = body[:k] + conseils_band(RELATED[filename], cls="" if filename in ("index.html", "copropriete.html", "maintenance.html", *(x["file"] for x in SECTEURS)) else "alt").lstrip("\n") + body[k:]
         out = ROOT / filename
         out.parent.mkdir(exist_ok=True)
         html = layout(filename, title, desc, body, extra)
@@ -1638,6 +1738,7 @@ def main():
         "User-agent: *\nAllow: /\n\n" + "".join(f"User-agent: {b}\nAllow: /\n\n" for b in ai_bots)
         + f"Sitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
     # llms.txt : fiche de présentation lisible par les assistants IA (format llmstxt.org)
+    secs = "".join(f"- [{x['nav']}]({SITE_URL}/{x['file'][:-5]}): {x['desc']}\n" for x in SECTEURS)
     arts = "\n".join(f"- [{a['title']}]({SITE_URL}/conseils/{a['slug']}): {a['summary']}" for a in ARTICLES)
     (ROOT / "llms.txt").write_text(f"""# BELACONNECT
 
@@ -1658,7 +1759,7 @@ def main():
 - [Informatique et réseau]({SITE_URL}/informatique): réseau, câblage, Wi-Fi pro, remise au propre de baies, postes, serveurs, sauvegardes, dépannage.
 - [Copropriétés]({SITE_URL}/copropriete): vidéosurveillance des parties communes (halls, parkings, garages, locaux communs), devis pour l'assemblée générale, syndics professionnels et bénévoles.
 - [Maintenance et dépannage]({SITE_URL}/maintenance): contrat d'entretien ou dépannage ponctuel, reprise d'installations posées par d'autres installateurs.
-- [À propos]({SITE_URL}/a-propos): présentation de l'entreprise, façon de travailler, engagements.
+{secs}- [À propos]({SITE_URL}/a-propos): présentation de l'entreprise, façon de travailler, engagements.
 - [Demander un devis]({SITE_URL}/contact): formulaire en 3 étapes, rappel rapide.
 
 ## Conseils

@@ -17,6 +17,10 @@
 - [Informatique et réseau](https://belaconnect.fr/informatique): réseau, câblage, Wi-Fi pro, remise au propre de baies, postes, serveurs, sauvegardes, dépannage.
 - [Copropriétés](https://belaconnect.fr/copropriete): vidéosurveillance des parties communes (halls, parkings, garages, locaux communs), devis pour l'assemblée générale, syndics professionnels et bénévoles.
 - [Maintenance et dépannage](https://belaconnect.fr/maintenance): contrat d'entretien ou dépannage ponctuel, reprise d'installations posées par d'autres installateurs.
+- [Restaurants et hôtels](https://belaconnect.fr/restaurant): Caméras et alarme pour restaurants, bars et hôtels des Alpes-Maritimes : salle, terrasse, caisse, cuisine, réserve. Visite gratuite, installation hors service, accès sur smartphone.
+- [Pharmacies](https://belaconnect.fr/pharmacie): Caméras, alarme anti-intrusion et bouton d'alerte pour pharmacies des Alpes-Maritimes : comptoir, caisse, réserve, accès. Respect de la confidentialité des patients. Visite gratuite.
+- [Cabinets médicaux](https://belaconnect.fr/cabinet-medical): Alarme anti-intrusion, caméras sur les accès et réseau informatique sécurisé pour cabinets médicaux, dentaires et paramédicaux des Alpes-Maritimes. Respect du secret médical. Visite gratuite.
+- [Bureaux et entreprises](https://belaconnect.fr/bureaux): Alarme, contrôle des accès, caméras et réseau informatique pour bureaux, agences et entreprises des Alpes-Maritimes. Un seul interlocuteur pour la sécurité et l'informatique. Visite gratuite.
 - [À propos](https://belaconnect.fr/a-propos): présentation de l'entreprise, façon de travailler, engagements.
 - [Demander un devis](https://belaconnect.fr/contact): formulaire en 3 étapes, rappel rapide.
 
