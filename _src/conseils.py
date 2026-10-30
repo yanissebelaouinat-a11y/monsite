@@ -687,4 +687,62 @@ ARTICLES = [
 <h2>Notre accompagnement</h2>
 <p>Lors de la visite gratuite, nous regardons l'éclairage de chaque zone, de jour comme de nuit, pour choisir entre infrarouge et couleur et placer chaque caméra au bon endroit, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="proteger-la-caisse",
+        title="Protéger la caisse d'un commerce : les bons réflexes et les bons équipements",
+        short="Protéger la caisse",
+        seo="Protéger la caisse d'un commerce : caméra, organisation, alarme",
+        desc="Comment protéger la caisse d'un commerce : placement de la caméra, gestion des espèces, bouton d'alerte, organisation du comptoir et règles à respecter.",
+        summary="Caméra bien placée, espèces limitées, comptoir organisé, bouton d'alerte : les mesures simples qui protègent la caisse et ceux qui la tiennent.",
+        date="2026-10-30",
+        related=["proteger-son-commerce", "filmer-ses-salaries"],
+        body="""
+<p>La caisse concentre l'argent du commerce et attire donc toutes les convoitises : vol à l'arraché, rendu de monnaie détourné, faux billets, erreurs de caisse répétées. La protéger ne demande pas forcément de gros travaux. Quelques équipements bien choisis et de bonnes habitudes suffisent souvent à réduire nettement les risques.</p>
+
+<h2>Une caméra dédiée à la caisse</h2>
+<p>La caméra de caisse est souvent la plus utile du magasin, à condition d'être bien placée.</p>
+<ul>
+  <li><b>Filmer le comptoir et le tiroir-caisse</b>, de légèrement au-dessus, pour voir les mains, les billets et les échanges.</li>
+  <li><b>Une deuxième caméra face aux clients</b>, à hauteur de visage, pour identifier les personnes qui se présentent au comptoir.</li>
+  <li><b>Éviter le contre-jour</b> : une caisse placée devant une vitrine donne des visages sombres. La caméra doit tourner le dos à la lumière.</li>
+  <li><b>Une bonne résolution</b> pour pouvoir zoomer après coup sur un billet ou un geste.</li>
+</ul>
+<p>La caméra doit viser la zone de caisse et non surveiller en continu le salarié qui y travaille : sa finalité est la protection des biens et des personnes. Voir notre article <a href="/conseils/filmer-ses-salaries">filmer ses salariés : ce qui est autorisé</a>.</p>
+
+<h2>Limiter l'argent présent dans la caisse</h2>
+<ul>
+  <li><b>Faire des retraits réguliers</b> dans la journée pour ne garder qu'un fond de caisse raisonnable.</li>
+  <li><b>Ranger les espèces retirées</b> dans un coffre fixé, hors de la vue des clients, idéalement dans une pièce fermée.</li>
+  <li><b>Varier les horaires et les trajets</b> pour déposer les recettes, et ne jamais compter la caisse devant la vitrine.</li>
+  <li><b>Encourager le paiement par carte</b> : moins d'espèces, c'est moins d'intérêt pour un voleur.</li>
+</ul>
+
+<h2>Organiser le comptoir</h2>
+<ul>
+  <li><b>Placer la caisse hors de portée</b> depuis la porte : un comptoir trop proche de l'entrée facilite le vol à l'arraché.</li>
+  <li><b>Garder le tiroir fermé</b> entre deux encaissements, et le verrouiller dès que vous vous éloignez.</li>
+  <li><b>Poser le billet reçu sur le comptoir</b> pendant que vous rendez la monnaie : cela évite les litiges et les tours de passe-passe.</li>
+  <li><b>Avoir un détecteur de faux billets</b> et contrôler systématiquement les grosses coupures.</li>
+  <li><b>Garder une bonne visibilité</b> sur le magasin depuis la caisse, sans présentoir qui bouche la vue.</li>
+</ul>
+
+<h2>Pouvoir donner l'alerte discrètement</h2>
+<p>Un <b>bouton d'alerte</b>, fixé sous le comptoir ou porté sur soi, permet de prévenir sans geste visible en cas d'agression. Relié à l'alarme, il peut déclencher une alerte silencieuse sur les téléphones de votre choix ou vers un service de télésurveillance si vous en avez un. Pour les commerces qui ferment tard ou travaillent seuls, c'est un équipement simple qui rassure.</p>
+<p>Un <b>écran visible des clients</b>, qui affiche les images des caméras, a aussi un vrai effet dissuasif : chacun comprend tout de suite que le comptoir est filmé.</p>
+
+<h2>Contrôler les écarts de caisse</h2>
+<p>Des écarts répétés en fin de journée ne sont pas toujours un vol : erreurs de rendu, remboursements mal saisis, fatigue. Les images permettent de <b>retrouver rapidement le moment</b> où un écart s'est produit et de lever le doute, sans soupçonner tout le monde. Certains logiciels de caisse peuvent aussi enregistrer chaque ouverture du tiroir, ce qui aide à recouper.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Informer clients et salariés</b> par un panneau visible indiquant la présence de caméras. Voir notre article sur le <a href="/conseils/panneau-videosurveillance">panneau de vidéosurveillance</a>.</li>
+  <li><b>Informer les salariés</b> individuellement et consulter les représentants du personnel s'il y en a.</li>
+  <li><b>Ne pas conserver les images trop longtemps</b> et en limiter l'accès aux personnes habilitées.</li>
+  <li><b>Une caméra qui filme une zone ouverte au public</b> peut nécessiter une autorisation préfectorale.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Lors de la visite gratuite, nous regardons votre comptoir, l'éclairage et les accès pour placer les caméras de caisse au bon endroit et, si besoin, ajouter un bouton d'alerte relié à votre alarme, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
 ]
