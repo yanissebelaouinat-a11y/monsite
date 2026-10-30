@@ -214,11 +214,11 @@ def asset_version(path):
 
 SERVICE_SCHEMA = {
     "videosurveillance.html": ("Installation de vidéosurveillance",
-        "Pose de caméras Dahua et Hikvision intérieures et extérieures, avec enregistreur et accès smartphone, pour entreprises, commerces et copropriétés."),
+        "Pose de caméras professionnelles intérieures et extérieures, avec enregistreur et accès smartphone, pour entreprises, commerces et copropriétés."),
     "alarme.html": ("Installation d'alarme anti-intrusion",
-        "Systèmes d'alarme Ajax sans fil ou filaires pour commerces, bureaux et entrepôts, avec alertes sur smartphone."),
+        "Systèmes d'alarme sans fil ou filaires pour commerces, bureaux et entrepôts, avec alertes sur smartphone."),
     "informatique.html": ("Informatique et réseau d'entreprise",
-        "Câblage, remise au propre de baies, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes et dépannage."),
+        "Câblage, remise au propre de baies, Wi-Fi professionnel, postes, serveurs, sauvegardes et dépannage."),
     "copropriete.html": ("Vidéosurveillance en copropriété",
         "Installation de caméras dans les parties communes des copropriétés : halls, parkings, garages, locaux communs, avec devis pour l'assemblée générale."),
     "maintenance.html": ("Maintenance et dépannage de vidéosurveillance, alarme et réseau",
@@ -244,7 +244,6 @@ def business_schema():
         "address": {"@type": "PostalAddress", "addressLocality": "Nice", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"},
         "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"},
         "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Remise au propre de baies de brassage", "Wi-Fi professionnel"],
-        "brand": [{"@type": "Brand", "name": b} for b in ("Dahua", "Hikvision", "Ajax", "TP-Link")],
         "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "url": SITE_URL + "/" + u}}
             for n, u in (("Installation de vidéosurveillance", "videosurveillance.html"),
@@ -388,7 +387,6 @@ def layout(filename, title, description, body, extra_head=""):
     </div>
     <div class="foot-bottom">
       <span>© <span id="year">2026</span> BelaConnect — Tous droits réservés · <a href="mentions-legales.html" class="foot-legal">Mentions légales</a>{' · <button type="button" class="foot-legal" data-cookies>Cookies</button>' if ADS_ID else ''}</span>
-      <span>Dahua · Hikvision · Ajax · TP-Link</span>
     </div>
   </div>
 </footer>
@@ -415,7 +413,7 @@ HOME_FAQ = [
     ("Le devis est-il gratuit ?",
      "Oui. Nous nous déplaçons gratuitement dans vos locaux pour étudier votre besoin, puis nous vous remettons un devis détaillé, sans engagement."),
     ("Fournissez-vous le matériel ?",
-     "Oui, nous fournissons du matériel professionnel (Dahua, Hikvision, Ajax, TP-Link) adapté à votre besoin. Nous pouvons aussi installer un matériel que vous possédez déjà."),
+     "Oui, nous fournissons du matériel professionnel adapté à votre besoin. Nous pouvons aussi installer un matériel que vous possédez déjà."),
     ("Pouvez-vous gérer de gros chantiers ?",
      "Oui. Pour les installations importantes, nous intervenons en équipe afin de respecter vos délais."),
     ("Assurez-vous la maintenance après l'installation ?",
@@ -445,7 +443,7 @@ home = f"""
           <dt>Clients</dt><dd>Entreprises, commerces, copropriétés</dd>
           <dt>Devis</dt><dd>Gratuit, après visite sur place</dd>
           <dt>Zone</dt><dd>Tout le département des Alpes-Maritimes</dd>
-          <dt>Matériel</dt><dd>Dahua, Hikvision, Ajax, TP-Link</dd>
+          <dt>Matériel</dt><dd>Professionnel, choisi selon vos locaux</dd>
         </dl>
         <a href="tel:{PHONE_LINK}" class="hero-phone">{ic('phone')} {PHONE_DISPLAY}</a>
       </aside>
@@ -463,13 +461,13 @@ home = f"""
           <div class="icon">{ic('cam')}</div>
           <h3>Vidéosurveillance</h3>
           <p>Caméras intérieures et extérieures, filaires ou sans fil, avec enregistreur. Vous voyez les images en direct sur votre téléphone.</p>
-          {checks(["Dahua et Hikvision", "Vision de nuit", "Accès à distance sur smartphone"])}
+          {checks(["Caméras professionnelles", "Vision de nuit", "Accès à distance sur smartphone"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
         <a href="alarme.html" class="card main svc-alarm">
           <div class="icon">{ic('alarm')}</div>
           <h3>Alarme</h3>
-          <p>Alarmes Ajax contre l'intrusion. Vous êtes prévenu sur votre téléphone dès qu'un détecteur se déclenche.</p>
+          <p>Alarmes contre l'intrusion. Vous êtes prévenu sur votre téléphone dès qu'un détecteur se déclenche.</p>
           {checks(["Sans fil ou filaire", "Badge ou code par salarié", "Couplage aux caméras"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
@@ -477,7 +475,7 @@ home = f"""
           <div class="icon">{ic('pc')}</div>
           <h3>Informatique et réseau</h3>
           <p>Câblage, Wi-Fi pro, postes de travail, sauvegardes et dépannage pour les entreprises.</p>
-          {checks(["Réseau et Wi-Fi TP-Link", "Remise au propre de baies", "Postes, serveurs, maintenance"])}
+          {checks(["Réseau et Wi-Fi professionnel", "Remise au propre de baies", "Postes, serveurs, maintenance"])}
           <span class="more">En savoir plus {ic('arrow')}</span>
         </a>
       </div>
@@ -493,7 +491,7 @@ home = f"""
         <div><b>06</b><h3>tout le département</h3><p>Nous intervenons partout dans les Alpes-Maritimes, sur le littoral comme dans l'arrière-pays.</p></div>
         <div><b>1</b><h3>seul interlocuteur</h3><p>Du devis à la maintenance, vous avez toujours affaire à la même personne.</p></div>
         <div><b>0 €</b><h3>pour la visite et le devis</h3><p>Nous venons voir vos locaux avant de chiffrer quoi que ce soit, sans engagement.</p></div>
-        <div><b>4</b><h3>marques professionnelles</h3><p>Dahua, Hikvision, Ajax et TP-Link : du matériel fiable, conçu pour durer.</p></div>
+        <div><b>3</b><h3>métiers réunis</h3><p>Vidéosurveillance, alarme et réseau : un seul prestataire pour que tout fonctionne ensemble.</p></div>
       </div>
     </div>
   </section>
@@ -740,8 +738,8 @@ video = page_hero(
 # ALARME
 # =============================================================================
 ALARM_FAQ = [
-    ("Pourquoi Ajax ?",
-     "Ajax est une marque reconnue pour la fiabilité de ses alarmes : communications chiffrées, autonomie des détecteurs, application simple et très complète."),
+    ("Quel matériel d'alarme installez-vous ?",
+     "Du matériel professionnel reconnu pour sa fiabilité : communications chiffrées, bonne autonomie des détecteurs et application simple et complète. Nous le choisissons selon vos locaux."),
     ("L'alarme fonctionne-t-elle en cas de coupure de courant ?",
      "Oui. La centrale dispose d'une batterie de secours et peut communiquer par carte SIM si internet est coupé."),
     ("Peut-on donner des accès différents à chaque salarié ?",
@@ -752,7 +750,7 @@ ALARM_FAQ = [
 
 alarm = page_hero(
     "Alarme",
-    "Alarme anti-intrusion <em>Ajax</em> pour vos locaux",
+    "Alarme anti-intrusion <em>fiable</em> pour vos locaux",
     "Des systèmes d'alarme fiables, sans fil ou filaires, pour protéger commerces, bureaux et entrepôts. Vous êtes alerté immédiatement sur votre téléphone.",
     "Spécialité BelaConnect") + f"""
 
@@ -854,7 +852,7 @@ it = page_hero(
       </div>
       <div class="grid-3">
         <div class="card"><div class="icon">{ic('network')}</div><h3>Réseau &amp; câblage</h3><p>Câblage réseau, baie de brassage, switchs et routeurs pour un réseau rapide et organisé.</p><a href="#baies" class="more">Remise au propre de baies {ic('arrow')}</a></div>
-        <div class="card"><div class="icon">{ic('wifi')}</div><h3>Wi-Fi professionnel</h3><p>Bornes TP-Link pour couvrir tous vos locaux, avec un réseau invités séparé et sécurisé.</p></div>
+        <div class="card"><div class="icon">{ic('wifi')}</div><h3>Wi-Fi professionnel</h3><p>Bornes professionnelles pour couvrir tous vos locaux, avec un réseau invités séparé et sécurisé.</p></div>
         <div class="card"><div class="icon">{ic('pc')}</div><h3>Postes de travail</h3><p>Fourniture, installation et configuration des ordinateurs, imprimantes et périphériques.</p></div>
         <div class="card"><div class="icon">{ic('server')}</div><h3>Serveurs &amp; stockage</h3><p>Serveurs, NAS et partage de fichiers pour travailler en équipe en toute sécurité.</p></div>
         <div class="card"><div class="icon">{ic('backup')}</div><h3>Sauvegardes</h3><p>Mise en place de sauvegardes automatiques pour ne jamais perdre vos données.</p></div>
@@ -1023,7 +1021,7 @@ contact = page_hero(
             <li><b>Visite gratuite</b> de vos locaux, partout dans le 06.</li>
             <li><b>Devis détaillé</b> : matériel, emplacements, délais.</li>
           </ol>
-          {checks(["Gratuit et sans engagement", "Matériel professionnel Dahua, Hikvision, Ajax", "Un seul interlocuteur, du devis à la maintenance"])}
+          {checks(["Gratuit et sans engagement", "Matériel professionnel", "Un seul interlocuteur, du devis à la maintenance"])}
         </div>
       </aside>
     </div>
@@ -1057,7 +1055,7 @@ legal = f"""
       <p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — <a href="https://github.com" rel="noopener">github.com</a>.</p>
 
       <h2>Propriété intellectuelle</h2>
-      <p>L'ensemble des contenus de ce site (textes, visuels, logo) est la propriété de BelaConnect, sauf mention contraire. Toute reproduction sans autorisation est interdite. Les marques citées (Dahua, Hikvision, Ajax, TP-Link) appartiennent à leurs propriétaires respectifs.</p>
+      <p>L'ensemble des contenus de ce site (textes, visuels, logo) est la propriété de BelaConnect, sauf mention contraire. Toute reproduction sans autorisation est interdite. Les marques éventuellement citées appartiennent à leurs propriétaires respectifs.</p>
 
       <h2>Données personnelles</h2>
       <h2 id="cookies">Cookies</h2>
@@ -1365,7 +1363,6 @@ about = page_hero(
       <div class="card">
         <h3>L'entreprise</h3>
         <p>BELACONNECT, micro-entreprise immatriculée sous le SIREN {SIREN}. Intervention dans tout le département des Alpes-Maritimes.</p>
-        <p>Matériel installé : Dahua, Hikvision, Ajax, TP-Link.</p>
         <p><a href="tel:{PHONE_LINK}" class="inline-link">{PHONE_DISPLAY}</a> · <a href="mailto:{EMAIL}" class="inline-link">{EMAIL}</a></p>
       </div>
     </div>
@@ -1551,16 +1548,16 @@ RELATED = {
 
 PAGES = [
     ("index.html", "Vidéosurveillance, alarme et informatique pour professionnels (06) | BelaConnect",
-     "Installation de vidéosurveillance, d'alarmes, de réseaux et d'informatique pour les entreprises, commerces et copropriétés des Alpes-Maritimes (06). Dahua, Hikvision, Ajax, TP-Link. Devis gratuit sur place.",
+     "Installation de vidéosurveillance, d'alarmes, de réseaux et d'informatique pour les entreprises, commerces et copropriétés des Alpes-Maritimes (06). Devis gratuit sur place.",
      home, faq_jsonld(HOME_FAQ)),
     ("videosurveillance.html", "Installation de caméras de surveillance pour professionnels (06) | BelaConnect",
-     "Pose de caméras Dahua et Hikvision intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Commerces, entreprises, copropriétés. Intervention dans tout le 06.",
+     "Pose de caméras professionnelles intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Commerces, entreprises, copropriétés. Intervention dans tout le 06.",
      video, faq_jsonld(VIDEO_FAQ)),
-    ("alarme.html", "Installation d'alarme Ajax pour commerces et bureaux (06) | BelaConnect",
-     "Installation d'alarmes anti-intrusion Ajax sans fil ou filaires pour commerces, bureaux et entrepôts dans les Alpes-Maritimes. Alertes sur smartphone. Devis gratuit.",
+    ("alarme.html", "Installation d'alarme pour commerces et bureaux (06) | BelaConnect",
+     "Installation d'alarmes anti-intrusion sans fil ou filaires pour commerces, bureaux et entrepôts dans les Alpes-Maritimes. Alertes sur smartphone. Devis gratuit.",
      alarm, faq_jsonld(ALARM_FAQ)),
     ("informatique.html", "Informatique d'entreprise, réseau, baies et Wi-Fi pro (06) | BelaConnect",
-     "Réseau, câblage, remise au propre de baies de brassage, Wi-Fi professionnel TP-Link, postes, serveurs, sauvegardes et dépannage informatique pour les entreprises du 06.",
+     "Réseau, câblage, remise au propre de baies de brassage, Wi-Fi professionnel, postes, serveurs, sauvegardes et dépannage informatique pour les entreprises du 06.",
      it, faq_jsonld(IT_FAQ)),
     ("contact.html", "Devis gratuit vidéosurveillance et alarme (06) | BelaConnect",
      "Demandez un devis gratuit pour votre projet de vidéosurveillance, d'alarme ou d'informatique dans les Alpes-Maritimes. Visite sur place offerte.",
@@ -1649,7 +1646,7 @@ def main():
 - Zone d'intervention : tout le département des Alpes-Maritimes (06), littoral et arrière-pays.
 - Clients : entreprises, commerces, restaurants et hôtels, bureaux et cabinets, entrepôts et ateliers, chantiers, copropriétés (syndics et conseils syndicaux).
 - Services : installation et maintenance de vidéosurveillance (caméras intérieures et extérieures, filaires ou sans fil, enregistreur, accès smartphone), alarmes anti-intrusion sans fil ou filaires, réseau et câblage, Wi-Fi professionnel, remise au propre de baies de brassage, postes, serveurs, sauvegardes, dépannage informatique.
-- Matériel : Dahua, Hikvision, Ajax, TP-Link.
+- Matériel : professionnel, choisi selon les locaux.
 - Devis : gratuit et sans engagement, après une visite sur place offerte.
 - Contact : téléphone {PHONE_DISPLAY} (aussi sur WhatsApp), email {EMAIL}, formulaire de devis {SITE_URL}/contact
 - Entreprise : micro-entreprise, SIREN {SIREN}.
