@@ -745,4 +745,71 @@ ARTICLES = [
 <h2>Notre accompagnement</h2>
 <p>Lors de la visite gratuite, nous regardons votre comptoir, l'éclairage et les accès pour placer les caméras de caisse au bon endroit et, si besoin, ajouter un bouton d'alerte relié à votre alarme, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="vol-a-l-etalage",
+        title="Vol à l'étalage : comment le prévenir et comment réagir",
+        short="Vol à l'étalage",
+        seo="Vol à l'étalage dans un commerce : prévenir et réagir",
+        desc="Vol à l'étalage : aménagement du magasin, caméras, attitude du personnel et bons réflexes quand un vol se produit, dans le respect de la loi.",
+        summary="Aménagement, caméras, accueil des clients et bons réflexes en cas de vol : comment limiter la démarque sans se mettre en tort.",
+        date="2026-10-31",
+        related=["proteger-son-commerce", "combien-de-cameras"],
+        body="""
+<p>Le vol à l'étalage fait partie du quotidien de nombreux commerces. Chaque article qui disparaît est une perte sèche, et les petits vols répétés finissent par peser lourd. La bonne nouvelle, c'est qu'une grande partie de ces vols peut être évitée avec un magasin bien organisé, une équipe attentive et des caméras bien placées.</p>
+
+<h2>Comprendre comment se passent les vols</h2>
+<p>La plupart des vols à l'étalage sont rapides et discrets : un article glissé dans un sac ou une poche, une étiquette retirée, un produit caché derrière un autre. Ils se produisent surtout dans les <b>angles morts</b>, aux <b>heures d'affluence</b>, quand le personnel est occupé en caisse, et près des <b>sorties</b>. Identifier ces moments et ces endroits est la première étape.</p>
+
+<h2>Aménager le magasin pour décourager</h2>
+<ul>
+  <li><b>Supprimer les angles morts</b> : rayonnages moins hauts, miroirs dans les coins, allées dégagées.</li>
+  <li><b>Placer les produits de valeur près de la caisse</b> ou dans une vitrine fermée, et présenter en rayon des boîtes vides ou des modèles d'exposition.</li>
+  <li><b>Éviter les présentoirs près de la sortie</b> : un produit à portée de main de la porte part vite.</li>
+  <li><b>Soigner l'éclairage</b> : un magasin bien éclairé est plus difficile à voler.</li>
+  <li><b>Garder la caisse face à l'entrée</b>, pour voir qui entre et qui sort.</li>
+</ul>
+
+<h2>Le rôle de l'équipe</h2>
+<p>L'arme la plus efficace reste souvent l'accueil. Un client salué en entrant sait qu'il a été vu.</p>
+<ul>
+  <li><b>Dire bonjour à chaque client</b> et proposer son aide : c'est commercial et dissuasif à la fois.</li>
+  <li><b>Être présent dans les rayons</b>, surtout aux heures chargées.</li>
+  <li><b>Limiter le nombre d'articles en cabine d'essayage</b> et les compter à l'entrée et à la sortie.</li>
+  <li><b>Partager les informations</b> entre collègues sur les comportements inhabituels.</li>
+</ul>
+
+<h2>Des caméras bien placées</h2>
+<p>La vidéosurveillance dissuade, à condition d'être visible et bien pensée.</p>
+<ul>
+  <li><b>Une caméra à l'entrée</b>, à hauteur de visage, pour identifier chaque personne.</li>
+  <li><b>Des caméras sur les rayons sensibles</b> et les angles morts repérés.</li>
+  <li><b>Une caméra sur la caisse</b>, pour les encaissements et les échanges.</li>
+  <li><b>Un écran visible des clients</b> à l'entrée : chacun voit qu'il est filmé.</li>
+  <li><b>Un accès sur votre téléphone</b>, pour retrouver rapidement un passage.</li>
+</ul>
+<p>Pour savoir combien de caméras prévoir, lisez notre article <a href="/conseils/combien-de-cameras">combien de caméras pour un commerce</a>.</p>
+
+<h2>Que faire quand un vol se produit ?</h2>
+<p>La priorité est la sécurité de votre équipe et de vos clients. Aucun article ne vaut de se mettre en danger.</p>
+<ol>
+  <li><b>Rester calme et poli</b>, sans accuser publiquement ni crier.</li>
+  <li><b>Proposer de payer l'article</b> : souvent, la personne le repose ou le règle.</li>
+  <li><b>Ne jamais fouiller la personne ni son sac</b> : seules les forces de l'ordre peuvent le faire. Vous pouvez seulement lui demander de montrer volontairement ce qu'elle a pris.</li>
+  <li><b>En cas de flagrant délit</b>, la loi permet de retenir la personne le temps que la police arrive, sans violence ni contrainte excessive. Si la situation devient tendue, laissez-la partir.</li>
+  <li><b>Appeler le 17</b> si nécessaire, et noter le maximum de détails : heure, description, direction prise.</li>
+  <li><b>Conserver les images</b> de la scène et porter plainte. Les enregistrements faciliteront le travail des enquêteurs.</li>
+</ol>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez service-public.fr et cnil.fr.</p>
+
+<h2>Les règles à respecter pour les caméras</h2>
+<ul>
+  <li><b>Un panneau visible</b> doit informer clients et salariés de la présence de caméras.</li>
+  <li><b>Une autorisation préfectorale</b> est en principe nécessaire pour filmer un espace ouvert au public.</li>
+  <li><b>Les images ne doivent pas être diffusées</b> publiquement, par exemple sur les réseaux sociaux, même pour retrouver un voleur.</li>
+  <li><b>La durée de conservation</b> doit rester limitée.</li>
+</ul>
+
+<h2>Notre accompagnement</h2>
+<p>Lors de la visite gratuite, nous repérons avec vous les angles morts et les zones sensibles de votre magasin, puis plaçons les caméras là où elles dissuadent et identifient vraiment, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
 ]
