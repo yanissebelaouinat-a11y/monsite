@@ -812,4 +812,71 @@ ARTICLES = [
 <h2>Notre accompagnement</h2>
 <p>Lors de la visite gratuite, nous repérons avec vous les angles morts et les zones sensibles de votre magasin, puis plaçons les caméras là où elles dissuadent et identifient vraiment, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="alarme-commerce",
+        title="Alarme pour commerce : les détecteurs indispensables",
+        short="Alarme pour commerce",
+        seo="Alarme pour commerce : quels détecteurs installer ?",
+        desc="Détecteurs de mouvement, d'ouverture, de bris de vitre, sirène, bouton d'alerte : les éléments indispensables d'une alarme pour un commerce, et où les placer.",
+        summary="Mouvement, ouverture, vitrine, sirène, transmission : les détecteurs qui comptent vraiment pour protéger une boutique, et où les placer.",
+        date="2026-11-01",
+        related=["alarme-sans-fil-ou-filaire", "proteger-son-commerce"],
+        body="""
+<p>Une alarme ne protège bien un commerce que si chaque accès possible est surveillé. Trop peu de détecteurs, et un intrus passe par la réserve sans déclencher quoi que ce soit. Mal placés, et l'alarme sonne pour un rien jusqu'à ce que plus personne n'y fasse attention. Voici les éléments indispensables et la façon de les répartir dans une boutique.</p>
+
+<h2>La centrale : le cerveau de l'alarme</h2>
+<p>La centrale reçoit les informations de tous les détecteurs et décide de déclencher l'alerte. Pour un commerce, vérifiez qu'elle dispose :</p>
+<ul>
+  <li><b>D'une batterie de secours</b>, pour continuer à fonctionner en cas de coupure de courant.</li>
+  <li><b>D'une double transmission</b>, par internet et par carte SIM, pour vous prévenir même si la ligne est coupée.</li>
+  <li><b>D'une application</b> pour armer, désarmer et recevoir les alertes sur votre téléphone.</li>
+  <li><b>D'accès séparés</b> par salarié, pour savoir qui a ouvert et fermé le magasin.</li>
+</ul>
+
+<h2>Les détecteurs de mouvement</h2>
+<p>Ce sont eux qui repèrent une présence dans le magasin une fois l'alarme armée.</p>
+<ul>
+  <li><b>Un détecteur dans la surface de vente</b>, placé dans un angle pour couvrir les accès.</li>
+  <li><b>Un détecteur dans la réserve</b>, souvent la cible d'une entrée par l'arrière.</li>
+  <li><b>Un détecteur dans le bureau</b> ou près du coffre si vous en avez un.</li>
+  <li><b>Des modèles compatibles avec les animaux</b> si un chat de boutique reste la nuit.</li>
+</ul>
+<p>Les détecteurs avec <b>photo à la détection</b> sont très utiles : en cas d'alerte, vous recevez une image qui permet de vérifier immédiatement s'il s'agit d'une vraie intrusion.</p>
+
+<h2>Les détecteurs d'ouverture</h2>
+<p>Posés sur les portes et les fenêtres, ils signalent une ouverture <b>avant même que l'intrus ne soit entré</b>.</p>
+<ul>
+  <li><b>Porte d'entrée et porte de service</b>, en priorité.</li>
+  <li><b>Accès à la réserve</b>, au local technique, au sous-sol ou à la cave.</li>
+  <li><b>Fenêtres et impostes</b> accessibles depuis une cour ou un toit.</li>
+</ul>
+
+<h2>La protection de la vitrine</h2>
+<p>La vitrine est souvent le point le plus exposé d'un commerce. Un <b>détecteur de bris de vitre</b> ou un <b>détecteur de choc</b> réagit dès que le verre est frappé ou cassé, sans attendre qu'une personne entre. Pour un rideau métallique, un détecteur d'ouverture spécifique peut signaler qu'il est forcé.</p>
+
+<h2>La sirène</h2>
+<ul>
+  <li><b>Une sirène intérieure puissante</b> rend le magasin difficile à supporter et pousse l'intrus à partir vite.</li>
+  <li><b>Une sirène extérieure avec flash</b> alerte le voisinage et dissuade avant même l'intrusion.</li>
+  <li><b>Un réglage de durée</b> conforme aux règles de voisinage, pour ne pas sonner indéfiniment.</li>
+</ul>
+
+<h2>Le bouton d'alerte</h2>
+<p>Fixé sous le comptoir ou porté sur soi, il permet de donner l'alerte discrètement en cas d'agression pendant les heures d'ouverture. C'est un complément simple et rassurant pour les commerces qui ferment tard ou où l'on travaille seul. Voir aussi notre article sur la <a href="/conseils/proteger-la-caisse">protection de la caisse</a>.</p>
+
+<h2>Les erreurs à éviter</h2>
+<ol>
+  <li><b>Oublier l'accès arrière</b> : une alarme qui ne surveille que la porte d'entrée laisse la réserve sans protection.</li>
+  <li><b>Placer un détecteur face à une vitrine</b> ou à une source de chaleur : soleil et chauffage provoquent de fausses alertes.</li>
+  <li><b>Partager un seul code</b> entre tous les salariés : impossible de savoir qui a désarmé l'alarme.</li>
+  <li><b>Ne jamais tester l'installation</b> : un détecteur à la pile vide ne protège plus rien.</li>
+  <li><b>Négliger la transmission</b> : une alarme qui sonne sans prévenir personne est vite ignorée.</li>
+</ol>
+
+<h2>Alarme et caméras : le bon duo</h2>
+<p>Couplée à la vidéosurveillance, l'alarme vous permet de <b>regarder immédiatement les images</b> sur votre téléphone quand elle se déclenche. Vous savez en quelques secondes s'il faut appeler les forces de l'ordre ou s'il s'agit d'une fausse alerte. Pensez aussi à vérifier les exigences de votre assureur, qui peut demander certains équipements.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Lors de la visite gratuite, nous faisons le tour de votre commerce, repérons chaque accès possible et vous proposons le nombre de détecteurs juste nécessaire, partout dans le 06. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
