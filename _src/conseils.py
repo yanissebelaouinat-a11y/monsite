@@ -57,7 +57,7 @@ ARTICLES = [
 </ul>
 
 <h2>En résumé</h2>
-<p>Une protection efficace combine des caméras bien placées, un enregistreur protégé, une alerte sur votre téléphone et, si possible, une alarme. Nous installons ces équipements dans les commerces de tout le département des Alpes-Maritimes, après une visite gratuite. <a href="/videosurveillance#commerce">Voir notre offre pour les commerces</a>.</p>
+<p>Une protection efficace combine des caméras bien placées, un enregistreur protégé, une alerte sur votre téléphone et, si possible, une alarme. Nous installons ces équipements dans les commerces de tout le Sud, après une visite gratuite. <a href="/videosurveillance#commerce">Voir notre offre pour les commerces</a>.</p>
 """),
     dict(
         slug="combien-de-cameras",
@@ -140,7 +140,7 @@ ARTICLES = [
 <p>Une fois le vote acquis, nous fixons la date avec le syndic. Nous posons les caméras, l'enregistreur et les panneaux, réglons les accès des personnes autorisées et leur montrons comment retrouver une séquence. La maintenance peut ensuite être assurée dans la durée.</p>
 
 <h2>Vous préparez une assemblée générale ?</h2>
-<p>Nous intervenons dans les copropriétés de tout le département des Alpes-Maritimes. <a href="/contact?besoin=copro">Demander un devis copropriété</a> ou <a href="/copropriete">voir notre offre copropriétés</a>.</p>
+<p>Nous intervenons dans les copropriétés de tout le Sud. <a href="/contact?besoin=copro">Demander un devis copropriété</a> ou <a href="/copropriete">voir notre offre copropriétés</a>.</p>
 """),
     dict(
         slug="alarme-sans-fil-ou-filaire",
@@ -469,7 +469,7 @@ ARTICLES = [
 <p>Tout dépend de la configuration des lieux. On compte souvent une caméra pour l'entrée, une pour la caisse, une ou deux pour la salle et la terrasse, et une pour la réserve ou l'accès livraison. La visite sur place permet de fixer le nombre juste, sans caméra inutile.</p>
 
 <h2>Notre accompagnement</h2>
-<p>Nous installons des caméras dans les restaurants de tout le 06, avec un accès aux images depuis votre téléphone, et en dehors de vos heures de service si besoin. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p>Nous installons des caméras dans les restaurants de tout le Sud, avec un accès aux images depuis votre téléphone, et en dehors de vos heures de service si besoin. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
 <p class="small-note">Ces informations sont données à titre indicatif. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
 """),
     dict(
@@ -522,7 +522,7 @@ ARTICLES = [
 <p>La plupart des difficultés viennent d'une caméra mal orientée ou posée sans réflexion. En choisissant les bons emplacements dès l'installation, on protège efficacement les locaux sans filmer ce qui ne doit pas l'être. C'est ce que nous faisons lors de la visite : nous repérons les zones à couvrir et nous orientons chaque caméra en conséquence.</p>
 
 <h2>Notre accompagnement</h2>
-<p>Nous installons la vidéosurveillance des commerces, bureaux et entrepôts de tout le 06 en respectant ces règles, et nous vous indiquons les démarches à prévoir. <a href="/reglementation#entreprise">Voir les règles pour les entreprises</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p>Nous installons la vidéosurveillance des commerces, bureaux et entrepôts de tout le Sud en respectant ces règles, et nous vous indiquons les démarches à prévoir. <a href="/reglementation#entreprise">Voir les règles pour les entreprises</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
 <p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
 """),
     dict(
@@ -577,7 +577,7 @@ ARTICLES = [
 <p>Un disque fatigué ou un réglage modifié peut réduire la durée sans que personne ne s'en aperçoive. Vérifier de temps en temps qu'on retrouve bien les images de la semaine passée évite les mauvaises surprises. C'est l'un des contrôles réalisés lors de nos <a href="/maintenance">visites de maintenance</a>.</p>
 
 <h2>Notre accompagnement</h2>
-<p>Nous installons et réglons la vidéosurveillance des commerces, entreprises et copropriétés du 06, avec une durée de conservation adaptée et conforme. <a href="/reglementation#conservation">Voir les règles de conservation</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p>Nous installons et réglons la vidéosurveillance des commerces, entreprises et copropriétés du Sud, avec une durée de conservation adaptée et conforme. <a href="/reglementation#conservation">Voir les règles de conservation</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
 <p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
 """),
     dict(
@@ -629,7 +629,7 @@ ARTICLES = [
 </ol>
 
 <h2>Notre accompagnement</h2>
-<p>Nous installons des caméras filaires comme sans fil, et choisissons avec vous lors de la visite gratuite la solution la plus fiable pour vos locaux, partout dans le 06. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p>Nous installons des caméras filaires comme sans fil, et choisissons avec vous lors de la visite gratuite la solution la plus fiable pour vos locaux, partout dans le Sud. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
     dict(
         slug="vision-de-nuit",
@@ -685,7 +685,7 @@ ARTICLES = [
 <p>Pensez aussi à nettoyer l'objectif de temps en temps : poussière, pollen et sel marin près du littoral voilent l'image, surtout la nuit.</p>
 
 <h2>Notre accompagnement</h2>
-<p>Lors de la visite gratuite, nous regardons l'éclairage de chaque zone, de jour comme de nuit, pour choisir entre infrarouge et couleur et placer chaque caméra au bon endroit, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p>Lors de la visite gratuite, nous regardons l'éclairage de chaque zone, de jour comme de nuit, pour choisir entre infrarouge et couleur et placer chaque caméra au bon endroit, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
     dict(
         slug="proteger-la-caisse",
@@ -743,7 +743,7 @@ ARTICLES = [
 <p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
 
 <h2>Notre accompagnement</h2>
-<p>Lors de la visite gratuite, nous regardons votre comptoir, l'éclairage et les accès pour placer les caméras de caisse au bon endroit et, si besoin, ajouter un bouton d'alerte relié à votre alarme, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p>Lors de la visite gratuite, nous regardons votre comptoir, l'éclairage et les accès pour placer les caméras de caisse au bon endroit et, si besoin, ajouter un bouton d'alerte relié à votre alarme, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
     dict(
         slug="vol-a-l-etalage",
@@ -810,7 +810,7 @@ ARTICLES = [
 </ul>
 
 <h2>Notre accompagnement</h2>
-<p>Lors de la visite gratuite, nous repérons avec vous les angles morts et les zones sensibles de votre magasin, puis plaçons les caméras là où elles dissuadent et identifient vraiment, partout dans le 06. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p>Lors de la visite gratuite, nous repérons avec vous les angles morts et les zones sensibles de votre magasin, puis plaçons les caméras là où elles dissuadent et identifient vraiment, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
     dict(
         slug="alarme-commerce",
@@ -877,7 +877,7 @@ ARTICLES = [
 <p>Couplée à la vidéosurveillance, l'alarme vous permet de <b>regarder immédiatement les images</b> sur votre téléphone quand elle se déclenche. Vous savez en quelques secondes s'il faut appeler les forces de l'ordre ou s'il s'agit d'une fausse alerte. Pensez aussi à vérifier les exigences de votre assureur, qui peut demander certains équipements.</p>
 
 <h2>Notre accompagnement</h2>
-<p>Lors de la visite gratuite, nous faisons le tour de votre commerce, repérons chaque accès possible et vous proposons le nombre de détecteurs juste nécessaire, partout dans le 06. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+<p>Lors de la visite gratuite, nous faisons le tour de votre commerce, repérons chaque accès possible et vous proposons le nombre de détecteurs juste nécessaire, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
 """),
     dict(
         slug="alarme-se-declenche-la-nuit",
@@ -947,6 +947,6 @@ ARTICLES = [
 </ul>
 
 <h2>Notre accompagnement</h2>
-<p>Nous installons des alarmes couplées aux caméras pour que vous puissiez vérifier une alerte depuis votre téléphone, et nous corrigeons les fausses alertes à répétition sur les installations existantes, partout dans le 06. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+<p>Nous installons des alarmes couplées aux caméras pour que vous puissiez vérifier une alerte depuis votre téléphone, et nous corrigeons les fausses alertes à répétition sur les installations existantes, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
 """),
 ]

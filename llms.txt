@@ -1,8 +1,8 @@
 # BELACONNECT
 
-> BELACONNECT est un installateur indépendant de vidéosurveillance, d'alarmes anti-intrusion, de réseaux et d'informatique pour les professionnels (commerces, restaurants, bureaux, entrepôts, chantiers) et les copropriétés, dans tout le département des Alpes-Maritimes (06), au départ de Nice.
+> BELACONNECT est un installateur indépendant de vidéosurveillance, d'alarmes anti-intrusion, de réseaux et d'informatique pour les professionnels (commerces, restaurants, bureaux, entrepôts, chantiers) et les copropriétés, dans les Alpes-Maritimes (06) et le Var (83), et dans les Bouches-du-Rhône (13) pour les chantiers importants.
 
-- Zone d'intervention : tout le département des Alpes-Maritimes (06), littoral et arrière-pays.
+- Zone d'intervention : Alpes-Maritimes (06) et Var (83), littoral et arrière-pays ; Bouches-du-Rhône (13) pour les chantiers importants.
 - Clients : entreprises, commerces, restaurants et hôtels, bureaux et cabinets, entrepôts et ateliers, chantiers, copropriétés (syndics et conseils syndicaux).
 - Services : installation et maintenance de vidéosurveillance (caméras intérieures et extérieures, filaires ou sans fil, enregistreur, accès smartphone), alarmes anti-intrusion sans fil ou filaires, réseau et câblage, Wi-Fi professionnel, remise au propre de baies de brassage, postes, serveurs, sauvegardes, dépannage informatique.
 - Matériel : professionnel, choisi selon les locaux.
@@ -17,10 +17,10 @@
 - [Informatique et réseau](https://belaconnect.fr/informatique): réseau, câblage, Wi-Fi pro, remise au propre de baies, postes, serveurs, sauvegardes, dépannage.
 - [Copropriétés](https://belaconnect.fr/copropriete): vidéosurveillance des parties communes (halls, parkings, garages, locaux communs), devis pour l'assemblée générale, syndics professionnels et bénévoles.
 - [Maintenance et dépannage](https://belaconnect.fr/maintenance): contrat d'entretien ou dépannage ponctuel, reprise d'installations posées par d'autres installateurs.
-- [Restaurants et hôtels](https://belaconnect.fr/restaurant): Caméras et alarme pour restaurants, bars et hôtels des Alpes-Maritimes : salle, terrasse, caisse, cuisine, réserve. Visite gratuite, installation hors service, accès sur smartphone.
-- [Pharmacies](https://belaconnect.fr/pharmacie): Caméras, alarme anti-intrusion et bouton d'alerte pour pharmacies des Alpes-Maritimes : comptoir, caisse, réserve, accès. Respect de la confidentialité des patients. Visite gratuite.
-- [Cabinets médicaux](https://belaconnect.fr/cabinet-medical): Alarme anti-intrusion, caméras sur les accès et réseau informatique sécurisé pour cabinets médicaux, dentaires et paramédicaux des Alpes-Maritimes. Respect du secret médical. Visite gratuite.
-- [Bureaux et entreprises](https://belaconnect.fr/bureaux): Alarme, contrôle des accès, caméras et réseau informatique pour bureaux, agences et entreprises des Alpes-Maritimes. Un seul interlocuteur pour la sécurité et l'informatique. Visite gratuite.
+- [Restaurants et hôtels](https://belaconnect.fr/restaurant): Caméras et alarme pour restaurants, bars et hôtels du Sud : salle, terrasse, caisse, cuisine, réserve. Visite gratuite, installation hors service, accès sur smartphone.
+- [Pharmacies](https://belaconnect.fr/pharmacie): Caméras, alarme anti-intrusion et bouton d'alerte pour pharmacies du Sud : comptoir, caisse, réserve, accès. Respect de la confidentialité des patients. Visite gratuite.
+- [Cabinets médicaux](https://belaconnect.fr/cabinet-medical): Alarme anti-intrusion, caméras sur les accès et réseau informatique sécurisé pour cabinets médicaux, dentaires et paramédicaux du Sud. Respect du secret médical. Visite gratuite.
+- [Bureaux et entreprises](https://belaconnect.fr/bureaux): Alarme, contrôle des accès, caméras et réseau informatique pour bureaux, agences et entreprises du Sud. Un seul interlocuteur pour la sécurité et l'informatique. Visite gratuite.
 - [À propos](https://belaconnect.fr/a-propos): présentation de l'entreprise, façon de travailler, engagements.
 - [Demander un devis](https://belaconnect.fr/contact): formulaire en 3 étapes, rappel rapide.
 

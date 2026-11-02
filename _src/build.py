@@ -174,7 +174,7 @@ def page_hero(crumb, title, lead, badge=None):
       <ul class="hero-trust">
         <li>{ic('check')} Devis gratuit</li>
         <li>{ic('check')} Visite sur place</li>
-        <li>{ic('check')} Tout le 06</li>
+        <li>{ic('check')} Tout le Sud</li>
       </ul>
     </div>
   </section>"""
@@ -241,12 +241,12 @@ def business_schema():
         "@id": SITE_URL + "/#entreprise",
         "name": "BELACONNECT",
         "alternateName": ["BelaConnect", "Bela Connect", "Bela Connect 06"],
-        "description": "Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels des Alpes-Maritimes.",
+        "description": "Installation de vidéosurveillance, d'alarmes et d'informatique pour les professionnels du Sud.",
         "url": SITE_URL + "/",
         "logo": SITE_URL + "/assets/favicon-512.png",
         "image": SITE_URL + "/assets/og-image.png",
         "address": {"@type": "PostalAddress", "addressLocality": "Nice", "addressRegion": "Alpes-Maritimes", "addressCountry": "FR"},
-        "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"},
+        "areaServed": [{"@type": "AdministrativeArea", "name": n} for n in ("Alpes-Maritimes (06)", "Var (83)", "Bouches-du-Rhône (13)")],
         "knowsAbout": ["Vidéosurveillance", "Alarme anti-intrusion", "Réseau informatique", "Remise au propre de baies de brassage", "Wi-Fi professionnel"],
         "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Services", "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "url": SITE_URL + "/" + u}}
@@ -291,7 +291,7 @@ def layout(filename, title, description, body, extra_head=""):
             "@context": "https://schema.org", "@type": "Service", "name": name, "description": desc,
             "serviceType": name, "url": canonical,
             "provider": {"@id": SITE_URL + "/#entreprise"},
-            "areaServed": {"@type": "AdministrativeArea", "name": "Alpes-Maritimes (06)"}},
+            "areaServed": [{"@type": "AdministrativeArea", "name": n} for n in ("Alpes-Maritimes (06)", "Var (83)", "Bouches-du-Rhône (13)")]},
             ensure_ascii=False) + "</script>"
     return f"""<!DOCTYPE html>
 <html lang="fr">
@@ -313,7 +313,7 @@ def layout(filename, title, description, body, extra_head=""):
 <meta property="og:image" content="{SITE_URL}/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="BelaConnect, vidéosurveillance et alarme pour les professionnels des Alpes-Maritimes">
+<meta property="og:image:alt" content="BelaConnect, vidéosurveillance et alarme pour les professionnels du Sud">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0E1A2E">
 <link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
@@ -354,7 +354,7 @@ def layout(filename, title, description, body, extra_head=""):
     <div class="foot-grid">
       <div>
         <a href="/" class="logo">{LOGO_SVG}<b>BELA<span>CONNECT</span></b></a>
-        <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels des Alpes-Maritimes.</p>
+        <p>Installateur indépendant en vidéosurveillance, alarme et informatique pour les professionnels du Sud.</p>
       </div>
       <div>
         <p class="foot-title">Services</p>
@@ -392,7 +392,7 @@ def layout(filename, title, description, body, extra_head=""):
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
-          <li>Alpes-Maritimes (06)</li>
+          <li>Alpes-Maritimes, Var, Bouches-du-Rhône</li>
         </ul>
       </div>
     </div>
@@ -420,7 +420,7 @@ def layout(filename, title, description, body, extra_head=""):
 # =============================================================================
 HOME_FAQ = [
     ("Où intervenez-vous ?",
-     "Dans tout le département des Alpes-Maritimes (06), sur le littoral comme dans l'arrière-pays."),
+     "Dans les Alpes-Maritimes et le Var, sur le littoral comme dans l'arrière-pays. Pour les chantiers importants, nous intervenons aussi dans les Bouches-du-Rhône."),
     ("Le devis est-il gratuit ?",
      "Oui. Nous nous déplaçons gratuitement dans vos locaux pour étudier votre besoin, puis nous vous remettons un devis détaillé, sans engagement."),
     ("Fournissez-vous le matériel ?",
@@ -435,9 +435,9 @@ home = f"""
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">Sécurité · Réseau · Informatique · Alpes-Maritimes</p>
-        <h1>Sécurité et informatique pour les professionnels du <em>06</em></h1>
-        <p class="lead">Vidéosurveillance, alarme, réseau, Wi-Fi et informatique : nous installons et entretenons les équipements des commerces, bureaux, entrepôts, chantiers et copropriétés, partout dans les Alpes-Maritimes.</p>
+        <p class="kicker">Sécurité · Réseau · Informatique · Sud</p>
+        <h1>Sécurité et informatique pour les professionnels du <em>Sud</em></h1>
+        <p class="lead">Vidéosurveillance, alarme, réseau, Wi-Fi et informatique : nous installons et entretenons les équipements des commerces, bureaux, entrepôts, chantiers et copropriétés, partout dans le Sud.</p>
         <div class="hero-cta">
           <a href="contact.html" class="btn btn-primary">Demander un devis gratuit</a>
           <a href="#services" class="btn btn-ghost">Voir nos services</a>
@@ -445,7 +445,7 @@ home = f"""
         <ul class="hero-trust">
           <li>{ic('check')} Devis gratuit</li>
           <li>{ic('check')} Visite sur place</li>
-          <li>{ic('check')} Tout le 06</li>
+          <li>{ic('check')} Tout le Sud</li>
         </ul>
       </div>
       <aside class="hero-info">
@@ -453,7 +453,7 @@ home = f"""
           <dt>Services</dt><dd>Vidéosurveillance, alarme, réseau, informatique</dd>
           <dt>Clients</dt><dd>Entreprises, commerces, copropriétés</dd>
           <dt>Devis</dt><dd>Gratuit, après visite sur place</dd>
-          <dt>Zone</dt><dd>Tout le département des Alpes-Maritimes</dd>
+          <dt>Zone</dt><dd>Alpes-Maritimes et Var, Bouches-du-Rhône pour les gros chantiers</dd>
           <dt>Matériel</dt><dd>Professionnel, choisi selon vos locaux</dd>
         </dl>
         <a href="tel:{PHONE_LINK}" class="hero-phone">{ic('phone')} {PHONE_DISPLAY}</a>
@@ -499,7 +499,7 @@ home = f"""
         <h2>Pourquoi choisir BelaConnect</h2>
       </div>
       <div class="grid-4 why-grid">
-        <div><b>06</b><h3>tout le département</h3><p>Nous intervenons partout dans les Alpes-Maritimes, sur le littoral comme dans l'arrière-pays.</p></div>
+        <div><b>Sud</b><h3>une large zone</h3><p>Nous intervenons dans les Alpes-Maritimes et le Var, et dans les Bouches-du-Rhône pour les gros chantiers.</p></div>
         <div><b>1</b><h3>seul interlocuteur</h3><p>Du devis à la maintenance, vous avez toujours affaire à la même personne.</p></div>
         <div><b>0 €</b><h3>pour la visite et le devis</h3><p>Nous venons voir vos locaux avant de chiffrer quoi que ce soit, sans engagement.</p></div>
         <div><b>3</b><h3>métiers réunis</h3><p>Vidéosurveillance, alarme et réseau : un seul prestataire pour que tout fonctionne ensemble.</p></div>
@@ -593,7 +593,7 @@ VIDEO_FAQ = [
 
 video = page_hero(
     "Vidéosurveillance",
-    "Vidéosurveillance <em>pour professionnels</em> dans les Alpes-Maritimes",
+    "Vidéosurveillance <em>pour professionnels</em> dans le Sud",
     "Commerces, bureaux, entrepôts et copropriétés : nous installons des caméras intérieures et extérieures, avec enregistreur et accès depuis votre téléphone, pour dissuader, être alerté et garder une preuve.",
     "Spécialité BelaConnect") + f"""
 
@@ -978,7 +978,7 @@ BESOINS = [("video", "Vidéosurveillance", "cam"), ("alarme", "Alarme", "alarm")
 contact = page_hero(
     "Devis gratuit",
     "Votre devis <em>gratuit</em> en 2 minutes",
-    "Trois étapes rapides pour décrire votre projet. Nous vous rappelons pour convenir d'une visite gratuite sur place, partout dans les Alpes-Maritimes. Sans engagement.") + f"""
+    "Trois étapes rapides pour décrire votre projet. Nous vous rappelons pour convenir d'une visite gratuite sur place, partout dans le Sud. Sans engagement.") + f"""
   <section>
     <div class="wrap quote-grid">
       <form id="devis" class="quote steps-form" data-to="{EMAIL}" data-tel="{PHONE_LINK}"{f' data-key="{FORM_KEY}"' if FORM_KEY else ""} novalidate>
@@ -1030,7 +1030,7 @@ contact = page_hero(
           <p class="aside-title">Après votre demande</p>
           <ol class="next-steps">
             <li><b>Nous vous rappelons</b> pour préciser votre besoin.</li>
-            <li><b>Visite gratuite</b> de vos locaux, partout dans le 06.</li>
+            <li><b>Visite gratuite</b> de vos locaux, partout dans le Sud.</li>
             <li><b>Devis détaillé</b> : matériel, emplacements, délais.</li>
           </ol>
           {checks(["Gratuit et sans engagement", "Matériel professionnel", "Un seul interlocuteur, du devis à la maintenance"])}
@@ -1242,8 +1242,8 @@ COPRO_FAQ = [
 
 copro = page_hero(
     "Copropriétés",
-    "Vidéosurveillance <em>pour les copropriétés</em> du 06",
-    "Halls, parkings, garages, locaux vélos et poubelles : nous équipons les parties communes des résidences des Alpes-Maritimes, avec un devis prêt pour votre assemblée générale.") + f"""
+    "Vidéosurveillance <em>pour les copropriétés</em> du Sud",
+    "Halls, parkings, garages, locaux vélos et poubelles : nous équipons les parties communes des résidences du Sud, avec un devis prêt pour votre assemblée générale.") + f"""
   <section>
     <div class="wrap">
       <div class="section-head">
@@ -1324,7 +1324,7 @@ copro = page_hero(
       {faq(COPRO_FAQ)}
     </div>
   </section>
-{cta_band("Un projet de caméras pour votre résidence ?", "Visite gratuite des parties communes et devis prêt à présenter en assemblée générale, partout dans le 06.")}
+{cta_band("Un projet de caméras pour votre résidence ?", "Visite gratuite des parties communes et devis prêt à présenter en assemblée générale, partout dans le Sud.")}
 """
 
 # =============================================================================
@@ -1419,18 +1419,18 @@ def secteur_page(x):
 about = page_hero(
     "À propos",
     "À propos de <em>BELACONNECT</em>",
-    "Installateur indépendant en vidéosurveillance, alarme et informatique pour les commerçants, entreprises et copropriétés des Alpes-Maritimes.") + f"""
+    "Installateur indépendant en vidéosurveillance, alarme et informatique pour les commerçants, entreprises et copropriétés du Sud.") + f"""
   <section>
     <div class="wrap split top">
       <div>
         <h2>Qui sommes-nous</h2>
-        <p>BELACONNECT est une entreprise des Alpes-Maritimes spécialisée dans la sécurité des locaux professionnels : vidéosurveillance, alarme anti-intrusion, et l'informatique qui va avec, du réseau au Wi-Fi.</p>
+        <p>BELACONNECT est une entreprise du Sud spécialisée dans la sécurité des locaux professionnels : vidéosurveillance, alarme anti-intrusion, et l'informatique qui va avec, du réseau au Wi-Fi.</p>
         <p>Nous travaillons surtout pour les commerçants, qui ont besoin d'une installation fiable, posée proprement et sans fermer la boutique, mais aussi pour les bureaux, les entrepôts, les chantiers et les copropriétés.</p>
         <p>Vous avez un seul interlocuteur, du premier rendez-vous à la maintenance. Pour les chantiers importants, nous intervenons en équipe afin de respecter vos délais.</p>
       </div>
       <div class="card">
         <h3>En bref</h3>
-        {checks(["Vidéosurveillance, alarme, réseau et informatique", "Commerces, bureaux, entrepôts, chantiers, copropriétés", "Tout le département des Alpes-Maritimes (06)", "Visite et devis gratuits, sans engagement", "Intervention rapide en cas de panne", "Reprise d'installations posées par d'autres"])}
+        {checks(["Vidéosurveillance, alarme, réseau et informatique", "Commerces, bureaux, entrepôts, chantiers, copropriétés", "Alpes-Maritimes et Var, Bouches-du-Rhône pour les gros chantiers", "Visite et devis gratuits, sans engagement", "Intervention rapide en cas de panne", "Reprise d'installations posées par d'autres"])}
       </div>
     </div>
   </section>
@@ -1460,7 +1460,7 @@ about = page_hero(
       </div>
       <div class="card">
         <h3>L'entreprise</h3>
-        <p>BELACONNECT, micro-entreprise immatriculée sous le SIREN {SIREN}. Intervention dans tout le département des Alpes-Maritimes.</p>
+        <p>BELACONNECT, micro-entreprise immatriculée sous le SIREN {SIREN}. Intervention dans les Alpes-Maritimes et le Var, et dans les Bouches-du-Rhône pour les gros chantiers.</p>
         <p><a href="tel:{PHONE_LINK}" class="inline-link">{PHONE_DISPLAY}</a> · <a href="mailto:{EMAIL}" class="inline-link">{EMAIL}</a></p>
       </div>
     </div>
@@ -1487,7 +1487,7 @@ MAINT_FAQ = [
 maint = page_hero(
     "Maintenance",
     "Maintenance et dépannage <em>de vos installations</em>",
-    "Caméras, alarme, réseau : nous entretenons et dépannons vos équipements, que nous les ayons installés ou non. Contrat d'entretien ou intervention ponctuelle, partout dans le 06.") + f"""
+    "Caméras, alarme, réseau : nous entretenons et dépannons vos équipements, que nous les ayons installés ou non. Contrat d'entretien ou intervention ponctuelle, partout dans le Sud.") + f"""
   <section>
     <div class="wrap">
       <div class="section-head">
@@ -1548,7 +1548,7 @@ maint = page_hero(
       {faq(MAINT_FAQ)}
     </div>
   </section>
-{cta_band("Une panne ou une installation à reprendre ?", "Appelez-nous ou décrivez votre problème : nous intervenons rapidement dans tout le 06.")}
+{cta_band("Une panne ou une installation à reprendre ?", "Appelez-nous ou décrivez votre problème : nous intervenons rapidement dans tout le Sud.")}
 """
 
 # =============================================================================
@@ -1646,20 +1646,20 @@ RELATED = {
 RELATED.update({x["file"]: x["related"] for x in SECTEURS})
 
 PAGES = [
-    ("index.html", "Vidéosurveillance, alarme et informatique pour professionnels (06) | BelaConnect",
-     "Installation de vidéosurveillance, d'alarmes, de réseaux et d'informatique pour les entreprises, commerces et copropriétés des Alpes-Maritimes (06). Devis gratuit sur place.",
+    ("index.html", "Vidéosurveillance, alarme et informatique pour professionnels dans le Sud | BelaConnect",
+     "Installation de vidéosurveillance, d'alarmes, de réseaux et d'informatique pour les entreprises, commerces et copropriétés du Sud : Alpes-Maritimes et Var. Devis gratuit sur place.",
      home, faq_jsonld(HOME_FAQ)),
-    ("videosurveillance.html", "Installation de caméras de surveillance pour professionnels (06) | BelaConnect",
-     "Pose de caméras professionnelles intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Commerces, entreprises, copropriétés. Intervention dans tout le 06.",
+    ("videosurveillance.html", "Installation de caméras de surveillance pour professionnels dans le Sud | BelaConnect",
+     "Pose de caméras professionnelles intérieures et extérieures, filaires ou sans fil, avec enregistreur et accès smartphone. Commerces, entreprises, copropriétés. Intervention dans tout le Sud.",
      video, faq_jsonld(VIDEO_FAQ)),
-    ("alarme.html", "Installation d'alarme pour commerces et bureaux (06) | BelaConnect",
-     "Installation d'alarmes anti-intrusion sans fil ou filaires pour commerces, bureaux et entrepôts dans les Alpes-Maritimes. Alertes sur smartphone. Devis gratuit.",
+    ("alarme.html", "Installation d'alarme pour commerces et bureaux dans le Sud | BelaConnect",
+     "Installation d'alarmes anti-intrusion sans fil ou filaires pour commerces, bureaux et entrepôts dans le Sud. Alertes sur smartphone. Devis gratuit.",
      alarm, faq_jsonld(ALARM_FAQ)),
-    ("informatique.html", "Informatique d'entreprise, réseau, baies et Wi-Fi pro (06) | BelaConnect",
-     "Réseau, câblage, remise au propre de baies de brassage, Wi-Fi professionnel, postes, serveurs, sauvegardes et dépannage informatique pour les entreprises du 06.",
+    ("informatique.html", "Informatique d'entreprise, réseau, baies et Wi-Fi pro dans le Sud | BelaConnect",
+     "Réseau, câblage, remise au propre de baies de brassage, Wi-Fi professionnel, postes, serveurs, sauvegardes et dépannage informatique pour les entreprises du Sud.",
      it, faq_jsonld(IT_FAQ)),
-    ("contact.html", "Devis gratuit vidéosurveillance et alarme (06) | BelaConnect",
-     "Demandez un devis gratuit pour votre projet de vidéosurveillance, d'alarme ou d'informatique dans les Alpes-Maritimes. Visite sur place offerte.",
+    ("contact.html", "Devis gratuit vidéosurveillance et alarme dans le Sud | BelaConnect",
+     "Demandez un devis gratuit pour votre projet de vidéosurveillance, d'alarme ou d'informatique dans le Sud. Visite sur place offerte.",
      contact, ""),
     ("reglementation.html", "Réglementation vidéosurveillance en entreprise, commerce et copropriété | BelaConnect",
      "Les règles de la vidéosurveillance en France : information des salariés, autorisation préfectorale pour les commerces, vote en AG en copropriété, panneau, durée de conservation, sanctions.",
@@ -1670,14 +1670,14 @@ PAGES = [
     ("404.html", "Page introuvable — BelaConnect",
      "Cette page n'existe pas.",
      notfound, '\n<meta name="robots" content="noindex">'),
-    ("copropriete.html", "Vidéosurveillance en copropriété dans les Alpes-Maritimes (06) | BelaConnect",
-     "Caméras pour halls, parkings, garages et locaux communs des copropriétés du 06. Visite gratuite et devis détaillé prêt pour l'assemblée générale. Syndics et conseils syndicaux.",
+    ("copropriete.html", "Vidéosurveillance en copropriété dans le Sud | BelaConnect",
+     "Caméras pour halls, parkings, garages et locaux communs des copropriétés du Sud. Visite gratuite et devis détaillé prêt pour l'assemblée générale. Syndics et conseils syndicaux.",
      copro, faq_jsonld(COPRO_FAQ)),
-    ("a-propos.html", "À propos de BELACONNECT, installateur sécurité et informatique (06) | BelaConnect",
-     "BELACONNECT, installateur indépendant de vidéosurveillance, d'alarmes et d'informatique pour les commerçants, entreprises et copropriétés des Alpes-Maritimes.",
+    ("a-propos.html", "À propos de BELACONNECT, installateur sécurité et informatique dans le Sud | BelaConnect",
+     "BELACONNECT, installateur indépendant de vidéosurveillance, d'alarmes et d'informatique pour les commerçants, entreprises et copropriétés du Sud.",
      about, ""),
-    ("maintenance.html", "Maintenance et dépannage vidéosurveillance, alarme, réseau (06) | BelaConnect",
-     "Contrat d'entretien ou dépannage ponctuel de caméras, alarmes et réseaux dans les Alpes-Maritimes. Reprise d'installations posées par d'autres installateurs.",
+    ("maintenance.html", "Maintenance et dépannage vidéosurveillance, alarme, réseau dans le Sud | BelaConnect",
+     "Contrat d'entretien ou dépannage ponctuel de caméras, alarmes et réseaux dans le Sud. Reprise d'installations posées par d'autres installateurs.",
      maint, faq_jsonld(MAINT_FAQ)),
     ("conseils/index.html", "Conseils vidéosurveillance, alarme et réseau pour professionnels | BelaConnect",
      "Nos conseils pour protéger un commerce, choisir une alarme, installer des caméras en copropriété ou remettre au propre une baie réseau.",
@@ -1742,9 +1742,9 @@ def main():
     arts = "\n".join(f"- [{a['title']}]({SITE_URL}/conseils/{a['slug']}): {a['summary']}" for a in ARTICLES)
     (ROOT / "llms.txt").write_text(f"""# BELACONNECT
 
-> BELACONNECT est un installateur indépendant de vidéosurveillance, d'alarmes anti-intrusion, de réseaux et d'informatique pour les professionnels (commerces, restaurants, bureaux, entrepôts, chantiers) et les copropriétés, dans tout le département des Alpes-Maritimes (06), au départ de Nice.
+> BELACONNECT est un installateur indépendant de vidéosurveillance, d'alarmes anti-intrusion, de réseaux et d'informatique pour les professionnels (commerces, restaurants, bureaux, entrepôts, chantiers) et les copropriétés, dans les Alpes-Maritimes (06) et le Var (83), et dans les Bouches-du-Rhône (13) pour les chantiers importants.
 
-- Zone d'intervention : tout le département des Alpes-Maritimes (06), littoral et arrière-pays.
+- Zone d'intervention : Alpes-Maritimes (06) et Var (83), littoral et arrière-pays ; Bouches-du-Rhône (13) pour les chantiers importants.
 - Clients : entreprises, commerces, restaurants et hôtels, bureaux et cabinets, entrepôts et ateliers, chantiers, copropriétés (syndics et conseils syndicaux).
 - Services : installation et maintenance de vidéosurveillance (caméras intérieures et extérieures, filaires ou sans fil, enregistreur, accès smartphone), alarmes anti-intrusion sans fil ou filaires, réseau et câblage, Wi-Fi professionnel, remise au propre de baies de brassage, postes, serveurs, sauvegardes, dépannage informatique.
 - Matériel : professionnel, choisi selon les locaux.
