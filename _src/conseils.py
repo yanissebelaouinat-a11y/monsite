@@ -879,4 +879,74 @@ ARTICLES = [
 <h2>Notre accompagnement</h2>
 <p>Lors de la visite gratuite, nous faisons le tour de votre commerce, repérons chaque accès possible et vous proposons le nombre de détecteurs juste nécessaire, partout dans le 06. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="alarme-se-declenche-la-nuit",
+        title="Votre alarme se déclenche la nuit : les bons réflexes",
+        short="Alarme déclenchée la nuit",
+        seo="Alarme de commerce déclenchée la nuit : que faire ?",
+        desc="Alerte d'alarme en pleine nuit : comment vérifier, quand appeler le 17, pourquoi ne pas se déplacer seul, et comment éviter les fausses alertes à répétition.",
+        summary="Vérifier à distance, appeler le 17, ne pas y aller seul, limiter les fausses alertes : la marche à suivre quand l'alarme du commerce sonne la nuit.",
+        date="2026-11-02",
+        related=["alarme-commerce", "alarme-sans-fil-ou-filaire"],
+        body="""
+<p>Il est trois heures du matin et votre téléphone vous signale une alerte : l'alarme du commerce vient de se déclencher. Dans ce moment de stress, il est facile de mal réagir, en fonçant seul sur place ou au contraire en ignorant une vraie intrusion. Mieux vaut avoir réfléchi à la marche à suivre avant que cela n'arrive.</p>
+
+<h2>1. Vérifier avant d'agir</h2>
+<p>La première étape est de savoir s'il s'agit d'une vraie intrusion.</p>
+<ul>
+  <li><b>Regardez quel détecteur s'est déclenché</b> dans l'application : porte d'entrée, réserve, vitrine, détecteur de mouvement.</li>
+  <li><b>Consultez les caméras</b> sur votre téléphone, en direct et dans les enregistrements des dernières minutes.</li>
+  <li><b>Regardez la photo de levée de doute</b> si vos détecteurs en prennent une.</li>
+  <li><b>Vérifiez si plusieurs détecteurs</b> se sont déclenchés à la suite : c'est le signe d'une personne qui se déplace.</li>
+</ul>
+<p>C'est pour ce moment précis que l'association alarme et caméras est précieuse : en quelques secondes, vous savez si quelqu'un est dans le magasin.</p>
+
+<h2>2. En cas d'intrusion : appeler le 17</h2>
+<p>Si les images ou les détecteurs montrent une présence, <b>appelez immédiatement la police ou la gendarmerie</b> en composant le 17 (ou le 112).</p>
+<ul>
+  <li><b>Indiquez l'adresse exacte</b> du commerce et comment y accéder.</li>
+  <li><b>Décrivez ce que vous voyez</b> sur les images : nombre de personnes, ce qu'elles font, véhicule éventuel.</li>
+  <li><b>Précisez que vous suivez la scène en direct</b>, cela aide les forces de l'ordre à évaluer l'urgence.</li>
+</ul>
+<p>Si vous avez souscrit un service de télésurveillance, celui-ci se charge de la levée de doute et de l'appel aux forces de l'ordre selon les conditions de votre contrat.</p>
+
+<h2>3. Ne jamais intervenir seul</h2>
+<p>C'est la règle la plus importante : <b>ne vous rendez pas seul sur place</b> pendant qu'une intrusion est en cours. Un cambrioleur surpris peut devenir dangereux, et aucun stock ne vaut de prendre ce risque.</p>
+<ul>
+  <li><b>Attendez l'arrivée des forces de l'ordre</b> avant d'entrer dans le local.</li>
+  <li><b>Ne touchez à rien</b> à votre arrivée : les traces peuvent être utiles à l'enquête.</li>
+  <li><b>Si vous devez vous déplacer</b> pour une alerte douteuse, faites-vous accompagner et restez à l'extérieur en cas de doute.</li>
+</ul>
+
+<h2>4. Après une intrusion</h2>
+<ol>
+  <li><b>Sauvegardez les enregistrements</b> des caméras avant qu'ils ne soient effacés par l'enregistrement en boucle.</li>
+  <li><b>Faites constater les dégâts</b> et prenez des photos.</li>
+  <li><b>Déposez plainte</b> en apportant les images et la liste des objets volés.</li>
+  <li><b>Prévenez votre assureur</b> dans les délais prévus par votre contrat.</li>
+  <li><b>Faites vérifier l'alarme</b> : un détecteur arraché ou une porte forcée doivent être remis en état rapidement.</li>
+</ol>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les démarches officielles, notamment le dépôt de plainte, consultez service-public.fr.</p>
+
+<h2>5. S'il s'agit d'une fausse alerte</h2>
+<p>Une fausse alerte de temps en temps n'a rien de grave. Mais si elles se répètent, il faut en trouver la cause, sinon vous finirez par ne plus réagir aux alertes, et vos voisins non plus.</p>
+<ul>
+  <li><b>Un détecteur mal placé</b> face à une vitrine, un radiateur ou une bouche de ventilation.</li>
+  <li><b>Un objet qui bouge</b> : affiche suspendue, ballon, plante devant un ventilateur.</li>
+  <li><b>Un animal</b> resté à l'intérieur ou un insecte sur la lentille du détecteur.</li>
+  <li><b>Une porte mal fermée</b> qui bouge avec le vent ou un courant d'air.</li>
+  <li><b>Une pile faible</b> sur un détecteur sans fil.</li>
+</ul>
+
+<h2>Préparez-vous dès maintenant</h2>
+<ul>
+  <li><b>Choisissez qui reçoit les alertes</b> : vous, un associé, un responsable proche du magasin.</li>
+  <li><b>Gardez à portée de main</b> l'adresse exacte et le code d'accès de l'immeuble si nécessaire.</li>
+  <li><b>Testez régulièrement l'alarme</b> et vérifiez que les notifications arrivent bien sur chaque téléphone.</li>
+  <li><b>Réglez la durée de la sirène</b> pour qu'elle ne sonne pas indéfiniment et ne gêne pas le voisinage.</li>
+</ul>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons des alarmes couplées aux caméras pour que vous puissiez vérifier une alerte depuis votre téléphone, et nous corrigeons les fausses alertes à répétition sur les installations existantes, partout dans le 06. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
