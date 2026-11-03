@@ -949,4 +949,77 @@ ARTICLES = [
 <h2>Notre accompagnement</h2>
 <p>Nous installons des alarmes couplées aux caméras pour que vous puissiez vérifier une alerte depuis votre téléphone, et nous corrigeons les fausses alertes à répétition sur les installations existantes, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="securiser-un-entrepot",
+        title="Sécuriser un entrepôt : caméras, alarme et accès",
+        short="Sécuriser un entrepôt",
+        seo="Sécuriser un entrepôt : vidéosurveillance, alarme, contrôle d'accès",
+        desc="Périmètre, quais de chargement, stock, accès des salariés : comment protéger un entrepôt ou un atelier avec des caméras, une alarme et un contrôle des accès adaptés.",
+        summary="Périmètre, quais, stock, bureaux et accès : les points à protéger dans un entrepôt et les équipements qui fonctionnent vraiment sur de grandes surfaces.",
+        date="2026-11-03",
+        related=["vision-de-nuit", "alarme-commerce"],
+        body="""
+<p>Un entrepôt concentre souvent une grande valeur de marchandises et de matériel sur une surface étendue, vide la nuit et le week-end. Grandes portes, quais de chargement, parkings, clôtures : les points d'entrée sont nombreux. Le sécuriser demande une approche différente de celle d'un commerce, pensée pour les grands volumes et l'extérieur.</p>
+
+<h2>Commencer par le périmètre</h2>
+<p>La meilleure intrusion est celle qui n'a pas lieu. La première ligne de défense se situe autour du bâtiment.</p>
+<ul>
+  <li><b>Une clôture et un portail en bon état</b>, sans passage facile ni objet qui permette de l'escalader.</li>
+  <li><b>Un éclairage extérieur</b>, idéalement à détection, sur les façades et les zones de stationnement.</li>
+  <li><b>Des caméras extérieures sur les accès</b> : portail, entrées piétonnes, parking, abords des quais.</li>
+  <li><b>Une signalisation visible</b> de la vidéosurveillance, qui a un vrai effet dissuasif.</li>
+</ul>
+
+<h2>Les quais de chargement</h2>
+<p>Les quais sont à la fois le cœur de l'activité et un point faible : portes sectionnelles, allées et venues de transporteurs, marchandises en attente.</p>
+<ul>
+  <li><b>Une caméra par quai</b> ou une vue d'ensemble selon la configuration, pour suivre les chargements et lever le doute en cas de litige.</li>
+  <li><b>Des détecteurs d'ouverture</b> sur les portes sectionnelles, reliés à l'alarme.</li>
+  <li><b>Une bonne résolution</b> pour lire une plaque d'immatriculation ou un numéro de remorque.</li>
+</ul>
+
+<h2>L'intérieur : stock et zones sensibles</h2>
+<ul>
+  <li><b>Les allées de stockage</b> : des caméras placées en hauteur, dans l'axe des allées, pour éviter que les racks ne masquent la vue.</li>
+  <li><b>Les zones de valeur</b> : cage grillagée, stock sensible, outillage, à surveiller en priorité.</li>
+  <li><b>Les bureaux et le local technique</b> : informatique, baie réseau, enregistreur des caméras.</li>
+</ul>
+<p>Sur de grandes surfaces, des caméras avec un <b>angle large</b> ou un <b>zoom</b> permettent de couvrir plus d'espace avec moins d'appareils. La question est traitée en détail dans notre article <a href="/conseils/combien-de-cameras">combien de caméras faut-il</a>.</p>
+
+<h2>Voir la nuit, sur de longues distances</h2>
+<p>Un entrepôt se surveille surtout la nuit. Les caméras doivent avoir une <b>vision de nuit longue portée</b>, adaptée aux cours et aux parkings peu éclairés. Selon l'éclairage, l'infrarouge ou la couleur de nuit avec projecteur sera plus adapté : voir notre article <a href="/conseils/vision-de-nuit">vision de nuit, infrarouge ou couleur</a>.</p>
+
+<h2>Une alarme adaptée aux grands volumes</h2>
+<ul>
+  <li><b>Des détecteurs d'ouverture</b> sur toutes les portes, y compris les issues de secours.</li>
+  <li><b>Des détecteurs de mouvement adaptés aux grandes hauteurs</b> et aux longues allées.</li>
+  <li><b>Des détecteurs extérieurs</b> pour être alerté avant même qu'un intrus n'atteigne le bâtiment.</li>
+  <li><b>Une sirène extérieure avec flash</b>, visible de loin.</li>
+  <li><b>Une transmission par carte SIM</b> en plus d'internet, et une batterie de secours.</li>
+</ul>
+<p>Couplée aux caméras, l'alarme vous permet de vérifier immédiatement sur votre téléphone ce qui se passe quand elle se déclenche. Pour la marche à suivre en cas d'alerte, lisez notre article <a href="/conseils/alarme-se-declenche-la-nuit">votre alarme se déclenche la nuit</a>.</p>
+
+<h2>Contrôler les accès</h2>
+<p>Dans un entrepôt, beaucoup de personnes entrent et sortent : salariés, intérimaires, chauffeurs, prestataires.</p>
+<ul>
+  <li><b>Un badge ou un code par personne</b>, facile à retirer quand quelqu'un quitte l'entreprise.</li>
+  <li><b>Un historique</b> des ouvertures et de l'armement de l'alarme.</li>
+  <li><b>Des zones à accès limité</b> pour le stock de valeur et le local technique.</li>
+</ul>
+
+<h2>Le réseau, souvent oublié</h2>
+<p>Sur un grand site, les caméras éloignées posent la question du câblage. Les distances, les liaisons entre bâtiments et le Wi-Fi dans les zones de stockage se préparent avec soin. Un réseau bien conçu, avec une baie rangée, garantit que les caméras restent connectées et que l'enregistrement ne s'arrête pas.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Informer les salariés</b> individuellement et par des panneaux.</li>
+  <li><b>Ne pas filmer en continu</b> un poste de travail ni les zones de pause et les vestiaires.</li>
+  <li><b>Ne pas filmer la voie publique</b> au-delà de ce qui est strictement nécessaire aux abords.</li>
+  <li><b>Limiter la durée de conservation</b> des images et l'accès aux personnes habilitées.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous faisons le tour de votre site lors de la visite gratuite, de jour comme de nuit si besoin, pour placer caméras, détecteurs et accès là où ils sont vraiment utiles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
