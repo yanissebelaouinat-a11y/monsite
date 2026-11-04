@@ -1022,4 +1022,63 @@ ARTICLES = [
 <h2>Notre accompagnement</h2>
 <p>Nous faisons le tour de votre site lors de la visite gratuite, de jour comme de nuit si besoin, pour placer caméras, détecteurs et accès là où ils sont vraiment utiles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="wifi-clients-separe",
+        title="Wi-Fi clients : pourquoi le séparer du réseau de votre entreprise",
+        short="Wi-Fi clients séparé",
+        seo="Wi-Fi clients séparé du réseau de l'entreprise : pourquoi et comment",
+        desc="Proposer le Wi-Fi à vos clients sans exposer votre caisse, vos caméras et vos ordinateurs : réseau invités, isolation, mot de passe, débit et obligations.",
+        summary="Un Wi-Fi offert aux clients ne doit jamais donner accès à votre caisse ni à vos caméras : comment mettre en place un réseau invités vraiment séparé.",
+        date="2026-11-04",
+        related=["baie-de-brassage", "camera-wifi-ou-poe"],
+        body="""
+<p>Offrir le Wi-Fi à vos clients est devenu presque indispensable dans un restaurant, un hôtel, une salle d'attente ou une boutique. Mais dans beaucoup de commerces, le mot de passe donné aux clients est le même que celui du réseau qui relie la caisse, les caméras et les ordinateurs. C'est une porte ouverte sur tout ce qui compte pour votre activité.</p>
+
+<h2>Le risque d'un réseau unique</h2>
+<p>Quand clients et équipements professionnels partagent le même réseau, n'importe quel appareil connecté peut « voir » les autres.</p>
+<ul>
+  <li><b>Vos caméras et votre enregistreur</b> deviennent visibles, parfois accessibles avec un mot de passe par défaut.</li>
+  <li><b>Votre caisse et votre terminal</b> se retrouvent sur le même réseau que des téléphones inconnus.</li>
+  <li><b>Vos ordinateurs et imprimantes</b> partagés peuvent être explorés.</li>
+  <li><b>Un appareil infecté</b> d'un client peut contaminer vos propres machines.</li>
+  <li><b>Le débit</b> est partagé : un client qui télécharge peut ralentir votre caisse ou vos paiements.</li>
+</ul>
+<p>Sans même parler de piratage volontaire, un simple mot de passe qui circule entre clients, anciens salariés et voisins finit par donner accès à votre réseau à beaucoup trop de monde.</p>
+
+<h2>La solution : un réseau invités séparé</h2>
+<p>Le principe est simple : créer <b>deux réseaux distincts</b>, qui ne communiquent pas entre eux.</p>
+<ul>
+  <li><b>Un réseau professionnel</b>, avec un mot de passe connu uniquement de vous et de vos salariés de confiance, pour la caisse, les caméras, les ordinateurs et l'imprimante.</li>
+  <li><b>Un réseau invités</b>, avec son propre nom et son propre mot de passe, qui donne accès à internet et à rien d'autre.</li>
+</ul>
+<p>Sur un équipement professionnel, cette séparation se fait proprement grâce à des <b>réseaux virtuels</b> (VLAN) : même si tout passe par les mêmes câbles et les mêmes bornes, les deux réseaux restent étanches.</p>
+
+<h2>Les réglages qui comptent</h2>
+<ul>
+  <li><b>L'isolation des clients</b> : sur le réseau invités, les appareils ne peuvent pas se voir entre eux.</li>
+  <li><b>Une limite de débit</b> par appareil, pour que le Wi-Fi des clients ne ralentisse jamais votre activité.</li>
+  <li><b>Un mot de passe changé régulièrement</b> pour le réseau invités, affiché simplement au comptoir ou sur un QR code.</li>
+  <li><b>Un mot de passe fort et confidentiel</b> pour le réseau professionnel, changé quand un salarié part.</li>
+  <li><b>Les caméras de préférence en câble</b>, sur le réseau professionnel uniquement.</li>
+</ul>
+
+<h2>Une bonne couverture, sans zone blanche</h2>
+<p>Un Wi-Fi clients qui ne fonctionne qu'à côté de la caisse ne sert à rien. Dans une salle de restaurant, sur une terrasse ou dans un hôtel, il faut souvent <b>plusieurs bornes</b>, placées au bon endroit et reliées par câble. La box internet seule, posée dans un placard, couvre rarement tout l'établissement.</p>
+<p>Des bornes professionnelles permettent aussi de gérer les deux réseaux depuis un seul endroit et de passer d'une borne à l'autre sans coupure quand on se déplace.</p>
+
+<h2>Et les obligations légales ?</h2>
+<p>Un professionnel qui fournit un accès à internet au public peut être soumis à certaines obligations, notamment de conservation de données de connexion. Les règles dépendent de votre situation : renseignez-vous avant de mettre en place un Wi-Fi ouvert au public.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez service-public.fr et cnil.fr.</p>
+
+<h2>Comment savoir si votre réseau est séparé ?</h2>
+<ol>
+  <li><b>Comptez vos réseaux Wi-Fi</b> : si clients et salariés utilisent le même nom de réseau, il n'y a pas de séparation.</li>
+  <li><b>Demandez-vous qui connaît le mot de passe</b> du réseau où sont branchées la caisse et les caméras.</li>
+  <li><b>Regardez votre baie ou votre box</b> : un seul appareil grand public pour tout le local signifie souvent un réseau unique.</li>
+</ol>
+<p>Si l'une de ces réponses vous inquiète, il est temps de faire le point. Une baie en désordre est souvent le signe d'un réseau qui s'est construit au fil du temps : voir notre article sur la <a href="/conseils/baie-de-brassage">remise au propre d'une baie de brassage</a>.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons des bornes Wi-Fi professionnelles et séparons proprement le réseau de vos clients de celui de votre caisse, de vos caméras et de vos ordinateurs, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
+"""),
 ]
