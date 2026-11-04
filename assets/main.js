@@ -157,34 +157,6 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
-    // Ondes du haut de page : léger effet de profondeur qui suit la souris (ordinateur)
-    var waves = document.querySelector('.hero-waves'), hero = waves && waves.closest('.hero');
-    if (waves && window.matchMedia('(hover:hover)').matches) {
-      var tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
-      var loop = function () {
-        cx += (tx - cx) * .08; cy += (ty - cy) * .08;
-        waves.style.setProperty('--px', cx.toFixed(1) + 'px');
-        waves.style.setProperty('--py', cy.toFixed(1) + 'px');
-        raf = Math.abs(tx - cx) + Math.abs(ty - cy) > .2 ? requestAnimationFrame(loop) : 0;
-      };
-      hero.addEventListener('mousemove', function (e) {
-        var r = hero.getBoundingClientRect();
-        tx = ((e.clientX - r.left) / r.width - .5) * -28;
-        ty = ((e.clientY - r.top) / r.height - .5) * -20;
-        if (!raf) raf = requestAnimationFrame(loop);
-      });
-      hero.addEventListener('mouseleave', function () { tx = ty = 0; if (!raf) raf = requestAnimationFrame(loop); });
-    }
-
-    // Halo qui suit la souris sur les cartes
-    document.querySelectorAll('a.card.main, a.art-card').forEach(function (c) {
-      c.addEventListener('mousemove', function (e) {
-        var r = c.getBoundingClientRect();
-        c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        c.style.setProperty('--my', (e.clientY - r.top) + 'px');
-      });
-    });
-
     // Barre de progression de lecture (articles)
     var art = document.querySelector('.article');
     if (art) {

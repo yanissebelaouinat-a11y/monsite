@@ -448,16 +448,32 @@ home = f"""
           <li>{ic('check')} Tout le Sud</li>
         </ul>
       </div>
-      <aside class="hero-info">
-        <dl>
-          <dt>Services</dt><dd>Vidéosurveillance, alarme, réseau, informatique</dd>
-          <dt>Clients</dt><dd>Entreprises, commerces, copropriétés</dd>
-          <dt>Devis</dt><dd>Gratuit, après visite sur place</dd>
-          <dt>Zone</dt><dd>Alpes-Maritimes et Var, Bouches-du-Rhône pour les gros chantiers</dd>
-          <dt>Matériel</dt><dd>Professionnel, choisi selon vos locaux</dd>
-        </dl>
-        <a href="tel:{PHONE_LINK}" class="hero-phone">{ic('phone')} {PHONE_DISPLAY}</a>
-      </aside>
+      <div class="phone" role="img" aria-label="Exemple : images des caméras et alerte de l'alarme sur votre téléphone">
+        <div class="phone-screen">
+          <div class="phone-bar"><span>3:12</span><span>Boutique</span></div>
+          <div class="phone-head"><b>Réserve</b><span>Caméra 2 sur 4</span></div>
+          <div class="cam">
+            <svg viewBox="0 0 240 180" aria-hidden="true">
+              <rect width="240" height="180" fill="#1C2533"/>
+              <path d="M0 180 L70 110 L170 110 L240 180Z" fill="#232E3E"/>
+              <rect x="70" y="30" width="100" height="80" fill="#202A39"/>
+              <rect x="14" y="40" width="40" height="120" fill="#2A3546"/><rect x="14" y="70" width="40" height="3" fill="#36435A"/><rect x="14" y="100" width="40" height="3" fill="#36435A"/><rect x="14" y="130" width="40" height="3" fill="#36435A"/>
+              <rect x="186" y="40" width="40" height="120" fill="#2A3546"/><rect x="186" y="70" width="40" height="3" fill="#36435A"/><rect x="186" y="100" width="40" height="3" fill="#36435A"/><rect x="186" y="130" width="40" height="3" fill="#36435A"/>
+              <rect x="20" y="52" width="12" height="16" fill="#3A4860"/><rect x="34" y="56" width="14" height="12" fill="#33415A"/><rect x="192" y="84" width="16" height="14" fill="#3A4860"/><rect x="22" y="112" width="20" height="16" fill="#33415A"/>
+              <rect x="104" y="46" width="32" height="64" fill="#151C27" stroke="#3A4860" stroke-width="2"/>
+              <circle cx="120" cy="84" r="7" fill="#4A586F"/><path d="M110 110 Q120 92 130 110Z" fill="#4A586F"/>
+              <rect x="98" y="66" width="44" height="50" fill="none" stroke="#FF9F1C" stroke-width="1.5"/>
+            </svg>
+            <span class="cam-tag"><span class="live"></span>En direct</span>
+            <span class="cam-time">03:12:48</span>
+          </div>
+          <div class="notif">{ic('bell')}<div><b>Mouvement détecté</b><span>Réserve · porte arrière · 3 h 12</span></div></div>
+          <div class="phone-rows">
+            <div><span>Alarme</span><span>Armée</span></div>
+            <div><span>Caméras</span><span>4 en ligne</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -467,7 +483,7 @@ home = f"""
         <h2>Ce que nous faisons</h2>
         <p>La vidéosurveillance et l'alarme sont notre cœur de métier. L'informatique vient en complément, pour que tout fonctionne sur un même réseau.</p>
       </div>
-      <div class="grid-3">
+      <div class="grid-3 svc-grid">
         <a href="videosurveillance.html" class="card main svc-video">
           <div class="icon">{ic('cam')}</div>
           <h3>Vidéosurveillance</h3>
@@ -496,10 +512,10 @@ home = f"""
   <section class="why">
     <div class="wrap">
       <div class="section-head">
-        <h2>Pourquoi choisir BelaConnect</h2>
+        <h2>Un seul installateur, du devis à la maintenance</h2>
       </div>
       <div class="grid-4 why-grid">
-        <div><b>Sud</b><h3>une large zone</h3><p>Nous intervenons dans les Alpes-Maritimes et le Var, et dans les Bouches-du-Rhône pour les gros chantiers.</p></div>
+        <div><b>Sud</b><h3>Alpes-Maritimes et Var</h3><p>Nous intervenons dans les Alpes-Maritimes et le Var, et dans les Bouches-du-Rhône pour les gros chantiers.</p></div>
         <div><b>1</b><h3>seul interlocuteur</h3><p>Du devis à la maintenance, vous avez toujours affaire à la même personne.</p></div>
         <div><b>0 €</b><h3>pour la visite et le devis</h3><p>Nous venons voir vos locaux avant de chiffrer quoi que ce soit, sans engagement.</p></div>
         <div><b>3</b><h3>métiers réunis</h3><p>Vidéosurveillance, alarme et réseau : un seul prestataire pour que tout fonctionne ensemble.</p></div>
