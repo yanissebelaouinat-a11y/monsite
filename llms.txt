@@ -46,6 +46,7 @@
 - [Votre alarme se déclenche la nuit : les bons réflexes](https://belaconnect.fr/conseils/alarme-se-declenche-la-nuit): Vérifier à distance, appeler le 17, ne pas y aller seul, limiter les fausses alertes : la marche à suivre quand l'alarme du commerce sonne la nuit.
 - [Sécuriser un entrepôt : caméras, alarme et accès](https://belaconnect.fr/conseils/securiser-un-entrepot): Périmètre, quais, stock, bureaux et accès : les points à protéger dans un entrepôt et les équipements qui fonctionnent vraiment sur de grandes surfaces.
 - [Wi-Fi clients : pourquoi le séparer du réseau de votre entreprise](https://belaconnect.fr/conseils/wifi-clients-separe): Un Wi-Fi offert aux clients ne doit jamais donner accès à votre caisse ni à vos caméras : comment mettre en place un réseau invités vraiment séparé.
+- [La règle des sauvegardes 3-2-1 : protéger les données de votre entreprise](https://belaconnect.fr/conseils/sauvegardes-3-2-1): Trois copies, deux supports, une hors des locaux : la méthode simple pour ne jamais perdre vos factures, fichiers clients et documents.
 
 ## Informations utiles
 

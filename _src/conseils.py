@@ -1081,4 +1081,66 @@ ARTICLES = [
 <h2>Notre accompagnement</h2>
 <p>Nous installons des bornes Wi-Fi professionnelles et séparons proprement le réseau de vos clients de celui de votre caisse, de vos caméras et de vos ordinateurs, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="sauvegardes-3-2-1",
+        title="La règle des sauvegardes 3-2-1 : protéger les données de votre entreprise",
+        short="Sauvegardes 3-2-1",
+        seo="Sauvegardes 3-2-1 pour une petite entreprise : la méthode simple",
+        desc="3 copies, 2 supports, 1 hors des locaux : la règle 3-2-1 expliquée simplement pour protéger factures, fichiers clients et comptabilité d'un commerce ou d'un bureau.",
+        summary="Trois copies, deux supports, une hors des locaux : la méthode simple pour ne jamais perdre vos factures, fichiers clients et documents.",
+        date="2026-11-05",
+        related=["wifi-clients-separe", "baie-de-brassage"],
+        body="""
+<p>Un disque dur qui lâche, un ordinateur volé, un dégât des eaux, un virus qui chiffre tous les fichiers : il suffit d'un incident pour perdre des années de factures, de devis et de fichiers clients. Beaucoup de petites entreprises pensent être protégées parce qu'elles ont « une clé USB quelque part ». La règle 3-2-1 est une méthode simple pour l'être vraiment.</p>
+
+<h2>La règle en une phrase</h2>
+<p>Gardez <b>3 copies</b> de vos données, sur <b>2 supports différents</b>, dont <b>1 hors de vos locaux</b>.</p>
+<ul>
+  <li><b>3 copies</b> : l'original sur votre ordinateur ou votre serveur, plus deux sauvegardes.</li>
+  <li><b>2 supports différents</b> : par exemple un disque de sauvegarde dans le local et un service en ligne. Si un support tombe en panne, l'autre est toujours là.</li>
+  <li><b>1 copie hors des locaux</b> : en cas de vol, d'incendie ou d'inondation, tout ce qui se trouve sur place peut disparaître en même temps.</li>
+</ul>
+
+<h2>Pourquoi une seule sauvegarde ne suffit pas</h2>
+<p>Un disque branché en permanence à l'ordinateur est pratique, mais il partage le sort de l'ordinateur : même vol, même surtension, même virus. Les logiciels malveillants qui chiffrent les fichiers s'attaquent d'ailleurs en priorité à tout ce qui est accessible depuis le poste, y compris les disques et dossiers partagés.</p>
+<p>C'est pour cela que la copie hors des locaux, ou au moins une copie <b>déconnectée</b> la plupart du temps, fait toute la différence.</p>
+
+<h2>Que faut-il sauvegarder ?</h2>
+<ul>
+  <li><b>La comptabilité et la facturation</b>, souvent soumises à des durées de conservation légales.</li>
+  <li><b>Les fichiers clients</b> et les devis en cours.</li>
+  <li><b>Les documents de l'entreprise</b> : contrats, statuts, attestations, plans.</li>
+  <li><b>Les boîtes mail</b> si elles ne sont pas déjà hébergées en ligne.</li>
+  <li><b>Les réglages importants</b> : logiciel de caisse, configuration du réseau, mots de passe stockés dans un gestionnaire.</li>
+</ul>
+<p>Les images de vidéosurveillance sont un cas à part : elles ne se conservent que pour une durée limitée et n'entrent pas dans la sauvegarde habituelle. Voir notre article <a href="/conseils/duree-conservation-images">combien de temps garder les images</a>.</p>
+
+<h2>Une mise en place simple pour un commerce ou un bureau</h2>
+<ol>
+  <li><b>Centraliser les fichiers</b> dans un dossier ou sur un petit serveur de stockage, plutôt que dispersés sur chaque poste.</li>
+  <li><b>Une sauvegarde automatique sur place</b>, chaque jour, vers un disque ou un serveur rangé dans la baie, à l'abri.</li>
+  <li><b>Une copie automatique hors des locaux</b>, vers un service en ligne situé de préférence dans l'Union européenne, avec chiffrement.</li>
+  <li><b>Plusieurs versions conservées</b>, pour pouvoir revenir à l'état d'hier ou de la semaine dernière si un fichier a été abîmé.</li>
+  <li><b>Une alerte en cas d'échec</b>, pour ne pas découvrir trop tard que la sauvegarde ne tourne plus depuis des mois.</li>
+</ol>
+
+<h2>Le test que presque personne ne fait</h2>
+<p>Une sauvegarde qui n'a jamais été testée n'est qu'un espoir. Une ou deux fois par an, <b>essayez de restaurer</b> quelques fichiers depuis chaque copie. Vous vérifiez ainsi que les données sont lisibles, complètes et que vous savez comment les récupérer le jour où vous en aurez vraiment besoin.</p>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><b>Tout garder sur une seule clé USB</b>, rangée dans le tiroir du bureau.</li>
+  <li><b>Une sauvegarde manuelle</b> qu'on oublie dès que l'activité s'accélère.</li>
+  <li><b>Un disque toujours branché</b>, chiffré en même temps que l'ordinateur en cas d'attaque.</li>
+  <li><b>Aucun mot de passe</b> sur la sauvegarde en ligne, ou le même partout.</li>
+  <li><b>Ne jamais vérifier</b> que la sauvegarde fonctionne.</li>
+</ul>
+
+<h2>Et les données personnelles ?</h2>
+<p>Vos sauvegardes contiennent souvent des informations sur vos clients et vos salariés. Elles doivent être protégées comme les originaux : accès limité, chiffrement, et conservation qui ne dépasse pas ce qui est nécessaire.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles sur les données personnelles, consultez cnil.fr.</p>
+
+<h2>Ce que nous pouvons faire pour vous</h2>
+<p>Nous mettons en place des sauvegardes automatiques sur place et hors des locaux, avec plusieurs versions et une alerte en cas de problème, et nous testons la restauration avec vous, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
+"""),
 ]
