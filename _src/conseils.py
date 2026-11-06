@@ -1143,4 +1143,67 @@ ARTICLES = [
 <h2>Ce que nous pouvons faire pour vous</h2>
 <p>Nous mettons en place des sauvegardes automatiques sur place et hors des locaux, avec plusieurs versions et une alerte en cas de problème, et nous testons la restauration avec vous, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="commerce-avant-les-conges",
+        title="Fermeture pour congés : préparer la sécurité de votre commerce",
+        short="Avant les congés",
+        seo="Fermer son commerce pour les congés : la check-list sécurité",
+        desc="Alarme, caméras, accès, internet, vitrine : la liste des vérifications à faire avant de fermer votre commerce ou votre bureau plusieurs jours.",
+        summary="Alarme testée, caméras vérifiées, accès à jour, vitrine et caisse vidées : la liste à suivre avant de fermer plusieurs jours.",
+        date="2026-11-06",
+        related=["alarme-commerce", "alarme-se-declenche-la-nuit"],
+        body="""
+<p>Un commerce fermé plusieurs jours d'affilée est une cible plus facile : personne ne passe, le rideau reste baissé, et une effraction peut n'être découverte qu'au retour. Quelques vérifications faites la semaine avant la fermeture évitent la plupart des mauvaises surprises. Voici la liste à suivre.</p>
+
+<h2>Une semaine avant : vérifier les équipements</h2>
+<p>C'est le bon moment pour repérer ce qui ne fonctionne plus, pendant qu'il reste du temps pour le faire réparer.</p>
+<ul>
+  <li><b>Testez l'alarme</b> : armez-la, ouvrez une porte, vérifiez que la sirène se déclenche et que l'alerte arrive sur chaque téléphone prévu.</li>
+  <li><b>Vérifiez les piles</b> des détecteurs sans fil. L'application signale souvent les piles faibles : ne laissez pas un détecteur sans alimentation pendant votre absence.</li>
+  <li><b>Regardez chaque caméra</b> sur votre téléphone, de jour et de nuit : image nette, angle correct, rien qui gêne la vue.</li>
+  <li><b>Contrôlez l'enregistreur</b> : il enregistre bien, le disque n'est pas en erreur, la date et l'heure sont justes.</li>
+  <li><b>Testez l'accès à distance</b> depuis un autre réseau que celui du magasin, par exemple en 4G, pour être sûr de voir vos images une fois parti.</li>
+</ul>
+
+<h2>Penser à internet et à l'électricité</h2>
+<ul>
+  <li><b>Sans internet, vous ne voyez plus rien à distance.</b> Une box qui redémarre mal après une coupure peut vous priver de vos caméras pendant tout votre séjour.</li>
+  <li><b>Une alarme avec carte SIM</b> continue de vous prévenir même si la ligne internet tombe.</li>
+  <li><b>Un onduleur</b> sur la box et l'enregistreur évite qu'une courte coupure de courant ne coupe tout.</li>
+  <li><b>Ne coupez pas le disjoncteur général</b> si vos équipements de sécurité y sont reliés : identifiez les circuits à laisser sous tension.</li>
+</ul>
+
+<h2>Mettre à jour les accès</h2>
+<ul>
+  <li><b>Retirez les badges et codes</b> des personnes qui n'ont plus à entrer : anciens salariés, intérimaires, prestataires.</li>
+  <li><b>Décidez qui reçoit les alertes</b> pendant votre absence, et prévenez ces personnes.</li>
+  <li><b>Confiez si besoin une clé et un code</b> à une personne de confiance proche du magasin, capable de se rendre sur place avec les forces de l'ordre en cas de problème.</li>
+  <li><b>Changez le mot de passe</b> de l'application si trop de monde le connaît.</li>
+</ul>
+
+<h2>Le jour de la fermeture</h2>
+<ol>
+  <li><b>Videz la caisse</b> et laissez le tiroir ouvert et vide : c'est le signe qu'il n'y a rien à prendre, et cela évite qu'il soit forcé.</li>
+  <li><b>Retirez de la vitrine</b> les articles de valeur faciles à emporter.</li>
+  <li><b>Rangez ou mettez hors de vue</b> les ordinateurs portables, tablettes et terminaux.</li>
+  <li><b>Fermez toutes les ouvertures</b> : fenêtres, impostes, porte de service, accès à la cour ou au toit.</li>
+  <li><b>Laissez une lumière</b> ou un éclairage programmé, qui donne l'impression d'une présence.</li>
+  <li><b>Armez l'alarme</b> et vérifiez dans l'application qu'elle est bien armée avant de partir.</li>
+</ol>
+
+<h2>Pendant votre absence</h2>
+<ul>
+  <li><b>Jetez un œil aux caméras</b> de temps en temps, par exemple le soir.</li>
+  <li><b>Réagissez à chaque alerte</b> : vérifiez les images avant d'appeler qui que ce soit. En cas d'intrusion, composez le 17. Notre article <a href="/conseils/alarme-se-declenche-la-nuit">votre alarme se déclenche la nuit</a> détaille la marche à suivre.</li>
+  <li><b>Faites relever le courrier</b> qui s'accumule devant la porte, signe visible d'une absence prolongée.</li>
+</ul>
+
+<h2>Au retour</h2>
+<p>Faites le tour du local avant de désarmer l'alarme si quelque chose vous paraît anormal. Puis vérifiez que l'enregistrement a bien fonctionné sur toute la période : c'est le meilleur moyen de savoir que votre installation est fiable pour la prochaine fois.</p>
+<p>Pensez aussi à vérifier les conditions de votre contrat d'assurance : certains contrats prévoient des obligations particulières en cas de fermeture prolongée.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les démarches officielles, consultez service-public.fr.</p>
+
+<h2>Besoin d'une vérification avant de partir ?</h2>
+<p>Nous contrôlons votre alarme, vos caméras, votre enregistreur et l'accès à distance avant une fermeture, et réparons rapidement ce qui doit l'être, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une intervention</a>.</p>
+"""),
 ]
