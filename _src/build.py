@@ -201,13 +201,8 @@ def _arc(cx, cy, r, a0, a1):
     return f"M{x0:.1f} {y0:.1f}A{r} {r} 0 0 1 {x1:.1f} {y1:.1f}"
 
 
-# Ondes Wi-Fi animées en fond du haut de page (motif du logo)
-WAVES = ('<svg class="hero-waves" viewBox="0 0 420 600" width="520" height="740" aria-hidden="true" focusable="false" '
-         'style="position:absolute;top:50%;right:-60px;transform:translateY(-50%) translate3d(var(--px,0px),var(--py,0px),0);pointer-events:none">'
-         + "".join(f'<path class="w{i}" d="{_arc(0, 300, r, -50, 50)}" fill="none" stroke="#2BC0DC" '
-                   f'stroke-width="26" stroke-linecap="round" opacity="0.08"/>'
-                   for i, r in enumerate((110, 200, 290, 380), 1))
-         + "</svg>")
+# Scène de nuit (rue, vitrine, lasers) en fond des hauts de page
+WAVES = '<svg class="hero-scene" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#060A14"></stop><stop offset="1" stop-color="#0D1626"></stop></linearGradient><linearGradient id="win" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6C27A"></stop><stop offset="1" stop-color="#C9783A"></stop></linearGradient><radialGradient id="lamp" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFD9A0" stop-opacity="0.55"></stop><stop offset="1" stop-color="#FFD9A0" stop-opacity="0"></stop></radialGradient><radialGradient id="spill" cx="0.5" cy="0" r="0.8"><stop offset="0" stop-color="#FF2B3A" stop-opacity="0.35"></stop><stop offset="1" stop-color="#FF2B3A" stop-opacity="0"></stop></radialGradient><linearGradient id="street" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101827"></stop><stop offset="1" stop-color="#05080F"></stop></linearGradient><filter id="beam" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="3"></feGaussianBlur></filter><linearGradient id="left" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#05080F" stop-opacity="0.85"></stop><stop offset="0.55" stop-color="#05080F" stop-opacity="0.2"></stop><stop offset="1" stop-color="#05080F" stop-opacity="0"></stop></linearGradient><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0.6" stop-color="#05080F" stop-opacity="0"></stop><stop offset="1" stop-color="#05080F"></stop></linearGradient></defs><rect width="1440" height="900" fill="url(#sky)"></rect><rect x="0" y="120" width="1440" height="560" fill="#0E1524"></rect><g fill="#131C2E"><rect x="40" y="150" width="70" height="90" rx="4"></rect><rect x="150" y="150" width="70" height="90" rx="4"></rect><rect x="1220" y="150" width="70" height="90" rx="4"></rect><rect x="1330" y="150" width="70" height="90" rx="4"></rect><rect x="760" y="150" width="70" height="90" rx="4"></rect><rect x="870" y="150" width="70" height="90" rx="4"></rect></g><rect x="870" y="150" width="70" height="90" rx="4" fill="#F6C27A" opacity="0.25"></rect><rect x="700" y="300" width="520" height="380" fill="#0A101C"></rect><rect x="720" y="300" width="480" height="34" fill="#162238"></rect><text x="960" y="323" fill="#2BC0DC" font-family="Space Grotesk, sans-serif" font-size="16" text-anchor="middle" letter-spacing="6">BOUTIQUE</text><rect x="740" y="350" width="440" height="300" fill="url(#win)" opacity="0.9"></rect><g fill="#7A4A22" opacity="0.55"><rect x="770" y="420" width="90" height="10"></rect><rect x="770" y="500" width="90" height="10"></rect><rect x="1060" y="420" width="90" height="10"></rect><rect x="1060" y="500" width="90" height="10"></rect></g><g fill="#8B5A2B" opacity="0.6"><rect x="780" y="390" width="22" height="30"></rect><rect x="810" y="396" width="30" height="24"></rect><rect x="1070" y="470" width="26" height="30"></rect><rect x="1104" y="476" width="34" height="24"></rect><rect x="790" y="470" width="40" height="30"></rect></g><rect x="930" y="380" width="60" height="270" fill="#3A2412" opacity="0.6"></rect><rect x="740" y="350" width="440" height="300" fill="none" stroke="#1E2A40" stroke-width="10"></rect><rect x="80" y="300" width="520" height="380" fill="#0A101C"></rect><g><rect x="100" y="330" width="480" height="320" fill="#1B2436"></rect><g stroke="#26314A" stroke-width="3"><line x1="100" y1="350" x2="580" y2="350"></line><line x1="100" y1="370" x2="580" y2="370"></line><line x1="100" y1="390" x2="580" y2="390"></line><line x1="100" y1="410" x2="580" y2="410"></line><line x1="100" y1="430" x2="580" y2="430"></line><line x1="100" y1="450" x2="580" y2="450"></line><line x1="100" y1="470" x2="580" y2="470"></line><line x1="100" y1="490" x2="580" y2="490"></line><line x1="100" y1="510" x2="580" y2="510"></line><line x1="100" y1="530" x2="580" y2="530"></line><line x1="100" y1="550" x2="580" y2="550"></line><line x1="100" y1="570" x2="580" y2="570"></line><line x1="100" y1="590" x2="580" y2="590"></line><line x1="100" y1="610" x2="580" y2="610"></line><line x1="100" y1="630" x2="580" y2="630"></line></g></g><g><rect x="1188" y="356" width="26" height="14" rx="4" fill="#E9EEF5"></rect><rect x="1176" y="360" width="14" height="6" fill="#9AA6B8"></rect><circle cx="1210" cy="363" r="2" fill="#3DDC84"></circle></g><rect x="0" y="680" width="1440" height="220" fill="url(#street)"></rect><ellipse cx="960" cy="690" rx="420" ry="90" fill="url(#spill)"></ellipse><rect x="1300" y="260" width="8" height="420" fill="#1A2334"></rect><rect x="1270" y="250" width="60" height="12" rx="6" fill="#1A2334"></rect><circle cx="1300" cy="270" r="160" fill="url(#lamp)"></circle><g opacity="0.35"><rect x="740" y="700" width="440" height="80" fill="url(#win)" opacity="0.25"></rect></g><rect x="922" y="372" width="80" height="140" fill="none" stroke="#FF2B3A" stroke-width="2"></rect><circle cx="962" cy="410" r="14" fill="#2A1A0C" opacity="0.8"></circle><path d="M938 512 Q962 440 986 512Z" fill="#2A1A0C" opacity="0.8"></path><g stroke="#FF2B3A" stroke-width="5" opacity="0.45" filter="url(#beam)"><line x1="746" y1="400" x2="1174" y2="470"></line><line x1="746" y1="470" x2="1174" y2="420"></line><line x1="746" y1="540" x2="1174" y2="600"></line><line x1="746" y1="610" x2="1174" y2="560"></line></g><g stroke="#FF2B3A" stroke-width="1.4" opacity="0.95"><line x1="746" y1="400" x2="1174" y2="470"></line><line x1="746" y1="470" x2="1174" y2="420"></line><line x1="746" y1="540" x2="1174" y2="600"></line><line x1="746" y1="610" x2="1174" y2="560"></line></g><rect x="736" y="395" width="10" height="10" rx="2" fill="#1E2A40"></rect><circle cx="746" cy="400" r="2.5" fill="#FF2B3A"></circle><circle cx="1174" cy="470" r="2" fill="#FF2B3A"></circle><rect x="736" y="465" width="10" height="10" rx="2" fill="#1E2A40"></rect><circle cx="746" cy="470" r="2.5" fill="#FF2B3A"></circle><circle cx="1174" cy="420" r="2" fill="#FF2B3A"></circle><rect x="736" y="535" width="10" height="10" rx="2" fill="#1E2A40"></rect><circle cx="746" cy="540" r="2.5" fill="#FF2B3A"></circle><circle cx="1174" cy="600" r="2" fill="#FF2B3A"></circle><rect x="736" y="605" width="10" height="10" rx="2" fill="#1E2A40"></rect><circle cx="746" cy="610" r="2.5" fill="#FF2B3A"></circle><circle cx="1174" cy="560" r="2" fill="#FF2B3A"></circle><polygon points="1190,370 1010,690 1300,690" fill="#FF2B3A" opacity="0.07"></polygon><g stroke="#FF2B3A" stroke-width="1" opacity="0.5"><line x1="1190" y1="370" x2="1010" y2="690"></line><line x1="1190" y1="370" x2="1300" y2="690"></line></g><g stroke="#FF2B3A" stroke-width="1" opacity="0.28"><line x1="0" y1="730" x2="1440" y2="720"></line><line x1="0" y1="780" x2="1440" y2="764"></line><line x1="0" y1="840" x2="1440" y2="818"></line></g><rect width="1440" height="900" fill="url(#left)"></rect><rect width="1440" height="900" fill="url(#fade)"></rect></svg>'
 
 
 def asset_version(path):
@@ -322,8 +317,8 @@ def layout(filename, title, description, body, extra_head=""):
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/barlow-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/barlow-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-567244-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/spacegrotesk-ecea81-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css?v={asset_version('assets/style.css')}">
 <script type="application/ld+json">{org}</script>{crumbs}{extra_head}
 </head>
@@ -435,9 +430,9 @@ home = f"""
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">Sécurité · Réseau · Informatique · Sud</p>
-        <h1>Sécurité et informatique pour les professionnels du <em>Sud</em></h1>
-        <p class="lead">Vidéosurveillance, alarme, réseau, Wi-Fi et informatique : nous installons et entretenons les équipements des commerces, bureaux, entrepôts, chantiers et copropriétés, partout dans le Sud.</p>
+        <p class="kicker">Vidéosurveillance · Alarme · Réseau · Sud</p>
+        <h1>Vos locaux sous les yeux, même rideau baissé</h1>
+        <p class="lead">Caméras, alarmes et réseaux pour les commerces et les professionnels des Alpes-Maritimes et du Var. Nous venons sur place, nous installons, et nous restons votre interlocuteur ensuite.</p>
         <div class="hero-cta">
           <a href="contact.html" class="btn btn-primary">Demander un devis gratuit</a>
           <a href="#services" class="btn btn-ghost">Voir nos services</a>
@@ -448,31 +443,9 @@ home = f"""
           <li>{ic('check')} Tout le Sud</li>
         </ul>
       </div>
-      <div class="phone" role="img" aria-label="Exemple : images des caméras et alerte de l'alarme sur votre téléphone">
-        <div class="phone-screen">
-          <div class="phone-bar"><span>3:12</span><span>Boutique</span></div>
-          <div class="phone-head"><b>Réserve</b><span>Caméra 2 sur 4</span></div>
-          <div class="cam">
-            <svg viewBox="0 0 240 180" aria-hidden="true">
-              <rect width="240" height="180" fill="#1C2533"/>
-              <path d="M0 180 L70 110 L170 110 L240 180Z" fill="#232E3E"/>
-              <rect x="70" y="30" width="100" height="80" fill="#202A39"/>
-              <rect x="14" y="40" width="40" height="120" fill="#2A3546"/><rect x="14" y="70" width="40" height="3" fill="#36435A"/><rect x="14" y="100" width="40" height="3" fill="#36435A"/><rect x="14" y="130" width="40" height="3" fill="#36435A"/>
-              <rect x="186" y="40" width="40" height="120" fill="#2A3546"/><rect x="186" y="70" width="40" height="3" fill="#36435A"/><rect x="186" y="100" width="40" height="3" fill="#36435A"/><rect x="186" y="130" width="40" height="3" fill="#36435A"/>
-              <rect x="20" y="52" width="12" height="16" fill="#3A4860"/><rect x="34" y="56" width="14" height="12" fill="#33415A"/><rect x="192" y="84" width="16" height="14" fill="#3A4860"/><rect x="22" y="112" width="20" height="16" fill="#33415A"/>
-              <rect x="104" y="46" width="32" height="64" fill="#151C27" stroke="#3A4860" stroke-width="2"/>
-              <circle cx="120" cy="84" r="7" fill="#4A586F"/><path d="M110 110 Q120 92 130 110Z" fill="#4A586F"/>
-              <rect x="98" y="66" width="44" height="50" fill="none" stroke="#FF9F1C" stroke-width="1.5"/>
-            </svg>
-            <span class="cam-tag"><span class="live"></span>En direct</span>
-            <span class="cam-time">03:12:48</span>
-          </div>
-          <div class="notif">{ic('bell')}<div><b>Mouvement détecté</b><span>Réserve · porte arrière · 3 h 12</span></div></div>
-          <div class="phone-rows">
-            <div><span>Alarme</span><span>Armée</span></div>
-            <div><span>Caméras</span><span>4 en ligne</span></div>
-          </div>
-        </div>
+      <div class="alerts" aria-label="Exemple : alertes reçues sur votre téléphone">
+        <div class="alert"><span class="alert-ic">{ic('bell')}</span><div><b>Mouvement détecté</b><span>Boutique · entrée · 3 h 12</span></div><time>maintenant</time></div>
+        <div class="alert status"><div class="row"><b>Alarme</b><span class="armed">Armée</span></div><div class="cams"><i></i><i class="hot"></i><i></i><i></i></div><div class="meta"><span>4 caméras en ligne</span><span>03:12:48</span></div></div>
       </div>
     </div>
   </section>
@@ -1093,7 +1066,7 @@ legal = f"""
       <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a href="mailto:{EMAIL}">{EMAIL}</a>. Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 
       <h2>Polices de caractères</h2>
-      <p>Le site utilise la police Barlow (licence SIL Open Font), hébergée directement sur le site : aucune donnée n'est transmise à un service tiers pour l'afficher.</p>
+      <p>Le site utilise les polices Inter et Space Grotesk (licence SIL Open Font), hébergées directement sur le site : aucune donnée n'est transmise à un service tiers pour l'afficher.</p>
     </div>
   </section>
 """
