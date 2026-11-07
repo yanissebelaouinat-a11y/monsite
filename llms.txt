@@ -48,6 +48,7 @@
 - [Wi-Fi clients : pourquoi le séparer du réseau de votre entreprise](https://belaconnect.fr/conseils/wifi-clients-separe): Un Wi-Fi offert aux clients ne doit jamais donner accès à votre caisse ni à vos caméras : comment mettre en place un réseau invités vraiment séparé.
 - [La règle des sauvegardes 3-2-1 : protéger les données de votre entreprise](https://belaconnect.fr/conseils/sauvegardes-3-2-1): Trois copies, deux supports, une hors des locaux : la méthode simple pour ne jamais perdre vos factures, fichiers clients et documents.
 - [Fermeture pour congés : préparer la sécurité de votre commerce](https://belaconnect.fr/conseils/commerce-avant-les-conges): Alarme testée, caméras vérifiées, accès à jour, vitrine et caisse vidées : la liste à suivre avant de fermer plusieurs jours.
+- [Voir ses caméras à distance sans ouvrir la porte aux pirates](https://belaconnect.fr/conseils/cameras-a-distance): Regarder ses caméras depuis son téléphone est pratique, à condition de ne pas laisser tout internet y accéder. Les réglages qui comptent.
 
 ## Informations utiles
 

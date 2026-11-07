@@ -1206,4 +1206,65 @@ ARTICLES = [
 <h2>Besoin d'une vérification avant de partir ?</h2>
 <p>Nous contrôlons votre alarme, vos caméras, votre enregistreur et l'accès à distance avant une fermeture, et réparons rapidement ce qui doit l'être, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une intervention</a>.</p>
 """),
+    dict(
+        slug="cameras-a-distance",
+        title="Voir ses caméras à distance sans ouvrir la porte aux pirates",
+        short="Caméras à distance",
+        seo="Accéder à ses caméras à distance en toute sécurité",
+        desc="Mots de passe, mises à jour, ouverture de ports, double authentification : les règles simples pour regarder vos caméras sur votre téléphone sans exposer votre commerce.",
+        summary="Regarder ses caméras depuis son téléphone est pratique, à condition de ne pas laisser tout internet y accéder. Les réglages qui comptent.",
+        date="2026-11-07",
+        related=["wifi-clients-separe", "camera-wifi-ou-poe"],
+        body="""
+<p>Voir son magasin en direct depuis son téléphone est l'un des grands avantages de la vidéosurveillance moderne. Mais une caméra ou un enregistreur accessible depuis internet est aussi une porte d'entrée possible. Des milliers d'appareils mal configurés sont trouvés chaque jour par des robots qui scannent le réseau à la recherche d'un mot de passe par défaut. Voici comment profiter de l'accès à distance sans prendre ce risque.</p>
+
+<h2>Le risque est bien réel</h2>
+<p>Une caméra mal protégée peut permettre à un inconnu de :</p>
+<ul>
+  <li><b>Regarder vos images</b> en direct et savoir quand le magasin est vide.</li>
+  <li><b>Effacer les enregistrements</b> ou couper les caméras.</li>
+  <li><b>Utiliser l'appareil</b> pour attaquer d'autres machines, ou entrer dans le reste de votre réseau : caisse, ordinateurs, fichiers.</li>
+</ul>
+<p>Dans la plupart des cas, ce n'est pas une attaque sophistiquée : c'est simplement un mot de passe jamais changé ou un appareil jamais mis à jour.</p>
+
+<h2>1. Changer tous les mots de passe par défaut</h2>
+<ul>
+  <li><b>Un mot de passe long et unique</b> pour l'enregistreur, pour chaque caméra et pour l'application.</li>
+  <li><b>Jamais le même</b> que celui de votre boîte mail ou de votre banque.</li>
+  <li><b>Un compte par personne</b> plutôt qu'un identifiant partagé par toute l'équipe, avec seulement les droits nécessaires : regarder, ou regarder et exporter.</li>
+  <li><b>Un gestionnaire de mots de passe</b> pour ne pas les noter sur un papier collé sous le comptoir.</li>
+</ul>
+
+<h2>2. Activer la double authentification</h2>
+<p>Quand l'application le permet, activez la <b>validation en deux étapes</b> : en plus du mot de passe, un code arrive sur votre téléphone. Même si votre mot de passe fuite, personne ne peut se connecter sans ce code.</p>
+
+<h2>3. Éviter d'ouvrir des ports sur la box</h2>
+<p>Pour voir les caméras depuis l'extérieur, une méthode ancienne consiste à « ouvrir des ports » sur la box internet, ce qui rend l'enregistreur directement visible depuis tout internet. C'est la configuration la plus exposée.</p>
+<p>Les solutions plus sûres sont :</p>
+<ul>
+  <li><b>Le service de connexion sécurisée du fabricant</b>, qui passe par un intermédiaire chiffré sans rendre l'enregistreur visible.</li>
+  <li><b>Un VPN</b> : votre téléphone se connecte d'abord au réseau du magasin de façon chiffrée, puis accède aux caméras comme s'il était sur place.</li>
+</ul>
+<p>Pensez aussi à <b>désactiver les fonctions d'ouverture automatique</b> de ports sur la box si vous ne les utilisez pas.</p>
+
+<h2>4. Mettre à jour régulièrement</h2>
+<p>Les fabricants corrigent régulièrement des failles de sécurité. Un enregistreur qui n'a jamais été mis à jour depuis son installation reste vulnérable à des failles connues de tous. Mettez à jour l'enregistreur, les caméras et l'application, et remplacez le matériel qui ne reçoit plus aucune mise à jour.</p>
+
+<h2>5. Isoler les caméras du reste du réseau</h2>
+<p>Les caméras n'ont pas besoin de voir la caisse ni les ordinateurs. En les plaçant sur un <b>réseau séparé</b>, une caméra compromise ne donne pas accès au reste de l'entreprise. Le même principe vaut pour le Wi-Fi des clients : voir notre article <a href="/conseils/wifi-clients-separe">pourquoi séparer le Wi-Fi des clients</a>.</p>
+
+<h2>6. Contrôler qui a accès</h2>
+<ul>
+  <li><b>Faites le point régulièrement</b> sur les comptes et les téléphones autorisés.</li>
+  <li><b>Retirez immédiatement l'accès</b> d'un salarié qui quitte l'entreprise ou d'un prestataire qui a terminé sa mission.</li>
+  <li><b>Consultez l'historique des connexions</b> si votre enregistreur le propose, pour repérer un accès inhabituel.</li>
+</ul>
+
+<h2>Et la vie privée ?</h2>
+<p>L'accès à distance ne change pas les règles : les images ne doivent être consultées que par les personnes habilitées, dans le but prévu, et pendant la durée de conservation autorisée. Regarder ses salariés en permanence depuis son téléphone n'est pas permis.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr.</p>
+
+<h2>Faire vérifier votre installation</h2>
+<p>Nous configurons l'accès à distance de façon sécurisée lors de chaque installation, et nous pouvons vérifier une installation existante : mots de passe, mises à jour, ports ouverts, réseau séparé, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une vérification</a>.</p>
+"""),
 ]
