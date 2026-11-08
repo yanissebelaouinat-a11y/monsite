@@ -49,6 +49,7 @@
 - [La règle des sauvegardes 3-2-1 : protéger les données de votre entreprise](https://belaconnect.fr/conseils/sauvegardes-3-2-1): Trois copies, deux supports, une hors des locaux : la méthode simple pour ne jamais perdre vos factures, fichiers clients et documents.
 - [Fermeture pour congés : préparer la sécurité de votre commerce](https://belaconnect.fr/conseils/commerce-avant-les-conges): Alarme testée, caméras vérifiées, accès à jour, vitrine et caisse vidées : la liste à suivre avant de fermer plusieurs jours.
 - [Voir ses caméras à distance sans ouvrir la porte aux pirates](https://belaconnect.fr/conseils/cameras-a-distance): Regarder ses caméras depuis son téléphone est pratique, à condition de ne pas laisser tout internet y accéder. Les réglages qui comptent.
+- [Vidéosurveillance, alarme et assurance : ce qu'il faut vérifier](https://belaconnect.fr/conseils/videosurveillance-et-assurance): Équipements exigés, déclaration, images utiles après un vol : les points à vérifier avec votre assureur avant et après l'installation.
 
 ## Informations utiles
 

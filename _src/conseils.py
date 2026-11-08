@@ -1267,4 +1267,67 @@ ARTICLES = [
 <h2>Faire vérifier votre installation</h2>
 <p>Nous configurons l'accès à distance de façon sécurisée lors de chaque installation, et nous pouvons vérifier une installation existante : mots de passe, mises à jour, ports ouverts, réseau séparé, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une vérification</a>.</p>
 """),
+    dict(
+        slug="videosurveillance-et-assurance",
+        title="Vidéosurveillance, alarme et assurance : ce qu'il faut vérifier",
+        short="Sécurité et assurance",
+        seo="Vidéosurveillance, alarme et assurance d'un commerce : les points à vérifier",
+        desc="Ce que votre contrat d'assurance peut exiger en matière d'alarme et de caméras, comment les images aident après un sinistre, et les questions à poser à votre assureur.",
+        summary="Équipements exigés, déclaration, images utiles après un vol : les points à vérifier avec votre assureur avant et après l'installation.",
+        date="2026-11-08",
+        related=["alarme-commerce", "duree-conservation-images"],
+        body="""
+<p>Beaucoup de commerçants découvrent les exigences de leur contrat d'assurance au pire moment : après un cambriolage. Une alarme absente, une protection non conforme à ce qui était prévu ou des images introuvables peuvent compliquer l'indemnisation. Prendre quelques minutes pour faire le point avec votre assureur, avant et après l'installation, évite bien des mauvaises surprises.</p>
+
+<h2>Ce que votre contrat peut prévoir</h2>
+<p>Chaque contrat est différent, mais certaines clauses reviennent souvent dans les assurances des commerces et des locaux professionnels :</p>
+<ul>
+  <li><b>Des moyens de protection obligatoires</b> : serrures, rideau métallique, alarme, parfois télésurveillance, selon la valeur du stock et l'activité.</li>
+  <li><b>Des conditions d'utilisation</b> : alarme armée à chaque fermeture, protections réellement en service, entretien régulier.</li>
+  <li><b>Des exigences sur le matériel</b> : certains contrats demandent un niveau de qualité ou une certification particulière pour l'alarme.</li>
+  <li><b>Des obligations en cas d'absence prolongée</b>, par exemple pendant une fermeture pour congés.</li>
+</ul>
+<p>Si une protection prévue au contrat n'était pas en place ou pas en service au moment du sinistre, l'indemnisation peut être réduite, voire refusée. D'où l'intérêt de relire ces clauses.</p>
+
+<h2>Avant l'installation : les questions à poser</h2>
+<ol>
+  <li><b>Une alarme est-elle exigée</b> pour mes locaux et mon activité ?</li>
+  <li><b>Des caractéristiques précises</b> sont-elles demandées : type de détecteurs, sirène, transmission de l'alerte, télésurveillance ?</li>
+  <li><b>La vidéosurveillance est-elle prise en compte</b> dans l'évaluation du risque ?</li>
+  <li><b>Un justificatif d'installation</b> est-il nécessaire (facture, attestation, descriptif) ?</li>
+  <li><b>Faut-il un contrat d'entretien</b> pour que la protection soit considérée comme valable ?</li>
+</ol>
+<p>Avec ces réponses en main, nous pouvons adapter l'installation à ce que votre contrat demande réellement, plutôt que de deviner.</p>
+
+<h2>Après l'installation : ce qu'il faut faire</h2>
+<ul>
+  <li><b>Prévenir votre assureur</b> de la mise en place de l'alarme et des caméras, en joignant les justificatifs demandés.</li>
+  <li><b>Conserver la facture et le descriptif</b> de l'installation avec vos documents d'assurance.</li>
+  <li><b>Armer l'alarme à chaque fermeture</b> : l'historique de l'application montre qui l'a armée et quand.</li>
+  <li><b>Faire entretenir le système</b> et garder une trace des interventions.</li>
+</ul>
+
+<h2>Le rôle des images après un sinistre</h2>
+<p>En cas de vol ou de dégradation, les enregistrements sont souvent précieux :</p>
+<ul>
+  <li><b>Ils montrent ce qui s'est passé</b> : heure, mode d'entrée, objets emportés.</li>
+  <li><b>Ils appuient votre plainte</b> auprès des forces de l'ordre.</li>
+  <li><b>Ils facilitent le dossier</b> auprès de votre assureur.</li>
+</ul>
+<p>Encore faut-il que les images existent toujours. L'enregistreur efface les plus anciennes au fil du temps : après un incident, <b>exportez immédiatement la séquence utile</b> sur une clé ou un support séparé, avant qu'elle ne soit écrasée. La durée de conservation habituelle reste limitée, comme nous l'expliquons dans notre article <a href="/conseils/duree-conservation-images">combien de temps garder les images</a>.</p>
+
+<h2>Après un cambriolage : les bons réflexes</h2>
+<ol>
+  <li><b>Appelez le 17</b> si l'intrusion est en cours, et ne vous rendez pas seul sur place.</li>
+  <li><b>Ne touchez à rien</b> avant le passage des forces de l'ordre.</li>
+  <li><b>Exportez les images</b> et notez l'heure des alertes reçues.</li>
+  <li><b>Déposez plainte</b> avec la liste des biens volés et les images.</li>
+  <li><b>Déclarez le sinistre à votre assureur</b> dans le délai prévu par votre contrat.</li>
+  <li><b>Faites remettre en état</b> l'alarme et les caméras endommagées.</li>
+</ol>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent ni la lecture de votre contrat ni un conseil juridique. Pour les démarches officielles, consultez service-public.fr.</p>
+
+<h2>Une installation adaptée à votre contrat</h2>
+<p>Lors de la visite gratuite, nous tenons compte des exigences de votre assureur pour choisir l'alarme et les caméras, et nous vous remettons un descriptif clair de l'installation, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
