@@ -1333,4 +1333,67 @@ ARTICLES = [
 <h2>Une installation adaptée à votre contrat</h2>
 <p>Lors de la visite gratuite, nous tenons compte des exigences de votre assureur pour choisir l'alarme et les caméras, et nous vous remettons un descriptif clair de l'installation, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="cablage-reseau-local-pro",
+        title="Câblage réseau d'un local professionnel : bien le prévoir dès le départ",
+        short="Câblage d'un local pro",
+        seo="Câblage réseau d'un local professionnel : prises, baie, caméras",
+        desc="Nombre de prises, emplacement de la baie, câbles pour caméras et bornes Wi-Fi, étiquetage : comment prévoir le câblage réseau d'un commerce ou d'un bureau.",
+        summary="Prises, baie, caméras, Wi-Fi, étiquetage : les bonnes décisions à prendre avant les travaux pour un réseau fiable pendant des années.",
+        date="2026-11-09",
+        related=["baie-de-brassage", "camera-wifi-ou-poe"],
+        body="""
+<p>Le câblage réseau est la partie invisible d'un local professionnel : une fois les cloisons fermées et les faux plafonds posés, il est difficile et coûteux d'y revenir. Un câblage bien pensé dès le départ fait fonctionner caisse, ordinateurs, imprimantes, caméras et Wi-Fi sans souci pendant des années. Un câblage improvisé finit en multiprises réseau, en câbles qui traînent au sol et en pannes difficiles à trouver.</p>
+
+<h2>Le bon moment : avant les travaux</h2>
+<p>Le moment idéal pour câbler est <b>pendant l'aménagement</b> : ouverture d'un commerce, rénovation, déménagement de bureaux. Les câbles passent dans les cloisons, les gaines et les faux plafonds, et les prises sont posées exactement où il faut. Dans un local déjà aménagé, le câblage reste possible avec des goulottes discrètes, mais il demande plus de compromis.</p>
+
+<h2>Combien de prises prévoir ?</h2>
+<ul>
+  <li><b>Au moins deux prises par poste de travail</b> : ordinateur, téléphone, et une réserve.</li>
+  <li><b>Une prise par équipement fixe</b> : caisse, terminal de paiement s'il est filaire, imprimante, écran d'affichage.</li>
+  <li><b>Une prise par caméra</b>, au plafond ou en hauteur, à l'emplacement exact prévu.</li>
+  <li><b>Une prise par borne Wi-Fi</b>, idéalement au plafond, au centre de la zone à couvrir.</li>
+  <li><b>Quelques prises de réserve</b> dans chaque pièce : les besoins évoluent toujours plus vite que prévu.</li>
+</ul>
+<p>Ajouter une prise pendant les travaux ne prend que quelques minutes. L'ajouter après peut demander d'ouvrir un plafond.</p>
+
+<h2>Où placer la baie ?</h2>
+<p>Tous les câbles convergent vers une <b>baie de brassage</b>, une armoire qui regroupe la box, le switch, l'enregistreur des caméras et les panneaux de raccordement. Son emplacement compte :</p>
+<ul>
+  <li><b>Un endroit protégé</b> : réserve fermée, local technique, placard ventilé, hors de portée des clients.</li>
+  <li><b>Pas trop loin des prises</b>, pour éviter des longueurs de câble excessives.</li>
+  <li><b>Près de l'arrivée internet</b> et avec une alimentation électrique dédiée.</li>
+  <li><b>Une bonne ventilation</b> : les équipements chauffent, surtout en été.</li>
+</ul>
+<p>Pour une baie déjà en place mais en désordre, voir notre article sur la <a href="/conseils/baie-de-brassage">remise au propre d'une baie de brassage</a>.</p>
+
+<h2>Le bon câble</h2>
+<ul>
+  <li><b>Du câble réseau de bonne catégorie</b>, adapté aux débits actuels et à ceux des prochaines années.</li>
+  <li><b>Du câble blindé</b> près des sources de perturbations : moteurs, néons, câbles électriques.</li>
+  <li><b>Des câbles adaptés à l'extérieur</b> pour les caméras en façade ou dans une cour.</li>
+  <li><b>Le respect des distances</b> : au-delà d'une certaine longueur, le signal se dégrade.</li>
+</ul>
+
+<h2>Penser aux caméras et au Wi-Fi dès le câblage</h2>
+<p>Les caméras et les bornes Wi-Fi professionnelles peuvent être <b>alimentées directement par le câble réseau</b> (PoE). Un seul câble par appareil, sans prise électrique à côté : c'est plus propre, plus fiable et plus facile à protéger. Encore faut-il avoir prévu les câbles aux bons endroits. Nous détaillons les avantages de cette solution dans notre article <a href="/conseils/camera-wifi-ou-poe">caméra Wi-Fi ou filaire PoE</a>.</p>
+
+<h2>Étiqueter et documenter</h2>
+<p>Un câblage propre, c'est aussi un câblage <b>qu'on comprend</b>. Chaque prise porte un numéro, que l'on retrouve sur le panneau de la baie. Un plan simple indique où se trouve chaque prise et à quoi elle sert. Le jour d'une panne ou d'un ajout, n'importe quel technicien s'y retrouve en quelques minutes au lieu de tester les câbles un par un.</p>
+
+<h2>Tester avant de refermer</h2>
+<p>Chaque câble doit être <b>testé une fois posé</b>, avant de refermer cloisons et plafonds. Un câble abîmé pendant les travaux est facile à remplacer à ce moment-là, beaucoup moins après.</p>
+
+<h2>Les erreurs à éviter</h2>
+<ol>
+  <li><b>Tout faire passer en Wi-Fi</b>, y compris la caisse et les caméras, puis subir les coupures.</li>
+  <li><b>Sous-estimer le nombre de prises</b> et multiplier les petits switchs sous les bureaux.</li>
+  <li><b>Installer la box dans l'espace client</b>, à la vue de tous.</li>
+  <li><b>Oublier l'étiquetage</b> et ne plus savoir quel câble va où.</li>
+</ol>
+
+<h2>Préparer votre câblage avec nous</h2>
+<p>Nous intervenons idéalement avant ou pendant vos travaux pour poser le câblage, la baie, les prises des caméras et des bornes Wi-Fi, puis tout tester et étiqueter, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
+"""),
 ]

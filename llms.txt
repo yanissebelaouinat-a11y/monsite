@@ -50,6 +50,7 @@
 - [Fermeture pour congés : préparer la sécurité de votre commerce](https://belaconnect.fr/conseils/commerce-avant-les-conges): Alarme testée, caméras vérifiées, accès à jour, vitrine et caisse vidées : la liste à suivre avant de fermer plusieurs jours.
 - [Voir ses caméras à distance sans ouvrir la porte aux pirates](https://belaconnect.fr/conseils/cameras-a-distance): Regarder ses caméras depuis son téléphone est pratique, à condition de ne pas laisser tout internet y accéder. Les réglages qui comptent.
 - [Vidéosurveillance, alarme et assurance : ce qu'il faut vérifier](https://belaconnect.fr/conseils/videosurveillance-et-assurance): Équipements exigés, déclaration, images utiles après un vol : les points à vérifier avec votre assureur avant et après l'installation.
+- [Câblage réseau d'un local professionnel : bien le prévoir dès le départ](https://belaconnect.fr/conseils/cablage-reseau-local-pro): Prises, baie, caméras, Wi-Fi, étiquetage : les bonnes décisions à prendre avant les travaux pour un réseau fiable pendant des années.
 
 ## Informations utiles
 
