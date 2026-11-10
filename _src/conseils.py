@@ -1396,4 +1396,75 @@ ARTICLES = [
 <h2>Préparer votre câblage avec nous</h2>
 <p>Nous intervenons idéalement avant ou pendant vos travaux pour poser le câblage, la baie, les prises des caméras et des bornes Wi-Fi, puis tout tester et étiqueter, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="remplacer-vieil-enregistreur",
+        title="Remplacer un vieil enregistreur de vidéosurveillance sans tout recâbler",
+        short="Remplacer l'enregistreur",
+        seo="Remplacer un vieil enregistreur de vidéosurveillance sans recâbler",
+        desc="Enregistreur en panne, images floues, application qui ne marche plus : comment moderniser une installation de vidéosurveillance en gardant les câbles existants.",
+        summary="Enregistreur hors d'usage ou dépassé : comment moderniser l'installation en gardant les câbles déjà en place, et quand il vaut mieux tout refaire.",
+        date="2026-11-10",
+        related=["cameras-ne-fonctionnent-plus", "cameras-a-distance"],
+        body="""
+<p>Dans beaucoup de commerces et de copropriétés, les caméras ont été posées il y a des années. L'enregistreur commence à faiblir : disque en erreur, images floues, application qui ne se connecte plus, mises à jour arrêtées. On imagine alors qu'il faut tout arracher et repasser des câbles partout. Ce n'est pas toujours nécessaire : dans bien des cas, on peut moderniser l'installation en gardant le câblage existant.</p>
+
+<h2>Les signes qu'il est temps de remplacer l'enregistreur</h2>
+<ul>
+  <li><b>Le disque dur est en erreur</b> ou l'enregistrement s'arrête tout seul.</li>
+  <li><b>L'application ne fonctionne plus</b> sur les téléphones récents.</li>
+  <li><b>Aucune mise à jour</b> n'est plus proposée par le fabricant, ce qui laisse des failles de sécurité ouvertes.</li>
+  <li><b>Les images sont trop floues</b> pour reconnaître un visage ou lire une plaque.</li>
+  <li><b>L'appareil redémarre</b> régulièrement ou chauffe anormalement.</li>
+</ul>
+<p>Pour les autres causes de panne, notre article <a href="/conseils/cameras-ne-fonctionnent-plus">vos caméras ne fonctionnent plus</a> passe en revue les vérifications à faire.</p>
+
+<h2>Première étape : identifier ce qui est installé</h2>
+<p>Tout dépend du type de câble qui relie les caméras à l'enregistreur.</p>
+<ul>
+  <li><b>Du câble coaxial</b> (rond, avec un connecteur à vis ou à baïonnette) : ce sont des caméras dites analogiques ou HD sur coaxial.</li>
+  <li><b>Du câble réseau</b> (connecteur RJ45, comme pour un ordinateur) : ce sont des caméras IP, souvent alimentées par le câble.</li>
+</ul>
+<p>Nous vérifions aussi l'état des câbles, la longueur des liaisons et la façon dont les caméras sont alimentées.</p>
+
+<h2>Cas n°1 : caméras sur câble coaxial</h2>
+<p>Il existe des <b>enregistreurs hybrides</b> qui acceptent à la fois les caméras sur coaxial et les caméras IP. Cela permet :</p>
+<ul>
+  <li><b>De garder les caméras qui fonctionnent</b> et de remplacer seulement l'enregistreur.</li>
+  <li><b>De changer progressivement les caméras</b> par des modèles plus récents et plus nets, sur les mêmes câbles coaxiaux.</li>
+  <li><b>D'ajouter des caméras IP</b> là où de nouveaux câbles réseau peuvent passer facilement.</li>
+</ul>
+<p>Il existe aussi des <b>adaptateurs</b> qui font passer le signal réseau sur un câble coaxial existant. Ils permettent d'installer une caméra IP moderne au bout d'un ancien câble, sans le remplacer.</p>
+
+<h2>Cas n°2 : caméras déjà sur câble réseau</h2>
+<p>Bonne nouvelle : le câblage réseau est généralement réutilisable tel quel. Il suffit souvent de :</p>
+<ul>
+  <li><b>Remplacer l'enregistreur</b> par un modèle actuel, avec un disque neuf de capacité adaptée.</li>
+  <li><b>Vérifier la compatibilité</b> des caméras existantes avec le nouvel enregistreur.</li>
+  <li><b>Remplacer progressivement</b> les caméras les plus anciennes ou les moins nettes.</li>
+</ul>
+
+<h2>Quand faut-il quand même recâbler ?</h2>
+<ul>
+  <li><b>Les câbles sont abîmés</b> : écrasés, rongés, oxydés à l'extérieur.</li>
+  <li><b>Les liaisons sont trop longues</b> pour la nouvelle technologie.</li>
+  <li><b>Vous déplacez ou ajoutez beaucoup de caméras.</b></li>
+  <li><b>Des travaux sont prévus</b> : c'est le meilleur moment pour poser un câblage neuf et propre.</li>
+</ul>
+
+<h2>Profiter du changement pour sécuriser</h2>
+<p>Un nouvel enregistreur est l'occasion de repartir sur de bonnes bases :</p>
+<ul>
+  <li><b>Des mots de passe neufs</b> et un compte par utilisateur.</li>
+  <li><b>Un accès à distance sécurisé</b>, sans ports ouverts sur la box. Voir notre article <a href="/conseils/cameras-a-distance">voir ses caméras à distance en sécurité</a>.</li>
+  <li><b>Une durée de conservation</b> réglée selon les règles en vigueur.</li>
+  <li><b>Un enregistreur rangé à l'abri</b>, dans une baie ou un local fermé.</li>
+</ul>
+
+<h2>Et les anciennes images ?</h2>
+<p>Avant de débrancher l'ancien appareil, exportez les séquences que vous devez garder, par exemple dans le cadre d'une plainte en cours. Les autres enregistrements n'ont pas vocation à être conservés au-delà de la durée prévue.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les règles officielles sur la conservation des images, consultez cnil.fr.</p>
+
+<h2>Faire le point sur votre installation</h2>
+<p>Nous reprenons les installations posées par d'autres : diagnostic des câbles et des caméras, remplacement de l'enregistreur, puis modernisation au rythme qui vous convient, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander un diagnostic</a>.</p>
+"""),
 ]
