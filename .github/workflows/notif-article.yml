@@ -1,0 +1,56 @@
+# Envoie une notification Telegram (via le relais Cloudflare du site) à chaque nouvel article Conseils publié.
+name: Notification nouvel article
+
+on:
+  push:
+    branches: [claude/beautiful-volta-qfuhcb]
+    paths: [_src/conseils.py]
+  workflow_dispatch:
+    inputs:
+      renvoyer:
+        description: "Renvoyer la notification du dernier article"
+        type: boolean
+        default: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Détecter les nouveaux articles et prévenir sur Telegram
+        run: |
+          python3 - <<'PY'
+          import ast, json, subprocess, urllib.request, urllib.error
+          def articles(src):
+              tree = ast.parse(src)
+              for node in tree.body:
+                  if isinstance(node, ast.Assign) and getattr(node.targets[0], "id", "") == "ARTICLES":
+                      return [{kw.arg: ast.literal_eval(kw.value) for kw in d.keywords if kw.arg in ("slug", "title", "summary")} for d in node.value.elts]
+              return []
+          new = articles(open("_src/conseils.py", encoding="utf-8").read())
+          import os
+          if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
+              old = {a["slug"] for a in new[:-1]}
+          else:
+            try:
+              old_src = subprocess.run(["git", "show", "HEAD~1:_src/conseils.py"], capture_output=True, text=True, check=True).stdout
+              old = {a["slug"] for a in articles(old_src)}
+            except Exception:
+              old = {a["slug"] for a in new}
+          for a in new:
+              if a["slug"] in old:
+                  continue
+              url = "https://belaconnect.fr/conseils/" + a["slug"]
+              title = "📰 NOUVEL ARTICLE PUBLIÉ"
+              text = "📝 " + a["title"] + "\n\n" + a["summary"] + "\n\n🔗 Lien : " + url + "\n📚 Total : " + str(len(new)) + " articles"
+              body = json.dumps({"type": "devis", "v": 2, "title": title, "text": text, "subject": title, "message": text}).encode()
+              req = urllib.request.Request("https://belaconnect-telegram.belaconnect06.workers.dev/", data=body,
+                                           headers={"Origin": "https://belaconnect.fr", "Content-Type": "text/plain",
+                                                    "User-Agent": "Mozilla/5.0 (compatible; BELACONNECT-notif/1.0)"})
+              try:
+                  print(a["slug"], urllib.request.urlopen(req, timeout=20).read().decode())
+              except urllib.error.HTTPError as e:
+                  print("Erreur", e.code, e.read().decode()[:300]); raise
+          PY
