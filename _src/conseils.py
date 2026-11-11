@@ -1467,4 +1467,64 @@ ARTICLES = [
 <h2>Faire le point sur votre installation</h2>
 <p>Nous reprenons les installations posées par d'autres : diagnostic des câbles et des caméras, remplacement de l'enregistreur, puis modernisation au rythme qui vous convient, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander un diagnostic</a>.</p>
 """),
+    dict(
+        slug="securiser-bureau-cabinet",
+        title="Sécuriser un bureau ou un cabinet : accès, alarme et données",
+        short="Sécuriser un bureau",
+        seo="Sécuriser un bureau ou un cabinet : accès, alarme, caméras et données",
+        desc="Agence, cabinet d'avocat, d'expert-comptable ou d'architecte : comment protéger les locaux, le matériel et les dossiers des clients avec des accès, une alarme et un réseau sûrs.",
+        summary="Contrôle des accès, alarme, caméras sur les entrées et protection des dossiers : les priorités pour sécuriser un bureau ou un cabinet sans gêner le travail.",
+        date="2026-11-11",
+        related=["sauvegardes-3-2-1", "filmer-ses-salaries"],
+        body="""
+<p>Un bureau ou un cabinet n'attire pas les mêmes convoitises qu'une boutique, mais il a beaucoup à perdre : ordinateurs portables, écrans, matériel, et surtout les <b>dossiers des clients</b>. Agences, cabinets d'avocats, d'experts-comptables, d'architectes, de conseil : ces locaux sont souvent vides le soir et le week-end, fréquentés par du public en journée, et totalement dépendants de leur informatique. Voici les priorités pour les protéger.</p>
+
+<h2>1. Maîtriser qui entre</h2>
+<p>Dans un bureau, le premier risque vient souvent d'un accès trop facile : une porte qui reste ouverte, des clés jamais récupérées, un code connu de tout le monde.</p>
+<ul>
+  <li><b>Un badge ou un code par personne</b>, facile à retirer quand un salarié ou un stagiaire s'en va.</li>
+  <li><b>Un historique des entrées</b>, pour savoir qui est venu et quand, notamment en dehors des horaires.</li>
+  <li><b>Des zones à accès limité</b> : archives, local informatique, bureau de la direction.</li>
+  <li><b>Un accueil qui voit l'entrée</b>, pour que personne ne circule dans les bureaux sans avoir été reçu.</li>
+</ul>
+
+<h2>2. Une alarme adaptée aux horaires de bureau</h2>
+<ul>
+  <li><b>Des détecteurs d'ouverture</b> sur la porte d'entrée et les accès secondaires.</li>
+  <li><b>Des détecteurs de mouvement</b> dans les couloirs et les pièces sensibles.</li>
+  <li><b>Un armement simple</b>, par badge ou application, pour que le dernier qui part n'oublie pas.</li>
+  <li><b>Des alertes sur téléphone</b>, avec la possibilité de vérifier sur les caméras avant de réagir.</li>
+</ul>
+<p>Si plusieurs entreprises partagent le même étage ou les mêmes parties communes, il faut organiser qui arme quoi et à quel moment.</p>
+
+<h2>3. Des caméras sur les accès, pas sur les postes</h2>
+<p>Dans un bureau, les caméras servent surtout à surveiller <b>les entrées</b> : porte principale, accueil, accès au parking, local technique. Elles n'ont pas à filmer les postes de travail en continu, ce qui serait disproportionné et contraire aux règles. Les salariés doivent être informés, et les visiteurs aussi par un panneau. Notre article <a href="/conseils/filmer-ses-salaries">filmer ses salariés</a> rappelle ce qui est autorisé.</p>
+<p>Pour un cabinet qui reçoit des clients en rendez-vous confidentiel, les bureaux et salles de réunion ne doivent évidemment pas être filmés.</p>
+
+<h2>4. Protéger les dossiers et l'informatique</h2>
+<p>Pour beaucoup de cabinets, la vraie valeur n'est pas le matériel mais les données. Un ordinateur volé se remplace ; des dossiers perdus ou divulgués peuvent coûter bien plus.</p>
+<ul>
+  <li><b>Des sauvegardes automatiques</b>, sur place et hors des locaux, testées régulièrement. Voir notre article sur la <a href="/conseils/sauvegardes-3-2-1">règle des sauvegardes 3-2-1</a>.</li>
+  <li><b>Des ordinateurs portables chiffrés</b> et verrouillés par mot de passe, pour que leur vol ne donne pas accès aux dossiers.</li>
+  <li><b>Un Wi-Fi invités séparé</b> pour les clients en rendez-vous, sans accès au réseau du cabinet.</li>
+  <li><b>Un local technique fermé</b>, avec la baie, la box et les serveurs à l'abri.</li>
+  <li><b>Des comptes séparés</b> pour chaque collaborateur, avec seulement les accès nécessaires.</li>
+</ul>
+
+<h2>5. Les petites habitudes qui comptent</h2>
+<ol>
+  <li><b>Ne rien laisser en vue</b> près des fenêtres du rez-de-chaussée : portables, tablettes, dossiers.</li>
+  <li><b>Ranger les dossiers papier sensibles</b> dans des armoires fermées à clé.</li>
+  <li><b>Verrouiller son écran</b> dès qu'on quitte son poste.</li>
+  <li><b>Récupérer les badges et changer les codes</b> au départ de chaque collaborateur.</li>
+  <li><b>Faire le tour des fenêtres</b> avant de partir le soir.</li>
+</ol>
+
+<h2>Ce que disent les règles</h2>
+<p>Un cabinet qui détient des données personnelles de clients doit les protéger correctement : accès limités, sauvegardes, mesures adaptées à la sensibilité des informations. Certaines professions ont en plus leurs propres obligations de confidentialité.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Un seul interlocuteur pour la sécurité et l'informatique</h2>
+<p>Nous installons le contrôle des accès, l'alarme, les caméras sur les entrées et un réseau sécurisé avec sauvegardes, en organisant l'intervention en dehors de vos rendez-vous, partout dans le Sud. <a href="https://belaconnect.fr/bureaux">Voir notre page bureaux et entreprises</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
