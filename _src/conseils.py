@@ -1527,4 +1527,73 @@ ARTICLES = [
 <h2>Un seul interlocuteur pour la sécurité et l'informatique</h2>
 <p>Nous installons le contrôle des accès, l'alarme, les caméras sur les entrées et un réseau sécurisé avec sauvegardes, en organisant l'intervention en dehors de vos rendez-vous, partout dans le Sud. <a href="https://belaconnect.fr/bureaux">Voir notre page bureaux et entreprises</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="proteger-vitrine-devanture",
+        title="Protéger la vitrine et la devanture d'un commerce la nuit",
+        short="Vitrine et devanture",
+        seo="Protéger la vitrine et la devanture d'un commerce : caméras, alarme, éclairage",
+        desc="Bris de vitrine, rideau forcé, tags, enseigne abîmée : comment protéger la façade d'un commerce la nuit avec l'éclairage, une alarme et des caméras bien placées.",
+        summary="Vitrine brisée, rideau forcé, tags : les mesures qui dissuadent vraiment et celles qui permettent de réagir vite quand la façade est visée.",
+        date="2026-11-12",
+        related=["vision-de-nuit", "alarme-commerce"],
+        body="""
+<p>La vitrine est la première chose que voient vos clients, et souvent la première cible la nuit. Bris de vitre pour un vol éclair, rideau métallique forcé, tags, enseigne arrachée, dépôts devant la porte : la façade d'un commerce est exposée dès que la rue se vide. La bonne nouvelle, c'est qu'une protection bien pensée décourage la plupart de ces actes, et permet de réagir rapidement quand ils se produisent.</p>
+
+<h2>Comprendre ce qui vise la façade</h2>
+<ul>
+  <li><b>Le vol éclair</b> : la vitre est brisée, quelques articles exposés sont emportés en quelques secondes.</li>
+  <li><b>L'effraction par l'avant</b> : rideau forcé ou porte d'entrée fracturée pour accéder au magasin.</li>
+  <li><b>Les dégradations</b> : tags, vitrine rayée, enseigne ou store abîmés.</li>
+  <li><b>Les nuisances</b> : regroupements, dépôts sauvages devant l'entrée, salissures.</li>
+</ul>
+<p>Chacun de ces risques n'appelle pas tout à fait la même réponse, mais ils ont un point commun : ils se produisent quand personne ne regarde.</p>
+
+<h2>1. La lumière, premier outil de dissuasion</h2>
+<p>Une façade sombre est une façade où l'on se sent à l'abri des regards. Un <b>éclairage de vitrine programmé</b> une partie de la nuit, ou un <b>éclairage extérieur à détection</b> qui s'allume au moindre passage, change beaucoup la donne. La lumière aide aussi les caméras à produire des images nettes et en couleur. Notre article <a href="/conseils/vision-de-nuit">vision de nuit, infrarouge ou couleur</a> détaille ce point.</p>
+
+<h2>2. Ne rien laisser de tentant en vue</h2>
+<ul>
+  <li><b>Retirez de la vitrine</b> les articles de valeur faciles à emporter, ou remplacez-les par des modèles d'exposition.</li>
+  <li><b>Laissez la caisse vide et ouverte</b> une fois le magasin fermé.</li>
+  <li><b>Gardez une vue dégagée</b> vers l'intérieur : un magasin visible depuis la rue est moins discret pour un intrus.</li>
+</ul>
+
+<h2>3. Une alarme qui réagit avant l'intrusion</h2>
+<p>Pour la façade, l'enjeu est d'être alerté <b>dès que la vitrine est attaquée</b>, sans attendre qu'une personne soit à l'intérieur.</p>
+<ul>
+  <li><b>Un détecteur de bris de vitre ou de choc</b> sur la vitrine et la porte vitrée.</li>
+  <li><b>Un détecteur d'ouverture</b> sur la porte d'entrée et, si possible, sur le rideau métallique.</li>
+  <li><b>Une sirène extérieure avec flash</b>, visible depuis la rue, qui alerte le voisinage.</li>
+  <li><b>Une alerte immédiate</b> sur votre téléphone, avec la possibilité de vérifier les images.</li>
+</ul>
+<p>Pour la liste complète des détecteurs, voir notre article sur <a href="/conseils/alarme-commerce">l'alarme pour commerce</a>.</p>
+
+<h2>4. Des caméras qui filment la façade, sans filmer la rue</h2>
+<ul>
+  <li><b>Une caméra à l'intérieur, tournée vers la vitrine</b>, qui voit qui s'approche et ce qui se passe devant.</li>
+  <li><b>Une caméra extérieure</b> au-dessus de l'entrée, anti-vandalisme, placée hors de portée de main.</li>
+  <li><b>Un cadrage limité à votre façade</b> et à vos abords immédiats.</li>
+</ul>
+<p>Attention : filmer la voie publique est en principe réservé aux autorités. Une caméra privée doit se limiter à vos propres accès, et une autorisation préfectorale peut être nécessaire si elle filme un lieu ouvert au public. Un panneau doit informer de la présence des caméras.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>5. Entretenir la devanture</h2>
+<ul>
+  <li><b>Vérifiez régulièrement le rideau métallique</b> : serrure, lames, moteur. Un rideau qui ferme mal est une invitation.</li>
+  <li><b>Faites effacer rapidement les tags</b> : une façade dégradée a tendance à attirer d'autres dégradations.</li>
+  <li><b>Contrôlez que les caméras extérieures</b> sont propres, bien orientées et non masquées.</li>
+</ul>
+
+<h2>En cas d'attaque de la vitrine</h2>
+<ol>
+  <li><b>Vérifiez les images</b> dès l'alerte, depuis votre téléphone.</li>
+  <li><b>Appelez le 17</b> si une intrusion est en cours, et ne vous déplacez pas seul.</li>
+  <li><b>Exportez les enregistrements</b> avant qu'ils ne soient écrasés.</li>
+  <li><b>Déposez plainte</b> et prévenez votre assureur.</li>
+  <li><b>Faites sécuriser l'ouverture</b> au plus vite pour éviter un second passage.</li>
+</ol>
+
+<h2>Protéger votre façade avec nous</h2>
+<p>Lors de la visite gratuite, nous regardons votre façade de jour comme de nuit pour placer détecteurs, sirène et caméras là où ils sont vraiment utiles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]

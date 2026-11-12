@@ -53,6 +53,7 @@
 - [Câblage réseau d'un local professionnel : bien le prévoir dès le départ](https://belaconnect.fr/conseils/cablage-reseau-local-pro): Prises, baie, caméras, Wi-Fi, étiquetage : les bonnes décisions à prendre avant les travaux pour un réseau fiable pendant des années.
 - [Remplacer un vieil enregistreur de vidéosurveillance sans tout recâbler](https://belaconnect.fr/conseils/remplacer-vieil-enregistreur): Enregistreur hors d'usage ou dépassé : comment moderniser l'installation en gardant les câbles déjà en place, et quand il vaut mieux tout refaire.
 - [Sécuriser un bureau ou un cabinet : accès, alarme et données](https://belaconnect.fr/conseils/securiser-bureau-cabinet): Contrôle des accès, alarme, caméras sur les entrées et protection des dossiers : les priorités pour sécuriser un bureau ou un cabinet sans gêner le travail.
+- [Protéger la vitrine et la devanture d'un commerce la nuit](https://belaconnect.fr/conseils/proteger-vitrine-devanture): Vitrine brisée, rideau forcé, tags : les mesures qui dissuadent vraiment et celles qui permettent de réagir vite quand la façade est visée.
 
 ## Informations utiles
 
