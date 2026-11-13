@@ -1596,4 +1596,84 @@ ARTICLES = [
 <h2>Protéger votre façade avec nous</h2>
 <p>Lors de la visite gratuite, nous regardons votre façade de jour comme de nuit pour placer détecteurs, sirène et caméras là où ils sont vraiment utiles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="controle-acces-badge",
+        title="Badge, code ou application : choisir le contrôle d'accès de vos locaux",
+        short="Contrôle d'accès",
+        seo="Contrôle d'accès pour un commerce ou un bureau : badge, code ou application",
+        desc="Clés perdues, codes partagés, salariés partis : comment un contrôle d'accès par badge, code ou téléphone simplifie la sécurité d'un commerce, d'un bureau ou d'un entrepôt.",
+        summary="Badge, code ou téléphone : comparer les solutions de contrôle d'accès et savoir qui entre dans vos locaux, sans multiplier les clés.",
+        date="2026-11-13",
+        related=["securiser-bureau-cabinet", "alarme-commerce"],
+        body="""
+<p>Combien de clés de votre local sont en circulation ? Dans beaucoup de commerces et de bureaux, personne ne le sait vraiment : anciens salariés, femme de ménage, prestataire, double oublié dans un tiroir. Un contrôle d'accès remplace ces clés par des badges, des codes ou une application, et vous permet de savoir qui entre, quand, et de retirer un accès en un instant.</p>
+
+<h2>Le problème des clés</h2>
+<ul>
+  <li><b>Une clé perdue ou non rendue</b> oblige en principe à changer la serrure.</li>
+  <li><b>Impossible de savoir</b> qui a ouvert le local et à quelle heure.</li>
+  <li><b>Les doubles se multiplient</b> au fil des recrutements et des prestataires.</li>
+  <li><b>Un code d'alarme partagé</b> par toute l'équipe ne permet pas non plus de savoir qui a désarmé.</li>
+</ul>
+
+<h2>Les trois grandes solutions</h2>
+
+<h3>Le badge</h3>
+<p>Chaque personne reçoit un badge ou un porte-clés qu'elle présente devant un lecteur.</p>
+<ul>
+  <li><b>Simple à utiliser</b>, rapide, adapté aux passages fréquents.</li>
+  <li><b>Un badge perdu se désactive</b> immédiatement, sans changer de serrure.</li>
+  <li><b>Il peut se prêter</b> : c'est sa limite, comme pour une clé.</li>
+</ul>
+
+<h3>Le code</h3>
+<p>Un clavier à l'entrée, avec un code personnel par utilisateur.</p>
+<ul>
+  <li><b>Rien à transporter</b>, pratique pour les prestataires ponctuels.</li>
+  <li><b>Un code temporaire</b> peut être créé pour une intervention, puis supprimé.</li>
+  <li><b>Un code se transmet facilement</b> : il faut des codes individuels, jamais un code commun.</li>
+</ul>
+
+<h3>Le téléphone</h3>
+<p>L'accès se fait depuis une application ou en approchant son téléphone du lecteur.</p>
+<ul>
+  <li><b>Pas de badge à distribuer</b> : l'accès se donne ou se retire à distance.</li>
+  <li><b>Pratique pour plusieurs sites</b> ou des horaires variables.</li>
+  <li><b>Dépend du téléphone</b> : batterie, réseau, changement d'appareil. Il est prudent de garder un badge ou un code de secours.</li>
+</ul>
+<p>Dans la pratique, beaucoup d'installations <b>combinent</b> ces solutions : badge pour l'équipe, code temporaire pour les prestataires, application pour le gérant.</p>
+
+<h2>Ce que le contrôle d'accès apporte au quotidien</h2>
+<ul>
+  <li><b>Un accès par personne</b>, ajouté ou retiré en quelques instants.</li>
+  <li><b>Des plages horaires</b> : l'équipe du matin n'entre pas la nuit, l'agent d'entretien seulement à ses horaires.</li>
+  <li><b>Des zones différentes</b> : tout le monde accède à l'entrée, seuls certains à la réserve, au local technique ou aux archives.</li>
+  <li><b>Un historique</b> des entrées, utile en cas d'incident.</li>
+</ul>
+
+<h2>Contrôle d'accès, alarme et caméras ensemble</h2>
+<p>Le contrôle d'accès prend toute sa valeur quand il est relié au reste de la sécurité :</p>
+<ul>
+  <li><b>L'alarme se désarme avec le badge</b> du premier arrivé et se réarme au départ du dernier.</li>
+  <li><b>Une caméra à l'entrée</b> permet de vérifier qui a réellement utilisé un badge.</li>
+  <li><b>Une alerte sur votre téléphone</b> signale une entrée en dehors des horaires prévus.</li>
+</ul>
+<p>Pour l'alarme elle-même, voir notre article sur les <a href="/conseils/alarme-commerce">détecteurs indispensables d'une alarme de commerce</a>.</p>
+
+<h2>Les bonnes pratiques</h2>
+<ol>
+  <li><b>Un accès individuel pour chaque personne</b>, jamais de badge ou de code partagé.</li>
+  <li><b>Retirer l'accès le jour même</b> du départ d'un salarié ou de la fin d'une mission.</li>
+  <li><b>Prévoir une solution de secours</b> en cas de panne de courant ou de lecteur.</li>
+  <li><b>Faire le point régulièrement</b> sur la liste des accès actifs.</li>
+  <li><b>Respecter les issues de secours</b> : une porte de sortie doit toujours pouvoir s'ouvrir de l'intérieur.</li>
+</ol>
+
+<h2>Et les données des salariés ?</h2>
+<p>Un système de contrôle d'accès enregistre des informations sur les passages des personnes. Les salariés doivent en être informés, les données ne doivent servir qu'à la sécurité des locaux et ne pas être conservées plus longtemps que nécessaire. L'utilisation de la biométrie, comme l'empreinte digitale, est très encadrée.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr.</p>
+
+<h2>Mettre en place votre contrôle d'accès</h2>
+<p>Nous installons des contrôles d'accès par badge, code ou téléphone, reliés à votre alarme et à vos caméras, pour les commerces, bureaux et entrepôts, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
