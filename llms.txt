@@ -55,6 +55,7 @@
 - [Sécuriser un bureau ou un cabinet : accès, alarme et données](https://belaconnect.fr/conseils/securiser-bureau-cabinet): Contrôle des accès, alarme, caméras sur les entrées et protection des dossiers : les priorités pour sécuriser un bureau ou un cabinet sans gêner le travail.
 - [Protéger la vitrine et la devanture d'un commerce la nuit](https://belaconnect.fr/conseils/proteger-vitrine-devanture): Vitrine brisée, rideau forcé, tags : les mesures qui dissuadent vraiment et celles qui permettent de réagir vite quand la façade est visée.
 - [Badge, code ou application : choisir le contrôle d'accès de vos locaux](https://belaconnect.fr/conseils/controle-acces-badge): Badge, code ou téléphone : comparer les solutions de contrôle d'accès et savoir qui entre dans vos locaux, sans multiplier les clés.
+- [Caméra factice : bonne ou mauvaise idée pour un commerce ?](https://belaconnect.fr/conseils/camera-factice): Une fausse caméra coûte peu et dissuade un peu, mais elle ne voit rien le jour où il se passe quelque chose. Ce qu'il faut savoir avant d'en poser une.
 
 ## Informations utiles
 

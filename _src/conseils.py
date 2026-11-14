@@ -1676,4 +1676,62 @@ ARTICLES = [
 <h2>Mettre en place votre contrôle d'accès</h2>
 <p>Nous installons des contrôles d'accès par badge, code ou téléphone, reliés à votre alarme et à vos caméras, pour les commerces, bureaux et entrepôts, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="camera-factice",
+        title="Caméra factice : bonne ou mauvaise idée pour un commerce ?",
+        short="Caméra factice",
+        seo="Caméra factice dans un commerce : est-ce vraiment dissuasif ?",
+        desc="Une fausse caméra peut-elle protéger une boutique ? Ce qu'elle dissuade, ses limites, les situations où elle se retourne contre vous, et les alternatives simples.",
+        summary="Une fausse caméra coûte peu et dissuade un peu, mais elle ne voit rien le jour où il se passe quelque chose. Ce qu'il faut savoir avant d'en poser une.",
+        date="2026-11-14",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>Quand on ouvre un commerce, l'idée d'installer une ou deux caméras factices est tentante : elles ne demandent ni câble, ni enregistreur, ni réglage. Leur seul rôle est de faire croire que le lieu est surveillé. Cela peut fonctionner dans certains cas, mais leurs limites sont importantes, et il vaut mieux les connaître avant de compter dessus.</p>
+
+<h2>Ce qu'une caméra factice peut faire</h2>
+<ul>
+  <li><b>Dissuader les gestes opportunistes</b> : une personne qui hésite à glisser un article dans sa poche peut y renoncer en voyant une caméra.</li>
+  <li><b>Rassurer en apparence</b> : clients et salariés peuvent avoir l'impression d'un lieu protégé.</li>
+  <li><b>Compléter un système réel</b> dans une zone secondaire, à côté de vraies caméras.</li>
+</ul>
+
+<h2>Ses limites</h2>
+<ul>
+  <li><b>Elle ne voit rien</b> : le jour d'un vol, d'une agression ou d'un litige, il n'y a aucune image pour comprendre ce qui s'est passé, porter plainte ou se défendre.</li>
+  <li><b>Elle ne prévient personne</b> : pas d'alerte sur votre téléphone, pas de vérification possible à distance.</li>
+  <li><b>Elle se repère souvent</b> : absence de câble, voyant qui clignote de façon trop régulière, boîtier en plastique léger, aucune lumière infrarouge la nuit. Les personnes habituées aux vols le savent.</li>
+  <li><b>Elle perd son effet</b> une fois que l'on sait qu'elle est fausse, et ce genre d'information circule vite.</li>
+  <li><b>Elle ne remplace pas</b> les protections qu'un contrat d'assurance peut exiger.</li>
+</ul>
+
+<h2>Quand elle peut se retourner contre vous</h2>
+<p>Le vrai risque d'une caméra factice, c'est le <b>faux sentiment de sécurité</b>. On se croit protégé, on reporte l'installation d'une vraie protection, et le jour où il se passe quelque chose, il n'y a rien.</p>
+<p>Autre situation délicate : un client ou un salarié victime d'un incident peut demander les images. S'il apprend qu'il n'y en a jamais eu, la confiance en pâtit. Dans un local où travaillent des salariés, une caméra factice peut aussi créer un malaise si elle est perçue comme un moyen de surveillance.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles sur la vidéosurveillance, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Les alternatives simples</h2>
+<p>Entre la caméra factice et une installation complète, il existe des solutions intermédiaires :</p>
+<ul>
+  <li><b>Une ou deux vraies caméras bien placées</b> : une à l'entrée pour identifier les visages, une sur la caisse. C'est souvent le meilleur rapport entre protection et simplicité.</li>
+  <li><b>Un enregistrement local</b> sur un petit enregistreur rangé à l'abri, consultable sur votre téléphone.</li>
+  <li><b>Un écran visible à l'entrée</b> qui affiche les images en direct : rien n'est plus dissuasif que de se voir filmé.</li>
+  <li><b>Une installation évolutive</b> : on commence avec l'essentiel et on ajoute des caméras plus tard, sur la même base.</li>
+</ul>
+<p>Pour savoir combien de caméras il faut vraiment, lisez notre article <a href="/conseils/combien-de-cameras">combien de caméras pour un commerce</a>.</p>
+
+<h2>Si vous gardez une caméra factice</h2>
+<p>Si vous choisissez malgré tout d'en installer une, quelques précautions limitent ses défauts :</p>
+<ol>
+  <li><b>L'utiliser en complément</b> de vraies caméras, jamais comme seule protection.</li>
+  <li><b>La placer hors de portée</b>, pour qu'on ne puisse pas vérifier facilement qu'elle est vide.</li>
+  <li><b>Choisir un modèle crédible</b>, sans voyant rouge qui clignote en permanence.</li>
+  <li><b>Ne pas compter dessus</b> pour la caisse, la réserve ou l'entrée, qui méritent de vraies images.</li>
+</ol>
+
+<h2>Ce qu'une vraie caméra change</h2>
+<p>Une vraie caméra dissuade autant qu'une fausse, mais elle apporte en plus ce qui compte le jour d'un problème : des images nettes, de jour comme de nuit, consultables depuis votre téléphone, et une alerte quand quelque chose bouge en dehors des heures d'ouverture. C'est ce qui permet de réagir, de porter plainte et de régler un litige.</p>
+
+<h2>Passer à une vraie protection</h2>
+<p>Lors de la visite gratuite, nous regardons avec vous où une vraie caméra est indispensable et où elle ne l'est pas, pour une installation juste suffisante, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
 ]
