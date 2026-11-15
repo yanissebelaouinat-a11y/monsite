@@ -1734,4 +1734,67 @@ ARTICLES = [
 <h2>Passer à une vraie protection</h2>
 <p>Lors de la visite gratuite, nous regardons avec vous où une vraie caméra est indispensable et où elle ne l'est pas, pour une installation juste suffisante, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="bouton-alerte-agression",
+        title="Bouton d'alerte : donner l'alarme discrètement en cas d'agression",
+        short="Bouton d'alerte",
+        seo="Bouton d'alerte agression pour commerce : fonctionnement et bonnes pratiques",
+        desc="Fixe sous le comptoir ou porté sur soi, le bouton d'alerte permet de prévenir sans geste visible en cas d'agression. Fonctionnement, placement et bons réflexes.",
+        summary="Sous le comptoir ou sur soi, un bouton d'alerte permet de prévenir sans se mettre en danger. Comment il fonctionne et comment bien l'utiliser.",
+        date="2026-11-15",
+        related=["proteger-la-caisse", "alarme-commerce"],
+        body="""
+<p>Une alarme protège un commerce quand il est fermé. Mais pendant les heures d'ouverture, le risque est différent : un client qui devient menaçant, une tentative de vol à la caisse, une personne seule en boutique tard le soir. Dans ces moments-là, il faut pouvoir prévenir quelqu'un <b>sans geste visible</b> et sans aggraver la situation. C'est le rôle du bouton d'alerte.</p>
+
+<h2>Comment fonctionne un bouton d'alerte</h2>
+<p>Le bouton d'alerte, parfois appelé bouton panique, est relié au système d'alarme. Une simple pression déclenche une alerte :</p>
+<ul>
+  <li><b>Silencieuse</b> : rien ne se passe dans le magasin, mais une notification part vers les téléphones choisis.</li>
+  <li><b>Ou sonore</b>, si vous préférez que la sirène se déclenche pour faire fuir l'agresseur.</li>
+</ul>
+<p>Dans la plupart des situations d'agression, l'alerte silencieuse est préférable : elle évite de surprendre ou d'énerver la personne menaçante.</p>
+<p>L'alerte peut être envoyée à un responsable, à un associé, à un commerce voisin de confiance, ou à un service de télésurveillance si vous en avez un, qui pourra alerter les forces de l'ordre selon les termes de votre contrat.</p>
+
+<h2>Fixe ou portatif ?</h2>
+<h3>Le bouton fixe</h3>
+<ul>
+  <li><b>Placé sous le comptoir</b> ou près de la caisse, à portée de main mais hors de vue.</li>
+  <li><b>Toujours au même endroit</b> : on sait exactement où il se trouve, même sous le stress.</li>
+  <li><b>Idéal pour les postes fixes</b> : caisse, accueil, comptoir de pharmacie.</li>
+</ul>
+<h3>Le bouton portatif</h3>
+<ul>
+  <li><b>Porté sur soi</b> : en pendentif, en bracelet, à la ceinture ou dans la poche.</li>
+  <li><b>Utilisable partout</b> dans le magasin, en réserve, en salle, à la fermeture du rideau.</li>
+  <li><b>Adapté au travail seul</b> et aux personnes qui se déplacent beaucoup.</li>
+</ul>
+<p>Les deux se combinent très bien : un bouton fixe à la caisse, et un bouton portatif pour la personne qui ferme le soir.</p>
+
+<h2>Bien le placer</h2>
+<ol>
+  <li><b>Hors de la vue des clients</b>, pour que le geste ne soit pas remarqué.</li>
+  <li><b>Accessible d'une seule main</b>, sans se pencher ni se déplacer.</li>
+  <li><b>Protégé contre les déclenchements accidentels</b> : un capot ou une double pression évitent les fausses alertes.</li>
+  <li><b>Couvert par une caméra</b> qui filme la zone, pour que la personne qui reçoit l'alerte puisse vérifier ce qui se passe.</li>
+</ol>
+
+<h2>L'association avec les caméras</h2>
+<p>Un bouton d'alerte seul dit « il y a un problème ». Associé aux caméras, il permet à la personne qui reçoit l'alerte de <b>voir immédiatement la scène</b> sur son téléphone, de décider s'il faut appeler le 17 et de décrire précisément la situation aux forces de l'ordre. Les images enregistrées serviront ensuite pour la plainte. Voir aussi notre article sur la <a href="/conseils/proteger-la-caisse">protection de la caisse</a>.</p>
+
+<h2>Former l'équipe</h2>
+<p>Un bouton d'alerte n'est utile que si tout le monde sait s'en servir :</p>
+<ul>
+  <li><b>Montrez où il se trouve</b> à chaque nouveau salarié, dès son premier jour.</li>
+  <li><b>Expliquez quand l'utiliser</b> : menace, agression, situation qui dégénère.</li>
+  <li><b>Rappelez la priorité absolue</b> : ne jamais résister, ne jamais poursuivre, sa propre sécurité passe avant tout.</li>
+  <li><b>Testez-le régulièrement</b>, en prévenant à l'avance les personnes qui reçoivent l'alerte.</li>
+</ul>
+
+<h2>Qui reçoit l'alerte ?</h2>
+<p>C'est la question la plus importante. L'alerte doit arriver à des personnes <b>joignables pendant toutes les heures d'ouverture</b>, capables de réagir rapidement et de prévenir les forces de l'ordre. Prévoyez plusieurs destinataires, pour qu'un téléphone éteint ou en silencieux ne bloque pas tout.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. En cas de danger, composez le 17 ou le 112. Pour les démarches après une agression, consultez service-public.fr.</p>
+
+<h2>Installer un bouton d'alerte</h2>
+<p>Nous ajoutons des boutons d'alerte fixes ou portatifs à votre alarme, reliés à votre téléphone et à vos caméras, et nous vous aidons à choisir leur emplacement, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
