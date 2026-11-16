@@ -1797,4 +1797,70 @@ ARTICLES = [
 <h2>Installer un bouton d'alerte</h2>
 <p>Nous ajoutons des boutons d'alerte fixes ou portatifs à votre alarme, reliés à votre téléphone et à vos caméras, et nous vous aidons à choisir leur emplacement, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="videosurveillance-parking",
+        title="Vidéosurveillance d'un parking : bien filmer les véhicules et les accès",
+        short="Caméras de parking",
+        seo="Vidéosurveillance d'un parking privé : emplacement des caméras et règles",
+        desc="Parking de commerce, de bureaux ou de résidence : où placer les caméras, comment voir de nuit, identifier un véhicule et rester dans les règles de la vidéosurveillance.",
+        summary="Entrée, allées, recoins, éclairage : comment équiper un parking privé pour voir ce qui s'y passe de jour comme de nuit, sans filmer la rue.",
+        date="2026-11-16",
+        related=["vision-de-nuit", "videosurveillance-copropriete"],
+        body="""
+<p>Un parking est souvent l'endroit le plus exposé d'un site : grand, peu fréquenté une partie de la journée, mal éclairé la nuit. Rayures, rétroviseurs cassés, vols dans les véhicules, dépôts sauvages, intrusions par l'accès voitures : les problèmes sont fréquents, que ce soit sur le parking d'un commerce, de bureaux ou d'une résidence. Bien filmé, un parking devient beaucoup moins tentant, et les incidents beaucoup plus faciles à élucider.</p>
+
+<h2>Ce qu'on attend des caméras d'un parking</h2>
+<ul>
+  <li><b>Dissuader</b> : des caméras visibles aux accès découragent une partie des passages à l'acte.</li>
+  <li><b>Voir qui entre et qui sort</b>, à pied comme en véhicule.</li>
+  <li><b>Comprendre un incident</b> : à quelle heure, quel véhicule, par où.</li>
+  <li><b>Être alerté</b> d'un mouvement en dehors des horaires habituels.</li>
+</ul>
+
+<h2>Les emplacements prioritaires</h2>
+<h3>L'entrée et la sortie</h3>
+<p>C'est la caméra la plus importante. Tout véhicule et tout piéton passent par là. Placée dans l'axe de l'accès, à une hauteur raisonnable, elle permet de distinguer la silhouette d'un véhicule, sa couleur et souvent sa plaque, ainsi que le visage d'un piéton.</p>
+
+<h3>Les allées et vues d'ensemble</h3>
+<p>Une ou plusieurs caméras grand angle, placées en hauteur, donnent une vue d'ensemble des allées. Elles ne permettent pas toujours d'identifier une personne, mais elles montrent ce qui se passe et où.</p>
+
+<h3>Les recoins et accès piétons</h3>
+<p>Escaliers, portes de service, local poubelles, accès depuis le bâtiment : ce sont les zones où l'on se cache ou par où l'on entre discrètement.</p>
+
+<h2>Voir la nuit</h2>
+<p>La plupart des incidents de parking se produisent la nuit. Deux solutions se complètent :</p>
+<ul>
+  <li><b>L'éclairage</b> : un parking éclairé, avec des détecteurs de présence, est déjà beaucoup moins attractif, et permet aux caméras de filmer en couleur.</li>
+  <li><b>La vision de nuit</b> : des caméras à longue portée infrarouge pour les zones sans lumière, ou des caméras couleur de nuit là où l'éclairage existe.</li>
+</ul>
+<p>Attention aux phares : une caméra placée face aux véhicules qui entrent peut être éblouie au moment exact où elle doit voir la plaque. L'angle se choisit avec soin. Notre article <a href="/conseils/vision-de-nuit">vision de nuit, infrarouge ou couleur</a> détaille ces réglages.</p>
+
+<h2>Identifier un véhicule</h2>
+<p>Lire une plaque sur des images n'est pas aussi simple qu'on l'imagine. Il faut une caméra cadrée assez serré sur la zone de passage, une bonne résolution, et un réglage qui limite le flou quand le véhicule roule. Une caméra grand angle qui couvre tout le parking ne suffit pas pour cela.</p>
+<p>La lecture automatique des plaques, qui reconnaît et enregistre les numéros, est une autre affaire : elle est très encadrée par la réglementation et ne s'improvise pas.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Filmer uniquement votre parking</b>, pas la voie publique ni les propriétés voisines.</li>
+  <li><b>Informer par des panneaux</b> visibles à l'entrée du parking.</li>
+  <li><b>En copropriété</b>, l'installation dans les parties communes doit être votée en assemblée générale. Voir notre article sur la <a href="/conseils/videosurveillance-copropriete">vidéosurveillance en copropriété</a>.</li>
+  <li><b>Pour un parking ouvert au public</b>, une autorisation préfectorale peut être nécessaire.</li>
+  <li><b>Limiter la durée de conservation</b> et l'accès aux images.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Le matériel adapté à l'extérieur</h2>
+<ul>
+  <li><b>Des caméras étanches</b> qui résistent à la pluie, au soleil et aux embruns près du littoral.</li>
+  <li><b>Des boîtiers anti-vandalisme</b>, placés hors de portée de main.</li>
+  <li><b>Des câbles protégés</b> en gaine, pour éviter qu'on puisse les couper facilement.</li>
+  <li><b>Un enregistreur à l'intérieur</b>, dans un local fermé, jamais dans le parking lui-même.</li>
+</ul>
+
+<h2>En parking souterrain</h2>
+<p>Les parkings souterrains posent leurs propres questions : pas de réseau mobile, éclairage permanent ou non, longues distances de câble, humidité. Ils demandent une étude sur place pour placer les caméras aux bons endroits et faire remonter les images jusqu'à l'enregistreur.</p>
+
+<h2>Équiper votre parking</h2>
+<p>Lors de la visite gratuite, nous faisons le tour du parking, de jour comme de nuit si besoin, pour placer les caméras aux accès et dans les zones sensibles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
 ]
