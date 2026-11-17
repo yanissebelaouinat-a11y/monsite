@@ -1863,4 +1863,69 @@ ARTICLES = [
 <h2>Équiper votre parking</h2>
 <p>Lors de la visite gratuite, nous faisons le tour du parking, de jour comme de nuit si besoin, pour placer les caméras aux accès et dans les zones sensibles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="securite-hotel",
+        title="Sécurité d'un hôtel ou de chambres d'hôtes : caméras, accès et Wi-Fi",
+        short="Sécurité d'un hôtel",
+        seo="Sécurité d'un hôtel ou de chambres d'hôtes : vidéosurveillance, accès, Wi-Fi",
+        desc="Accueil, entrées, parking, accès de nuit, Wi-Fi des clients : comment sécuriser un petit hôtel, une résidence de tourisme ou des chambres d'hôtes en respectant la vie privée.",
+        summary="Accueil, entrées, parking, arrivées tardives et Wi-Fi des clients : les points à protéger dans un hôtel ou des chambres d'hôtes, sans gêner les séjours.",
+        date="2026-11-17",
+        related=["wifi-clients-separe", "controle-acces-badge"],
+        body="""
+<p>Un hôtel, une résidence de tourisme ou des chambres d'hôtes accueillent chaque jour des personnes qui ne se connaissent pas, souvent à toute heure. L'accueil n'est pas toujours tenu la nuit, les arrivées tardives sont fréquentes, et les clients attendent à la fois de la sécurité et de la discrétion. Protéger un établissement d'hébergement demande donc de trouver le bon équilibre entre vigilance et respect de la vie privée.</p>
+
+<h2>Les risques propres à l'hébergement</h2>
+<ul>
+  <li><b>Les intrusions</b> de personnes extérieures qui profitent des allées et venues.</li>
+  <li><b>Les vols</b> à l'accueil, dans les espaces communs, sur le parking ou dans les véhicules des clients.</li>
+  <li><b>Les litiges</b> : dégradations, départ sans payer, contestation d'un incident.</li>
+  <li><b>Les accès mal maîtrisés</b> : clés non rendues, codes qui circulent d'un client à l'autre.</li>
+  <li><b>Le Wi-Fi</b> partagé entre les clients et la gestion de l'établissement.</li>
+</ul>
+
+<h2>Où placer les caméras</h2>
+<ul>
+  <li><b>L'entrée principale</b> et les accès secondaires, pour voir qui entre et qui sort, de jour comme de nuit.</li>
+  <li><b>L'accueil et la caisse</b>, pour les encaissements et les échanges au comptoir.</li>
+  <li><b>Le parking</b> et les abords, souvent la zone la plus exposée la nuit.</li>
+  <li><b>Les locaux techniques et réserves</b> : linge, matériel, bagagerie.</li>
+</ul>
+<p>Les chambres ne doivent évidemment jamais être filmées. Les couloirs qui desservent les chambres, les espaces de détente et les salles de petit-déjeuner demandent beaucoup de prudence : la surveillance doit rester justifiée et proportionnée, sans suivre les clients dans leur intimité.</p>
+<p>Des panneaux doivent informer les clients et le personnel de la présence des caméras, et une autorisation préfectorale peut être nécessaire pour les espaces ouverts au public.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Gérer les arrivées tardives et les accès</h2>
+<p>Quand l'accueil n'est pas tenu toute la nuit, la question des accès devient centrale.</p>
+<ul>
+  <li><b>Un code ou un badge temporaire</b> par séjour, actif seulement pendant la durée de la réservation.</li>
+  <li><b>Un accès qui expire tout seul</b> au départ du client, sans clé à récupérer.</li>
+  <li><b>Un historique des entrées</b>, utile en cas de litige ou d'incident.</li>
+  <li><b>Une caméra à l'entrée</b> qui permet de vérifier une arrivée à distance.</li>
+</ul>
+<p>Le principe est détaillé dans notre article <a href="/conseils/controle-acces-badge">badge, code ou application</a>.</p>
+
+<h2>Le Wi-Fi des clients</h2>
+<p>Le Wi-Fi fait partie des services les plus attendus. Mais il ne doit jamais partager le réseau de la gestion de l'établissement : logiciel de réservation, caisse, ordinateurs, caméras.</p>
+<ul>
+  <li><b>Un réseau invités séparé</b>, isolé du réseau professionnel.</li>
+  <li><b>Une bonne couverture</b> dans les chambres et les espaces communs, avec plusieurs bornes si nécessaire.</li>
+  <li><b>Une limite de débit</b> par appareil, pour un service équitable.</li>
+</ul>
+<p>Voir notre article <a href="/conseils/wifi-clients-separe">pourquoi séparer le Wi-Fi des clients</a>. Un professionnel qui fournit un accès internet au public peut aussi avoir des obligations particulières : renseignez-vous avant la mise en service.</p>
+
+<h2>Une alarme adaptée</h2>
+<p>Dans un établissement occupé jour et nuit, l'alarme ne protège pas l'ensemble du bâtiment, mais elle reste utile pour :</p>
+<ul>
+  <li><b>Les zones fermées la nuit</b> : bureau, réserve, local technique, salle de restaurant.</li>
+  <li><b>Les périodes de fermeture</b> saisonnière, quand le bâtiment reste vide plusieurs semaines.</li>
+  <li><b>Un bouton d'alerte</b> à l'accueil pour le personnel de nuit.</li>
+</ul>
+
+<h2>Pendant la fermeture saisonnière</h2>
+<p>Un établissement fermé hors saison est exposé longtemps. C'est le moment de vérifier que l'alarme couvre tout le bâtiment, que les caméras et l'accès à distance fonctionnent, et que les alertes arrivent bien sur votre téléphone. Notre article <a href="/conseils/commerce-avant-les-conges">fermeture pour congés</a> donne la liste des vérifications.</p>
+
+<h2>Équiper votre établissement</h2>
+<p>Nous installons caméras, contrôle des accès, alarme et Wi-Fi clients séparé pour les hôtels, résidences et chambres d'hôtes, en organisant l'intervention pour ne pas gêner vos clients, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
