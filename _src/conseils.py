@@ -1928,4 +1928,70 @@ ARTICLES = [
 <h2>Équiper votre établissement</h2>
 <p>Nous installons caméras, contrôle des accès, alarme et Wi-Fi clients séparé pour les hôtels, résidences et chambres d'hôtes, en organisant l'intervention pour ne pas gêner vos clients, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="entretien-videosurveillance-alarme",
+        title="Entretenir sa vidéosurveillance et son alarme : ce qu'il faut vérifier",
+        short="Entretien du système",
+        seo="Entretien d'une installation de vidéosurveillance et d'alarme : la check-list",
+        desc="Caméras encrassées, disque plein, piles faibles, mises à jour oubliées : les vérifications régulières qui gardent une installation de sécurité fiable le jour où vous en avez besoin.",
+        summary="Une installation de sécurité qui n'est jamais vérifiée finit par lâcher au mauvais moment. La liste des contrôles à faire, et à quelle fréquence.",
+        date="2026-11-18",
+        related=["cameras-ne-fonctionnent-plus", "commerce-avant-les-conges"],
+        body="""
+<p>Une installation de vidéosurveillance ou d'alarme ne s'use pas de façon visible. Elle fonctionne, jour après jour, jusqu'au moment où l'on a besoin d'une image ou d'une alerte et où l'on découvre que la caméra est voilée, que le disque est plein depuis des semaines ou qu'un détecteur n'a plus de pile. Quelques vérifications régulières suffisent pour éviter ces mauvaises surprises.</p>
+
+<h2>Pourquoi un système de sécurité se dégrade</h2>
+<ul>
+  <li><b>La poussière, le pollen, le sel et les toiles d'araignée</b> voilent progressivement les objectifs, surtout à l'extérieur et près du littoral.</li>
+  <li><b>Les disques durs</b> des enregistreurs s'usent avec l'enregistrement permanent.</li>
+  <li><b>Les piles</b> des détecteurs sans fil s'épuisent.</li>
+  <li><b>Les angles bougent</b> : une caméra heurtée, un support qui se desserre, un aménagement qui masque la vue.</li>
+  <li><b>Les logiciels vieillissent</b> : application qui ne se connecte plus, failles de sécurité non corrigées.</li>
+  <li><b>Les accès s'accumulent</b> : anciens salariés toujours enregistrés, codes partagés.</li>
+</ul>
+
+<h2>Chaque mois : quelques minutes suffisent</h2>
+<ol>
+  <li><b>Regardez chaque caméra</b> sur votre téléphone, de jour puis de nuit : l'image est-elle nette, bien cadrée, sans obstacle ?</li>
+  <li><b>Vérifiez l'enregistrement</b> : remontez dans l'historique pour vous assurer que les jours précédents sont bien enregistrés.</li>
+  <li><b>Consultez les alertes de l'application</b> : piles faibles, détecteur hors ligne, erreur de disque.</li>
+  <li><b>Testez une alerte</b> en armant l'alarme et en ouvrant une porte, en prévenant les personnes qui reçoivent les notifications.</li>
+</ol>
+
+<h2>Chaque trimestre : un contrôle plus complet</h2>
+<ul>
+  <li><b>Nettoyer les objectifs</b> des caméras extérieures avec un chiffon doux.</li>
+  <li><b>Retirer les toiles d'araignée</b> autour des caméras : attirées par la chaleur des LED infrarouges, elles brouillent les images de nuit et déclenchent de fausses détections.</li>
+  <li><b>Faire le point sur les accès</b> : retirer les comptes, badges et codes des personnes qui n'en ont plus besoin.</li>
+  <li><b>Vérifier la date et l'heure</b> de l'enregistreur, indispensables pour que les images servent de preuve.</li>
+  <li><b>Exporter une séquence test</b> sur une clé, pour savoir le faire le jour où ce sera nécessaire.</li>
+</ul>
+
+<h2>Chaque année : une révision de fond</h2>
+<ul>
+  <li><b>Contrôler l'état du disque dur</b> et prévoir son remplacement avant la panne.</li>
+  <li><b>Appliquer les mises à jour</b> de l'enregistreur, des caméras et de l'application.</li>
+  <li><b>Remplacer les piles</b> des détecteurs sans fil, même si elles ne sont pas encore signalées faibles.</li>
+  <li><b>Tester la sirène</b> et la batterie de secours de la centrale.</li>
+  <li><b>Vérifier les fixations et les câbles</b> exposés aux intempéries.</li>
+  <li><b>Revoir l'installation</b> par rapport à l'activité : nouvel aménagement, nouvelle zone à couvrir, nouvel accès.</li>
+</ul>
+
+<h2>Les signes qui doivent alerter</h2>
+<ul>
+  <li><b>Une caméra qui affiche « pas de signal »</b>, même par intermittence.</li>
+  <li><b>Des trous dans l'historique</b> d'enregistrement.</li>
+  <li><b>Des fausses alertes répétées</b> : détecteur mal placé, défaillant ou sale.</li>
+  <li><b>Une application qui ne se connecte plus</b> à distance.</li>
+  <li><b>Un enregistreur qui chauffe ou redémarre</b> tout seul.</li>
+</ul>
+<p>Pour diagnostiquer ces problèmes, voir notre article <a href="/conseils/cameras-ne-fonctionnent-plus">vos caméras ne fonctionnent plus</a>.</p>
+
+<h2>Le faire soi-même ou le confier ?</h2>
+<p>Les vérifications mensuelles sont simples et peuvent être faites par vous ou un salarié. Les contrôles plus techniques, comme l'état du disque, les mises à jour, la batterie de la centrale ou le réglage des détecteurs, sont plus confortables à confier à un professionnel, dans le cadre d'un contrat d'entretien ou d'une visite ponctuelle. Votre contrat d'assurance peut aussi prévoir un entretien régulier des protections.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les règles sur la conservation des images, consultez cnil.fr.</p>
+
+<h2>Confier l'entretien de votre installation</h2>
+<p>Nous assurons l'entretien et le dépannage des caméras, alarmes et réseaux, y compris pour les installations posées par d'autres, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une intervention</a>.</p>
+"""),
 ]
