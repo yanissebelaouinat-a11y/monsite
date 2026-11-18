@@ -1977,6 +1977,9 @@ ARTICLES = [
   <li><b>Revoir l'installation</b> par rapport à l'activité : nouvel aménagement, nouvelle zone à couvrir, nouvel accès.</li>
 </ul>
 
+<h2>Garder une trace</h2>
+<p>Notez chaque contrôle et chaque intervention dans un petit carnet ou un tableau : date, ce qui a été vérifié, ce qui a été changé. En cas de sinistre, ce suivi montre que l'installation était entretenue, et il aide à repérer un appareil qui tombe en panne trop souvent.</p>
+
 <h2>Les signes qui doivent alerter</h2>
 <ul>
   <li><b>Une caméra qui affiche « pas de signal »</b>, même par intermittence.</li>
