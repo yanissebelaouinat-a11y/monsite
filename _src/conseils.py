@@ -1997,4 +1997,71 @@ ARTICLES = [
 <h2>Confier l'entretien de votre installation</h2>
 <p>Nous assurons l'entretien et le dépannage des caméras, alarmes et réseaux, y compris pour les installations posées par d'autres, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une intervention</a>.</p>
 """),
+    dict(
+        slug="fermeture-du-soir",
+        title="Fermer son commerce le soir en sécurité : la routine à adopter",
+        short="Fermeture du soir",
+        seo="Fermeture d'un commerce le soir : les bons réflexes de sécurité",
+        desc="Dernier client, caisse, rideau, alarme : une routine simple pour fermer un commerce le soir sans prendre de risque, que l'on soit seul ou en équipe.",
+        summary="La fermeture est un moment sensible : caisse pleine, rue qui se vide, personne seule. Une routine simple pour fermer chaque soir en sécurité.",
+        date="2026-11-19",
+        related=["bouton-alerte-agression", "proteger-la-caisse"],
+        body="""
+<p>La fermeture du soir est l'un des moments les plus sensibles de la journée d'un commerçant. La caisse contient la recette du jour, la rue se vide, il fait souvent nuit, et il arrive qu'une seule personne soit encore dans le magasin. C'est aussi un moment de fatigue, où l'on a envie d'en finir vite. Une routine simple, toujours la même, réduit nettement les risques.</p>
+
+<h2>Avant l'heure de fermeture</h2>
+<ul>
+  <li><b>Faites un premier retrait de caisse</b> dans l'après-midi, pour ne pas garder toute la recette jusqu'au soir.</li>
+  <li><b>Rangez la réserve</b> et fermez les accès qui ne servent plus : porte de service, cour, sous-sol.</li>
+  <li><b>Vérifiez que les caméras fonctionnent</b> d'un coup d'œil sur l'écran ou le téléphone.</li>
+  <li><b>Si possible, évitez de fermer seul</b>, surtout les jours de forte recette.</li>
+</ul>
+
+<h2>Au moment de fermer</h2>
+<ol>
+  <li><b>Faites le tour du magasin</b> avant de baisser le rideau : cabines d'essayage, toilettes, réserve. Personne ne doit rester caché à l'intérieur.</li>
+  <li><b>Baissez le rideau ou fermez la porte</b> avant de compter la caisse, jamais l'inverse.</li>
+  <li><b>Comptez la caisse hors de la vue</b> depuis la rue, dans le bureau ou la réserve.</li>
+  <li><b>Rangez les espèces dans le coffre</b> ou préparez le dépôt, sans le laisser en évidence.</li>
+  <li><b>Laissez le tiroir-caisse vide et ouvert</b> : c'est le signe qu'il n'y a rien à prendre.</li>
+  <li><b>Éteignez et rangez</b> ce qui a de la valeur et se voit depuis la vitrine.</li>
+</ol>
+
+<h2>En sortant</h2>
+<ul>
+  <li><b>Regardez dehors avant de sortir</b>, grâce à une caméra qui filme l'entrée ou une vitre dégagée. Si quelque chose vous paraît anormal, attendez ou appelez quelqu'un.</li>
+  <li><b>Armez l'alarme</b> et vérifiez dans l'application qu'elle est bien armée.</li>
+  <li><b>Ne faites pas toujours le même trajet</b> ni à la même heure pour déposer la recette.</li>
+  <li><b>Gardez votre téléphone à la main</b>, pas au fond du sac.</li>
+</ul>
+
+<h2>Quand on ferme seul</h2>
+<p>Beaucoup de commerçants ferment seuls, chaque soir. Quelques équipements rendent ce moment plus sûr :</p>
+<ul>
+  <li><b>Un bouton d'alerte portatif</b>, pour prévenir discrètement en cas de problème. Voir notre article sur le <a href="/conseils/bouton-alerte-agression">bouton d'alerte</a>.</li>
+  <li><b>Une caméra qui filme l'extérieur de l'entrée</b>, pour vérifier les abords avant d'ouvrir la porte.</li>
+  <li><b>Un éclairage extérieur à détection</b> devant la porte et le rideau.</li>
+  <li><b>Une personne prévenue</b> de l'heure à laquelle vous fermez, qui s'inquiète si vous ne donnez pas de nouvelles.</li>
+</ul>
+
+<h2>Le rôle des équipements</h2>
+<p>La routine compte plus que le matériel, mais le matériel la rend plus facile :</p>
+<ul>
+  <li><b>Une alarme simple à armer</b>, par badge ou application, évite de l'oublier quand on est pressé.</li>
+  <li><b>Une notification</b> sur votre téléphone si l'alarme n'a pas été armée à l'heure habituelle.</li>
+  <li><b>Des caméras sur la caisse et l'entrée</b>, qui enregistrent ce moment sensible.</li>
+  <li><b>Un historique</b> qui montre qui a fermé et à quelle heure, utile quand plusieurs salariés se relaient.</li>
+</ul>
+<p>Pour aller plus loin sur la caisse, voir notre article <a href="/conseils/proteger-la-caisse">protéger la caisse d'un commerce</a>.</p>
+
+<h2>Former l'équipe</h2>
+<p>Si plusieurs personnes ferment le magasin selon les jours, écrivez la routine sur une fiche simple, affichée dans la réserve. Chacun suit les mêmes étapes, dans le même ordre. En cas de doute ou de situation inhabituelle, la consigne est toujours la même : ne prendre aucun risque, et appeler le 17 en cas de danger.</p>
+
+<h2>Après un incident</h2>
+<p>Si quelque chose s'est passé à la fermeture, notez tout de suite ce dont vous vous souvenez, conservez les images des caméras avant qu'elles ne soient effacées, et déposez plainte.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. En cas de danger, composez le 17 ou le 112. Pour les démarches après un vol ou une agression, consultez service-public.fr.</p>
+
+<h2>Équiper votre commerce pour la fermeture</h2>
+<p>Nous installons des caméras sur l'entrée et la caisse, des alarmes simples à armer et des boutons d'alerte, pour que la fermeture du soir se fasse en sécurité, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
