@@ -2064,4 +2064,68 @@ ARTICLES = [
 <h2>Équiper votre commerce pour la fermeture</h2>
 <p>Nous installons des caméras sur l'entrée et la caisse, des alarmes simples à armer et des boutons d'alerte, pour que la fermeture du soir se fasse en sécurité, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="coupure-courant-internet",
+        title="Coupure de courant ou d'internet : votre sécurité tient-elle le coup ?",
+        short="Coupure de courant",
+        seo="Coupure de courant ou d'internet : garder alarme et caméras en marche",
+        desc="Batterie de secours, carte SIM, onduleur, enregistrement local : comment éviter qu'une simple coupure de courant ou d'internet ne rende votre alarme et vos caméras inutiles.",
+        summary="Une coupure de courant ou d'internet peut rendre une installation aveugle au pire moment. Les équipements qui permettent de rester protégé malgré tout.",
+        date="2026-11-20",
+        related=["alarme-commerce", "cameras-a-distance"],
+        body="""
+<p>Une installation de sécurité dépend de deux choses que l'on oublie souvent : <b>l'électricité</b> et <b>la connexion internet</b>. Un orage, un disjoncteur qui saute, une box qui redémarre mal, un câble coupé, et l'alarme ne prévient plus personne, les caméras n'enregistrent plus, l'application ne répond plus. Certains cambrioleurs le savent et coupent volontairement le courant ou la ligne avant d'entrer. Quelques équipements permettent de rester protégé malgré tout.</p>
+
+<h2>Ce qui se passe lors d'une coupure</h2>
+<ul>
+  <li><b>Coupure de courant</b> : sans secours, la centrale d'alarme s'éteint, les caméras et l'enregistreur s'arrêtent, la box internet aussi.</li>
+  <li><b>Coupure d'internet</b> : le courant est là, mais plus aucune alerte n'arrive sur votre téléphone et vous ne voyez plus les images à distance.</li>
+  <li><b>Retour du courant</b> : certains appareils redémarrent mal, ou restent éteints jusqu'à une intervention.</li>
+</ul>
+
+<h2>Pour l'alarme : batterie et carte SIM</h2>
+<p>Une alarme sérieuse doit continuer à fonctionner sans courant et sans internet.</p>
+<ul>
+  <li><b>Une batterie de secours</b> dans la centrale, qui prend le relais pendant plusieurs heures en cas de coupure.</li>
+  <li><b>Des détecteurs sans fil sur piles</b>, qui ne dépendent pas du secteur.</li>
+  <li><b>Une double transmission</b> : internet et carte SIM. Si la ligne internet tombe, l'alerte passe par le réseau mobile.</li>
+  <li><b>Une alerte de coupure</b> : la centrale vous prévient elle-même qu'elle est passée sur batterie ou qu'internet est tombé.</li>
+  <li><b>Une sirène avec sa propre batterie</b>, qui sonne même si la centrale est attaquée.</li>
+</ul>
+<p>Pour le reste de l'équipement, voir notre article sur les <a href="/conseils/alarme-commerce">détecteurs indispensables d'une alarme de commerce</a>.</p>
+
+<h2>Pour les caméras : l'onduleur</h2>
+<p>Les caméras et l'enregistreur consomment plus qu'une alarme : une batterie intégrée ne suffit pas. La solution est un <b>onduleur</b>, une batterie placée dans la baie qui alimente pendant un temps l'enregistreur, le switch qui alimente les caméras par le câble réseau, et la box internet.</p>
+<ul>
+  <li><b>Il évite les coupures brèves</b>, les plus fréquentes, qui suffisent à faire redémarrer les appareils.</li>
+  <li><b>Il protège le matériel</b> contre les surtensions et les micro-coupures.</li>
+  <li><b>Il laisse le temps</b> d'enregistrer ce qui se passe pendant une coupure provoquée.</li>
+</ul>
+<p>Son autonomie dépend du nombre de caméras et de la taille de la batterie : elle se calcule lors de l'installation.</p>
+
+<h2>Enregistrer localement</h2>
+<p>Des caméras qui n'enregistrent que dans un service en ligne ne gardent plus rien quand internet coupe. Un <b>enregistreur sur place</b>, rangé à l'abri et relié à un onduleur, continue d'enregistrer même sans connexion. Les images restent disponibles une fois la ligne rétablie.</p>
+
+<h2>Mettre le matériel à l'abri</h2>
+<ul>
+  <li><b>La box, l'enregistreur et l'onduleur</b> dans une baie fermée ou un local technique, hors de portée.</li>
+  <li><b>Le tableau électrique</b> protégé, et non accessible depuis l'extérieur.</li>
+  <li><b>Les câbles</b> qui arrivent de l'extérieur en gaine, difficiles à couper.</li>
+</ul>
+
+<h2>Après une coupure : vérifier</h2>
+<ol>
+  <li><b>Contrôlez dans l'application</b> que la centrale est repassée sur secteur et que toutes les caméras sont en ligne.</li>
+  <li><b>Vérifiez l'enregistrement</b> sur la période de la coupure.</li>
+  <li><b>Regardez l'état de l'onduleur</b> et de la batterie de la centrale : une batterie très sollicitée peut avoir besoin d'être remplacée.</li>
+  <li><b>Si une coupure semble provoquée</b>, consultez les images et, en cas d'intrusion, appelez le 17.</li>
+</ol>
+
+<h2>Testez une fois</h2>
+<p>Le meilleur moyen de savoir si votre installation tient le coup est de <b>faire l'essai</b>, en dehors des heures d'ouverture : débranchez la box quelques minutes, puis coupez le courant du local. Recevez-vous une alerte ? Les caméras continuent-elles d'enregistrer ? Tout redémarre-t-il correctement ? Ce test révèle souvent un point faible qu'il vaut mieux découvrir avant le jour où il compte.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Faites intervenir un professionnel pour toute manipulation sur le tableau électrique.</p>
+
+<h2>Sécuriser votre installation contre les coupures</h2>
+<p>Nous ajoutons batterie de secours, transmission par carte SIM et onduleur aux installations neuves comme existantes, et nous testons avec vous leur comportement en cas de coupure, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
 ]

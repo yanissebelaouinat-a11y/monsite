@@ -61,6 +61,7 @@
 - [Sécurité d'un hôtel ou de chambres d'hôtes : caméras, accès et Wi-Fi](https://belaconnect.fr/conseils/securite-hotel): Accueil, entrées, parking, arrivées tardives et Wi-Fi des clients : les points à protéger dans un hôtel ou des chambres d'hôtes, sans gêner les séjours.
 - [Entretenir sa vidéosurveillance et son alarme : ce qu'il faut vérifier](https://belaconnect.fr/conseils/entretien-videosurveillance-alarme): Une installation de sécurité qui n'est jamais vérifiée finit par lâcher au mauvais moment. La liste des contrôles à faire, et à quelle fréquence.
 - [Fermer son commerce le soir en sécurité : la routine à adopter](https://belaconnect.fr/conseils/fermeture-du-soir): La fermeture est un moment sensible : caisse pleine, rue qui se vide, personne seule. Une routine simple pour fermer chaque soir en sécurité.
+- [Coupure de courant ou d'internet : votre sécurité tient-elle le coup ?](https://belaconnect.fr/conseils/coupure-courant-internet): Une coupure de courant ou d'internet peut rendre une installation aveugle au pire moment. Les équipements qui permettent de rester protégé malgré tout.
 
 ## Informations utiles
 
