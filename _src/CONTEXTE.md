@@ -1,7 +1,7 @@
 # CONTEXTE — site BELACONNECT
 
 Résumé du projet pour reprendre le travail rapidement, avec ou sans Claude.
-Mis à jour le 7 novembre 2026.
+Mis à jour le 20 novembre 2026.
 
 > Ce fichier est dans `_src/`, et non à la racine. Comme tous les dossiers qui commencent par `_`, GitHub Pages ne le publie pas : il reste privé au dépôt et n'apparaît pas sur belaconnect.fr.
 
@@ -42,7 +42,7 @@ Contact affiché : 06 59 76 27 85 (aussi sur WhatsApp), belaconnect06@gmail.com.
 | Domaine | `belaconnect.fr` (DNS chez **Hostinger**, fichier `CNAME`) |
 | Style | `assets/style.css`, une seule feuille, sans framework |
 | Script | `assets/main.js`, en JavaScript pur : formulaire en étapes, validation du téléphone, cookies, notifications |
-| Polices | **Inter** (texte) et **Space Grotesk** (titres), hébergées dans `assets/fonts/` (aucun appel à Google) |
+| Police | **Barlow**, hébergée dans `assets/fonts/` (aucun appel à Google) |
 | Formulaire | Envoi par Web3Forms (clé `FORM_KEY` dans `build.py`) + notification Telegram |
 | Notifications | **Telegram** via un relais **Cloudflare Worker** (`_src/telegram-worker.js`) |
 | Mesure | **Google Ads** (balise et conversion « Demande de devis ») + **Microsoft Clarity**, chargés seulement après « Accepter » dans le bandeau cookies |
@@ -61,7 +61,7 @@ _src/                     ← sources (non publiées par GitHub Pages)
   CONTEXTE.md             ← ce fichier
 assets/
   style.css, main.js      ← style et script
-  fonts/                  ← Inter et Space Grotesk (woff2)
+  fonts/                  ← Barlow (woff2)
   logo/                   ← logos, icône, logo de la signature e-mail
   og-image.png, favicons  ← partage sur les réseaux, icônes
   marques/                ← anciens logos de marques (plus utilisés)
@@ -83,24 +83,20 @@ Les adresses n'ont **pas de `.html`**. C'est `clean_urls()` dans `build.py` qui 
 ## 5. Décisions prises
 
 **Design**
-- **Design actuel, « nuit et laser »**, mis en ligne le 6 novembre 2026 :
-  - thème sombre partout ;
-  - scène de nuit dessinée en SVG en fond de chaque haut de page : rue, vitrine éclairée, rideau baissé, caméra, rayons laser rouges (constante `WAVES` dans `build.py`) ;
-  - accents **rouge laser `#FF2B3A`** : trait sous les titres, rayon entre les sections, bord des cartes principales ;
-  - boutons **cyan `#2BC0DC`**, la couleur du logo ;
-  - menu et barre mobile en verre dépoli léger.
-- Maquette de référence sur un canevas Claude Design : https://claude.ai/artifact/NPkW9QMMNoQBTRtG98Pfbo (privé).
-- Version « liquid glass » complète essayée puis **abandonnée**, parce qu'elle faisait trop « IA ». Le verre est réservé au menu, à la barre mobile et aux notifications de l'accueil.
-- Méthode **unslop** appliquée (skill de Damir Sokolovsky, CC BY 4.0) : aucune animation en boucle ni rebond, pas de lueurs, titres en graisse 500 à 600, pas d'emoji, pas de majuscules espacées.
-- Arrondis prononcés, boutons en pilule (choix de Yanisse).
+- **Design actuel** : haut de page bleu nuit avec un téléphone qui montre une caméra et l'alerte « Mouvement détecté », reste du site sur fond clair, cyan `#2BC0DC` (couleur du logo), police Barlow, arrondis prononcés et boutons en pilule (choix de Yanisse).
+- Méthode **unslop** appliquée (skill de Damir Sokolovsky, CC BY 4.0) : aucune animation en boucle ni rebond, pas de lueurs, titres en graisse 600 au plus, pas d'emoji.
+- Essais abandonnés :
+  - une version « liquid glass » ;
+  - le design sombre « nuit et laser » (scène de rue la nuit, lasers rouges, polices Inter et Space Grotesk). Il a été mis en ligne le 6 novembre 2026, puis retiré le 20 novembre 2026 à la demande de Yanisse.
+- La maquette de ces essais reste sur un canevas Claude Design : https://claude.ai/artifact/NPkW9QMMNoQBTRtG98Pfbo (privé).
 
 **Contenu**
-- Titre de l'accueil : **« Vos locaux sous les yeux, même rideau baissé »**.
+- Titre de l'accueil : **« Sécurité et informatique pour les professionnels du Sud »**.
 - Bandeau des logos de marques retiré ; les marques ne sont citées que dans les articles.
 - Pages par type de client ajoutées : restaurant, pharmacie, cabinet médical, bureaux.
 
 **Technique**
-- Polices hébergées sur le site, pour le RGPD (Barlow abandonnée au profit d'Inter et Space Grotesk).
+- Police hébergée sur le site, pour le RGPD.
 - Cookies : bandeau générique, Google Ads et Clarity chargés uniquement après accord (stocké 6 mois dans `localStorage`, clé `bc-consent`).
 - Téléphone du formulaire validé (format 0X + 8 chiffres, +33 ou international).
 - Référencement : `robots.txt` ouvert aux robots des IA, `llms.txt`, données structurées (LocalBusiness avec 3 départements desservis, FAQPage, Article, BreadcrumbList).
@@ -118,7 +114,7 @@ Les adresses n'ont **pas de `.html`**. C'est `clean_urls()` dans `build.py` qui 
 
 ## 6. Ce qui est fait
 
-- Site complet, en ligne, avec le nouveau design, des adresses sans `.html`, la version mobile (barre Appeler / WhatsApp / Devis) et le formulaire de devis en 3 étapes.
+- Site complet, en ligne, des adresses sans `.html`, la version mobile (barre Appeler / WhatsApp / Devis) et le formulaire de devis en 3 étapes.
 - Notifications Telegram pour chaque demande de devis, chaque clic Appeler / WhatsApp et chaque nouvel article.
 - Blog : 23 articles, **un nouvel article publié automatiquement chaque jour à 7 h 59** (heure de Paris).
 - Search Console validée, sitemap envoyé, indexation des pages clés demandée.
@@ -148,7 +144,6 @@ Les adresses n'ont **pas de `.html`**. C'est `clean_urls()` dans `build.py` qui 
 - [ ] Inscription dans les annuaires, toujours avec le même nom, téléphone et site : Bing Places, PagesJaunes, page Facebook, page LinkedIn, CCI ou Chambre des métiers.
 - [ ] Bing Webmaster Tools (import depuis Search Console).
 - [ ] Favicon dans les résultats Google : attendre que Google repasse (il a bien vu le logo).
-- [ ] Surveiller Search Console 2 à 3 semaines après le changement de titre de l'accueil.
 - [ ] Éventuellement d'autres pages par type de client : commerces, boulangeries, coiffeurs, hôtels, entrepôts.
 - [ ] Ménage : le code `brands()`, `BRAND_FILES` et `BRAND_LOGO` dans `build.py`, et le dossier `assets/marques/` ne servent plus.
 - [ ] La PR n°1 du dépôt existe mais ne doit pas être fusionnée : le site est publié depuis la branche `claude/beautiful-volta-qfuhcb`.
