@@ -2128,4 +2128,71 @@ ARTICLES = [
 <h2>Sécuriser votre installation contre les coupures</h2>
 <p>Nous ajoutons batterie de secours, transmission par carte SIM et onduleur aux installations neuves comme existantes, et nous testons avec vous leur comportement en cas de coupure, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="securite-boulangerie",
+        title="Sécurité d'une boulangerie : ouverture à l'aube, caisse et livraisons",
+        short="Sécurité d'une boulangerie",
+        seo="Sécurité d'une boulangerie : caméras, alarme et bonnes pratiques",
+        desc="Arrivée au fournil dans la nuit, caisse très sollicitée, livraisons, vitrine : comment protéger une boulangerie ou une pâtisserie avec des caméras, une alarme et de bons réflexes.",
+        summary="Arrivée au fournil en pleine nuit, caisse très active, livraisons tôt le matin : les points sensibles d'une boulangerie et les équipements qui les protègent.",
+        date="2026-11-21",
+        related=["proteger-la-caisse", "fermeture-du-soir"],
+        body="""
+<p>Une boulangerie vit à un rythme à part : on arrive au fournil en pleine nuit, on ouvre très tôt, la caisse tourne toute la journée avec beaucoup de petites sommes en espèces, et les livraisons de farine et de matières premières arrivent souvent avant le lever du jour. Ce rythme crée des moments sensibles qu'une installation de sécurité bien pensée peut protéger.</p>
+
+<h2>Les moments sensibles</h2>
+<ul>
+  <li><b>L'arrivée au fournil</b>, seul, dans une rue déserte, souvent par une porte de service.</li>
+  <li><b>L'ouverture de la boutique</b>, quand on lève le rideau et que les premiers clients arrivent.</li>
+  <li><b>La caisse</b>, très sollicitée, avec de nombreux paiements en espèces.</li>
+  <li><b>Les livraisons</b> déposées tôt le matin, parfois devant la porte.</li>
+  <li><b>La fermeture</b> en fin de journée, avec la recette du jour.</li>
+</ul>
+
+<h2>Arriver au fournil en sécurité</h2>
+<p>C'est souvent le moment le plus exposé : il fait nuit, la rue est vide et l'on est seul.</p>
+<ul>
+  <li><b>Une caméra sur l'entrée de service</b>, consultable sur le téléphone avant de descendre de voiture.</li>
+  <li><b>Un éclairage extérieur à détection</b> au-dessus de la porte du fournil.</li>
+  <li><b>Une alarme qui se désarme</b> par badge ou depuis l'application, sans chercher un clavier dans le noir.</li>
+  <li><b>Un bouton d'alerte portatif</b> pour prévenir discrètement en cas de problème. Voir notre article sur le <a href="/conseils/bouton-alerte-agression">bouton d'alerte</a>.</li>
+</ul>
+
+<h2>La caisse</h2>
+<ul>
+  <li><b>Une caméra au-dessus du comptoir</b>, qui voit les mains, les billets et le tiroir.</li>
+  <li><b>Une caméra face aux clients</b>, à hauteur de visage, à l'entrée.</li>
+  <li><b>Des retraits réguliers</b> dans la journée, pour ne pas garder toute la recette dans le tiroir.</li>
+  <li><b>Un coffre fixé</b> hors de la vue des clients.</li>
+</ul>
+<p>Les images aident aussi à comprendre un écart de caisse sans soupçonner toute l'équipe. Notre article <a href="/conseils/proteger-la-caisse">protéger la caisse d'un commerce</a> détaille ces points.</p>
+
+<h2>Le fournil et la réserve</h2>
+<p>Le fournil abrite du matériel coûteux, et la réserve des stocks de farine, de beurre et de produits. Une alarme avec des détecteurs d'ouverture sur la porte de service et des détecteurs de mouvement adaptés à un environnement chaud et poussiéreux protège ces zones pendant la fermeture. Le choix et l'emplacement des détecteurs comptent : la chaleur des fours et la farine en suspension peuvent provoquer de fausses alertes avec un matériel mal adapté.</p>
+
+<h2>Les livraisons</h2>
+<ul>
+  <li><b>Une caméra qui filme la zone de livraison</b>, pour savoir à quelle heure la marchandise a été déposée et par qui.</li>
+  <li><b>Un endroit fermé</b> pour les livraisons faites en votre absence, plutôt que devant la porte.</li>
+  <li><b>Des accès temporaires</b> par code pour les livreurs réguliers, retirés facilement si besoin.</li>
+</ul>
+
+<h2>La vitrine et la nuit</h2>
+<p>Une boulangerie ferme en général en début de soirée et reste vide jusqu'au milieu de la nuit. La vitrine et le rideau doivent être protégés : détecteur de bris de vitre ou de choc, sirène extérieure visible, caméra tournée vers l'entrée. Voir notre article sur la <a href="/conseils/proteger-vitrine-devanture">protection de la vitrine et de la devanture</a>.</p>
+
+<h2>Le Wi-Fi et la caisse</h2>
+<p>Terminal de paiement, caisse, balance connectée : une boulangerie dépend de son réseau. Si vous proposez le Wi-Fi aux clients, il doit être <b>séparé</b> du réseau de la caisse et des caméras.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Informer clients et salariés</b> par un panneau visible.</li>
+  <li><b>Ne pas filmer en permanence</b> un salarié à son poste, ni les vestiaires et zones de pause.</li>
+  <li><b>Une autorisation préfectorale</b> est en principe nécessaire pour filmer la boutique, ouverte au public.</li>
+  <li><b>Limiter la durée de conservation</b> des images.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Équiper votre boulangerie</h2>
+<p>Nous installons caméras, alarme adaptée au fournil, accès par badge et boutons d'alerte, en intervenant aux heures qui gênent le moins votre production, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
