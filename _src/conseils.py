@@ -2195,4 +2195,71 @@ ARTICLES = [
 <h2>Équiper votre boulangerie</h2>
 <p>Nous installons caméras, alarme adaptée au fournil, accès par badge et boutons d'alerte, en intervenant aux heures qui gênent le moins votre production, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="securite-salon-institut",
+        title="Salon de coiffure ou institut de beauté : se protéger sans gêner les clients",
+        short="Salon et institut",
+        seo="Sécurité d'un salon de coiffure ou d'un institut de beauté : caméras, alarme, Wi-Fi",
+        desc="Caisse, produits revendus, matériel, cabines de soins : comment sécuriser un salon de coiffure, un barbier ou un institut de beauté en respectant l'intimité des clients.",
+        summary="Caisse, produits en vitrine, matériel coûteux et cabines de soins : sécuriser un salon ou un institut sans jamais filmer ce qui relève de l'intimité.",
+        date="2026-11-22",
+        related=["vol-a-l-etalage", "filmer-ses-salaries"],
+        body="""
+<p>Un salon de coiffure, un barbier ou un institut de beauté a ses propres points sensibles : une caisse souvent alimentée en espèces, des produits revendus exposés près de l'entrée, du matériel professionnel coûteux, et des clients qui passent du temps sur place, parfois dans des cabines fermées. La sécurité doit protéger le commerce sans jamais mettre mal à l'aise la clientèle.</p>
+
+<h2>Les risques propres au salon et à l'institut</h2>
+<ul>
+  <li><b>Le vol de produits</b> revendus en boutique, faciles à glisser dans un sac près de l'entrée.</li>
+  <li><b>La caisse</b>, avec des encaissements fréquents et parfois des pourboires en espèces.</li>
+  <li><b>Le matériel</b> : tondeuses, sèche-cheveux, appareils de soins, souvent coûteux.</li>
+  <li><b>Les effractions</b> de nuit, par la vitrine ou l'arrière-boutique.</li>
+  <li><b>Les litiges</b> avec un client sur une prestation ou un paiement.</li>
+</ul>
+
+<h2>Où placer les caméras</h2>
+<ul>
+  <li><b>L'entrée</b>, pour voir qui entre et qui sort.</li>
+  <li><b>Le présentoir de produits</b>, souvent la cible des vols discrets.</li>
+  <li><b>La caisse et l'accueil</b>, pour les encaissements.</li>
+  <li><b>L'arrière-boutique et la réserve</b>, pour les stocks de produits.</li>
+</ul>
+<p>Pour le vol de produits, notre article sur le <a href="/conseils/vol-a-l-etalage">vol à l'étalage</a> donne aussi des conseils d'aménagement.</p>
+
+<h2>Ce qui ne doit jamais être filmé</h2>
+<p>C'est le point le plus important dans ce métier. Les <b>cabines de soins, d'épilation ou de massage</b>, les <b>vestiaires</b> et les <b>toilettes</b> ne doivent en aucun cas être filmés. L'espace de coiffure lui-même demande de la retenue : une caméra doit servir à la sécurité des biens et des personnes, pas à observer les clients ou à surveiller en permanence un salarié à son poste.</p>
+<p>Des panneaux doivent informer clients et salariés de la présence des caméras, et une autorisation préfectorale peut être nécessaire pour l'espace ouvert au public. Notre article <a href="/conseils/filmer-ses-salaries">filmer ses salariés</a> rappelle les règles côté équipe.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Une alarme pour les heures de fermeture</h2>
+<ul>
+  <li><b>Un détecteur d'ouverture</b> sur la porte d'entrée et la porte de service.</li>
+  <li><b>Un détecteur de bris de vitre</b> sur la vitrine.</li>
+  <li><b>Des détecteurs de mouvement</b> dans la boutique et la réserve.</li>
+  <li><b>Un accès par salarié</b>, badge ou application, pour savoir qui ouvre et ferme le salon.</li>
+</ul>
+
+<h2>La caisse et les paiements</h2>
+<ul>
+  <li><b>Des retraits réguliers</b> pour limiter les espèces dans le tiroir.</li>
+  <li><b>Une caméra au-dessus de la caisse</b>, qui aide à régler un litige sur un paiement.</li>
+  <li><b>Un coffre hors de vue</b> pour la recette.</li>
+</ul>
+
+<h2>Le Wi-Fi des clients</h2>
+<p>Dans un salon, les clients attendent ou restent assis longtemps et apprécient le Wi-Fi. Il doit être <b>séparé</b> du réseau qui relie la caisse, le logiciel de rendez-vous et les caméras. Un réseau invités, avec son propre mot de passe, donne accès à internet et à rien d'autre. Voir notre article <a href="/conseils/wifi-clients-separe">pourquoi séparer le Wi-Fi des clients</a>.</p>
+
+<h2>Les fichiers clients</h2>
+<p>Un institut conserve souvent des informations sur ses clients : coordonnées, historique des soins, parfois des informations de santé liées à certaines prestations. Ces données doivent être protégées : ordinateur verrouillé, comptes séparés pour chaque employé, sauvegardes régulières, accès limité.</p>
+
+<h2>Les bons réflexes</h2>
+<ol>
+  <li><b>Garder les produits de valeur</b> derrière le comptoir ou en vitrine fermée.</li>
+  <li><b>Ne laisser personne seul</b> dans la réserve.</li>
+  <li><b>Faire le tour du salon</b> avant de fermer.</li>
+  <li><b>Armer l'alarme chaque soir</b>, et vérifier dans l'application qu'elle est bien armée.</li>
+</ol>
+
+<h2>Équiper votre salon ou votre institut</h2>
+<p>Nous installons caméras, alarme, accès par badge et Wi-Fi clients séparé, en plaçant chaque équipement dans le respect de l'intimité de vos clients, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
