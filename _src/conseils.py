@@ -2262,4 +2262,71 @@ ARTICLES = [
 <h2>Équiper votre salon ou votre institut</h2>
 <p>Nous installons caméras, alarme, accès par badge et Wi-Fi clients séparé, en plaçant chaque équipement dans le respect de l'intimité de vos clients, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="securite-garage-atelier",
+        title="Sécuriser un garage ou un atelier : véhicules, outillage et pièces",
+        short="Garage et atelier",
+        seo="Sécurité d'un garage automobile ou d'un atelier : caméras, alarme, accès",
+        desc="Véhicules de clients, outillage, pièces détachées, cour extérieure : comment protéger un garage, un atelier ou un artisan avec des caméras, une alarme et des accès bien gérés.",
+        summary="Véhicules confiés, outillage coûteux, pièces en stock et cour ouverte : les points à protéger dans un garage ou un atelier, de jour comme de nuit.",
+        date="2026-11-23",
+        related=["videosurveillance-parking", "securiser-un-entrepot"],
+        body="""
+<p>Un garage automobile, un atelier de mécanique ou un local d'artisan concentre beaucoup de valeur : des véhicules confiés par les clients, un outillage professionnel coûteux, des pièces détachées en stock, parfois du carburant ou des métaux. Le tout avec de grandes portes, une cour souvent accessible et des allées et venues toute la journée. Une protection bien pensée évite les vols et facilite le règlement des litiges.</p>
+
+<h2>Les risques propres au garage et à l'atelier</h2>
+<ul>
+  <li><b>Le vol d'outillage</b>, facile à revendre et souvent rangé à portée de main.</li>
+  <li><b>Le vol de pièces</b> : batteries, jantes, pneus, catalyseurs, câbles.</li>
+  <li><b>Les véhicules des clients</b>, stationnés la nuit dans la cour ou devant le garage.</li>
+  <li><b>Les intrusions</b> par les portes sectionnelles ou une cour mal fermée.</li>
+  <li><b>Les litiges</b> : rayure contestée, dommage présent ou non à l'arrivée du véhicule.</li>
+</ul>
+
+<h2>Où placer les caméras</h2>
+<ul>
+  <li><b>L'entrée de la cour ou du parking</b>, pour voir les véhicules et les personnes qui entrent.</li>
+  <li><b>La zone de réception des véhicules</b> : une caméra qui filme l'état du véhicule à son arrivée est très utile en cas de contestation.</li>
+  <li><b>L'atelier</b>, en vue d'ensemble, sans surveiller en continu un mécanicien à son poste.</li>
+  <li><b>Le magasin de pièces et la zone d'outillage</b>, souvent la cible des vols.</li>
+  <li><b>La cour la nuit</b>, avec une vision de nuit longue portée.</li>
+</ul>
+<p>Pour la cour et les véhicules stationnés, notre article sur la <a href="/conseils/videosurveillance-parking">vidéosurveillance d'un parking</a> donne des conseils de placement.</p>
+
+<h2>Une alarme adaptée aux grands volumes</h2>
+<ul>
+  <li><b>Des détecteurs d'ouverture</b> sur les portes sectionnelles, la porte d'entrée et les accès de service.</li>
+  <li><b>Des détecteurs de mouvement</b> adaptés aux grandes hauteurs et à un environnement poussiéreux.</li>
+  <li><b>Des détecteurs extérieurs</b> dans la cour, pour être alerté avant qu'un intrus n'atteigne le bâtiment.</li>
+  <li><b>Une sirène extérieure avec flash</b>, visible depuis la rue.</li>
+  <li><b>Une batterie de secours et une carte SIM</b>, pour que l'alarme reste active même si le courant ou internet sont coupés.</li>
+</ul>
+
+<h2>Ranger, c'est déjà protéger</h2>
+<ol>
+  <li><b>Rangez l'outillage</b> dans des armoires ou servantes fermées à clé en fin de journée.</li>
+  <li><b>Gardez les pièces de valeur</b> dans un magasin fermé, pas dans la cour.</li>
+  <li><b>Fermez les véhicules des clients</b> et rangez les clés dans une armoire à clés fermée, hors de vue.</li>
+  <li><b>Éclairez la cour</b> avec un éclairage à détection.</li>
+  <li><b>Vérifiez les clôtures et le portail</b> régulièrement.</li>
+</ol>
+
+<h2>Les clés des véhicules</h2>
+<p>Les clés des véhicules confiés sont une cible en soi : avec elles, le véhicule part en quelques secondes. Une <b>armoire à clés fermée</b>, placée dans un endroit protégé et couvert par une caméra, limite fortement ce risque. Évitez de laisser les clés sur un tableau visible depuis l'accueil.</p>
+
+<h2>Contrôler les accès</h2>
+<p>Mécaniciens, apprentis, livreurs de pièces, clients qui récupèrent leur véhicule : beaucoup de monde passe dans un garage. Un accès par <b>badge ou code personnel</b>, avec un historique, permet de savoir qui ouvre et ferme l'atelier et de retirer un accès facilement. Voir notre article <a href="/conseils/controle-acces-badge">badge, code ou application</a>.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Informer salariés et clients</b> par des panneaux visibles.</li>
+  <li><b>Ne pas filmer en continu</b> un salarié à son poste, ni les vestiaires et zones de pause.</li>
+  <li><b>Ne pas filmer la voie publique</b> au-delà des abords immédiats.</li>
+  <li><b>Une autorisation préfectorale</b> peut être nécessaire pour l'espace d'accueil ouvert au public.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Équiper votre garage ou votre atelier</h2>
+<p>Nous installons caméras pour la cour et l'atelier, alarme adaptée aux grands volumes et accès par badge, en intervenant aux horaires qui gênent le moins votre activité, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
