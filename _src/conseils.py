@@ -2329,4 +2329,74 @@ ARTICLES = [
 <h2>Équiper votre garage ou votre atelier</h2>
 <p>Nous installons caméras pour la cour et l'atelier, alarme adaptée aux grands volumes et accès par badge, en intervenant aux horaires qui gênent le moins votre activité, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="preparer-visite-installateur",
+        title="Préparer la visite d'un installateur : les questions à se poser avant le devis",
+        short="Préparer la visite",
+        seo="Préparer la visite d'un installateur de vidéosurveillance ou d'alarme",
+        desc="Ce que vous voulez protéger, vos horaires, vos accès, votre réseau : les points à préparer avant la visite d'un installateur pour obtenir un devis clair et adapté.",
+        summary="Quelques minutes de préparation suffisent pour une visite plus efficace et un devis vraiment adapté : les questions à se poser avant de recevoir un installateur.",
+        date="2026-11-24",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>La visite sur place est l'étape la plus importante d'un projet de vidéosurveillance, d'alarme ou de réseau. C'est là que l'installateur découvre vos locaux, comprend votre activité et repère les points sensibles. Mieux vous l'avez préparée, plus le devis sera clair, juste et adapté. Voici les questions à vous poser avant le rendez-vous.</p>
+
+<h2>1. Qu'est-ce que vous voulez protéger, et contre quoi ?</h2>
+<p>C'est la question de départ. Selon les cas, la réponse change complètement l'installation :</p>
+<ul>
+  <li><b>Le stock et la marchandise</b> : vol à l'étalage, vol en réserve.</li>
+  <li><b>La caisse</b> : erreurs, vols, litiges.</li>
+  <li><b>Les locaux la nuit</b> : effraction, cambriolage.</li>
+  <li><b>Les personnes</b> : sécurité de l'équipe, travail seul, agressions.</li>
+  <li><b>Les extérieurs</b> : parking, cour, véhicules, dépôts sauvages.</li>
+</ul>
+<p>Si vous avez déjà subi un incident, notez-le : ce qui s'est passé, par où, à quelle heure. C'est une information précieuse.</p>
+
+<h2>2. Comment fonctionne votre activité ?</h2>
+<ul>
+  <li><b>Vos horaires</b> d'ouverture, et ceux de l'équipe s'ils sont différents.</li>
+  <li><b>Le nombre de personnes</b> qui travaillent sur place et qui doivent avoir un accès.</li>
+  <li><b>Les livraisons</b> : à quelle heure, par quelle porte.</li>
+  <li><b>Les périodes de fermeture</b> prolongée dans l'année.</li>
+  <li><b>Les prestataires réguliers</b> : ménage, maintenance, livreurs.</li>
+</ul>
+
+<h2>3. Quels sont tous les accès ?</h2>
+<p>Faites le tour de vos locaux en listant chaque entrée possible, même celles qu'on oublie : porte de service, réserve, cour, sous-sol, fenêtres accessibles, toit, rideau métallique, imposte. Une installation qui ne couvre que la porte d'entrée laisse souvent l'arrière sans protection.</p>
+
+<h2>4. Qu'existe-t-il déjà ?</h2>
+<ul>
+  <li><b>Des caméras ou une alarme</b> déjà installées, même en panne : elles peuvent parfois être reprises.</li>
+  <li><b>Des câbles</b> déjà passés, une baie réseau, des goulottes.</li>
+  <li><b>Votre box internet</b> et l'endroit où elle se trouve.</li>
+  <li><b>Le réseau</b> : Wi-Fi, caisse, terminal de paiement, ordinateurs.</li>
+</ul>
+<p>Si vous avez des factures ou des documents d'une ancienne installation, gardez-les sous la main.</p>
+
+<h2>5. Qui doit voir les images et recevoir les alertes ?</h2>
+<p>Vous seul, un associé, un responsable de magasin ? Sur quel téléphone ? Faut-il des accès différents selon les personnes ? Ces réponses déterminent la configuration de l'application et des comptes.</p>
+
+<h2>6. Avez-vous des contraintes particulières ?</h2>
+<ul>
+  <li><b>Un bail ou un règlement</b> de copropriété qui encadre les travaux ou les équipements en façade.</li>
+  <li><b>Des exigences de votre assureur</b> en matière d'alarme ou de protection.</li>
+  <li><b>Des travaux prévus</b> : c'est le meilleur moment pour passer des câbles.</li>
+  <li><b>Des contraintes esthétiques</b> : caméras discrètes, câbles invisibles.</li>
+</ul>
+
+<h2>7. Les démarches</h2>
+<p>Selon les zones filmées, des démarches peuvent être nécessaires : panneau d'information, information des salariés, autorisation préfectorale pour un lieu ouvert au public, vote en assemblée générale en copropriété. Un bon installateur vous les explique lors de la visite.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Le jour de la visite</h2>
+<ol>
+  <li><b>Prévoyez du temps</b> pour faire le tour complet des locaux, y compris la réserve et les extérieurs.</li>
+  <li><b>Donnez accès</b> au tableau électrique, à la box et aux locaux techniques.</li>
+  <li><b>Posez toutes vos questions</b> : rien n'est trop simple.</li>
+  <li><b>Demandez un devis détaillé</b> : emplacement de chaque équipement, matériel, démarches.</li>
+</ol>
+
+<h2>Prendre rendez-vous</h2>
+<p>Nous venons voir vos locaux gratuitement et sans engagement, nous repérons avec vous les points sensibles et nous vous remettons un devis détaillé, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander une visite gratuite</a>.</p>
+"""),
 ]
