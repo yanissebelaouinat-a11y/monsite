@@ -2402,4 +2402,61 @@ ARTICLES = [
 <h2>Prendre rendez-vous</h2>
 <p>Nous venons voir vos locaux gratuitement et sans engagement, nous repérons avec vous les points sensibles et nous vous remettons un devis détaillé, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander une visite gratuite</a>.</p>
 """),
+    dict(
+        slug="detection-intelligente",
+        title="Détection de personnes et de véhicules : en finir avec les fausses alertes",
+        short="Détection intelligente",
+        seo="Caméras avec détection de personnes et de véhicules : moins de fausses alertes",
+        desc="Feuilles, chats, phares, pluie : comment les caméras capables de distinguer une personne ou un véhicule réduisent les fausses alertes, et comment bien les régler.",
+        summary="Une alerte toutes les dix minutes pour une feuille ou un chat, et on finit par ne plus regarder. Comment la détection de personnes et de véhicules change la donne.",
+        date="2026-11-25",
+        related=["alarme-se-declenche-la-nuit", "vision-de-nuit"],
+        body="""
+<p>Beaucoup de commerçants activent les notifications de leurs caméras, puis les coupent au bout de quelques jours. La raison est toujours la même : trop d'alertes inutiles. Une branche qui bouge, un chat, la pluie, les phares d'une voiture, une ombre qui passe. À force, on ne regarde plus les alertes, y compris la seule qui comptait. Les caméras récentes savent faire mieux.</p>
+
+<h2>Pourquoi la détection classique se trompe</h2>
+<p>La détection de mouvement de base compare simplement les images entre elles : dès que des pixels changent, elle déclenche une alerte. Elle ne fait aucune différence entre une personne, un insecte sur l'objectif ou un changement de lumière. C'est pour cela qu'elle génère autant de fausses alertes, surtout à l'extérieur et la nuit.</p>
+
+<h2>Ce que change la détection de personnes et de véhicules</h2>
+<p>Les caméras plus récentes analysent la forme de ce qui bouge et savent reconnaître <b>une silhouette humaine</b> ou <b>un véhicule</b>. Elles peuvent alors :</p>
+<ul>
+  <li><b>Ignorer</b> les animaux, la végétation, la pluie et les variations de lumière.</li>
+  <li><b>N'envoyer une alerte</b> que lorsqu'une personne ou un véhicule est détecté.</li>
+  <li><b>Retrouver rapidement</b> dans les enregistrements tous les passages de personnes sur une période.</li>
+</ul>
+<p>Le nombre d'alertes inutiles baisse fortement, et chaque notification reçue mérite vraiment un coup d'œil.</p>
+
+<h2>Les réglages qui font la différence</h2>
+<h3>Les zones de détection</h3>
+<p>Plutôt que de surveiller toute l'image, on dessine les zones qui comptent : la porte, la vitrine, l'accès à la réserve. Le trottoir, la route ou l'arbre du voisin sont exclus.</p>
+<h3>Les lignes de franchissement</h3>
+<p>Une ligne virtuelle déclenche une alerte seulement quand quelqu'un la traverse, par exemple l'entrée d'une cour ou le seuil d'une porte de service. C'est très efficace pour les extérieurs.</p>
+<h3>Les horaires</h3>
+<p>Les alertes peuvent être actives uniquement en dehors des heures d'ouverture. Pendant la journée, la caméra enregistre normalement sans vous déranger à chaque client.</p>
+<h3>La sensibilité</h3>
+<p>Elle se règle zone par zone : plus élevée pour une porte de service isolée, plus faible pour une zone exposée au vent ou aux reflets.</p>
+
+<h2>Associer caméras et alarme</h2>
+<p>La détection intelligente des caméras ne remplace pas une alarme, mais elle la complète bien :</p>
+<ul>
+  <li><b>L'alarme</b> détecte l'intrusion avec des capteurs dédiés et déclenche la sirène.</li>
+  <li><b>Les caméras</b> confirment en image ce qui se passe et vous permettent de décider rapidement s'il faut appeler le 17.</li>
+</ul>
+<p>Pour la marche à suivre en cas d'alerte, voir notre article <a href="/conseils/alarme-se-declenche-la-nuit">votre alarme se déclenche la nuit</a>.</p>
+
+<h2>Les limites à connaître</h2>
+<ul>
+  <li><b>La qualité de l'image compte</b> : une caméra mal éclairée ou mal placée reconnaît moins bien les silhouettes. Voir notre article sur la <a href="/conseils/vision-de-nuit">vision de nuit</a>.</li>
+  <li><b>Un objectif sale</b> ou une toile d'araignée trompe aussi les caméras récentes.</li>
+  <li><b>La détection n'est jamais parfaite</b> : quelques fausses alertes restent possibles, et un passage très rapide ou très lointain peut être manqué.</li>
+  <li><b>Les réglages doivent être ajustés</b> après quelques jours d'utilisation, en fonction des alertes reçues.</li>
+</ul>
+
+<h2>Et la reconnaissance faciale ?</h2>
+<p>Distinguer une personne d'un animal n'a rien à voir avec identifier qui est cette personne. La reconnaissance faciale est très strictement encadrée et n'a pas sa place dans un commerce ou un bureau. La détection de personnes, elle, ne cherche pas à savoir qui passe, seulement que quelqu'un passe.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr.</p>
+
+<h2>Mettre en place une détection fiable</h2>
+<p>Nous installons des caméras capables de distinguer personnes et véhicules, nous dessinons avec vous les zones et les horaires d'alerte, puis nous ajustons les réglages après les premiers jours, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
 ]
