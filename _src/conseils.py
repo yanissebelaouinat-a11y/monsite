@@ -2459,4 +2459,63 @@ ARTICLES = [
 <h2>Mettre en place une détection fiable</h2>
 <p>Nous installons des caméras capables de distinguer personnes et véhicules, nous dessinons avec vous les zones et les horaires d'alerte, puis nous ajustons les réglages après les premiers jours, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="resolution-camera",
+        title="Résolution, angle, distance : une caméra qui permet vraiment d'identifier",
+        short="Résolution d'une caméra",
+        seo="Choisir la résolution et l'angle d'une caméra pour identifier un visage",
+        desc="Pourquoi tant d'images de vidéosurveillance sont inutilisables, et comment résolution, angle de vue et distance déterminent si l'on peut reconnaître un visage ou lire une plaque.",
+        summary="Une image floue ne sert à rien le jour d'une plainte. Comment résolution, angle et distance décident de ce qu'une caméra permet vraiment de voir.",
+        date="2026-11-26",
+        related=["combien-de-cameras", "vision-de-nuit"],
+        body="""
+<p>Le jour d'un vol, beaucoup de commerçants découvrent que leurs images ne permettent de reconnaître personne : une silhouette floue, un visage de quelques pixels, une plaque illisible. Ce n'est pas toujours la faute d'une caméra bas de gamme. Très souvent, la caméra n'est simplement pas adaptée à ce qu'on lui demande. Le nombre de mégapixels ne suffit pas : l'angle de vue et la distance comptent tout autant.</p>
+
+<h2>Ce que l'on attend d'une image</h2>
+<p>Selon l'emplacement, une caméra n'a pas le même rôle. On distingue généralement quatre niveaux :</p>
+<ul>
+  <li><b>Détecter</b> : savoir que quelqu'un est là.</li>
+  <li><b>Observer</b> : voir ce que fait la personne.</li>
+  <li><b>Reconnaître</b> : distinguer une personne connue d'une autre.</li>
+  <li><b>Identifier</b> : obtenir un visage assez net pour qu'il serve de preuve.</li>
+</ul>
+<p>Plus le niveau demandé est élevé, plus la personne doit apparaître grande dans l'image. Une même caméra peut identifier un visage à quelques mètres et seulement détecter une présence au fond d'un parking.</p>
+
+<h2>La résolution : utile, mais pas suffisante</h2>
+<p>La résolution indique le nombre de points qui composent l'image. Une résolution plus élevée donne plus de détails et permet de zoomer après coup sur un enregistrement. Mais ces détails sont répartis sur toute la scène filmée : si la caméra couvre une très grande surface, chaque visage n'occupe qu'une petite partie de l'image, et donc peu de points.</p>
+
+<h2>L'angle de vue : le vrai réglage</h2>
+<ul>
+  <li><b>Un angle large</b> couvre beaucoup d'espace, mais chaque personne apparaît petite. Idéal pour une vue d'ensemble d'un magasin ou d'un parking.</li>
+  <li><b>Un angle étroit</b> couvre une zone réduite, mais avec beaucoup de détails. Idéal pour une porte d'entrée, une caisse ou l'accès d'un parking.</li>
+  <li><b>Un objectif à focale variable</b> permet d'ajuster l'angle lors de l'installation, pour trouver le bon compromis sur place.</li>
+</ul>
+<p>C'est pour cela qu'une bonne installation combine souvent des caméras de vue d'ensemble et des caméras d'identification placées aux points de passage obligés.</p>
+
+<h2>La distance et la hauteur</h2>
+<ul>
+  <li><b>Plus la personne est loin</b>, plus elle est petite dans l'image.</li>
+  <li><b>Une caméra placée trop haut</b> ne montre que le dessus des têtes, surtout avec une casquette ou une capuche.</li>
+  <li><b>Le bon emplacement pour identifier</b> est un point de passage, à hauteur raisonnable, face aux personnes qui entrent.</li>
+</ul>
+
+<h2>Les pièges qui gâchent une bonne caméra</h2>
+<ol>
+  <li><b>Le contre-jour</b> : une caméra face à une vitrine ensoleillée ne montre que des silhouettes sombres.</li>
+  <li><b>Le mouvement</b> : une personne qui passe vite devient floue si la caméra est mal réglée.</li>
+  <li><b>La nuit</b> : sans lumière suffisante, les détails disparaissent. Voir notre article sur la <a href="/conseils/vision-de-nuit">vision de nuit</a>.</li>
+  <li><b>La compression</b> : un enregistrement réglé trop bas pour économiser de la place dégrade les détails.</li>
+  <li><b>Un objectif sale</b>, qui voile toute l'image.</li>
+</ol>
+
+<h2>Lire une plaque d'immatriculation</h2>
+<p>Lire une plaque demande une caméra dédiée, cadrée serré sur la zone de passage, avec un réglage adapté aux véhicules en mouvement et aux phares la nuit. Une caméra grand angle qui couvre tout le parking ne suffit presque jamais. La lecture automatique des plaques est, elle, très encadrée par la réglementation.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les règles officielles sur la vidéosurveillance, consultez cnil.fr.</p>
+
+<h2>Vérifier avant qu'il ne soit trop tard</h2>
+<p>Le meilleur test est simple : demandez à quelqu'un de passer devant chaque caméra, de jour puis de nuit, et regardez l'enregistrement. Reconnaissez-vous son visage ? Pouvez-vous lire une plaque à l'entrée du parking ? Si la réponse est non, l'emplacement ou le réglage doit être revu. Pour savoir combien de caméras prévoir, voir notre article <a href="/conseils/combien-de-cameras">combien de caméras pour un commerce</a>.</p>
+
+<h2>Des images réellement exploitables</h2>
+<p>Lors de la visite gratuite, nous définissons avec vous ce que chaque caméra doit permettre de voir, puis nous choisissons le matériel, l'angle et l'emplacement en conséquence, et nous vérifions les images sur place, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
 ]
