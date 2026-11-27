@@ -2518,4 +2518,69 @@ ARTICLES = [
 <h2>Des images réellement exploitables</h2>
 <p>Lors de la visite gratuite, nous définissons avec vous ce que chaque caméra doit permettre de voir, puis nous choisissons le matériel, l'angle et l'emplacement en conséquence, et nous vérifions les images sur place, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="commerce-saisonnier",
+        title="Commerce saisonnier : sécuriser la haute saison et la fermeture hivernale",
+        short="Commerce saisonnier",
+        seo="Sécurité d'un commerce saisonnier : haute saison, renforts et fermeture",
+        desc="Affluence, personnel saisonnier, terrasse, puis local fermé plusieurs mois : comment adapter caméras, alarme et accès au rythme d'un commerce saisonnier du Sud.",
+        summary="Beaucoup de monde l'été, un local vide l'hiver : comment adapter la sécurité d'un commerce saisonnier à ses deux vies.",
+        date="2026-11-27",
+        related=["commerce-avant-les-conges", "controle-acces-badge"],
+        body="""
+<p>Dans le Sud, beaucoup de commerces vivent au rythme des saisons : plage, glacier, location, boutique de souvenirs, restaurant de bord de mer, commerce de station. L'été, l'affluence est forte, l'équipe s'agrandit avec des saisonniers et les horaires s'étirent. L'hiver, le local reste fermé pendant des semaines, parfois des mois. Ces deux périodes posent des questions de sécurité très différentes.</p>
+
+<h2>La haute saison : beaucoup de monde, peu de temps</h2>
+<p>Quand le magasin ou la terrasse sont pleins, l'équipe n'a plus le temps de tout surveiller.</p>
+<ul>
+  <li><b>Le vol à l'étalage</b> profite de la foule et des files d'attente.</li>
+  <li><b>La caisse</b> encaisse beaucoup, souvent en espèces, avec des personnes qui se relaient.</li>
+  <li><b>La terrasse et les abords</b> accueillent du mobilier et du matériel qui restent dehors.</li>
+  <li><b>Les horaires tardifs</b> rendent la fermeture plus sensible.</li>
+</ul>
+<p>Des caméras bien placées sur l'entrée, la caisse et les rayons sensibles permettent de garder un œil sur l'ensemble, et un écran visible à l'entrée rappelle à chacun que le lieu est filmé. Notre article sur le <a href="/conseils/vol-a-l-etalage">vol à l'étalage</a> détaille les bons réflexes.</p>
+
+<h2>Les renforts saisonniers et les accès</h2>
+<p>Chaque saison, de nouvelles personnes rejoignent l'équipe pour quelques semaines ou quelques mois. Avec des clés, c'est un casse-tête : combien de doubles, qui les a rendus ?</p>
+<ul>
+  <li><b>Un badge ou un code par saisonnier</b>, actif uniquement pendant son contrat.</li>
+  <li><b>Des plages horaires</b> adaptées à chaque poste.</li>
+  <li><b>Un accès retiré en un instant</b> à la fin de la saison, sans changer les serrures.</li>
+  <li><b>Un historique</b> qui montre qui a ouvert et fermé chaque jour.</li>
+</ul>
+<p>Voir notre article <a href="/conseils/controle-acces-badge">badge, code ou application</a>.</p>
+<p>Les saisonniers doivent aussi être informés de la présence des caméras dès leur arrivée, comme tous les salariés.</p>
+
+<h2>Le Wi-Fi des clients</h2>
+<p>En saison, les clients demandent souvent le Wi-Fi. Il doit rester séparé du réseau de la caisse et des caméras, avec une limite de débit par appareil pour que le service reste fluide même quand l'établissement est plein.</p>
+
+<h2>La fermeture hivernale : un local vide pendant des mois</h2>
+<p>C'est souvent la période la plus risquée. Le local est fermé, la rue est plus calme, et une effraction peut passer inaperçue pendant longtemps.</p>
+<ul>
+  <li><b>Une alarme active tout l'hiver</b>, avec batterie de secours et transmission par carte SIM, pour continuer à prévenir même si le courant ou internet sont coupés.</li>
+  <li><b>Des caméras consultables à distance</b>, pour vérifier les locaux de temps en temps sans se déplacer.</li>
+  <li><b>Des alertes sur téléphone</b> envoyées à une personne qui peut réagir, même si vous êtes loin.</li>
+  <li><b>Un stock et une caisse vidés</b> avant la fermeture.</li>
+  <li><b>Le mobilier de terrasse rentré</b> ou attaché.</li>
+</ul>
+<p>Avant de fermer pour plusieurs mois, suivez la liste de notre article <a href="/conseils/commerce-avant-les-conges">fermeture pour congés</a>.</p>
+
+<h2>Pendant l'hiver</h2>
+<ol>
+  <li><b>Vérifiez régulièrement</b> que l'alarme est armée et que les caméras sont en ligne.</li>
+  <li><b>Faites relever le courrier</b> et vérifier les abords par une personne de confiance.</li>
+  <li><b>Gardez une trace</b> des alertes reçues et de leurs causes.</li>
+</ol>
+
+<h2>Avant la réouverture</h2>
+<ul>
+  <li><b>Faites contrôler l'installation</b> : piles des détecteurs, disque de l'enregistreur, mises à jour, nettoyage des caméras extérieures exposées au sel et au soleil.</li>
+  <li><b>Remettez à jour les accès</b> pour la nouvelle équipe.</li>
+  <li><b>Adaptez l'installation</b> si l'aménagement a changé : nouvelle terrasse, nouveau rayon, nouvelle caisse.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles sur la vidéosurveillance et l'information des salariés, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Adapter votre installation aux saisons</h2>
+<p>Nous installons des caméras, une alarme autonome et des accès par badge pensés pour les deux vies d'un commerce saisonnier, et nous pouvons vérifier l'installation avant la fermeture comme avant la réouverture, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
 ]
