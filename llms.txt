@@ -69,6 +69,7 @@
 - [Détection de personnes et de véhicules : en finir avec les fausses alertes](https://belaconnect.fr/conseils/detection-intelligente): Une alerte toutes les dix minutes pour une feuille ou un chat, et on finit par ne plus regarder. Comment la détection de personnes et de véhicules change la donne.
 - [Résolution, angle, distance : une caméra qui permet vraiment d'identifier](https://belaconnect.fr/conseils/resolution-camera): Une image floue ne sert à rien le jour d'une plainte. Comment résolution, angle et distance décident de ce qu'une caméra permet vraiment de voir.
 - [Commerce saisonnier : sécuriser la haute saison et la fermeture hivernale](https://belaconnect.fr/conseils/commerce-saisonnier): Beaucoup de monde l'été, un local vide l'hiver : comment adapter la sécurité d'un commerce saisonnier à ses deux vies.
+- [Internet lent au bureau ou au magasin : les causes les plus fréquentes](https://belaconnect.fr/conseils/reseau-lent-entreprise): Avant de changer d'abonnement, vérifiez le réseau à l'intérieur de vos locaux : c'est souvent là que se trouve le vrai problème.
 
 ## Informations utiles
 

@@ -2583,4 +2583,64 @@ ARTICLES = [
 <h2>Adapter votre installation aux saisons</h2>
 <p>Nous installons des caméras, une alarme autonome et des accès par badge pensés pour les deux vies d'un commerce saisonnier, et nous pouvons vérifier l'installation avant la fermeture comme avant la réouverture, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
 """),
+    dict(
+        slug="reseau-lent-entreprise",
+        title="Internet lent au bureau ou au magasin : les causes les plus fréquentes",
+        short="Réseau lent",
+        seo="Internet lent dans une entreprise ou un commerce : causes et solutions",
+        desc="Wi-Fi qui décroche, caisse qui rame, visioconférences coupées : les causes les plus courantes d'un réseau lent dans un local professionnel, et comment y remédier.",
+        summary="Avant de changer d'abonnement, vérifiez le réseau à l'intérieur de vos locaux : c'est souvent là que se trouve le vrai problème.",
+        date="2026-11-28",
+        related=["wifi-clients-separe", "baie-de-brassage"],
+        body="""
+<p>Une caisse qui met du temps à valider un paiement, des visioconférences qui se figent, des fichiers partagés qui s'ouvrent lentement, des caméras qui affichent une image saccadée : quand internet est lent, toute l'activité en souffre. Le premier réflexe est souvent d'accuser l'opérateur et de changer d'abonnement. Pourtant, dans beaucoup de locaux professionnels, le problème vient du <b>réseau à l'intérieur des locaux</b>, pas de la ligne elle-même.</p>
+
+<h2>D'abord, mesurer au bon endroit</h2>
+<p>Faites un test de débit <b>en branchant un ordinateur par câble directement sur la box</b>. Puis refaites-le en Wi-Fi, à l'endroit où vous travaillez.</p>
+<ul>
+  <li><b>Si le test est mauvais même en câble sur la box</b>, le problème vient probablement de la ligne ou de l'abonnement : c'est à voir avec l'opérateur.</li>
+  <li><b>Si le test est bon en câble mais mauvais en Wi-Fi</b>, le problème est à l'intérieur de vos locaux. C'est le cas le plus fréquent.</li>
+</ul>
+
+<h2>Cause n°1 : une box qui fait tout</h2>
+<p>Dans beaucoup de commerces et de petits bureaux, la box de l'opérateur sert à la fois de routeur, de Wi-Fi et de point de branchement pour tout. Elle n'est pas conçue pour couvrir un grand local, ni pour gérer des dizaines d'appareils en même temps. Rangée au fond d'un placard ou derrière un meuble métallique, son Wi-Fi porte encore moins loin.</p>
+
+<h2>Cause n°2 : un Wi-Fi mal couvert</h2>
+<ul>
+  <li><b>Des murs épais</b>, des cloisons métalliques, une réserve ou un étage qui bloquent le signal.</li>
+  <li><b>Des répéteurs Wi-Fi bon marché</b>, qui étendent la couverture mais divisent le débit.</li>
+  <li><b>Des réseaux voisins</b> sur les mêmes fréquences, très fréquents dans les rues commerçantes.</li>
+</ul>
+<p>La solution durable est de poser <b>plusieurs bornes Wi-Fi professionnelles</b>, reliées par câble, au bon endroit, plutôt que d'empiler les répéteurs.</p>
+
+<h2>Cause n°3 : trop d'appareils sur le même réseau</h2>
+<p>Ordinateurs, téléphones, caisse, terminal de paiement, imprimantes, caméras, et parfois le Wi-Fi offert aux clients : tout partage la même connexion. Un client qui regarde une vidéo ou une caméra qui envoie ses images vers internet peut ralentir la caisse. Séparer les réseaux et limiter le débit du Wi-Fi invités règle souvent le problème. Voir notre article <a href="/conseils/wifi-clients-separe">pourquoi séparer le Wi-Fi des clients</a>.</p>
+
+<h2>Cause n°4 : un câblage ou une baie en mauvais état</h2>
+<ul>
+  <li><b>Des câbles anciens</b> ou abîmés qui limitent le débit sans qu'on s'en aperçoive.</li>
+  <li><b>Des petits switchs empilés</b> sous les bureaux, ajoutés au fil du temps.</li>
+  <li><b>Une baie en désordre</b>, où personne ne sait plus quel câble va où.</li>
+  <li><b>Un équipement qui chauffe</b> dans un placard non ventilé.</li>
+</ul>
+<p>Pour une baie à reprendre, voir notre article sur la <a href="/conseils/baie-de-brassage">remise au propre d'une baie de brassage</a>.</p>
+
+<h2>Cause n°5 : les sauvegardes et mises à jour en pleine journée</h2>
+<p>Une sauvegarde en ligne, une synchronisation de fichiers ou des mises à jour lancées pendant les heures de travail peuvent saturer la connexion. Il suffit souvent de les programmer la nuit ou en dehors des heures d'ouverture.</p>
+
+<h2>Cause n°6 : l'abonnement n'est plus adapté</h2>
+<p>Si tous les tests en câble sont mauvais, ou si l'activité a beaucoup évolué, l'abonnement peut effectivement être insuffisant. Mais il vaut mieux le vérifier en dernier : changer d'abonnement ne corrigera jamais un mauvais Wi-Fi intérieur.</p>
+
+<h2>Les bons réflexes en attendant</h2>
+<ol>
+  <li><b>Branchez en câble</b> les équipements fixes importants : caisse, ordinateur principal, enregistreur.</li>
+  <li><b>Sortez la box</b> du placard et éloignez-la des masses métalliques.</li>
+  <li><b>Redémarrez la box</b> si elle n'a pas été redémarrée depuis longtemps.</li>
+  <li><b>Notez quand les ralentissements arrivent</b> : à certaines heures, dans certaines pièces, avec certains appareils. Ces indices aident beaucoup au diagnostic.</li>
+</ol>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour un problème de ligne ou d'abonnement, contactez votre opérateur.</p>
+
+<h2>Faire diagnostiquer votre réseau</h2>
+<p>Nous mesurons votre réseau sur place, repérons ce qui le ralentit, puis installons si besoin des bornes Wi-Fi professionnelles, un câblage propre et des réseaux séparés, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un diagnostic</a>.</p>
+"""),
 ]
