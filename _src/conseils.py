@@ -1,0 +1,2646 @@
+# Articles de la rubrique « Conseils » (référencement naturel).
+# Chaque article : slug, titre (h1), titre court (fil d'Ariane), title SEO, description, résumé (carte), date, corps HTML.
+
+ARTICLES = [
+    dict(
+        slug="proteger-son-commerce",
+        title="Comment protéger son commerce contre les vols et les dégradations",
+        short="Protéger son commerce",
+        seo="Protéger son commerce contre le vol et les dégradations : nos conseils",
+        desc="Vitrine, caisse, réserve, intrusion la nuit : les mesures concrètes pour protéger un commerce, de la vidéosurveillance à l'alarme, et les erreurs à éviter.",
+        summary="Vitrine, caisse, réserve, intrusion la nuit : les mesures qui fonctionnent vraiment et les erreurs à éviter.",
+        date="2026-10-22",
+        related=["combien-de-cameras", "alarme-sans-fil-ou-filaire"],
+        body="""
+<p>Vol à l'étalage, vitrine brisée, tags, intrusion la nuit : un commerce cumule les risques, souvent avec peu de moyens pour y faire face. Bonne nouvelle, quelques mesures bien choisies suffisent à réduire fortement ces risques. Voici celles que nous recommandons.</p>
+
+<h2>1. Repérer les points faibles de la boutique</h2>
+<p>Avant d'acheter quoi que ce soit, il faut savoir par où un voleur ou un casseur passerait. Les points à examiner en priorité :</p>
+<ul>
+  <li><b>La vitrine et la porte d'entrée</b> : c'est la première cible en cas de dégradation ou d'effraction.</li>
+  <li><b>La caisse</b> : vols, erreurs de rendu de monnaie, litiges avec un client.</li>
+  <li><b>La réserve et l'accès arrière</b> : souvent moins visibles, donc plus exposés la nuit.</li>
+  <li><b>Les rayons éloignés de la caisse</b> : là où le vol à l'étalage est le plus facile.</li>
+</ul>
+<p>C'est exactement ce que nous faisons lors de la visite gratuite : un tour des lieux pour couvrir les vrais risques, sans caméra inutile.</p>
+
+<h2>2. Une vidéosurveillance qui dissuade et qui sert de preuve</h2>
+<p>Une caméra visible décourage une bonne partie des passages à l'acte. Mais pour être utile après coup, l'installation doit produire des <b>images exploitables</b> :</p>
+<ul>
+  <li><b>Une caméra extérieure sur la façade</b>, placée en hauteur et hors de portée, avec un boîtier anti-vandalisme.</li>
+  <li><b>La vision de nuit</b>, idéalement en couleur, pour identifier une silhouette ou un véhicule devant la vitrine.</li>
+  <li><b>Une caméra sur la caisse</b>, cadrée sur le comptoir, et une ou deux sur la surface de vente.</li>
+  <li><b>Un enregistreur rangé à l'abri</b> (local technique, armoire fermée) : si une caméra est arrachée, les images déjà enregistrées restent disponibles.</li>
+</ul>
+<p>Les images peuvent ensuite être remises aux forces de l'ordre lors d'un dépôt de plainte et transmises à votre assureur.</p>
+
+<h2>3. Être alerté au bon moment</h2>
+<p>Une caméra qui enregistre un cambriolage à 3 h du matin, c'est bien. Être prévenu pendant qu'il se produit, c'est mieux. Deux solutions se complètent :</p>
+<ul>
+  <li><b>La détection intelligente des caméras</b> : une notification sur votre téléphone quand une personne est détectée devant la vitrine en dehors des heures d'ouverture.</li>
+  <li><b>Une alarme anti-intrusion</b> : détecteurs d'ouverture sur les portes, détecteurs de mouvement, détecteurs de bris de vitre et sirène. Couplée aux caméras, elle vous permet de vérifier immédiatement sur votre téléphone s'il s'agit d'une vraie intrusion.</li>
+</ul>
+
+<h2>4. Les gestes simples qui comptent aussi</h2>
+<ul>
+  <li>Laisser un <b>éclairage</b> discret la nuit : il dissuade et améliore les images.</li>
+  <li>Ne pas laisser d'argent dans la caisse après la fermeture, et le signaler.</li>
+  <li>Afficher le <b>panneau de vidéosurveillance</b> : il est obligatoire, et il dissuade.</li>
+  <li>Vérifier régulièrement que les caméras enregistrent bien : un disque plein ou une caméra débranchée ne se remarque souvent qu'après un incident.</li>
+</ul>
+
+<h2>5. Les erreurs à éviter</h2>
+<ul>
+  <li><b>Les caméras grand public en Wi-Fi</b> posées sans réflexion : coupures, images inutilisables la nuit, enregistrement dans le cloud uniquement.</li>
+  <li><b>Filmer la voie publique</b> ou l'intérieur d'un commerce voisin : c'est interdit, la caméra doit se limiter à vos locaux et à leurs abords immédiats.</li>
+  <li><b>Oublier les démarches</b> : un commerce ouvert au public doit obtenir une autorisation en préfecture. Nous détaillons ces règles sur notre page <a href="/reglementation#commerce">réglementation</a>.</li>
+</ul>
+
+<h2>En résumé</h2>
+<p>Une protection efficace combine des caméras bien placées, un enregistreur protégé, une alerte sur votre téléphone et, si possible, une alarme. Nous installons ces équipements dans les commerces de tout le Sud, après une visite gratuite. <a href="/videosurveillance#commerce">Voir notre offre pour les commerces</a>.</p>
+"""),
+    dict(
+        slug="combien-de-cameras",
+        title="Combien de caméras faut-il pour un commerce ou un local professionnel ?",
+        short="Combien de caméras ?",
+        seo="Combien de caméras de surveillance pour un commerce ou un bureau ?",
+        desc="Comment déterminer le nombre de caméras nécessaires pour un commerce, un bureau ou un entrepôt : zones à couvrir, angle de vue, intérieur et extérieur.",
+        summary="Zones à couvrir, angle de vue, intérieur et extérieur : la méthode pour ne mettre ni trop ni trop peu de caméras.",
+        date="2026-10-22",
+        related=["proteger-son-commerce", "videosurveillance-copropriete"],
+        body="""
+<p>C'est souvent la première question qu'on nous pose : « combien de caméras me faut-il ? ». La réponse dépend moins de la surface que des <b>zones à surveiller</b>. Voici la méthode que nous suivons pour dimensionner une installation.</p>
+
+<h2>Partir des zones, pas de la surface</h2>
+<p>Un local de 50 m² avec une seule entrée et une caisse peut se contenter de deux caméras. Un local de même taille avec une réserve, une porte de service et une vitrine sur deux rues en demandera davantage. On liste donc d'abord ce qu'il faut voir :</p>
+<ul>
+  <li>chaque <b>accès</b> : porte principale, porte de service, issue de secours, quai ;</li>
+  <li>la <b>caisse</b> ou l'accueil ;</li>
+  <li>les zones de <b>stock</b> ou de valeur : réserve, vitrine de produits, local informatique ;</li>
+  <li>les <b>abords</b> : façade, parking, cour de livraison.</li>
+</ul>
+
+<h2>Les ordres de grandeur les plus courants</h2>
+<ul>
+  <li><b>Petit commerce</b> (boutique, salon, agence) : en général 2 à 4 caméras. Une sur l'entrée, une sur la caisse, une ou deux sur la surface de vente ou la réserve.</li>
+  <li><b>Restaurant</b> : souvent 4 à 6 caméras pour la salle, la terrasse, l'entrée, la cuisine et l'accès livraison.</li>
+  <li><b>Bureaux</b> : l'accueil, les accès et le local technique, soit 2 à 4 caméras dans la plupart des cas. Les postes de travail ne doivent pas être filmés en permanence.</li>
+  <li><b>Entrepôt ou atelier</b> : de 6 à plus de 16 caméras selon la taille, avec une attention particulière au périmètre et aux quais.</li>
+</ul>
+<p>Ces chiffres sont indicatifs : seule une visite permet de les confirmer.</p>
+
+<h2>Ce qui fait varier le nombre de caméras</h2>
+<ul>
+  <li><b>L'angle de vue</b> : une caméra grand angle couvre une pièce entière, mais identifie moins bien une personne au fond. Pour une entrée, mieux vaut un cadrage serré.</li>
+  <li><b>Le niveau de détail recherché</b> : voir qu'il y a quelqu'un n'est pas la même chose que reconnaître un visage ou lire une plaque.</li>
+  <li><b>L'éclairage</b> : la nuit, la portée infrarouge limite la distance utile de chaque caméra.</li>
+  <li><b>Les obstacles</b> : rayonnages, poteaux, cloisons créent des angles morts.</li>
+</ul>
+
+<h2>Et l'enregistreur ?</h2>
+<p>L'enregistreur est choisi selon le nombre de caméras, avec quelques entrées libres pour pouvoir en ajouter plus tard. Son disque dur est dimensionné pour conserver les images le temps nécessaire, sans dépasser la durée recommandée (un mois au maximum en général).</p>
+
+<h2>Notre conseil</h2>
+<p>Mieux vaut peu de caméras bien placées que beaucoup de caméras mal orientées. Lors de la visite gratuite, nous repérons les zones utiles et vous proposons le nombre juste. <a href="/contact?besoin=video">Demander une visite</a>.</p>
+"""),
+    dict(
+        slug="videosurveillance-copropriete",
+        title="Installer des caméras en copropriété : les étapes jusqu'au vote en AG",
+        short="Caméras en copropriété",
+        seo="Vidéosurveillance en copropriété : vote en AG, règles et étapes",
+        desc="Installer la vidéosurveillance dans une copropriété : visite, devis, inscription à l'ordre du jour, vote en assemblée générale, règles à respecter et mise en service.",
+        summary="Du premier devis au vote en assemblée générale, puis à la mise en service : le parcours complet et les règles à respecter.",
+        date="2026-10-22",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>Dégradations dans le hall, vols dans le parking, dépôts sauvages au local poubelles : de plus en plus de copropriétés envisagent la vidéosurveillance. Le projet passe forcément par l'assemblée générale. Voici comment il se déroule, étape par étape.</p>
+
+<h2>1. Identifier les besoins avec le conseil syndical</h2>
+<p>Tout commence par une liste des lieux qui posent problème : entrée, hall, boîtes aux lettres, parking, garages, local vélos, local poubelles. Le conseil syndical ou le syndic peut nous contacter pour organiser une visite des parties communes.</p>
+
+<h2>2. Obtenir un devis détaillé</h2>
+<p>Après la visite, nous remettons un devis précis : nombre et emplacement des caméras, matériel, enregistreur, panneaux d'information, et maintenance si elle est souhaitée. Ce document est conçu pour être joint à la convocation de l'assemblée générale, afin que chaque copropriétaire sache sur quoi il vote.</p>
+
+<h2>3. Inscrire le projet à l'ordre du jour</h2>
+<p>Le syndic inscrit la résolution à l'ordre du jour de la prochaine assemblée générale, ou d'une assemblée convoquée spécialement. La résolution doit préciser les lieux filmés, les personnes qui auront accès aux images et la durée de conservation.</p>
+
+<h2>4. Le vote en assemblée générale</h2>
+<p>L'installation de caméras dans les parties communes doit être votée en assemblée générale. Il s'agit en règle générale d'un vote à la majorité absolue des voix de tous les copropriétaires (majorité de l'article 25 de la loi de 1965). Le syndic vous confirmera la majorité applicable à votre résidence.</p>
+
+<h2>5. Les règles à respecter</h2>
+<ul>
+  <li>Les caméras filment <b>uniquement les parties communes</b> : jamais l'intérieur des logements, ni les portes palières, ni la voie publique.</li>
+  <li>Les résidents et visiteurs sont informés par des <b>panneaux</b> visibles.</li>
+  <li>L'accès aux images est limité à quelques <b>personnes désignées</b> (syndic, membres du conseil syndical).</li>
+  <li>Les images sont conservées <b>quelques jours</b>, un mois au maximum.</li>
+</ul>
+<p>Toutes ces règles sont résumées sur notre page <a href="/reglementation#copropriete">réglementation</a>.</p>
+
+<h2>6. L'installation et la mise en service</h2>
+<p>Une fois le vote acquis, nous fixons la date avec le syndic. Nous posons les caméras, l'enregistreur et les panneaux, réglons les accès des personnes autorisées et leur montrons comment retrouver une séquence. La maintenance peut ensuite être assurée dans la durée.</p>
+
+<h2>Vous préparez une assemblée générale ?</h2>
+<p>Nous intervenons dans les copropriétés de tout le Sud. <a href="/contact?besoin=copro">Demander un devis copropriété</a> ou <a href="/copropriete">voir notre offre copropriétés</a>.</p>
+"""),
+    dict(
+        slug="alarme-sans-fil-ou-filaire",
+        title="Alarme sans fil ou filaire : que choisir pour un local professionnel ?",
+        short="Alarme sans fil ou filaire",
+        seo="Alarme sans fil ou filaire pour commerce et bureau : comparatif",
+        desc="Alarme sans fil ou filaire pour un commerce, un bureau ou un entrepôt : fiabilité, installation, entretien, avantages et limites de chaque solution.",
+        summary="Fiabilité, pose, entretien, évolutivité : les vraies différences entre les deux technologies pour un commerce ou un bureau.",
+        date="2026-10-22",
+        related=["proteger-son-commerce", "combien-de-cameras"],
+        body="""
+<p>Pour protéger un commerce, des bureaux ou un entrepôt, deux grandes familles d'alarmes existent : sans fil et filaire. Les deux sont fiables quand elles sont bien installées. Le bon choix dépend surtout de vos locaux.</p>
+
+<h2>L'alarme sans fil</h2>
+<p>Les détecteurs communiquent par radio avec la centrale. Les systèmes professionnels actuels utilisent des liaisons chiffrées et détectent les tentatives de brouillage.</p>
+<ul>
+  <li><b>Pose rapide</b>, sans saignée ni passage de câbles : idéal pour un commerce en activité ou un local loué.</li>
+  <li><b>Facile à faire évoluer</b> : ajouter un détecteur ou déplacer une sirène prend quelques minutes.</li>
+  <li><b>Piles à surveiller</b> : elles durent en général plusieurs années, et la centrale prévient bien avant qu'elles soient vides.</li>
+  <li>Une portée à vérifier dans les grands bâtiments ou à travers des murs épais ; des répéteurs règlent la plupart des cas.</li>
+</ul>
+
+<h2>L'alarme filaire</h2>
+<p>Chaque détecteur est relié à la centrale par un câble.</p>
+<ul>
+  <li><b>Aucune pile</b> dans les détecteurs, et une liaison insensible au brouillage radio.</li>
+  <li><b>Pose plus longue</b> : il faut passer des câbles, ce qui se prévoit plus facilement lors de travaux ou dans un bâtiment neuf.</li>
+  <li><b>Moins souple</b> : déplacer un détecteur demande de tirer un nouveau câble.</li>
+</ul>
+
+<h2>Quelle solution pour quel local ?</h2>
+<ul>
+  <li><b>Commerce, cabinet, agence, bureaux loués</b> : le sans fil, pour sa pose rapide et propre.</li>
+  <li><b>Bâtiment neuf ou en rénovation</b> : le filaire, puisque les câbles peuvent passer pendant les travaux.</li>
+  <li><b>Grand entrepôt ou site étendu</b> : souvent un mélange des deux, avec des répéteurs ou des modules filaires là où c'est nécessaire.</li>
+</ul>
+
+<h2>Ce qui compte plus que la technologie</h2>
+<ul>
+  <li>Le <b>placement des détecteurs</b> : ouverture sur les accès, mouvement dans les zones de passage, bris de vitre pour la vitrine.</li>
+  <li>Les <b>alertes sur votre téléphone</b>, avec la possibilité d'armer et de désarmer à distance.</li>
+  <li>La <b>sirène</b>, intérieure et extérieure, pour faire fuir l'intrus.</li>
+  <li>Le <b>couplage avec les caméras</b>, pour vérifier immédiatement une alerte.</li>
+  <li>Les exigences de votre <b>assureur</b> : certains contrats demandent un matériel certifié. Pensez à vérifier avant l'installation.</li>
+</ul>
+
+<h2>Notre approche</h2>
+<p>Nous installons des alarmes sans fil comme filaires, et choisissons avec vous après une visite gratuite de vos locaux. <a href="/alarme">Voir notre offre alarme</a>.</p>
+"""),
+    dict(
+        slug="baie-de-brassage",
+        title="Baie de brassage en désordre : pourquoi et comment la remettre au propre",
+        short="Remettre une baie au propre",
+        seo="Remise au propre d'une baie de brassage : pourquoi et comment",
+        desc="Câbles emmêlés, ports non identifiés, pannes difficiles à trouver : pourquoi remettre au propre une baie de brassage et comment se déroule l'intervention.",
+        summary="Câbles emmêlés, ports non identifiés, pannes impossibles à trouver : comment se passe une remise au propre et ce qu'elle change.",
+        date="2026-10-22",
+        related=["combien-de-cameras", "alarme-sans-fil-ou-filaire"],
+        body="""
+<p>Dans beaucoup d'entreprises, la baie réseau finit en « plat de spaghettis » : des câbles de toutes les couleurs, trop longs, sans étiquette, ajoutés au fil des années. Tant que tout fonctionne, personne n'y touche. Jusqu'au jour où une panne survient.</p>
+
+<h2>Pourquoi une baie en désordre pose problème</h2>
+<ul>
+  <li><b>Les pannes prennent des heures à trouver</b> : impossible de savoir quel câble va à quel bureau.</li>
+  <li><b>Les erreurs de manipulation</b> : en débranchant le mauvais câble, on coupe une caisse, une caméra ou un serveur.</li>
+  <li><b>La chauffe</b> : les câbles en vrac bloquent la ventilation des équipements, qui vieillissent plus vite.</li>
+  <li><b>Les interventions coûtent plus cher</b> : chaque prestataire perd du temps à comprendre l'installation.</li>
+</ul>
+
+<h2>Comment se déroule une remise au propre</h2>
+<ol>
+  <li><b>État des lieux</b> : nous relevons chaque connexion, identifions les équipements et repérons les câbles inutiles.</li>
+  <li><b>Planification</b> : l'intervention est prévue à un moment qui ne gêne pas votre activité, souvent en dehors des heures d'ouverture.</li>
+  <li><b>Recâblage</b> : cordons à la bonne longueur, couleurs par usage (postes, téléphonie, caméras, Wi-Fi), passe-câbles et guides.</li>
+  <li><b>Étiquetage</b> : chaque port et chaque cordon est identifié.</li>
+  <li><b>Documentation</b> : vous recevez un plan simple de la baie, utile pour toutes les interventions suivantes.</li>
+  <li><b>Tests</b> : nous vérifions que chaque poste, chaque caméra et chaque point d'accès fonctionne avant de partir.</li>
+</ol>
+
+<h2>Ce que ça change au quotidien</h2>
+<ul>
+  <li>Une panne se localise en quelques minutes.</li>
+  <li>Ajouter un poste ou une caméra devient simple.</li>
+  <li>Les équipements sont mieux ventilés.</li>
+  <li>Votre local technique donne une image sérieuse à vos clients et partenaires.</li>
+</ul>
+
+<h2>C'est aussi le bon moment pour…</h2>
+<p>Profiter de l'intervention pour vérifier le switch, le routeur, l'onduleur et le Wi-Fi, et remplacer les éléments fatigués. <a href="/informatique#baies">Voir notre offre de remise au propre de baies</a> ou <a href="/contact?besoin=baie">demander un devis</a>.</p>
+"""),
+    dict(
+        slug="autorisation-prefectorale-videosurveillance",
+        title="Autorisation préfectorale de vidéosurveillance : les démarches pour un commerce",
+        short="Autorisation préfectorale",
+        seo="Autorisation préfectorale vidéosurveillance commerce : démarches",
+        desc="Quand un commerce doit-il demander une autorisation préfectorale pour ses caméras, comment faire la demande, quels documents fournir et quels délais prévoir.",
+        summary="Quand elle est obligatoire, comment faire la demande, quels documents fournir : le parcours pour un commerce ou un restaurant.",
+        date="2026-10-22",
+        related=["panneau-videosurveillance", "proteger-son-commerce"],
+        body="""
+<p>Vous voulez installer des caméras dans votre boutique ou votre restaurant ? Dès qu'elles filment un espace où entrent vos clients, une autorisation de la préfecture est nécessaire. Voici comment ça fonctionne, en pratique.</p>
+
+<h2>Quand l'autorisation est-elle obligatoire ?</h2>
+<p>La règle dépend de ce que filment les caméras :</p>
+<ul>
+  <li><b>Un lieu ouvert au public</b> (surface de vente, salle de restaurant, accueil, caisse côté client) : l'autorisation du préfet est obligatoire, en application du Code de la sécurité intérieure.</li>
+  <li><b>Un espace réservé au personnel</b> (réserve, bureau, entrepôt fermé au public) : pas d'autorisation préfectorale, mais les règles de protection des données s'appliquent (information des salariés, panneau, durée de conservation limitée).</li>
+</ul>
+<p>La plupart des commerces ont les deux types de zones, donc ils sont concernés par la demande.</p>
+
+<h2>Comment faire la demande</h2>
+<ol>
+  <li><b>Préparer le projet</b> : nombre de caméras, emplacement, zones filmées, durée de conservation des images, personnes qui y auront accès.</li>
+  <li><b>Déposer le dossier</b> auprès de la préfecture du département, en général en ligne via le téléservice du ministère de l'Intérieur, ou avec le formulaire Cerfa prévu à cet effet.</li>
+  <li><b>Joindre les pièces</b> : un plan des locaux montrant l'emplacement des caméras et leur champ de vision, une description du matériel, et les informations sur le responsable du système.</li>
+  <li><b>Attendre la décision</b> : le dossier est examiné par la commission départementale de vidéoprotection avant la décision du préfet. Comptez plusieurs semaines, voire quelques mois.</li>
+</ol>
+<p>L'autorisation est en principe accordée pour <b>5 ans</b>, renouvelable. Elle fixe notamment la durée de conservation des images, qui ne peut pas dépasser un mois.</p>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><b>Mettre en service avant d'avoir l'autorisation</b> : exploiter un système sans autorisation est un délit.</li>
+  <li><b>Filmer la voie publique</b> : la caméra extérieure doit se limiter aux abords immédiats de votre commerce, comme la façade et l'entrée.</li>
+  <li><b>Oublier le panneau</b> : il est obligatoire, même avec une autorisation. Voir notre article sur <a href="/conseils/panneau-videosurveillance">le panneau de vidéosurveillance</a>.</li>
+  <li><b>Modifier l'installation sans le signaler</b> : ajouter ou déplacer des caméras peut nécessiter une mise à jour de l'autorisation.</li>
+</ul>
+
+<h2>Comment nous vous aidons</h2>
+<p>Lors de la visite, nous plaçons les caméras en respectant ces règles et vous fournissons le plan d'implantation et la description du matériel dont vous aurez besoin pour votre dossier. Retrouvez aussi toutes les règles sur notre page <a href="/reglementation#commerce">réglementation</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les démarches officielles, consultez le site de votre préfecture ou service-public.fr.</p>
+"""),
+    dict(
+        slug="panneau-videosurveillance",
+        title="Panneau de vidéosurveillance : est-il obligatoire et que doit-il indiquer ?",
+        short="Panneau de vidéosurveillance",
+        seo="Panneau vidéosurveillance obligatoire : mentions et emplacement",
+        desc="Le panneau d'information de vidéosurveillance est obligatoire pour les commerces, entreprises et copropriétés : où le placer et quelles mentions y faire figurer.",
+        summary="Obligatoire dans un commerce, une entreprise ou une copropriété : où le placer et quelles informations y faire figurer.",
+        date="2026-10-22",
+        related=["autorisation-prefectorale-videosurveillance", "videosurveillance-copropriete"],
+        body="""
+<p>Dès que des caméras filment des clients, des salariés ou des résidents, ces personnes doivent en être informées. Le moyen le plus simple et le plus courant : un panneau bien visible.</p>
+
+<h2>Est-il obligatoire ?</h2>
+<p>Oui. Qu'il s'agisse d'un commerce, de bureaux, d'un entrepôt ou des parties communes d'une copropriété, les personnes filmées doivent être informées de l'existence des caméras. Un système sans panneau n'est pas conforme, même s'il est par ailleurs autorisé.</p>
+
+<h2>Où le placer ?</h2>
+<ul>
+  <li><b>À chaque entrée</b> de la zone filmée, avant que la personne n'entre dans le champ des caméras.</li>
+  <li><b>À hauteur des yeux</b> et bien éclairé, pour qu'il soit lu, pas seulement vu.</li>
+  <li>En copropriété : dans le hall, à l'entrée du parking et des locaux communs filmés.</li>
+</ul>
+
+<h2>Que doit-il indiquer ?</h2>
+<p>Selon les recommandations de la CNIL, le panneau comporte au minimum :</p>
+<ul>
+  <li>un <b>pictogramme de caméra</b> et la mention que le lieu est placé sous vidéosurveillance ;</li>
+  <li>la <b>finalité</b> du dispositif, par exemple la sécurité des personnes et des biens ;</li>
+  <li>le <b>nom ou la qualité du responsable</b> et un moyen de le contacter ;</li>
+  <li>la <b>durée de conservation</b> des images ;</li>
+  <li>la façon d'exercer ses <b>droits</b> (accès aux images) et la possibilité de saisir la CNIL.</li>
+</ul>
+<p>Les informations plus détaillées peuvent figurer dans un second document, affiché à l'intérieur ou remis sur demande, par exemple une note pour les salariés.</p>
+
+<h2>Le panneau dissuade aussi</h2>
+<p>Au-delà de l'obligation, un panneau visible fait partie de la protection : il prévient qu'une tentative de vol ou de dégradation sera filmée. Combiné à des caméras visibles, il décourage une bonne partie des passages à l'acte.</p>
+
+<h2>Nous fournissons les panneaux</h2>
+<p>À chaque installation, nous fournissons et posons les panneaux adaptés à vos locaux. <a href="/reglementation#panneau">Voir les règles en détail</a> ou <a href="/contact?besoin=video">demander un devis</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les textes officiels, consultez cnil.fr.</p>
+"""),
+    dict(
+        slug="cameras-ne-fonctionnent-plus",
+        title="Caméras de surveillance qui ne fonctionnent plus : les causes fréquentes et les solutions",
+        short="Caméras qui ne marchent plus",
+        seo="Caméra de surveillance qui ne marche plus : causes et solutions",
+        desc="Plus d'image sur le téléphone, enregistreur qui n'enregistre plus, caméra noire la nuit, codes perdus : les pannes les plus courantes et comment les régler.",
+        summary="Plus d'image sur le téléphone, enregistreur muet, codes perdus : les pannes les plus courantes et comment les régler.",
+        date="2026-10-22",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>Une installation de vidéosurveillance tombe rarement en panne d'un coup : le plus souvent, un détail lâche et personne ne s'en rend compte avant d'avoir besoin d'une image. Voici les problèmes que nous rencontrons le plus souvent chez les commerçants et les entreprises, et ce qu'il faut faire.</p>
+
+<h2>Plus d'image sur le téléphone</h2>
+<p>Les caméras enregistrent peut-être toujours, mais l'accès à distance est coupé. Causes fréquentes :</p>
+<ul>
+  <li>changement de box internet ou d'opérateur ;</li>
+  <li>application du fabricant mise à jour, ou changement de téléphone ;</li>
+  <li>mot de passe modifié ou compte de l'application perdu.</li>
+</ul>
+<p>Dans la plupart des cas, il suffit de reconfigurer l'enregistreur et l'application. Vérifiez d'abord sur place, sur l'écran de l'enregistreur, que les caméras s'affichent toujours.</p>
+
+<h2>L'enregistreur n'enregistre plus</h2>
+<ul>
+  <li><b>Disque dur en fin de vie</b> : c'est la panne la plus fréquente après quelques années. Un disque prévu pour la vidéosurveillance tourne en continu et s'use.</li>
+  <li><b>Mauvais réglage</b> : enregistrement désactivé après une coupure de courant, ou programmé seulement sur détection.</li>
+  <li><b>Date et heure fausses</b> : les images existent, mais impossible de retrouver le bon moment.</li>
+</ul>
+<p>Bon réflexe : vérifier une fois par mois qu'on retrouve bien l'enregistrement de la veille.</p>
+
+<h2>Une caméra est noire ou floue</h2>
+<ul>
+  <li><b>La nuit</b> : toile d'araignée ou poussière devant l'objectif, qui renvoie la lumière infrarouge et rend l'image blanche ou floue.</li>
+  <li><b>Le jour comme la nuit</b> : câble abîmé, connecteur oxydé à l'extérieur, alimentation défaillante.</li>
+  <li><b>Caméra déplacée</b> par un choc ou une tentative de vandalisme.</li>
+</ul>
+
+<h2>Codes perdus, installateur injoignable</h2>
+<p>C'est une situation très courante : l'installation fonctionne, mais plus personne n'a les accès. Il est généralement possible de reprendre la main sur l'enregistreur, après avoir vérifié que vous êtes bien le propriétaire du matériel.</p>
+
+<h2>Réparer ou remplacer ?</h2>
+<p>Un disque dur, une alimentation ou une caméra se remplacent sans tout refaire. En revanche, si le matériel a plus de 8 à 10 ans, la qualité d'image et la sécurité des anciens enregistreurs justifient souvent une remise à niveau : de nouvelles caméras peuvent parfois réutiliser les câbles existants.</p>
+
+<h2>Nous reprenons votre installation</h2>
+<p>Que nous l'ayons posée ou non, nous diagnostiquons votre installation, la remettons en état et pouvons en assurer l'entretien. <a href="/maintenance#reprise">Voir notre offre de maintenance</a> ou <a href="/contact?besoin=maintenance">demander une intervention</a>.</p>
+"""),
+    dict(
+        slug="cameras-de-chantier",
+        title="Caméras de chantier : comment protéger le matériel et les engins",
+        short="Caméras de chantier",
+        seo="Vidéosurveillance de chantier : protéger matériel et engins",
+        desc="Vol de matériel, de carburant ou d'engins, intrusions le week-end : comment surveiller un chantier avec des caméras, même sans électricité ni internet sur place.",
+        summary="Vols de matériel et d'engins, intrusions le week-end : comment surveiller un chantier, même sans courant ni internet.",
+        date="2026-10-24",
+        related=["combien-de-cameras", "alarme-sans-fil-ou-filaire"],
+        body="""
+<p>Outils, câbles, carburant, engins : un chantier concentre beaucoup de matériel de valeur, souvent stocké à l'air libre ou dans un simple conteneur. Les vols ont lieu surtout la nuit et le week-end, quand personne n'est sur place. Une surveillance adaptée réduit fortement ce risque, à condition de tenir compte des contraintes propres à un chantier.</p>
+
+<h2>Les risques sur un chantier</h2>
+<ul>
+  <li><b>Le vol d'outillage</b> : outils électroportatifs, groupes électrogènes, échafaudages.</li>
+  <li><b>Le vol de matériaux</b> : câbles en cuivre, métaux, matériaux stockés sur palettes.</li>
+  <li><b>Le vol de carburant</b> dans les engins et les cuves.</li>
+  <li><b>Les intrusions et dégradations</b>, qui peuvent aussi poser un problème de sécurité si quelqu'un se blesse sur le site.</li>
+</ul>
+<p>Au-delà de la perte du matériel, un vol peut retarder tout le chantier, le temps de remplacer ce qui a disparu.</p>
+
+<h2>Les contraintes d'un chantier</h2>
+<p>Un chantier n'est pas un bâtiment fini. Il faut souvent composer avec :</p>
+<ul>
+  <li><b>l'absence d'électricité</b> ou une alimentation provisoire coupée le soir ;</li>
+  <li><b>l'absence de connexion internet</b> pour consulter les images à distance ;</li>
+  <li><b>un site qui évolue</b> au fil des semaines : les zones à surveiller changent ;</li>
+  <li><b>une installation temporaire</b>, à déposer à la fin des travaux.</li>
+</ul>
+
+<h2>Les solutions de surveillance</h2>
+<ul>
+  <li><b>Des caméras alimentées sur batterie ou panneau solaire</b>, quand il n'y a pas de courant permanent sur place.</li>
+  <li><b>Une connexion par carte SIM (4G)</b> pour recevoir les alertes et voir les images sur votre téléphone, sans box internet.</li>
+  <li><b>La détection de personnes et de véhicules</b>, pour être prévenu en dehors des horaires du chantier, sans être dérangé par chaque animal ou chaque branche qui bouge.</li>
+  <li><b>Une alarme avec sirène</b> sur le conteneur de stockage ou la base vie, pour faire fuir l'intrus dès l'ouverture.</li>
+  <li><b>Un éclairage déclenché par détection</b>, qui dissuade et améliore la qualité des images la nuit.</li>
+</ul>
+
+<h2>Bien placer les équipements</h2>
+<ol>
+  <li><b>Les accès du chantier</b> : portail, entrée des véhicules.</li>
+  <li><b>La zone de stockage</b> : conteneurs, palettes, cuve à carburant.</li>
+  <li><b>Le stationnement des engins</b> en fin de journée.</li>
+  <li><b>Le périmètre</b>, sur les côtés les moins visibles depuis la rue.</li>
+</ol>
+<p>Les caméras sont fixées en hauteur et hors de portée, pour éviter qu'elles soient arrachées ou masquées. Elles doivent filmer le chantier, pas la voie publique ni les propriétés voisines.</p>
+
+<h2>Les bons réflexes en complément</h2>
+<ul>
+  <li>Regrouper le matériel de valeur dans un <b>conteneur fermé</b> chaque soir.</li>
+  <li>Garer les engins de façon à <b>bloquer l'accès</b> au stockage.</li>
+  <li><b>Marquer</b> l'outillage pour pouvoir le reconnaître en cas de vol.</li>
+  <li>Afficher un <b>panneau de vidéosurveillance</b> à l'entrée du site : il est obligatoire et il dissuade.</li>
+  <li>Prévoir qui reçoit les alertes et qui se déplace en cas de déclenchement, surtout le week-end.</li>
+</ul>
+
+<h2>Une installation adaptée à chaque chantier</h2>
+<p>Nous étudions chaque site avec vous : durée du chantier, alimentation disponible, zones sensibles, personnes à prévenir. Nous installons le matériel, le déplaçons si le chantier évolue, et le déposons à la fin des travaux. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis</a>.</p>
+"""),
+    dict(
+        slug="videosurveillance-restaurant",
+        title="Vidéosurveillance dans un restaurant : où placer les caméras",
+        short="Caméras dans un restaurant",
+        seo="Vidéosurveillance restaurant : où placer les caméras",
+        desc="Entrée, salle, caisse, terrasse, cuisine, réserve : où installer les caméras dans un restaurant, ce qu'il ne faut pas filmer et les règles à respecter.",
+        summary="Entrée, caisse, salle, terrasse, réserve : les bons emplacements, ce qu'il ne faut pas filmer et les règles à connaître.",
+        date="2026-10-25",
+        related=["proteger-son-commerce", "autorisation-prefectorale-videosurveillance"],
+        body="""
+<p>Un restaurant cumule les situations à risque : la caisse, les livraisons, la terrasse le soir, la réserve pleine de marchandises, et des locaux vides une bonne partie de la nuit. Une vidéosurveillance bien pensée protège l'établissement sans gêner les clients ni l'équipe. Tout se joue sur le placement des caméras.</p>
+
+<h2>1. L'entrée et la façade</h2>
+<p>C'est l'emplacement prioritaire. Une caméra sur l'entrée permet d'identifier toute personne qui entre, de jour comme de nuit.</p>
+<ul>
+  <li><b>Une caméra extérieure</b> sur la porte et la vitrine, placée en hauteur et hors de portée.</li>
+  <li><b>La vision de nuit</b>, pour les heures de fermeture, quand les intrusions et dégradations sont les plus fréquentes.</li>
+  <li><b>Un cadrage sur l'entrée</b>, et non sur le trottoir : la voie publique ne doit pas être filmée.</li>
+</ul>
+
+<h2>2. La caisse</h2>
+<p>Une caméra au-dessus de la caisse aide à régler un litige avec un client, une erreur de rendu de monnaie ou un vol. Elle doit être cadrée sur le comptoir et le tiroir-caisse, pas sur le poste de travail du salarié en permanence.</p>
+
+<h2>3. La salle et la terrasse</h2>
+<ul>
+  <li><b>Une vue d'ensemble de la salle</b>, avec une caméra grand angle placée dans un coin, suffit généralement.</li>
+  <li><b>La terrasse</b>, surtout si le mobilier reste dehors la nuit : vols de chaises, de parasols ou de chauffages.</li>
+  <li>Les caméras restent <b>discrètes</b>, de type dôme, pour ne pas gâcher l'ambiance.</li>
+</ul>
+
+<h2>4. La réserve, la cuisine et l'accès livraison</h2>
+<ul>
+  <li><b>La réserve et la chambre froide</b> : le stock représente une valeur importante.</li>
+  <li><b>La porte de service</b> et la zone de livraison, souvent moins visibles depuis la rue.</li>
+  <li><b>La cuisine</b> : une caméra peut être utile pour la sécurité des biens, mais elle ne doit pas servir à surveiller en continu le travail des cuisiniers.</li>
+</ul>
+
+<h2>Ce qu'il ne faut pas filmer</h2>
+<ul>
+  <li><b>Les toilettes et les vestiaires</b> : c'est strictement interdit.</li>
+  <li><b>La salle de pause</b> du personnel.</li>
+  <li><b>Les salariés en permanence</b> à leur poste, sauf circonstances particulières.</li>
+  <li><b>La voie publique</b> et les commerces voisins.</li>
+</ul>
+
+<h2>Les démarches à prévoir</h2>
+<p>La salle d'un restaurant est un lieu ouvert au public. En principe, une autorisation de la préfecture est donc nécessaire pour les caméras qui la filment. Il faut aussi informer les clients et les salariés par un panneau, et informer le personnel avant la mise en service. Nous détaillons ces étapes dans notre article sur <a href="/conseils/autorisation-prefectorale-videosurveillance">l'autorisation préfectorale</a> et sur notre page <a href="/reglementation#commerce">réglementation</a>.</p>
+
+<h2>Combien de caméras pour un restaurant ?</h2>
+<p>Tout dépend de la configuration des lieux. On compte souvent une caméra pour l'entrée, une pour la caisse, une ou deux pour la salle et la terrasse, et une pour la réserve ou l'accès livraison. La visite sur place permet de fixer le nombre juste, sans caméra inutile.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons des caméras dans les restaurants de tout le Sud, avec un accès aux images depuis votre téléphone, et en dehors de vos heures de service si besoin. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+"""),
+    dict(
+        slug="filmer-ses-salaries",
+        title="Filmer ses salariés : ce qui est autorisé et ce qui ne l'est pas",
+        short="Caméras et salariés",
+        seo="Vidéosurveillance et salariés : ce que l'employeur peut filmer",
+        desc="Caméras dans un commerce ou une entreprise : quelles zones l'employeur peut filmer, ce qui est interdit, et comment informer correctement ses salariés.",
+        summary="Les zones que l'employeur peut filmer, celles qui sont interdites, et comment informer correctement l'équipe.",
+        date="2026-10-26",
+        related=["panneau-videosurveillance", "autorisation-prefectorale-videosurveillance"],
+        body="""
+<p>Installer des caméras dans un commerce ou des bureaux, c'est protéger les locaux, le stock et les personnes. Mais dès que des salariés travaillent sur place, la vidéosurveillance doit respecter leur vie privée. Voici les grandes règles à connaître avant de poser la première caméra.</p>
+
+<h2>Ce que l'employeur peut filmer</h2>
+<p>La vidéosurveillance doit avoir un but légitime, en général la sécurité des personnes et des biens. Dans ce cadre, on peut en principe filmer :</p>
+<ul>
+  <li><b>les entrées et sorties</b> des locaux ;</li>
+  <li><b>les issues de secours</b> et les voies de circulation ;</li>
+  <li><b>les zones où sont stockés des biens</b> : réserve, entrepôt, local technique ;</li>
+  <li><b>la surface de vente</b> ouverte au public, avec en principe une autorisation de la préfecture.</li>
+</ul>
+
+<h2>Ce qui est interdit</h2>
+<ul>
+  <li><b>Les toilettes, vestiaires et douches</b> : jamais.</li>
+  <li><b>Les salles de pause</b> et les espaces de repos.</li>
+  <li><b>Les locaux des représentants du personnel</b>.</li>
+  <li><b>Les salariés en permanence à leur poste de travail</b>, sauf circonstances particulières, par exemple un salarié qui manipule des fonds ou des objets de valeur. Même dans ce cas, la caméra doit filmer de préférence la caisse ou la zone sensible plutôt que la personne.</li>
+</ul>
+<p>Une caméra ne doit pas non plus servir à contrôler en continu l'activité ou la productivité de l'équipe.</p>
+
+<h2>Informer les salariés avant la mise en service</h2>
+<p>C'est l'étape qu'on oublie le plus souvent. Avant la mise en service :</p>
+<ol>
+  <li><b>Informer chaque salarié</b>, par exemple par une note de service ou un avenant, de l'existence des caméras, de leur but, de la durée de conservation des images et de la manière d'exercer ses droits.</li>
+  <li><b>Consulter le comité social et économique (CSE)</b>, s'il existe dans l'entreprise.</li>
+  <li><b>Poser un panneau</b> visible à l'entrée des zones filmées. Voir notre article sur <a href="/conseils/panneau-videosurveillance">le panneau de vidéosurveillance</a>.</li>
+</ol>
+<p>Des images obtenues avec un dispositif dont les salariés n'ont pas été informés peuvent en principe être écartées en cas de litige.</p>
+
+<h2>Qui peut regarder les images, et combien de temps les garder</h2>
+<ul>
+  <li><b>L'accès aux images</b> est réservé à quelques personnes habilitées, par exemple le gérant ou un responsable désigné.</li>
+  <li><b>Les images sont conservées</b> quelques jours, et en règle générale pas plus d'un mois.</li>
+  <li><b>Les accès</b> à l'enregistreur et à l'application sont protégés par des mots de passe personnels.</li>
+</ul>
+
+<h2>Une installation pensée dès le départ</h2>
+<p>La plupart des difficultés viennent d'une caméra mal orientée ou posée sans réflexion. En choisissant les bons emplacements dès l'installation, on protège efficacement les locaux sans filmer ce qui ne doit pas l'être. C'est ce que nous faisons lors de la visite : nous repérons les zones à couvrir et nous orientons chaque caméra en conséquence.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons la vidéosurveillance des commerces, bureaux et entrepôts de tout le Sud en respectant ces règles, et nous vous indiquons les démarches à prévoir. <a href="/reglementation#entreprise">Voir les règles pour les entreprises</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+"""),
+    dict(
+        slug="duree-conservation-images",
+        title="Combien de temps garder les images de vidéosurveillance ?",
+        short="Durée de conservation",
+        seo="Durée de conservation des images de vidéosurveillance : les règles",
+        desc="Commerce, entreprise ou copropriété : combien de temps conserver les enregistrements de vidéosurveillance, comment régler l'enregistreur et que faire en cas d'incident.",
+        summary="La durée à respecter, comment régler l'enregistreur, et quoi faire des images quand un incident se produit.",
+        date="2026-10-27",
+        related=["filmer-ses-salaries", "panneau-videosurveillance"],
+        body="""
+<p>Une caméra enregistre en continu ou à la détection, et le disque de l'enregistreur se remplit jour après jour. Combien de temps faut-il garder ces images ? La réponse tient en une idée simple : assez longtemps pour pouvoir réagir à un incident, mais pas plus que nécessaire.</p>
+
+<h2>La règle générale : un mois au maximum</h2>
+<p>En règle générale, les images de vidéosurveillance ne doivent pas être conservées plus d'<b>un mois</b>. C'est la durée recommandée par la CNIL pour les commerces, les entreprises et les copropriétés.</p>
+<ul>
+  <li><b>Pour un lieu ouvert au public</b> (surface de vente, salle de restaurant), la durée est fixée dans l'autorisation délivrée par la préfecture, dans la limite d'un mois.</li>
+  <li><b>Pour des locaux fermés au public</b> (réserve, bureaux, entrepôt), c'est à vous de fixer une durée adaptée, en principe quelques jours, sans dépasser un mois.</li>
+  <li><b>En copropriété</b>, la durée est en général décidée avec le projet voté en assemblée générale.</li>
+</ul>
+
+<h2>Pourquoi ne pas tout garder plus longtemps ?</h2>
+<p>Les images permettent d'identifier des personnes : ce sont des données personnelles. Les garder sans limite n'apporte rien à la sécurité et expose à des risques : accès non autorisé, fuite d'images, non-conformité en cas de contrôle. En pratique, un incident est presque toujours constaté dans les jours qui suivent.</p>
+
+<h2>Quelle durée choisir en pratique ?</h2>
+<ul>
+  <li><b>Commerce ouvert tous les jours</b> : quelques jours suffisent souvent, une à deux semaines laissent une marge confortable.</li>
+  <li><b>Locaux fermés le week-end ou pendant les congés</b> : prévoir une durée qui couvre ces périodes, pour qu'un vol découvert au retour soit encore visible.</li>
+  <li><b>Copropriété</b> : une durée courte, de quelques jours à deux semaines, est souvent retenue.</li>
+</ul>
+<p>Ce qui compte, c'est que la durée choisie corresponde à vos horaires et soit indiquée sur le panneau d'information. Voir notre article sur <a href="/conseils/panneau-videosurveillance">le panneau de vidéosurveillance</a>.</p>
+
+<h2>Comment l'enregistreur gère la durée</h2>
+<ol>
+  <li><b>Écrasement automatique</b> : une fois le disque plein, l'enregistreur efface les images les plus anciennes. La durée réelle dépend donc de la capacité du disque.</li>
+  <li><b>Durée maximale programmée</b> : la plupart des enregistreurs permettent de fixer un nombre de jours. Au-delà, les images sont supprimées, même s'il reste de la place.</li>
+  <li><b>Réglage de la qualité</b> : résolution, nombre d'images par seconde et enregistrement continu ou à la détection font varier l'espace utilisé.</li>
+</ol>
+<p>Lors de l'installation, nous dimensionnons le disque et réglons la durée selon votre activité, pour rester dans le cadre recommandé.</p>
+
+<h2>Et en cas d'incident ?</h2>
+<p>Si un vol, une dégradation ou une intrusion se produit, il faut agir avant que les images ne soient effacées :</p>
+<ul>
+  <li><b>Exporter rapidement la séquence</b> concernée sur une clé USB ou depuis l'application.</li>
+  <li><b>Déposer plainte</b> et remettre les images aux forces de l'ordre si elles le demandent.</li>
+  <li>La séquence extraite pour une procédure peut être conservée le temps de cette procédure.</li>
+</ul>
+<p>Nous montrons à chaque client comment retrouver et exporter une séquence en quelques minutes.</p>
+
+<h2>Un réglage à vérifier régulièrement</h2>
+<p>Un disque fatigué ou un réglage modifié peut réduire la durée sans que personne ne s'en aperçoive. Vérifier de temps en temps qu'on retrouve bien les images de la semaine passée évite les mauvaises surprises. C'est l'un des contrôles réalisés lors de nos <a href="/maintenance">visites de maintenance</a>.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons et réglons la vidéosurveillance des commerces, entreprises et copropriétés du Sud, avec une durée de conservation adaptée et conforme. <a href="/reglementation#conservation">Voir les règles de conservation</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+"""),
+    dict(
+        slug="camera-wifi-ou-poe",
+        title="Caméra Wi-Fi ou caméra filaire PoE : que choisir pour un commerce ?",
+        short="Wi-Fi ou filaire PoE",
+        seo="Caméra Wi-Fi ou PoE pour un commerce : avantages et limites",
+        desc="Caméras Wi-Fi ou caméras filaires alimentées par le câble réseau (PoE) : fiabilité, qualité d'image, installation et cas d'usage pour un commerce ou un bureau.",
+        summary="Fiabilité, qualité d'image, pose, coupures : les vraies différences entre les deux technologies pour une boutique.",
+        date="2026-10-28",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>Au moment de s'équiper, beaucoup de commerçants hésitent entre des caméras Wi-Fi, faciles à poser, et des caméras filaires dites PoE, reliées par un câble réseau. Les deux existent pour de bonnes raisons. Voici comment choisir selon vos locaux et ce que vous attendez de votre installation.</p>
+
+<h2>Ce que veut dire « PoE »</h2>
+<p>PoE signifie <b>alimentation par le câble réseau</b>. Un seul câble apporte à la fois l'électricité et la connexion à l'enregistreur. Pas besoin de prise à côté de chaque caméra : tout part de l'enregistreur ou d'un switch installé dans un endroit protégé.</p>
+
+<h2>La caméra filaire PoE</h2>
+<ul>
+  <li><b>Une connexion stable</b> : pas de coupure liée au Wi-Fi, aux murs épais ou aux appareils voisins.</li>
+  <li><b>Une image fluide et nette</b>, même avec plusieurs caméras qui enregistrent en même temps.</li>
+  <li><b>Un enregistrement local</b> sur l'enregistreur, qui continue même si la connexion internet tombe.</li>
+  <li><b>Plus difficile à neutraliser</b> : un brouilleur Wi-Fi n'a aucun effet sur une caméra câblée.</li>
+  <li><b>Une pose plus longue</b> : il faut passer un câble jusqu'à chaque caméra, ce qui se prévoit mieux lors de travaux.</li>
+</ul>
+
+<h2>La caméra Wi-Fi</h2>
+<ul>
+  <li><b>Une pose rapide</b>, sans tirer de câble réseau : pratique dans un local loué ou un commerce déjà aménagé.</li>
+  <li><b>Une alimentation à prévoir</b> : une caméra Wi-Fi a quand même besoin d'une prise ou d'une batterie à recharger.</li>
+  <li><b>Une qualité qui dépend du signal</b> : murs, distance et réseau chargé peuvent provoquer des saccades ou des coupures.</li>
+  <li><b>Parfois dépendante d'un service en ligne</b> : certains modèles enregistrent surtout dans le cloud et ne gardent rien si internet coupe.</li>
+</ul>
+
+<h2>Ce que nous recommandons pour un commerce</h2>
+<ul>
+  <li><b>Le filaire PoE pour l'essentiel</b> : entrée, caisse, vitrine et réserve. Ce sont les caméras qui doivent fonctionner à coup sûr.</li>
+  <li><b>Le Wi-Fi en complément</b>, pour un endroit où passer un câble est vraiment compliqué, avec un enregistrement sur le même enregistreur.</li>
+  <li><b>Un enregistreur rangé à l'abri</b>, pour que les images restent disponibles même si une caméra est arrachée.</li>
+</ul>
+<p>Dans un commerce en activité, le câblage se fait proprement, avec des goulottes discrètes ou par les faux plafonds, souvent en dehors des heures d'ouverture.</p>
+
+<h2>Les questions à se poser</h2>
+<ol>
+  <li><b>Pouvez-vous passer des câbles</b> (faux plafond, goulottes, travaux prévus) ?</li>
+  <li><b>Le Wi-Fi est-il fiable</b> partout dans le local, y compris en réserve et en façade ?</li>
+  <li><b>Les images doivent-elles rester disponibles</b> même sans internet ?</li>
+  <li><b>Combien de caméras</b> faut-il ? Plus il y en a, plus le filaire s'impose. Voir notre article <a href="/conseils/combien-de-cameras">combien de caméras pour un commerce</a>.</li>
+</ol>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons des caméras filaires comme sans fil, et choisissons avec vous lors de la visite gratuite la solution la plus fiable pour vos locaux, partout dans le Sud. <a href="/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="vision-de-nuit",
+        title="Vision de nuit : caméra infrarouge ou caméra couleur ?",
+        short="Vision de nuit",
+        seo="Vision de nuit infrarouge ou couleur : que choisir pour un commerce ?",
+        desc="Caméra infrarouge noir et blanc ou caméra couleur de nuit : fonctionnement, avantages, limites et bons réglages pour filmer un commerce ou un local la nuit.",
+        summary="Infrarouge ou couleur : comment chaque technologie voit la nuit, et laquelle choisir pour votre vitrine, votre réserve ou votre parking.",
+        date="2026-10-29",
+        related=["camera-wifi-ou-poe", "combien-de-cameras"],
+        body="""
+<p>C'est la nuit, quand le commerce est fermé, qu'une caméra est la plus utile. Pourtant, beaucoup d'images nocturnes sont floues, sombres ou éblouies et ne permettent de reconnaître personne. Le choix entre vision infrarouge et vision couleur, et la façon de poser la caméra, font toute la différence.</p>
+
+<h2>La vision infrarouge : le noir et blanc</h2>
+<p>La plupart des caméras disposent de petites <b>LED infrarouges</b>, invisibles à l'œil nu, qui éclairent la scène quand la lumière baisse. La caméra bascule alors automatiquement en <b>noir et blanc</b>.</p>
+<ul>
+  <li><b>Elle voit dans le noir complet</b>, sans aucun éclairage extérieur.</li>
+  <li><b>Elle reste discrète</b> : la zone filmée n'est pas éclairée, seul un léger point rouge est parfois visible sur la caméra.</li>
+  <li><b>Elle perd les couleurs</b> : impossible de dire de quelle couleur était un vêtement ou un véhicule.</li>
+  <li><b>Sa portée est limitée</b> : au-delà de la distance prévue par le fabricant, l'image devient noire.</li>
+</ul>
+
+<h2>La vision couleur de nuit</h2>
+<p>Les caméras couleur de nuit utilisent un capteur très sensible, parfois aidé d'un <b>petit projecteur de lumière blanche</b> qui s'allume à la détection d'un mouvement.</p>
+<ul>
+  <li><b>Elle garde les couleurs</b>, ce qui aide beaucoup à décrire une personne ou un véhicule.</li>
+  <li><b>Elle a besoin d'un minimum de lumière</b> : éclairage public, enseigne, éclairage de façade ou projecteur intégré.</li>
+  <li><b>Le projecteur a un effet dissuasif</b> : une personne qui se voit soudain éclairée a tendance à repartir.</li>
+  <li><b>Elle est plus visible</b>, ce qui peut gêner dans une zone proche d'habitations.</li>
+</ul>
+
+<h2>Laquelle choisir selon l'emplacement</h2>
+<ul>
+  <li><b>Vitrine et entrée côté rue</b> : la couleur fonctionne bien grâce à l'éclairage public et à l'enseigne.</li>
+  <li><b>Réserve, local technique, sous-sol</b> : sans aucune lumière, l'infrarouge reste le plus fiable.</li>
+  <li><b>Arrière-boutique, cour, parking</b> : une caméra couleur avec projecteur à détection combine image utile et dissuasion.</li>
+  <li><b>Zone sensible comme la caisse</b> : l'important est surtout de bien voir les visages, de jour comme de nuit.</li>
+</ul>
+
+<h2>Les erreurs qui gâchent les images de nuit</h2>
+<ol>
+  <li><b>Filmer à travers une vitre</b> : les LED infrarouges se reflètent dans le verre et l'image devient blanche. Une caméra posée derrière la vitrine doit être collée au vitrage ou placée à l'extérieur.</li>
+  <li><b>Viser une source de lumière</b> : un lampadaire ou des phares dans le champ éblouissent la caméra et cachent le reste.</li>
+  <li><b>Laisser un mur ou un auvent trop près</b> : l'infrarouge s'y reflète et assombrit tout le reste de l'image.</li>
+  <li><b>Négliger les toiles d'araignée</b> : attirées par la chaleur des LED, elles déclenchent de fausses alertes et brouillent l'image.</li>
+  <li><b>Placer la caméra trop haut</b> : de nuit encore plus que de jour, on ne voit plus que le dessus des têtes.</li>
+</ol>
+
+<h2>Testez vos caméras la nuit</h2>
+<p>Une installation se vérifie toujours <b>dans les conditions réelles</b>. Après la pose, prenez le temps de regarder les images enregistrées une nuit : reconnaît-on un visage à l'entrée ? Lit-on une plaque sur le parking ? Le moindre réglage d'angle ou de hauteur peut transformer une image inutilisable en image exploitable.</p>
+<h2>Et l'enregistrement de nuit ?</h2>
+<p>La nuit, la plupart des installations passent en <b>enregistrement sur détection de mouvement</b>, avec une alerte sur votre téléphone. Encore faut-il que la détection soit bien réglée : une zone trop large déclenche des alertes à chaque voiture qui passe, une zone trop étroite manque l'essentiel. Mieux vaut définir précisément les zones à surveiller, comme la porte, la vitrine ou l'accès à la réserve.</p>
+<p>Pensez aussi à nettoyer l'objectif de temps en temps : poussière, pollen et sel marin près du littoral voilent l'image, surtout la nuit.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Lors de la visite gratuite, nous regardons l'éclairage de chaque zone, de jour comme de nuit, pour choisir entre infrarouge et couleur et placer chaque caméra au bon endroit, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="proteger-la-caisse",
+        title="Protéger la caisse d'un commerce : les bons réflexes et les bons équipements",
+        short="Protéger la caisse",
+        seo="Protéger la caisse d'un commerce : caméra, organisation, alarme",
+        desc="Comment protéger la caisse d'un commerce : placement de la caméra, gestion des espèces, bouton d'alerte, organisation du comptoir et règles à respecter.",
+        summary="Caméra bien placée, espèces limitées, comptoir organisé, bouton d'alerte : les mesures simples qui protègent la caisse et ceux qui la tiennent.",
+        date="2026-10-30",
+        related=["proteger-son-commerce", "filmer-ses-salaries"],
+        body="""
+<p>La caisse concentre l'argent du commerce et attire donc toutes les convoitises : vol à l'arraché, rendu de monnaie détourné, faux billets, erreurs de caisse répétées. La protéger ne demande pas forcément de gros travaux. Quelques équipements bien choisis et de bonnes habitudes suffisent souvent à réduire nettement les risques.</p>
+
+<h2>Une caméra dédiée à la caisse</h2>
+<p>La caméra de caisse est souvent la plus utile du magasin, à condition d'être bien placée.</p>
+<ul>
+  <li><b>Filmer le comptoir et le tiroir-caisse</b>, de légèrement au-dessus, pour voir les mains, les billets et les échanges.</li>
+  <li><b>Une deuxième caméra face aux clients</b>, à hauteur de visage, pour identifier les personnes qui se présentent au comptoir.</li>
+  <li><b>Éviter le contre-jour</b> : une caisse placée devant une vitrine donne des visages sombres. La caméra doit tourner le dos à la lumière.</li>
+  <li><b>Une bonne résolution</b> pour pouvoir zoomer après coup sur un billet ou un geste.</li>
+</ul>
+<p>La caméra doit viser la zone de caisse et non surveiller en continu le salarié qui y travaille : sa finalité est la protection des biens et des personnes. Voir notre article <a href="/conseils/filmer-ses-salaries">filmer ses salariés : ce qui est autorisé</a>.</p>
+
+<h2>Limiter l'argent présent dans la caisse</h2>
+<ul>
+  <li><b>Faire des retraits réguliers</b> dans la journée pour ne garder qu'un fond de caisse raisonnable.</li>
+  <li><b>Ranger les espèces retirées</b> dans un coffre fixé, hors de la vue des clients, idéalement dans une pièce fermée.</li>
+  <li><b>Varier les horaires et les trajets</b> pour déposer les recettes, et ne jamais compter la caisse devant la vitrine.</li>
+  <li><b>Encourager le paiement par carte</b> : moins d'espèces, c'est moins d'intérêt pour un voleur.</li>
+</ul>
+
+<h2>Organiser le comptoir</h2>
+<ul>
+  <li><b>Placer la caisse hors de portée</b> depuis la porte : un comptoir trop proche de l'entrée facilite le vol à l'arraché.</li>
+  <li><b>Garder le tiroir fermé</b> entre deux encaissements, et le verrouiller dès que vous vous éloignez.</li>
+  <li><b>Poser le billet reçu sur le comptoir</b> pendant que vous rendez la monnaie : cela évite les litiges et les tours de passe-passe.</li>
+  <li><b>Avoir un détecteur de faux billets</b> et contrôler systématiquement les grosses coupures.</li>
+  <li><b>Garder une bonne visibilité</b> sur le magasin depuis la caisse, sans présentoir qui bouche la vue.</li>
+</ul>
+
+<h2>Pouvoir donner l'alerte discrètement</h2>
+<p>Un <b>bouton d'alerte</b>, fixé sous le comptoir ou porté sur soi, permet de prévenir sans geste visible en cas d'agression. Relié à l'alarme, il peut déclencher une alerte silencieuse sur les téléphones de votre choix ou vers un service de télésurveillance si vous en avez un. Pour les commerces qui ferment tard ou travaillent seuls, c'est un équipement simple qui rassure.</p>
+<p>Un <b>écran visible des clients</b>, qui affiche les images des caméras, a aussi un vrai effet dissuasif : chacun comprend tout de suite que le comptoir est filmé.</p>
+
+<h2>Contrôler les écarts de caisse</h2>
+<p>Des écarts répétés en fin de journée ne sont pas toujours un vol : erreurs de rendu, remboursements mal saisis, fatigue. Les images permettent de <b>retrouver rapidement le moment</b> où un écart s'est produit et de lever le doute, sans soupçonner tout le monde. Certains logiciels de caisse peuvent aussi enregistrer chaque ouverture du tiroir, ce qui aide à recouper.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Informer clients et salariés</b> par un panneau visible indiquant la présence de caméras. Voir notre article sur le <a href="/conseils/panneau-videosurveillance">panneau de vidéosurveillance</a>.</li>
+  <li><b>Informer les salariés</b> individuellement et consulter les représentants du personnel s'il y en a.</li>
+  <li><b>Ne pas conserver les images trop longtemps</b> et en limiter l'accès aux personnes habilitées.</li>
+  <li><b>Une caméra qui filme une zone ouverte au public</b> peut nécessiter une autorisation préfectorale.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Lors de la visite gratuite, nous regardons votre comptoir, l'éclairage et les accès pour placer les caméras de caisse au bon endroit et, si besoin, ajouter un bouton d'alerte relié à votre alarme, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="vol-a-l-etalage",
+        title="Vol à l'étalage : comment le prévenir et comment réagir",
+        short="Vol à l'étalage",
+        seo="Vol à l'étalage dans un commerce : prévenir et réagir",
+        desc="Vol à l'étalage : aménagement du magasin, caméras, attitude du personnel et bons réflexes quand un vol se produit, dans le respect de la loi.",
+        summary="Aménagement, caméras, accueil des clients et bons réflexes en cas de vol : comment limiter la démarque sans se mettre en tort.",
+        date="2026-10-31",
+        related=["proteger-son-commerce", "combien-de-cameras"],
+        body="""
+<p>Le vol à l'étalage fait partie du quotidien de nombreux commerces. Chaque article qui disparaît est une perte sèche, et les petits vols répétés finissent par peser lourd. La bonne nouvelle, c'est qu'une grande partie de ces vols peut être évitée avec un magasin bien organisé, une équipe attentive et des caméras bien placées.</p>
+
+<h2>Comprendre comment se passent les vols</h2>
+<p>La plupart des vols à l'étalage sont rapides et discrets : un article glissé dans un sac ou une poche, une étiquette retirée, un produit caché derrière un autre. Ils se produisent surtout dans les <b>angles morts</b>, aux <b>heures d'affluence</b>, quand le personnel est occupé en caisse, et près des <b>sorties</b>. Identifier ces moments et ces endroits est la première étape.</p>
+
+<h2>Aménager le magasin pour décourager</h2>
+<ul>
+  <li><b>Supprimer les angles morts</b> : rayonnages moins hauts, miroirs dans les coins, allées dégagées.</li>
+  <li><b>Placer les produits de valeur près de la caisse</b> ou dans une vitrine fermée, et présenter en rayon des boîtes vides ou des modèles d'exposition.</li>
+  <li><b>Éviter les présentoirs près de la sortie</b> : un produit à portée de main de la porte part vite.</li>
+  <li><b>Soigner l'éclairage</b> : un magasin bien éclairé est plus difficile à voler.</li>
+  <li><b>Garder la caisse face à l'entrée</b>, pour voir qui entre et qui sort.</li>
+</ul>
+
+<h2>Le rôle de l'équipe</h2>
+<p>L'arme la plus efficace reste souvent l'accueil. Un client salué en entrant sait qu'il a été vu.</p>
+<ul>
+  <li><b>Dire bonjour à chaque client</b> et proposer son aide : c'est commercial et dissuasif à la fois.</li>
+  <li><b>Être présent dans les rayons</b>, surtout aux heures chargées.</li>
+  <li><b>Limiter le nombre d'articles en cabine d'essayage</b> et les compter à l'entrée et à la sortie.</li>
+  <li><b>Partager les informations</b> entre collègues sur les comportements inhabituels.</li>
+</ul>
+
+<h2>Des caméras bien placées</h2>
+<p>La vidéosurveillance dissuade, à condition d'être visible et bien pensée.</p>
+<ul>
+  <li><b>Une caméra à l'entrée</b>, à hauteur de visage, pour identifier chaque personne.</li>
+  <li><b>Des caméras sur les rayons sensibles</b> et les angles morts repérés.</li>
+  <li><b>Une caméra sur la caisse</b>, pour les encaissements et les échanges.</li>
+  <li><b>Un écran visible des clients</b> à l'entrée : chacun voit qu'il est filmé.</li>
+  <li><b>Un accès sur votre téléphone</b>, pour retrouver rapidement un passage.</li>
+</ul>
+<p>Pour savoir combien de caméras prévoir, lisez notre article <a href="/conseils/combien-de-cameras">combien de caméras pour un commerce</a>.</p>
+
+<h2>Que faire quand un vol se produit ?</h2>
+<p>La priorité est la sécurité de votre équipe et de vos clients. Aucun article ne vaut de se mettre en danger.</p>
+<ol>
+  <li><b>Rester calme et poli</b>, sans accuser publiquement ni crier.</li>
+  <li><b>Proposer de payer l'article</b> : souvent, la personne le repose ou le règle.</li>
+  <li><b>Ne jamais fouiller la personne ni son sac</b> : seules les forces de l'ordre peuvent le faire. Vous pouvez seulement lui demander de montrer volontairement ce qu'elle a pris.</li>
+  <li><b>En cas de flagrant délit</b>, la loi permet de retenir la personne le temps que la police arrive, sans violence ni contrainte excessive. Si la situation devient tendue, laissez-la partir.</li>
+  <li><b>Appeler le 17</b> si nécessaire, et noter le maximum de détails : heure, description, direction prise.</li>
+  <li><b>Conserver les images</b> de la scène et porter plainte. Les enregistrements faciliteront le travail des enquêteurs.</li>
+</ol>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez service-public.fr et cnil.fr.</p>
+
+<h2>Les règles à respecter pour les caméras</h2>
+<ul>
+  <li><b>Un panneau visible</b> doit informer clients et salariés de la présence de caméras.</li>
+  <li><b>Une autorisation préfectorale</b> est en principe nécessaire pour filmer un espace ouvert au public.</li>
+  <li><b>Les images ne doivent pas être diffusées</b> publiquement, par exemple sur les réseaux sociaux, même pour retrouver un voleur.</li>
+  <li><b>La durée de conservation</b> doit rester limitée.</li>
+</ul>
+
+<h2>Notre accompagnement</h2>
+<p>Lors de la visite gratuite, nous repérons avec vous les angles morts et les zones sensibles de votre magasin, puis plaçons les caméras là où elles dissuadent et identifient vraiment, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="alarme-commerce",
+        title="Alarme pour commerce : les détecteurs indispensables",
+        short="Alarme pour commerce",
+        seo="Alarme pour commerce : quels détecteurs installer ?",
+        desc="Détecteurs de mouvement, d'ouverture, de bris de vitre, sirène, bouton d'alerte : les éléments indispensables d'une alarme pour un commerce, et où les placer.",
+        summary="Mouvement, ouverture, vitrine, sirène, transmission : les détecteurs qui comptent vraiment pour protéger une boutique, et où les placer.",
+        date="2026-11-01",
+        related=["alarme-sans-fil-ou-filaire", "proteger-son-commerce"],
+        body="""
+<p>Une alarme ne protège bien un commerce que si chaque accès possible est surveillé. Trop peu de détecteurs, et un intrus passe par la réserve sans déclencher quoi que ce soit. Mal placés, et l'alarme sonne pour un rien jusqu'à ce que plus personne n'y fasse attention. Voici les éléments indispensables et la façon de les répartir dans une boutique.</p>
+
+<h2>La centrale : le cerveau de l'alarme</h2>
+<p>La centrale reçoit les informations de tous les détecteurs et décide de déclencher l'alerte. Pour un commerce, vérifiez qu'elle dispose :</p>
+<ul>
+  <li><b>D'une batterie de secours</b>, pour continuer à fonctionner en cas de coupure de courant.</li>
+  <li><b>D'une double transmission</b>, par internet et par carte SIM, pour vous prévenir même si la ligne est coupée.</li>
+  <li><b>D'une application</b> pour armer, désarmer et recevoir les alertes sur votre téléphone.</li>
+  <li><b>D'accès séparés</b> par salarié, pour savoir qui a ouvert et fermé le magasin.</li>
+</ul>
+
+<h2>Les détecteurs de mouvement</h2>
+<p>Ce sont eux qui repèrent une présence dans le magasin une fois l'alarme armée.</p>
+<ul>
+  <li><b>Un détecteur dans la surface de vente</b>, placé dans un angle pour couvrir les accès.</li>
+  <li><b>Un détecteur dans la réserve</b>, souvent la cible d'une entrée par l'arrière.</li>
+  <li><b>Un détecteur dans le bureau</b> ou près du coffre si vous en avez un.</li>
+  <li><b>Des modèles compatibles avec les animaux</b> si un chat de boutique reste la nuit.</li>
+</ul>
+<p>Les détecteurs avec <b>photo à la détection</b> sont très utiles : en cas d'alerte, vous recevez une image qui permet de vérifier immédiatement s'il s'agit d'une vraie intrusion.</p>
+
+<h2>Les détecteurs d'ouverture</h2>
+<p>Posés sur les portes et les fenêtres, ils signalent une ouverture <b>avant même que l'intrus ne soit entré</b>.</p>
+<ul>
+  <li><b>Porte d'entrée et porte de service</b>, en priorité.</li>
+  <li><b>Accès à la réserve</b>, au local technique, au sous-sol ou à la cave.</li>
+  <li><b>Fenêtres et impostes</b> accessibles depuis une cour ou un toit.</li>
+</ul>
+
+<h2>La protection de la vitrine</h2>
+<p>La vitrine est souvent le point le plus exposé d'un commerce. Un <b>détecteur de bris de vitre</b> ou un <b>détecteur de choc</b> réagit dès que le verre est frappé ou cassé, sans attendre qu'une personne entre. Pour un rideau métallique, un détecteur d'ouverture spécifique peut signaler qu'il est forcé.</p>
+
+<h2>La sirène</h2>
+<ul>
+  <li><b>Une sirène intérieure puissante</b> rend le magasin difficile à supporter et pousse l'intrus à partir vite.</li>
+  <li><b>Une sirène extérieure avec flash</b> alerte le voisinage et dissuade avant même l'intrusion.</li>
+  <li><b>Un réglage de durée</b> conforme aux règles de voisinage, pour ne pas sonner indéfiniment.</li>
+</ul>
+
+<h2>Le bouton d'alerte</h2>
+<p>Fixé sous le comptoir ou porté sur soi, il permet de donner l'alerte discrètement en cas d'agression pendant les heures d'ouverture. C'est un complément simple et rassurant pour les commerces qui ferment tard ou où l'on travaille seul. Voir aussi notre article sur la <a href="/conseils/proteger-la-caisse">protection de la caisse</a>.</p>
+
+<h2>Les erreurs à éviter</h2>
+<ol>
+  <li><b>Oublier l'accès arrière</b> : une alarme qui ne surveille que la porte d'entrée laisse la réserve sans protection.</li>
+  <li><b>Placer un détecteur face à une vitrine</b> ou à une source de chaleur : soleil et chauffage provoquent de fausses alertes.</li>
+  <li><b>Partager un seul code</b> entre tous les salariés : impossible de savoir qui a désarmé l'alarme.</li>
+  <li><b>Ne jamais tester l'installation</b> : un détecteur à la pile vide ne protège plus rien.</li>
+  <li><b>Négliger la transmission</b> : une alarme qui sonne sans prévenir personne est vite ignorée.</li>
+</ol>
+
+<h2>Alarme et caméras : le bon duo</h2>
+<p>Couplée à la vidéosurveillance, l'alarme vous permet de <b>regarder immédiatement les images</b> sur votre téléphone quand elle se déclenche. Vous savez en quelques secondes s'il faut appeler les forces de l'ordre ou s'il s'agit d'une fausse alerte. Pensez aussi à vérifier les exigences de votre assureur, qui peut demander certains équipements.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Lors de la visite gratuite, nous faisons le tour de votre commerce, repérons chaque accès possible et vous proposons le nombre de détecteurs juste nécessaire, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="alarme-se-declenche-la-nuit",
+        title="Votre alarme se déclenche la nuit : les bons réflexes",
+        short="Alarme déclenchée la nuit",
+        seo="Alarme de commerce déclenchée la nuit : que faire ?",
+        desc="Alerte d'alarme en pleine nuit : comment vérifier, quand appeler le 17, pourquoi ne pas se déplacer seul, et comment éviter les fausses alertes à répétition.",
+        summary="Vérifier à distance, appeler le 17, ne pas y aller seul, limiter les fausses alertes : la marche à suivre quand l'alarme du commerce sonne la nuit.",
+        date="2026-11-02",
+        related=["alarme-commerce", "alarme-sans-fil-ou-filaire"],
+        body="""
+<p>Il est trois heures du matin et votre téléphone vous signale une alerte : l'alarme du commerce vient de se déclencher. Dans ce moment de stress, il est facile de mal réagir, en fonçant seul sur place ou au contraire en ignorant une vraie intrusion. Mieux vaut avoir réfléchi à la marche à suivre avant que cela n'arrive.</p>
+
+<h2>1. Vérifier avant d'agir</h2>
+<p>La première étape est de savoir s'il s'agit d'une vraie intrusion.</p>
+<ul>
+  <li><b>Regardez quel détecteur s'est déclenché</b> dans l'application : porte d'entrée, réserve, vitrine, détecteur de mouvement.</li>
+  <li><b>Consultez les caméras</b> sur votre téléphone, en direct et dans les enregistrements des dernières minutes.</li>
+  <li><b>Regardez la photo de levée de doute</b> si vos détecteurs en prennent une.</li>
+  <li><b>Vérifiez si plusieurs détecteurs</b> se sont déclenchés à la suite : c'est le signe d'une personne qui se déplace.</li>
+</ul>
+<p>C'est pour ce moment précis que l'association alarme et caméras est précieuse : en quelques secondes, vous savez si quelqu'un est dans le magasin.</p>
+
+<h2>2. En cas d'intrusion : appeler le 17</h2>
+<p>Si les images ou les détecteurs montrent une présence, <b>appelez immédiatement la police ou la gendarmerie</b> en composant le 17 (ou le 112).</p>
+<ul>
+  <li><b>Indiquez l'adresse exacte</b> du commerce et comment y accéder.</li>
+  <li><b>Décrivez ce que vous voyez</b> sur les images : nombre de personnes, ce qu'elles font, véhicule éventuel.</li>
+  <li><b>Précisez que vous suivez la scène en direct</b>, cela aide les forces de l'ordre à évaluer l'urgence.</li>
+</ul>
+<p>Si vous avez souscrit un service de télésurveillance, celui-ci se charge de la levée de doute et de l'appel aux forces de l'ordre selon les conditions de votre contrat.</p>
+
+<h2>3. Ne jamais intervenir seul</h2>
+<p>C'est la règle la plus importante : <b>ne vous rendez pas seul sur place</b> pendant qu'une intrusion est en cours. Un cambrioleur surpris peut devenir dangereux, et aucun stock ne vaut de prendre ce risque.</p>
+<ul>
+  <li><b>Attendez l'arrivée des forces de l'ordre</b> avant d'entrer dans le local.</li>
+  <li><b>Ne touchez à rien</b> à votre arrivée : les traces peuvent être utiles à l'enquête.</li>
+  <li><b>Si vous devez vous déplacer</b> pour une alerte douteuse, faites-vous accompagner et restez à l'extérieur en cas de doute.</li>
+</ul>
+
+<h2>4. Après une intrusion</h2>
+<ol>
+  <li><b>Sauvegardez les enregistrements</b> des caméras avant qu'ils ne soient effacés par l'enregistrement en boucle.</li>
+  <li><b>Faites constater les dégâts</b> et prenez des photos.</li>
+  <li><b>Déposez plainte</b> en apportant les images et la liste des objets volés.</li>
+  <li><b>Prévenez votre assureur</b> dans les délais prévus par votre contrat.</li>
+  <li><b>Faites vérifier l'alarme</b> : un détecteur arraché ou une porte forcée doivent être remis en état rapidement.</li>
+</ol>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les démarches officielles, notamment le dépôt de plainte, consultez service-public.fr.</p>
+
+<h2>5. S'il s'agit d'une fausse alerte</h2>
+<p>Une fausse alerte de temps en temps n'a rien de grave. Mais si elles se répètent, il faut en trouver la cause, sinon vous finirez par ne plus réagir aux alertes, et vos voisins non plus.</p>
+<ul>
+  <li><b>Un détecteur mal placé</b> face à une vitrine, un radiateur ou une bouche de ventilation.</li>
+  <li><b>Un objet qui bouge</b> : affiche suspendue, ballon, plante devant un ventilateur.</li>
+  <li><b>Un animal</b> resté à l'intérieur ou un insecte sur la lentille du détecteur.</li>
+  <li><b>Une porte mal fermée</b> qui bouge avec le vent ou un courant d'air.</li>
+  <li><b>Une pile faible</b> sur un détecteur sans fil.</li>
+</ul>
+
+<h2>Préparez-vous dès maintenant</h2>
+<ul>
+  <li><b>Choisissez qui reçoit les alertes</b> : vous, un associé, un responsable proche du magasin.</li>
+  <li><b>Gardez à portée de main</b> l'adresse exacte et le code d'accès de l'immeuble si nécessaire.</li>
+  <li><b>Testez régulièrement l'alarme</b> et vérifiez que les notifications arrivent bien sur chaque téléphone.</li>
+  <li><b>Réglez la durée de la sirène</b> pour qu'elle ne sonne pas indéfiniment et ne gêne pas le voisinage.</li>
+</ul>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons des alarmes couplées aux caméras pour que vous puissiez vérifier une alerte depuis votre téléphone, et nous corrigeons les fausses alertes à répétition sur les installations existantes, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="securiser-un-entrepot",
+        title="Sécuriser un entrepôt : caméras, alarme et accès",
+        short="Sécuriser un entrepôt",
+        seo="Sécuriser un entrepôt : vidéosurveillance, alarme, contrôle d'accès",
+        desc="Périmètre, quais de chargement, stock, accès des salariés : comment protéger un entrepôt ou un atelier avec des caméras, une alarme et un contrôle des accès adaptés.",
+        summary="Périmètre, quais, stock, bureaux et accès : les points à protéger dans un entrepôt et les équipements qui fonctionnent vraiment sur de grandes surfaces.",
+        date="2026-11-03",
+        related=["vision-de-nuit", "alarme-commerce"],
+        body="""
+<p>Un entrepôt concentre souvent une grande valeur de marchandises et de matériel sur une surface étendue, vide la nuit et le week-end. Grandes portes, quais de chargement, parkings, clôtures : les points d'entrée sont nombreux. Le sécuriser demande une approche différente de celle d'un commerce, pensée pour les grands volumes et l'extérieur.</p>
+
+<h2>Commencer par le périmètre</h2>
+<p>La meilleure intrusion est celle qui n'a pas lieu. La première ligne de défense se situe autour du bâtiment.</p>
+<ul>
+  <li><b>Une clôture et un portail en bon état</b>, sans passage facile ni objet qui permette de l'escalader.</li>
+  <li><b>Un éclairage extérieur</b>, idéalement à détection, sur les façades et les zones de stationnement.</li>
+  <li><b>Des caméras extérieures sur les accès</b> : portail, entrées piétonnes, parking, abords des quais.</li>
+  <li><b>Une signalisation visible</b> de la vidéosurveillance, qui a un vrai effet dissuasif.</li>
+</ul>
+
+<h2>Les quais de chargement</h2>
+<p>Les quais sont à la fois le cœur de l'activité et un point faible : portes sectionnelles, allées et venues de transporteurs, marchandises en attente.</p>
+<ul>
+  <li><b>Une caméra par quai</b> ou une vue d'ensemble selon la configuration, pour suivre les chargements et lever le doute en cas de litige.</li>
+  <li><b>Des détecteurs d'ouverture</b> sur les portes sectionnelles, reliés à l'alarme.</li>
+  <li><b>Une bonne résolution</b> pour lire une plaque d'immatriculation ou un numéro de remorque.</li>
+</ul>
+
+<h2>L'intérieur : stock et zones sensibles</h2>
+<ul>
+  <li><b>Les allées de stockage</b> : des caméras placées en hauteur, dans l'axe des allées, pour éviter que les racks ne masquent la vue.</li>
+  <li><b>Les zones de valeur</b> : cage grillagée, stock sensible, outillage, à surveiller en priorité.</li>
+  <li><b>Les bureaux et le local technique</b> : informatique, baie réseau, enregistreur des caméras.</li>
+</ul>
+<p>Sur de grandes surfaces, des caméras avec un <b>angle large</b> ou un <b>zoom</b> permettent de couvrir plus d'espace avec moins d'appareils. La question est traitée en détail dans notre article <a href="/conseils/combien-de-cameras">combien de caméras faut-il</a>.</p>
+
+<h2>Voir la nuit, sur de longues distances</h2>
+<p>Un entrepôt se surveille surtout la nuit. Les caméras doivent avoir une <b>vision de nuit longue portée</b>, adaptée aux cours et aux parkings peu éclairés. Selon l'éclairage, l'infrarouge ou la couleur de nuit avec projecteur sera plus adapté : voir notre article <a href="/conseils/vision-de-nuit">vision de nuit, infrarouge ou couleur</a>.</p>
+
+<h2>Une alarme adaptée aux grands volumes</h2>
+<ul>
+  <li><b>Des détecteurs d'ouverture</b> sur toutes les portes, y compris les issues de secours.</li>
+  <li><b>Des détecteurs de mouvement adaptés aux grandes hauteurs</b> et aux longues allées.</li>
+  <li><b>Des détecteurs extérieurs</b> pour être alerté avant même qu'un intrus n'atteigne le bâtiment.</li>
+  <li><b>Une sirène extérieure avec flash</b>, visible de loin.</li>
+  <li><b>Une transmission par carte SIM</b> en plus d'internet, et une batterie de secours.</li>
+</ul>
+<p>Couplée aux caméras, l'alarme vous permet de vérifier immédiatement sur votre téléphone ce qui se passe quand elle se déclenche. Pour la marche à suivre en cas d'alerte, lisez notre article <a href="/conseils/alarme-se-declenche-la-nuit">votre alarme se déclenche la nuit</a>.</p>
+
+<h2>Contrôler les accès</h2>
+<p>Dans un entrepôt, beaucoup de personnes entrent et sortent : salariés, intérimaires, chauffeurs, prestataires.</p>
+<ul>
+  <li><b>Un badge ou un code par personne</b>, facile à retirer quand quelqu'un quitte l'entreprise.</li>
+  <li><b>Un historique</b> des ouvertures et de l'armement de l'alarme.</li>
+  <li><b>Des zones à accès limité</b> pour le stock de valeur et le local technique.</li>
+</ul>
+
+<h2>Le réseau, souvent oublié</h2>
+<p>Sur un grand site, les caméras éloignées posent la question du câblage. Les distances, les liaisons entre bâtiments et le Wi-Fi dans les zones de stockage se préparent avec soin. Un réseau bien conçu, avec une baie rangée, garantit que les caméras restent connectées et que l'enregistrement ne s'arrête pas.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Informer les salariés</b> individuellement et par des panneaux.</li>
+  <li><b>Ne pas filmer en continu</b> un poste de travail ni les zones de pause et les vestiaires.</li>
+  <li><b>Ne pas filmer la voie publique</b> au-delà de ce qui est strictement nécessaire aux abords.</li>
+  <li><b>Limiter la durée de conservation</b> des images et l'accès aux personnes habilitées.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous faisons le tour de votre site lors de la visite gratuite, de jour comme de nuit si besoin, pour placer caméras, détecteurs et accès là où ils sont vraiment utiles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="wifi-clients-separe",
+        title="Wi-Fi clients : pourquoi le séparer du réseau de votre entreprise",
+        short="Wi-Fi clients séparé",
+        seo="Wi-Fi clients séparé du réseau de l'entreprise : pourquoi et comment",
+        desc="Proposer le Wi-Fi à vos clients sans exposer votre caisse, vos caméras et vos ordinateurs : réseau invités, isolation, mot de passe, débit et obligations.",
+        summary="Un Wi-Fi offert aux clients ne doit jamais donner accès à votre caisse ni à vos caméras : comment mettre en place un réseau invités vraiment séparé.",
+        date="2026-11-04",
+        related=["baie-de-brassage", "camera-wifi-ou-poe"],
+        body="""
+<p>Offrir le Wi-Fi à vos clients est devenu presque indispensable dans un restaurant, un hôtel, une salle d'attente ou une boutique. Mais dans beaucoup de commerces, le mot de passe donné aux clients est le même que celui du réseau qui relie la caisse, les caméras et les ordinateurs. C'est une porte ouverte sur tout ce qui compte pour votre activité.</p>
+
+<h2>Le risque d'un réseau unique</h2>
+<p>Quand clients et équipements professionnels partagent le même réseau, n'importe quel appareil connecté peut « voir » les autres.</p>
+<ul>
+  <li><b>Vos caméras et votre enregistreur</b> deviennent visibles, parfois accessibles avec un mot de passe par défaut.</li>
+  <li><b>Votre caisse et votre terminal</b> se retrouvent sur le même réseau que des téléphones inconnus.</li>
+  <li><b>Vos ordinateurs et imprimantes</b> partagés peuvent être explorés.</li>
+  <li><b>Un appareil infecté</b> d'un client peut contaminer vos propres machines.</li>
+  <li><b>Le débit</b> est partagé : un client qui télécharge peut ralentir votre caisse ou vos paiements.</li>
+</ul>
+<p>Sans même parler de piratage volontaire, un simple mot de passe qui circule entre clients, anciens salariés et voisins finit par donner accès à votre réseau à beaucoup trop de monde.</p>
+
+<h2>La solution : un réseau invités séparé</h2>
+<p>Le principe est simple : créer <b>deux réseaux distincts</b>, qui ne communiquent pas entre eux.</p>
+<ul>
+  <li><b>Un réseau professionnel</b>, avec un mot de passe connu uniquement de vous et de vos salariés de confiance, pour la caisse, les caméras, les ordinateurs et l'imprimante.</li>
+  <li><b>Un réseau invités</b>, avec son propre nom et son propre mot de passe, qui donne accès à internet et à rien d'autre.</li>
+</ul>
+<p>Sur un équipement professionnel, cette séparation se fait proprement grâce à des <b>réseaux virtuels</b> (VLAN) : même si tout passe par les mêmes câbles et les mêmes bornes, les deux réseaux restent étanches.</p>
+
+<h2>Les réglages qui comptent</h2>
+<ul>
+  <li><b>L'isolation des clients</b> : sur le réseau invités, les appareils ne peuvent pas se voir entre eux.</li>
+  <li><b>Une limite de débit</b> par appareil, pour que le Wi-Fi des clients ne ralentisse jamais votre activité.</li>
+  <li><b>Un mot de passe changé régulièrement</b> pour le réseau invités, affiché simplement au comptoir ou sur un QR code.</li>
+  <li><b>Un mot de passe fort et confidentiel</b> pour le réseau professionnel, changé quand un salarié part.</li>
+  <li><b>Les caméras de préférence en câble</b>, sur le réseau professionnel uniquement.</li>
+</ul>
+
+<h2>Une bonne couverture, sans zone blanche</h2>
+<p>Un Wi-Fi clients qui ne fonctionne qu'à côté de la caisse ne sert à rien. Dans une salle de restaurant, sur une terrasse ou dans un hôtel, il faut souvent <b>plusieurs bornes</b>, placées au bon endroit et reliées par câble. La box internet seule, posée dans un placard, couvre rarement tout l'établissement.</p>
+<p>Des bornes professionnelles permettent aussi de gérer les deux réseaux depuis un seul endroit et de passer d'une borne à l'autre sans coupure quand on se déplace.</p>
+
+<h2>Et les obligations légales ?</h2>
+<p>Un professionnel qui fournit un accès à internet au public peut être soumis à certaines obligations, notamment de conservation de données de connexion. Les règles dépendent de votre situation : renseignez-vous avant de mettre en place un Wi-Fi ouvert au public.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez service-public.fr et cnil.fr.</p>
+
+<h2>Comment savoir si votre réseau est séparé ?</h2>
+<ol>
+  <li><b>Comptez vos réseaux Wi-Fi</b> : si clients et salariés utilisent le même nom de réseau, il n'y a pas de séparation.</li>
+  <li><b>Demandez-vous qui connaît le mot de passe</b> du réseau où sont branchées la caisse et les caméras.</li>
+  <li><b>Regardez votre baie ou votre box</b> : un seul appareil grand public pour tout le local signifie souvent un réseau unique.</li>
+</ol>
+<p>Si l'une de ces réponses vous inquiète, il est temps de faire le point. Une baie en désordre est souvent le signe d'un réseau qui s'est construit au fil du temps : voir notre article sur la <a href="/conseils/baie-de-brassage">remise au propre d'une baie de brassage</a>.</p>
+
+<h2>Notre accompagnement</h2>
+<p>Nous installons des bornes Wi-Fi professionnelles et séparons proprement le réseau de vos clients de celui de votre caisse, de vos caméras et de vos ordinateurs, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="sauvegardes-3-2-1",
+        title="La règle des sauvegardes 3-2-1 : protéger les données de votre entreprise",
+        short="Sauvegardes 3-2-1",
+        seo="Sauvegardes 3-2-1 pour une petite entreprise : la méthode simple",
+        desc="3 copies, 2 supports, 1 hors des locaux : la règle 3-2-1 expliquée simplement pour protéger factures, fichiers clients et comptabilité d'un commerce ou d'un bureau.",
+        summary="Trois copies, deux supports, une hors des locaux : la méthode simple pour ne jamais perdre vos factures, fichiers clients et documents.",
+        date="2026-11-05",
+        related=["wifi-clients-separe", "baie-de-brassage"],
+        body="""
+<p>Un disque dur qui lâche, un ordinateur volé, un dégât des eaux, un virus qui chiffre tous les fichiers : il suffit d'un incident pour perdre des années de factures, de devis et de fichiers clients. Beaucoup de petites entreprises pensent être protégées parce qu'elles ont « une clé USB quelque part ». La règle 3-2-1 est une méthode simple pour l'être vraiment.</p>
+
+<h2>La règle en une phrase</h2>
+<p>Gardez <b>3 copies</b> de vos données, sur <b>2 supports différents</b>, dont <b>1 hors de vos locaux</b>.</p>
+<ul>
+  <li><b>3 copies</b> : l'original sur votre ordinateur ou votre serveur, plus deux sauvegardes.</li>
+  <li><b>2 supports différents</b> : par exemple un disque de sauvegarde dans le local et un service en ligne. Si un support tombe en panne, l'autre est toujours là.</li>
+  <li><b>1 copie hors des locaux</b> : en cas de vol, d'incendie ou d'inondation, tout ce qui se trouve sur place peut disparaître en même temps.</li>
+</ul>
+
+<h2>Pourquoi une seule sauvegarde ne suffit pas</h2>
+<p>Un disque branché en permanence à l'ordinateur est pratique, mais il partage le sort de l'ordinateur : même vol, même surtension, même virus. Les logiciels malveillants qui chiffrent les fichiers s'attaquent d'ailleurs en priorité à tout ce qui est accessible depuis le poste, y compris les disques et dossiers partagés.</p>
+<p>C'est pour cela que la copie hors des locaux, ou au moins une copie <b>déconnectée</b> la plupart du temps, fait toute la différence.</p>
+
+<h2>Que faut-il sauvegarder ?</h2>
+<ul>
+  <li><b>La comptabilité et la facturation</b>, souvent soumises à des durées de conservation légales.</li>
+  <li><b>Les fichiers clients</b> et les devis en cours.</li>
+  <li><b>Les documents de l'entreprise</b> : contrats, statuts, attestations, plans.</li>
+  <li><b>Les boîtes mail</b> si elles ne sont pas déjà hébergées en ligne.</li>
+  <li><b>Les réglages importants</b> : logiciel de caisse, configuration du réseau, mots de passe stockés dans un gestionnaire.</li>
+</ul>
+<p>Les images de vidéosurveillance sont un cas à part : elles ne se conservent que pour une durée limitée et n'entrent pas dans la sauvegarde habituelle. Voir notre article <a href="/conseils/duree-conservation-images">combien de temps garder les images</a>.</p>
+
+<h2>Une mise en place simple pour un commerce ou un bureau</h2>
+<ol>
+  <li><b>Centraliser les fichiers</b> dans un dossier ou sur un petit serveur de stockage, plutôt que dispersés sur chaque poste.</li>
+  <li><b>Une sauvegarde automatique sur place</b>, chaque jour, vers un disque ou un serveur rangé dans la baie, à l'abri.</li>
+  <li><b>Une copie automatique hors des locaux</b>, vers un service en ligne situé de préférence dans l'Union européenne, avec chiffrement.</li>
+  <li><b>Plusieurs versions conservées</b>, pour pouvoir revenir à l'état d'hier ou de la semaine dernière si un fichier a été abîmé.</li>
+  <li><b>Une alerte en cas d'échec</b>, pour ne pas découvrir trop tard que la sauvegarde ne tourne plus depuis des mois.</li>
+</ol>
+
+<h2>Le test que presque personne ne fait</h2>
+<p>Une sauvegarde qui n'a jamais été testée n'est qu'un espoir. Une ou deux fois par an, <b>essayez de restaurer</b> quelques fichiers depuis chaque copie. Vous vérifiez ainsi que les données sont lisibles, complètes et que vous savez comment les récupérer le jour où vous en aurez vraiment besoin.</p>
+
+<h2>Les erreurs fréquentes</h2>
+<ul>
+  <li><b>Tout garder sur une seule clé USB</b>, rangée dans le tiroir du bureau.</li>
+  <li><b>Une sauvegarde manuelle</b> qu'on oublie dès que l'activité s'accélère.</li>
+  <li><b>Un disque toujours branché</b>, chiffré en même temps que l'ordinateur en cas d'attaque.</li>
+  <li><b>Aucun mot de passe</b> sur la sauvegarde en ligne, ou le même partout.</li>
+  <li><b>Ne jamais vérifier</b> que la sauvegarde fonctionne.</li>
+</ul>
+
+<h2>Et les données personnelles ?</h2>
+<p>Vos sauvegardes contiennent souvent des informations sur vos clients et vos salariés. Elles doivent être protégées comme les originaux : accès limité, chiffrement, et conservation qui ne dépasse pas ce qui est nécessaire.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles sur les données personnelles, consultez cnil.fr.</p>
+
+<h2>Ce que nous pouvons faire pour vous</h2>
+<p>Nous mettons en place des sauvegardes automatiques sur place et hors des locaux, avec plusieurs versions et une alerte en cas de problème, et nous testons la restauration avec vous, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="commerce-avant-les-conges",
+        title="Fermeture pour congés : préparer la sécurité de votre commerce",
+        short="Avant les congés",
+        seo="Fermer son commerce pour les congés : la check-list sécurité",
+        desc="Alarme, caméras, accès, internet, vitrine : la liste des vérifications à faire avant de fermer votre commerce ou votre bureau plusieurs jours.",
+        summary="Alarme testée, caméras vérifiées, accès à jour, vitrine et caisse vidées : la liste à suivre avant de fermer plusieurs jours.",
+        date="2026-11-06",
+        related=["alarme-commerce", "alarme-se-declenche-la-nuit"],
+        body="""
+<p>Un commerce fermé plusieurs jours d'affilée est une cible plus facile : personne ne passe, le rideau reste baissé, et une effraction peut n'être découverte qu'au retour. Quelques vérifications faites la semaine avant la fermeture évitent la plupart des mauvaises surprises. Voici la liste à suivre.</p>
+
+<h2>Une semaine avant : vérifier les équipements</h2>
+<p>C'est le bon moment pour repérer ce qui ne fonctionne plus, pendant qu'il reste du temps pour le faire réparer.</p>
+<ul>
+  <li><b>Testez l'alarme</b> : armez-la, ouvrez une porte, vérifiez que la sirène se déclenche et que l'alerte arrive sur chaque téléphone prévu.</li>
+  <li><b>Vérifiez les piles</b> des détecteurs sans fil. L'application signale souvent les piles faibles : ne laissez pas un détecteur sans alimentation pendant votre absence.</li>
+  <li><b>Regardez chaque caméra</b> sur votre téléphone, de jour et de nuit : image nette, angle correct, rien qui gêne la vue.</li>
+  <li><b>Contrôlez l'enregistreur</b> : il enregistre bien, le disque n'est pas en erreur, la date et l'heure sont justes.</li>
+  <li><b>Testez l'accès à distance</b> depuis un autre réseau que celui du magasin, par exemple en 4G, pour être sûr de voir vos images une fois parti.</li>
+</ul>
+
+<h2>Penser à internet et à l'électricité</h2>
+<ul>
+  <li><b>Sans internet, vous ne voyez plus rien à distance.</b> Une box qui redémarre mal après une coupure peut vous priver de vos caméras pendant tout votre séjour.</li>
+  <li><b>Une alarme avec carte SIM</b> continue de vous prévenir même si la ligne internet tombe.</li>
+  <li><b>Un onduleur</b> sur la box et l'enregistreur évite qu'une courte coupure de courant ne coupe tout.</li>
+  <li><b>Ne coupez pas le disjoncteur général</b> si vos équipements de sécurité y sont reliés : identifiez les circuits à laisser sous tension.</li>
+</ul>
+
+<h2>Mettre à jour les accès</h2>
+<ul>
+  <li><b>Retirez les badges et codes</b> des personnes qui n'ont plus à entrer : anciens salariés, intérimaires, prestataires.</li>
+  <li><b>Décidez qui reçoit les alertes</b> pendant votre absence, et prévenez ces personnes.</li>
+  <li><b>Confiez si besoin une clé et un code</b> à une personne de confiance proche du magasin, capable de se rendre sur place avec les forces de l'ordre en cas de problème.</li>
+  <li><b>Changez le mot de passe</b> de l'application si trop de monde le connaît.</li>
+</ul>
+
+<h2>Le jour de la fermeture</h2>
+<ol>
+  <li><b>Videz la caisse</b> et laissez le tiroir ouvert et vide : c'est le signe qu'il n'y a rien à prendre, et cela évite qu'il soit forcé.</li>
+  <li><b>Retirez de la vitrine</b> les articles de valeur faciles à emporter.</li>
+  <li><b>Rangez ou mettez hors de vue</b> les ordinateurs portables, tablettes et terminaux.</li>
+  <li><b>Fermez toutes les ouvertures</b> : fenêtres, impostes, porte de service, accès à la cour ou au toit.</li>
+  <li><b>Laissez une lumière</b> ou un éclairage programmé, qui donne l'impression d'une présence.</li>
+  <li><b>Armez l'alarme</b> et vérifiez dans l'application qu'elle est bien armée avant de partir.</li>
+</ol>
+
+<h2>Pendant votre absence</h2>
+<ul>
+  <li><b>Jetez un œil aux caméras</b> de temps en temps, par exemple le soir.</li>
+  <li><b>Réagissez à chaque alerte</b> : vérifiez les images avant d'appeler qui que ce soit. En cas d'intrusion, composez le 17. Notre article <a href="/conseils/alarme-se-declenche-la-nuit">votre alarme se déclenche la nuit</a> détaille la marche à suivre.</li>
+  <li><b>Faites relever le courrier</b> qui s'accumule devant la porte, signe visible d'une absence prolongée.</li>
+</ul>
+
+<h2>Au retour</h2>
+<p>Faites le tour du local avant de désarmer l'alarme si quelque chose vous paraît anormal. Puis vérifiez que l'enregistrement a bien fonctionné sur toute la période : c'est le meilleur moyen de savoir que votre installation est fiable pour la prochaine fois.</p>
+<p>Pensez aussi à vérifier les conditions de votre contrat d'assurance : certains contrats prévoient des obligations particulières en cas de fermeture prolongée.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les démarches officielles, consultez service-public.fr.</p>
+
+<h2>Besoin d'une vérification avant de partir ?</h2>
+<p>Nous contrôlons votre alarme, vos caméras, votre enregistreur et l'accès à distance avant une fermeture, et réparons rapidement ce qui doit l'être, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une intervention</a>.</p>
+"""),
+    dict(
+        slug="cameras-a-distance",
+        title="Voir ses caméras à distance sans ouvrir la porte aux pirates",
+        short="Caméras à distance",
+        seo="Accéder à ses caméras à distance en toute sécurité",
+        desc="Mots de passe, mises à jour, ouverture de ports, double authentification : les règles simples pour regarder vos caméras sur votre téléphone sans exposer votre commerce.",
+        summary="Regarder ses caméras depuis son téléphone est pratique, à condition de ne pas laisser tout internet y accéder. Les réglages qui comptent.",
+        date="2026-11-07",
+        related=["wifi-clients-separe", "camera-wifi-ou-poe"],
+        body="""
+<p>Voir son magasin en direct depuis son téléphone est l'un des grands avantages de la vidéosurveillance moderne. Mais une caméra ou un enregistreur accessible depuis internet est aussi une porte d'entrée possible. Des milliers d'appareils mal configurés sont trouvés chaque jour par des robots qui scannent le réseau à la recherche d'un mot de passe par défaut. Voici comment profiter de l'accès à distance sans prendre ce risque.</p>
+
+<h2>Le risque est bien réel</h2>
+<p>Une caméra mal protégée peut permettre à un inconnu de :</p>
+<ul>
+  <li><b>Regarder vos images</b> en direct et savoir quand le magasin est vide.</li>
+  <li><b>Effacer les enregistrements</b> ou couper les caméras.</li>
+  <li><b>Utiliser l'appareil</b> pour attaquer d'autres machines, ou entrer dans le reste de votre réseau : caisse, ordinateurs, fichiers.</li>
+</ul>
+<p>Dans la plupart des cas, ce n'est pas une attaque sophistiquée : c'est simplement un mot de passe jamais changé ou un appareil jamais mis à jour.</p>
+
+<h2>1. Changer tous les mots de passe par défaut</h2>
+<ul>
+  <li><b>Un mot de passe long et unique</b> pour l'enregistreur, pour chaque caméra et pour l'application.</li>
+  <li><b>Jamais le même</b> que celui de votre boîte mail ou de votre banque.</li>
+  <li><b>Un compte par personne</b> plutôt qu'un identifiant partagé par toute l'équipe, avec seulement les droits nécessaires : regarder, ou regarder et exporter.</li>
+  <li><b>Un gestionnaire de mots de passe</b> pour ne pas les noter sur un papier collé sous le comptoir.</li>
+</ul>
+
+<h2>2. Activer la double authentification</h2>
+<p>Quand l'application le permet, activez la <b>validation en deux étapes</b> : en plus du mot de passe, un code arrive sur votre téléphone. Même si votre mot de passe fuite, personne ne peut se connecter sans ce code.</p>
+
+<h2>3. Éviter d'ouvrir des ports sur la box</h2>
+<p>Pour voir les caméras depuis l'extérieur, une méthode ancienne consiste à « ouvrir des ports » sur la box internet, ce qui rend l'enregistreur directement visible depuis tout internet. C'est la configuration la plus exposée.</p>
+<p>Les solutions plus sûres sont :</p>
+<ul>
+  <li><b>Le service de connexion sécurisée du fabricant</b>, qui passe par un intermédiaire chiffré sans rendre l'enregistreur visible.</li>
+  <li><b>Un VPN</b> : votre téléphone se connecte d'abord au réseau du magasin de façon chiffrée, puis accède aux caméras comme s'il était sur place.</li>
+</ul>
+<p>Pensez aussi à <b>désactiver les fonctions d'ouverture automatique</b> de ports sur la box si vous ne les utilisez pas.</p>
+
+<h2>4. Mettre à jour régulièrement</h2>
+<p>Les fabricants corrigent régulièrement des failles de sécurité. Un enregistreur qui n'a jamais été mis à jour depuis son installation reste vulnérable à des failles connues de tous. Mettez à jour l'enregistreur, les caméras et l'application, et remplacez le matériel qui ne reçoit plus aucune mise à jour.</p>
+
+<h2>5. Isoler les caméras du reste du réseau</h2>
+<p>Les caméras n'ont pas besoin de voir la caisse ni les ordinateurs. En les plaçant sur un <b>réseau séparé</b>, une caméra compromise ne donne pas accès au reste de l'entreprise. Le même principe vaut pour le Wi-Fi des clients : voir notre article <a href="/conseils/wifi-clients-separe">pourquoi séparer le Wi-Fi des clients</a>.</p>
+
+<h2>6. Contrôler qui a accès</h2>
+<ul>
+  <li><b>Faites le point régulièrement</b> sur les comptes et les téléphones autorisés.</li>
+  <li><b>Retirez immédiatement l'accès</b> d'un salarié qui quitte l'entreprise ou d'un prestataire qui a terminé sa mission.</li>
+  <li><b>Consultez l'historique des connexions</b> si votre enregistreur le propose, pour repérer un accès inhabituel.</li>
+</ul>
+
+<h2>Et la vie privée ?</h2>
+<p>L'accès à distance ne change pas les règles : les images ne doivent être consultées que par les personnes habilitées, dans le but prévu, et pendant la durée de conservation autorisée. Regarder ses salariés en permanence depuis son téléphone n'est pas permis.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr.</p>
+
+<h2>Faire vérifier votre installation</h2>
+<p>Nous configurons l'accès à distance de façon sécurisée lors de chaque installation, et nous pouvons vérifier une installation existante : mots de passe, mises à jour, ports ouverts, réseau séparé, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une vérification</a>.</p>
+"""),
+    dict(
+        slug="videosurveillance-et-assurance",
+        title="Vidéosurveillance, alarme et assurance : ce qu'il faut vérifier",
+        short="Sécurité et assurance",
+        seo="Vidéosurveillance, alarme et assurance d'un commerce : les points à vérifier",
+        desc="Ce que votre contrat d'assurance peut exiger en matière d'alarme et de caméras, comment les images aident après un sinistre, et les questions à poser à votre assureur.",
+        summary="Équipements exigés, déclaration, images utiles après un vol : les points à vérifier avec votre assureur avant et après l'installation.",
+        date="2026-11-08",
+        related=["alarme-commerce", "duree-conservation-images"],
+        body="""
+<p>Beaucoup de commerçants découvrent les exigences de leur contrat d'assurance au pire moment : après un cambriolage. Une alarme absente, une protection non conforme à ce qui était prévu ou des images introuvables peuvent compliquer l'indemnisation. Prendre quelques minutes pour faire le point avec votre assureur, avant et après l'installation, évite bien des mauvaises surprises.</p>
+
+<h2>Ce que votre contrat peut prévoir</h2>
+<p>Chaque contrat est différent, mais certaines clauses reviennent souvent dans les assurances des commerces et des locaux professionnels :</p>
+<ul>
+  <li><b>Des moyens de protection obligatoires</b> : serrures, rideau métallique, alarme, parfois télésurveillance, selon la valeur du stock et l'activité.</li>
+  <li><b>Des conditions d'utilisation</b> : alarme armée à chaque fermeture, protections réellement en service, entretien régulier.</li>
+  <li><b>Des exigences sur le matériel</b> : certains contrats demandent un niveau de qualité ou une certification particulière pour l'alarme.</li>
+  <li><b>Des obligations en cas d'absence prolongée</b>, par exemple pendant une fermeture pour congés.</li>
+</ul>
+<p>Si une protection prévue au contrat n'était pas en place ou pas en service au moment du sinistre, l'indemnisation peut être réduite, voire refusée. D'où l'intérêt de relire ces clauses.</p>
+
+<h2>Avant l'installation : les questions à poser</h2>
+<ol>
+  <li><b>Une alarme est-elle exigée</b> pour mes locaux et mon activité ?</li>
+  <li><b>Des caractéristiques précises</b> sont-elles demandées : type de détecteurs, sirène, transmission de l'alerte, télésurveillance ?</li>
+  <li><b>La vidéosurveillance est-elle prise en compte</b> dans l'évaluation du risque ?</li>
+  <li><b>Un justificatif d'installation</b> est-il nécessaire (facture, attestation, descriptif) ?</li>
+  <li><b>Faut-il un contrat d'entretien</b> pour que la protection soit considérée comme valable ?</li>
+</ol>
+<p>Avec ces réponses en main, nous pouvons adapter l'installation à ce que votre contrat demande réellement, plutôt que de deviner.</p>
+
+<h2>Caméras et alarme : deux rôles différents</h2>
+<p>Pour un assureur, l'alarme et la vidéosurveillance ne jouent pas le même rôle. L'alarme <b>empêche ou interrompt</b> l'intrusion en donnant l'alerte, tandis que les caméras <b>dissuadent et apportent la preuve</b> de ce qui s'est passé. C'est souvent l'association des deux, avec une alerte qui arrive sur votre téléphone, qui protège le mieux vos locaux.</p>
+
+<h2>Après l'installation : ce qu'il faut faire</h2>
+<ul>
+  <li><b>Prévenir votre assureur</b> de la mise en place de l'alarme et des caméras, en joignant les justificatifs demandés.</li>
+  <li><b>Conserver la facture et le descriptif</b> de l'installation avec vos documents d'assurance.</li>
+  <li><b>Armer l'alarme à chaque fermeture</b> : l'historique de l'application montre qui l'a armée et quand.</li>
+  <li><b>Faire entretenir le système</b> et garder une trace des interventions.</li>
+</ul>
+
+<h2>Le rôle des images après un sinistre</h2>
+<p>En cas de vol ou de dégradation, les enregistrements sont souvent précieux :</p>
+<ul>
+  <li><b>Ils montrent ce qui s'est passé</b> : heure, mode d'entrée, objets emportés.</li>
+  <li><b>Ils appuient votre plainte</b> auprès des forces de l'ordre.</li>
+  <li><b>Ils facilitent le dossier</b> auprès de votre assureur.</li>
+</ul>
+<p>Encore faut-il que les images existent toujours. L'enregistreur efface les plus anciennes au fil du temps : après un incident, <b>exportez immédiatement la séquence utile</b> sur une clé ou un support séparé, avant qu'elle ne soit écrasée. La durée de conservation habituelle reste limitée, comme nous l'expliquons dans notre article <a href="/conseils/duree-conservation-images">combien de temps garder les images</a>.</p>
+
+<h2>Après un cambriolage : les bons réflexes</h2>
+<ol>
+  <li><b>Appelez le 17</b> si l'intrusion est en cours, et ne vous rendez pas seul sur place.</li>
+  <li><b>Ne touchez à rien</b> avant le passage des forces de l'ordre.</li>
+  <li><b>Exportez les images</b> et notez l'heure des alertes reçues.</li>
+  <li><b>Déposez plainte</b> avec la liste des biens volés et les images.</li>
+  <li><b>Déclarez le sinistre à votre assureur</b> dans le délai prévu par votre contrat.</li>
+  <li><b>Faites remettre en état</b> l'alarme et les caméras endommagées.</li>
+</ol>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent ni la lecture de votre contrat ni un conseil juridique. Pour les démarches officielles, consultez service-public.fr.</p>
+
+<h2>Une installation adaptée à votre contrat</h2>
+<p>Lors de la visite gratuite, nous tenons compte des exigences de votre assureur pour choisir l'alarme et les caméras, et nous vous remettons un descriptif clair de l'installation, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="cablage-reseau-local-pro",
+        title="Câblage réseau d'un local professionnel : bien le prévoir dès le départ",
+        short="Câblage d'un local pro",
+        seo="Câblage réseau d'un local professionnel : prises, baie, caméras",
+        desc="Nombre de prises, emplacement de la baie, câbles pour caméras et bornes Wi-Fi, étiquetage : comment prévoir le câblage réseau d'un commerce ou d'un bureau.",
+        summary="Prises, baie, caméras, Wi-Fi, étiquetage : les bonnes décisions à prendre avant les travaux pour un réseau fiable pendant des années.",
+        date="2026-11-09",
+        related=["baie-de-brassage", "camera-wifi-ou-poe"],
+        body="""
+<p>Le câblage réseau est la partie invisible d'un local professionnel : une fois les cloisons fermées et les faux plafonds posés, il est difficile et coûteux d'y revenir. Un câblage bien pensé dès le départ fait fonctionner caisse, ordinateurs, imprimantes, caméras et Wi-Fi sans souci pendant des années. Un câblage improvisé finit en multiprises réseau, en câbles qui traînent au sol et en pannes difficiles à trouver.</p>
+
+<h2>Le bon moment : avant les travaux</h2>
+<p>Le moment idéal pour câbler est <b>pendant l'aménagement</b> : ouverture d'un commerce, rénovation, déménagement de bureaux. Les câbles passent dans les cloisons, les gaines et les faux plafonds, et les prises sont posées exactement où il faut. Dans un local déjà aménagé, le câblage reste possible avec des goulottes discrètes, mais il demande plus de compromis.</p>
+
+<h2>Combien de prises prévoir ?</h2>
+<ul>
+  <li><b>Au moins deux prises par poste de travail</b> : ordinateur, téléphone, et une réserve.</li>
+  <li><b>Une prise par équipement fixe</b> : caisse, terminal de paiement s'il est filaire, imprimante, écran d'affichage.</li>
+  <li><b>Une prise par caméra</b>, au plafond ou en hauteur, à l'emplacement exact prévu.</li>
+  <li><b>Une prise par borne Wi-Fi</b>, idéalement au plafond, au centre de la zone à couvrir.</li>
+  <li><b>Quelques prises de réserve</b> dans chaque pièce : les besoins évoluent toujours plus vite que prévu.</li>
+</ul>
+<p>Ajouter une prise pendant les travaux ne prend que quelques minutes. L'ajouter après peut demander d'ouvrir un plafond.</p>
+
+<h2>Où placer la baie ?</h2>
+<p>Tous les câbles convergent vers une <b>baie de brassage</b>, une armoire qui regroupe la box, le switch, l'enregistreur des caméras et les panneaux de raccordement. Son emplacement compte :</p>
+<ul>
+  <li><b>Un endroit protégé</b> : réserve fermée, local technique, placard ventilé, hors de portée des clients.</li>
+  <li><b>Pas trop loin des prises</b>, pour éviter des longueurs de câble excessives.</li>
+  <li><b>Près de l'arrivée internet</b> et avec une alimentation électrique dédiée.</li>
+  <li><b>Une bonne ventilation</b> : les équipements chauffent, surtout en été.</li>
+</ul>
+<p>Pour une baie déjà en place mais en désordre, voir notre article sur la <a href="/conseils/baie-de-brassage">remise au propre d'une baie de brassage</a>.</p>
+
+<h2>Le bon câble</h2>
+<ul>
+  <li><b>Du câble réseau de bonne catégorie</b>, adapté aux débits actuels et à ceux des prochaines années.</li>
+  <li><b>Du câble blindé</b> près des sources de perturbations : moteurs, néons, câbles électriques.</li>
+  <li><b>Des câbles adaptés à l'extérieur</b> pour les caméras en façade ou dans une cour.</li>
+  <li><b>Le respect des distances</b> : au-delà d'une certaine longueur, le signal se dégrade.</li>
+</ul>
+
+<h2>Penser aux caméras et au Wi-Fi dès le câblage</h2>
+<p>Les caméras et les bornes Wi-Fi professionnelles peuvent être <b>alimentées directement par le câble réseau</b> (PoE). Un seul câble par appareil, sans prise électrique à côté : c'est plus propre, plus fiable et plus facile à protéger. Encore faut-il avoir prévu les câbles aux bons endroits. Nous détaillons les avantages de cette solution dans notre article <a href="/conseils/camera-wifi-ou-poe">caméra Wi-Fi ou filaire PoE</a>.</p>
+
+<h2>Étiqueter et documenter</h2>
+<p>Un câblage propre, c'est aussi un câblage <b>qu'on comprend</b>. Chaque prise porte un numéro, que l'on retrouve sur le panneau de la baie. Un plan simple indique où se trouve chaque prise et à quoi elle sert. Le jour d'une panne ou d'un ajout, n'importe quel technicien s'y retrouve en quelques minutes au lieu de tester les câbles un par un.</p>
+
+<h2>Tester avant de refermer</h2>
+<p>Chaque câble doit être <b>testé une fois posé</b>, avant de refermer cloisons et plafonds. Un câble abîmé pendant les travaux est facile à remplacer à ce moment-là, beaucoup moins après.</p>
+
+<h2>Les erreurs à éviter</h2>
+<ol>
+  <li><b>Tout faire passer en Wi-Fi</b>, y compris la caisse et les caméras, puis subir les coupures.</li>
+  <li><b>Sous-estimer le nombre de prises</b> et multiplier les petits switchs sous les bureaux.</li>
+  <li><b>Installer la box dans l'espace client</b>, à la vue de tous.</li>
+  <li><b>Oublier l'étiquetage</b> et ne plus savoir quel câble va où.</li>
+</ol>
+
+<h2>Préparer votre câblage avec nous</h2>
+<p>Nous intervenons idéalement avant ou pendant vos travaux pour poser le câblage, la baie, les prises des caméras et des bornes Wi-Fi, puis tout tester et étiqueter, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="remplacer-vieil-enregistreur",
+        title="Remplacer un vieil enregistreur de vidéosurveillance sans tout recâbler",
+        short="Remplacer l'enregistreur",
+        seo="Remplacer un vieil enregistreur de vidéosurveillance sans recâbler",
+        desc="Enregistreur en panne, images floues, application qui ne marche plus : comment moderniser une installation de vidéosurveillance en gardant les câbles existants.",
+        summary="Enregistreur hors d'usage ou dépassé : comment moderniser l'installation en gardant les câbles déjà en place, et quand il vaut mieux tout refaire.",
+        date="2026-11-10",
+        related=["cameras-ne-fonctionnent-plus", "cameras-a-distance"],
+        body="""
+<p>Dans beaucoup de commerces et de copropriétés, les caméras ont été posées il y a des années. L'enregistreur commence à faiblir : disque en erreur, images floues, application qui ne se connecte plus, mises à jour arrêtées. On imagine alors qu'il faut tout arracher et repasser des câbles partout. Ce n'est pas toujours nécessaire : dans bien des cas, on peut moderniser l'installation en gardant le câblage existant.</p>
+
+<h2>Les signes qu'il est temps de remplacer l'enregistreur</h2>
+<ul>
+  <li><b>Le disque dur est en erreur</b> ou l'enregistrement s'arrête tout seul.</li>
+  <li><b>L'application ne fonctionne plus</b> sur les téléphones récents.</li>
+  <li><b>Aucune mise à jour</b> n'est plus proposée par le fabricant, ce qui laisse des failles de sécurité ouvertes.</li>
+  <li><b>Les images sont trop floues</b> pour reconnaître un visage ou lire une plaque.</li>
+  <li><b>L'appareil redémarre</b> régulièrement ou chauffe anormalement.</li>
+</ul>
+<p>Pour les autres causes de panne, notre article <a href="/conseils/cameras-ne-fonctionnent-plus">vos caméras ne fonctionnent plus</a> passe en revue les vérifications à faire.</p>
+
+<h2>Première étape : identifier ce qui est installé</h2>
+<p>Tout dépend du type de câble qui relie les caméras à l'enregistreur.</p>
+<ul>
+  <li><b>Du câble coaxial</b> (rond, avec un connecteur à vis ou à baïonnette) : ce sont des caméras dites analogiques ou HD sur coaxial.</li>
+  <li><b>Du câble réseau</b> (connecteur RJ45, comme pour un ordinateur) : ce sont des caméras IP, souvent alimentées par le câble.</li>
+</ul>
+<p>Nous vérifions aussi l'état des câbles, la longueur des liaisons et la façon dont les caméras sont alimentées.</p>
+
+<h2>Cas n°1 : caméras sur câble coaxial</h2>
+<p>Il existe des <b>enregistreurs hybrides</b> qui acceptent à la fois les caméras sur coaxial et les caméras IP. Cela permet :</p>
+<ul>
+  <li><b>De garder les caméras qui fonctionnent</b> et de remplacer seulement l'enregistreur.</li>
+  <li><b>De changer progressivement les caméras</b> par des modèles plus récents et plus nets, sur les mêmes câbles coaxiaux.</li>
+  <li><b>D'ajouter des caméras IP</b> là où de nouveaux câbles réseau peuvent passer facilement.</li>
+</ul>
+<p>Il existe aussi des <b>adaptateurs</b> qui font passer le signal réseau sur un câble coaxial existant. Ils permettent d'installer une caméra IP moderne au bout d'un ancien câble, sans le remplacer.</p>
+
+<h2>Cas n°2 : caméras déjà sur câble réseau</h2>
+<p>Bonne nouvelle : le câblage réseau est généralement réutilisable tel quel. Il suffit souvent de :</p>
+<ul>
+  <li><b>Remplacer l'enregistreur</b> par un modèle actuel, avec un disque neuf de capacité adaptée.</li>
+  <li><b>Vérifier la compatibilité</b> des caméras existantes avec le nouvel enregistreur.</li>
+  <li><b>Remplacer progressivement</b> les caméras les plus anciennes ou les moins nettes.</li>
+</ul>
+
+<h2>Quand faut-il quand même recâbler ?</h2>
+<ul>
+  <li><b>Les câbles sont abîmés</b> : écrasés, rongés, oxydés à l'extérieur.</li>
+  <li><b>Les liaisons sont trop longues</b> pour la nouvelle technologie.</li>
+  <li><b>Vous déplacez ou ajoutez beaucoup de caméras.</b></li>
+  <li><b>Des travaux sont prévus</b> : c'est le meilleur moment pour poser un câblage neuf et propre.</li>
+</ul>
+
+<h2>Profiter du changement pour sécuriser</h2>
+<p>Un nouvel enregistreur est l'occasion de repartir sur de bonnes bases :</p>
+<ul>
+  <li><b>Des mots de passe neufs</b> et un compte par utilisateur.</li>
+  <li><b>Un accès à distance sécurisé</b>, sans ports ouverts sur la box. Voir notre article <a href="/conseils/cameras-a-distance">voir ses caméras à distance en sécurité</a>.</li>
+  <li><b>Une durée de conservation</b> réglée selon les règles en vigueur.</li>
+  <li><b>Un enregistreur rangé à l'abri</b>, dans une baie ou un local fermé.</li>
+</ul>
+
+<h2>Et les anciennes images ?</h2>
+<p>Avant de débrancher l'ancien appareil, exportez les séquences que vous devez garder, par exemple dans le cadre d'une plainte en cours. Les autres enregistrements n'ont pas vocation à être conservés au-delà de la durée prévue.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les règles officielles sur la conservation des images, consultez cnil.fr.</p>
+
+<h2>Faire le point sur votre installation</h2>
+<p>Nous reprenons les installations posées par d'autres : diagnostic des câbles et des caméras, remplacement de l'enregistreur, puis modernisation au rythme qui vous convient, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander un diagnostic</a>.</p>
+"""),
+    dict(
+        slug="securiser-bureau-cabinet",
+        title="Sécuriser un bureau ou un cabinet : accès, alarme et données",
+        short="Sécuriser un bureau",
+        seo="Sécuriser un bureau ou un cabinet : accès, alarme, caméras et données",
+        desc="Agence, cabinet d'avocat, d'expert-comptable ou d'architecte : comment protéger les locaux, le matériel et les dossiers des clients avec des accès, une alarme et un réseau sûrs.",
+        summary="Contrôle des accès, alarme, caméras sur les entrées et protection des dossiers : les priorités pour sécuriser un bureau ou un cabinet sans gêner le travail.",
+        date="2026-11-11",
+        related=["sauvegardes-3-2-1", "filmer-ses-salaries"],
+        body="""
+<p>Un bureau ou un cabinet n'attire pas les mêmes convoitises qu'une boutique, mais il a beaucoup à perdre : ordinateurs portables, écrans, matériel, et surtout les <b>dossiers des clients</b>. Agences, cabinets d'avocats, d'experts-comptables, d'architectes, de conseil : ces locaux sont souvent vides le soir et le week-end, fréquentés par du public en journée, et totalement dépendants de leur informatique. Voici les priorités pour les protéger.</p>
+
+<h2>1. Maîtriser qui entre</h2>
+<p>Dans un bureau, le premier risque vient souvent d'un accès trop facile : une porte qui reste ouverte, des clés jamais récupérées, un code connu de tout le monde.</p>
+<ul>
+  <li><b>Un badge ou un code par personne</b>, facile à retirer quand un salarié ou un stagiaire s'en va.</li>
+  <li><b>Un historique des entrées</b>, pour savoir qui est venu et quand, notamment en dehors des horaires.</li>
+  <li><b>Des zones à accès limité</b> : archives, local informatique, bureau de la direction.</li>
+  <li><b>Un accueil qui voit l'entrée</b>, pour que personne ne circule dans les bureaux sans avoir été reçu.</li>
+</ul>
+
+<h2>2. Une alarme adaptée aux horaires de bureau</h2>
+<ul>
+  <li><b>Des détecteurs d'ouverture</b> sur la porte d'entrée et les accès secondaires.</li>
+  <li><b>Des détecteurs de mouvement</b> dans les couloirs et les pièces sensibles.</li>
+  <li><b>Un armement simple</b>, par badge ou application, pour que le dernier qui part n'oublie pas.</li>
+  <li><b>Des alertes sur téléphone</b>, avec la possibilité de vérifier sur les caméras avant de réagir.</li>
+</ul>
+<p>Si plusieurs entreprises partagent le même étage ou les mêmes parties communes, il faut organiser qui arme quoi et à quel moment.</p>
+
+<h2>3. Des caméras sur les accès, pas sur les postes</h2>
+<p>Dans un bureau, les caméras servent surtout à surveiller <b>les entrées</b> : porte principale, accueil, accès au parking, local technique. Elles n'ont pas à filmer les postes de travail en continu, ce qui serait disproportionné et contraire aux règles. Les salariés doivent être informés, et les visiteurs aussi par un panneau. Notre article <a href="/conseils/filmer-ses-salaries">filmer ses salariés</a> rappelle ce qui est autorisé.</p>
+<p>Pour un cabinet qui reçoit des clients en rendez-vous confidentiel, les bureaux et salles de réunion ne doivent évidemment pas être filmés.</p>
+
+<h2>4. Protéger les dossiers et l'informatique</h2>
+<p>Pour beaucoup de cabinets, la vraie valeur n'est pas le matériel mais les données. Un ordinateur volé se remplace ; des dossiers perdus ou divulgués peuvent coûter bien plus.</p>
+<ul>
+  <li><b>Des sauvegardes automatiques</b>, sur place et hors des locaux, testées régulièrement. Voir notre article sur la <a href="/conseils/sauvegardes-3-2-1">règle des sauvegardes 3-2-1</a>.</li>
+  <li><b>Des ordinateurs portables chiffrés</b> et verrouillés par mot de passe, pour que leur vol ne donne pas accès aux dossiers.</li>
+  <li><b>Un Wi-Fi invités séparé</b> pour les clients en rendez-vous, sans accès au réseau du cabinet.</li>
+  <li><b>Un local technique fermé</b>, avec la baie, la box et les serveurs à l'abri.</li>
+  <li><b>Des comptes séparés</b> pour chaque collaborateur, avec seulement les accès nécessaires.</li>
+</ul>
+
+<h2>5. Les petites habitudes qui comptent</h2>
+<ol>
+  <li><b>Ne rien laisser en vue</b> près des fenêtres du rez-de-chaussée : portables, tablettes, dossiers.</li>
+  <li><b>Ranger les dossiers papier sensibles</b> dans des armoires fermées à clé.</li>
+  <li><b>Verrouiller son écran</b> dès qu'on quitte son poste.</li>
+  <li><b>Récupérer les badges et changer les codes</b> au départ de chaque collaborateur.</li>
+  <li><b>Faire le tour des fenêtres</b> avant de partir le soir.</li>
+</ol>
+
+<h2>Ce que disent les règles</h2>
+<p>Un cabinet qui détient des données personnelles de clients doit les protéger correctement : accès limités, sauvegardes, mesures adaptées à la sensibilité des informations. Certaines professions ont en plus leurs propres obligations de confidentialité.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Un seul interlocuteur pour la sécurité et l'informatique</h2>
+<p>Nous installons le contrôle des accès, l'alarme, les caméras sur les entrées et un réseau sécurisé avec sauvegardes, en organisant l'intervention en dehors de vos rendez-vous, partout dans le Sud. <a href="https://belaconnect.fr/bureaux">Voir notre page bureaux et entreprises</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="proteger-vitrine-devanture",
+        title="Protéger la vitrine et la devanture d'un commerce la nuit",
+        short="Vitrine et devanture",
+        seo="Protéger la vitrine et la devanture d'un commerce : caméras, alarme, éclairage",
+        desc="Bris de vitrine, rideau forcé, tags, enseigne abîmée : comment protéger la façade d'un commerce la nuit avec l'éclairage, une alarme et des caméras bien placées.",
+        summary="Vitrine brisée, rideau forcé, tags : les mesures qui dissuadent vraiment et celles qui permettent de réagir vite quand la façade est visée.",
+        date="2026-11-12",
+        related=["vision-de-nuit", "alarme-commerce"],
+        body="""
+<p>La vitrine est la première chose que voient vos clients, et souvent la première cible la nuit. Bris de vitre pour un vol éclair, rideau métallique forcé, tags, enseigne arrachée, dépôts devant la porte : la façade d'un commerce est exposée dès que la rue se vide. La bonne nouvelle, c'est qu'une protection bien pensée décourage la plupart de ces actes, et permet de réagir rapidement quand ils se produisent.</p>
+
+<h2>Comprendre ce qui vise la façade</h2>
+<ul>
+  <li><b>Le vol éclair</b> : la vitre est brisée, quelques articles exposés sont emportés en quelques secondes.</li>
+  <li><b>L'effraction par l'avant</b> : rideau forcé ou porte d'entrée fracturée pour accéder au magasin.</li>
+  <li><b>Les dégradations</b> : tags, vitrine rayée, enseigne ou store abîmés.</li>
+  <li><b>Les nuisances</b> : regroupements, dépôts sauvages devant l'entrée, salissures.</li>
+</ul>
+<p>Chacun de ces risques n'appelle pas tout à fait la même réponse, mais ils ont un point commun : ils se produisent quand personne ne regarde.</p>
+
+<h2>1. La lumière, premier outil de dissuasion</h2>
+<p>Une façade sombre est une façade où l'on se sent à l'abri des regards. Un <b>éclairage de vitrine programmé</b> une partie de la nuit, ou un <b>éclairage extérieur à détection</b> qui s'allume au moindre passage, change beaucoup la donne. La lumière aide aussi les caméras à produire des images nettes et en couleur. Notre article <a href="/conseils/vision-de-nuit">vision de nuit, infrarouge ou couleur</a> détaille ce point.</p>
+
+<h2>2. Ne rien laisser de tentant en vue</h2>
+<ul>
+  <li><b>Retirez de la vitrine</b> les articles de valeur faciles à emporter, ou remplacez-les par des modèles d'exposition.</li>
+  <li><b>Laissez la caisse vide et ouverte</b> une fois le magasin fermé.</li>
+  <li><b>Gardez une vue dégagée</b> vers l'intérieur : un magasin visible depuis la rue est moins discret pour un intrus.</li>
+</ul>
+
+<h2>3. Une alarme qui réagit avant l'intrusion</h2>
+<p>Pour la façade, l'enjeu est d'être alerté <b>dès que la vitrine est attaquée</b>, sans attendre qu'une personne soit à l'intérieur.</p>
+<ul>
+  <li><b>Un détecteur de bris de vitre ou de choc</b> sur la vitrine et la porte vitrée.</li>
+  <li><b>Un détecteur d'ouverture</b> sur la porte d'entrée et, si possible, sur le rideau métallique.</li>
+  <li><b>Une sirène extérieure avec flash</b>, visible depuis la rue, qui alerte le voisinage.</li>
+  <li><b>Une alerte immédiate</b> sur votre téléphone, avec la possibilité de vérifier les images.</li>
+</ul>
+<p>Pour la liste complète des détecteurs, voir notre article sur <a href="/conseils/alarme-commerce">l'alarme pour commerce</a>.</p>
+
+<h2>4. Des caméras qui filment la façade, sans filmer la rue</h2>
+<ul>
+  <li><b>Une caméra à l'intérieur, tournée vers la vitrine</b>, qui voit qui s'approche et ce qui se passe devant.</li>
+  <li><b>Une caméra extérieure</b> au-dessus de l'entrée, anti-vandalisme, placée hors de portée de main.</li>
+  <li><b>Un cadrage limité à votre façade</b> et à vos abords immédiats.</li>
+</ul>
+<p>Attention : filmer la voie publique est en principe réservé aux autorités. Une caméra privée doit se limiter à vos propres accès, et une autorisation préfectorale peut être nécessaire si elle filme un lieu ouvert au public. Un panneau doit informer de la présence des caméras.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>5. Entretenir la devanture</h2>
+<ul>
+  <li><b>Vérifiez régulièrement le rideau métallique</b> : serrure, lames, moteur. Un rideau qui ferme mal est une invitation.</li>
+  <li><b>Faites effacer rapidement les tags</b> : une façade dégradée a tendance à attirer d'autres dégradations.</li>
+  <li><b>Contrôlez que les caméras extérieures</b> sont propres, bien orientées et non masquées.</li>
+</ul>
+
+<h2>En cas d'attaque de la vitrine</h2>
+<ol>
+  <li><b>Vérifiez les images</b> dès l'alerte, depuis votre téléphone.</li>
+  <li><b>Appelez le 17</b> si une intrusion est en cours, et ne vous déplacez pas seul.</li>
+  <li><b>Exportez les enregistrements</b> avant qu'ils ne soient écrasés.</li>
+  <li><b>Déposez plainte</b> et prévenez votre assureur.</li>
+  <li><b>Faites sécuriser l'ouverture</b> au plus vite pour éviter un second passage.</li>
+</ol>
+
+<h2>Protéger votre façade avec nous</h2>
+<p>Lors de la visite gratuite, nous regardons votre façade de jour comme de nuit pour placer détecteurs, sirène et caméras là où ils sont vraiment utiles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="controle-acces-badge",
+        title="Badge, code ou application : choisir le contrôle d'accès de vos locaux",
+        short="Contrôle d'accès",
+        seo="Contrôle d'accès pour un commerce ou un bureau : badge, code ou application",
+        desc="Clés perdues, codes partagés, salariés partis : comment un contrôle d'accès par badge, code ou téléphone simplifie la sécurité d'un commerce, d'un bureau ou d'un entrepôt.",
+        summary="Badge, code ou téléphone : comparer les solutions de contrôle d'accès et savoir qui entre dans vos locaux, sans multiplier les clés.",
+        date="2026-11-13",
+        related=["securiser-bureau-cabinet", "alarme-commerce"],
+        body="""
+<p>Combien de clés de votre local sont en circulation ? Dans beaucoup de commerces et de bureaux, personne ne le sait vraiment : anciens salariés, femme de ménage, prestataire, double oublié dans un tiroir. Un contrôle d'accès remplace ces clés par des badges, des codes ou une application, et vous permet de savoir qui entre, quand, et de retirer un accès en un instant.</p>
+
+<h2>Le problème des clés</h2>
+<ul>
+  <li><b>Une clé perdue ou non rendue</b> oblige en principe à changer la serrure.</li>
+  <li><b>Impossible de savoir</b> qui a ouvert le local et à quelle heure.</li>
+  <li><b>Les doubles se multiplient</b> au fil des recrutements et des prestataires.</li>
+  <li><b>Un code d'alarme partagé</b> par toute l'équipe ne permet pas non plus de savoir qui a désarmé.</li>
+</ul>
+
+<h2>Les trois grandes solutions</h2>
+
+<h3>Le badge</h3>
+<p>Chaque personne reçoit un badge ou un porte-clés qu'elle présente devant un lecteur.</p>
+<ul>
+  <li><b>Simple à utiliser</b>, rapide, adapté aux passages fréquents.</li>
+  <li><b>Un badge perdu se désactive</b> immédiatement, sans changer de serrure.</li>
+  <li><b>Il peut se prêter</b> : c'est sa limite, comme pour une clé.</li>
+</ul>
+
+<h3>Le code</h3>
+<p>Un clavier à l'entrée, avec un code personnel par utilisateur.</p>
+<ul>
+  <li><b>Rien à transporter</b>, pratique pour les prestataires ponctuels.</li>
+  <li><b>Un code temporaire</b> peut être créé pour une intervention, puis supprimé.</li>
+  <li><b>Un code se transmet facilement</b> : il faut des codes individuels, jamais un code commun.</li>
+</ul>
+
+<h3>Le téléphone</h3>
+<p>L'accès se fait depuis une application ou en approchant son téléphone du lecteur.</p>
+<ul>
+  <li><b>Pas de badge à distribuer</b> : l'accès se donne ou se retire à distance.</li>
+  <li><b>Pratique pour plusieurs sites</b> ou des horaires variables.</li>
+  <li><b>Dépend du téléphone</b> : batterie, réseau, changement d'appareil. Il est prudent de garder un badge ou un code de secours.</li>
+</ul>
+<p>Dans la pratique, beaucoup d'installations <b>combinent</b> ces solutions : badge pour l'équipe, code temporaire pour les prestataires, application pour le gérant.</p>
+
+<h2>Ce que le contrôle d'accès apporte au quotidien</h2>
+<ul>
+  <li><b>Un accès par personne</b>, ajouté ou retiré en quelques instants.</li>
+  <li><b>Des plages horaires</b> : l'équipe du matin n'entre pas la nuit, l'agent d'entretien seulement à ses horaires.</li>
+  <li><b>Des zones différentes</b> : tout le monde accède à l'entrée, seuls certains à la réserve, au local technique ou aux archives.</li>
+  <li><b>Un historique</b> des entrées, utile en cas d'incident.</li>
+</ul>
+
+<h2>Contrôle d'accès, alarme et caméras ensemble</h2>
+<p>Le contrôle d'accès prend toute sa valeur quand il est relié au reste de la sécurité :</p>
+<ul>
+  <li><b>L'alarme se désarme avec le badge</b> du premier arrivé et se réarme au départ du dernier.</li>
+  <li><b>Une caméra à l'entrée</b> permet de vérifier qui a réellement utilisé un badge.</li>
+  <li><b>Une alerte sur votre téléphone</b> signale une entrée en dehors des horaires prévus.</li>
+</ul>
+<p>Pour l'alarme elle-même, voir notre article sur les <a href="/conseils/alarme-commerce">détecteurs indispensables d'une alarme de commerce</a>.</p>
+
+<h2>Les bonnes pratiques</h2>
+<ol>
+  <li><b>Un accès individuel pour chaque personne</b>, jamais de badge ou de code partagé.</li>
+  <li><b>Retirer l'accès le jour même</b> du départ d'un salarié ou de la fin d'une mission.</li>
+  <li><b>Prévoir une solution de secours</b> en cas de panne de courant ou de lecteur.</li>
+  <li><b>Faire le point régulièrement</b> sur la liste des accès actifs.</li>
+  <li><b>Respecter les issues de secours</b> : une porte de sortie doit toujours pouvoir s'ouvrir de l'intérieur.</li>
+</ol>
+
+<h2>Et les données des salariés ?</h2>
+<p>Un système de contrôle d'accès enregistre des informations sur les passages des personnes. Les salariés doivent en être informés, les données ne doivent servir qu'à la sécurité des locaux et ne pas être conservées plus longtemps que nécessaire. L'utilisation de la biométrie, comme l'empreinte digitale, est très encadrée.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr.</p>
+
+<h2>Mettre en place votre contrôle d'accès</h2>
+<p>Nous installons des contrôles d'accès par badge, code ou téléphone, reliés à votre alarme et à vos caméras, pour les commerces, bureaux et entrepôts, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="camera-factice",
+        title="Caméra factice : bonne ou mauvaise idée pour un commerce ?",
+        short="Caméra factice",
+        seo="Caméra factice dans un commerce : est-ce vraiment dissuasif ?",
+        desc="Une fausse caméra peut-elle protéger une boutique ? Ce qu'elle dissuade, ses limites, les situations où elle se retourne contre vous, et les alternatives simples.",
+        summary="Une fausse caméra coûte peu et dissuade un peu, mais elle ne voit rien le jour où il se passe quelque chose. Ce qu'il faut savoir avant d'en poser une.",
+        date="2026-11-14",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>Quand on ouvre un commerce, l'idée d'installer une ou deux caméras factices est tentante : elles ne demandent ni câble, ni enregistreur, ni réglage. Leur seul rôle est de faire croire que le lieu est surveillé. Cela peut fonctionner dans certains cas, mais leurs limites sont importantes, et il vaut mieux les connaître avant de compter dessus.</p>
+
+<h2>Ce qu'une caméra factice peut faire</h2>
+<ul>
+  <li><b>Dissuader les gestes opportunistes</b> : une personne qui hésite à glisser un article dans sa poche peut y renoncer en voyant une caméra.</li>
+  <li><b>Rassurer en apparence</b> : clients et salariés peuvent avoir l'impression d'un lieu protégé.</li>
+  <li><b>Compléter un système réel</b> dans une zone secondaire, à côté de vraies caméras.</li>
+</ul>
+
+<h2>Ses limites</h2>
+<ul>
+  <li><b>Elle ne voit rien</b> : le jour d'un vol, d'une agression ou d'un litige, il n'y a aucune image pour comprendre ce qui s'est passé, porter plainte ou se défendre.</li>
+  <li><b>Elle ne prévient personne</b> : pas d'alerte sur votre téléphone, pas de vérification possible à distance.</li>
+  <li><b>Elle se repère souvent</b> : absence de câble, voyant qui clignote de façon trop régulière, boîtier en plastique léger, aucune lumière infrarouge la nuit. Les personnes habituées aux vols le savent.</li>
+  <li><b>Elle perd son effet</b> une fois que l'on sait qu'elle est fausse, et ce genre d'information circule vite.</li>
+  <li><b>Elle ne remplace pas</b> les protections qu'un contrat d'assurance peut exiger.</li>
+</ul>
+
+<h2>Quand elle peut se retourner contre vous</h2>
+<p>Le vrai risque d'une caméra factice, c'est le <b>faux sentiment de sécurité</b>. On se croit protégé, on reporte l'installation d'une vraie protection, et le jour où il se passe quelque chose, il n'y a rien.</p>
+<p>Autre situation délicate : un client ou un salarié victime d'un incident peut demander les images. S'il apprend qu'il n'y en a jamais eu, la confiance en pâtit. Dans un local où travaillent des salariés, une caméra factice peut aussi créer un malaise si elle est perçue comme un moyen de surveillance.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles sur la vidéosurveillance, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Les alternatives simples</h2>
+<p>Entre la caméra factice et une installation complète, il existe des solutions intermédiaires :</p>
+<ul>
+  <li><b>Une ou deux vraies caméras bien placées</b> : une à l'entrée pour identifier les visages, une sur la caisse. C'est souvent le meilleur rapport entre protection et simplicité.</li>
+  <li><b>Un enregistrement local</b> sur un petit enregistreur rangé à l'abri, consultable sur votre téléphone.</li>
+  <li><b>Un écran visible à l'entrée</b> qui affiche les images en direct : rien n'est plus dissuasif que de se voir filmé.</li>
+  <li><b>Une installation évolutive</b> : on commence avec l'essentiel et on ajoute des caméras plus tard, sur la même base.</li>
+</ul>
+<p>Pour savoir combien de caméras il faut vraiment, lisez notre article <a href="/conseils/combien-de-cameras">combien de caméras pour un commerce</a>.</p>
+
+<h2>Si vous gardez une caméra factice</h2>
+<p>Si vous choisissez malgré tout d'en installer une, quelques précautions limitent ses défauts :</p>
+<ol>
+  <li><b>L'utiliser en complément</b> de vraies caméras, jamais comme seule protection.</li>
+  <li><b>La placer hors de portée</b>, pour qu'on ne puisse pas vérifier facilement qu'elle est vide.</li>
+  <li><b>Choisir un modèle crédible</b>, sans voyant rouge qui clignote en permanence.</li>
+  <li><b>Ne pas compter dessus</b> pour la caisse, la réserve ou l'entrée, qui méritent de vraies images.</li>
+</ol>
+
+<h2>Ce qu'une vraie caméra change</h2>
+<p>Une vraie caméra dissuade autant qu'une fausse, mais elle apporte en plus ce qui compte le jour d'un problème : des images nettes, de jour comme de nuit, consultables depuis votre téléphone, et une alerte quand quelque chose bouge en dehors des heures d'ouverture. C'est ce qui permet de réagir, de porter plainte et de régler un litige.</p>
+
+<h2>Passer à une vraie protection</h2>
+<p>Lors de la visite gratuite, nous regardons avec vous où une vraie caméra est indispensable et où elle ne l'est pas, pour une installation juste suffisante, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="bouton-alerte-agression",
+        title="Bouton d'alerte : donner l'alarme discrètement en cas d'agression",
+        short="Bouton d'alerte",
+        seo="Bouton d'alerte agression pour commerce : fonctionnement et bonnes pratiques",
+        desc="Fixe sous le comptoir ou porté sur soi, le bouton d'alerte permet de prévenir sans geste visible en cas d'agression. Fonctionnement, placement et bons réflexes.",
+        summary="Sous le comptoir ou sur soi, un bouton d'alerte permet de prévenir sans se mettre en danger. Comment il fonctionne et comment bien l'utiliser.",
+        date="2026-11-15",
+        related=["proteger-la-caisse", "alarme-commerce"],
+        body="""
+<p>Une alarme protège un commerce quand il est fermé. Mais pendant les heures d'ouverture, le risque est différent : un client qui devient menaçant, une tentative de vol à la caisse, une personne seule en boutique tard le soir. Dans ces moments-là, il faut pouvoir prévenir quelqu'un <b>sans geste visible</b> et sans aggraver la situation. C'est le rôle du bouton d'alerte.</p>
+
+<h2>Comment fonctionne un bouton d'alerte</h2>
+<p>Le bouton d'alerte, parfois appelé bouton panique, est relié au système d'alarme. Une simple pression déclenche une alerte :</p>
+<ul>
+  <li><b>Silencieuse</b> : rien ne se passe dans le magasin, mais une notification part vers les téléphones choisis.</li>
+  <li><b>Ou sonore</b>, si vous préférez que la sirène se déclenche pour faire fuir l'agresseur.</li>
+</ul>
+<p>Dans la plupart des situations d'agression, l'alerte silencieuse est préférable : elle évite de surprendre ou d'énerver la personne menaçante.</p>
+<p>L'alerte peut être envoyée à un responsable, à un associé, à un commerce voisin de confiance, ou à un service de télésurveillance si vous en avez un, qui pourra alerter les forces de l'ordre selon les termes de votre contrat.</p>
+
+<h2>Fixe ou portatif ?</h2>
+<h3>Le bouton fixe</h3>
+<ul>
+  <li><b>Placé sous le comptoir</b> ou près de la caisse, à portée de main mais hors de vue.</li>
+  <li><b>Toujours au même endroit</b> : on sait exactement où il se trouve, même sous le stress.</li>
+  <li><b>Idéal pour les postes fixes</b> : caisse, accueil, comptoir de pharmacie.</li>
+</ul>
+<h3>Le bouton portatif</h3>
+<ul>
+  <li><b>Porté sur soi</b> : en pendentif, en bracelet, à la ceinture ou dans la poche.</li>
+  <li><b>Utilisable partout</b> dans le magasin, en réserve, en salle, à la fermeture du rideau.</li>
+  <li><b>Adapté au travail seul</b> et aux personnes qui se déplacent beaucoup.</li>
+</ul>
+<p>Les deux se combinent très bien : un bouton fixe à la caisse, et un bouton portatif pour la personne qui ferme le soir.</p>
+
+<h2>Bien le placer</h2>
+<ol>
+  <li><b>Hors de la vue des clients</b>, pour que le geste ne soit pas remarqué.</li>
+  <li><b>Accessible d'une seule main</b>, sans se pencher ni se déplacer.</li>
+  <li><b>Protégé contre les déclenchements accidentels</b> : un capot ou une double pression évitent les fausses alertes.</li>
+  <li><b>Couvert par une caméra</b> qui filme la zone, pour que la personne qui reçoit l'alerte puisse vérifier ce qui se passe.</li>
+</ol>
+
+<h2>L'association avec les caméras</h2>
+<p>Un bouton d'alerte seul dit « il y a un problème ». Associé aux caméras, il permet à la personne qui reçoit l'alerte de <b>voir immédiatement la scène</b> sur son téléphone, de décider s'il faut appeler le 17 et de décrire précisément la situation aux forces de l'ordre. Les images enregistrées serviront ensuite pour la plainte. Voir aussi notre article sur la <a href="/conseils/proteger-la-caisse">protection de la caisse</a>.</p>
+
+<h2>Former l'équipe</h2>
+<p>Un bouton d'alerte n'est utile que si tout le monde sait s'en servir :</p>
+<ul>
+  <li><b>Montrez où il se trouve</b> à chaque nouveau salarié, dès son premier jour.</li>
+  <li><b>Expliquez quand l'utiliser</b> : menace, agression, situation qui dégénère.</li>
+  <li><b>Rappelez la priorité absolue</b> : ne jamais résister, ne jamais poursuivre, sa propre sécurité passe avant tout.</li>
+  <li><b>Testez-le régulièrement</b>, en prévenant à l'avance les personnes qui reçoivent l'alerte.</li>
+</ul>
+
+<h2>Qui reçoit l'alerte ?</h2>
+<p>C'est la question la plus importante. L'alerte doit arriver à des personnes <b>joignables pendant toutes les heures d'ouverture</b>, capables de réagir rapidement et de prévenir les forces de l'ordre. Prévoyez plusieurs destinataires, pour qu'un téléphone éteint ou en silencieux ne bloque pas tout.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. En cas de danger, composez le 17 ou le 112. Pour les démarches après une agression, consultez service-public.fr.</p>
+
+<h2>Installer un bouton d'alerte</h2>
+<p>Nous ajoutons des boutons d'alerte fixes ou portatifs à votre alarme, reliés à votre téléphone et à vos caméras, et nous vous aidons à choisir leur emplacement, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="videosurveillance-parking",
+        title="Vidéosurveillance d'un parking : bien filmer les véhicules et les accès",
+        short="Caméras de parking",
+        seo="Vidéosurveillance d'un parking privé : emplacement des caméras et règles",
+        desc="Parking de commerce, de bureaux ou de résidence : où placer les caméras, comment voir de nuit, identifier un véhicule et rester dans les règles de la vidéosurveillance.",
+        summary="Entrée, allées, recoins, éclairage : comment équiper un parking privé pour voir ce qui s'y passe de jour comme de nuit, sans filmer la rue.",
+        date="2026-11-16",
+        related=["vision-de-nuit", "videosurveillance-copropriete"],
+        body="""
+<p>Un parking est souvent l'endroit le plus exposé d'un site : grand, peu fréquenté une partie de la journée, mal éclairé la nuit. Rayures, rétroviseurs cassés, vols dans les véhicules, dépôts sauvages, intrusions par l'accès voitures : les problèmes sont fréquents, que ce soit sur le parking d'un commerce, de bureaux ou d'une résidence. Bien filmé, un parking devient beaucoup moins tentant, et les incidents beaucoup plus faciles à élucider.</p>
+
+<h2>Ce qu'on attend des caméras d'un parking</h2>
+<ul>
+  <li><b>Dissuader</b> : des caméras visibles aux accès découragent une partie des passages à l'acte.</li>
+  <li><b>Voir qui entre et qui sort</b>, à pied comme en véhicule.</li>
+  <li><b>Comprendre un incident</b> : à quelle heure, quel véhicule, par où.</li>
+  <li><b>Être alerté</b> d'un mouvement en dehors des horaires habituels.</li>
+</ul>
+
+<h2>Les emplacements prioritaires</h2>
+<h3>L'entrée et la sortie</h3>
+<p>C'est la caméra la plus importante. Tout véhicule et tout piéton passent par là. Placée dans l'axe de l'accès, à une hauteur raisonnable, elle permet de distinguer la silhouette d'un véhicule, sa couleur et souvent sa plaque, ainsi que le visage d'un piéton.</p>
+
+<h3>Les allées et vues d'ensemble</h3>
+<p>Une ou plusieurs caméras grand angle, placées en hauteur, donnent une vue d'ensemble des allées. Elles ne permettent pas toujours d'identifier une personne, mais elles montrent ce qui se passe et où.</p>
+
+<h3>Les recoins et accès piétons</h3>
+<p>Escaliers, portes de service, local poubelles, accès depuis le bâtiment : ce sont les zones où l'on se cache ou par où l'on entre discrètement.</p>
+
+<h2>Voir la nuit</h2>
+<p>La plupart des incidents de parking se produisent la nuit. Deux solutions se complètent :</p>
+<ul>
+  <li><b>L'éclairage</b> : un parking éclairé, avec des détecteurs de présence, est déjà beaucoup moins attractif, et permet aux caméras de filmer en couleur.</li>
+  <li><b>La vision de nuit</b> : des caméras à longue portée infrarouge pour les zones sans lumière, ou des caméras couleur de nuit là où l'éclairage existe.</li>
+</ul>
+<p>Attention aux phares : une caméra placée face aux véhicules qui entrent peut être éblouie au moment exact où elle doit voir la plaque. L'angle se choisit avec soin. Notre article <a href="/conseils/vision-de-nuit">vision de nuit, infrarouge ou couleur</a> détaille ces réglages.</p>
+
+<h2>Identifier un véhicule</h2>
+<p>Lire une plaque sur des images n'est pas aussi simple qu'on l'imagine. Il faut une caméra cadrée assez serré sur la zone de passage, une bonne résolution, et un réglage qui limite le flou quand le véhicule roule. Une caméra grand angle qui couvre tout le parking ne suffit pas pour cela.</p>
+<p>La lecture automatique des plaques, qui reconnaît et enregistre les numéros, est une autre affaire : elle est très encadrée par la réglementation et ne s'improvise pas.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Filmer uniquement votre parking</b>, pas la voie publique ni les propriétés voisines.</li>
+  <li><b>Informer par des panneaux</b> visibles à l'entrée du parking.</li>
+  <li><b>En copropriété</b>, l'installation dans les parties communes doit être votée en assemblée générale. Voir notre article sur la <a href="/conseils/videosurveillance-copropriete">vidéosurveillance en copropriété</a>.</li>
+  <li><b>Pour un parking ouvert au public</b>, une autorisation préfectorale peut être nécessaire.</li>
+  <li><b>Limiter la durée de conservation</b> et l'accès aux images.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Le matériel adapté à l'extérieur</h2>
+<ul>
+  <li><b>Des caméras étanches</b> qui résistent à la pluie, au soleil et aux embruns près du littoral.</li>
+  <li><b>Des boîtiers anti-vandalisme</b>, placés hors de portée de main.</li>
+  <li><b>Des câbles protégés</b> en gaine, pour éviter qu'on puisse les couper facilement.</li>
+  <li><b>Un enregistreur à l'intérieur</b>, dans un local fermé, jamais dans le parking lui-même.</li>
+</ul>
+
+<h2>En parking souterrain</h2>
+<p>Les parkings souterrains posent leurs propres questions : pas de réseau mobile, éclairage permanent ou non, longues distances de câble, humidité. Ils demandent une étude sur place pour placer les caméras aux bons endroits et faire remonter les images jusqu'à l'enregistreur.</p>
+
+<h2>Équiper votre parking</h2>
+<p>Lors de la visite gratuite, nous faisons le tour du parking, de jour comme de nuit si besoin, pour placer les caméras aux accès et dans les zones sensibles, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="securite-hotel",
+        title="Sécurité d'un hôtel ou de chambres d'hôtes : caméras, accès et Wi-Fi",
+        short="Sécurité d'un hôtel",
+        seo="Sécurité d'un hôtel ou de chambres d'hôtes : vidéosurveillance, accès, Wi-Fi",
+        desc="Accueil, entrées, parking, accès de nuit, Wi-Fi des clients : comment sécuriser un petit hôtel, une résidence de tourisme ou des chambres d'hôtes en respectant la vie privée.",
+        summary="Accueil, entrées, parking, arrivées tardives et Wi-Fi des clients : les points à protéger dans un hôtel ou des chambres d'hôtes, sans gêner les séjours.",
+        date="2026-11-17",
+        related=["wifi-clients-separe", "controle-acces-badge"],
+        body="""
+<p>Un hôtel, une résidence de tourisme ou des chambres d'hôtes accueillent chaque jour des personnes qui ne se connaissent pas, souvent à toute heure. L'accueil n'est pas toujours tenu la nuit, les arrivées tardives sont fréquentes, et les clients attendent à la fois de la sécurité et de la discrétion. Protéger un établissement d'hébergement demande donc de trouver le bon équilibre entre vigilance et respect de la vie privée.</p>
+
+<h2>Les risques propres à l'hébergement</h2>
+<ul>
+  <li><b>Les intrusions</b> de personnes extérieures qui profitent des allées et venues.</li>
+  <li><b>Les vols</b> à l'accueil, dans les espaces communs, sur le parking ou dans les véhicules des clients.</li>
+  <li><b>Les litiges</b> : dégradations, départ sans payer, contestation d'un incident.</li>
+  <li><b>Les accès mal maîtrisés</b> : clés non rendues, codes qui circulent d'un client à l'autre.</li>
+  <li><b>Le Wi-Fi</b> partagé entre les clients et la gestion de l'établissement.</li>
+</ul>
+
+<h2>Où placer les caméras</h2>
+<ul>
+  <li><b>L'entrée principale</b> et les accès secondaires, pour voir qui entre et qui sort, de jour comme de nuit.</li>
+  <li><b>L'accueil et la caisse</b>, pour les encaissements et les échanges au comptoir.</li>
+  <li><b>Le parking</b> et les abords, souvent la zone la plus exposée la nuit.</li>
+  <li><b>Les locaux techniques et réserves</b> : linge, matériel, bagagerie.</li>
+</ul>
+<p>Les chambres ne doivent évidemment jamais être filmées. Les couloirs qui desservent les chambres, les espaces de détente et les salles de petit-déjeuner demandent beaucoup de prudence : la surveillance doit rester justifiée et proportionnée, sans suivre les clients dans leur intimité.</p>
+<p>Des panneaux doivent informer les clients et le personnel de la présence des caméras, et une autorisation préfectorale peut être nécessaire pour les espaces ouverts au public.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Gérer les arrivées tardives et les accès</h2>
+<p>Quand l'accueil n'est pas tenu toute la nuit, la question des accès devient centrale.</p>
+<ul>
+  <li><b>Un code ou un badge temporaire</b> par séjour, actif seulement pendant la durée de la réservation.</li>
+  <li><b>Un accès qui expire tout seul</b> au départ du client, sans clé à récupérer.</li>
+  <li><b>Un historique des entrées</b>, utile en cas de litige ou d'incident.</li>
+  <li><b>Une caméra à l'entrée</b> qui permet de vérifier une arrivée à distance.</li>
+</ul>
+<p>Le principe est détaillé dans notre article <a href="/conseils/controle-acces-badge">badge, code ou application</a>.</p>
+
+<h2>Le Wi-Fi des clients</h2>
+<p>Le Wi-Fi fait partie des services les plus attendus. Mais il ne doit jamais partager le réseau de la gestion de l'établissement : logiciel de réservation, caisse, ordinateurs, caméras.</p>
+<ul>
+  <li><b>Un réseau invités séparé</b>, isolé du réseau professionnel.</li>
+  <li><b>Une bonne couverture</b> dans les chambres et les espaces communs, avec plusieurs bornes si nécessaire.</li>
+  <li><b>Une limite de débit</b> par appareil, pour un service équitable.</li>
+</ul>
+<p>Voir notre article <a href="/conseils/wifi-clients-separe">pourquoi séparer le Wi-Fi des clients</a>. Un professionnel qui fournit un accès internet au public peut aussi avoir des obligations particulières : renseignez-vous avant la mise en service.</p>
+
+<h2>Une alarme adaptée</h2>
+<p>Dans un établissement occupé jour et nuit, l'alarme ne protège pas l'ensemble du bâtiment, mais elle reste utile pour :</p>
+<ul>
+  <li><b>Les zones fermées la nuit</b> : bureau, réserve, local technique, salle de restaurant.</li>
+  <li><b>Les périodes de fermeture</b> saisonnière, quand le bâtiment reste vide plusieurs semaines.</li>
+  <li><b>Un bouton d'alerte</b> à l'accueil pour le personnel de nuit.</li>
+</ul>
+
+<h2>Pendant la fermeture saisonnière</h2>
+<p>Un établissement fermé hors saison est exposé longtemps. C'est le moment de vérifier que l'alarme couvre tout le bâtiment, que les caméras et l'accès à distance fonctionnent, et que les alertes arrivent bien sur votre téléphone. Notre article <a href="/conseils/commerce-avant-les-conges">fermeture pour congés</a> donne la liste des vérifications.</p>
+
+<h2>Équiper votre établissement</h2>
+<p>Nous installons caméras, contrôle des accès, alarme et Wi-Fi clients séparé pour les hôtels, résidences et chambres d'hôtes, en organisant l'intervention pour ne pas gêner vos clients, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="entretien-videosurveillance-alarme",
+        title="Entretenir sa vidéosurveillance et son alarme : ce qu'il faut vérifier",
+        short="Entretien du système",
+        seo="Entretien d'une installation de vidéosurveillance et d'alarme : la check-list",
+        desc="Caméras encrassées, disque plein, piles faibles, mises à jour oubliées : les vérifications régulières qui gardent une installation de sécurité fiable le jour où vous en avez besoin.",
+        summary="Une installation de sécurité qui n'est jamais vérifiée finit par lâcher au mauvais moment. La liste des contrôles à faire, et à quelle fréquence.",
+        date="2026-11-18",
+        related=["cameras-ne-fonctionnent-plus", "commerce-avant-les-conges"],
+        body="""
+<p>Une installation de vidéosurveillance ou d'alarme ne s'use pas de façon visible. Elle fonctionne, jour après jour, jusqu'au moment où l'on a besoin d'une image ou d'une alerte et où l'on découvre que la caméra est voilée, que le disque est plein depuis des semaines ou qu'un détecteur n'a plus de pile. Quelques vérifications régulières suffisent pour éviter ces mauvaises surprises.</p>
+
+<h2>Pourquoi un système de sécurité se dégrade</h2>
+<ul>
+  <li><b>La poussière, le pollen, le sel et les toiles d'araignée</b> voilent progressivement les objectifs, surtout à l'extérieur et près du littoral.</li>
+  <li><b>Les disques durs</b> des enregistreurs s'usent avec l'enregistrement permanent.</li>
+  <li><b>Les piles</b> des détecteurs sans fil s'épuisent.</li>
+  <li><b>Les angles bougent</b> : une caméra heurtée, un support qui se desserre, un aménagement qui masque la vue.</li>
+  <li><b>Les logiciels vieillissent</b> : application qui ne se connecte plus, failles de sécurité non corrigées.</li>
+  <li><b>Les accès s'accumulent</b> : anciens salariés toujours enregistrés, codes partagés.</li>
+</ul>
+
+<h2>Chaque mois : quelques minutes suffisent</h2>
+<ol>
+  <li><b>Regardez chaque caméra</b> sur votre téléphone, de jour puis de nuit : l'image est-elle nette, bien cadrée, sans obstacle ?</li>
+  <li><b>Vérifiez l'enregistrement</b> : remontez dans l'historique pour vous assurer que les jours précédents sont bien enregistrés.</li>
+  <li><b>Consultez les alertes de l'application</b> : piles faibles, détecteur hors ligne, erreur de disque.</li>
+  <li><b>Testez une alerte</b> en armant l'alarme et en ouvrant une porte, en prévenant les personnes qui reçoivent les notifications.</li>
+</ol>
+
+<h2>Chaque trimestre : un contrôle plus complet</h2>
+<ul>
+  <li><b>Nettoyer les objectifs</b> des caméras extérieures avec un chiffon doux.</li>
+  <li><b>Retirer les toiles d'araignée</b> autour des caméras : attirées par la chaleur des LED infrarouges, elles brouillent les images de nuit et déclenchent de fausses détections.</li>
+  <li><b>Faire le point sur les accès</b> : retirer les comptes, badges et codes des personnes qui n'en ont plus besoin.</li>
+  <li><b>Vérifier la date et l'heure</b> de l'enregistreur, indispensables pour que les images servent de preuve.</li>
+  <li><b>Exporter une séquence test</b> sur une clé, pour savoir le faire le jour où ce sera nécessaire.</li>
+</ul>
+
+<h2>Chaque année : une révision de fond</h2>
+<ul>
+  <li><b>Contrôler l'état du disque dur</b> et prévoir son remplacement avant la panne.</li>
+  <li><b>Appliquer les mises à jour</b> de l'enregistreur, des caméras et de l'application.</li>
+  <li><b>Remplacer les piles</b> des détecteurs sans fil, même si elles ne sont pas encore signalées faibles.</li>
+  <li><b>Tester la sirène</b> et la batterie de secours de la centrale.</li>
+  <li><b>Vérifier les fixations et les câbles</b> exposés aux intempéries.</li>
+  <li><b>Revoir l'installation</b> par rapport à l'activité : nouvel aménagement, nouvelle zone à couvrir, nouvel accès.</li>
+</ul>
+
+<h2>Garder une trace</h2>
+<p>Notez chaque contrôle et chaque intervention dans un petit carnet ou un tableau : date, ce qui a été vérifié, ce qui a été changé. En cas de sinistre, ce suivi montre que l'installation était entretenue, et il aide à repérer un appareil qui tombe en panne trop souvent.</p>
+
+<h2>Les signes qui doivent alerter</h2>
+<ul>
+  <li><b>Une caméra qui affiche « pas de signal »</b>, même par intermittence.</li>
+  <li><b>Des trous dans l'historique</b> d'enregistrement.</li>
+  <li><b>Des fausses alertes répétées</b> : détecteur mal placé, défaillant ou sale.</li>
+  <li><b>Une application qui ne se connecte plus</b> à distance.</li>
+  <li><b>Un enregistreur qui chauffe ou redémarre</b> tout seul.</li>
+</ul>
+<p>Pour diagnostiquer ces problèmes, voir notre article <a href="/conseils/cameras-ne-fonctionnent-plus">vos caméras ne fonctionnent plus</a>.</p>
+
+<h2>Le faire soi-même ou le confier ?</h2>
+<p>Les vérifications mensuelles sont simples et peuvent être faites par vous ou un salarié. Les contrôles plus techniques, comme l'état du disque, les mises à jour, la batterie de la centrale ou le réglage des détecteurs, sont plus confortables à confier à un professionnel, dans le cadre d'un contrat d'entretien ou d'une visite ponctuelle. Votre contrat d'assurance peut aussi prévoir un entretien régulier des protections.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les règles sur la conservation des images, consultez cnil.fr.</p>
+
+<h2>Confier l'entretien de votre installation</h2>
+<p>Nous assurons l'entretien et le dépannage des caméras, alarmes et réseaux, y compris pour les installations posées par d'autres, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=maintenance">demander une intervention</a>.</p>
+"""),
+    dict(
+        slug="fermeture-du-soir",
+        title="Fermer son commerce le soir en sécurité : la routine à adopter",
+        short="Fermeture du soir",
+        seo="Fermeture d'un commerce le soir : les bons réflexes de sécurité",
+        desc="Dernier client, caisse, rideau, alarme : une routine simple pour fermer un commerce le soir sans prendre de risque, que l'on soit seul ou en équipe.",
+        summary="La fermeture est un moment sensible : caisse pleine, rue qui se vide, personne seule. Une routine simple pour fermer chaque soir en sécurité.",
+        date="2026-11-19",
+        related=["bouton-alerte-agression", "proteger-la-caisse"],
+        body="""
+<p>La fermeture du soir est l'un des moments les plus sensibles de la journée d'un commerçant. La caisse contient la recette du jour, la rue se vide, il fait souvent nuit, et il arrive qu'une seule personne soit encore dans le magasin. C'est aussi un moment de fatigue, où l'on a envie d'en finir vite. Une routine simple, toujours la même, réduit nettement les risques.</p>
+
+<h2>Avant l'heure de fermeture</h2>
+<ul>
+  <li><b>Faites un premier retrait de caisse</b> dans l'après-midi, pour ne pas garder toute la recette jusqu'au soir.</li>
+  <li><b>Rangez la réserve</b> et fermez les accès qui ne servent plus : porte de service, cour, sous-sol.</li>
+  <li><b>Vérifiez que les caméras fonctionnent</b> d'un coup d'œil sur l'écran ou le téléphone.</li>
+  <li><b>Si possible, évitez de fermer seul</b>, surtout les jours de forte recette.</li>
+</ul>
+
+<h2>Au moment de fermer</h2>
+<ol>
+  <li><b>Faites le tour du magasin</b> avant de baisser le rideau : cabines d'essayage, toilettes, réserve. Personne ne doit rester caché à l'intérieur.</li>
+  <li><b>Baissez le rideau ou fermez la porte</b> avant de compter la caisse, jamais l'inverse.</li>
+  <li><b>Comptez la caisse hors de la vue</b> depuis la rue, dans le bureau ou la réserve.</li>
+  <li><b>Rangez les espèces dans le coffre</b> ou préparez le dépôt, sans le laisser en évidence.</li>
+  <li><b>Laissez le tiroir-caisse vide et ouvert</b> : c'est le signe qu'il n'y a rien à prendre.</li>
+  <li><b>Éteignez et rangez</b> ce qui a de la valeur et se voit depuis la vitrine.</li>
+</ol>
+
+<h2>En sortant</h2>
+<ul>
+  <li><b>Regardez dehors avant de sortir</b>, grâce à une caméra qui filme l'entrée ou une vitre dégagée. Si quelque chose vous paraît anormal, attendez ou appelez quelqu'un.</li>
+  <li><b>Armez l'alarme</b> et vérifiez dans l'application qu'elle est bien armée.</li>
+  <li><b>Ne faites pas toujours le même trajet</b> ni à la même heure pour déposer la recette.</li>
+  <li><b>Gardez votre téléphone à la main</b>, pas au fond du sac.</li>
+</ul>
+
+<h2>Quand on ferme seul</h2>
+<p>Beaucoup de commerçants ferment seuls, chaque soir. Quelques équipements rendent ce moment plus sûr :</p>
+<ul>
+  <li><b>Un bouton d'alerte portatif</b>, pour prévenir discrètement en cas de problème. Voir notre article sur le <a href="/conseils/bouton-alerte-agression">bouton d'alerte</a>.</li>
+  <li><b>Une caméra qui filme l'extérieur de l'entrée</b>, pour vérifier les abords avant d'ouvrir la porte.</li>
+  <li><b>Un éclairage extérieur à détection</b> devant la porte et le rideau.</li>
+  <li><b>Une personne prévenue</b> de l'heure à laquelle vous fermez, qui s'inquiète si vous ne donnez pas de nouvelles.</li>
+</ul>
+
+<h2>Le rôle des équipements</h2>
+<p>La routine compte plus que le matériel, mais le matériel la rend plus facile :</p>
+<ul>
+  <li><b>Une alarme simple à armer</b>, par badge ou application, évite de l'oublier quand on est pressé.</li>
+  <li><b>Une notification</b> sur votre téléphone si l'alarme n'a pas été armée à l'heure habituelle.</li>
+  <li><b>Des caméras sur la caisse et l'entrée</b>, qui enregistrent ce moment sensible.</li>
+  <li><b>Un historique</b> qui montre qui a fermé et à quelle heure, utile quand plusieurs salariés se relaient.</li>
+</ul>
+<p>Pour aller plus loin sur la caisse, voir notre article <a href="/conseils/proteger-la-caisse">protéger la caisse d'un commerce</a>.</p>
+
+<h2>Former l'équipe</h2>
+<p>Si plusieurs personnes ferment le magasin selon les jours, écrivez la routine sur une fiche simple, affichée dans la réserve. Chacun suit les mêmes étapes, dans le même ordre. En cas de doute ou de situation inhabituelle, la consigne est toujours la même : ne prendre aucun risque, et appeler le 17 en cas de danger.</p>
+
+<h2>Après un incident</h2>
+<p>Si quelque chose s'est passé à la fermeture, notez tout de suite ce dont vous vous souvenez, conservez les images des caméras avant qu'elles ne soient effacées, et déposez plainte.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. En cas de danger, composez le 17 ou le 112. Pour les démarches après un vol ou une agression, consultez service-public.fr.</p>
+
+<h2>Équiper votre commerce pour la fermeture</h2>
+<p>Nous installons des caméras sur l'entrée et la caisse, des alarmes simples à armer et des boutons d'alerte, pour que la fermeture du soir se fasse en sécurité, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="coupure-courant-internet",
+        title="Coupure de courant ou d'internet : votre sécurité tient-elle le coup ?",
+        short="Coupure de courant",
+        seo="Coupure de courant ou d'internet : garder alarme et caméras en marche",
+        desc="Batterie de secours, carte SIM, onduleur, enregistrement local : comment éviter qu'une simple coupure de courant ou d'internet ne rende votre alarme et vos caméras inutiles.",
+        summary="Une coupure de courant ou d'internet peut rendre une installation aveugle au pire moment. Les équipements qui permettent de rester protégé malgré tout.",
+        date="2026-11-20",
+        related=["alarme-commerce", "cameras-a-distance"],
+        body="""
+<p>Une installation de sécurité dépend de deux choses que l'on oublie souvent : <b>l'électricité</b> et <b>la connexion internet</b>. Un orage, un disjoncteur qui saute, une box qui redémarre mal, un câble coupé, et l'alarme ne prévient plus personne, les caméras n'enregistrent plus, l'application ne répond plus. Certains cambrioleurs le savent et coupent volontairement le courant ou la ligne avant d'entrer. Quelques équipements permettent de rester protégé malgré tout.</p>
+
+<h2>Ce qui se passe lors d'une coupure</h2>
+<ul>
+  <li><b>Coupure de courant</b> : sans secours, la centrale d'alarme s'éteint, les caméras et l'enregistreur s'arrêtent, la box internet aussi.</li>
+  <li><b>Coupure d'internet</b> : le courant est là, mais plus aucune alerte n'arrive sur votre téléphone et vous ne voyez plus les images à distance.</li>
+  <li><b>Retour du courant</b> : certains appareils redémarrent mal, ou restent éteints jusqu'à une intervention.</li>
+</ul>
+
+<h2>Pour l'alarme : batterie et carte SIM</h2>
+<p>Une alarme sérieuse doit continuer à fonctionner sans courant et sans internet.</p>
+<ul>
+  <li><b>Une batterie de secours</b> dans la centrale, qui prend le relais pendant plusieurs heures en cas de coupure.</li>
+  <li><b>Des détecteurs sans fil sur piles</b>, qui ne dépendent pas du secteur.</li>
+  <li><b>Une double transmission</b> : internet et carte SIM. Si la ligne internet tombe, l'alerte passe par le réseau mobile.</li>
+  <li><b>Une alerte de coupure</b> : la centrale vous prévient elle-même qu'elle est passée sur batterie ou qu'internet est tombé.</li>
+  <li><b>Une sirène avec sa propre batterie</b>, qui sonne même si la centrale est attaquée.</li>
+</ul>
+<p>Pour le reste de l'équipement, voir notre article sur les <a href="/conseils/alarme-commerce">détecteurs indispensables d'une alarme de commerce</a>.</p>
+
+<h2>Pour les caméras : l'onduleur</h2>
+<p>Les caméras et l'enregistreur consomment plus qu'une alarme : une batterie intégrée ne suffit pas. La solution est un <b>onduleur</b>, une batterie placée dans la baie qui alimente pendant un temps l'enregistreur, le switch qui alimente les caméras par le câble réseau, et la box internet.</p>
+<ul>
+  <li><b>Il évite les coupures brèves</b>, les plus fréquentes, qui suffisent à faire redémarrer les appareils.</li>
+  <li><b>Il protège le matériel</b> contre les surtensions et les micro-coupures.</li>
+  <li><b>Il laisse le temps</b> d'enregistrer ce qui se passe pendant une coupure provoquée.</li>
+</ul>
+<p>Son autonomie dépend du nombre de caméras et de la taille de la batterie : elle se calcule lors de l'installation.</p>
+
+<h2>Enregistrer localement</h2>
+<p>Des caméras qui n'enregistrent que dans un service en ligne ne gardent plus rien quand internet coupe. Un <b>enregistreur sur place</b>, rangé à l'abri et relié à un onduleur, continue d'enregistrer même sans connexion. Les images restent disponibles une fois la ligne rétablie.</p>
+
+<h2>Mettre le matériel à l'abri</h2>
+<ul>
+  <li><b>La box, l'enregistreur et l'onduleur</b> dans une baie fermée ou un local technique, hors de portée.</li>
+  <li><b>Le tableau électrique</b> protégé, et non accessible depuis l'extérieur.</li>
+  <li><b>Les câbles</b> qui arrivent de l'extérieur en gaine, difficiles à couper.</li>
+</ul>
+
+<h2>Après une coupure : vérifier</h2>
+<ol>
+  <li><b>Contrôlez dans l'application</b> que la centrale est repassée sur secteur et que toutes les caméras sont en ligne.</li>
+  <li><b>Vérifiez l'enregistrement</b> sur la période de la coupure.</li>
+  <li><b>Regardez l'état de l'onduleur</b> et de la batterie de la centrale : une batterie très sollicitée peut avoir besoin d'être remplacée.</li>
+  <li><b>Si une coupure semble provoquée</b>, consultez les images et, en cas d'intrusion, appelez le 17.</li>
+</ol>
+
+<h2>Testez une fois</h2>
+<p>Le meilleur moyen de savoir si votre installation tient le coup est de <b>faire l'essai</b>, en dehors des heures d'ouverture : débranchez la box quelques minutes, puis coupez le courant du local. Recevez-vous une alerte ? Les caméras continuent-elles d'enregistrer ? Tout redémarre-t-il correctement ? Ce test révèle souvent un point faible qu'il vaut mieux découvrir avant le jour où il compte.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Faites intervenir un professionnel pour toute manipulation sur le tableau électrique.</p>
+
+<h2>Sécuriser votre installation contre les coupures</h2>
+<p>Nous ajoutons batterie de secours, transmission par carte SIM et onduleur aux installations neuves comme existantes, et nous testons avec vous leur comportement en cas de coupure, partout dans le Sud. <a href="https://belaconnect.fr/alarme">Voir notre offre d'alarme</a> ou <a href="https://belaconnect.fr/contact?besoin=alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="securite-boulangerie",
+        title="Sécurité d'une boulangerie : ouverture à l'aube, caisse et livraisons",
+        short="Sécurité d'une boulangerie",
+        seo="Sécurité d'une boulangerie : caméras, alarme et bonnes pratiques",
+        desc="Arrivée au fournil dans la nuit, caisse très sollicitée, livraisons, vitrine : comment protéger une boulangerie ou une pâtisserie avec des caméras, une alarme et de bons réflexes.",
+        summary="Arrivée au fournil en pleine nuit, caisse très active, livraisons tôt le matin : les points sensibles d'une boulangerie et les équipements qui les protègent.",
+        date="2026-11-21",
+        related=["proteger-la-caisse", "fermeture-du-soir"],
+        body="""
+<p>Une boulangerie vit à un rythme à part : on arrive au fournil en pleine nuit, on ouvre très tôt, la caisse tourne toute la journée avec beaucoup de petites sommes en espèces, et les livraisons de farine et de matières premières arrivent souvent avant le lever du jour. Ce rythme crée des moments sensibles qu'une installation de sécurité bien pensée peut protéger.</p>
+
+<h2>Les moments sensibles</h2>
+<ul>
+  <li><b>L'arrivée au fournil</b>, seul, dans une rue déserte, souvent par une porte de service.</li>
+  <li><b>L'ouverture de la boutique</b>, quand on lève le rideau et que les premiers clients arrivent.</li>
+  <li><b>La caisse</b>, très sollicitée, avec de nombreux paiements en espèces.</li>
+  <li><b>Les livraisons</b> déposées tôt le matin, parfois devant la porte.</li>
+  <li><b>La fermeture</b> en fin de journée, avec la recette du jour.</li>
+</ul>
+
+<h2>Arriver au fournil en sécurité</h2>
+<p>C'est souvent le moment le plus exposé : il fait nuit, la rue est vide et l'on est seul.</p>
+<ul>
+  <li><b>Une caméra sur l'entrée de service</b>, consultable sur le téléphone avant de descendre de voiture.</li>
+  <li><b>Un éclairage extérieur à détection</b> au-dessus de la porte du fournil.</li>
+  <li><b>Une alarme qui se désarme</b> par badge ou depuis l'application, sans chercher un clavier dans le noir.</li>
+  <li><b>Un bouton d'alerte portatif</b> pour prévenir discrètement en cas de problème. Voir notre article sur le <a href="/conseils/bouton-alerte-agression">bouton d'alerte</a>.</li>
+</ul>
+
+<h2>La caisse</h2>
+<ul>
+  <li><b>Une caméra au-dessus du comptoir</b>, qui voit les mains, les billets et le tiroir.</li>
+  <li><b>Une caméra face aux clients</b>, à hauteur de visage, à l'entrée.</li>
+  <li><b>Des retraits réguliers</b> dans la journée, pour ne pas garder toute la recette dans le tiroir.</li>
+  <li><b>Un coffre fixé</b> hors de la vue des clients.</li>
+</ul>
+<p>Les images aident aussi à comprendre un écart de caisse sans soupçonner toute l'équipe. Notre article <a href="/conseils/proteger-la-caisse">protéger la caisse d'un commerce</a> détaille ces points.</p>
+
+<h2>Le fournil et la réserve</h2>
+<p>Le fournil abrite du matériel coûteux, et la réserve des stocks de farine, de beurre et de produits. Une alarme avec des détecteurs d'ouverture sur la porte de service et des détecteurs de mouvement adaptés à un environnement chaud et poussiéreux protège ces zones pendant la fermeture. Le choix et l'emplacement des détecteurs comptent : la chaleur des fours et la farine en suspension peuvent provoquer de fausses alertes avec un matériel mal adapté.</p>
+
+<h2>Les livraisons</h2>
+<ul>
+  <li><b>Une caméra qui filme la zone de livraison</b>, pour savoir à quelle heure la marchandise a été déposée et par qui.</li>
+  <li><b>Un endroit fermé</b> pour les livraisons faites en votre absence, plutôt que devant la porte.</li>
+  <li><b>Des accès temporaires</b> par code pour les livreurs réguliers, retirés facilement si besoin.</li>
+</ul>
+
+<h2>La vitrine et la nuit</h2>
+<p>Une boulangerie ferme en général en début de soirée et reste vide jusqu'au milieu de la nuit. La vitrine et le rideau doivent être protégés : détecteur de bris de vitre ou de choc, sirène extérieure visible, caméra tournée vers l'entrée. Voir notre article sur la <a href="/conseils/proteger-vitrine-devanture">protection de la vitrine et de la devanture</a>.</p>
+
+<h2>Le Wi-Fi et la caisse</h2>
+<p>Terminal de paiement, caisse, balance connectée : une boulangerie dépend de son réseau. Si vous proposez le Wi-Fi aux clients, il doit être <b>séparé</b> du réseau de la caisse et des caméras.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Informer clients et salariés</b> par un panneau visible.</li>
+  <li><b>Ne pas filmer en permanence</b> un salarié à son poste, ni les vestiaires et zones de pause.</li>
+  <li><b>Une autorisation préfectorale</b> est en principe nécessaire pour filmer la boutique, ouverte au public.</li>
+  <li><b>Limiter la durée de conservation</b> des images.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Équiper votre boulangerie</h2>
+<p>Nous installons caméras, alarme adaptée au fournil, accès par badge et boutons d'alerte, en intervenant aux heures qui gênent le moins votre production, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="securite-salon-institut",
+        title="Salon de coiffure ou institut de beauté : se protéger sans gêner les clients",
+        short="Salon et institut",
+        seo="Sécurité d'un salon de coiffure ou d'un institut de beauté : caméras, alarme, Wi-Fi",
+        desc="Caisse, produits revendus, matériel, cabines de soins : comment sécuriser un salon de coiffure, un barbier ou un institut de beauté en respectant l'intimité des clients.",
+        summary="Caisse, produits en vitrine, matériel coûteux et cabines de soins : sécuriser un salon ou un institut sans jamais filmer ce qui relève de l'intimité.",
+        date="2026-11-22",
+        related=["vol-a-l-etalage", "filmer-ses-salaries"],
+        body="""
+<p>Un salon de coiffure, un barbier ou un institut de beauté a ses propres points sensibles : une caisse souvent alimentée en espèces, des produits revendus exposés près de l'entrée, du matériel professionnel coûteux, et des clients qui passent du temps sur place, parfois dans des cabines fermées. La sécurité doit protéger le commerce sans jamais mettre mal à l'aise la clientèle.</p>
+
+<h2>Les risques propres au salon et à l'institut</h2>
+<ul>
+  <li><b>Le vol de produits</b> revendus en boutique, faciles à glisser dans un sac près de l'entrée.</li>
+  <li><b>La caisse</b>, avec des encaissements fréquents et parfois des pourboires en espèces.</li>
+  <li><b>Le matériel</b> : tondeuses, sèche-cheveux, appareils de soins, souvent coûteux.</li>
+  <li><b>Les effractions</b> de nuit, par la vitrine ou l'arrière-boutique.</li>
+  <li><b>Les litiges</b> avec un client sur une prestation ou un paiement.</li>
+</ul>
+
+<h2>Où placer les caméras</h2>
+<ul>
+  <li><b>L'entrée</b>, pour voir qui entre et qui sort.</li>
+  <li><b>Le présentoir de produits</b>, souvent la cible des vols discrets.</li>
+  <li><b>La caisse et l'accueil</b>, pour les encaissements.</li>
+  <li><b>L'arrière-boutique et la réserve</b>, pour les stocks de produits.</li>
+</ul>
+<p>Pour le vol de produits, notre article sur le <a href="/conseils/vol-a-l-etalage">vol à l'étalage</a> donne aussi des conseils d'aménagement.</p>
+
+<h2>Ce qui ne doit jamais être filmé</h2>
+<p>C'est le point le plus important dans ce métier. Les <b>cabines de soins, d'épilation ou de massage</b>, les <b>vestiaires</b> et les <b>toilettes</b> ne doivent en aucun cas être filmés. L'espace de coiffure lui-même demande de la retenue : une caméra doit servir à la sécurité des biens et des personnes, pas à observer les clients ou à surveiller en permanence un salarié à son poste.</p>
+<p>Des panneaux doivent informer clients et salariés de la présence des caméras, et une autorisation préfectorale peut être nécessaire pour l'espace ouvert au public. Notre article <a href="/conseils/filmer-ses-salaries">filmer ses salariés</a> rappelle les règles côté équipe.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Une alarme pour les heures de fermeture</h2>
+<ul>
+  <li><b>Un détecteur d'ouverture</b> sur la porte d'entrée et la porte de service.</li>
+  <li><b>Un détecteur de bris de vitre</b> sur la vitrine.</li>
+  <li><b>Des détecteurs de mouvement</b> dans la boutique et la réserve.</li>
+  <li><b>Un accès par salarié</b>, badge ou application, pour savoir qui ouvre et ferme le salon.</li>
+</ul>
+
+<h2>La caisse et les paiements</h2>
+<ul>
+  <li><b>Des retraits réguliers</b> pour limiter les espèces dans le tiroir.</li>
+  <li><b>Une caméra au-dessus de la caisse</b>, qui aide à régler un litige sur un paiement.</li>
+  <li><b>Un coffre hors de vue</b> pour la recette.</li>
+</ul>
+
+<h2>Le Wi-Fi des clients</h2>
+<p>Dans un salon, les clients attendent ou restent assis longtemps et apprécient le Wi-Fi. Il doit être <b>séparé</b> du réseau qui relie la caisse, le logiciel de rendez-vous et les caméras. Un réseau invités, avec son propre mot de passe, donne accès à internet et à rien d'autre. Voir notre article <a href="/conseils/wifi-clients-separe">pourquoi séparer le Wi-Fi des clients</a>.</p>
+
+<h2>Les fichiers clients</h2>
+<p>Un institut conserve souvent des informations sur ses clients : coordonnées, historique des soins, parfois des informations de santé liées à certaines prestations. Ces données doivent être protégées : ordinateur verrouillé, comptes séparés pour chaque employé, sauvegardes régulières, accès limité.</p>
+
+<h2>Les bons réflexes</h2>
+<ol>
+  <li><b>Garder les produits de valeur</b> derrière le comptoir ou en vitrine fermée.</li>
+  <li><b>Ne laisser personne seul</b> dans la réserve.</li>
+  <li><b>Faire le tour du salon</b> avant de fermer.</li>
+  <li><b>Armer l'alarme chaque soir</b>, et vérifier dans l'application qu'elle est bien armée.</li>
+</ol>
+
+<h2>Équiper votre salon ou votre institut</h2>
+<p>Nous installons caméras, alarme, accès par badge et Wi-Fi clients séparé, en plaçant chaque équipement dans le respect de l'intimité de vos clients, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="securite-garage-atelier",
+        title="Sécuriser un garage ou un atelier : véhicules, outillage et pièces",
+        short="Garage et atelier",
+        seo="Sécurité d'un garage automobile ou d'un atelier : caméras, alarme, accès",
+        desc="Véhicules de clients, outillage, pièces détachées, cour extérieure : comment protéger un garage, un atelier ou un artisan avec des caméras, une alarme et des accès bien gérés.",
+        summary="Véhicules confiés, outillage coûteux, pièces en stock et cour ouverte : les points à protéger dans un garage ou un atelier, de jour comme de nuit.",
+        date="2026-11-23",
+        related=["videosurveillance-parking", "securiser-un-entrepot"],
+        body="""
+<p>Un garage automobile, un atelier de mécanique ou un local d'artisan concentre beaucoup de valeur : des véhicules confiés par les clients, un outillage professionnel coûteux, des pièces détachées en stock, parfois du carburant ou des métaux. Le tout avec de grandes portes, une cour souvent accessible et des allées et venues toute la journée. Une protection bien pensée évite les vols et facilite le règlement des litiges.</p>
+
+<h2>Les risques propres au garage et à l'atelier</h2>
+<ul>
+  <li><b>Le vol d'outillage</b>, facile à revendre et souvent rangé à portée de main.</li>
+  <li><b>Le vol de pièces</b> : batteries, jantes, pneus, catalyseurs, câbles.</li>
+  <li><b>Les véhicules des clients</b>, stationnés la nuit dans la cour ou devant le garage.</li>
+  <li><b>Les intrusions</b> par les portes sectionnelles ou une cour mal fermée.</li>
+  <li><b>Les litiges</b> : rayure contestée, dommage présent ou non à l'arrivée du véhicule.</li>
+</ul>
+
+<h2>Où placer les caméras</h2>
+<ul>
+  <li><b>L'entrée de la cour ou du parking</b>, pour voir les véhicules et les personnes qui entrent.</li>
+  <li><b>La zone de réception des véhicules</b> : une caméra qui filme l'état du véhicule à son arrivée est très utile en cas de contestation.</li>
+  <li><b>L'atelier</b>, en vue d'ensemble, sans surveiller en continu un mécanicien à son poste.</li>
+  <li><b>Le magasin de pièces et la zone d'outillage</b>, souvent la cible des vols.</li>
+  <li><b>La cour la nuit</b>, avec une vision de nuit longue portée.</li>
+</ul>
+<p>Pour la cour et les véhicules stationnés, notre article sur la <a href="/conseils/videosurveillance-parking">vidéosurveillance d'un parking</a> donne des conseils de placement.</p>
+
+<h2>Une alarme adaptée aux grands volumes</h2>
+<ul>
+  <li><b>Des détecteurs d'ouverture</b> sur les portes sectionnelles, la porte d'entrée et les accès de service.</li>
+  <li><b>Des détecteurs de mouvement</b> adaptés aux grandes hauteurs et à un environnement poussiéreux.</li>
+  <li><b>Des détecteurs extérieurs</b> dans la cour, pour être alerté avant qu'un intrus n'atteigne le bâtiment.</li>
+  <li><b>Une sirène extérieure avec flash</b>, visible depuis la rue.</li>
+  <li><b>Une batterie de secours et une carte SIM</b>, pour que l'alarme reste active même si le courant ou internet sont coupés.</li>
+</ul>
+
+<h2>Ranger, c'est déjà protéger</h2>
+<ol>
+  <li><b>Rangez l'outillage</b> dans des armoires ou servantes fermées à clé en fin de journée.</li>
+  <li><b>Gardez les pièces de valeur</b> dans un magasin fermé, pas dans la cour.</li>
+  <li><b>Fermez les véhicules des clients</b> et rangez les clés dans une armoire à clés fermée, hors de vue.</li>
+  <li><b>Éclairez la cour</b> avec un éclairage à détection.</li>
+  <li><b>Vérifiez les clôtures et le portail</b> régulièrement.</li>
+</ol>
+
+<h2>Les clés des véhicules</h2>
+<p>Les clés des véhicules confiés sont une cible en soi : avec elles, le véhicule part en quelques secondes. Une <b>armoire à clés fermée</b>, placée dans un endroit protégé et couvert par une caméra, limite fortement ce risque. Évitez de laisser les clés sur un tableau visible depuis l'accueil.</p>
+
+<h2>Contrôler les accès</h2>
+<p>Mécaniciens, apprentis, livreurs de pièces, clients qui récupèrent leur véhicule : beaucoup de monde passe dans un garage. Un accès par <b>badge ou code personnel</b>, avec un historique, permet de savoir qui ouvre et ferme l'atelier et de retirer un accès facilement. Voir notre article <a href="/conseils/controle-acces-badge">badge, code ou application</a>.</p>
+
+<h2>Les règles à respecter</h2>
+<ul>
+  <li><b>Informer salariés et clients</b> par des panneaux visibles.</li>
+  <li><b>Ne pas filmer en continu</b> un salarié à son poste, ni les vestiaires et zones de pause.</li>
+  <li><b>Ne pas filmer la voie publique</b> au-delà des abords immédiats.</li>
+  <li><b>Une autorisation préfectorale</b> peut être nécessaire pour l'espace d'accueil ouvert au public.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Équiper votre garage ou votre atelier</h2>
+<p>Nous installons caméras pour la cour et l'atelier, alarme adaptée aux grands volumes et accès par badge, en intervenant aux horaires qui gênent le moins votre activité, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="preparer-visite-installateur",
+        title="Préparer la visite d'un installateur : les questions à se poser avant le devis",
+        short="Préparer la visite",
+        seo="Préparer la visite d'un installateur de vidéosurveillance ou d'alarme",
+        desc="Ce que vous voulez protéger, vos horaires, vos accès, votre réseau : les points à préparer avant la visite d'un installateur pour obtenir un devis clair et adapté.",
+        summary="Quelques minutes de préparation suffisent pour une visite plus efficace et un devis vraiment adapté : les questions à se poser avant de recevoir un installateur.",
+        date="2026-11-24",
+        related=["combien-de-cameras", "proteger-son-commerce"],
+        body="""
+<p>La visite sur place est l'étape la plus importante d'un projet de vidéosurveillance, d'alarme ou de réseau. C'est là que l'installateur découvre vos locaux, comprend votre activité et repère les points sensibles. Mieux vous l'avez préparée, plus le devis sera clair, juste et adapté. Voici les questions à vous poser avant le rendez-vous.</p>
+
+<h2>1. Qu'est-ce que vous voulez protéger, et contre quoi ?</h2>
+<p>C'est la question de départ. Selon les cas, la réponse change complètement l'installation :</p>
+<ul>
+  <li><b>Le stock et la marchandise</b> : vol à l'étalage, vol en réserve.</li>
+  <li><b>La caisse</b> : erreurs, vols, litiges.</li>
+  <li><b>Les locaux la nuit</b> : effraction, cambriolage.</li>
+  <li><b>Les personnes</b> : sécurité de l'équipe, travail seul, agressions.</li>
+  <li><b>Les extérieurs</b> : parking, cour, véhicules, dépôts sauvages.</li>
+</ul>
+<p>Si vous avez déjà subi un incident, notez-le : ce qui s'est passé, par où, à quelle heure. C'est une information précieuse.</p>
+
+<h2>2. Comment fonctionne votre activité ?</h2>
+<ul>
+  <li><b>Vos horaires</b> d'ouverture, et ceux de l'équipe s'ils sont différents.</li>
+  <li><b>Le nombre de personnes</b> qui travaillent sur place et qui doivent avoir un accès.</li>
+  <li><b>Les livraisons</b> : à quelle heure, par quelle porte.</li>
+  <li><b>Les périodes de fermeture</b> prolongée dans l'année.</li>
+  <li><b>Les prestataires réguliers</b> : ménage, maintenance, livreurs.</li>
+</ul>
+
+<h2>3. Quels sont tous les accès ?</h2>
+<p>Faites le tour de vos locaux en listant chaque entrée possible, même celles qu'on oublie : porte de service, réserve, cour, sous-sol, fenêtres accessibles, toit, rideau métallique, imposte. Une installation qui ne couvre que la porte d'entrée laisse souvent l'arrière sans protection.</p>
+
+<h2>4. Qu'existe-t-il déjà ?</h2>
+<ul>
+  <li><b>Des caméras ou une alarme</b> déjà installées, même en panne : elles peuvent parfois être reprises.</li>
+  <li><b>Des câbles</b> déjà passés, une baie réseau, des goulottes.</li>
+  <li><b>Votre box internet</b> et l'endroit où elle se trouve.</li>
+  <li><b>Le réseau</b> : Wi-Fi, caisse, terminal de paiement, ordinateurs.</li>
+</ul>
+<p>Si vous avez des factures ou des documents d'une ancienne installation, gardez-les sous la main.</p>
+
+<h2>5. Qui doit voir les images et recevoir les alertes ?</h2>
+<p>Vous seul, un associé, un responsable de magasin ? Sur quel téléphone ? Faut-il des accès différents selon les personnes ? Ces réponses déterminent la configuration de l'application et des comptes.</p>
+
+<h2>6. Avez-vous des contraintes particulières ?</h2>
+<ul>
+  <li><b>Un bail ou un règlement</b> de copropriété qui encadre les travaux ou les équipements en façade.</li>
+  <li><b>Des exigences de votre assureur</b> en matière d'alarme ou de protection.</li>
+  <li><b>Des travaux prévus</b> : c'est le meilleur moment pour passer des câbles.</li>
+  <li><b>Des contraintes esthétiques</b> : caméras discrètes, câbles invisibles.</li>
+</ul>
+
+<h2>7. Les démarches</h2>
+<p>Selon les zones filmées, des démarches peuvent être nécessaires : panneau d'information, information des salariés, autorisation préfectorale pour un lieu ouvert au public, vote en assemblée générale en copropriété. Un bon installateur vous les explique lors de la visite.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr et service-public.fr.</p>
+
+<h2>8. Comment comparer les devis ?</h2>
+<p>Si vous demandez plusieurs devis, comparez-les sur les mêmes bases : nombre et emplacement des caméras, type de détecteurs, durée d'enregistrement, accès à distance, alimentation de secours, mise en service et entretien. Un devis qui ne précise pas où sera posé chaque équipement est difficile à comparer et réserve souvent des surprises. N'hésitez pas à demander qu'on vous explique chaque ligne.</p>
+
+<h2>Le jour de la visite</h2>
+<ol>
+  <li><b>Prévoyez du temps</b> pour faire le tour complet des locaux, y compris la réserve et les extérieurs.</li>
+  <li><b>Donnez accès</b> au tableau électrique, à la box et aux locaux techniques.</li>
+  <li><b>Posez toutes vos questions</b> : rien n'est trop simple.</li>
+  <li><b>Demandez un devis détaillé</b> : emplacement de chaque équipement, matériel, démarches.</li>
+</ol>
+
+<h2>Prendre rendez-vous</h2>
+<p>Nous venons voir vos locaux gratuitement et sans engagement, nous repérons avec vous les points sensibles et nous vous remettons un devis détaillé, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander une visite gratuite</a>.</p>
+"""),
+    dict(
+        slug="detection-intelligente",
+        title="Détection de personnes et de véhicules : en finir avec les fausses alertes",
+        short="Détection intelligente",
+        seo="Caméras avec détection de personnes et de véhicules : moins de fausses alertes",
+        desc="Feuilles, chats, phares, pluie : comment les caméras capables de distinguer une personne ou un véhicule réduisent les fausses alertes, et comment bien les régler.",
+        summary="Une alerte toutes les dix minutes pour une feuille ou un chat, et on finit par ne plus regarder. Comment la détection de personnes et de véhicules change la donne.",
+        date="2026-11-25",
+        related=["alarme-se-declenche-la-nuit", "vision-de-nuit"],
+        body="""
+<p>Beaucoup de commerçants activent les notifications de leurs caméras, puis les coupent au bout de quelques jours. La raison est toujours la même : trop d'alertes inutiles. Une branche qui bouge, un chat, la pluie, les phares d'une voiture, une ombre qui passe. À force, on ne regarde plus les alertes, y compris la seule qui comptait. Les caméras récentes savent faire mieux.</p>
+
+<h2>Pourquoi la détection classique se trompe</h2>
+<p>La détection de mouvement de base compare simplement les images entre elles : dès que des pixels changent, elle déclenche une alerte. Elle ne fait aucune différence entre une personne, un insecte sur l'objectif ou un changement de lumière. C'est pour cela qu'elle génère autant de fausses alertes, surtout à l'extérieur et la nuit.</p>
+
+<h2>Ce que change la détection de personnes et de véhicules</h2>
+<p>Les caméras plus récentes analysent la forme de ce qui bouge et savent reconnaître <b>une silhouette humaine</b> ou <b>un véhicule</b>. Elles peuvent alors :</p>
+<ul>
+  <li><b>Ignorer</b> les animaux, la végétation, la pluie et les variations de lumière.</li>
+  <li><b>N'envoyer une alerte</b> que lorsqu'une personne ou un véhicule est détecté.</li>
+  <li><b>Retrouver rapidement</b> dans les enregistrements tous les passages de personnes sur une période.</li>
+</ul>
+<p>Le nombre d'alertes inutiles baisse fortement, et chaque notification reçue mérite vraiment un coup d'œil.</p>
+
+<h2>Les réglages qui font la différence</h2>
+<h3>Les zones de détection</h3>
+<p>Plutôt que de surveiller toute l'image, on dessine les zones qui comptent : la porte, la vitrine, l'accès à la réserve. Le trottoir, la route ou l'arbre du voisin sont exclus.</p>
+<h3>Les lignes de franchissement</h3>
+<p>Une ligne virtuelle déclenche une alerte seulement quand quelqu'un la traverse, par exemple l'entrée d'une cour ou le seuil d'une porte de service. C'est très efficace pour les extérieurs.</p>
+<h3>Les horaires</h3>
+<p>Les alertes peuvent être actives uniquement en dehors des heures d'ouverture. Pendant la journée, la caméra enregistre normalement sans vous déranger à chaque client.</p>
+<h3>La sensibilité</h3>
+<p>Elle se règle zone par zone : plus élevée pour une porte de service isolée, plus faible pour une zone exposée au vent ou aux reflets.</p>
+
+<h2>Associer caméras et alarme</h2>
+<p>La détection intelligente des caméras ne remplace pas une alarme, mais elle la complète bien :</p>
+<ul>
+  <li><b>L'alarme</b> détecte l'intrusion avec des capteurs dédiés et déclenche la sirène.</li>
+  <li><b>Les caméras</b> confirment en image ce qui se passe et vous permettent de décider rapidement s'il faut appeler le 17.</li>
+</ul>
+<p>Pour la marche à suivre en cas d'alerte, voir notre article <a href="/conseils/alarme-se-declenche-la-nuit">votre alarme se déclenche la nuit</a>.</p>
+
+<h2>Les limites à connaître</h2>
+<ul>
+  <li><b>La qualité de l'image compte</b> : une caméra mal éclairée ou mal placée reconnaît moins bien les silhouettes. Voir notre article sur la <a href="/conseils/vision-de-nuit">vision de nuit</a>.</li>
+  <li><b>Un objectif sale</b> ou une toile d'araignée trompe aussi les caméras récentes.</li>
+  <li><b>La détection n'est jamais parfaite</b> : quelques fausses alertes restent possibles, et un passage très rapide ou très lointain peut être manqué.</li>
+  <li><b>Les réglages doivent être ajustés</b> après quelques jours d'utilisation, en fonction des alertes reçues.</li>
+</ul>
+
+<h2>Et la reconnaissance faciale ?</h2>
+<p>Distinguer une personne d'un animal n'a rien à voir avec identifier qui est cette personne. La reconnaissance faciale est très strictement encadrée et n'a pas sa place dans un commerce ou un bureau. La détection de personnes, elle, ne cherche pas à savoir qui passe, seulement que quelqu'un passe.</p>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles officielles, consultez cnil.fr.</p>
+
+<h2>Mettre en place une détection fiable</h2>
+<p>Nous installons des caméras capables de distinguer personnes et véhicules, nous dessinons avec vous les zones et les horaires d'alerte, puis nous ajustons les réglages après les premiers jours, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="resolution-camera",
+        title="Résolution, angle, distance : une caméra qui permet vraiment d'identifier",
+        short="Résolution d'une caméra",
+        seo="Choisir la résolution et l'angle d'une caméra pour identifier un visage",
+        desc="Pourquoi tant d'images de vidéosurveillance sont inutilisables, et comment résolution, angle de vue et distance déterminent si l'on peut reconnaître un visage ou lire une plaque.",
+        summary="Une image floue ne sert à rien le jour d'une plainte. Comment résolution, angle et distance décident de ce qu'une caméra permet vraiment de voir.",
+        date="2026-11-26",
+        related=["combien-de-cameras", "vision-de-nuit"],
+        body="""
+<p>Le jour d'un vol, beaucoup de commerçants découvrent que leurs images ne permettent de reconnaître personne : une silhouette floue, un visage de quelques pixels, une plaque illisible. Ce n'est pas toujours la faute d'une caméra bas de gamme. Très souvent, la caméra n'est simplement pas adaptée à ce qu'on lui demande. Le nombre de mégapixels ne suffit pas : l'angle de vue et la distance comptent tout autant.</p>
+
+<h2>Ce que l'on attend d'une image</h2>
+<p>Selon l'emplacement, une caméra n'a pas le même rôle. On distingue généralement quatre niveaux :</p>
+<ul>
+  <li><b>Détecter</b> : savoir que quelqu'un est là.</li>
+  <li><b>Observer</b> : voir ce que fait la personne.</li>
+  <li><b>Reconnaître</b> : distinguer une personne connue d'une autre.</li>
+  <li><b>Identifier</b> : obtenir un visage assez net pour qu'il serve de preuve.</li>
+</ul>
+<p>Plus le niveau demandé est élevé, plus la personne doit apparaître grande dans l'image. Une même caméra peut identifier un visage à quelques mètres et seulement détecter une présence au fond d'un parking.</p>
+
+<h2>La résolution : utile, mais pas suffisante</h2>
+<p>La résolution indique le nombre de points qui composent l'image. Une résolution plus élevée donne plus de détails et permet de zoomer après coup sur un enregistrement. Mais ces détails sont répartis sur toute la scène filmée : si la caméra couvre une très grande surface, chaque visage n'occupe qu'une petite partie de l'image, et donc peu de points.</p>
+
+<h2>L'angle de vue : le vrai réglage</h2>
+<ul>
+  <li><b>Un angle large</b> couvre beaucoup d'espace, mais chaque personne apparaît petite. Idéal pour une vue d'ensemble d'un magasin ou d'un parking.</li>
+  <li><b>Un angle étroit</b> couvre une zone réduite, mais avec beaucoup de détails. Idéal pour une porte d'entrée, une caisse ou l'accès d'un parking.</li>
+  <li><b>Un objectif à focale variable</b> permet d'ajuster l'angle lors de l'installation, pour trouver le bon compromis sur place.</li>
+</ul>
+<p>C'est pour cela qu'une bonne installation combine souvent des caméras de vue d'ensemble et des caméras d'identification placées aux points de passage obligés.</p>
+
+<h2>La distance et la hauteur</h2>
+<ul>
+  <li><b>Plus la personne est loin</b>, plus elle est petite dans l'image.</li>
+  <li><b>Une caméra placée trop haut</b> ne montre que le dessus des têtes, surtout avec une casquette ou une capuche.</li>
+  <li><b>Le bon emplacement pour identifier</b> est un point de passage, à hauteur raisonnable, face aux personnes qui entrent.</li>
+</ul>
+
+<h2>Les pièges qui gâchent une bonne caméra</h2>
+<ol>
+  <li><b>Le contre-jour</b> : une caméra face à une vitrine ensoleillée ne montre que des silhouettes sombres.</li>
+  <li><b>Le mouvement</b> : une personne qui passe vite devient floue si la caméra est mal réglée.</li>
+  <li><b>La nuit</b> : sans lumière suffisante, les détails disparaissent. Voir notre article sur la <a href="/conseils/vision-de-nuit">vision de nuit</a>.</li>
+  <li><b>La compression</b> : un enregistrement réglé trop bas pour économiser de la place dégrade les détails.</li>
+  <li><b>Un objectif sale</b>, qui voile toute l'image.</li>
+</ol>
+
+<h2>Lire une plaque d'immatriculation</h2>
+<p>Lire une plaque demande une caméra dédiée, cadrée serré sur la zone de passage, avec un réglage adapté aux véhicules en mouvement et aux phares la nuit. Une caméra grand angle qui couvre tout le parking ne suffit presque jamais. La lecture automatique des plaques est, elle, très encadrée par la réglementation.</p>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour les règles officielles sur la vidéosurveillance, consultez cnil.fr.</p>
+
+<h2>Vérifier avant qu'il ne soit trop tard</h2>
+<p>Le meilleur test est simple : demandez à quelqu'un de passer devant chaque caméra, de jour puis de nuit, et regardez l'enregistrement. Reconnaissez-vous son visage ? Pouvez-vous lire une plaque à l'entrée du parking ? Si la réponse est non, l'emplacement ou le réglage doit être revu. Pour savoir combien de caméras prévoir, voir notre article <a href="/conseils/combien-de-cameras">combien de caméras pour un commerce</a>.</p>
+
+<h2>Des images réellement exploitables</h2>
+<p>Lors de la visite gratuite, nous définissons avec vous ce que chaque caméra doit permettre de voir, puis nous choisissons le matériel, l'angle et l'emplacement en conséquence, et nous vérifions les images sur place, partout dans le Sud. <a href="https://belaconnect.fr/videosurveillance">Voir notre offre de vidéosurveillance</a> ou <a href="https://belaconnect.fr/contact?besoin=video">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="commerce-saisonnier",
+        title="Commerce saisonnier : sécuriser la haute saison et la fermeture hivernale",
+        short="Commerce saisonnier",
+        seo="Sécurité d'un commerce saisonnier : haute saison, renforts et fermeture",
+        desc="Affluence, personnel saisonnier, terrasse, puis local fermé plusieurs mois : comment adapter caméras, alarme et accès au rythme d'un commerce saisonnier du Sud.",
+        summary="Beaucoup de monde l'été, un local vide l'hiver : comment adapter la sécurité d'un commerce saisonnier à ses deux vies.",
+        date="2026-11-27",
+        related=["commerce-avant-les-conges", "controle-acces-badge"],
+        body="""
+<p>Dans le Sud, beaucoup de commerces vivent au rythme des saisons : plage, glacier, location, boutique de souvenirs, restaurant de bord de mer, commerce de station. L'été, l'affluence est forte, l'équipe s'agrandit avec des saisonniers et les horaires s'étirent. L'hiver, le local reste fermé pendant des semaines, parfois des mois. Ces deux périodes posent des questions de sécurité très différentes.</p>
+
+<h2>La haute saison : beaucoup de monde, peu de temps</h2>
+<p>Quand le magasin ou la terrasse sont pleins, l'équipe n'a plus le temps de tout surveiller.</p>
+<ul>
+  <li><b>Le vol à l'étalage</b> profite de la foule et des files d'attente.</li>
+  <li><b>La caisse</b> encaisse beaucoup, souvent en espèces, avec des personnes qui se relaient.</li>
+  <li><b>La terrasse et les abords</b> accueillent du mobilier et du matériel qui restent dehors.</li>
+  <li><b>Les horaires tardifs</b> rendent la fermeture plus sensible.</li>
+</ul>
+<p>Des caméras bien placées sur l'entrée, la caisse et les rayons sensibles permettent de garder un œil sur l'ensemble, et un écran visible à l'entrée rappelle à chacun que le lieu est filmé. Notre article sur le <a href="/conseils/vol-a-l-etalage">vol à l'étalage</a> détaille les bons réflexes.</p>
+
+<h2>Les renforts saisonniers et les accès</h2>
+<p>Chaque saison, de nouvelles personnes rejoignent l'équipe pour quelques semaines ou quelques mois. Avec des clés, c'est un casse-tête : combien de doubles, qui les a rendus ?</p>
+<ul>
+  <li><b>Un badge ou un code par saisonnier</b>, actif uniquement pendant son contrat.</li>
+  <li><b>Des plages horaires</b> adaptées à chaque poste.</li>
+  <li><b>Un accès retiré en un instant</b> à la fin de la saison, sans changer les serrures.</li>
+  <li><b>Un historique</b> qui montre qui a ouvert et fermé chaque jour.</li>
+</ul>
+<p>Voir notre article <a href="/conseils/controle-acces-badge">badge, code ou application</a>.</p>
+<p>Les saisonniers doivent aussi être informés de la présence des caméras dès leur arrivée, comme tous les salariés.</p>
+
+<h2>Le Wi-Fi des clients</h2>
+<p>En saison, les clients demandent souvent le Wi-Fi. Il doit rester séparé du réseau de la caisse et des caméras, avec une limite de débit par appareil pour que le service reste fluide même quand l'établissement est plein.</p>
+
+<h2>La fermeture hivernale : un local vide pendant des mois</h2>
+<p>C'est souvent la période la plus risquée. Le local est fermé, la rue est plus calme, et une effraction peut passer inaperçue pendant longtemps.</p>
+<ul>
+  <li><b>Une alarme active tout l'hiver</b>, avec batterie de secours et transmission par carte SIM, pour continuer à prévenir même si le courant ou internet sont coupés.</li>
+  <li><b>Des caméras consultables à distance</b>, pour vérifier les locaux de temps en temps sans se déplacer.</li>
+  <li><b>Des alertes sur téléphone</b> envoyées à une personne qui peut réagir, même si vous êtes loin.</li>
+  <li><b>Un stock et une caisse vidés</b> avant la fermeture.</li>
+  <li><b>Le mobilier de terrasse rentré</b> ou attaché.</li>
+</ul>
+<p>Avant de fermer pour plusieurs mois, suivez la liste de notre article <a href="/conseils/commerce-avant-les-conges">fermeture pour congés</a>.</p>
+
+<h2>Pendant l'hiver</h2>
+<ol>
+  <li><b>Vérifiez régulièrement</b> que l'alarme est armée et que les caméras sont en ligne.</li>
+  <li><b>Faites relever le courrier</b> et vérifier les abords par une personne de confiance.</li>
+  <li><b>Gardez une trace</b> des alertes reçues et de leurs causes.</li>
+</ol>
+
+<h2>Avant la réouverture</h2>
+<ul>
+  <li><b>Faites contrôler l'installation</b> : piles des détecteurs, disque de l'enregistreur, mises à jour, nettoyage des caméras extérieures exposées au sel et au soleil.</li>
+  <li><b>Remettez à jour les accès</b> pour la nouvelle équipe.</li>
+  <li><b>Adaptez l'installation</b> si l'aménagement a changé : nouvelle terrasse, nouveau rayon, nouvelle caisse.</li>
+</ul>
+<p class="small-note">Ces informations sont données à titre indicatif et ne remplacent pas un conseil juridique. Pour les règles sur la vidéosurveillance et l'information des salariés, consultez cnil.fr et service-public.fr.</p>
+
+<h2>Adapter votre installation aux saisons</h2>
+<p>Nous installons des caméras, une alarme autonome et des accès par badge pensés pour les deux vies d'un commerce saisonnier, et nous pouvons vérifier l'installation avant la fermeture comme avant la réouverture, partout dans le Sud. <a href="https://belaconnect.fr/maintenance">Voir nos formules de maintenance</a> ou <a href="https://belaconnect.fr/contact?besoin=video-alarme">demander un devis gratuit</a>.</p>
+"""),
+    dict(
+        slug="reseau-lent-entreprise",
+        title="Internet lent au bureau ou au magasin : les causes les plus fréquentes",
+        short="Réseau lent",
+        seo="Internet lent dans une entreprise ou un commerce : causes et solutions",
+        desc="Wi-Fi qui décroche, caisse qui rame, visioconférences coupées : les causes les plus courantes d'un réseau lent dans un local professionnel, et comment y remédier.",
+        summary="Avant de changer d'abonnement, vérifiez le réseau à l'intérieur de vos locaux : c'est souvent là que se trouve le vrai problème.",
+        date="2026-11-28",
+        related=["wifi-clients-separe", "baie-de-brassage"],
+        body="""
+<p>Une caisse qui met du temps à valider un paiement, des visioconférences qui se figent, des fichiers partagés qui s'ouvrent lentement, des caméras qui affichent une image saccadée : quand internet est lent, toute l'activité en souffre. Le premier réflexe est souvent d'accuser l'opérateur et de changer d'abonnement. Pourtant, dans beaucoup de locaux professionnels, le problème vient du <b>réseau à l'intérieur des locaux</b>, pas de la ligne elle-même.</p>
+
+<h2>D'abord, mesurer au bon endroit</h2>
+<p>Faites un test de débit <b>en branchant un ordinateur par câble directement sur la box</b>. Puis refaites-le en Wi-Fi, à l'endroit où vous travaillez.</p>
+<ul>
+  <li><b>Si le test est mauvais même en câble sur la box</b>, le problème vient probablement de la ligne ou de l'abonnement : c'est à voir avec l'opérateur.</li>
+  <li><b>Si le test est bon en câble mais mauvais en Wi-Fi</b>, le problème est à l'intérieur de vos locaux. C'est le cas le plus fréquent.</li>
+</ul>
+
+<h2>Cause n°1 : une box qui fait tout</h2>
+<p>Dans beaucoup de commerces et de petits bureaux, la box de l'opérateur sert à la fois de routeur, de Wi-Fi et de point de branchement pour tout. Elle n'est pas conçue pour couvrir un grand local, ni pour gérer des dizaines d'appareils en même temps. Rangée au fond d'un placard ou derrière un meuble métallique, son Wi-Fi porte encore moins loin.</p>
+
+<h2>Cause n°2 : un Wi-Fi mal couvert</h2>
+<ul>
+  <li><b>Des murs épais</b>, des cloisons métalliques, une réserve ou un étage qui bloquent le signal.</li>
+  <li><b>Des répéteurs Wi-Fi bon marché</b>, qui étendent la couverture mais divisent le débit.</li>
+  <li><b>Des réseaux voisins</b> sur les mêmes fréquences, très fréquents dans les rues commerçantes.</li>
+</ul>
+<p>La solution durable est de poser <b>plusieurs bornes Wi-Fi professionnelles</b>, reliées par câble, au bon endroit, plutôt que d'empiler les répéteurs.</p>
+
+<h2>Cause n°3 : trop d'appareils sur le même réseau</h2>
+<p>Ordinateurs, téléphones, caisse, terminal de paiement, imprimantes, caméras, et parfois le Wi-Fi offert aux clients : tout partage la même connexion. Un client qui regarde une vidéo ou une caméra qui envoie ses images vers internet peut ralentir la caisse. Séparer les réseaux et limiter le débit du Wi-Fi invités règle souvent le problème. Voir notre article <a href="/conseils/wifi-clients-separe">pourquoi séparer le Wi-Fi des clients</a>.</p>
+
+<h2>Cause n°4 : un câblage ou une baie en mauvais état</h2>
+<ul>
+  <li><b>Des câbles anciens</b> ou abîmés qui limitent le débit sans qu'on s'en aperçoive.</li>
+  <li><b>Des petits switchs empilés</b> sous les bureaux, ajoutés au fil du temps.</li>
+  <li><b>Une baie en désordre</b>, où personne ne sait plus quel câble va où.</li>
+  <li><b>Un équipement qui chauffe</b> dans un placard non ventilé.</li>
+</ul>
+<p>Pour une baie à reprendre, voir notre article sur la <a href="/conseils/baie-de-brassage">remise au propre d'une baie de brassage</a>.</p>
+
+<h2>Cause n°5 : les sauvegardes et mises à jour en pleine journée</h2>
+<p>Une sauvegarde en ligne, une synchronisation de fichiers ou des mises à jour lancées pendant les heures de travail peuvent saturer la connexion. Il suffit souvent de les programmer la nuit ou en dehors des heures d'ouverture.</p>
+
+<h2>Cause n°6 : l'abonnement n'est plus adapté</h2>
+<p>Si tous les tests en câble sont mauvais, ou si l'activité a beaucoup évolué, l'abonnement peut effectivement être insuffisant. Mais il vaut mieux le vérifier en dernier : changer d'abonnement ne corrigera jamais un mauvais Wi-Fi intérieur.</p>
+
+<h2>Les bons réflexes en attendant</h2>
+<ol>
+  <li><b>Branchez en câble</b> les équipements fixes importants : caisse, ordinateur principal, enregistreur.</li>
+  <li><b>Sortez la box</b> du placard et éloignez-la des masses métalliques.</li>
+  <li><b>Redémarrez la box</b> si elle n'a pas été redémarrée depuis longtemps.</li>
+  <li><b>Notez quand les ralentissements arrivent</b> : à certaines heures, dans certaines pièces, avec certains appareils. Ces indices aident beaucoup au diagnostic.</li>
+</ol>
+<p class="small-note">Ces informations sont données à titre indicatif. Pour un problème de ligne ou d'abonnement, contactez votre opérateur.</p>
+
+<h2>Faire diagnostiquer votre réseau</h2>
+<p>Nous mesurons votre réseau sur place, repérons ce qui le ralentit, puis installons si besoin des bornes Wi-Fi professionnelles, un câblage propre et des réseaux séparés, partout dans le Sud. <a href="https://belaconnect.fr/informatique">Voir notre offre informatique et réseau</a> ou <a href="https://belaconnect.fr/contact?besoin=info">demander un diagnostic</a>.</p>
+"""),
+]
